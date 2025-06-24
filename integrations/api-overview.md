@@ -8,7 +8,9 @@ icon: globe
 
 Before using the API, you'll need to create an API key.
 
-Each organization can have multiple API keys.
+An organization can have multiple API keys.
+
+Each API Key grants access to all models within the organization.
 
 To create an API Key on the Mindee Platform:
 
@@ -17,14 +19,47 @@ To create an API Key on the Mindee Platform:
 3. Click on the **Create API Key** button
 4. Give a name to your key.\
    You'll typically want to name by environment, i.e. dev, staging, prod.
+5. Click **OK**, you key is now ready for use.
+
+{% hint style="warning" %}
+**Do not expose your API keys in any location that is open to the public.**
+
+Anyone with the key will be able to make requests linked to your organization.
+{% endhint %}
+
+## Usage in Web Applications
+
+We **do not recommend** using the Mindee API directly in an application running in the final user's web browser.
+
+Users will trivially be able to intercept the API Key used for the Mindee requests, and impersonate your account.
+
+Our official guideline is to always pass your user requests through a server which you control.\
+Not only will this prevent leakage of sensitive data, it will allow you to much more easily diagnose any issues your users may have.
+
+## Accepted File Types
+
+#### PDF Files
+
+All PDF types can be processed, either single page or multiple pages.
+
+Each PDF page can be a combination of text and image elements.
+
+#### Image Files
+
+Most common image types can be processed.
+
+Specifically, we accept the following image types:
+
+* `jpeg`
+* `png` (only non-animated)
+* `webp`
+* `heic`
+* `heif`
+* `tiff` single page or multiple pages
 
 ## REST API Integration
 
 There are two different ways of setting up your integration with the Mindee API.
-
-### Accepted File Types
-
-Images and PDFs can be processed.
 
 ### Polling
 

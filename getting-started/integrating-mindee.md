@@ -32,6 +32,7 @@ Requires Python 3.9 minimum and the [requests](https://pypi.org/project/requests
 
 {% code lineNumbers="true" %}
 ```python
+import json
 import time
 import requests
 from pathlib import Path
@@ -86,7 +87,7 @@ result = send_file_with_polling(
     model_id="MY_MODEL_ID",
     api_key="MY_API_KEY",
 )
-print(result)
+print(json.dumps(result,indent=2))
 
 ```
 {% endcode %}
