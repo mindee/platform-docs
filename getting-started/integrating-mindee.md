@@ -48,7 +48,7 @@ def send_file_with_polling(
     headers = {"Authorization": api_key}
     form_data = {"model_id": model_id, "rag": False}
     with open(file_path, "rb") as fh:
-        files = {"file": (file.name, fh, "application/octet-stream")}
+        files = {"file": (file.name, fh)}
         print(f"Enqueuing file: {file_path}")
         response = requests.post(
             url="https://api-v2.mindee.net/v2/inferences/enqueue",
@@ -118,8 +118,7 @@ async function sendFileWithPolling(
   formData.append("model_id", modelId);
   formData.append("rag", "false");
   formData.append("file", fs.createReadStream(filePath), {
-    filename: fileName,
-    contentType: "application/octet-stream"
+    filename: fileName
   });
 
   console.log(`Enqueuing file: ${filePath}`);
@@ -197,7 +196,7 @@ def send_file_with_polling(file_path, model_id, api_key, max_retries = 30, polli
   post_body << "--#{boundary}\r\nContent-Disposition: form-data; name=\"model_id\"\r\n\r\n#{model_id}\r\n"
   post_body << "--#{boundary}\r\nContent-Disposition: form-data; name=\"rag\"\r\n\r\nfalse\r\n"
   post_body << "--#{boundary}\r\nContent-Disposition: form-data; name=\"file\"; filename=\"#{file_name}\""
-  post_body << "\r\nContent-Type: application/octet-stream\r\n\r\n#{File.binread(file_path)}\r\n--#{boundary}--\r\n"
+  post_body << "\r\n#{File.binread(file_path)}\r\n--#{boundary}--\r\n"
 
   # Send initial request
   http = Net::HTTP.new(uri.host, uri.port)
@@ -551,5 +550,4 @@ foreach ($object_list_field as $object_item) {
 }
 ```
 {% endtab %}
-
 {% endtabs %}
