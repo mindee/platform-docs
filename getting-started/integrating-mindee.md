@@ -4,7 +4,7 @@ icon: plug-circle-check
 
 # Integrating Mindee
 
-Ounce you have your model set up, you'll want to start using it!
+Once you have your model set up, you'll want to start using it!
 
 ## API key
 
