@@ -6,26 +6,43 @@ icon: globe
 
 ## API Keys
 
-Before using the API, you'll need to create an API key.
+{% hint style="danger" %}
+**Do not expose your API keys in any location that is open to the public.**
+
+Anyone with the key will be able to make API requests linked to your organization.
+{% endhint %}
 
 An organization can have multiple API keys.
 
 Each API Key grants access to all models within the organization.
 
+Keys have an unlimited lifetime and must be manually revoked by deleting them.
+
+### Key Creation
+
+Before using the API, you'll need to create an API key.
+
 To create an API Key on the Mindee Platform:
 
-1. Go to [https://app.mindee.com/](https://app.mindee.com/)
-2. On the left-hand menu, click [**API Keys**](https://app.mindee.com/api-keys)
-3. Click on the **Create API Key** button
-4. Give a name to your key.\
+1. On the left-hand menu, click [**API Keys**](https://app.mindee.com/api-keys)
+2. Click on the **Create API Key** button
+3. Give a name to your key.\
    You'll typically want to name by environment, i.e. dev, staging, prod.
-5. Click **OK**, you key is now ready for use.
+4. Click **Create API**, you key is now ready for use.
 
-{% hint style="warning" %}
-**Do not expose your API keys in any location that is open to the public.**
+### Key Revocation/Deletion
 
-Anyone with the key will be able to make requests linked to your organization.
-{% endhint %}
+You can revoke a key at any time by deleting it.
+
+Once a key is deleted, it can never be recovered.
+
+Any calls to Mindee made using a deleted key will result in a HTTP 401 error code.
+
+To delete a key on the Mindee Platform:
+
+1. On the left-hand menu, click [**API Keys**](https://app.mindee.com/api-keys)
+2. Next to each key is a **Delete** button, click it.
+3. Click **Delete** in the confirmation dialog, your key is now revoked.
 
 ## Usage in Web Applications
 
