@@ -55,13 +55,13 @@ Not only will this prevent leakage of sensitive data, it will allow you to much 
 
 ## Accepted File Types
 
-#### PDF Files
+### PDF Files
 
 All PDF types can be processed, either single page or multiple pages.
 
 Each PDF page can be a combination of text and image elements.
 
-#### Image Files
+### Image Files
 
 Most common image types can be processed.
 
@@ -73,6 +73,23 @@ Specifically, we accept the following image types:
 * `heic`
 * `heif`
 * `tiff` single page or multiple pages
+
+### Tips For Uploading Images
+
+#### **Reduce very large images**
+
+For faster upload and processing, downscale large images.\
+For example modern smartphones can take images of 24 megapixels or more, in most cases this is completely useless, a waste of bandwidth and processing time.\
+For the vast majority of image files, 3-5 megapixels is enough. Just make sure the smallest text is legible.
+
+#### **Do not upscale**
+
+Never upscale a low-resolution image on your side!\
+This will decrease the algorithm accuracy. It is best to avoid very low-resolution images, if possible.
+
+#### **Keep the aspect ratio**
+
+Never change the original aspect ratio. Doing so will create distortions and degrade the performance of the OCR.
 
 ## REST API Integration
 
