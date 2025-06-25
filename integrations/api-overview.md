@@ -74,12 +74,12 @@ If you're not sure on what to use, choose this flow.
 ```mermaid
 sequenceDiagram
     participant client as Client
-    participant enqueue as inference/enqueue
+    participant enqueue as /inference/enqueue
     participant job as /job
     participant inference as /inference
     client->>enqueue: POST file
     enqueue->>client: HTTP 202
-    client->>client: wait 2 seconds
+    client->>client: wait 3 seconds
     client->>job: GET job.id
     job->>client: Processing - HTTP 200
     client->>client: wait 1 second
@@ -114,4 +114,5 @@ sequenceDiagram
     enqueue->>+srv: Start processing
     srv->>srv: Process file
     srv->>-clientsrv: POST results
+    clientsrv->>clientsrv: process JSON result
 ```
