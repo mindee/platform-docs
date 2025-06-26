@@ -52,8 +52,6 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% include "../.gitbook/includes/code-sample-java.md" %}
 {% endtab %}
 
-{% endtab %}
-
 {% endtabs %}
 
 ## Processing the Results
