@@ -29,19 +29,19 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% tabs %}
 
 {% tab title="Python" %}
-{% include "../.gitbook/includes/code-sample-python.md" %}
+{% include "../.gitbook/includes/code-samples/python.md" %}
 {% endtab %}
 
 {% tab title="JavaScript" %}
-{% include "../.gitbook/includes/code-sample-javascript.md" %}
+{% include "../.gitbook/includes/code-samples/javascript.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
-{% include "../.gitbook/includes/code-sample-ruby.md" %}
+{% include "../.gitbook/includes/code-samples/ruby.md" %}
 {% endtab %}
 
 {% tab title="PHP" %}
-{% include "../.gitbook/includes/code-sample-php.md" %}
+{% include "../.gitbook/includes/code-samples/php.md" %}
 {% endtab %}
 
 {% endtabs %}
