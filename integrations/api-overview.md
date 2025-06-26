@@ -74,18 +74,22 @@ Specifically, we accept the following image types:
 * `heif`
 * `tiff` single page or multiple pages
 
-### Tips For Uploading Images
+### Guidelines For Uploading Images
+
+Following these guidelines will ensure you get the most accurate results as quickly as possible.
 
 #### **Reduce very large images**
 
-For faster upload and processing, downscale large images.\
-For example modern smartphones can take images of 24 megapixels or more, in most cases this is completely useless, a waste of bandwidth and processing time.\
+For faster upload and processing, downscale large images by resizing them.
+
+For example modern smartphones can take images of 24 megapixels or more, in most cases this is completely useless, a waste of bandwidth and processing time.
+
 For the vast majority of image files, 3-5 megapixels is enough. Just make sure the smallest text is legible.
 
-#### **Do not upscale**
+#### **Do not upscale or enhance**
 
-Never upscale a low-resolution image on your side!\
-This will decrease the algorithm accuracy. It is best to avoid very low-resolution images, if possible.
+Never upscale a low-resolution image, adding extra pixels only adds to processing time without an increase in accuracy.\
+It is best to avoid very low-resolution images, if possible.
 
 #### **Keep the aspect ratio**
 
