@@ -45,11 +45,13 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% endtab %}
 
 {% tab title=".NET" %}
-{% code lineNumbers="true" %}
-```csharp
-{% include "../.gitbook/includes/code-dotnet.txt" %}
-```
-{% endcode %}
+{% include "../.gitbook/includes/code-sample-dotnet.md" %}
+{% endtab %}
+
+{% tab title="Java" %}
+{% include "../.gitbook/includes/code-sample-java.md" %}
+{% endtab %}
+
 {% endtab %}
 
 {% endtabs %}
