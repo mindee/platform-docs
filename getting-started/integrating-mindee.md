@@ -44,14 +44,6 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% include "../.gitbook/includes/code-sample-php.md" %}
 {% endtab %}
 
-{% tab title=".NET" %}
-{% include "../.gitbook/includes/code-sample-dotnet.md" %}
-{% endtab %}
-
-{% tab title="Java" %}
-{% include "../.gitbook/includes/code-sample-java.md" %}
-{% endtab %}
-
 {% endtabs %}
 
 ## Processing the Results
