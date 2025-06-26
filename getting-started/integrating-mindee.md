@@ -28,7 +28,7 @@ Here are some code examples, these are self-contained and can be run as-is:
 
 {% tabs %}
 {% tab title="Python" %}
-Requires Python 3.9 minimum and the [requests](https://pypi.org/project/requests/) library.
+{% include "../.gitbook/includes/code-sample-python.md" %}
 
 {% code lineNumbers="true" %}
 ```python
