@@ -2,6 +2,8 @@
 title: sample-code-python
 ---
 
+Requires Python 3.9 minimum and the [requests](https://pypi.org/project/requests/) library.
+
 {% code lineNumbers="true" %}
 ```python
 import json

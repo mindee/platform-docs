@@ -28,7 +28,7 @@ Here are some code examples, these are self-contained and can be run as-is:
 
 {% tabs %}
 {% tab title="Python" %}
-{% include "../.gitbook/includes/code-sample-python.md" %}
+{% include "../.gitbook/includes/sample-code-python.md" %}
 
 {% code lineNumbers="true" %}
 ```python
