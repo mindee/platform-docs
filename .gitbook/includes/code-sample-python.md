@@ -19,12 +19,12 @@ def send_file_with_polling(
         max_retries: int = 30,
         polling_interval: int = 2,
 ) -> dict:
-    file = Path(file_path)
+    upload_file = Path(file_path)
     headers = {"Authorization": api_key}
     form_data = {"model_id": model_id, "rag": False}
-    with open(file_path, "rb") as fh:
-        files = {"file": (file.name, fh)}
-        print(f"Enqueuing file: {file_path}")
+    with upload_file.open("rb") as fh:
+        files = {"file": (upload_file.name, fh)}
+        print(f"Enqueuing file: {upload_file}")
         response = requests.post(
             url="https://api-v2.mindee.net/v2/inferences/enqueue",
             files=files,
