@@ -17,3 +17,5 @@ Go here: [https://developers.mindee.com](https://developers.mindee.com/)
 Mindee helps anyone automate document processing through data recognition, computer vision, and machine learning.
 
 Our mission is to provide real-time, human-level accuracy in data extraction from paper and digital documents.
+
+{% include ".gitbook/includes/quickstart-supademo.md" %}

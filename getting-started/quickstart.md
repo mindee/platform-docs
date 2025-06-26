@@ -34,3 +34,7 @@ You can quickly test the API by sending a file using the built-in client in our 
 You'll need some way of importing the JSON structure and manipulating it.
 
 For quick testing, we recommend using a scripting language like Python or JavaScript.
+
+
+
+{% include "../.gitbook/includes/quickstart-supademo.md" %}
