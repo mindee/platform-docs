@@ -1,4 +1,5 @@
 ---
+description: Overview of Models
 icon: file-lines
 ---
 
@@ -31,8 +32,6 @@ Once a first good-enough data schema is proposed, we recommend to create the Mod
 If the document you're trying to automate is a pretty standard document, it is likely to be already managed by a Catalog API such as Invoice, Receipt, Financial Document, ID Card... \
 \
 Those APIs are pre-existing Data Schemas you can copy to immediately benefit from a well setup basis. You'll be able to modify it, but it can help win a bit of time.
-
-
 
 ## Modifying Your Data Schema
 

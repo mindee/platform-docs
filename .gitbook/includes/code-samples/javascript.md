@@ -1,3 +1,7 @@
+---
+title: sample-code-javascript
+---
+
 Requires Node.js 20 minimum and the [axios](https://www.npmjs.com/package/axios) library.
 
 {% code lineNumbers="true" %}
