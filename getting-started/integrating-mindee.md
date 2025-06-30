@@ -76,7 +76,7 @@ You'll want to adapt your processing depending on the [type of field](../feature
 {% endtab %}
 
 {% tab title=".NET" %}
-
+{% include "../.gitbook/includes/code-samples/process-dotnet.md" %}
 {% endtab %}
 {% endtabs %}
 
