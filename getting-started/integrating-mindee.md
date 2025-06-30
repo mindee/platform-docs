@@ -27,7 +27,6 @@ When getting started, we recommend using the [#polling](../integrations/api-over
 Here are some code examples, these are self-contained and can be run as-is:
 
 {% tabs %}
-
 {% tab title="Python" %}
 {% include "../.gitbook/includes/code-samples/python.md" %}
 {% endtab %}
@@ -44,13 +43,16 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% include "../.gitbook/includes/code-samples/php.md" %}
 {% endtab %}
 
+{% tab title=".NET" %}
+{% include "../.gitbook/includes/code-samples/dotnet.md" %}
+{% endtab %}
 {% endtabs %}
 
 ## Processing the Results
 
 Once you've sent the file and retrieved the results, you can start extracting the JSON payload.
 
-The model's fields will be in the `result.fields` object in the returned JSON.
+The model's fields will be in the `fields` object in the returned JSON, in the `response` variable returned from the above step.
 
 Each key in the `fields` object corresponds to the field's `name` in your model configuration.
 
@@ -61,14 +63,14 @@ You'll want to adapt your processing depending on the [type of field](../feature
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 ```python
-my_simple_field = result["inference"]["fields"]["my_simple_field"]
+my_simple_field = response["inference"]["fields"]["my_simple_field"]
 field_value = my_simple_field["value"]
 ```
 
 Accessing a list of values, where `my_list_field` is the name of the field in the Model.
 
 ```python
-my_list_field = result["inference"]["fields"]["my_list_field"]
+my_list_field = response["inference"]["fields"]["my_list_field"]
 
 # access a value at a given position
 field_first_value = my_list_field[0]["value"]
@@ -82,14 +84,14 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```python
-object_field = result["inference"]["fields"]["my_object_field"]
+object_field = response["inference"]["fields"]["my_object_field"]
 sub_field_value = object_field["sub_field"]["value"]
 ```
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
 ```python
-object_list_field = result["inference"]["fields"]["my_object_list_field"]
+object_list_field = response["inference"]["fields"]["my_object_list_field"]
 
 # access an object at a given position
 object_item_0 = object_list_field[0]
@@ -105,14 +107,14 @@ for object_item in object_list_field:
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 ```javascript
-const mySimpleField = result.inference.fields.my_simple_field;
+const mySimpleField = response.inference.fields.my_simple_field;
 const fieldValue = mySimpleField.value;
 ```
 
 Accessing a list of values, where `my_list_field` is the name of the field in the Model.
 
 ```javascript
-const myListField = result.inference.fields.my_list_field;
+const myListField = response.inference.fields.my_list_field;
 
 // access a value at a given position
 const fieldFirstValue = myListField[0].value;
@@ -127,14 +129,14 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```javascript
-const objectField = result.inference.fields.my_object_field;
+const objectField = response.inference.fields.my_object_field;
 const subFieldValue = objectField.sub_field.value;
 ```
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
 ```javascript
-const objectListField = result.inference.fields.my_object_list_field;
+const objectListField = response.inference.fields.my_object_list_field;
 
 // access an object at a given position
 const objectItem0 = objectListField[0];
@@ -151,14 +153,14 @@ for (const objectItem of objectListField) {
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 ```ruby
-my_simple_field = result["inference"]["fields"]["my_simple_field"]
+my_simple_field = response["inference"]["fields"]["my_simple_field"]
 field_value = my_simple_field["value"]
 ```
 
 Accessing a list of values, where `my_list_field` is the name of the field in the Model.
 
 ```ruby
-my_list_field = result["inference"]["fields"]["my_list_field"]
+my_list_field = response["inference"]["fields"]["my_list_field"]
 
 # access a value at a given position
 field_first_value = my_list_field[0]["value"]
@@ -173,7 +175,7 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```ruby
-object_field = result["inference"]["fields"]["my_object_field"]
+object_field = response["inference"]["fields"]["my_object_field"]
 sub_field_value = object_field["sub_field"]["value"]
 ```
 
@@ -197,14 +199,14 @@ end
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 ```php
-$my_simple_field = $result["inference"]["fields"]["my_simple_field"];
+$my_simple_field = $response["inference"]["fields"]["my_simple_field"];
 $field_value = $my_simple_field["value"];
 ```
 
 Accessing a list of values, where `my_list_field` is the name of the field in the Model.
 
 ```php
-$my_list_field = $result["inference"]["fields"]["my_list_field"];
+$my_list_field = $response["inference"]["fields"]["my_list_field"];
 
 // access a value at a given position
 $field_first_value = $my_list_field[0]["value"];
@@ -219,14 +221,14 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```php
-$object_field = $result["inference"]["fields"]["my_object_field"];
+$object_field = $response["inference"]["fields"]["my_object_field"];
 $sub_field_value = $object_field["sub_field"]["value"];
 ```
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
 ```php
-$object_list_field = $result["inference"]["fields"]["my_object_list_field"];
+$object_list_field = $response["inference"]["fields"]["my_object_list_field"];
 
 // access an object at a given position
 $object_item_0 = $object_list_field[0];
@@ -238,4 +240,56 @@ foreach ($object_list_field as $object_item) {
 }
 ```
 {% endtab %}
+
+{% tab title=".NET" %}
+Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+
+We need to specify that the field is a `SimpleField` in order to access its `Value`.
+
+```csharp
+var mySimpleField = response.Inference.Result.Fields["my_simple_field"];
+var fieldValue = mySimpleField.SimpleField.Value;
+```
+
+Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+
+We need to specify that the field is a `ListField` in order to access its `Items`.
+
+```csharp
+var myListField = response.Inference.Result.Fields["my_list_field"];
+
+// access a value at a given position
+var fieldFirstValue = myListField.ListField.Items[0].SimpleField.Value;
+
+// loop over all values in the list
+foreach (var listItem in myListField.ListField.Items)
+{
+    var itemValue = listItem.SimpleField.Value;
+}
+```
+
+Accessing an object field, where `my_object_field` is the name of the field in the Model.\
+In this hypothetical case, the object has a sub-field named `sub_field` .
+
+```csharp
+var objectField = response.Inference.Fields["my_object_field"];
+var subField = objectField.ObjectField.Fields["sub_field"].Value;
+```
+
+Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
+
+```csharp
+objectListField = response.Inference.Fields["my_object_list_field"];
+
+// access an object at a given position
+$object_item_0 = $object_list_field.ListField.Items[0];
+$sub_field_0_value = $object_item_0.ObjectField.Items["sub_field"].Value;
+
+// loop over object lists
+foreach ($object_list_field.ListField.Items as $object_item) {
+    $sub_field_value = $object_item.ObjectField.Fields["sub_field"].Value;
+}
+```
+{% endtab %}
 {% endtabs %}
+

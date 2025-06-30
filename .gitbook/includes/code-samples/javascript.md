@@ -68,12 +68,12 @@ async function sendFileWithPolling(
 
 async function main() {
   try {
-    const result = await sendFileWithPolling(
+    const response = await sendFileWithPolling(
       "/path/to/file.pdf",
       "MY_MODEL_ID",
       "MY_API_KEY"
     );
-    console.log(result);
+    console.log(response);
   } catch (error) {
     console.error("Error:", error.message);
   }

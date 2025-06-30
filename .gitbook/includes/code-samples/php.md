@@ -88,11 +88,11 @@ function sendFileWithPolling(
     throw new Exception("Polling timed out after $maxRetries attempts");
 }
 
-$result = sendFileWithPolling(
+$response = sendFileWithPolling(
     "/path/to/file.pdf",
     "MY_MODEL_ID",
     "MY_API_KEY"
 );
-print_r($result);
+print_r($response);
 ```
 {% endcode %}

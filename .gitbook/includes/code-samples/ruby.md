@@ -76,7 +76,7 @@ def send_file_with_polling(file_path, model_id, api_key, max_retries = 30, polli
   raise "Polling timed out after #{max_retries} attempts"
 end
 
-result = send_file_with_polling(
+response = send_file_with_polling(
   "/path/to/file.pdf",
   "MY_MODEL_ID",
   "MY_API_KEY"

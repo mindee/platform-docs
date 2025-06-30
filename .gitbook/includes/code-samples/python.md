@@ -56,12 +56,12 @@ def send_file_with_polling(
     raise TimeoutError(f"Polling timed out after {max_retries} attempts")
 
 
-result = send_file_with_polling(
+response = send_file_with_polling(
     file_path="/path/to/file.pdf",
     model_id="MY_MODEL_ID",
     api_key="MY_API_KEY",
 )
-print(json.dumps(result,indent=2))
+print(json.dumps(response, indent=2))
 
 ```
 {% endcode %}
