@@ -1,3 +1,7 @@
+---
+title: process-dotnet
+---
+
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 We need to specify that the field is a `SimpleField` in order to access its `Value`.
@@ -38,11 +42,11 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 objectListField = response.Inference.Fields["my_object_list_field"];
 
 // access an object at a given position
-$object_item_0 = $object_list_field.ListField.Items[0];
-$sub_field_0_value = $object_item_0.ObjectField.Items["sub_field"].Value;
+var objectItem0 = objectListField.ListField.Items[0];
+var subField0Value = objectItem0.ObjectField.Items["sub_field"].Value;
 
 // loop over object lists
-foreach ($object_list_field.ListField.Items as $object_item) {
-    $sub_field_value = $object_item.ObjectField.Fields["sub_field"].Value;
+foreach (var objectItem in objectListField.ListField.Items) {
+    var subFieldValue = objectItem.ObjectField.Fields["sub_field"].Value;
 }
 ```
