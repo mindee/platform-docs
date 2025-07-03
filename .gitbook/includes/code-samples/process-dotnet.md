@@ -33,7 +33,8 @@ In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```csharp
 var objectField = response.Inference.Fields["my_object_field"];
-var subField = objectField.ObjectField.Fields["sub_field"].Value;
+var subField = objectField.ObjectField.Fields["sub_field"];
+var subFieldValue = subField.SimpleField.Value;
 ```
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
@@ -47,6 +48,7 @@ var subField0Value = objectItem0.ObjectField.Items["sub_field"].Value;
 
 // loop over object lists
 foreach (var objectItem in objectListField.ListField.Items) {
-    var subFieldValue = objectItem.ObjectField.Fields["sub_field"].Value;
+    var subField = objectItem.ObjectField.Fields["sub_field"];
+    var subFieldValue = subField.SimpleField.Value;
 }
 ```
