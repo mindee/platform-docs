@@ -1,14 +1,18 @@
+---
+title: process-python
+---
+
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 ```python
-my_simple_field = response["inference"]["fields"]["my_simple_field"]
+my_simple_field = response.inference.fields["my_simple_field"]
 field_value = my_simple_field["value"]
 ```
 
 Accessing a list of values, where `my_list_field` is the name of the field in the Model.
 
 ```python
-my_list_field = response["inference"]["fields"]["my_list_field"]
+my_list_field = response.inference.fields["my_list_field"]
 
 # access a value at a given position
 field_first_value = my_list_field[0]["value"]
@@ -22,14 +26,14 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```python
-object_field = response["inference"]["fields"]["my_object_field"]
+object_field = response.inference.fields["my_object_field"]
 sub_field_value = object_field["sub_field"]["value"]
 ```
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
 ```python
-object_list_field = response["inference"]["fields"]["my_object_list_field"]
+object_list_field = response.inference.fields["my_object_list_field"]
 
 # access an object at a given position
 object_item_0 = object_list_field[0]

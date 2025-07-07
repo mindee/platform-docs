@@ -2,66 +2,32 @@
 title: sample-code-python
 ---
 
-Requires Python 3.9 minimum and the [requests](https://pypi.org/project/requests/) library.
+Requires Python 3.9 or greater and the [Mindee Python client library](https://pypi.org/project/mindee/) version 4.24.0 or greater.\
+Currently you'll need the [RC version](https://pypi.org/project/mindee/4.24.0rc1/), full release coming soon!
 
 {% code lineNumbers="true" %}
 ```python
-import json
-import time
-import requests
-from pathlib import Path
+from mindee import ClientV2, InferencePredictOptions
+from mindee.parsing.v2 import InferenceResponse, PollingResponse
+from tests.product import PRODUCT_DATA_DIR
 
+input_path = "/path/to/the/file.ext"
+api_key = "MY_API_KEY"
+model_id = "MY_MODEL_ID"
 
-def send_file_with_polling(
-        file_path: str,
-        model_id: str,
-        api_key: str,
-        max_retries: int = 30,
-        polling_interval: int = 2,
-) -> dict:
-    upload_file = Path(file_path)
-    headers = {"Authorization": api_key}
-    form_data = {"model_id": model_id, "rag": False}
-    with upload_file.open("rb") as fh:
-        files = {"file": (upload_file.name, fh)}
-        print(f"Enqueuing file: {upload_file}")
-        response = requests.post(
-            url="https://api-v2.mindee.net/v2/inferences/enqueue",
-            files=files,
-            data=form_data,
-            headers=headers,
-        )
-    response.raise_for_status()
-    job_data = response.json().get("job")
-    polling_url = job_data.get("polling_url")
+# Init a new client
+mindee_client = ClientV2(api_key)
 
-    # Important to wait before attempting to poll
-    time.sleep(3)
+# Load a file from disk
+input_doc = mindee_client.source_from_path(input_path)
+options = InferencePredictOptions(model_id=model_id)
 
-    # Poll for completion
-    for attempt in range(max_retries):
-        print(f"Polling on: {polling_url}")
-        poll_response = requests.get(polling_url, headers=headers, allow_redirects=False)
-        poll_data = poll_response.json()
-        job_status = poll_data.get("job", {}).get("status")
-        if poll_response.status_code == 302 or job_status == "Processed":
-            result_url = poll_data.get("job", {}).get("result_url")
-            print(f"Get result from: {result_url}")
-            result_response = requests.get(result_url, headers=headers)
-            result_data = result_response.json()
-            return result_data
-        # still processing, wait before next poll
-        time.sleep(polling_interval)
-    # If we've exhausted all retries
-    raise TimeoutError(f"Polling timed out after {max_retries} attempts")
-
-
-response = send_file_with_polling(
-    file_path="/path/to/file.pdf",
-    model_id="MY_MODEL_ID",
-    api_key="MY_API_KEY",
+# Parse the file.
+response: InferenceResponse = mindee_client.enqueue_and_parse(
+    input_doc, options
 )
-print(json.dumps(response, indent=2))
 
+# Print a brief summary of the parsed data
+print(response.inference)
 ```
 {% endcode %}
