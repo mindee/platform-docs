@@ -31,7 +31,7 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% include "../.gitbook/includes/code-samples/python.md" %}
 {% endtab %}
 
-{% tab title="JavaScript" %}
+{% tab title="Node.js" %}
 {% include "../.gitbook/includes/code-samples/javascript.md" %}
 {% endtab %}
 
@@ -63,7 +63,7 @@ You'll want to adapt your processing depending on the [type of field](../feature
 {% include "../.gitbook/includes/code-samples/process-python.md" %}
 {% endtab %}
 
-{% tab title="JavaScript" %}
+{% tab title="Node.js" %}
 {% include "../.gitbook/includes/code-samples/process-javascript.md" %}
 {% endtab %}
 
@@ -79,4 +79,3 @@ You'll want to adapt your processing depending on the [type of field](../feature
 {% include "../.gitbook/includes/code-samples/process-dotnet.md" %}
 {% endtab %}
 {% endtabs %}
-
