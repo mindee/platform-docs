@@ -17,7 +17,7 @@
 ## Integrations
 
 * [API Overview](integrations/api-overview.md)
-* [Install a Client Library](integrations/install-a-client-library.md)
+* [Using a Client Library](integrations/using-a-client-library.md)
 * [Processing a File](integrations/processing-a-file.md)
 * [Processing a Result](integrations/processing-a-result.md)
 * [API Reference](integrations/api-reference.md)
