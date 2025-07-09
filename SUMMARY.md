@@ -13,6 +13,7 @@
   * [Data Schema](features/models/data-schema.md)
   * [Continuous Learning (RAG)](features/models/improving-accuracy.md)
   * [Model Settings](features/models/model-settings.md)
+* [Tutorials](features/tutorials.md)
 
 ## Integrations
 
@@ -20,6 +21,7 @@
 * [Using a Client Library](integrations/using-a-client-library.md)
 * [Processing a File](integrations/processing-a-file.md)
 * [Processing a Result](integrations/processing-a-result.md)
+* [Tutorials](integrations/tutorials.md)
 * [API Reference](integrations/api-reference.md)
 
 ## Account Management
@@ -27,6 +29,10 @@
 * [Plans](account-management/plans.md)
 * [Organizations](account-management/organizations.md)
 * [Billing](account-management/billing.md)
+
+## Use Cases
+
+* [Page 1](use-cases/page-1.md)
 
 ## Community
 
