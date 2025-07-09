@@ -18,7 +18,7 @@
 ## Integrations
 
 * [API Overview](integrations/api-overview.md)
-* [Sending a File](integrations/sending-a-file.md)
+* [Sending a File](integrations/processing-a-file.md)
 * [Processing a Result](integrations/processing-a-result.md)
 * [Tutorials](integrations/tutorials.md)
 * [API Reference](integrations/api-reference.md)

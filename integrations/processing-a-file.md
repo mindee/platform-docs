@@ -3,7 +3,7 @@ hidden: true
 noIndex: true
 ---
 
-# Processing a File
+# Sending a File
 
 ### Loading a File&#x20;
 

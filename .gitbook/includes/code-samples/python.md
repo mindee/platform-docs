@@ -3,7 +3,7 @@ title: sample-code-python
 ---
 
 Requires Python 3.9 or greater and the [Mindee Python client library](https://pypi.org/project/mindee/) version 4.24.0 or greater.\
-Currently you'll need the [RC version](https://pypi.org/project/mindee/4.24.0rc1/), full release coming soon!
+Currently you'll need the [RC version](https://pypi.org/project/mindee/4.24.0rc2/), full release coming soon!
 
 {% code lineNumbers="true" %}
 ```python
