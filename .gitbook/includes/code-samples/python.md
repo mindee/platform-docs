@@ -9,7 +9,6 @@ Currently you'll need the [RC version](https://pypi.org/project/mindee/4.24.0rc1
 ```python
 from mindee import ClientV2, InferencePredictOptions
 from mindee.parsing.v2 import InferenceResponse, PollingResponse
-from tests.product import PRODUCT_DATA_DIR
 
 input_path = "/path/to/the/file.ext"
 api_key = "MY_API_KEY"
