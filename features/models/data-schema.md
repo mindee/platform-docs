@@ -78,10 +78,21 @@ For the `due_date`, you could use a string, but a date field is definitely a bet
 
 ### Extraction Guidelines
 
-Sometimes changing the field name and type is not enough to explain what you need for one field. In that case you have the possibility to add Extraction Guidelines to the field.\
-Use natural language to explain how to properly extract the data.&#x20;
+Sometimes changing the field name and type is not enough to explain what you need for one field.\
+In that case you have the possibility to add Extraction Guidelines to the field.
+
+Use natural language to explain how to properly extract the data.
 
 For instance, for `supplier_phone_number` , adding the following extraction guidelines could be useful:&#x20;
 
 > If you find several phone numbers in the document, I need the phone number of the supplier headquarters. Also, I want you to reformat the data to match the international phone number format, as follows : +1-212-456-7890
 
+You can specify guidelines in most languages, including, _but not limited to_:
+
+* European languages: English, French, Spanish, German, Italian, Russian, Greek, etc
+* Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
+* East Asian languages: Japanese, Mandarin, Korean, Vietnamese, etc
+* Semitic languages: Arabic, Hebrew, Amharic, etc
+* African languages: Swahili, Yoruba, Zulu, etc
+
+**Note:** while the models can understand, we are not able to provide in-depth support for all languages.
