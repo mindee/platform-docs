@@ -144,6 +144,8 @@ You'll need to have your own webserver and a URL that Mindee can send `POST` req
 
 The URL must be public-facing and secured (TLS).
 
+More details here: [webhooks.md](webhooks.md "mention")
+
 ```mermaid
 sequenceDiagram
     participant clientsrv as Web Server

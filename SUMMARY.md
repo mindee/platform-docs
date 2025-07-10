@@ -17,9 +17,10 @@
 
 ## Integrations
 
-* [API Overview](integrations/api-overview.md)
+* [API Overview](integrations/api-overview/README.md)
+  * [Webhooks](integrations/api-overview/webhooks.md)
 * [Sending a File](integrations/processing-a-file.md)
-* [Processing a Result](integrations/processing-a-result.md)
+* [Processing an Inference](integrations/processing-an-inference.md)
 * [Tutorials](integrations/tutorials.md)
 * [API Reference](integrations/api-reference.md)
 

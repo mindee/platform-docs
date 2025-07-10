@@ -5,15 +5,15 @@ noIndex: true
 
 # Sending a File
 
-### Loading a File&#x20;
+## Loading a File&#x20;
 
-File input options
+File input options: File, URL
 
 Compression
 
 PDF Page Manipulation
 
-### Sending a File
+## Sending a File
 
 Polling Options
 
