@@ -23,7 +23,7 @@ If there are no pre-built models that suit your needs, you can:
 
 Be sure to make at least one test on a document, using the Live Test tab.
 
-If it doesn't work as expected, you can modify the Data Schema, as explained in[#modifying-your-data-schema](../features/models/#modifying-your-data-schema "mention").
+If it doesn't work as expected, you can modify the Data Schema, as explained in [#modifying-your-data-schema](../features/models/#modifying-your-data-schema "mention").
 
 ## Create an API Key
 
@@ -33,7 +33,7 @@ On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.m
 
 You can quickly test the API by sending a file using the built-in client in our [api-reference.md](../integrations/api-reference.md "mention").
 
-You can also[#send-a-file](quickstart.md#send-a-file "mention")using one of our officially-supported programming languages.
+You can also [#send-a-file](quickstart.md#send-a-file "mention") using one of our officially-supported programming languages.
 
 ## Process the Result
 
