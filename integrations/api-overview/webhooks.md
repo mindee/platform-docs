@@ -70,7 +70,7 @@ Each endpoint in the given list will be sent the inference results.
 
 ## Local Testing
 
-You can use a service like [ngrok](https://ngrok.com/use-cases/webhook-testing) to test your integration locally.
+You can use a service like [ngrok](https://ngrok.com/use-cases/webhook-testing) or [localtunnel](https://www.npmjs.com/package/localtunnel) to test your integration locally.
 
 ## Loading an Inference
 
