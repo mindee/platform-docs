@@ -57,13 +57,13 @@ When POSTing the multipart form, use the `webhook_ids` parameter to specify the 
 The parameter is a list, allowing to specify multiple endpoints:
 
 ```
-webhook_ids="[ENDPOINT_1_UUID, ENDPOINT_2_UUID]"
+webhook_ids=[ENDPOINT_1_UUID, ENDPOINT_2_UUID]
 ```
 
 A single endpoint must also be sent as a list:
 
 ```
-webhook_ids="[ENDPOINT_1_UUID]"
+webhook_ids=[ENDPOINT_1_UUID]
 ```
 
 Each endpoint in the given list will be sent the inference results.
