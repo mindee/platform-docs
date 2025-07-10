@@ -22,7 +22,7 @@ To process your document using Mindee, simply send the file using the [REST API]
 
 Make a note of your model's ID for use in the API.
 
-When getting started, we recommend using the [#polling](../integrations/api-overview.md#polling "mention") method which will be quickest.
+When getting started, we recommend using the [#polling](../integrations/api-overview.md#polling "mention") method which will be quickest (unless you happen to already have access to a public-facing Web server).
 
 Here are some code examples, these are self-contained and can be run as-is:
 
@@ -45,6 +45,10 @@ Here are some code examples, these are self-contained and can be run as-is:
 
 {% tab title=".NET" %}
 {% include "../.gitbook/includes/code-samples/dotnet.md" %}
+{% endtab %}
+
+{% tab title="Java" %}
+{% include "../.gitbook/includes/code-samples/java.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -77,5 +81,9 @@ You'll want to adapt your processing depending on the [type of field](../feature
 
 {% tab title=".NET" %}
 {% include "../.gitbook/includes/code-samples/process-dotnet.md" %}
+{% endtab %}
+
+{% tab title="Java" %}
+{% include "../.gitbook/includes/code-samples/process-java.md" %}
 {% endtab %}
 {% endtabs %}

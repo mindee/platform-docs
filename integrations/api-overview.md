@@ -113,17 +113,19 @@ If you're not sure on what to use, choose this flow.
 ```mermaid
 sequenceDiagram
     participant client as Client
-    participant enqueue as /inference/enqueue
-    participant job as /job
-    participant inference as /inference
+    participant enqueue as /inferences/enqueue
+    participant job as /jobs
+    participant inference as /inferences
     client->>enqueue: POST file
     enqueue->>client: HTTP 202
     client->>client: wait 3 seconds
     client->>job: GET job.id
     job->>client: Processing - HTTP 200
-    client->>client: wait 1 second
-    client->>job: GET job.id
-    job->>client: Processed - HTTP 302
+    loop Loop until job.result_url is filled or HTTP 302 returned
+      client->>client: wait 1 second
+      client->>job: GET job.id
+      job->>client: Processed - HTTP 302
+    end
     client->>inference: GET inference.id
     inference->>client: HTTP 200
     client->>client: process JSON result
