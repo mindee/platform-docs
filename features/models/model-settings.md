@@ -10,14 +10,21 @@ On the Model Settings page, you'll have the opportunity to modify the model name
 
 ## Processing Zone
 
-This setting determines the geographic region for your model's data processing.\
-You'll have 3 available options here:&#x20;
+This setting determines the geographic region of where your data is processed.
+
+There are 3 available options for processing location:&#x20;
 
 * Europe
 * United States
 * Global&#x20;
 
-Selecting **Global** means your data could be processed in Europe and in the United States.
+Selecting **Global** means your data could be processed in Europe and/or the United States.
+
+{% hint style="info" %}
+This is only an indication for processing, not support.
+
+You can send documents from any country to the Mindee API!
+{% endhint %}
 
 ## Storage Policy
 
