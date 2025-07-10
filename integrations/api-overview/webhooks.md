@@ -70,7 +70,9 @@ Each endpoint in the given list will be sent the inference results.
 
 ## Local Testing
 
-You can use a service like [ngrok](https://ngrok.com/use-cases/webhook-testing) or [localtunnel](https://www.npmjs.com/package/localtunnel) to test your integration locally.
+To test your integration locally, you can use open-source software like [rathole](https://github.com/rathole-org/rathole),  [frp](https://github.com/fatedier/frp), or [localtunnel](https://www.npmjs.com/package/localtunnel).
+
+There are also proprietary solutions like [ngrok](https://ngrok.com/use-cases/webhook-testing).
 
 ## Loading an Inference
 
@@ -80,7 +82,7 @@ Mindee will POST the inference results to this URL.
 
 Processing the result is then a matter of loading the sent JSON payload from the Web server.
 
-The payload is identical to a polling result and processing its contents done in exactly the same way.
+The payload is identical to a polling result and processing its contents is done in exactly the same way.
 
 More details here: [processing-an-inference.md](../processing-an-inference.md "mention")
 
