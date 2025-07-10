@@ -89,7 +89,7 @@ For instance, for `supplier_phone_number` , adding the following extraction guid
 
 You can specify guidelines in most languages, including, _but not limited to_:
 
-* European languages: English, French, Spanish, German, Italian, Russian, Greek, etc
+* European languages: English, French, Spanish, German, Italian, Portuguese, Russian, Greek, etc
 * Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
 * East Asian languages: Japanese, Mandarin, Korean, Vietnamese, etc
 * Semitic languages: Arabic, Hebrew, Amharic, etc
