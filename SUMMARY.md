@@ -4,7 +4,7 @@
 
 * [Mindee Documentation](README.md)
 * [Quickstart](getting-started/quickstart.md)
-* [Defining a Custom Model](getting-started/defining-a-model.md)
+* [Defining a Model](getting-started/defining-a-model.md)
 * [Integrating Mindee](getting-started/integrating-mindee.md)
 
 ## Features
