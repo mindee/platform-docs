@@ -5,15 +5,18 @@
 * [Mindee Documentation](README.md)
 * [Quickstart](getting-started/quickstart.md)
 * [Defining a Model](getting-started/defining-a-model.md)
+* [Test Your Model](getting-started/test-your-model.md)
 * [Integrating Mindee](getting-started/integrating-mindee.md)
 
-## Features
+## Models
 
-* [Models](features/models/README.md)
-  * [Data Schema](features/models/data-schema.md)
-  * [Continuous Learning (RAG)](features/models/improving-accuracy.md)
-  * [Model Settings](features/models/model-settings.md)
-* [Tutorials](features/tutorials.md)
+* [Models Overview](models/models-overview.md)
+* [Data Schema](models/data-schema.md)
+* [Extra Options](models/extra-options.md)
+* [Continuous Learning (RAG)](models/improving-accuracy.md)
+* [Model Settings](models/model-settings.md)
+* [Live Test](models/live-test.md)
+* [Tutorials](models/tutorials.md)
 
 ## Integrations
 

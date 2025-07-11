@@ -23,7 +23,7 @@ If there are no pre-built models that suit your needs, you can:
 
 Be sure to make at least one test on a document, using the Live Test tab.
 
-If it doesn't work as expected, you can modify the Data Schema, as explained in [#modifying-your-data-schema](../features/models/#modifying-your-data-schema "mention").
+If it doesn't work as expected, you can modify the Data Schema, as explained in [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
 
 ## Create an API Key
 

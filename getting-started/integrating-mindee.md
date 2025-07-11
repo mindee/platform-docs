@@ -60,7 +60,7 @@ The model's fields will be in the `fields` object in the returned JSON, in the `
 
 Each key in the `fields` object corresponds to the field's `name` in your model configuration.
 
-You'll want to adapt your processing depending on the [type of field](../features/models/data-schema.md#field-types), for example looping over lists.
+You'll want to adapt your processing depending on the [type of field](../models/data-schema.md#field-types), for example looping over lists.
 
 {% tabs %}
 {% tab title="Python" %}
