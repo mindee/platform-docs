@@ -31,13 +31,7 @@ From the **Billing** tab, you can:
 
 ### 📥 Invoices
 
-(add screenshot)
-
-You can download past invoices anytime:
-
-1. Go to **Settings → Billing**
-2. Scroll down to the **Invoices** section
-3. Click **Download** next to the invoice you need
+You can download past invoices anytime on your Stripe account.
 
 > 💡 Invoices are issued automatically at the start of each billing period.
 
@@ -64,4 +58,3 @@ To change your plan:
 ### 🧾 Supported Payment Methods
 
 We currently support **credit and debit cards** for all self-serve plans. Custom payement options are also available for Entreprise.
-
