@@ -40,7 +40,7 @@ You should reuse the same client instance for all calls.
 First import the needed classes:
 
 ```python
-from mindee import ClientV2, InferencePredictOptions
+from mindee import ClientV2, InferenceParameters
 ```
 
 For the API key, you can pass it directly to the client.\
@@ -112,7 +112,7 @@ The client library will POST the request for you, and then automatically poll th
 When polling you really only need to set the `model_id` .
 
 ```python
-params = InferencePredictOptions(model_id=model_id)
+params = InferenceParameters(model_id=model_id)
 ```
 
 You can also set the various polling parameters.\
@@ -121,7 +121,7 @@ However, **we do not recommend** setting this option unless you are encountering
 ```python
 from mindee import PollingOptions
 
-params = InferencePredictOptions(
+params = InferenceParameters(
     model_id=model_id,
     # Set only if having timeout issues.
     polling_options=PollingOptions(
@@ -156,7 +156,7 @@ For more information on webhooks, take a look at the [webhooks.md](api-overview/
 When using a webhook, you'll need to set the `model_id` and which webhook(s) to use.
 
 ```python
-params = InferencePredictOptions(
+params = InferenceParameters(
     model_id=model_id,
     webhook_ids=["ENDPOINT_1_UUID"],
 )
@@ -293,21 +293,17 @@ These files will return a 4xx HTTP error as the server will be unable to process
 
 You can try to fix the headers using the provided functions.
 
-{% hint style="warning" %}
-This is a destructive process.
-
-Make sure you've tested before enabling this on your production flow!
-{% endhint %}
-
 {% tabs %}
 {% tab title="Python" %}
-Using the `input_source` instance created above:
+Using the `input_source` instance created above.
 
 ```python
 input_source.fix_pdf()
 ```
 {% endtab %}
 {% endtabs %}
+
+{% include "../.gitbook/includes/this-is-applied-in-memory-t....md" %}
 
 ### File Compression
 
@@ -319,21 +315,35 @@ We provide a way to compress images before sending to the API.
 
 {% tabs %}
 {% tab title="Python" %}
-a
+Using the `input_source` instance created above.
 
-b
+Basic usage is very simple, and can be applied both images and PDFs:
 
-c
+```python
+input_source.compress(quality=85)
+```
+
+For images, you can also set a maximum height and/or width.\
+The aspect ratio will always be preserved.
+
+```python
+input_source.compress(
+    max_width=1920,
+    max_height=1920,
+)
+```
 {% endtab %}
 
 {% tab title=".NET" %}
-a
+Using the `inputSource` instance created above.
 
 b
 
 c
 {% endtab %}
 {% endtabs %}
+
+{% include "../.gitbook/includes/this-is-applied-in-memory-t....md" %}
 
 ### PDF Page Manipulations
 
@@ -341,19 +351,55 @@ In some cases, PDFs will always have some superfluous pages present.
 
 For example a cover page or terms and conditions which are not useful to the desired data extraction.
 
-These extra pages do count towards your billing, slow down processing, and can even lead to errors in rare cases. Its therefore in your best interest to remove them before sending.
+These extra pages do count towards your billing, slow down processing, and can even lead to errors in rare cases. It is therefore in your best interest to remove them before sending.
 
 {% tabs %}
 {% tab title="Python" %}
-a
+Using the `input_source` instance created above.
 
-b
+```python
+from mindee import PageOptions
 
-c
+# For all documents:
+# Keep only the first page
+PageOptions(
+    operation="KEEP_ONLY",
+    page_indexes=[0]
+)
+
+input_source.apply_page_options(PageOptions)
+```
+
+Some other examples:
+
+```python
+# Only for documents having 2 or more pages:
+# Keep only these pages: first, penultimate, last
+PageOptions(
+    on_min_pages=2,
+    operation="KEEP_ONLY",
+    page_indexes=[0, -2, -1]
+)
+
+# For all documents:
+# Remove the first page
+PageOptions(
+    operation="REMOVE",
+    page_indexes=[0]
+)
+
+# Only for documents having 10 or more pages:
+# Remove the first 5 pages
+PageOptions(
+    on_min_pages=10,
+    operation="REMOVE",
+    page_indexes=list(range(5))
+)
+```
 {% endtab %}
 
 {% tab title=".NET" %}
-a
+Using the `inputSource` instance created above.
 
 b
 
@@ -361,17 +407,38 @@ c
 {% endtab %}
 {% endtabs %}
 
+{% include "../.gitbook/includes/this-is-applied-in-memory-t....md" %}
+
 ## Sending the File
 
 Now that all has been set, we can send the file to the Mindee servers for data extraction!
 
 {% tabs %}
 {% tab title="Python" %}
-a
+For **polling**, use:
 
-b
+```python
+response = mindee_client.enqueue_and_parse(input_source, params)
 
-c
+# To easily test which data was extracted,
+# simply print an RST representation of the inference
+print(response.inference)
+```
+
+For **webhooks**, use:
+
+```python
+response = mindee_client.enqueue(input_source, params)
+
+# You can save the job ID for your records
+print(response.job.id)
+
+# If you set an `alias`, you can verify it was taken into account
+print(response.job.alias)
+```
+
+You can also use both methods!\
+Call `enqueue_and_parse` , and set the appropriate `webhook_ids` in your `params` .
 {% endtab %}
 
 {% tab title=".NET" %}
@@ -387,4 +454,4 @@ c
 
 This page is long enough as it is, don't you think?
 
-Head on over to [processing-a-result.md](processing-a-result.md "mention") the page for details on the next step.
+Head on over to the [processing-a-result.md](processing-a-result.md "mention") page for details on the next step.
