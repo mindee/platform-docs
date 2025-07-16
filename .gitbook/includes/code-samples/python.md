@@ -26,11 +26,11 @@ options = InferencePredictOptions(
 )
 
 # Load a file from disk
-input_doc = mindee_client.source_from_path(input_path)
+input_source = mindee_client.source_from_path(input_path)
 
 # Upload the file
 response: InferenceResponse = mindee_client.enqueue_and_parse(
-    input_doc, options
+    input_source, options
 )
 
 # Print a brief summary of the parsed data
