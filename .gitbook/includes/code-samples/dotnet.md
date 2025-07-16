@@ -3,7 +3,7 @@ title: code-sample-dotnet
 ---
 
 Requires .NET 6 or greater and the [Mindee .NET client library](https://www.nuget.org/packages/Mindee/) version 3.29 or greater.\
-**Currently you'll need the** [**RC version**](https://www.nuget.org/packages/Mindee/3.29.0-rc3)**, full release coming soon!**
+**Currently you'll need the RC version, full release coming soon!**
 
 {% code lineNumbers="true" %}
 ```csharp

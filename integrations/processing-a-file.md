@@ -5,9 +5,23 @@ noIndex: true
 
 # Sending a File
 
-## Loading a File&#x20;
+## Using a File
 
-File input options: File, URL
+{% tabs %}
+{% tab title="Python" %}
+
+{% endtab %}
+
+{% tab title="Node.js" %}
+
+{% endtab %}
+
+{% tab title="Ruby" %}
+
+{% endtab %}
+{% endtabs %}
+
+## Using a URL
 
 Compression
 
