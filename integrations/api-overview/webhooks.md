@@ -84,6 +84,6 @@ Processing the result is then a matter of loading the sent JSON payload from the
 
 The payload is identical to a polling result and processing its contents is done in exactly the same way.
 
-More details here: [processing-an-inference.md](../processing-an-inference.md "mention")
+More details here: [#processing-the-results](../../getting-started/integrating-mindee.md#processing-the-results "mention")
 
 We **highly recommend** saving all received payloads to disk or a database before attempting to load the inference. We will not be able to provide support if you are not able to retrieve payloads after having received them.
