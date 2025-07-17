@@ -2,7 +2,8 @@
 title: sample-code-python
 ---
 
-Requires Python 3.9 or greater and the [Mindee Python client library](https://pypi.org/project/mindee/) version 4.24.0 or greater.
+Python 3.9 or greater is recommended.\
+Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.24.0** or greater.
 
 {% code lineNumbers="true" %}
 ```python

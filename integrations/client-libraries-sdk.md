@@ -35,7 +35,7 @@ Requires Python 3.9 or greater.
 Install the PyPi package using pip:
 
 ```
-pip install mindee>=4.24.0rc2
+pip install mindee>=4.24.0
 ```
 
 [Github Repository](https://github.com/mindee/mindee-api-python)
