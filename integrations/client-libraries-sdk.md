@@ -31,7 +31,7 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 {% tab title="Python" %}
 Requires Python 3.9 or greater.
 
-Install the PyPi package pip:
+Install the PyPi package using pip:
 
 ```
 pip install mindee>=4.24.0rc2
