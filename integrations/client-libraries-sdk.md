@@ -1,6 +1,4 @@
 ---
-hidden: true
-noIndex: true
 layout:
   width: default
   title:
@@ -17,7 +15,8 @@ layout:
 
 # Client Libraries / SDK
 
-Our client libraries are the preferred way of integrating with the Mindee platform.\
+Our client libraries are the preferred way of integrating with the Mindee platform.
+
 They are the fastest and easiest way to call our APIs, and allow our support teams to better help you.
 
 Some useful tools are also provided, for example PDF processing and image compression.
