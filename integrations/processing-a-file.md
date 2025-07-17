@@ -6,30 +6,30 @@ noIndex: true
 # Sending a File
 
 {% hint style="info" %}
-N**ote:**
-
-This page assumes you are using an official Mindee client library.
+N**ote:** This page assumes you are using an official Mindee client library.
 {% endhint %}
 
 ## Overview
 
-This page will go into detail for each step, and list all the possible options.\
+This page will go into detail for each step, and list all possible options.\
 It is reference documentation.
 
 {% hint style="info" %}
 **If you want just the quick TL;DR:**
 
-**T**ake a look at the [integrating-mindee.md](../getting-started/integrating-mindee.md "mention") page.
+* Take a look at the [integrating-mindee.md](../getting-started/integrating-mindee.md "mention") page.
+* Use the **search bar** at the top to ask our documentation AI to write code samples for you.
 {% endhint %}
 
 Overall, the steps to sending a file are:
 
 1. Initialize the Mindee client.
-2. Set the parameters, in particular the model ID to use.
-3. Load the file.
-4. Send the file with the proper parameters.
+2. Set inference parameters, in particular the model ID to use.
+3. Load a source file.
+4. _Optional_: adjust the source file before sending.
+5. Send the file with the proper parameters.
 
-## Initializing the Mindee Client
+## Initialize the Mindee Client
 
 This should be the first step in your code.
 
@@ -94,7 +94,7 @@ MindeeClientV2 mindeeClient = new MindeeClientV2();
 {% endtab %}
 {% endtabs %}
 
-## Setting Inference Parameters
+## Set Inference Parameters
 
 Inference parameters control:
 
@@ -174,9 +174,9 @@ c
 
 You can specify any number of webhook endpoint IDs, each will be sent the payload.
 
-## Loading a File
+## Load a Source File
 
-You can load a file from a path, from raw bytes, from a bytes stream, or from a language-specific object.
+You can load a source file from a path, from raw bytes, from a bytes stream, or from a language-specific object.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -286,6 +286,16 @@ var inputSource = new LocalInputSource(fileStream, filename)
 {% endtab %}
 {% endtabs %}
 
+## Adjust the Source File
+
+Optionally make changes and adjustments to the source file before sending.
+
+{% hint style="info" %}
+All file adjustments are applied in-memory to the source file instance.
+
+If loaded from disk, the original file is not modified.
+{% endhint %}
+
 ### Fixing PDF Headers
 
 In some cases, PDFs will have corrupt or invalid headers.\
@@ -303,8 +313,6 @@ input_source.fix_pdf()
 {% endtab %}
 {% endtabs %}
 
-{% include "../.gitbook/includes/this-is-applied-in-memory-t....md" %}
-
 ### File Compression
 
 There is no need to send excessively large files to the Mindee API.
@@ -317,7 +325,7 @@ We provide a way to compress images before sending to the API.
 {% tab title="Python" %}
 Using the `input_source` instance created above.
 
-Basic usage is very simple, and can be applied both images and PDFs:
+Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```python
 input_source.compress(quality=85)
@@ -343,15 +351,15 @@ c
 {% endtab %}
 {% endtabs %}
 
-{% include "../.gitbook/includes/this-is-applied-in-memory-t....md" %}
-
 ### PDF Page Manipulations
 
-In some cases, PDFs will always have some superfluous pages present.
+In some cases, PDFs will have some superfluous pages present.
 
 For example a cover page or terms and conditions which are not useful to the desired data extraction.
 
-These extra pages do count towards your billing, slow down processing, and can even lead to errors in rare cases. It is therefore in your best interest to remove them before sending.
+These extra pages count towards your billing and slow down processing.
+
+It is therefore in your best interest to remove them before sending.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -407,18 +415,20 @@ c
 {% endtab %}
 {% endtabs %}
 
-{% include "../.gitbook/includes/this-is-applied-in-memory-t....md" %}
-
-## Sending the File
+## Send the File
 
 Now that all has been set, we can send the file to the Mindee servers for data extraction!
 
 {% tabs %}
 {% tab title="Python" %}
+Using the `mindee_client` , `input_source` , and `params` created in the steps above.
+
 For **polling**, use:
 
 ```python
-response = mindee_client.enqueue_and_parse(input_source, params)
+response = mindee_client.enqueue_and_get_inference(
+    input_source, params
+)
 
 # To easily test which data was extracted,
 # simply print an RST representation of the inference
@@ -428,7 +438,9 @@ print(response.inference)
 For **webhooks**, use:
 
 ```python
-response = mindee_client.enqueue(input_source, params)
+response = mindee_client.enqueue_inference(
+    input_source, params
+)
 
 # You can save the job ID for your records
 print(response.job.id)
@@ -437,8 +449,10 @@ print(response.job.id)
 print(response.job.alias)
 ```
 
-You can also use both methods!\
-Call `enqueue_and_parse` , and set the appropriate `webhook_ids` in your `params` .
+**Note:** You can also use both methods!\
+First, Add your webhook IDs to the `InferenceParameters` .\
+Then, call `enqueue_and_get_inference` .\
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title=".NET" %}
@@ -450,7 +464,7 @@ c
 {% endtab %}
 {% endtabs %}
 
-## Processing the Result
+## Process the Result
 
 This page is long enough as it is, don't you think?
 

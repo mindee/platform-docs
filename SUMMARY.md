@@ -22,6 +22,7 @@
 
 * [API Overview](integrations/api-overview/README.md)
   * [Webhooks](integrations/api-overview/webhooks.md)
+* [Client Libraries / SDK](integrations/client-libraries-sdk.md)
 * [Sending a File](integrations/processing-a-file.md)
 * [Processing a Result](integrations/processing-a-result.md)
 * [Tutorials](integrations/tutorials.md)
