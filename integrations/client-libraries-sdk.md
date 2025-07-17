@@ -1,4 +1,5 @@
 ---
+icon: terminal
 layout:
   width: default
   title:
