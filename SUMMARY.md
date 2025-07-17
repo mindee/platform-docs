@@ -25,7 +25,8 @@
 * [Client Libraries / SDK](integrations/client-libraries-sdk.md)
 * [Sending a File](integrations/processing-a-file.md)
 * [Processing a Result](integrations/processing-a-result.md)
-* [Tutorials](integrations/tutorials.md)
+* [Tutorials](integrations/tutorials/README.md)
+  * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [API Reference](integrations/api-reference.md)
 
 ## Account Management
