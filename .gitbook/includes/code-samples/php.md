@@ -2,7 +2,7 @@
 title: sample-code-php
 ---
 
-Requires PHP 8.0 minimum.
+Requires PHP ≥ 8.0.
 
 {% code lineNumbers="true" %}
 ```php

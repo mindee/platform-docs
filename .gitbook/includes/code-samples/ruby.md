@@ -2,7 +2,7 @@
 title: sample-code-ruby
 ---
 
-Requires Ruby 3.0 minimum. Could be greatly simplified if using RoR.
+Requires Ruby ≥ 3.0.
 
 {% code lineNumbers="true" %}
 ```ruby

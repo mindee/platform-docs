@@ -2,7 +2,7 @@
 title: code-sample-java
 ---
 
-Requires Java 8 or greater (11 recommended).\
+Requires Java ≥ 8. Java ≥ 11 recommended.\
 Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.33.0-rc1** or greater.
 
 ```java
