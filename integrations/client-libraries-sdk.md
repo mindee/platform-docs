@@ -78,9 +78,7 @@ dotnet add package Mindee --version 3.29.0-rc3
 {% endtab %}
 {% endtabs %}
 
-Don't see support for your favorite language or framework?
-
-[Make a feature request!](https://feedback.mindee.com/)
+Don't see support for your favorite language or framework? [Make a feature request!](https://feedback.mindee.com/)
 
 ## Usage
 
