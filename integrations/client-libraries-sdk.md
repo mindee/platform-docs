@@ -32,7 +32,7 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 {% tab title="Python" %}
 Requires Python 3.9 or greater.
 
-Install using pip:
+Install the PyPi package pip:
 
 ```
 pip install mindee>=4.24.0rc2
@@ -60,7 +60,7 @@ pip install mindee>=4.24.0rc2
 {% tab title=".NET" %}
 Requires .NET 6.0 or greater.
 
-Install using Nuget:
+Install the NuGet package using .NET CLI:
 
 ```
 dotnet add package Mindee --version 3.29.0-rc3
