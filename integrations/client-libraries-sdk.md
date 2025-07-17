@@ -30,7 +30,7 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 
 {% tabs %}
 {% tab title="Python" %}
-Requires Python 3.9 or greater.
+Python 3.9 or greater is recommended.
 
 Install the PyPi package using pip:
 
@@ -56,7 +56,13 @@ pip install mindee>=4.24.0
 {% tab title="Java" %}
 Requires Java 8 or greater (11 recommended).
 
-[In Progress](https://feedback.mindee.com/p/java-client-library)
+Group ID: `com.mindee.sdk` \
+Artifact ID: `mindee-api-java` \
+Version: ![](https://img.shields.io/maven-central/v/com.mindee.sdk/mindee-api-java?style=flat-square\&label=%20)
+
+There are various installation methods, Maven, Gradle, etc:
+
+[Installation Details](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java)
 {% endtab %}
 
 {% tab title=".NET" %}
