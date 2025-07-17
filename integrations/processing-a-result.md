@@ -3,11 +3,17 @@ hidden: true
 noIndex: true
 ---
 
-# Processing an Inference
+# Processing a Result
 
-## Loading From Webhook
+## Requirements
 
-## Extracting Field Values
+Before proceeding you'll need to have already [sent a file to the Mindee servers](processing-a-file.md) using a client library.
+
+## Overview
+
+## Load From Webhook
+
+## Extract Field Values
 
 ### Single-Value Fields
 

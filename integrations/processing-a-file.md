@@ -1,13 +1,14 @@
 ---
+description: How to send a file to Mindee using a client library.
 hidden: true
 noIndex: true
 ---
 
 # Sending a File
 
-{% hint style="info" %}
-N**ote:** This page assumes you are using an official Mindee client library.
-{% endhint %}
+## Requirements
+
+Before proceeding you'll need to have one of the [official Mindee client libraries](client-libraries-sdk.md) installed.
 
 ## Overview
 
@@ -99,9 +100,42 @@ MindeeClientV2 mindeeClient = new MindeeClientV2();
 Inference parameters control:
 
 * which model to use
-* how the results will be sent and received
-* client-side processing options
 * server-side processing options
+* how the results will be sent and received
+
+### Processing Options
+
+These are the same options as present in the Web API.
+
+{% tabs %}
+{% tab title="Python" %}
+Only the `model_id` is required.
+
+```python
+params = InferenceParameters(
+    # ID of the model, required.
+    model_id="MY_API_KEY",
+    
+    # Options:
+
+    # If set to `True`, will enable Retrieval-Augmented Generation.
+    rag=True,
+
+    # Use an alias to link the file to your own DB.
+    # If empty, no alias will be used.
+    alias="MY_ALIAS"
+)
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+a
+
+b
+
+c
+{% endtab %}
+{% endtabs %}
 
 ### Polling Configuration
 
@@ -132,6 +166,7 @@ params = InferenceParameters(
         # Total number of polling attempts
         max_retries=80,
     ),
+    # ... any other options ...
 )
 ```
 {% endtab %}
@@ -159,6 +194,8 @@ When using a webhook, you'll need to set the `model_id` and which webhook(s) to 
 params = InferenceParameters(
     model_id=model_id,
     webhook_ids=["ENDPOINT_1_UUID"],
+    
+    # ... any other options ...
 )
 ```
 {% endtab %}
@@ -240,7 +277,9 @@ with input_path.open("rb") as fh:
     input_source = mindee_client.source_from_file(fh)
     # IMPORTANT:
     # Continue all operations inside the 'with' statement.
-    mindee_client.enqueue_and_parse(input_source, params)
+    mindee_client.enqueue_and_get_inference(
+        input_source, params
+    )
 ```
 {% endtab %}
 

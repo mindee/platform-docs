@@ -26,7 +26,7 @@ You can use the client libraries to make API requests following the polling and 
 
 All our client libraries are open-source (MIT license) and hosted on [GitHub](https://github.com/mindee).
 
-### Installation Instructions
+## Installation Instructions
 
 {% tabs %}
 {% tab title="Python" %}
@@ -54,6 +54,8 @@ pip install mindee>=4.24.0rc2
 {% endtab %}
 
 {% tab title="Java" %}
+Requires Java 8 or greater (11 recommended).
+
 [In Progress](https://feedback.mindee.com/p/java-client-library)
 {% endtab %}
 
@@ -74,5 +76,7 @@ Don't see support for your favorite language or framework?
 
 [Make a feature request!](https://feedback.mindee.com/)
 
+## Usage
 
+To get started, take a look at the [integrating-mindee.md](../getting-started/integrating-mindee.md "mention") page.
 
