@@ -41,4 +41,8 @@
 
 ## Community
 
-* [Feedback](https://feedback.mindee.com/)
+* [Request a Feature](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
+
+***
+
+* [Report a Bug](https://feedback.mindee.com/?b=685c08afd7a1d2e47b124cbb)
