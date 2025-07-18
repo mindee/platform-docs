@@ -24,7 +24,7 @@ This is therefore beyond the scope of this example.
 Assuming you're able to get the raw HTTP request via the variable `request` .
 
 ```python
-from mindee import LocalResponse
+from mindee import LocalResponse, InferenceResponse
 
 local_response = LocalResponse(request.body())
 
@@ -38,11 +38,7 @@ if not local_response.is_valid_hmac_signature(my_secret_key, hmac_signature):
     raise Error("Bad HMAC signature! Is someone trying to do evil?")
 
 # Deserialize the response
-
-result = mindee_client.load_prediction(
-    product.InternationalIdV2,
-    local_response
-)
+result = local_response.deserialize_response(InferenceResponse)
 ```
 {% endtab %}
 {% endtabs %}

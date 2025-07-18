@@ -1,17 +1,5 @@
 ---
 icon: terminal
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Client Libraries / SDK
@@ -35,7 +23,7 @@ Python 3.9 or greater is recommended.
 Install the PyPi package using pip:
 
 ```
-pip install mindee>=4.24.0
+pip install mindee>=4.25.0
 ```
 
 [Github Repository](https://github.com/mindee/mindee-api-python)
