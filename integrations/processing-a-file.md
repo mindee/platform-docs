@@ -105,7 +105,7 @@ Inference parameters control:
 
 ### Processing Options
 
-These are the same options as present in the Web API.
+These are mostly the same options as present in the Web API.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -114,7 +114,7 @@ Only the `model_id` is required.
 ```python
 params = InferenceParameters(
     # ID of the model, required.
-    model_id="MY_API_KEY",
+    model_id="MY_MODEL_ID",
     
     # Options:
 
@@ -129,11 +129,23 @@ params = InferenceParameters(
 {% endtab %}
 
 {% tab title=".NET" %}
-a
+Only the `modelId` is required.
 
-b
+```csharp
+var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID"
 
-c
+    // Options:
+
+    // If set to `true`, will enable Retrieval-Augmented Generation.
+    , rag: false
+
+    // Use an alias to link the file to your own DB.
+    // If empty, no alias will be used.
+    , alias: "MY_ALIAS"
+);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -146,7 +158,7 @@ The client library will POST the request for you, and then automatically poll th
 When polling you really only need to set the `model_id` .
 
 ```python
-params = InferenceParameters(model_id=model_id)
+params = InferenceParameters(model_id="MY_MODEL_ID")
 ```
 
 You can also set the various polling parameters.\
@@ -156,14 +168,14 @@ However, **we do not recommend** setting this option unless you are encountering
 from mindee import PollingOptions
 
 params = InferenceParameters(
-    model_id=model_id,
+    model_id="MY_MODEL_ID",
     # Set only if having timeout issues.
     polling_options=PollingOptions(
         # Initial delay before the first polling attempt.
         initial_delay_sec=3,
         # Delay between each polling attempt.
         delay_sec=1.5,
-        # Total number of polling attempts
+        # Total number of polling attempts.
         max_retries=80,
     ),
     # ... any other options ...
@@ -172,11 +184,30 @@ params = InferenceParameters(
 {% endtab %}
 
 {% tab title=".NET" %}
-a
+When polling you really only need to set the `modelId` .
 
-b
+```csharp
+var inferenceParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+```
 
-c
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```csharp
+var inferenceParams = new InferenceParameters(
+    modelId: "MY_MODEL_ID"
+    // Set only if having timeout issues.
+    , pollingOptions: new AsyncPollingOptions(
+        // Initial delay before the first polling attempt.
+        initialDelaySec: 3.0,
+        // Delay between each polling attempt.
+        intervalSec: 1.5,
+        // Total number of polling attempts.
+        maxRetries: 80
+    )
+    // ... any other options ...
+);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -192,7 +223,7 @@ When using a webhook, you'll need to set the `model_id` and which webhook(s) to 
 
 ```python
 params = InferenceParameters(
-    model_id=model_id,
+    model_id="MY_MODEL_ID",
     webhook_ids=["ENDPOINT_1_UUID"],
     
     # ... any other options ...
@@ -201,11 +232,16 @@ params = InferenceParameters(
 {% endtab %}
 
 {% tab title=".NET" %}
-a
+When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
 
-b
-
-c
+```csharp
+var inferenceParams = new InferenceParameters(
+    modelId: "MY_MODEL_ID"
+    , webhookIds: new List<string>{ "ENDPOINT_1_UUID" }
+    
+    // ... any other options ...
+);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -375,8 +411,7 @@ The aspect ratio will always be preserved.
 
 ```python
 input_source.compress(
-    max_width=1920,
-    max_height=1920,
+    max_width=1920, max_height=1920,
 )
 ```
 {% endtab %}
@@ -384,9 +419,19 @@ input_source.compress(
 {% tab title=".NET" %}
 Using the `inputSource` instance created above.
 
-b
+Basic usage is very simple, and can be applied to both images and PDFs:
 
-c
+```csharp
+inputSource.Compress(quality: 85);
+```
+
+For images, you can also set a maximum height and/or width.\
+The aspect ratio will always be preserved.
+
+```csharp
+inputSource.Compress(
+    maxWidth: 1920, maxHeight: 1920);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -407,24 +452,25 @@ Using the `input_source` instance created above.
 ```python
 from mindee import PageOptions
 
-# For all documents:
-# Keep only the first page
-PageOptions(
+# Set the options as follows:
+# For all documents, keep only the first page
+page_options = PageOptions(
     operation="KEEP_ONLY",
     page_indexes=[0]
 )
 
-input_source.apply_page_options(PageOptions)
+# Apply in-memory
+input_source.apply_page_options(page_options)
 ```
 
 Some other examples:
 
 ```python
-# Only for documents having 2 or more pages:
+# Only for documents having 3 or more pages:
 # Keep only these pages: first, penultimate, last
 PageOptions(
-    on_min_pages=2,
     operation="KEEP_ONLY",
+    on_min_pages=3,
     page_indexes=[0, -2, -1]
 )
 
@@ -438,8 +484,8 @@ PageOptions(
 # Only for documents having 10 or more pages:
 # Remove the first 5 pages
 PageOptions(
-    on_min_pages=10,
     operation="REMOVE",
+    on_min_pages=10,
     page_indexes=list(range(5))
 )
 ```
@@ -448,9 +494,43 @@ PageOptions(
 {% tab title=".NET" %}
 Using the `inputSource` instance created above.
 
-b
+```csharp
+// Set the options as follows:
+// For all documents, keep only the first page
+var pageOptions = new PageOptions(
+    operation: PageOptionsOperation.KeepOnly
+    , pageIndexes: [ 0 ]);
 
-c
+// Apply in-memory
+inputSource.ApplyPageOptions(pageOptions);
+```
+
+Some other examples:
+
+```csharp
+// Only for documents having 3 or more pages:
+// Keep only these pages: first, penultimate, last
+new PageOptions(
+    operation: PageOptionsOperation.KeepOnly
+    , onMinPages: 3
+    , pageIndexes: new short[] { 0, -2, -1 }
+);
+
+// For all documents:
+// Remove the first page
+new PageOptions(
+    operation: PageOptionsOperation.Remove
+    , pageIndexes: new short[] { 0 }
+);
+
+// Only for documents having 10 or more pages:
+// Remove the first 5 pages
+new PageOptions(
+    operation: PageOptionsOperation.Remove
+    , onMinPages: 10
+    , pageIndexes: new short[] { 0, 1, 2, 3, 4 }
+);
+```
 {% endtab %}
 {% endtabs %}
 
