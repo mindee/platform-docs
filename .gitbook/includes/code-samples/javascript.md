@@ -2,83 +2,36 @@
 title: sample-code-javascript
 ---
 
-Requires Node.js ≥ 20 and the [axios](https://www.npmjs.com/package/axios) library.
+Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
+Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/v/4.29.0-rc1) version **4.29.0-rc1** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript
-const fs = require("fs");
-const path = require("path");
-const axios = require("axios");
-const FormData = require("form-data");
+const mindee = require("mindee");
+// for TS or modules:
+// import * as mindee from "mindee";
 
-async function sendFileWithPolling(
-  filePath,
-  modelId,
-  apiKey,
-  maxRetries = 30,
-  pollingInterval = 2
-) {
-  const fileName = path.basename(filePath);
-  const headers = {
-    "Authorization": apiKey
-  };
+// Init a new client
+const mindeeClient = new mindee.ClientV2({ apiKey: "MY_API_KEY" });
+const modelId = "MY_MODEL_ID";
 
-  const formData = new FormData();
-  formData.append("model_id", modelId);
-  formData.append("rag", "false");
-  formData.append("file", fs.createReadStream(filePath), {
-    filename: fileName
-  });
+// Load a file from disk
+const inputSource = mindeeClient.docFromPath("/path/to/the/file.ext");
+const params = {
+  modelId: modelId,
+  // If set to `true`, will enable Retrieval-Augmented Generation.
+  rag: false
+};
 
-  console.log(`Enqueuing file: ${filePath}`);
-  const response = await axios.post(
-    "https://api-v2.mindee.net/v2/inferences/enqueue",
-    formData,
-    {headers: { ...headers, ...formData.getHeaders() }}
-  );
+const apiResponse = mindeeClient.enqueueAndGetInference(
+  inputSource,
+  params
+);
 
-  const jobData = response.data.job;
-  const pollingUrl = jobData.polling_url;
-
-  await new Promise(resolve => setTimeout(resolve, 3000));
-
-  for (let attempt = 0; attempt < maxRetries; attempt++) {
-    console.log(`Polling on: ${pollingUrl}`);
-
-    const pollResponse = await axios.get(pollingUrl, {
-      headers,
-      maxRedirects: 0,
-      validateStatus: status => status >= 200 && status < 400
-    });
-
-    const pollData = pollResponse.data;
-    const jobStatus = pollData.job?.status;
-
-    if (pollResponse.status === 302 || jobStatus === "Processed") {
-      const resultUrl = pollData.job?.result_url;
-      console.log(`Get result from: ${resultUrl}`);
-
-      const resultResponse = await axios.get(resultUrl, { headers });
-      return resultResponse.data;
-    }
-    await new Promise(resolve => setTimeout(resolve, pollingInterval * 1000));
-  }
-  throw new Error(`Polling timed out after ${maxRetries} attempts`);
-}
-
-async function main() {
-  try {
-    const response = await sendFileWithPolling(
-      "/path/to/file.pdf",
-      "MY_MODEL_ID",
-      "MY_API_KEY"
-    );
-    console.log(response);
-  } catch (error) {
-    console.error("Error:", error.message);
-  }
-}
-
-main();
+// Handle the response Promise
+apiResponse.then((resp) => {
+  // print a string summary
+  console.log(resp.inference.toString());
+});
 ```
 {% endcode %}
