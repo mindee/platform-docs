@@ -1,14 +1,12 @@
 ---
 description: How to send a file to Mindee using a client library.
-hidden: true
-noIndex: true
 ---
 
 # Sending a File
 
 ## Requirements
 
-Before proceeding you'll need to have one of the [official Mindee client libraries](client-libraries-sdk.md) installed.
+Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
 
 ## Overview
 
@@ -18,7 +16,7 @@ It is reference documentation.
 {% hint style="info" %}
 **If you want just the quick TL;DR:**
 
-* Take a look at the [integrating-mindee.md](../getting-started/integrating-mindee.md "mention") page.
+* Take a look at the [integrating-mindee.md](../../getting-started/integrating-mindee.md "mention") page.
 * Use the **search bar** at the top to ask our documentation AI to write code samples for you.
 {% endhint %}
 
@@ -87,7 +85,7 @@ Instead of passing the key directly, you can also set the following environment 
 `MindeeV2__ApiKey`
 
 This is recommended for production use.\
-In this way there is no need to pass the `apiKey` when initializing the client.
+In this way there is no need to pass the `apiKey` argument when initializing the client.
 
 ```csharp
 MindeeClientV2 mindeeClient = new MindeeClientV2();
@@ -101,7 +99,7 @@ Inference parameters control:
 
 * which model to use
 * server-side processing options
-* how the results will be sent and received
+* how the results will be returned to you
 
 ### Processing Options
 
@@ -215,7 +213,7 @@ var inferenceParams = new InferenceParameters(
 
 The client library will POST the request to your Web server, as configured by your webhook endpoint.
 
-For more information on webhooks, take a look at the [webhooks.md](api-overview/webhooks.md "mention") page.
+For more information on webhooks, take a look at the [webhooks.md](../api-overview/webhooks.md "mention") page.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -445,6 +443,12 @@ These extra pages count towards your billing and slow down processing.
 
 It is therefore in your best interest to remove them before sending.
 
+**Parameters:**
+
+* "page indexes" is required and is a list of 0-based page indexes.
+* "operation" specifies whether to keep only specified pages or remove specified pages.
+* "on min pages" is optional and specifies the minimum number of pages a document must have for the operation to take place. The value of `0` means any number of pages.
+
 {% tabs %}
 {% tab title="Python" %}
 Using the `input_source` instance created above.
@@ -569,17 +573,43 @@ print(response.job.alias)
 ```
 
 **Note:** You can also use both methods!\
-First, Add your webhook IDs to the `InferenceParameters` .\
+First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
 You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title=".NET" %}
-a
+Using the `mindeeClient` , `inputSource` , and `inferenceParams` created in the steps above.
 
-b
+For **polling**, use:
 
-c
+```csharp
+var response = await mindeeClient.EnqueueAndGetInferenceAsync(
+    inputSource, inferenceParams);
+
+// To easily test which data was extracted,
+// simply print an RST representation of the inference
+System.Console.WriteLine(response.Inference.ToString());
+```
+
+For **webhooks**, use:
+
+```csharp
+var response = mindeeClient.EnqueueInferenceAsync(
+    inputSource, inferenceParams
+)
+
+// You can save the job ID for your records
+System.Console.WriteLine(response.Job.Id)
+
+// If you set an `alias`, you can verify it was taken into account
+System.Console.WriteLine(response.Job.Alias)
+```
+
+**Note:** You can also use both methods!\
+First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
+Then, call `EnqueueAndGetInferenceAsync`.\
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 {% endtabs %}
 

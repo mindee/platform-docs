@@ -22,9 +22,9 @@
 
 * [API Overview](integrations/api-overview/README.md)
   * [Webhooks](integrations/api-overview/webhooks.md)
-* [Client Libraries / SDK](integrations/client-libraries-sdk.md)
-* [Sending a File](integrations/processing-a-file.md)
-* [Processing a Result](integrations/processing-a-result.md)
+* [Client Libraries / SDK](integrations/client-libraries-sdk/README.md)
+  * [Sending a File](integrations/client-libraries-sdk/sending-a-file.md)
+  * [Processing a Result](integrations/client-libraries-sdk/processing-a-result.md)
 * [Tutorials](integrations/tutorials/README.md)
   * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [API Reference](integrations/api-reference.md)

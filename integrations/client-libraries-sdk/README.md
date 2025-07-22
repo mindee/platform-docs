@@ -66,9 +66,13 @@ dotnet add package Mindee --version 3.29.0-rc3
 {% endtab %}
 {% endtabs %}
 
-Don't see support for your favorite language or framework? [Make a feature request!](https://feedback.mindee.com/)
+Don't see support for your favorite language or framework? [Make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
 
-## Usage
+## Basic Usage
 
-To get started, take a look at the [integrating-mindee.md](../getting-started/integrating-mindee.md "mention") page.
+To get started, take a look at the [integrating-mindee.md](../../getting-started/integrating-mindee.md "mention") page.
+
+## Usage Details
+
+Head on over to [sending-a-file.md](sending-a-file.md "mention") and [processing-a-result.md](processing-a-result.md "mention") for more details and advanced options.
 
