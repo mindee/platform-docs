@@ -35,8 +35,8 @@ local_response = LocalResponse(request.body())
 # local_response = LocalResponse("path/to/my/file.ext")
 
 # Optionally: verify the HMAC signature
-# You'll need to get the "X-Mindee-Hmac-Signature" custom HTTP header.
-hmac_signature = request.headers.get("X-Mindee-Hmac-Signature")
+# You'll need to get the "X-Signature" custom HTTP header.
+hmac_signature = request.headers.get("X-Signature")
 if not local_response.is_valid_hmac_signature(my_secret_key, hmac_signature):
     raise Error("Bad HMAC signature! Is someone trying to do evil?")
 
