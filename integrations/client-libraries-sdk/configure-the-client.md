@@ -55,6 +55,65 @@ mindee_client = ClientV2()
 ```
 {% endtab %}
 
+{% tab title="Node.js" %}
+First import the needed classes:
+
+```typescript
+const mindee = require("mindee");
+// for TS or modules:
+// import * as mindee from "mindee";
+```
+
+For the API key, you can pass it directly to the client.\
+This is useful for quick testing.
+
+```typescript
+const apiKey = "MY_API_KEY";
+
+const mindeeClient = new mindee.ClientV2({ apiKey: apiKey });
+```
+
+Instead of passing the key directly, you can also set the following environment variable:
+
+`MINDEE_V2_API_KEY`
+
+This is recommended for production use.\
+In this way there is no need to pass the `apiKey` argument when initializing the client.
+
+```typescript
+const mindeeClient = new mindee.ClientV2();
+```
+{% endtab %}
+
+{% tab title="Java" %}
+First import the needed classes:
+
+```java
+import com.mindee.MindeeClientV2;
+import com.mindee.InferenceParameters;
+```
+
+For the API key, you can pass it directly to the client.\
+This is useful for quick testing.
+
+```java
+String apiKey = "MY_API_KEY";
+
+MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+```
+
+Instead of passing the key directly, you can also set the following environment variable:
+
+`MINDEE_V2_API_KEY`
+
+This is recommended for production use.\
+In this way there is no need to pass the `apiKey` argument when initializing the client.
+
+```java
+MindeeClientV2 mindeeClient = new MindeeClientV2();
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 First add the required namespaces.
 
