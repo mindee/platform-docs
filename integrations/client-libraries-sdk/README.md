@@ -18,19 +18,25 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 
 {% tabs %}
 {% tab title="Python" %}
-Python 3.9 or greater is recommended.
+Requires Python ≥ 3.9.\
+Python ≥ 3.10 is highly recommended.
 
-Install the PyPi package using pip:
+Typically the fastest way to get started is to install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```
 pip install mindee>=4.25.0
 ```
-
-[Github Repository](https://github.com/mindee/mindee-api-python)
 {% endtab %}
 
 {% tab title="Node.js" %}
-[In Progress](https://feedback.mindee.com/p/nodejs-jsts-client-library)
+Requires Node.js ≥ 20.\
+Node.js ≥ 22 is recommended.
+
+Typically the fastest way to get started is to install the [NPM package](https://www.npmjs.com/package/mindee):
+
+```
+npm install mindee@">=4.29.0-rc1
+```
 {% endtab %}
 
 {% tab title="Ruby" %}
@@ -38,11 +44,12 @@ pip install mindee>=4.25.0
 {% endtab %}
 
 {% tab title="PHP" %}
-[Planned](https://feedback.mindee.com/p/php-client-library)
+[In Progress](https://feedback.mindee.com/p/php-client-library)
 {% endtab %}
 
 {% tab title="Java" %}
-Requires Java 8 or greater (11 recommended).
+Requires Java ≥ 8.\
+Java ≥ 11 is highly recommended.
 
 Group ID: `com.mindee.sdk` \
 Artifact ID: `mindee-api-java` \
@@ -54,15 +61,14 @@ There are various installation methods, Maven, Gradle, etc:
 {% endtab %}
 
 {% tab title=".NET" %}
-Requires .NET 6.0 or greater.
+Requires .NET ≥ 6.0.\
+.NET ≥ 8.0 is recommended.
 
-Install the NuGet package using .NET CLI:
+Install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
 
 ```
-dotnet add package Mindee --version 3.29.0-rc3
+dotnet add package Mindee --version 3.29.0-rc4
 ```
-
-[Github Repository](https://github.com/mindee/mindee-api-dotnet)
 {% endtab %}
 {% endtabs %}
 
@@ -74,5 +80,15 @@ To get started, take a look at the [integrating-mindee.md](../../getting-started
 
 ## Usage Details
 
-Head on over to [sending-a-file.md](sending-a-file.md "mention") and [processing-a-result.md](processing-a-result.md "mention") for more details and advanced options.
+Overall, the steps to using the Mindee service are:
+
+1. [configure-the-client.md](configure-the-client.md "mention")
+   1. Initialize the Mindee client.
+   2. Set inference parameters, in particular the model ID to use.
+2. [send-a-file.md](send-a-file.md "mention")
+   1. Load a file from various supported sources: path, bytes, etc.
+   2. _Optional_: adjust the source file before sending.
+   3. Send the file with the proper parameters.
+3. [process-the-result.md](process-the-result.md "mention")
+   1. Optional: load from a webhook.
 

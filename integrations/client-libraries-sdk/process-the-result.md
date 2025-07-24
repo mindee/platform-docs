@@ -1,8 +1,8 @@
-# Processing a Result
+# Process the Result
 
 ## Requirements
 
-Before proceeding you'll need to have already [sent a file to the Mindee servers](sending-a-file.md) using a client library.
+You'll nee to have a already sent a file as described in the [send-a-file.md](send-a-file.md "mention") page.
 
 ## Overview
 
