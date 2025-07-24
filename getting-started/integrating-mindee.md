@@ -1,5 +1,5 @@
 ---
-description: How to integrate your application with Mindee services.
+description: How to integrate Mindee into your application.
 icon: plug-circle-check
 ---
 
