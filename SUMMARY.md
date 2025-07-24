@@ -38,7 +38,7 @@
 
 ## Use Cases
 
-* [Page 1](use-cases/page-1.md)
+* [Passport](use-cases/passport.md)
 
 ## Community
 

@@ -13,7 +13,7 @@ Only **Organization Admins** can access and modify billing details.
 
 ### 📍 Where to Find Billing Settings
 
-{% embed url="https://app.supademo.com/demo/cmd5zv8na5l2nc4kjtr7onzba" fullWidth="false" %}
+{% @supademo/embed demoId="cmd5zv8na5l2nc4kjtr7onzba" url="https://app.supademo.com/demo/cmd5zv8na5l2nc4kjtr7onzba" %}
 
 1. Go to app.mindee.com
 2. Click on **Your Organization** on the top-right, then on **Settings**
