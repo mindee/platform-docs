@@ -381,13 +381,16 @@ Now that all has been set, we can send the file to the Mindee servers for data e
 
 {% tabs %}
 {% tab title="Python" %}
-Using the `mindee_client` , `input_source` , and `params` created in the steps above.
+Using:
+
+* `input_source`  created above
+* `mindee_client` and `inference_params` created in [configure-the-client.md](configure-the-client.md "mention").
 
 For **polling**, use:
 
 ```python
 response = mindee_client.enqueue_and_get_inference(
-    input_source, params
+    input_source, inference_params
 )
 
 # To easily test which data was extracted,
@@ -399,7 +402,7 @@ For **webhooks**, use:
 
 ```python
 response = mindee_client.enqueue_inference(
-    input_source, params
+    input_source, inference_params
 )
 
 # You can save the job ID for your records
@@ -409,14 +412,18 @@ print(response.job.id)
 print(response.job.alias)
 ```
 
-**Note:** You can also use both methods!\
+**Note:** You can use both methods!
+
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
-You'll get the response via polling and webhooks will be used as well.
+You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 
 {% tab title=".NET" %}
-Using the `mindeeClient` , `inputSource` , and `inferenceParams` created in the steps above.
+Using:
+
+* `inputSource`  created above
+* `mindeeClient` and `inferenceParams` created in [configure-the-client.md](configure-the-client.md "mention").
 
 For **polling**, use:
 
@@ -443,7 +450,8 @@ System.Console.WriteLine(response.Job.Id)
 System.Console.WriteLine(response.Job.Alias)
 ```
 
-**Note:** You can also use both methods!\
+**Note:** You can also use both methods!
+
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `EnqueueAndGetInferenceAsync`.\
 You'll get the response via polling and webhooks will be used as well.

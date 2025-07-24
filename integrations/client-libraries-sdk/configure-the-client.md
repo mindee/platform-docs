@@ -161,7 +161,7 @@ These are mostly the same options as present in the Web API.
 Only the `model_id` is required.
 
 ```python
-params = InferenceParameters(
+inference_params = InferenceParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     
@@ -181,7 +181,7 @@ params = InferenceParameters(
 Only the `modelId` is required.
 
 ```typescript
-const params = {
+const inferenceParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
 
@@ -227,7 +227,7 @@ The client library will POST the request for you, and then automatically poll th
 When polling you really only need to set the `model_id` .
 
 ```python
-params = InferenceParameters(model_id="MY_MODEL_ID")
+inference_params = InferenceParameters(model_id="MY_MODEL_ID")
 ```
 
 You can also set the various polling parameters.\
@@ -236,7 +236,7 @@ However, **we do not recommend** setting this option unless you are encountering
 ```python
 from mindee import PollingOptions
 
-params = InferenceParameters(
+inference_params = InferenceParameters(
     model_id="MY_MODEL_ID",
     
     # Set only if having timeout issues.
@@ -257,14 +257,14 @@ params = InferenceParameters(
 When polling you really only need to set the `modelId` .
 
 ```typescript
-const params = {modelId: "MY_MODEL_ID"};
+const inferenceParams = {modelId: "MY_MODEL_ID"};
 ```
 
 You can also set the various polling parameters.\
 However, **we do not recommend** setting this option unless you are encountering timeout problems.
 
 ```typescript
-const params = {
+const inferenceParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
   
@@ -322,7 +322,7 @@ For more information on webhooks, take a look at the [webhooks.md](../api-overvi
 When using a webhook, you'll need to set the `model_id` and which webhook(s) to use.
 
 ```python
-params = InferenceParameters(
+inference_params = InferenceParameters(
     model_id="MY_MODEL_ID",
     webhook_ids=["ENDPOINT_1_UUID"],
     
@@ -335,7 +335,7 @@ params = InferenceParameters(
 When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
 
 ```typescript
-const params = {
+const inferenceParams = {
   modelId: "MY_MODEL_ID",
   webhookIds: ["ENDPOINT_1_UUID"],
 
