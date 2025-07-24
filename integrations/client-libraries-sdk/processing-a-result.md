@@ -44,6 +44,41 @@ if not local_response.is_valid_hmac_signature(my_secret_key, hmac_signature):
 result = local_response.deserialize_response(InferenceResponse)
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+Assuming you have a Web server instance `myHttpServer` .
+
+```java
+
+// Load the JSON string sent by the Mindee webhook POST callback.
+//
+// Reading the callback data will vary greatly depending on your HTTP server.
+// This is therefore beyond the scope of this example.
+String jsonData = myHttpServer.getPostBodyAsString();
+LocalResponse localResponse = new LocalResponse(jsonData);
+
+// Verify the HMAC signature.
+// You'll need to get the "X-Signature" custom HTTP header.
+String hmacSignature = myHttpServer.getHeader("X-Signature");
+boolean isValid = localResponse.isValidHmacSignature(
+    "obviously-fake-secret-key", hmacSignature
+);
+if (!isValid) {
+    throw new MyException("Bad HMAC signature! Is someone trying to do evil?");
+}
+
+// You can also use a File object as the input.
+//LocalResponse localResponse = new LocalResponse(new File("/path/to/file.json"));
+
+// Deserialize the response into Java objects
+InferenceResponse response = localResponse.deserializeResponse(
+    InferenceResponse.class
+);
+
+// Print a summary of the parsed data
+System.out.println(response.getDocument().toString());
+```
+{% endtab %}
 {% endtabs %}
 
 ## Extract Field Values
