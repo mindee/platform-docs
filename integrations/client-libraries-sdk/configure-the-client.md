@@ -172,8 +172,28 @@ params = InferenceParameters(
 
     # Use an alias to link the file to your own DB.
     # If empty, no alias will be used.
-    alias="MY_ALIAS"
+    alias="MY_ALIAS",
 )
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Only the `modelId` is required.
+
+```typescript
+const params = {
+  // ID of the model, required.
+  modelId: "MY_MODEL_ID",
+
+  // Options:
+
+  // If set to `true`, will enable Retrieval-Augmented Generation.
+  rag: false,
+
+  // Use an alias to link the file to your own DB.
+  // If empty, no alias will be used.
+  alias: "MY_ALIAS"
+};
 ```
 {% endtab %}
 
@@ -218,6 +238,7 @@ from mindee import PollingOptions
 
 params = InferenceParameters(
     model_id="MY_MODEL_ID",
+    
     # Set only if having timeout issues.
     polling_options=PollingOptions(
         # Initial delay before the first polling attempt.
@@ -229,6 +250,35 @@ params = InferenceParameters(
     ),
     # ... any other options ...
 )
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+When polling you really only need to set the `modelId` .
+
+```typescript
+const params = {modelId: "MY_MODEL_ID"};
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```typescript
+const params = {
+  // ID of the model, required.
+  modelId: "MY_MODEL_ID",
+  
+  // Set only if having timeout issues.
+  pollingOptions: {
+    // Initial delay before the first polling attempt.
+    initialDelaySec: 3.0,
+    // Delay between each polling attempt.
+    delaySec: 1.5,
+    // Total number of polling attempts.
+    maxRetries: 80
+  }
+  // ... any other options ...
+}
 ```
 {% endtab %}
 
@@ -245,6 +295,7 @@ However, **we do not recommend** setting this option unless you are encountering
 ```csharp
 var inferenceParams = new InferenceParameters(
     modelId: "MY_MODEL_ID"
+    
     // Set only if having timeout issues.
     , pollingOptions: new AsyncPollingOptions(
         // Initial delay before the first polling attempt.
@@ -277,6 +328,19 @@ params = InferenceParameters(
     
     # ... any other options ...
 )
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
+
+```typescript
+const params = {
+  modelId: "MY_MODEL_ID",
+  webhookIds: ["ENDPOINT_1_UUID"],
+
+  // ... any other options ...
+};
 ```
 {% endtab %}
 
