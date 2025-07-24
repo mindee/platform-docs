@@ -55,7 +55,7 @@ This color-coding system allows product teams to **highlight uncertainty directl
 When the **Automation** feature is not activated, the `confidence` key in the JSON response will always be set to `null`.
 {% endhint %}
 
-1.  Once [connected to the platform](https://app.mindee.com), inside one of your model, go to the data schema and click the options tab.
+1.  Once [connected to the platform](https://app.mindee.com), open one of your models, navigate to the **Data Schema** section, and click on the **Options** tab.
 
     <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 2. Here you can **switch on the toggle** "Include Confidence Score for automation".&#x20;
