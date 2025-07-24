@@ -56,7 +56,7 @@ mindee_client = ClientV2()
 {% endtab %}
 
 {% tab title="Node.js" %}
-First import the needed classes:
+First import the needed classes. We recommend using TypeScript.
 
 ```typescript
 const mindee = require("mindee");

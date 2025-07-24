@@ -178,10 +178,31 @@ input_source.compress(quality=85)
 For images, you can also set a maximum height and/or width.\
 The aspect ratio will always be preserved.
 
+For example to compress and resize to no greater than 1920x1920 pixels:
+
 ```python
 input_source.compress(
-    max_width=1920, max_height=1920,
+    quality=85, max_width=1920, max_height=1920
 )
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Using the `inputSource` instance created above.
+
+Basic usage is very simple, and can be applied to both images and PDFs:
+
+```typescript
+inputSource.compress(85);
+```
+
+For images, you can also set a maximum height and/or width.\
+The aspect ratio will always be preserved.
+
+For example to compress and resize to no greater than 1920x1920 pixels:
+
+```typescript
+inputSource.compress(85, 1920, 1920);
 ```
 {% endtab %}
 
@@ -197,9 +218,11 @@ inputSource.Compress(quality: 85);
 For images, you can also set a maximum height and/or width.\
 The aspect ratio will always be preserved.
 
+For example to compress and resize to no greater than 1920x1920 pixels:
+
 ```csharp
 inputSource.Compress(
-    maxWidth: 1920, maxHeight: 1920);
+    quality: 85, maxWidth: 1920, maxHeight: 1920);
 ```
 {% endtab %}
 {% endtabs %}
@@ -231,7 +254,7 @@ from mindee import PageOptions
 # For all documents, keep only the first page
 page_options = PageOptions(
     operation="KEEP_ONLY",
-    page_indexes=[0]
+    page_indexes=[0],
 )
 
 # Apply in-memory
@@ -246,14 +269,14 @@ Some other examples:
 PageOptions(
     operation="KEEP_ONLY",
     on_min_pages=3,
-    page_indexes=[0, -2, -1]
+    page_indexes=[0, -2, -1],
 )
 
 # For all documents:
 # Remove the first page
 PageOptions(
     operation="REMOVE",
-    page_indexes=[0]
+    page_indexes=[0],
 )
 
 # Only for documents having 10 or more pages:
@@ -261,8 +284,51 @@ PageOptions(
 PageOptions(
     operation="REMOVE",
     on_min_pages=10,
-    page_indexes=list(range(5))
+    page_indexes=list(range(5)),
 )
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Using the `inputSource` instance created above.
+
+```typescript
+// Set the options as follows:
+// For all documents, keep only the first page
+const pageOptions: PageOptions = {
+  operation: PageOptionsOperation.KeepOnly,
+  pageIndexes: [0],
+};
+
+// Apply in-memory
+await inputDoc.applyPageOptions(pageOptions);
+```
+
+Some other examples:
+
+```typescript
+// Only for documents having 3 or more pages:
+// Keep only these pages: first, penultimate, last
+const pageOptions: PageOptions = {
+  operation: PageOptionsOperation.KeepOnly,
+  onMinPages: 3,
+  pageIndexes: [0, -2, -1],
+};
+
+// For all documents:
+// Remove the first page
+const pageOptions: PageOptions = {
+  operation: PageOptionsOperation.Remove,
+  pageIndexes: [0],
+};
+
+// Only for documents having 10 or more pages:
+// Remove the first 5 pages
+const pageOptions: PageOptions = {
+  operation: PageOptionsOperation.Remove,
+  onMinPages: 10,
+  pageIndexes: [0, 1, 2, 3, 4],
+};
 ```
 {% endtab %}
 
