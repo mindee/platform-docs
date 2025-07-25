@@ -10,6 +10,7 @@ The **Live Test** page lets you **interactively test your model** on real docume
 ### Key features
 
 * **Side-by-side comparison**: Visually compare the raw document on the left with structured extraction results on the right, ideal for validating model behavior at a glance.
+* **Interactive document viewer**: Hover, click, and inspect highlighted fields directly on the image. Tooltips show extracted values and metadata in context.
 * **View raw JSON output**: Toggle to display the full JSON response returned by the API, allowing developers to inspect field names, values, coordinates, confidence scores, and nested structures.
 * **Instant visual feedback**: See where each field was extracted directly on the document.
 * **RAG Toggle**: If your have added documents into your RAG database, you can simulate how RAG would influence the output.
