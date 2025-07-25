@@ -48,10 +48,10 @@ This color-coding system allows product teams to **highlight uncertainty directl
 ### How to activate Automation
 
 {% hint style="info" %}
-**Automation** is only available to paying **Business** users.
+**Automation** is only available to users with an active **Business** subscription.
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 When the **Automation** feature is not activated, the `confidence` key in the JSON response will always be set to `null`.
 {% endhint %}
 
