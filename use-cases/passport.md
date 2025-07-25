@@ -23,5 +23,7 @@ Indian specific:
 * Father's name
 * Mother's name
 * File number
+* Page number + from legual guardian à file number
+* (en 2 colonnes, on commence avec les champs normaux puis on ajoute ces champs là)
 
 {% @supademo/embed demoId="cmdipnkx90upc1c4c4h4d8pph" url="https://app.supademo.com/demo/cmdipnkx90upc1c4c4h4d8pph" %}
