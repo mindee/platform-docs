@@ -27,7 +27,6 @@ From the **Billing** tab, you can:
 * **Switch billing frequency** (monthly or annual)
 * **Upgrade your plan**
 * **Update your payment method**
-* **Download invoices**
 
 ### 📥 Invoices
 

@@ -1,3 +1,7 @@
+---
+icon: passport
+---
+
 # Passport
 
 * Name
@@ -6,6 +10,12 @@
 * Place of birth
 * Date of issue
 * Date of expiry
+
+number of pages
+
+<figure><img src="../.gitbook/assets/indian-passport-sample.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/mindee-indian-passport.png" alt=""><figcaption></figcaption></figure>
 
 Indian specific:
 
