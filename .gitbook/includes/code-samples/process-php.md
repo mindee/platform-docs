@@ -20,8 +20,8 @@ $myListField = $inferenceFields["my_list_field"];
 $fieldFirstValue = $myListField[0]->value;
 
 // loop over all values in the list
-foreach ($myListField as $listItem) {
-    $itemValue = $listItem["value"];
+foreach ($myListField->items as $listItem) {
+    $itemValue = $listItem->value;
 }
 ```
 
@@ -38,14 +38,14 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 
 ```php
 $inferenceFields = $response->inference->result->fields;
-$objectListField = $inferenceFields["my_object_list_field"];
+$myObjectListField = $inferenceFields["my_object_list_field"];
 
 // access an object at a given position
-$objectItem0 = $objectListField[0];
+$objectItem0 = $myObjectListField->items[0];
 $subField0Value = $objectItem0["sub_field"]->value;
 
 // loop over object lists
-foreach ($objectListField as $objectItem) {
+foreach ($myObjectListField->items as $objectItem) {
     $subFieldValue = $objectItem["sub_field"]->value;
 }
 ```
