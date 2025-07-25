@@ -35,7 +35,7 @@ Node.js ≥ 22 is recommended.
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
 ```
-npm install mindee@">=4.29.0-rc2
+npm install mindee@">=4.29.0-rc3
 ```
 {% endtab %}
 
