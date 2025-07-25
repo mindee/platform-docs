@@ -1,5 +1,6 @@
 ---
 description: Prepare and configure the Mindee client.
+icon: wrench
 ---
 
 # Configure the Client
@@ -197,6 +198,28 @@ const inferenceParams = {
 ```
 {% endtab %}
 
+{% tab title="Java" %}
+Only the `modelId` is required.
+
+```java
+InferenceParameters params = InferenceParameters
+    // ID of the model, required.
+    .builder("MY_MODEL_ID")
+
+    // options
+
+    // If set to `true`, will enable Retrieval-Augmented Generation.
+    .rag(false)
+
+    // Use an alias to link the file to your own DB.
+    // If empty, no alias will be used.
+    .alias("MY_ALIAS")
+
+    // complete the builder
+    .build();
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 Only the `modelId` is required.
 
@@ -282,6 +305,39 @@ const inferenceParams = {
 ```
 {% endtab %}
 
+{% tab title="Java" %}
+When polling you really only need to set the `modelId` .
+
+```java
+InferenceParameters params = InferenceParameters
+        .builder("MY_MODEL_ID")
+        .build();
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```java
+InferenceParameters params = InferenceParameters
+        .builder("MY_MODEL_ID")
+        .pollingOptions(
+            AsyncPollingOptions.builder()
+                // Initial delay before the first polling attempt.
+                .initialDelaySec(3.0)
+                // Delay between each polling attempt.
+                .intervalSec(1.5)
+                // Total number of polling attempts.
+                .maxRetries(80)
+                // complete the builder
+                .build()
+        )
+    
+        // ... any other options ...
+    
+        .build();
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 When polling you really only need to set the `modelId` .
 
@@ -341,6 +397,20 @@ const inferenceParams = {
 
   // ... any other options ...
 };
+```
+{% endtab %}
+
+{% tab title="Java" %}
+When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
+
+```java
+InferenceParameters params = InferenceParameters
+    .builder("MY_MODEL_ID")
+    .webhookIds(new String[]{"ENDPOINT_1_UUID"})
+    
+    // ... any other options ...
+    
+    .build();
 ```
 {% endtab %}
 

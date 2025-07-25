@@ -21,7 +21,7 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 Requires Python ≥ 3.9.\
 Python ≥ 3.10 is highly recommended.
 
-Typically the fastest way to get started is to install the [PyPi package](https://pypi.org/project/mindee/) using pip:
+Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```
 pip install mindee>=4.25.0
@@ -32,10 +32,10 @@ pip install mindee>=4.25.0
 Requires Node.js ≥ 20.\
 Node.js ≥ 22 is recommended.
 
-Typically the fastest way to get started is to install the [NPM package](https://www.npmjs.com/package/mindee):
+Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
 ```
-npm install mindee@">=4.29.0-rc1
+npm install mindee@">=4.29.0-rc2
 ```
 {% endtab %}
 
@@ -44,7 +44,28 @@ npm install mindee@">=4.29.0-rc1
 {% endtab %}
 
 {% tab title="PHP" %}
-[In Progress](https://feedback.mindee.com/p/php-client-library)
+Requires PHP ≥ 8.0.\
+PHP ≥ 8.3 is recommended.
+
+Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using composer:
+
+```
+php composer.phar require "mindee/mindee:>=1.23"
+```
+
+If you get an error message like this:
+
+```
+found mindee/mindee[v1.23.0-rc1] but it does not match your minimum-stability.
+
+```
+
+You'll need to configure your composer settings to allow installing an RC version:
+
+```
+php composer.phar config minimum-stability RC
+php composer.phar config prefer-stable true
+```
 {% endtab %}
 
 {% tab title="Java" %}
@@ -64,7 +85,7 @@ There are various installation methods, Maven, Gradle, etc:
 Requires .NET ≥ 6.0.\
 .NET ≥ 8.0 is recommended.
 
-Install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
+Simply install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
 
 ```
 dotnet add package Mindee --version 3.29.0-rc4

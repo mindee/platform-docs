@@ -1,5 +1,6 @@
 ---
 description: How to send a file to Mindee using a client library.
+icon: page-caret-up
 ---
 
 # Send a File
@@ -18,7 +19,9 @@ Overall, the steps to sending a file are:
 
 ## Load a Source File
 
-You can load a source file from a path, from raw bytes, from a bytes stream, or from a language-specific object.
+You can load a source file from a path, from raw bytes, from a bytes stream, or from a language-specific object. Choose the appropriate type based on your application requirements.
+
+If you're unsure of which to use, we recommend loading from a path.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -26,7 +29,7 @@ You'll need to use the `mindee_client` instance created above.
 
 To load a path string, use `source_from_path` .
 
-```
+```python
 input_path = "/path/to/the/file.ext"
 input_source = mindee_client.source_from_path(input_path)
 ```
@@ -61,9 +64,7 @@ The string will be decoded into bytes internally.
 ```python
 from pathlib import Path
 
-input_path = Path("/path/to/the/base64_file.txt")
-with input_path.open("r", encoding="utf-8") as fh:
-    input_base64 = fh.read()
+input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
 
 input_source = mindee_client.source_from_b64string(
     input_base64,
@@ -88,10 +89,61 @@ with input_path.open("rb") as fh:
 ```
 {% endtab %}
 
+{% tab title="Java" %}
+To load a file, initialize it using the `LocalInputSource` class.
+
+This class has different constructors to allow for opening various types of inputs.
+
+&#x20;To load a path string:
+
+```java
+String filePath = "/path/to/the/file.ext";
+
+LocalInputSource inputSource = new LocalInputSource(filePath);
+```
+
+To load a `File` instance:
+
+```java
+File file = new File("/path/to/the/file.ext");
+
+LocalInputSource inputSource = new LocalInputSource(file);
+```
+
+To load a byte array:
+
+```java
+byte[] fileBytes = Files.readAllBytes("/path/to/the/file.ext");
+String filename = "file.ext";
+
+LocalInputSource inputSource = new LocalInputSource(fileBytes, filename);
+```
+
+To load an `InputStream` instance:
+
+```java
+InputStream fileStream = new FileInputStream(
+    new File("/path/to/the/file.ext")
+);
+String filename = "file.ext";
+
+LocalInputSource inputSource = new LocalInputSource(fileStream, filename);
+```
+
+To load a base-64 string:
+
+```java
+String inputBase64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
+String filename = "file.ext";
+
+LocalInputSource inputSource = new LocalInputSource(inputBase64, filename);
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 To load a file, initialize it using the `LocalInputSource` class.
 
-This class has various constructors to allow for opening various types of inputs.
+This class has different constructors to allow for opening various types of inputs.
 
 &#x20;To load a path string:
 
@@ -202,6 +254,25 @@ The aspect ratio will always be preserved.
 For example to compress and resize to no greater than 1920x1920 pixels:
 
 ```typescript
+inputSource.compress(85, 1920, 1920);
+```
+{% endtab %}
+
+{% tab title="Java" %}
+Using the `inputSource` instance created above.
+
+Basic usage is very simple, and can be applied to both images and PDFs:
+
+```java
+inputSource.compress(85);
+```
+
+For images, you can also set a maximum height and/or width.\
+The aspect ratio will always be preserved.
+
+For example to compress and resize to no greater than 1920x1920 pixels:
+
+```java
 inputSource.compress(85, 1920, 1920);
 ```
 {% endtab %}
