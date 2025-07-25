@@ -14,7 +14,7 @@
 * [Data Schema](models/data-schema.md)
 * [Extra Options](models/extra-options.md)
 * [Continuous Learning (RAG)](models/improving-accuracy.md)
-* [Automation (Confidence score)](models/automation-confidence-score.md)
+* [Automation (Confidence Score)](models/automation-confidence-score.md)
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
 * [Tutorials](models/tutorials.md)

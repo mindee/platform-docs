@@ -1,15 +1,16 @@
 ---
-noIndex: true
 icon: circle-play
 ---
 
 # Live Test
 
+## Overview
+
 The **Live Test** page lets you **interactively test your model** on real documents and visually inspect the extraction results in one click. It’s the perfect place to debug, validate, and refine your model’s behavior before moving to production.
 
 <figure><img src="../.gitbook/assets/Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter.gif" alt=""><figcaption></figcaption></figure>
 
-### Key features
+## Key Features
 
 * **Side-by-side comparison**: Visually compare the raw document on the left with structured extraction results on the right, ideal for validating model behavior at a glance.
 * **Interactive document viewer**: Hover, click, and inspect highlighted fields directly on the image. Tooltips show extracted values and metadata in context.
@@ -17,7 +18,7 @@ The **Live Test** page lets you **interactively test your model** on real docume
 * **Instant visual feedback**: See where each field was extracted directly on the document.
 * **RAG Toggle**: If your have added documents into your RAG database, you can simulate how RAG would influence the output.
 
-### How it works
+## How it Works
 
 1. Upload or drag a document (PDF or image) directly into the interface.
 2.  Mindee runs the current version of your model on the document.
