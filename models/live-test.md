@@ -7,6 +7,8 @@ icon: circle-play
 
 The **Live Test** page lets you **interactively test your model** on real documents and visually inspect the extraction results in one click. It’s the perfect place to debug, validate, and refine your model’s behavior before moving to production.
 
+<figure><img src="../.gitbook/assets/live test (1).gif" alt=""><figcaption></figcaption></figure>
+
 ### Key features
 
 * **Side-by-side comparison**: Visually compare the raw document on the left with structured extraction results on the right, ideal for validating model behavior at a glance.
