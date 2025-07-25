@@ -1,6 +1,6 @@
 ---
-hidden: true
 noIndex: true
+icon: circle-play
 ---
 
 # Live Test
