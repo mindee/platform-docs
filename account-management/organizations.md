@@ -9,9 +9,9 @@ icon: users-rectangle
 
 # Organizations
 
-### 👥 Roles in a Workflow
+### 👥 Roles
 
-Each workflow in an organization is governed by a **role system**. A user must be explicitly added to a workflow to access it — except for the **creator**, who is automatically granted the `owner` role.
+Each organization is governed by a **role system**. A user must be explicitly added to an organization to access it — except for the **creator**, who is automatically granted the `owner` role.
 
 | Role        | Permissions summary                                      |
 | ----------- | -------------------------------------------------------- |
@@ -27,10 +27,9 @@ Each workflow in an organization is governed by a **role system**. A user must b
 
 ### 🔐 Role Behavior & Rules
 
-* The **creator** of a workflow is always set as its `owner` automatically.
-* Organization **admins are not automatically admins** on all workflows.
+* The **creator** of an organization is always set as its `owner` automatically.
+* Organization **admins don't have the same right as owners**.
 * **Admins cannot promote, edit, or remove owners or other admins**.
-* Users outside of organizations (standalone accounts) are treated as `owners` on all their workflows — no roles are enforced.
 
 ### 🔄 Managing Members
 
