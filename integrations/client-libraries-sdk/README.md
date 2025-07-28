@@ -40,7 +40,7 @@ npm install mindee@">=4.29.0-rc3
 {% endtab %}
 
 {% tab title="Ruby" %}
-[Planned](https://feedback.mindee.com/p/ruby-client-library)
+[In Progress](https://feedback.mindee.com/p/ruby-client-library)
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -113,3 +113,22 @@ Overall, the steps to using the Mindee service are:
 3. [process-the-result.md](process-the-result.md "mention")
    1. Optional: load from a webhook.
 
+## Frequently Asked Questions
+
+### Can I send requests in parallel?
+
+Yes. All clients can be used to send requests in parallel.
+
+The exact implementation is left to the user:
+
+* For Node.js, you'll want to use asynchronous processing.
+* For all others, you'll want to use threads or processes.
+
+### Can I use the v1 and v2 APIs together?
+
+Yes. Each client library has support for both v1 and v2 APIs.
+
+You'll need to make a separate instance of the `MindeeClient` and `MindeeClientV2` classes.
+
+The code to make requests and to process results is completely different.\
+We highly recommend having completely different files (or even modules) for handling each API version.
