@@ -65,7 +65,7 @@ If you want to try and do a live test, here is a sample for Indian passport:
 
 * Describe them directly to the AI agent (e.g., “I want the surname, date of birth, and MRZ”).
 * Upload a sample passport if needed for clarification.
-* The agent builds a tailored parser in minutes.
+* The agent builds a tailored parser in seconds.
 
 ### 2. **You’re Not Sure What Fields You Need**
 
