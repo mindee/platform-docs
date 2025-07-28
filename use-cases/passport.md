@@ -36,7 +36,7 @@ Typical passport documents include a standard set of fields. Our AI agent can, f
 
 ### Indian Passport Example
 
-Indian passports include additional region-specific fields. If you're processing Indian passports, our API is also able to extract, for example, those fields:
+Indian passports include additional region-specific fields. If you're processing Indian passports, our technology is also able to extract, for example, those fields:
 
 | Field                       | Description                                  |
 | --------------------------- | -------------------------------------------- |
