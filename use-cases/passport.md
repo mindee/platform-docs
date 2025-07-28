@@ -80,5 +80,3 @@ This option is perfect if you're working with a new document format or you're st
 * Most passports are one-page scans (photo page only)
 * Additional pages (like addresses or old passport info) can be added if needed
 * The AI agent supports both **single-page and multi-page PDFs/images**
-
-{% @supademo/embed demoId="cmdipnkx90upc1c4c4h4d8pph" url="https://app.supademo.com/demo/cmdipnkx90upc1c4c4h4d8pph" %}
