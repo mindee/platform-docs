@@ -133,7 +133,7 @@ You'll need to make a separate instance of the `MindeeClient` and `MindeeClientV
 The code to make requests and to process results is completely different.\
 We highly recommend having different files (or even modules) for handling each API version.
 
-## Can I send only a specific page of a multi-page PDF?
+### Can I send only a specific page of a multi-page PDF?
 
 Yes. All libraries have support for cutting/extracting PDF pages.
 
