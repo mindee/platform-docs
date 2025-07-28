@@ -17,7 +17,7 @@ Passports vary in format depending on the country, language, and issuance author
 
 ## What Can Be Extracted from a Passport?
 
-Typical passport documents include a standard set of fields. Our API is designed to extract the following:
+Typical passport documents include a standard set of fields. Our AI agent can, for example, extract the following common fields for passports:
 
 | Field             | Description                            |
 | ----------------- | -------------------------------------- |
