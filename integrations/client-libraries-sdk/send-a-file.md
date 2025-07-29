@@ -1,5 +1,5 @@
 ---
-description: How to send a file to Mindee using a client library.
+description: In-depth instruction on handling files using a Mindee client library.
 icon: file-lines
 ---
 
