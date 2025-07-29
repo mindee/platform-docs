@@ -1,9 +1,9 @@
 ---
 description: How to send a file to Mindee using a client library.
-icon: page-caret-up
+icon: file-lines
 ---
 
-# Send a File
+# Use a File
 
 ## Requirements
 
@@ -25,7 +25,7 @@ If you're unsure of which to use, we recommend loading from a path.
 
 {% tabs %}
 {% tab title="Python" %}
-You'll need to use the `mindee_client` instance created above.
+You'll need to use the `mindee_client` instance created in [configure-the-client.md](configure-the-client.md "mention").
 
 To load a path string, use `source_from_path` .
 

@@ -434,4 +434,4 @@ You can specify any number of webhook endpoint IDs, each will be sent the payloa
 
 Now that everything is ready to, it's time to send your files to the Mindee servers.
 
-Head on over to the [send-a-file.md](send-a-file.md "mention") page for details on the next step.
+Head on over to the [use-a-file.md](use-a-file.md "mention") page for details on the next step.
