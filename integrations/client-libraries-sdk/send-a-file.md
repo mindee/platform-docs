@@ -89,6 +89,51 @@ with input_path.open("rb") as fh:
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+To load a file, you'll need to import the corresponding input class from the `Mindee\Input` namespace.
+
+To load a path string, use `PathInput`.
+
+```php
+use Mindee\Input\PathInput;
+
+$filePath = "/path/to/the/file.ext";
+$inputSource = new PathInput($filePath);
+```
+
+To load a file resource, use `FileInput`.
+
+```php
+use Mindee\Input\FileInput;
+
+$handle = fopen("/path/to/the/file.ext", "rb");
+$inputSource = new FileInput($handle);
+```
+
+To load raw bytes, use `BytesInput`.
+
+```php
+use Mindee\Input\BytesInput;
+
+$filePath = "/path/to/the/file.ext";
+$handle = fopen($filePath, "rb");
+$contents = fread($handle, filesize($filePath));
+
+$inputSource = new BytesInput($contents, "file.ext");
+```
+
+To load a base-64 string, use `Base64Input` .\
+The string will be decoded into bytes internally.
+
+```php
+use Mindee\Input\Base64Input;
+
+$inputBase64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
+
+$inputSource = Base64Input($inputBase64, "base64_file.txt");
+```
+{% endtab %}
+
 {% tab title="Java" %}
 To load a file, initialize it using the `LocalInputSource` class.
 

@@ -229,21 +229,21 @@ const inferenceParams = {
 {% endtab %}
 
 {% tab title="PHP" %}
-Only the `$modelId` is required.
+Only the `modelId` is required.
 
 ```php
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
-    "MY_MODEL_ID",
+    modelId: "MY_MODEL_ID",
     
     // Options:
 
     // If set to `true`, will enable Retrieval-Augmented Generation.
-    false,
+    rag: false,
     
     // Use an alias to link the file to your own DB.
     // If not set, no alias will be used.
-    "MY_ALIAS",
+    alias: "MY_ALIAS",
 );
 ```
 {% endtab %}
@@ -355,6 +355,37 @@ const inferenceParams = {
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+When polling you really only need to set the `modelId` .
+
+```php
+$inferenceParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```php
+use Mindee\Input\PollingOptions;
+
+$inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID",
+    
+    // Set only if having timeout issues.
+    pollingOptions: new PollingOptions(
+        // Initial delay before the first polling attempt.
+        initialDelaySec: 3.0,
+        // Delay between each polling attempt.
+        delaySec: 1.5,
+        // Total number of polling attempts.
+        maxRetries: 80,
+    ),
+    // ... any other options ...
+);
+```
+{% endtab %}
+
 {% tab title="Java" %}
 When polling you really only need to set the `modelId` .
 
@@ -423,10 +454,10 @@ The client library will POST the request to your Web server, as configured by yo
 
 For more information on webhooks, take a look at the [webhooks.md](../api-overview/webhooks.md "mention") page.
 
+When using a webhook, you'll need to set the model ID and the webhook ID(s) to use.
+
 {% tabs %}
 {% tab title="Python" %}
-When using a webhook, you'll need to set the `model_id` and which webhook(s) to use.
-
 ```python
 inference_params = InferenceParameters(
     model_id="MY_MODEL_ID",
@@ -438,8 +469,6 @@ inference_params = InferenceParameters(
 {% endtab %}
 
 {% tab title="Node.js" %}
-When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
-
 ```typescript
 const inferenceParams = {
   modelId: "MY_MODEL_ID",
@@ -450,9 +479,18 @@ const inferenceParams = {
 ```
 {% endtab %}
 
-{% tab title="Java" %}
-When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
+{% tab title="PHP" %}
+```php
+$inferenceParams = new InferenceParameters(
+    modelId: "MY_MODEL_ID",
+    webhooksIds: array("ENDPOINT_1_UUID"),
 
+    // ... any other options ...
+);
+```
+{% endtab %}
+
+{% tab title="Java" %}
 ```java
 InferenceParameters params = InferenceParameters
     .builder("MY_MODEL_ID")
@@ -465,8 +503,6 @@ InferenceParameters params = InferenceParameters
 {% endtab %}
 
 {% tab title=".NET" %}
-When using a webhook, you'll need to set the `modelId` and which webhook(s) to use.
-
 ```csharp
 var inferenceParams = new InferenceParameters(
     modelId: "MY_MODEL_ID"
