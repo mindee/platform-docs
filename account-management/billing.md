@@ -35,10 +35,10 @@ To change your plan:
 3. Click **Subscribe**
 
 {% hint style="warning" %}
-Upgrades apply immediately. Downgrades take effect at the start of your next billing cycle.
+Click Contact Sales. Someone from out team will contact you shortly for the upgrade.
 {% endhint %}
 
-## 📥 What  You Can Do from Stripe
+## 📥 What You Can Do from Stripe
 
 ### Invoices
 
