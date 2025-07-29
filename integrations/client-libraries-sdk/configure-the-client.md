@@ -86,6 +86,36 @@ const mindeeClient = new mindee.ClientV2();
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+First import the needed classes:
+
+```php
+use Mindee\ClientV2;
+use Mindee\Input\InferenceParameters;
+use Mindee\Error\MindeeException;
+```
+
+For the API key, you can pass it directly to the client.\
+This is useful for quick testing.
+
+```php
+$apiKey = "MY_API_KEY";
+
+$mindeeClient = new ClientV2($apiKey);
+```
+
+Instead of passing the key directly, you can also set the following environment variable:
+
+`MINDEE_V2_API_KEY`
+
+This is recommended for production use.\
+In this way there is no need to pass the `$apiKey` when initializing the client.
+
+```php
+$mindeeClient = new ClientV2($apiKey);
+```
+{% endtab %}
+
 {% tab title="Java" %}
 First import the needed classes:
 
@@ -195,6 +225,26 @@ const inferenceParams = {
   // If empty, no alias will be used.
   alias: "MY_ALIAS"
 };
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Only the `$modelId` is required.
+
+```php
+$inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    "MY_MODEL_ID",
+    
+    // Options:
+
+    // If set to `true`, will enable Retrieval-Augmented Generation.
+    false,
+    
+    // Use an alias to link the file to your own DB.
+    // If not set, no alias will be used.
+    "MY_ALIAS",
+);
 ```
 {% endtab %}
 
@@ -434,4 +484,4 @@ You can specify any number of webhook endpoint IDs, each will be sent the payloa
 
 Now that everything is ready to, it's time to send your files to the Mindee servers.
 
-Head on over to the [use-a-file.md](use-a-file.md "mention") page for details on the next step.
+Head on over to the [send-a-file.md](send-a-file.md "mention") page for details on the next step.
