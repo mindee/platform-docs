@@ -89,6 +89,63 @@ with input_path.open("rb") as fh:
 ```
 {% endtab %}
 
+{% tab title="Node.js" %}
+To load a file, you'll need to import the corresponding input class and instantiate it.
+
+To load a path string, use `PathInput`.
+
+```typescript
+const filePath = "/path/to/the/file.ext";
+const inputSource = new mindee.PathInput({ inputPath: filePath });
+```
+
+To load a `Buffer` instance, use `BufferInput` .
+
+```typescript
+const buffer = Buffer.from(
+  await fs.promises.readFile("/path/to/the/file.ext")
+);
+
+const inputSource = new mindee.BufferInput({
+  buffer: buffer,
+  filename: "file.ext",
+});
+```
+
+To load raw bytes, use `BytesInput` .
+
+```typescript
+const inputBytes = await fs.promises.readFile("/path/to/the/file.ext");
+
+const inputSource = new mindee.BytesInput({
+  inputBytes: inputBytes,
+  filename: "file.ext",
+});
+```
+
+To load a `Stream`, use `StreamInput`.
+
+```typescript
+const stream = fs.createReadStream("/path/to/the/file.ext");
+
+const input = new mindee.StreamInput({
+  inputStream: stream,
+  filename: "file.ext",
+});
+```
+
+To load a base-64 string, use `Base64Input` .
+
+```typescript
+const b64String = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
+
+const input = new mindee.Base64Input({
+  inputString: b64String,
+  filename: "base64_file.txt",
+});
+```
+{% endtab %}
+
 {% tab title="PHP" %}
 To load a file, you'll need to import the corresponding input class from the `Mindee\Input` namespace.
 
@@ -521,7 +578,7 @@ response = mindee_client.enqueue_inference(
     input_source, inference_params
 )
 
-# You can save the job ID for your records
+# You should save the job ID for your records
 print(response.job.id)
 
 # If you set an `alias`, you can verify it was taken into account
@@ -533,6 +590,94 @@ print(response.job.alias)
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
 You'll get the response via polling and webhooks will be used as well.&#x20;
+{% endtab %}
+
+{% tab title="Node.js" %}
+Using:
+
+* `inputSource`  created above
+* `mindeeClient` and `inferenceParams` created in [configure-the-client.md](configure-the-client.md "mention").
+
+For **polling**, use:
+
+```typescript
+const response = mindeeClient.enqueueAndGetInference(
+  inputSource,
+  inferenceParams
+);
+
+// Handle the response Promise
+response.then((resp) => {
+  // To easily test which data was extracted,
+  // simply print an RST representation of the inference
+  console.log(resp.inference.toString());
+});
+```
+
+For **webhooks**, use:
+
+```typescript
+const response = mindeeClient.enqueueInference(
+  inputSource,
+  inferenceParams
+);
+
+// Handle the response Promise
+response.then((resp) => {
+  // You should save the job ID for your records
+  console.log(resp.job.id);
+  
+  // If you set an `alias`, you can verify it was taken into account
+  console.log(resp.job.alias);
+});
+```
+
+**Note:** You can use both methods!
+
+First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
+Then, call `enqueueAndGetInference`  and handle the promise.\
+You'll get the response via polling and webhooks will be used as well.&#x20;
+{% endtab %}
+
+{% tab title="PHP" %}
+Using:
+
+* `$inputSource`  created above
+* `$mindeeClient` and `$inferenceParams` created in [configure-the-client.md](configure-the-client.md "mention").
+
+For **polling**, use:
+
+```php
+$response = $mindeeClient->enqueueAndGetInference(
+    $inputSource,
+    $inferenceParams
+);
+
+// To easily test which data was extracted,
+// simply print an RST representation of the inference
+echo strval($response->inference);
+```
+
+For **webhooks**, use:
+
+```php
+$response = $mindeeClient->enqueueInference(
+    $inputSource,
+    $inferenceParams
+);
+
+// You should save the job ID for your records
+echo strval($response->job->id);
+
+// If you set an `alias`, you can verify it was taken into account
+echo strval($response->job->alias);
+```
+
+**Note:** You can also use both methods!
+
+First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
+Then, call `enqueueAndGetInferenceAsync`.\
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title=".NET" %}
@@ -559,7 +704,7 @@ var response = mindeeClient.EnqueueInferenceAsync(
     inputSource, inferenceParams
 )
 
-// You can save the job ID for your records
+// You should save the job ID for your records
 System.Console.WriteLine(response.Job.Id)
 
 // If you set an `alias`, you can verify it was taken into account
