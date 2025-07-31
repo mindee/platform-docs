@@ -313,6 +313,14 @@ Using the `input_source` instance created above.
 input_source.fix_pdf()
 ```
 {% endtab %}
+
+{% tab title="PHP" %}
+Using the `$inputSource` instance created above.
+
+```php
+$inputSource->fixPDF();
+```
+{% endtab %}
 {% endtabs %}
 
 ### File Compression
@@ -361,6 +369,27 @@ For example to compress and resize to no greater than 1920x1920 pixels:
 
 ```typescript
 inputSource.compress(85, 1920, 1920);
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$inputSource` instance created above.
+
+Basic usage is very simple, and can be applied to both images and PDFs:
+
+```php
+$inputSource->compress(quality: 85);
+```
+
+For images, you can also set a maximum height and/or width.\
+The aspect ratio will always be preserved.
+
+For example to compress and resize to no greater than 1920x1920 pixels:
+
+```php
+$inputSource->compress(
+    quality: 85, maxWidth: 1920, maxHeight: 1920
+);
 ```
 {% endtab %}
 
