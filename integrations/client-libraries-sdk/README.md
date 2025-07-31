@@ -106,7 +106,7 @@ Overall, the steps to using the Mindee service are:
 1. [configure-the-client.md](configure-the-client.md "mention")
    1. Initialize the Mindee client.
    2. Set inference parameters, in particular the model ID to use.
-2. [send-a-file.md](send-a-file.md "mention")
+2. [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
    1. Load a file from various supported sources: path, bytes, etc.
    2. _Optional_: adjust the source file before sending.
    3. Send the file with the proper parameters.
@@ -140,4 +140,4 @@ We highly recommend having different files (or even modules) for handling each A
 
 Yes. All libraries have support for cutting/extracting PDF pages.
 
-Check the [#pdf-page-manipulations](send-a-file.md#pdf-page-manipulations "mention") section.
+Check the [#pdf-page-manipulations](load-and-adjust-a-file.md#pdf-page-manipulations "mention") section.

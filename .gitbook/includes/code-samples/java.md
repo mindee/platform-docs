@@ -37,7 +37,7 @@ public class SimpleMindeeClient {
         new File(filePath)
     );
 
-    // Upload the file
+    // Send for processing
     InferenceResponse response = mindeeClient.enqueueAndGetInference(
         inputSource,
         options

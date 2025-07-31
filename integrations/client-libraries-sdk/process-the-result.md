@@ -6,7 +6,7 @@ icon: brain-circuit
 
 ## Requirements
 
-You'll nee to have a already sent a file as described in the [send-a-file.md](send-a-file.md "mention") page.
+You'll nee to have a already sent a file as described in the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") page.
 
 ## Overview
 

@@ -48,25 +48,15 @@ Any future attempts to use a deleted webhook will result in a HTTP error.
 
 ## Specifying on File Upload
 
-When [enqueuing](../api-reference.md#post-v2-inferences-enqueue) an inference, simply specify the webhook endpoint ID(s) you would like to use.
+When enqueuing an inference, simply specify the webhook endpoint ID(s) you would like to use.
 
 The endpoint's ID is a UUID v4, and can be obtained by clicking on the "Copy ID" button in your list of Webhook Endpoints.
 
-When POSTing the multipart form, use the `webhook_ids` parameter to specify the endpoints.
-
-The parameter is a list, allowing to specify multiple endpoints:
-
-```
-webhook_ids=[ENDPOINT_1_UUID, ENDPOINT_2_UUID]
-```
-
-A single endpoint must also be sent as a list:
-
-```
-webhook_ids=[ENDPOINT_1_UUID]
-```
-
 Each endpoint in the given list will be sent the inference results.
+
+If you're using one of our official client libraries (highly recommended), instructions for your language of choice are detailed in the [send-a-file-or-url.md](../client-libraries-sdk/send-a-file-or-url.md "mention") section.
+
+Otherwise take a look at the [#post-v2-inferences-enqueue](../api-reference.md#post-v2-inferences-enqueue "mention") specification.
 
 ## Local Testing
 

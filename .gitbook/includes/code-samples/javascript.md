@@ -11,25 +11,31 @@ const mindee = require("mindee");
 // for TS or modules:
 // import * as mindee from "mindee";
 
-// Init a new client
-const mindeeClient = new mindee.ClientV2({ apiKey: "MY_API_KEY" });
+const apiKey = "MY_API_KEY";
+const filePath = "/path/to/the/file.ext";
 const modelId = "MY_MODEL_ID";
 
-// Load a file from disk
-const inputSource = mindeeClient.docFromPath("/path/to/the/file.ext");
-const params = {
+// Init a new client
+const mindeeClient = new mindee.ClientV2({ apiKey: apiKey });
+
+// Set inference parameters
+const inferenceParams = {
   modelId: modelId,
   // If set to `true`, will enable Retrieval-Augmented Generation.
   rag: false
 };
 
-const apiResponse = mindeeClient.enqueueAndGetInference(
+// Load a file from disk
+const inputSource = new mindee.PathInput({ inputPath: filePath });
+
+// Send for processing
+const response = mindeeClient.enqueueAndGetInference(
   inputSource,
-  params
+  inferenceParams
 );
 
 // Handle the response Promise
-apiResponse.then((resp) => {
+response.then((resp) => {
   // print a string summary
   console.log(resp.inference.toString());
 });

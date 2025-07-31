@@ -21,7 +21,7 @@ If there are no pre-built models that suit your needs, you can:
 
 ## Test the Model
 
-Be sure to make at least one test on a document, using the Live Test tab.
+Be sure to make at least one test on a document, using the [live-test.md](../models/live-test.md "mention") feature.
 
 If it doesn't work as expected, you can modify the Data Schema, as explained in [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
 
