@@ -2,7 +2,7 @@
 description: >-
   Reference documentation on sending files or URLs for processing using Mindee
   client libraries.
-icon: globe-pointer
+icon: paper-plane
 ---
 
 # Send a File or URL
@@ -116,7 +116,7 @@ The `mindee_client` and `inference_params` are created in [configure-the-client.
 
 
 
-For **polling**, use the `enqueue_and_get_inference` method:
+For **polling**, use the `enqueue_and_get_inference` method.
 
 ```python
 response = mindee_client.enqueue_and_get_inference(
@@ -130,7 +130,11 @@ print(response.inference)
 
 
 
-For **webhooks**, use the `enqueue_inference` method:
+For **webhooks:**
+
+Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+
+Use the `enqueue_inference` method:
 
 ```python
 response = mindee_client.enqueue_inference(
@@ -181,7 +185,11 @@ response.then((resp) => {
 
 
 
-For **webhooks**, use the `enqueueInference` method:
+For **webhooks:**
+
+Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+
+Use the `enqueueInference` method:
 
 ```typescript
 const response = mindeeClient.enqueueInference(
@@ -233,7 +241,11 @@ echo strval($response->inference);
 
 
 
-For **webhooks**, use the  `enqueueInference` method:
+For **webhooks:**
+
+Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+
+Use the  `enqueueInference` method:
 
 ```php
 $response = $mindeeClient->enqueueInference(
@@ -267,7 +279,11 @@ The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md
 
 
 
-For **polling**, use the `enqueueAndGetInference` method:
+For **webhooks:**
+
+Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+
+Use the `enqueueAndGetInference` method:
 
 ```java
 InferenceResponse response = mindeeClient.enqueueAndGetInference(
@@ -314,7 +330,11 @@ The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md
 
 
 
-For **polling**, use the `EnqueueAndGetInferenceAsync` method:
+For **webhooks:**
+
+Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+
+Use the `EnqueueAndGetInferenceAsync` method:
 
 ```csharp
 var response = await mindeeClient.EnqueueAndGetInferenceAsync(

@@ -109,8 +109,9 @@ Overall, the steps to using the Mindee service are:
 2. [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
    1. Load a file from various supported sources: path, bytes, etc.
    2. _Optional_: adjust the source file before sending.
-   3. Send the file with the proper parameters.
-3. [process-the-result.md](process-the-result.md "mention")
+3. [send-a-file-or-url.md](send-a-file-or-url.md "mention")
+   1. Send the file or an URL with the proper parameters.
+4. [process-the-result.md](process-the-result.md "mention")
    1. Optional: load from a webhook.
 
 ## Frequently Asked Questions
