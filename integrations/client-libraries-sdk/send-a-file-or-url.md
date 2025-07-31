@@ -1,23 +1,19 @@
 ---
-description: Send a file or an URL for processing
+description: >-
+  Reference documentation on sending files or URLs for processing using Mindee
+  client libraries.
 icon: globe-pointer
 ---
 
 # Send a File or URL
 
-{% hint style="info" %}
-**This is reference documentation.**
-
-Looking for a quick TL;DR? Take a look at [integrating-mindee.md](../../getting-started/integrating-mindee.md "mention")
-
-You can also **ask** for code samples in the search bar above.
-{% endhint %}
+{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
 ## Requirements
 
 You'll need to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") page.
 
-Both the Client and the Infererence Parameters are required.
+Both the Client and the Inference Parameters are required.
 
 ## Overview
 

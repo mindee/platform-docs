@@ -1,31 +1,31 @@
 ---
-description: Prepare and configure the Mindee client.
+description: Reference documentation on preparing and configuring the Mindee client.
 icon: wrench
 ---
 
 # Configure the Client
 
+{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
+
 ## Requirements
 
 Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
 
+You'll also need to use one of your [#api-keys](../api-overview/#api-keys "mention") and one or several [Broken link](broken-reference "mention") configured.
+
 ## Overview
 
-This section will go into detail for each step, and list all possible options.\
-It is reference documentation.
+Before sending any files to the Mindee servers for processing, you'll need to initialize your client and set inference options.
 
-{% hint style="info" %}
-**If you want just the quick TL;DR:**
-
-* Take a look at the [integrating-mindee.md](../../getting-started/integrating-mindee.md "mention") page.
-* Use the **search bar** at the top to ask our documentation AI to write code samples for you.
-{% endhint %}
+These settings will determine how your files are sent, including any extra options, and how you want to process the result.
 
 ## Initialize the Mindee Client
 
-This should be the first step in your code.
+This should be the first step in your code. It will determine which organization is used to make the calls.
 
-You should reuse the same client instance for all calls.
+You should reuse the same client instance for all calls of the same organization.
+
+The client instance is thread-safe where applicable.
 
 {% tabs %}
 {% tab title="Python" %}

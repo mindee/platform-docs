@@ -1,11 +1,13 @@
 ---
 description: >-
-  In-depth instruction on loading and manipulating files using Mindee client
+  Reference documentation on loading and manipulating files using Mindee client
   libraries.
 icon: file-lines
 ---
 
 # Load and Adjust a File
+
+{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
 ## Requirements
 

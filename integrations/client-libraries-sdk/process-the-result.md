@@ -1,8 +1,13 @@
 ---
+description: >-
+  Reference documentation on processing results using the Mindee client
+  libraries.
 icon: brain-circuit
 ---
 
 # Process the Result
+
+{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
 ## Requirements
 
