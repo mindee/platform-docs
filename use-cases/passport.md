@@ -63,20 +63,18 @@ If you want to try and do a live test, here is a sample for Indian passport:
 
 ### 1. **You Know the Fields You Need**
 
-* Describe them directly to the AI agent (e.g., “I want the surname, date of birth, and MRZ”).
-* Upload a sample passport if needed for clarification.
+* Ask the specifications directly to the AI agent (e.g. "I want a model that extrats the following fields from passports : surname, date of birth and MRZ")&#x20;
+* Eventually upload a sample passport if needed for clarification.
 * The agent builds a tailored parser in seconds.
 
 ### 2. **You’re Not Sure What Fields You Need**
 
-* Upload a sample document via the Mindee App.
-* Ask the agent to show you **all extractable fields**.
+* Ask the agent to show you **all extractable fields** from a passport document or by uploading a sample document.
 * Explore and refine until you're satisfied.
 
 This option is perfect if you're working with a new document format or you're still designing your data model.
 
 ## Document Format
 
-* Most passports are one-page scans (photo page only)
-* Additional pages (like addresses or old passport info) can be added if needed
-* The AI agent supports both **single-page and multi-page PDFs/images**
+* The AI agent supports both **single-page and multi-page PDFs/images of passports**
+* You can add the fields of any page in the data schema as they are all supported by our AI agent
