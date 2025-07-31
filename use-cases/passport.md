@@ -63,7 +63,7 @@ If you want to try and do a live test, here is a sample for Indian passport:
 
 ### 1. **You Know the Fields You Need**
 
-* Ask the specifications directly to the AI agent (e.g. "I want a model that extrats the following fields from passports : surname, date of birth and MRZ").
+* Ask the specifications directly to the AI agent (e.g. "_I want a model that extracts the following fields from passports: surname, date of birth and MRZ_").
 * Eventually upload a sample passport if needed for clarification.
 * The agent builds a tailored parser in seconds.
 
