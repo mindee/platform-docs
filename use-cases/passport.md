@@ -63,7 +63,7 @@ If you want to try and do a live test, here is a sample for Indian passport:
 
 ### 1. **You Know the Fields You Need**
 
-* Ask the specifications directly to the AI agent (e.g. "I want a model that extrats the following fields from passports : surname, date of birth and MRZ")&#x20;
+* Ask the specifications directly to the AI agent (e.g. "I want a model that extrats the following fields from passports : surname, date of birth and MRZ").
 * Eventually upload a sample passport if needed for clarification.
 * The agent builds a tailored parser in seconds.
 
@@ -76,5 +76,5 @@ This option is perfect if you're working with a new document format or you're st
 
 ## Document Format
 
-* The AI agent supports both **single-page and multi-page PDFs/images of passports**
-* You can add the fields of any page in the data schema as they are all supported by our AI agent
+* The AI agent supports both **single-page and multi-page PDFs/images of passports.**
+* You can add the fields of any page in the data schema as they are all supported by our AI agent.
