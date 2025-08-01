@@ -78,6 +78,8 @@ function handleMindeeResponse(data: string, hmacSignature: string) {
   );
 }
 
+// Getting the data could look something like this.
+// Will vary depending on your implementation.
 function handleMindeePost(request, response) {
   let body = "";
   request.on("data", function (data) {
