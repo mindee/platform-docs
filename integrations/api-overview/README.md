@@ -87,6 +87,8 @@ For example modern smartphones can take images of 24 megapixels or more, in most
 
 For the vast majority of image files, 3-5 megapixels is enough. Just make sure the smallest text is legible.
 
+We offer free tooling for compressing images before sending them, details here: [#file-compression](../client-libraries-sdk/load-and-adjust-a-file.md#file-compression "mention")
+
 #### **Do not upscale or enhance**
 
 Never upscale a low-resolution image, adding extra pixels only adds to processing time without an increase in accuracy.\
