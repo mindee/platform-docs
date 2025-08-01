@@ -96,6 +96,15 @@ with input_path.open("rb") as fh:
 {% tab title="Node.js" %}
 To load a file, you'll need to import the corresponding input class and instantiate it.
 
+Make sure to import the needed classes:
+
+```typescript
+end using TypeScript.
+const mindee = require("mindee");
+// for TS or modules:
+// import * as mindee from "mindee";
+```
+
 To load a path string, use `PathInput`.
 
 ```typescript
@@ -507,8 +516,8 @@ Using the `inputSource` instance created above.
 ```typescript
 // Set the options as follows:
 // For all documents, keep only the first page
-const pageOptions: PageOptions = {
-  operation: PageOptionsOperation.KeepOnly,
+const pageOptions: mindee.PageOptions = {
+  operation: mindee.PageOptionsOperation.KeepOnly,
   pageIndexes: [0],
 };
 
@@ -521,23 +530,23 @@ Some other examples:
 ```typescript
 // Only for documents having 3 or more pages:
 // Keep only these pages: first, penultimate, last
-const pageOptions: PageOptions = {
-  operation: PageOptionsOperation.KeepOnly,
+const pageOptions: mindee.PageOptions = {
+  operation: mindee.PageOptionsOperation.KeepOnly,
   onMinPages: 3,
   pageIndexes: [0, -2, -1],
 };
 
 // For all documents:
 // Remove the first page
-const pageOptions: PageOptions = {
-  operation: PageOptionsOperation.Remove,
+const pageOptions: mindee.PageOptions = {
+  operation: mindee.PageOptionsOperation.Remove,
   pageIndexes: [0],
 };
 
 // Only for documents having 10 or more pages:
 // Remove the first 5 pages
-const pageOptions: PageOptions = {
-  operation: PageOptionsOperation.Remove,
+const pageOptions: mindee.PageOptions = {
+  operation: mindee.PageOptionsOperation.Remove,
   onMinPages: 10,
   pageIndexes: [0, 1, 2, 3, 4],
 };

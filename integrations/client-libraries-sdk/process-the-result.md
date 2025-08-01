@@ -27,9 +27,12 @@ Here we'll go over how you can best process the results.
 
 If you're using the webhook pattern, you'll need to use the payload sent to your Web server.
 
-Reading the callback data will vary greatly depending on your HTTP server.
-
+Reading the callback data will vary greatly depending on your HTTP server.\
 This is therefore beyond the scope of this example.
+
+Regardless of how you access the JSON payload sent by the Mindee servers, loading this data is done by using a LocalResponse class.
+
+Once it is loaded you can access the data in exactly the same way as a polling response.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -38,6 +41,7 @@ Assuming you're able to get the raw HTTP request via the variable `request` .
 ```python
 from mindee import LocalResponse, InferenceResponse
 
+# Load the JSON string sent by the Mindee webhook POST callback.
 local_response = LocalResponse(request.body())
 
 # You can also load the json from a local path.
@@ -46,11 +50,47 @@ local_response = LocalResponse(request.body())
 # Optionally: verify the HMAC signature
 # You'll need to get the "X-Signature" custom HTTP header.
 hmac_signature = request.headers.get("X-Signature")
-if not local_response.is_valid_hmac_signature(my_secret_key, hmac_signature):
+is_valid = local_response.is_valid_hmac_signature(
+    "obviously-fake-secret-key", hmac_signature
+)
+if not is_valid:
     raise Error("Bad HMAC signature! Is someone trying to do evil?")
 
-# Deserialize the response
-result = local_response.deserialize_response(InferenceResponse)
+# Deserialize the response into objects
+response = local_response.deserialize_response(InferenceResponse)
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Assuming you're able to get the raw HTTP request via the variable `request` .
+
+```typescript
+function handleMindeeResponse(data: string, hmacSignature: string) {
+  const localResponse = new mindee.LocalResponse(data);
+  const isValid = localResponse.isValidHmacSignature(
+      "obviously-fake-secret-key", hmacSignature
+    );
+  if (!isValid) {
+    throw Error("Bad HMAC signature! Is someone trying to do evil?");
+  }
+  const response = localResponse.deserializeResponse(
+    mindee.InferenceResponse
+  );
+}
+
+function handleMindeePost(request, response) {
+  let body = "";
+  request.on("data", function (data) {
+    body += data;
+  });
+  req.on("end", function () {
+    // Optionally: verify the HMAC signature
+    // You'll need to get the "X-Signature" custom HTTP header.
+    const hmacSignature = request.headers.get("X-Signature");
+    
+    handleMindeeResponse(data, hmacSignature);
+  });
+}
 ```
 {% endtab %}
 
@@ -60,9 +100,6 @@ Assuming you have a Web server instance `myHttpServer` .
 ```java
 
 // Load the JSON string sent by the Mindee webhook POST callback.
-//
-// Reading the callback data will vary greatly depending on your HTTP server.
-// This is therefore beyond the scope of this example.
 String jsonData = myHttpServer.getPostBodyAsString();
 LocalResponse localResponse = new LocalResponse(jsonData);
 
@@ -73,13 +110,14 @@ boolean isValid = localResponse.isValidHmacSignature(
     "obviously-fake-secret-key", hmacSignature
 );
 if (!isValid) {
-    throw new MyException("Bad HMAC signature! Is someone trying to do evil?");
+    throw new Exception("Bad HMAC signature! Is someone trying to do evil?");
 }
 
 // You can also use a File object as the input.
-//LocalResponse localResponse = new LocalResponse(new File("/path/to/file.json"));
+//LocalResponse localResponse = new LocalResponse(
+//    new File("/path/to/file.json"));
 
-// Deserialize the response into Java objects
+// Deserialize the response into objects
 InferenceResponse response = localResponse.deserializeResponse(
     InferenceResponse.class
 );
