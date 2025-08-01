@@ -63,7 +63,7 @@ input_source = UrlInputSource(
 Use the `URLInput` class.
 
 ```typescript
-const inputSource = new UrlInput({
+const inputSource = new mindee.UrlInput({
   url: "https://example.com/file.ext"
 });
 ```
@@ -85,6 +85,8 @@ $inputSource = new URLInputSource(
 Use the `URLInputSource` class.
 
 ```java
+import com.mindee.input.URLInputSource;
+
 URLInputSource inputSource = URLInputSource
     .builder("https://example.com/file.ext")
     .build();
