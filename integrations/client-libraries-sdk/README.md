@@ -47,7 +47,7 @@ npm install mindee@">=4.29.0-rc5
 Requires PHP ≥ 8.0.\
 PHP ≥ 8.3 is recommended.
 
-Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using composer:
+Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
 ```
 php composer.phar require "mindee/mindee:>=1.23"
@@ -56,8 +56,7 @@ php composer.phar require "mindee/mindee:>=1.23"
 If you get an error message like this:
 
 ```
-found mindee/mindee[v1.23.0-rc1] but it does not match your minimum-stability.
-
+found mindee/mindee[v1.23.0-rc2] but it does not match your minimum-stability.
 ```
 
 You'll need to configure your composer settings to allow installing an RC version:
