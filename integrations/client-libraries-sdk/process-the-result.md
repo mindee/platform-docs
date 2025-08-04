@@ -155,6 +155,8 @@ Basic field type having a single value attribute.
 Possible types: string, number (integer or floating-point), boolean.\
 All types can be null.
 
+Note: for statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
+
 ### Multiple-Value Fields (Objects)
 
 Each field can _theoretically_ be of any type (single, multi, list).\
