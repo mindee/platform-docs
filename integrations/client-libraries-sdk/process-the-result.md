@@ -11,7 +11,7 @@ icon: brain-circuit
 
 ## Requirements
 
-You'll nee to have a already sent a file as described in the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") page.
+You'll need to have already sent a file or URL as described in the [send-a-file-or-url.md](send-a-file-or-url.md "mention") section.
 
 ## Overview
 
