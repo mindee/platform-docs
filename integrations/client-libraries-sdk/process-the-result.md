@@ -157,25 +157,6 @@ These are returned as strings.
 
 For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
 
-### confidence
-
-The confidence level of the extracted value.
-
-Only filled if the automation feature is activated.\
-See the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") section for more details.
-
-### locations
-
-A list of the field's locations on the document.
-
-Only filled if the polygons feature is activated.
-
-It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
-
-Each location has a page index and a polygon.
-
-### Example
-
 {% tabs %}
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
@@ -186,16 +167,12 @@ using Mindee.Parsing.V2.Field;
 InferenceFields fields = response.Inference.Result.Fields;
 
 SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
-
-// value
 var fieldValue = mySimpleField.Value;
-// confidence
-FieldConfidence fieldConfidence = mySimpleField.Confidence;
-// locations
-List<FieldLocation> locations = mySimpleField.Locations;
 ```
 
-You can also explicitly declare the type, this is recommended for clarity.\
+The `Value` attribute is a `dynamic` type under the hood.
+
+You can explicitly declare the type, this is recommended for clarity.\
 You'll need to look at your Data Schema to declare the correct type.
 
 ```csharp
@@ -220,6 +197,57 @@ If the wrong type is declared, an exception will be raised, something like this:
 
 ```
 RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
+```
+{% endtab %}
+{% endtabs %}
+
+### confidence
+
+The confidence level of the extracted value.
+
+Only filled if the automation feature is activated.\
+See the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") section for more details.
+
+{% tabs %}
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+InferenceFields fields = response.Inference.Result.Fields;
+
+// nullable enum since presence depends on feature activation
+FieldConfidence? confidence = fields["my_simple_field"].SimpleField.Confidence;
+```
+{% endtab %}
+{% endtabs %}
+
+### locations
+
+A list of the field's locations on the document.
+
+Only filled if the polygons feature is activated.
+
+It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
+
+Each location has a page index and a polygon.
+
+{% tabs %}
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+using Mindee.Geometry;
+
+InferenceFields fields = response.Inference.Result.Fields;
+
+List<FieldLocation> locations = fields["my_simple_field"].SimpleField.Locations;
+
+// there are geometry functions available in the Polygon class
+Polygon polygon = locations.First().Polygon;
+Point center = polygon.GetCentroid();
 ```
 {% endtab %}
 {% endtabs %}
