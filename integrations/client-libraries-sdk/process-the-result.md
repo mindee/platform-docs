@@ -65,7 +65,7 @@ response = local_response.deserialize_response(InferenceResponse)
 Assuming you're able to get the raw HTTP request via the variable `request` .
 
 ```typescript
-function handleMindeeResponse(data: string, hmacSignature: string) {
+function handleMindeeResponse(data, hmacSignature) {
   const localResponse = new mindee.LocalResponse(data);
   const isValid = localResponse.isValidHmacSignature(
       "obviously-fake-secret-key", hmacSignature
