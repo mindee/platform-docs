@@ -39,6 +39,10 @@
 * [Organizations](account-management/organizations.md)
 * [Billing](account-management/billing.md)
 
+***
+
+* [Financial documents](financial-documents.md)
+
 ## Use Cases
 
 * [Passport](use-cases/passport.md)
