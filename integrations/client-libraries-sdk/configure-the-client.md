@@ -401,6 +401,8 @@ However, **we do not recommend** setting this option unless you are encountering
 ```java
 InferenceParameters params = InferenceParameters
         .builder("MY_MODEL_ID")
+        
+        // Set only if having timeout issues.
         .pollingOptions(
             AsyncPollingOptions.builder()
                 // Initial delay before the first polling attempt.
