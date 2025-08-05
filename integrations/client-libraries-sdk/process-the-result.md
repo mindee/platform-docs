@@ -130,19 +130,21 @@ System.out.println(response.getDocument().toString());
 {% endtab %}
 {% endtabs %}
 
-## Extract Field Values
+## Accessing Fields
 
-Fields are dynamic depending on your model.
+Fields are completely dynamic and depend on your model's [data-schema.md](../../models/data-schema.md "mention").
 
-In the client library, you'll have access to the various fields as a mapping type.
+In the client library, you'll have access to the various fields as a mapping type (Python's `dict`, Java's `HashMap`, etc).
 
-Each field will then be one of the following types:
+Accessing a field is done via its name in the Data Schema.
 
-* A single value.
-* Multiple values, an object.
-* A list or array of fields.
+Each field will be one of the following types:
 
-## Single-Value Fields
+* A single value, `SimpleField` class.
+* Multiple values (an object), `ObjectField` class.
+* A list or array of fields, `ListField` class.
+
+## Single-Value Field - SimpleField
 
 Basic field type having the following attributes.
 
@@ -252,13 +254,23 @@ Point center = polygon.GetCentroid();
 {% endtab %}
 {% endtabs %}
 
-## Multiple-Value Fields (Objects)
+## Multiple-Value Field - ObjectField
 
 Each field can _theoretically_ be of any type (single, multi, list).\
 **In practice:** we limit to a single value, meaning no recursive objects nor lists.
 
-## List Fields
+Each sub-field will be a [#single-value-fields-simplefield](process-the-result.md#single-value-fields-simplefield "mention").
+
+In addition, the `ObjectField` itself will have [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+
+## List of Fields - ListField
 
 Each item in the list can _theoretically_ be of any type (single, multi, list).\
 **In practice:** we limit items to be either single or multi field, meaning no lists of lists.
 
+Each field in the list will be one of:
+
+* [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention")
+* [#multiple-value-field-objectfield](process-the-result.md#multiple-value-field-objectfield "mention")
+
+In addition, the `ListField` itself has a [#confidence](process-the-result.md#confidence "mention") attribute.
