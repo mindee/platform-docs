@@ -12,11 +12,11 @@ Only **Organization Admins** can access and modify billing details.
 
 ## 📍 Where to Find Billing Settings
 
-{% @supademo/embed demoId="cmd5zv8na5l2nc4kjtr7onzba" url="https://app.supademo.com/demo/cmd5zv8na5l2nc4kjtr7onzba" %}
-
 1. Go to [app.mindee.com](https://app.mindee.com/)
 2. On the left-hand menu, click on **Settings**
 3. Select the **Billing** tab
+
+<p align="center"><a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a></p>
 
 ## 💳 What You Can Do from the Billing Tab
 
