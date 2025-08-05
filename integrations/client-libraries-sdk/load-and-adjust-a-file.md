@@ -11,7 +11,7 @@ icon: file-lines
 
 ## Requirements
 
-You'll nee to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") page.
+You'll nee to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") section.
 
 ## Overview
 

@@ -522,6 +522,6 @@ You can specify any number of webhook endpoint IDs, each will be sent the payloa
 
 Now that everything is ready to, it's time to send your files to the Mindee servers.
 
-If you're sending a local file, head on over to the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") page for details on the next step.
+If you're sending a local file, head on over to the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") section for details on the next step.
 
 If you're sending an URL, head on over to the [send-a-file-or-url.md](send-a-file-or-url.md "mention") section.

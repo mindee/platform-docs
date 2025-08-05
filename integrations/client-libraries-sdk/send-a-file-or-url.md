@@ -11,7 +11,7 @@ icon: paper-plane
 
 ## Requirements
 
-You'll need to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") page.
+You'll need to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") section.
 
 Both the Client and the Inference Parameters are required.
 
@@ -23,7 +23,8 @@ The source has no impact on server-side processing nor on the result.
 
 A local file can be manipulated and adjusted before sending, as described in the [#adjust-the-source-file](load-and-adjust-a-file.md#adjust-the-source-file "mention") section.
 
-An URL cannot be manipulated locally for obvious reasons, you'll need to download it to the local machine if you wish to adjust the file in any way before sending.
+An URL cannot be manipulated locally for obvious reasons.\
+You'll need to download it to the local machine if you wish to adjust the file in any way before sending.
 
 ## Use a File
 
@@ -384,5 +385,5 @@ You'll get the response via polling and webhooks will be used as well.
 
 Now that your file or URL has been handled by the Mindee servers, you'll want to process the results and use them in your application.
 
-Head on over to the [process-the-result.md](process-the-result.md "mention") page for details on the next step.
+Head on over to the [process-the-result.md](process-the-result.md "mention") section for details on the next step.
 
