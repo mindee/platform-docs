@@ -259,7 +259,7 @@ Point center = polygon.GetCentroid();
 Each field can _theoretically_ be of any type (single, multi, list).\
 **In practice:** we limit to a single value, meaning no recursive objects nor lists.
 
-Each sub-field will be a [#single-value-fields-simplefield](process-the-result.md#single-value-fields-simplefield "mention").
+Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
 In addition, the `ObjectField` itself will have [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
