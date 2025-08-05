@@ -261,7 +261,7 @@ Each field can _theoretically_ be of any type (single, multi, list).\
 
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
-In addition, the `ObjectField` itself will have [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+In addition, the `ObjectField` itself has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 ## List of Fields - ListField
 
