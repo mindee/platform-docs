@@ -37,3 +37,25 @@ Depending on your document type, here are example fields our users often request
 | Bank Statement | Account holder, IBAN, statement date/statement end date, opening/closing balance, transaction list (date, label, amount, type) |
 | Receipt        | Merchant name, transaction date, payment method, item lines, subtotal, tax, total amount                                       |
 | Balance Sheet  | Company name, statement date/statement end date, assets, liabilities, net equity                                               |
+
+## Two Ways to Start
+
+### 1. You Know the Fields You Want
+
+* Prompt the agent with something like:\
+  &#xNAN;_“Extract the invoice date, supplier name, total amount including VAT, and payment due date from these financial documents.”_
+* Upload a sample PDF to guide the agent if needed
+* Get your own custom document parser in seconds
+
+### 2. You Don’t Know the Fields You Need Yet
+
+* Upload a few sample documents to the Mindee app
+* Ask the agent: _“What fields can you extract from this?”_
+* Review the output and refine the prompt to match your use case
+
+This path is ideal when you’re still exploring your data model or working with a new document type.
+
+## Supported Formats
+
+* 📄 **PDF files** — single-page or multi-page
+* 🖼️ **Images** — JPG, PNG, TIFF, and more
