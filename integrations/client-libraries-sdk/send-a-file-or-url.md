@@ -107,6 +107,10 @@ var inputSource = new UrlInputSource(
 
 There's no difference between sending a file or an URL, both are considered valid Input Sources.
 
+You can send either using polling or webhooks.
+
+### Send with Polling
+
 {% tabs %}
 {% tab title="Python" %}
 `input_source`  is any valid input source, one of:
@@ -116,9 +120,7 @@ There's no difference between sending a file or an URL, both are considered vali
 
 The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
 
-
-
-For **polling**, use the `enqueue_and_get_inference` method.
+Use the `enqueue_and_get_inference` method.
 
 ```python
 response = mindee_client.enqueue_and_get_inference(
@@ -129,12 +131,109 @@ response = mindee_client.enqueue_and_get_inference(
 # simply print an RST representation of the inference
 print(response.inference)
 ```
+{% endtab %}
 
+{% tab title="Node.js" %}
+`inputSource`  is any valid input source, one of:
 
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-For **webhooks:**
+The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueueAndGetInference` method:
+
+```typescript
+const response = mindeeClient.enqueueAndGetInference(
+  inputSource,
+  inferenceParams
+);
+
+// Handle the response Promise
+response.then((resp) => {
+  // To easily test which data was extracted,
+  // simply print an RST representation of the inference
+  console.log(resp.inference.toString());
+});
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+`$inputSource`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `$mindeeClient` and `$inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueueAndGetInference` method:
+
+```php
+$response = $mindeeClient->enqueueAndGetInference(
+    $inputSource,
+    $inferenceParams
+);
+
+// To easily test which data was extracted,
+// simply print an RST representation of the inference
+echo strval($response->inference);
+```
+{% endtab %}
+
+{% tab title="Java" %}
+`inputSource`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueueAndGetInference` method:
+
+```java
+InferenceResponse response = mindeeClient.enqueueAndGetInference(
+    inputSource, inferenceParams
+);
+
+// To easily test which data was extracted,
+// simply print an RST representation of the inference
+System.out.println(response.getInference().toString());
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+`inputSource`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `EnqueueAndGetInferenceAsync` method:
+
+```csharp
+var response = await mindeeClient.EnqueueAndGetInferenceAsync(
+    inputSource, inferenceParams);
+
+// To easily test which data was extracted,
+// simply print an RST representation of the inference
+System.Console.WriteLine(response.Inference.ToString());
+```
+{% endtab %}
+{% endtabs %}
+
+### Send with Webhook
 
 Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+
+{% tabs %}
+{% tab title="Python" %}
+`input_source`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueue_inference` method:
 
@@ -150,8 +249,6 @@ print(response.job.id)
 print(response.job.alias)
 ```
 
-
-
 **Note:** You can use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
@@ -166,30 +263,6 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
 The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
-
-
-
-For **polling**, use the `enqueueAndGetInference` method:
-
-```typescript
-const response = mindeeClient.enqueueAndGetInference(
-  inputSource,
-  inferenceParams
-);
-
-// Handle the response Promise
-response.then((resp) => {
-  // To easily test which data was extracted,
-  // simply print an RST representation of the inference
-  console.log(resp.inference.toString());
-});
-```
-
-
-
-For **webhooks:**
-
-Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the `enqueueInference` method:
 
@@ -209,8 +282,6 @@ response.then((resp) => {
 });
 ```
 
-
-
 **Note:** You can use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
@@ -225,27 +296,6 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
 The `$mindeeClient` and `$inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
-
-
-
-For **polling**, use the `enqueueAndGetInference` method:
-
-```php
-$response = $mindeeClient->enqueueAndGetInference(
-    $inputSource,
-    $inferenceParams
-);
-
-// To easily test which data was extracted,
-// simply print an RST representation of the inference
-echo strval($response->inference);
-```
-
-
-
-For **webhooks:**
-
-Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the  `enqueueInference` method:
 
@@ -262,8 +312,6 @@ echo strval($response->job->id);
 echo strval($response->job->alias);
 ```
 
-
-
 **Note:** You can also use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
@@ -279,27 +327,7 @@ You'll get the response via polling and webhooks will be used as well.
 
 The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
 
-
-
-For **webhooks:**
-
-Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
-
-Use the `enqueueAndGetInference` method:
-
-```java
-InferenceResponse response = mindeeClient.enqueueAndGetInference(
-    inputSource, inferenceParams
-);
-
-// To easily test which data was extracted,
-// simply print an RST representation of the inference
-System.out.println(response.getInference().toString());
-```
-
-
-
-For **webhooks**, use the `enqueueInference` method:
+Use the `enqueueInference` method:
 
 ```java
 JobResponse response = mindeeClient.enqueueInference(
@@ -312,8 +340,6 @@ System.out.println(response.getJob().getId());
 // If you set an `alias`, you can verify it was taken into account
 System.out.println(response.getJob().getAlias());
 ```
-
-
 
 **Note:** You can use both methods!
 
@@ -330,26 +356,7 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 
 The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
 
-
-
-For **webhooks:**
-
-Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
-
-Use the `EnqueueAndGetInferenceAsync` method:
-
-```csharp
-var response = await mindeeClient.EnqueueAndGetInferenceAsync(
-    inputSource, inferenceParams);
-
-// To easily test which data was extracted,
-// simply print an RST representation of the inference
-System.Console.WriteLine(response.Inference.ToString());
-```
-
-
-
-For **webhooks**, use `EnqueueInferenceAsync` method:
+Use `EnqueueInferenceAsync` method:
 
 ```csharp
 var response = mindeeClient.EnqueueInferenceAsync(
