@@ -16,6 +16,8 @@ Only **Organization Admins** can access and modify billing details.
 2. On the left-hand menu, click on **Settings**
 3. Select the **Billing** tab
 
+Or simply click here:
+
 <p align="center"><a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a></p>
 
 ## 💳 What You Can Do from the Billing Tab
