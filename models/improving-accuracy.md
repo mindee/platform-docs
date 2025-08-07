@@ -26,9 +26,15 @@ To make the RAG system effective, there are 3 main steps to have in mind.&#x20;
 
 To use RAG on a given Extraction Model, you should click on the RAG tab. \
 \
-This tab allows you to enrich your RAG Database by uploading a document with an unsatisfying behavior. You need to annotate the document, ticking the fields you want to be covered by the RAG augmentation on this template, and having the possibility to give additional guidelines using natural language.&#x20;
+This tab allows you to enrich your RAG Database by uploading a document with an unsatisfying behavior.&#x20;
 
-Once this document is annotated, be sure to activate it, and go to the Live test tab. \
+You need to annotate the document, ticking the fields you want to be covered by the RAG augmentation on this template, and having the possibility to give additional guidelines using natural language.&#x20;
+
+{% hint style="success" %}
+Most of the time, the annotation is sufficient to make the model understand the issue. We recommend using the guideline only when the annotation only didn't solve the problem.
+{% endhint %}
+
+Once this document is annotated, **be sure to activate it**, and go to the Live test tab. \
 \
 You should click on RAG Activated, and upload a document. Ideally, pick a document with the same template (another invoice from the same supplier for instance), but not exactly the one you used in the RAG database. You will see the before/after predictions and should be able to check that the extra instructions were taken into account to augment properly the prediction.\
 \

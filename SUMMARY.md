@@ -29,6 +29,7 @@
   * [Load and Adjust a File](integrations/client-libraries-sdk/load-and-adjust-a-file.md)
   * [Send a File or URL](integrations/client-libraries-sdk/send-a-file-or-url.md)
   * [Process the Result](integrations/client-libraries-sdk/process-the-result.md)
+* [Technical Limitations](integrations/technical-limitations.md)
 * [Tutorials](integrations/tutorials/README.md)
   * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [API Reference](integrations/api-reference.md)
