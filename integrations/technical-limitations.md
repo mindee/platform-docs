@@ -1,3 +1,7 @@
+---
+icon: hand
+---
+
 # Technical Limitations
 
 A set of limits are enforced to ensure the safety of Mindee's parsing document APIs. An API call that causes any of these limits to be exceeded will be rejected with an error.&#x20;
