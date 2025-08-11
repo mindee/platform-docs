@@ -27,23 +27,23 @@ All plans include access to our AI agent to build custom document parsers.
 
 ## Feature comparison
 
-| Feature                                             |                    Starter                    |                      Pro                      |                    Business                   |                   Enterprise                  |
-| --------------------------------------------------- | :-------------------------------------------: | :-------------------------------------------: | :-------------------------------------------: | :-------------------------------------------: |
-| RAG[^1]                                             | <i class="fa-circle-xmark">:circle-xmark:</i> |                  20 documents                 |                   Unlimited                   |                   Unlimited                   |
-| [AI Agent for custom model](#user-content-fn-2)[^2] | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| [Community support](#user-content-fn-3)[^3]         | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| [Live priority support](#user-content-fn-4)[^4]     | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Members[^5]                                         | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Data processing localization                        | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| [Confidence score](#user-content-fn-6)[^6]          | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Polygons[^7]                                        | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Custom pricing                                      | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Dedicated account manager                           | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Premium technical support                           | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Feature                                                |                    Starter                    |                      Pro                      |                    Business                   |                   Enterprise                  |
+| ------------------------------------------------------ | :-------------------------------------------: | :-------------------------------------------: | :-------------------------------------------: | :-------------------------------------------: |
+| RAG[^1]                                                | <i class="fa-circle-xmark">:circle-xmark:</i> |                  20 documents                 |                   Unlimited                   |                   Unlimited                   |
+| [AI Agent for custom model](#user-content-fn-2)[^2]    | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Community support](#user-content-fn-3)[^3]            | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Live priority support](#user-content-fn-4)[^4]        | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Members[^5]                                            | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Data processing localization](#user-content-fn-6)[^6] | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Confidence score](#user-content-fn-7)[^7]             | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Polygons[^8]                                           | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Custom pricing                                         | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Dedicated account manager                              | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Premium technical support                              | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
 
 ## Plan Details
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>500 pages or 14 days</li><li>Access to RAG</li><li>API integration</li><li>Access to the full documentation</li></ul></td></tr><tr><td><mark style="color:$primary;"><strong>Starter</strong></mark></td><td><ul><li>6,000 pages/year</li></ul><ul><li>Unlimited models</li><li>Community support</li><li>No user management</li><li>RAG not included</li></ul></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 pages/year</li></ul><ul><li>Live chat support</li><li>Multi-user access</li><li>Limited RAG: 20 documents</li><li>Automation and polygons supported</li></ul></td></tr><tr><td><mark style="color:$success;"><strong>Business</strong></mark></td><td><ul><li>Everything in Pro</li><li>120,000 pages/year</li></ul><ul><li>Unlimited members</li><li>Priority support</li><li>Unlimited RAG documents</li><li>Full feature access including localization</li></ul></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li></ul><ul><li>Custom data hosting</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium onboarding and technical support</li></ul></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>500 pages or 14 days</li><li>Access to RAG</li><li>API integration</li><li>Access to the full documentation</li></ul></td></tr><tr><td><mark style="color:$primary;"><strong>Starter</strong></mark></td><td><ul><li>6,000 pages/year</li></ul><ul><li>Unlimited models</li><li>Community support</li><li>No user management</li><li>RAG not included</li></ul></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 pages/year</li></ul><ul><li>Live chat support</li><li>Multi-user access</li><li>Limited RAG: 20 documents</li><li>Automation and polygons supported</li></ul></td></tr><tr><td><mark style="color:$success;"><strong>Business</strong></mark></td><td><ul><li>Everything in Pro</li><li>120,000 pages/year</li></ul><ul><li>Unlimited members</li><li>Priority support</li><li>Unlimited RAG documents</li><li>Full feature access including localization</li></ul></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li></ul><ul><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium onboarding and technical support</li></ul></td></tr></tbody></table>
 
 
 
@@ -66,10 +66,12 @@ All plans include access to our AI agent to build custom document parsers.
 
 [^5]: Add members to your organization
 
-[^6]: Leverage confidence score to selectively automate document processing.
+[^6]: Choose the region where your data is processed: Europe, United States, or Global&#x20;
+
+[^7]: Leverage confidence score to selectively automate document processing.
 
 
 
     Learn more on our [Automation documentation](../models/automation-confidence-score.md)
 
-[^7]: Use advanced polygon-based extraction to capture data from complex layouts
+[^8]: Use advanced polygon-based extraction to capture data from complex layouts
