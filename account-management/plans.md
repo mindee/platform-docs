@@ -23,14 +23,16 @@ All plans include access to our AI agent to build custom document parsers.
 | Business   | €584 / month                    | 120,000 pages         | €0.035 per page |
 | Entreprise | Custom pricing                  | 250,000+ pages        | Custom          |
 
+<a href="billing.md" class="button primary">Go to Billing documentation</a>
+
 ## Feature comparison
 
-| Feature                                             | Starter                                       | Pro                                           | Business                                      | Enterprise                                    |
-| --------------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| RAG[^1]                                             | <i class="fa-circle-xmark">:circle-xmark:</i> | 20 documents                                  | Unlimited                                     | Unlimited                                     |
+| Feature                                             |                    Starter                    |                      Pro                      |                    Business                   |                   Enterprise                  |
+| --------------------------------------------------- | :-------------------------------------------: | :-------------------------------------------: | :-------------------------------------------: | :-------------------------------------------: |
+| RAG[^1]                                             | <i class="fa-circle-xmark">:circle-xmark:</i> |                  20 documents                 |                   Unlimited                   |                   Unlimited                   |
 | [AI Agent for custom model](#user-content-fn-2)[^2] | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
 | [Community support](#user-content-fn-3)[^3]         | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| [Live priority Support](#user-content-fn-4)[^4]     | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Live priority support](#user-content-fn-4)[^4]     | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
 | Members[^5]                                         | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
 | Data processing localization                        | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
 | [Confidence score](#user-content-fn-6)[^6]          | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
