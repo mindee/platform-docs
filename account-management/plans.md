@@ -18,15 +18,21 @@ All plans include access to our AI agent to build custom document parsers.
 | Business   | €584 / month                    | 120,000 pages         | €0.035 per page |
 | Entreprise | Custom pricing                  | 250,000+ pages        | Custom          |
 
-## /
+## Feature comparison
 
-
-
-|          |   |   |
-| -------- | - | - |
-| test[^1] |   |   |
-|          |   |   |
-|          |   |   |
+| Feature                      | Starter                                       | Pro                                           | Business                                      | Enterprise                                    |
+| ---------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| AI Agent for custom model    | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Community support            | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Live Chat Support            | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Priority support             | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Members[^1]                  | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Data processing localization | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Automation                   | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Polygons                     | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Custom pricing               | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Dedicated account manager    | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Premium technical support    | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
 
 ## Plan Details
 
@@ -41,4 +47,4 @@ All plans include access to our AI agent to build custom document parsers.
 * You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
 * Overage charges are calculated automatically based on your plan’s rate.
 
-[^1]: this means this
+[^1]: Add members to your organization

@@ -57,5 +57,5 @@ This path is ideal when you’re still exploring your data model or working with
 
 ## Supported Formats
 
-* 📄 **PDF files** — single-page or multi-page
-* 🖼️ **Images** — JPG, PNG, TIFF, and more
+* **PDF files** — single-page or multi-page
+* **Images** — JPG, PNG, TIFF, and more
