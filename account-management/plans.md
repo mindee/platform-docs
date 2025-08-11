@@ -1,6 +1,11 @@
 ---
+description: >-
+  Mindee offers flexible subscription plans to suit individual developers,
+  growing teams, and enterprise-scale organizations.  Choose the plan that best
+  fits your volume, support, and automation needs.
 hidden: true
 noIndex: true
+icon: money-check-dollar-pen
 ---
 
 # Plans
@@ -20,19 +25,19 @@ All plans include access to our AI agent to build custom document parsers.
 
 ## Feature comparison
 
-| Feature                      | Starter                                       | Pro                                           | Business                                      | Enterprise                                    |
-| ---------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| AI Agent for custom model    | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Community support            | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Live Chat Support            | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Priority support             | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Members[^1]                  | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Data processing localization | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Automation                   | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Polygons                     | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Custom pricing               | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Dedicated account manager    | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
-| Premium technical support    | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Feature                                             | Starter                                       | Pro                                           | Business                                      | Enterprise                                    |
+| --------------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| RAG[^1]                                             | <i class="fa-circle-xmark">:circle-xmark:</i> | 20 documents                                  | Unlimited                                     | Unlimited                                     |
+| [AI Agent for custom model](#user-content-fn-2)[^2] | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Community support](#user-content-fn-3)[^3]         | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Live priority Support](#user-content-fn-4)[^4]     | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Members[^5]                                         | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Data processing localization                        | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| [Confidence score](#user-content-fn-6)[^6]          | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Polygons[^7]                                        | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Custom pricing                                      | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Dedicated account manager                           | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
+| Premium technical support                           | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-xmark">:circle-xmark:</i> | <i class="fa-circle-check">:circle-check:</i> |
 
 ## Plan Details
 
@@ -47,4 +52,22 @@ All plans include access to our AI agent to build custom document parsers.
 * You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
 * Overage charges are calculated automatically based on your plan’s rate.
 
-[^1]: Add members to your organization
+[^1]: Enhance your AI models with custom document knowledge bases.
+
+    Learn more on our [RAG documentation](https://docs.mindee.com/models/improving-accuracy)
+
+[^2]: Build your own document parsers by describing the fields you need
+
+[^3]: Access to our Feedback page
+
+[^4]: Get real-time assistance from our support team via Slack, emails or calls
+
+[^5]: Add members to your organization
+
+[^6]: Leverage confidence score to selectively automate document processing.
+
+
+
+    Learn more on our [Automation documentation](../models/automation-confidence-score.md)
+
+[^7]: Use advanced polygon-based extraction to capture data from complex layouts
