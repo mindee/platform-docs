@@ -3,8 +3,6 @@ description: >-
   Mindee offers flexible subscription plans to suit individual developers,
   growing teams, and enterprise-scale organizations.  Choose the plan that best
   fits your volume, support, and automation needs.
-hidden: true
-noIndex: true
 icon: money-check-dollar-pen
 ---
 
