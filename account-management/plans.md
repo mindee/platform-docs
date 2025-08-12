@@ -29,7 +29,7 @@ All plans include access to our AI agent to build custom document parsers.
 
 | Feature                                                |        Starter       |          Pro         |       Business       |      Enterprise      |
 | ------------------------------------------------------ | :------------------: | :------------------: | :------------------: | :------------------: |
-| Number of pages included                               |      6,000/year      |      30,000/year     |     120,000/year     |     +250,000/year    |
+| Number of pages included                               |     6,000 / year     |     30,000 / year    |    120,000 / year    |    +250,000 / year   |
 | RAG[^1]                                                |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
 | [AI Agent for custom model](#user-content-fn-2)[^2]    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Community support](#user-content-fn-3)[^3]            | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
