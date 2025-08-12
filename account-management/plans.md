@@ -30,8 +30,8 @@ All plans include access to our AI agent to build custom document parsers.
 | Feature                                                |        Starter       |          Pro         |       Business       |      Enterprise      |
 | ------------------------------------------------------ | :------------------: | :------------------: | :------------------: | :------------------: |
 | Number of pages included                               |      6,000/year      |      30,000/year     |     120,000/year     |     +250,000/year    |
-| [AI Agent for custom model](#user-content-fn-1)[^1]    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| RAG[^2]                                                |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
+| RAG[^1]                                                |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
+| [AI Agent for custom model](#user-content-fn-2)[^2]    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Community support](#user-content-fn-3)[^3]            | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Live priority support](#user-content-fn-4)[^4]        |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | Members[^5]                                            |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
@@ -55,11 +55,11 @@ All plans include access to our AI agent to build custom document parsers.
 * You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
 * Overage charges are calculated automatically based on your plan’s rate.
 
-[^1]: Build your own document parsers by describing the fields you need
-
-[^2]: Enhance your AI models with custom document knowledge bases.
+[^1]: Enhance your AI models with custom document knowledge bases.
 
     Learn more on our [RAG documentation](https://docs.mindee.com/models/improving-accuracy)
+
+[^2]: Build your own document parsers by describing the fields you need
 
 [^3]: Access to our Feedback page
 
