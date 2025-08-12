@@ -16,7 +16,7 @@ All plans include access to our AI agent to build custom document parsers.
 
 | Plan       | Monthly price (billed annually) | Annual pages included | Overage rate    |
 | ---------- | ------------------------------- | --------------------- | --------------- |
-| Starter    | €44 / month                     | 6,000 pages           | €0.05/page      |
+| Starter    | €44 / month                     | 6,000 pages           | €0.05 per page  |
 | Pro        | €179 / month                    | 30,000 pages          | €0.04 per page  |
 | Business   | €584 / month                    | 120,000 pages         | €0.035 per page |
 | Entreprise | Custom pricing                  | +250,000 pages        | Custom          |
