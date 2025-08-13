@@ -23,7 +23,7 @@ Python ≥ 3.10 is highly recommended.
 
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
-```
+```sh
 pip install mindee>=4.27.0
 ```
 {% endtab %}
@@ -34,13 +34,18 @@ Node.js ≥ 22 is recommended.
 
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
-```
-npm install mindee@">=4.29.0-rc5
+```sh
+npm install mindee@4.29.0-rc5
 ```
 {% endtab %}
 
 {% tab title="Ruby" %}
-[In Progress](https://feedback.mindee.com/p/ruby-client-library)
+Requires Ruby ≥ 3.0.\
+Simply install the [gem](https://rubygems.org/gems/mindee/versions/4.7.0.pre.rc1) using:
+
+```shell
+gem install mindee --pre
+```
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -49,7 +54,7 @@ PHP ≥ 8.3 is recommended.
 
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
-```
+```sh
 php composer.phar require "mindee/mindee:>=1.23"
 ```
 
@@ -61,7 +66,7 @@ found mindee/mindee[v1.23.0-rc2] but it does not match your minimum-stability.
 
 You'll need to configure your composer settings to allow installing an RC version:
 
-```
+```sh
 php composer.phar config minimum-stability RC
 php composer.phar config prefer-stable true
 ```
@@ -86,7 +91,7 @@ Requires .NET ≥ 6.0.\
 
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
 
-```
+```sh
 dotnet add package Mindee --version 3.30
 ```
 {% endtab %}
