@@ -295,6 +295,38 @@ string filename = "file.ext";
 var inputSource = new LocalInputSource(fileStream, filename)
 ```
 {% endtab %}
+
+{% tab title="Ruby" %}
+To load a path string, use the \`PathInputSource\` class.
+
+```ruby
+input_path = "/path/to/the/file.ext"
+input_source = Mindee::Input::Source::PathInputSource.new(input_path)
+```
+
+To load raw bytes, use the \`BytesInputSource\` class.
+
+```ruby
+input_bytes = File.binread('/path/to/the/file.ext')
+input_source = Mindee::Input::Source::BytesInputSource.new(input_bytes, file_name)
+```
+
+To load a base-64 string, use \`Base64InputSource\`.\
+The string will be decoded into bytes internally.
+
+```ruby
+input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
+input_source = Mindee::Input::Source::Base64InputSource.new(input_base64, 'file.ext')
+```
+
+To load a file handle, use \`FileInputSource\`.\
+It must be opened in binary mode.
+
+```ruby
+file = File.open("/path/to/the/file.ext", 'rb')
+input_source = Mindee::Input::Source::FileInputSource(file, 'file.ext')
+```
+{% endtab %}
 {% endtabs %}
 
 ## Adjust the Source File
@@ -330,6 +362,14 @@ Using the `$inputSource` instance created above.
 
 ```php
 $inputSource->fixPDF();
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Simply set the `repair_pdf` flag on any input source object (except UrlInputSource).
+
+```ruby
+local_input = PathInputSource.new('path/to/the/file.ext', repair_pdf:true)
 ```
 {% endtab %}
 {% endtabs %}
@@ -440,6 +480,24 @@ For example to compress and resize to no greater than 1920x1920 pixels:
 ```csharp
 inputSource.Compress(
     quality: 85, maxWidth: 1920, maxHeight: 1920);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `input_source` instance created above.\
+Basic usage is very simple, and can be applied to both images and PDFs:
+
+```ruby
+input_source.compress!(quality:85)
+```
+
+For images, you can also set a maximum height and/or width. The aspect ratio will always be preserved.\
+For example to compress and resize to no greater than 1920x1920 pixels:
+
+```ruby
+input_source.compress!(
+    quality:85, max_width:1920, max_height:1920
+)
 ```
 {% endtab %}
 {% endtabs %}
@@ -688,6 +746,49 @@ new PageOptions(
     , onMinPages: 10
     , pageIndexes: new short[] { 0, 1, 2, 3, 4 }
 );
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `input_source` instance created above.
+
+```ruby
+# Set the options as follows:
+# For all documents, keep only the first page
+page_options = Mindee::PageOptions.new(
+    operation: :KEEP_ONLY,
+    page_indexes: [0],
+)
+
+# Apply in-memory
+input_source.apply_page_options(page_options)
+```
+
+Note: the name is `apply_page_options` instead of `apply_page_options!` even though the operation is in-place to match other SDKs syntaxes.Some other examples:
+
+```ruby
+# Only for documents having 3 or more pages:
+# Keep only these pages: first, penultimate, last
+PageOptions.new(
+    operation: :KEEP_ONLY,
+    on_min_pages: 3,
+    page_indexes: [0, -2, -1],
+)
+
+# For all documents:
+# Remove the first page
+PageOptions.new(
+    operation: :REMOVE,
+    page_indexes: [0],
+)
+
+# Only for documents having 10 or more pages:
+# Remove the first 5 pages
+PageOptions.new(
+    operation: :REMOVE,
+    on_min_pages: 10,
+    page_indexes: array[0..4]
+)
 ```
 {% endtab %}
 {% endtabs %}
