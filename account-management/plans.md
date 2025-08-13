@@ -59,7 +59,7 @@ All plans include access to our AI agent to build custom document parsers.
 
 [^2]: Build your own document parsers by describing the fields you need
 
-[^3]: Access to our Feedback page
+[^3]: Access to our [Feedback](https://feedback.mindee.com/) page
 
 [^4]: Get real-time assistance from our support team via Slack, emails or calls
 
