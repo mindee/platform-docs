@@ -102,6 +102,14 @@ var inputSource = new UrlInputSource(
     "https://example.com/file.ext");
 ```
 {% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+input_source = Mindee::Input::Source::URLInputSource(
+  "https://example.com/file.ext"
+)
+```
+{% endtab %}
 {% endtabs %}
 
 ## Send for Processing
@@ -219,6 +227,19 @@ var response = await mindeeClient.EnqueueAndGetInferenceAsync(
 // To easily test which data was extracted,
 // simply print an RST representation of the inference
 System.Console.WriteLine(response.Inference.ToString());
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+response = mindee_client.enqueue_and_get_inference(
+  input_source,
+  inference_params
+)
+
+# To easily test which data was extracted,
+# simply print an RST representation of the inference
+puts response.inference
 ```
 {% endtab %}
 {% endtabs %}
