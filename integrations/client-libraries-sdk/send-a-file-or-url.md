@@ -231,6 +231,15 @@ System.Console.WriteLine(response.Inference.ToString());
 {% endtab %}
 
 {% tab title="Ruby" %}
+`input_source`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueue_and_get_inference` method.
+
 ```ruby
 response = mindee_client.enqueue_and_get_inference(
   input_source,
@@ -399,6 +408,35 @@ System.Console.WriteLine(response.Job.Alias);
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `EnqueueAndGetInferenceAsync`.\
 You'll get the response via polling and webhooks will be used as well.
+{% endtab %}
+
+{% tab title="Ruby" %}
+`input_source`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueue_inference` method:
+
+```ruby
+response = mindee_client.enqueue_inference(
+    input_source, inference_params
+)
+
+# You should save the job ID for your records
+puts response.job.id
+
+# If you set an `alias`, you can verify it was taken into account
+puts response.job.alias
+```
+
+**Note:** You can use both methods!
+
+First, make sure you've added a webhook ID to the `Mindee::Input::InferenceParameters` instance.\
+Then, call `enqueue_and_get_inference` .\
+You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 {% endtabs %}
 

@@ -769,7 +769,7 @@ Note: the name is `apply_page_options` instead of `apply_page_options!` even tho
 ```ruby
 # Only for documents having 3 or more pages:
 # Keep only these pages: first, penultimate, last
-PageOptions.new(
+Mindee::PageOptions.new(
     operation: :KEEP_ONLY,
     on_min_pages: 3,
     page_indexes: [0, -2, -1],
@@ -777,14 +777,14 @@ PageOptions.new(
 
 # For all documents:
 # Remove the first page
-PageOptions.new(
+Mindee::PageOptions.new(
     operation: :REMOVE,
     page_indexes: [0],
 )
 
 # Only for documents having 10 or more pages:
 # Remove the first 5 pages
-PageOptions.new(
+Mindee::PageOptions.new(
     operation: :REMOVE,
     on_min_pages: 10,
     page_indexes: array[0..4]
