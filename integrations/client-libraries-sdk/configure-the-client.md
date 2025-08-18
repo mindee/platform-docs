@@ -326,7 +326,7 @@ inference_params = Mindee::Input::InferenceParameters.new(
     model_id,
     # Options:
 
-    # If set to `True`, will enable Retrieval-Augmented Generation.
+    # If set to `true`, will enable Retrieval-Augmented Generation.
     rag: false,
 
     # Use an alias to link the file to your own DB.
