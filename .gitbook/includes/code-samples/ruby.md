@@ -2,7 +2,8 @@
 title: sample-code-ruby
 ---
 
-Requires Ruby ≥ 3.0.
+Requires Ruby ≥ 3.0.\
+Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee/versions/4.7.0.pre.rc1) version **4.7.0.pre.rc1** or greater.
 
 {% code lineNumbers="true" %}
 ```ruby
