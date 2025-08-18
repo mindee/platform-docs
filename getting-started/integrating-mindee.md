@@ -72,12 +72,12 @@ You'll want to adapt your processing depending on the [type of field](../models/
 {% include "../.gitbook/includes/code-samples/process-javascript.md" %}
 {% endtab %}
 
-{% tab title="Ruby" %}
-{% include "../.gitbook/includes/code-samples/process-ruby.md" %}
-{% endtab %}
-
 {% tab title="PHP" %}
 {% include "../.gitbook/includes/code-samples/process-php.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+{% include "../.gitbook/includes/code-samples/process-ruby.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
