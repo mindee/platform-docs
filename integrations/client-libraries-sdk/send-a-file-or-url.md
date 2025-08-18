@@ -84,7 +84,7 @@ $inputSource = new URLInputSource(
 
 {% tab title="Ruby" %}
 ```ruby
-input_source = Mindee::Input::Source::URLInputSource(
+input_source = Mindee::Input::Source::URLInputSource.new(
   "https://example.com/file.ext"
 )
 ```
@@ -374,7 +374,7 @@ puts response.job.alias
 
 **Note:** You can use both methods!
 
-First, make sure you've added a webhook ID to the `Mindee::Input::InferenceParameters` instance.\
+First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
 You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}

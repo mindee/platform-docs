@@ -205,21 +205,21 @@ $inputSource = Base64Input($inputBase64, "base64_file.txt");
 {% endtab %}
 
 {% tab title="Ruby" %}
-To load a path string, use the \`PathInputSource\` class.
+To load a path string, use the `PathInputSource` class.
 
 ```ruby
 input_path = "/path/to/the/file.ext"
 input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 ```
 
-To load raw bytes, use the \`BytesInputSource\` class.
+To load raw bytes, use the `BytesInputSource` class.
 
 ```ruby
 input_bytes = File.binread('/path/to/the/file.ext')
 input_source = Mindee::Input::Source::BytesInputSource.new(input_bytes, file_name)
 ```
 
-To load a base-64 string, use \`Base64InputSource\`.\
+To load a base-64 string, use `Base64InputSource`.\
 The string will be decoded into bytes internally.
 
 ```ruby
@@ -227,7 +227,7 @@ input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
 input_source = Mindee::Input::Source::Base64InputSource.new(input_base64, 'file.ext')
 ```
 
-To load a file handle, use \`FileInputSource\`.\
+To load a file handle, use `FileInputSource`.\
 It must be opened in binary mode.
 
 ```ruby
@@ -676,7 +676,9 @@ page_options = Mindee::PageOptions.new(
 input_source.apply_page_options(page_options)
 ```
 
-Note: the name is `apply_page_options` instead of `apply_page_options!` even though the operation is in-place to match other SDKs syntaxes.Some other examples:
+Note: the name is `apply_page_options` instead of `apply_page_options!` even though the operation is in-place, this to harmonize with the other client libraries.
+
+Some other examples:
 
 ```ruby
 # Only for documents having 3 or more pages:

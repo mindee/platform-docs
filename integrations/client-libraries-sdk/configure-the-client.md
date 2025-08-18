@@ -436,7 +436,7 @@ $inferenceParams = new InferenceParameters(
 When polling you really only need to set the `model_id` .
 
 ```ruby
-inference_params = InferenceParameters.new("MY_MODEL_ID")
+inference_params = Mindee::Input::InferenceParameters.new("MY_MODEL_ID")
 ```
 
 You can also set the various polling parameters.\
@@ -445,11 +445,11 @@ However, **we do not recommend** setting this option unless you are encountering
 ```ruby
 require 'mindee'
 
-inference_params = Mindee::Input::InferenceParameters(
+inference_params = Mindee::Input::InferenceParameters.new(
   "MY_MODEL_ID",
 
   # Set only if having timeout issues.
-  polling_options: PollingOptions.new(
+  polling_options: Mindee::Input::PollingOptions.new(
     # Initial delay before the first polling attempt.
     initial_delay_sec: 3,
     # Delay between each polling attempt.
@@ -572,7 +572,7 @@ $inferenceParams = new InferenceParameters(
 ```ruby
 inference_params = Mindee::Input::InferenceParameters.new(
   "MY_MODEL_ID",
-  webhook_ids = ["ENDPOINT_1_UUID"],
+  webhook_ids: ["ENDPOINT_1_UUID"],
 
 # ... any other options ...
 )
