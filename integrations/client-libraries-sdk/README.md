@@ -39,15 +39,6 @@ npm install mindee@4.29.0-rc5
 ```
 {% endtab %}
 
-{% tab title="Ruby" %}
-Requires Ruby ≥ 3.0.\
-Simply install the [gem](https://rubygems.org/gems/mindee/versions/4.7.0.pre.rc1) using:
-
-```shell
-gem install mindee --pre
-```
-{% endtab %}
-
 {% tab title="PHP" %}
 Requires PHP ≥ 8.0.\
 PHP ≥ 8.3 is recommended.
@@ -69,6 +60,15 @@ You'll need to configure your composer settings to allow installing an RC versio
 ```sh
 php composer.phar config minimum-stability RC
 php composer.phar config prefer-stable true
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Requires Ruby ≥ 3.0.\
+Simply install the [gem](https://rubygems.org/gems/mindee/versions/4.7.0.pre.rc1) using:
+
+```shell
+gem install mindee --pre
 ```
 {% endtab %}
 

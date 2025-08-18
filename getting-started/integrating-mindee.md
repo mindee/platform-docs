@@ -36,20 +36,20 @@ Here are some code examples, these are self-contained and can be run as-is:
 {% include "../.gitbook/includes/code-samples/javascript.md" %}
 {% endtab %}
 
-{% tab title="Ruby" %}
-{% include "../.gitbook/includes/code-samples/ruby.md" %}
-{% endtab %}
-
 {% tab title="PHP" %}
 {% include "../.gitbook/includes/code-samples/php.md" %}
 {% endtab %}
 
-{% tab title=".NET" %}
-{% include "../.gitbook/includes/code-samples/dotnet.md" %}
+{% tab title="Ruby" %}
+{% include "../.gitbook/includes/code-samples/ruby.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
 {% include "../.gitbook/includes/code-samples/java.md" %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% include "../.gitbook/includes/code-samples/dotnet.md" %}
 {% endtab %}
 {% endtabs %}
 

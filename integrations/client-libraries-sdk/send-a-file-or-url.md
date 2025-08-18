@@ -82,6 +82,14 @@ $inputSource = new URLInputSource(
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+```ruby
+input_source = Mindee::Input::Source::URLInputSource(
+  "https://example.com/file.ext"
+)
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Use the `URLInputSource` class.
 
@@ -100,14 +108,6 @@ Use the `URLInputSource` class.
 ```csharp
 var inputSource = new UrlInputSource(
     "https://example.com/file.ext");
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-```ruby
-input_source = Mindee::Input::Source::URLInputSource(
-  "https://example.com/file.ext"
-)
 ```
 {% endtab %}
 {% endtabs %}
@@ -189,6 +189,28 @@ echo strval($response->inference);
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+`input_source`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueue_and_get_inference` method.
+
+```ruby
+response = mindee_client.enqueue_and_get_inference(
+  input_source,
+  inference_params
+)
+
+# To easily test which data was extracted,
+# simply print an RST representation of the inference
+puts response.inference
+```
+{% endtab %}
+
 {% tab title="Java" %}
 `inputSource`  is any valid input source, one of:
 
@@ -227,28 +249,6 @@ var response = await mindeeClient.EnqueueAndGetInferenceAsync(
 // To easily test which data was extracted,
 // simply print an RST representation of the inference
 System.Console.WriteLine(response.Inference.ToString());
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-`input_source`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
-The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueue_and_get_inference` method.
-
-```ruby
-response = mindee_client.enqueue_and_get_inference(
-  input_source,
-  inference_params
-)
-
-# To easily test which data was extracted,
-# simply print an RST representation of the inference
-puts response.inference
 ```
 {% endtab %}
 {% endtabs %}
@@ -350,6 +350,35 @@ Then, call `enqueueAndGetInferenceAsync`.\
 You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
+{% tab title="Ruby" %}
+`input_source`  is any valid input source, one of:
+
+* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
+
+The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueue_inference` method:
+
+```ruby
+response = mindee_client.enqueue_inference(
+    input_source, inference_params
+)
+
+# You should save the job ID for your records
+puts response.job.id
+
+# If you set an `alias`, you can verify it was taken into account
+puts response.job.alias
+```
+
+**Note:** You can use both methods!
+
+First, make sure you've added a webhook ID to the `Mindee::Input::InferenceParameters` instance.\
+Then, call `enqueue_and_get_inference` .\
+You'll get the response via polling and webhooks will be used as well.&#x20;
+{% endtab %}
+
 {% tab title="Java" %}
 `inputSource`  is any valid input source, one of:
 
@@ -408,35 +437,6 @@ System.Console.WriteLine(response.Job.Alias);
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `EnqueueAndGetInferenceAsync`.\
 You'll get the response via polling and webhooks will be used as well.
-{% endtab %}
-
-{% tab title="Ruby" %}
-`input_source`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
-The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueue_inference` method:
-
-```ruby
-response = mindee_client.enqueue_inference(
-    input_source, inference_params
-)
-
-# You should save the job ID for your records
-puts response.job.id
-
-# If you set an `alias`, you can verify it was taken into account
-puts response.job.alias
-```
-
-**Note:** You can use both methods!
-
-First, make sure you've added a webhook ID to the `Mindee::Input::InferenceParameters` instance.\
-Then, call `enqueue_and_get_inference` .\
-You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 {% endtabs %}
 

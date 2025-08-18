@@ -144,9 +144,68 @@ Each field will be one of the following types:
 * Multiple values (an object), `ObjectField` class.
 * A list or array of fields, `ListField` class.
 
+## Optional Field Attributes
+
+These field attributes are only filled when their respective features are activated.
+
+The attributes are always present even when not activated.
+
+### confidence
+
+The confidence level of the extracted value.
+
+Only filled if the automation feature is activated.\
+See the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") section for more details.
+
+{% tabs %}
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+InferenceFields fields = response.Inference.Result.Fields;
+
+// nullable enum since presence depends on feature activation
+FieldConfidence? confidence = fields["my_simple_field"].SimpleField.Confidence;
+```
+{% endtab %}
+{% endtabs %}
+
+### locations
+
+A list of the field's locations on the document.
+
+Only filled if the polygons feature is activated.
+
+It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
+
+Each location has a page index and a polygon.
+
+{% tabs %}
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+using Mindee.Geometry;
+
+InferenceFields fields = response.Inference.Result.Fields;
+
+List<FieldLocation> locations = fields["my_simple_field"].SimpleField.Locations;
+
+// there are geometry functions available in the Polygon class
+Polygon polygon = locations.First().Polygon;
+Point center = polygon.GetCentroid();
+```
+{% endtab %}
+{% endtabs %}
+
 ## Single-Value Field - SimpleField
 
-Basic field type having the following attributes.
+Basic field type having the `value` attribute.
+
+In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 ### value
 
@@ -203,57 +262,6 @@ RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
 {% endtab %}
 {% endtabs %}
 
-### confidence
-
-The confidence level of the extracted value.
-
-Only filled if the automation feature is activated.\
-See the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") section for more details.
-
-{% tabs %}
-{% tab title=".NET" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
-```csharp
-using Mindee.Parsing.V2.Field;
-
-InferenceFields fields = response.Inference.Result.Fields;
-
-// nullable enum since presence depends on feature activation
-FieldConfidence? confidence = fields["my_simple_field"].SimpleField.Confidence;
-```
-{% endtab %}
-{% endtabs %}
-
-### locations
-
-A list of the field's locations on the document.
-
-Only filled if the polygons feature is activated.
-
-It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
-
-Each location has a page index and a polygon.
-
-{% tabs %}
-{% tab title=".NET" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
-```csharp
-using Mindee.Parsing.V2.Field;
-using Mindee.Geometry;
-
-InferenceFields fields = response.Inference.Result.Fields;
-
-List<FieldLocation> locations = fields["my_simple_field"].SimpleField.Locations;
-
-// there are geometry functions available in the Polygon class
-Polygon polygon = locations.First().Polygon;
-Point center = polygon.GetCentroid();
-```
-{% endtab %}
-{% endtabs %}
-
 ## Multiple-Value Field - ObjectField
 
 Each field can _theoretically_ be of any type (single, multi, list).\
@@ -261,7 +269,7 @@ Each field can _theoretically_ be of any type (single, multi, list).\
 
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
-In addition, the `ObjectField` itself has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 ## List of Fields - ListField
 
@@ -275,4 +283,4 @@ Each field in the list will be one of:
 
 There will **not** be a mix of both types in the same list.
 
-In addition, the `ListField` itself has a [#confidence](process-the-result.md#confidence "mention") attribute.
+In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.

@@ -11,7 +11,7 @@ icon: wrench
 
 Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
 
-You'll also need to use one of your [#api-keys](../api-overview/#api-keys "mention") and one or several [Broken link](broken-reference "mention") configured.
+You'll also need to use one of your [#api-keys](../api-overview/#api-keys "mention") and one or several [Models](../../models/models-overview.md) configured.
 
 ## Overview
 
@@ -116,6 +116,33 @@ $mindeeClient = new ClientV2($apiKey);
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+First import the Mindee package:
+
+```ruby
+require 'mindee'
+```
+
+For the API key, you can pass it directly to the client.\
+This is useful for quick testing.
+
+```ruby
+api_key = 'MY_API_KEY'
+mindee_client = Mindee::ClientV2.new(api_key: api_key)
+```
+
+Instead of passing the key directly, you can also set the following environment variable:
+
+`MINDEE_V2_API_KEY`
+
+This is recommended for production use.\
+In this way there is no need to pass the `api_key` when initializing the client.
+
+```ruby
+mindee_client = Mindee::ClientV2.new()
+```
+{% endtab %}
+
 {% tab title="Java" %}
 First import the needed classes:
 
@@ -171,33 +198,6 @@ In this way there is no need to pass the `apiKey` argument when initializing the
 
 ```csharp
 MindeeClientV2 mindeeClient = new MindeeClientV2();
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-First import the Mindee package:
-
-```ruby
-require 'mindee'
-```
-
-For the API key, you can pass it directly to the client.\
-This is useful for quick testing.
-
-```ruby
-api_key = 'MY_API_KEY'
-mindee_client = Mindee::ClientV2.new(api_key: api_key)
-```
-
-Instead of passing the key directly, you can also set the following environment variable:
-
-`MINDEE_V2_API_KEY`
-
-This is recommended for production use.\
-In this way there is no need to pass the `api_key` when initializing the client.
-
-```ruby
-mindee_client = Mindee::ClientV2.new()
 ```
 {% endtab %}
 {% endtabs %}
@@ -275,6 +275,25 @@ $inferenceParams = new InferenceParameters(
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+Only the `model_id` is required.
+
+```ruby
+inference_params = Mindee::Input::InferenceParameters.new(
+    # ID of the model, required.
+    model_id,
+    # Options:
+
+    # If set to `true`, will enable Retrieval-Augmented Generation.
+    rag: false,
+
+    # Use an alias to link the file to your own DB.
+    # If empty, no alias will be used.
+    file_alias: "MY_ALIAS"
+)
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Only the `modelId` is required.
 
@@ -314,25 +333,6 @@ var inferenceParams = new InferenceParameters(
     // If empty, no alias will be used.
     , alias: "MY_ALIAS"
 );
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-Only the `model_id` is required.
-
-```ruby
-inference_params = Mindee::Input::InferenceParameters.new(
-    # ID of the model, required.
-    model_id,
-    # Options:
-
-    # If set to `true`, will enable Retrieval-Augmented Generation.
-    rag: false,
-
-    # Use an alias to link the file to your own DB.
-    # If empty, no alias will be used.
-    file_alias: "MY_ALIAS"
-)
 ```
 {% endtab %}
 {% endtabs %}
@@ -432,6 +432,36 @@ $inferenceParams = new InferenceParameters(
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+When polling you really only need to set the `model_id` .
+
+```ruby
+inference_params = InferenceParameters.new("MY_MODEL_ID")
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```ruby
+require 'mindee'
+
+inference_params = Mindee::Input::InferenceParameters(
+  "MY_MODEL_ID",
+
+  # Set only if having timeout issues.
+  polling_options: PollingOptions.new(
+    # Initial delay before the first polling attempt.
+    initial_delay_sec: 3,
+    # Delay between each polling attempt.
+    delay_sec: 1.5,
+    # Total number of polling attempts.
+    max_retries: 80,
+  ),
+# ... any other options ...
+)
+```
+{% endtab %}
+
 {% tab title="Java" %}
 When polling you really only need to set the `modelId` .
 
@@ -494,36 +524,6 @@ var inferenceParams = new InferenceParameters(
 );
 ```
 {% endtab %}
-
-{% tab title="Ruby" %}
-When polling you really only need to set the `model_id` .
-
-```ruby
-inference_params = InferenceParameters.new("MY_MODEL_ID")
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```ruby
-require 'mindee'
-
-inference_params = Mindee::Input::InferenceParameters(
-  "MY_MODEL_ID",
-
-  # Set only if having timeout issues.
-  polling_options: PollingOptions.new(
-    # Initial delay before the first polling attempt.
-    initial_delay_sec: 3,
-    # Delay between each polling attempt.
-    delay_sec: 1.5,
-    # Total number of polling attempts.
-    max_retries: 80,
-  ),
-# ... any other options ...
-)
-```
-{% endtab %}
 {% endtabs %}
 
 ### Webhook Configuration
@@ -568,6 +568,17 @@ $inferenceParams = new InferenceParameters(
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+```ruby
+inference_params = Mindee::Input::InferenceParameters.new(
+  "MY_MODEL_ID",
+  webhook_ids = ["ENDPOINT_1_UUID"],
+
+# ... any other options ...
+)
+```
+{% endtab %}
+
 {% tab title="Java" %}
 ```java
 InferenceParameters params = InferenceParameters
@@ -588,17 +599,6 @@ var inferenceParams = new InferenceParameters(
     
     // ... any other options ...
 );
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-```ruby
-inference_params = Mindee::Input::InferenceParameters.new(
-  "MY_MODEL_ID",
-  webhook_ids = ["ENDPOINT_1_UUID"],
-
-# ... any other options ...
-)
 ```
 {% endtab %}
 {% endtabs %}
