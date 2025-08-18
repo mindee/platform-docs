@@ -31,9 +31,9 @@ On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.m
 
 ## Send a File
 
-You can quickly test the API by sending a file using the built-in client in our [api-reference.md](../integrations/api-reference.md "mention").
+You can easily [#send-a-file](quickstart.md#send-a-file "mention") using one of our officially-supported programming languages.
 
-You can also [#send-a-file](quickstart.md#send-a-file "mention") using one of our officially-supported programming languages.
+If you are not using one of our officially supported languages, you can use the built-in client in our [api-reference.md](../integrations/api-reference.md "mention").
 
 ## Process the Result
 
