@@ -3,17 +3,44 @@ description: Overview of webhook usage.
 icon: webhook
 ---
 
-# Webhooks
+# Webhook Results
+
+{% hint style="info" %}
+This page assumes you have experience setting up a Web server in your language of choice.
+
+If you're unsure, take a look at the [polling-for-results.md](polling-for-results.md "mention") section before continuing.
+{% endhint %}
 
 ## Overview
 
 Webhooks allow Mindee to post an inference result directly to your Web server.
 
-It's recommended to use webhooks for heavy production use.
+They have the fastest response times and are the most flexible.
 
-This page assumes you have experience setting up a Web server in your framework of choice.
+It is the recommended method for production use, especially for heavy usage.\
+\
+Webhooks are particularly adapted to processing many files within a short period of time.\
+For example multiple batches of invoices at the end of the month.
 
-If you're unsure, take a look at the [#rest-api-integration](./#rest-api-integration "mention") section before continuing.
+You'll need to have your own webserver and a URL that Mindee can send `POST` requests to.
+
+The URL must be public-facing and secured (TLS).
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant clientsrv as Web Server
+    participant client as Client
+    participant enqueue as inference/enqueue
+    participant srv as Mindee Server
+    client->>enqueue: POST file
+    enqueue->>client: HTTP 202
+    enqueue->>+srv: Start processing
+    srv->>srv: Process file
+    srv->>-clientsrv: POST results
+    clientsrv->>clientsrv: process JSON result
+```
 
 ## Platform Set Up
 
@@ -49,21 +76,23 @@ Any future attempts to use a deleted webhook will result in a HTTP error.
 
 ## Specifying on File Upload
 
-When enqueuing an inference, simply specify the webhook endpoint ID(s) you would like to use.
+When enqueuing a file or URL, simply specify the webhook endpoint ID(s) you would like to use.
 
 The endpoint's ID is a UUID v4, and can be obtained by clicking on the "Copy ID" button in your list of Webhook Endpoints.
 
 Each endpoint in the given list will be sent the inference results.
 
-If you're using one of our official client libraries (highly recommended), instructions for your language of choice are detailed in the [#send-with-webhook](../client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section.
+We highly recommend using one of our [client-libraries-sdk](client-libraries-sdk/ "mention").
 
-Otherwise take a look at the [#post-v2-inferences-enqueue](../api-reference.md#post-v2-inferences-enqueue "mention") specification.
+Instructions for your language of choice are detailed in the [#send-with-webhook](client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section.
+
+Otherwise take a look at the [#post-v2-inferences-enqueue](api-reference.md#post-v2-inferences-enqueue "mention") specification.
 
 ## Local Testing
 
-To test your integration locally, you can use open-source software like [rathole](https://github.com/rathole-org/rathole),  [frp](https://github.com/fatedier/frp), or [localtunnel](https://www.npmjs.com/package/localtunnel).
+To test your integration locally, there a number of use open-source solutions like [rathole](https://github.com/rathole-org/rathole),  [frp](https://github.com/fatedier/frp), or [localtunnel](https://www.npmjs.com/package/localtunnel).
 
-There are also proprietary solutions like [ngrok](https://ngrok.com/use-cases/webhook-testing).
+There are also proprietary products like [ngrok](https://ngrok.com/use-cases/webhook-testing).
 
 ## Loading an Inference
 
@@ -75,6 +104,6 @@ Processing the result is then a matter of loading the sent JSON payload from the
 
 The payload is identical to a polling result and processing its contents is done in exactly the same way.
 
-More details here: [#processing-the-results](../../getting-started/integrating-mindee.md#processing-the-results "mention")
+More details here: [process-the-result.md](client-libraries-sdk/process-the-result.md "mention")
 
 We **highly recommend** saving all received payloads to disk or a database before attempting to load the inference. We will not be able to provide support if you are not able to retrieve payloads after having received them.

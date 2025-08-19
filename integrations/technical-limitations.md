@@ -33,29 +33,12 @@ Specifically, we accept the following image types:
 | Max file size           | 100 MB      |
 | Maximum number of pages | 200 pages   |
 
-## General Guidelines For Uploading Files
+Take a look at the following sections for workarounds on these limits:
 
-Following these guidelines will ensure you get the most accurate results as quickly as possible.
+* [#manipulate-pdf-pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages "mention")
+* [#compress-files](client-libraries-sdk/load-and-adjust-a-file.md#compress-files "mention")
 
-### **Reduce very large images**
-
-For faster upload and processing, downscale large images by resizing them.
-
-For example modern smartphones can take images of 24 megapixels or more, in most cases this is completely useless, a waste of bandwidth and processing time.
-
-For the vast majority of image files, 3-5 megapixels is enough. Just make sure the smallest text is legible.
-
-We offer free tooling for compressing and resizing images or PDFs before sending them.\
-Details here: [#file-compression](client-libraries-sdk/load-and-adjust-a-file.md#file-compression "mention")
-
-### **Do not upscale or enhance**
-
-Never upscale a low-resolution image, adding extra pixels only adds to processing time without an increase in accuracy.\
-It is best to avoid very low-resolution images, if possible.
-
-### **Keep the aspect ratio**
-
-Never change the original aspect ratio. Doing so will create distortions and degrade the performance of the OCR.
+Requires using our [client-libraries-sdk](client-libraries-sdk/ "mention").
 
 ## Rate Limits
 
@@ -82,8 +65,6 @@ For information about the pricing model of Mindee, please refer yourself to the 
 ### Data Schema
 
 For your data schema, the recommended maximum number of properties is 25. Beyond this limit, performances will be drastically reduced.
-
-Payload in Mindee refers to the data that you send to the server when you make an API request .
 
 
 

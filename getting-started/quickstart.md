@@ -29,18 +29,18 @@ If it doesn't work as expected, you can modify the Data Schema, as explained in 
 
 On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.mindee.com/api-keys) and create a new key.
 
-## Send a File
+## Send a File or URL
 
-You can easily [#send-a-file](quickstart.md#send-a-file "mention") using one of our officially-supported programming languages.
+You can easily send a file or an URL using one of our officially-supported [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
-If you are not using one of our officially supported languages, you can use the built-in client in our [api-reference.md](../integrations/api-reference.md "mention").
+For a quick introduction and ready to use code samples, check out the [quick-start.md](../integrations/client-libraries-sdk/quick-start.md "mention") section.
+
+Otherwise, you can use the built-in client in our [api-reference.md](../integrations/api-reference.md "mention").
 
 ## Process the Result
 
 You'll need some way of importing the JSON structure and manipulating it.
 
-For quick testing, we recommend to [#process-the-result](quickstart.md#process-the-result "mention") using a scripting language like Python or JavaScript. Compiled languages are supported as well.
-
-
+For quick testing, we recommend to [process-the-result.md](../integrations/client-libraries-sdk/process-the-result.md "mention") using our client libraries.
 
 {% include "../.gitbook/includes/quickstart-supademo.md" %}

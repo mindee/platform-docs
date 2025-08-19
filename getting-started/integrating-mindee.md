@@ -19,11 +19,11 @@ You're now ready to go!
 
 ## Sending a File
 
-To process your document using Mindee, simply send the file using the [REST API](../integrations/api-overview/).
+To process your document using Mindee, simply send the file using the [REST API](../integrations/api-overview.md).
 
 Make a note of your model's ID for use in the API.
 
-When getting started, we recommend using the [#polling](../integrations/api-overview/#polling "mention") method which will be quickest (unless you happen to already have access to a public-facing Web server).
+When getting started, we recommend using the [#polling](../integrations/api-overview.md#polling "mention") method which will be quickest (unless you happen to already have access to a public-facing Web server).
 
 Here are some code examples, these are self-contained and can be run as-is:
 

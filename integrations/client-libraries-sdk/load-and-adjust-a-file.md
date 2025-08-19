@@ -339,7 +339,7 @@ All file adjustments are applied in-memory to the source file instance.
 If loaded from disk, the original file is not modified.
 {% endhint %}
 
-### Fixing PDF Headers
+### Fix PDF Headers
 
 In some cases, PDFs will have corrupt or invalid headers.\
 These files will return a 4xx HTTP error as the server will be unable to process them.
@@ -374,7 +374,7 @@ local_input = PathInputSource.new('path/to/the/file.ext', repair_pdf:true)
 {% endtab %}
 {% endtabs %}
 
-### File Compression
+### Compress Files
 
 There is no need to send excessively large files to the Mindee API.
 
@@ -502,7 +502,7 @@ inputSource.Compress(
 {% endtab %}
 {% endtabs %}
 
-### PDF Page Manipulations
+### Manipulate PDF Pages
 
 In some cases, PDFs will have some superfluous pages present.
 

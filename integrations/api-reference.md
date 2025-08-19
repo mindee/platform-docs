@@ -11,7 +11,7 @@ icon: code
 {% endhint %}
 
 {% hint style="info" %}
-Take a look at the [api-overview](api-overview/ "mention") if you are setting up your integration for the first time.
+Take a look at the [api-overview.md](api-overview.md "mention") if you are setting up your integration for the first time.
 {% endhint %}
 
 {% hint style="info" %}

@@ -5,14 +5,12 @@
 * [Mindee Documentation](README.md)
 * [Quickstart](getting-started/quickstart.md)
 * [Defining a Model](getting-started/defining-a-model.md)
-* [Test Your Model](getting-started/test-your-model.md)
 * [Integrating Mindee](getting-started/integrating-mindee.md)
 
 ## Models
 
 * [Models Overview](models/models-overview.md)
 * [Data Schema](models/data-schema.md)
-* [Extra Options](models/extra-options.md)
 * [Continuous Learning (RAG)](models/improving-accuracy.md)
 * [Automation (Confidence Score)](models/automation-confidence-score.md)
 * [Polygons (Bounding Boxes)](models/polygons-bounding-boxes.md)
@@ -22,15 +20,20 @@
 
 ## Integrations
 
-* [API Overview](integrations/api-overview/README.md)
-  * [Webhooks](integrations/api-overview/webhooks.md)
+* [API Overview](integrations/api-overview.md)
+* [API Keys](integrations/api-keys.md)
+* [Technical Guidelines](integrations/technical-guidelines.md)
 * [Technical Limits](integrations/technical-limitations.md)
-* [Client Libraries / SDK](integrations/client-libraries-sdk/README.md)
+* [Polling for Results](integrations/polling-for-results.md)
+* [Webhook Results](integrations/webhooks.md)
+* [Client Libraries / SDKs](integrations/client-libraries-sdk/README.md)
   * [Quick Start](integrations/client-libraries-sdk/quick-start.md)
   * [Configure the Client](integrations/client-libraries-sdk/configure-the-client.md)
   * [Load and Adjust a File](integrations/client-libraries-sdk/load-and-adjust-a-file.md)
   * [Send a File or URL](integrations/client-libraries-sdk/send-a-file-or-url.md)
   * [Process the Result](integrations/client-libraries-sdk/process-the-result.md)
+* [3rd Party Integrations](integrations/3rd-party-integrations/README.md)
+  * [n8n Integration](integrations/3rd-party-integrations/n8n-integration.md)
 * [Tutorials](integrations/tutorials/README.md)
   * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [API Reference](integrations/api-reference.md)

@@ -11,7 +11,7 @@ icon: wrench
 
 Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
 
-You'll also need to use one of your [#api-keys](../api-overview/#api-keys "mention") and one or several [Models](../../models/models-overview.md) configured.
+You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and one or several [Models](../../models/models-overview.md) configured.
 
 ## Overview
 
@@ -530,7 +530,7 @@ var inferenceParams = new InferenceParameters(
 
 The client library will POST the request to your Web server, as configured by your webhook endpoint.
 
-For more information on webhooks, take a look at the [webhooks.md](../api-overview/webhooks.md "mention") page.
+For more information on webhooks, take a look at the [webhooks.md](../webhooks.md "mention") page.
 
 When using a webhook, you'll need to set the model ID and the webhook ID(s) to use.
 
