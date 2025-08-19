@@ -15,6 +15,7 @@
 * [Extra Options](models/extra-options.md)
 * [Continuous Learning (RAG)](models/improving-accuracy.md)
 * [Automation (Confidence Score)](models/automation-confidence-score.md)
+* [Polygons (Bounding Boxes)](models/polygons-bounding-boxes.md)
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
 * [Tutorials](models/tutorials.md)
@@ -37,6 +38,7 @@
 ## Account Management
 
 * [Plans](account-management/plans.md)
+* [Support Levels](account-management/support-levels.md)
 * [Organizations](account-management/organizations.md)
 * [Billing](account-management/billing.md)
 

@@ -24,6 +24,10 @@ To make the RAG system effective, there are 3 main steps to have in mind.&#x20;
 
 ## How do I set up RAG with Mindee?&#x20;
 
+{% hint style="info" %}
+**RAG** is only available to users with an active **Pro** or **Business** subscription.
+{% endhint %}
+
 To use RAG on a given Extraction Model, you should click on the RAG tab. \
 \
 This tab allows you to enrich your RAG Database by uploading a document with an unsatisfying behavior.&#x20;

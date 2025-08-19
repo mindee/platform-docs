@@ -56,7 +56,9 @@ Choose any payment method supported by Stripe.
 
 ## Page Usage & Overages
 
-Each plan includes a monthly or a yearly quota depending on your subscription frequency. If you exceed it, additional pages are charged automatically:
+Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.&#x20;
+
+If you exceed it, additional pages are charged automatically on your payment method:
 
 | Plan     | Included Pages | Overage Rate  |
 | -------- | -------------- | ------------- |
