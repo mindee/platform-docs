@@ -65,7 +65,7 @@ When the **Automation** feature is not activated, the `confidence` key in the JS
 3.  Go to the live test and drop a document for testing it.\
 
 
-    <figure><img src="../.gitbook/assets/libe_test_json.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/live-test-json.png" alt=""><figcaption></figcaption></figure>
 4. In the JSON response, you can now see that the `confidence` key is set to `"High"`, `"Medium"`, or `"Low"`. Another level of confidence `"Certain"` will be released soon.&#x20;
 
 ## Towards 100% automation
