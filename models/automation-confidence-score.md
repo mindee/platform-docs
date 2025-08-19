@@ -60,12 +60,12 @@ When the **Automation** feature is not activated, the `confidence` key in the JS
 
 1.  Once [connected to the platform](https://app.mindee.com), open one of your models, navigate to the **Data Schema** section, and click on the **Options** tab.
 
-    <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 2. Here you can **switch on the toggle** "Include Confidence Score for automation".&#x20;
 3.  Go to the live test and drop a document for testing it.\
 
 
-    <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/libe_test_json.png" alt=""><figcaption></figcaption></figure>
 4. In the JSON response, you can now see that the `confidence` key is set to `"High"`, `"Medium"`, or `"Low"`. Another level of confidence `"Certain"` will be released soon.&#x20;
 
 ## Towards 100% automation
