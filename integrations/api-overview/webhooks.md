@@ -1,4 +1,5 @@
 ---
+description: Overview of webhook usage.
 icon: webhook
 ---
 
@@ -54,7 +55,7 @@ The endpoint's ID is a UUID v4, and can be obtained by clicking on the "Copy ID"
 
 Each endpoint in the given list will be sent the inference results.
 
-If you're using one of our official client libraries (highly recommended), instructions for your language of choice are detailed in the [send-a-file-or-url.md](../client-libraries-sdk/send-a-file-or-url.md "mention") section.
+If you're using one of our official client libraries (highly recommended), instructions for your language of choice are detailed in the [#send-with-webhook](../client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section.
 
 Otherwise take a look at the [#post-v2-inferences-enqueue](../api-reference.md#post-v2-inferences-enqueue "mention") specification.
 
