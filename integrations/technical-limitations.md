@@ -1,5 +1,4 @@
 ---
-description: Limits and guidelines for using the Mindee API.
 icon: hand
 ---
 
@@ -80,13 +79,11 @@ For information about the pricing model of Mindee, please refer yourself to the 
 **General tip:** You may space your API requests so that you don't go over the limit.
 {% endhint %}
 
-### Data model
+### Data Schema
 
-For your data model, the maximum number of properties is 50. If you think you need more, please get in touch with the [support team](mailto:contact@mindee.com), so they can further discuss the situation with you.
+For your data schema, the recommended maximum number of properties is 25. Beyond this limit, performances will be drastically reduced.
 
-### Payload
-
-Payload in Mindee refers to the data that you send to the server when you make an API request.
+Payload in Mindee refers to the data that you send to the server when you make an API request .
 
 
 
