@@ -27,7 +27,7 @@ params = Mindee::Input::InferenceParameters.new(
 # Load a file from disk
 input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 
-# Send for processing
+# Send for processing using polling
 response = mindee_client.enqueue_and_get_inference(
     input_source,
     params # Note: this parameter can also be provided as a Hash.

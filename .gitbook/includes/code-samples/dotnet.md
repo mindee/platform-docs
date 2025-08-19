@@ -27,7 +27,7 @@ var inferenceParams = new InferenceParameters(
 // Load a file from disk
 var inputSource = new LocalInputSource(filePath);
 
-// Send for processing
+// Send for processing using polling
 var response = await mindeeClient.EnqueueAndGetInferenceAsync(
     inputSource, inferenceParams);
 

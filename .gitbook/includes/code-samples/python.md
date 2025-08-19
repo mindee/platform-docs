@@ -27,7 +27,7 @@ params = InferenceParameters(
 # Load a file from disk
 input_source = mindee_client.source_from_path(input_path)
 
-# Send for processing
+# Send for processing using polling
 response = mindee_client.enqueue_and_get_inference(
     input_source, params
 )

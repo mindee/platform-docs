@@ -28,6 +28,6 @@ The **Live Test** page lets you **interactively test your model** on real docume
 
     <figure><img src="../.gitbook/assets/live_test_done.png" alt=""><figcaption></figcaption></figure>
 4. Each field is:
-   * **highlighted on the document** with color-coded overlays, showcasing the polygon features that can be enabled in the data schema option
-   * listed in the right panel with values, field names, and optionally confidence scores if the automation feature is enabled
+   * **highlighted on the document** with color-coded overlays, showcasing the polygon features that can be enabled in the data schema option.
+   * listed in the right panel with values, field names, and optionally confidence scores if the [automation-confidence-score.md](automation-confidence-score.md "mention") feature is enabled.
 

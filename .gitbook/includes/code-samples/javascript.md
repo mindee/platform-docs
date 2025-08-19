@@ -28,7 +28,7 @@ const inferenceParams = {
 // Load a file from disk
 const inputSource = new mindee.PathInput({ inputPath: filePath });
 
-// Send for processing
+// Send for processing using polling
 const response = mindeeClient.enqueueAndGetInference(
   inputSource,
   inferenceParams

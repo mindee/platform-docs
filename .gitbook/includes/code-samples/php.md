@@ -32,7 +32,7 @@ $inferenceParams = new InferenceParameters(
 // Load a file from disk
 $inputSource = new PathInput($filePath);
 
-// Send for processing
+// Send for processing using polling
 $response = $mindeeClient->enqueueAndGetInference(
     $inputSource,
     $inferenceParams
