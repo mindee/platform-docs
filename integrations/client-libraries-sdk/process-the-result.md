@@ -34,6 +34,10 @@ Regardless of how you access the JSON payload sent by the Mindee servers, loadin
 
 Once it is loaded you can access the data in exactly the same way as a polling response.
 
+To verify the HMAC signature, you'll need the Signing Secret from the webhook:
+
+<figure><img src="../../.gitbook/assets/webhook-copy-secret.png" alt=""><figcaption></figcaption></figure>
+
 {% tabs %}
 {% tab title="Python" %}
 Assuming you're able to get the raw HTTP request via the variable `request` .

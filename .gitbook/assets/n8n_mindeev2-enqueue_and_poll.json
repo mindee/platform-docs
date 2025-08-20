@@ -1,0 +1,530 @@
+{
+  "name": "Mindee V2 Enqueue and Get Inference Public",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api-v2.mindee.net/v2/inferences/enqueue",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "model_id",
+              "value": "=<MODEL_ID>"
+            },
+            {
+              "name": "rag",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 5000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -384,
+        -240
+      ],
+      "id": "d79f4631-e934-4b41-ab77-54c8df37e49b",
+      "name": "Mindee V2 POST",
+      "alwaysOutputData": false,
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "6sGxhlBxPPujyI2G",
+          "name": "Custom Auth account"
+        },
+        "httpHeaderAuth": {
+          "id": "AVHtYdmNcficcUYy",
+          "name": "Mindee V2"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.error.status }}",
+                    "rightValue": 302,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    },
+                    "id": "bb9be41d-c737-4452-8cc4-e23591f4c2ec"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3c5993f0-0560-48f7-84dd-51f71a9f261e",
+                    "leftValue": "={{ $json.error.status }}",
+                    "rightValue": 302,
+                    "operator": {
+                      "type": "number",
+                      "operation": "gt"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "8ceb4d56-9a2c-46f3-a3e2-c7b5aaece32c",
+                    "leftValue": "={{ $json.job.status }}",
+                    "rightValue": "={{ \"Processing\" || \"Waiting\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "27e4f799-1b07-48ff-ba13-b94038a3d4db",
+                    "leftValue": "={{ $json.job.status }}",
+                    "rightValue": "Failed",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -96,
+        304
+      ],
+      "id": "99b1d4b4-3ae4-490e-8176-fa39324c2b47",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "errorMessage": "Mindee failed to process the enqueued document."
+      },
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        304,
+        592
+      ],
+      "id": "25cc19bf-5c22-4598-b9ea-224c8e616a49",
+      "name": "Processing Failed"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -336,
+        48
+      ],
+      "id": "3a98032c-1f62-4845-8905-4dda148ea8cc",
+      "name": "Initial delay",
+      "webhookId": "137de646-7521-42bf-944d-876d063912b0"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d44fc0a2-a92f-4561-af8c-bb6721e75e0c",
+              "leftValue": "={{ $json.job.error }}",
+              "rightValue": "200",
+              "operator": {
+                "type": "object",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -112,
+        -224
+      ],
+      "id": "ae8c39a3-0185-46f4-9e07-73d3935062c6",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "errorMessage": "Failed enqueueing to Mindee API."
+      },
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        288,
+        -112
+      ],
+      "id": "8e7d31e1-8531-4cff-9cee-992a89e4e9fd",
+      "name": "HTTP POST Error"
+    },
+    {
+      "parameters": {
+        "errorMessage": "Mindee failed to retrieve document."
+      },
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        304,
+        448
+      ],
+      "id": "5de50659-4f91-493d-9a7c-90bafed3c920",
+      "name": "HTTP GET Error"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -544,
+        336
+      ],
+      "id": "48e32d71-197a-45a6-b88b-fce921527d40",
+      "name": "Polling delay",
+      "webhookId": "36c0e5db-1a88-4a26-9cca-a59767e0d9ad"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Mindee V2 POST').item.json.job.polling_url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "redirect": {
+            "redirect": {
+              "maxRedirects": 1
+            }
+          },
+          "timeout": 5000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        304,
+        288
+      ],
+      "id": "f5b95c78-c8b7-407e-87d6-f11f6b4def58",
+      "name": "Mindee V2 GET Inference",
+      "alwaysOutputData": false,
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "6sGxhlBxPPujyI2G",
+          "name": "Custom Auth account"
+        },
+        "httpHeaderAuth": {
+          "id": "AVHtYdmNcficcUYy",
+          "name": "Mindee V2"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Mindee V2 POST').item.json.job.polling_url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          },
+          "timeout": 5000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -304,
+        336
+      ],
+      "id": "efb2299a-c121-4b8f-8ef9-13dfbb6789de",
+      "name": "Mindee V2 GET Job",
+      "alwaysOutputData": false,
+      "credentials": {
+        "httpCustomAuth": {
+          "id": "6sGxhlBxPPujyI2G",
+          "name": "Custom Auth account"
+        },
+        "httpHeaderAuth": {
+          "id": "AVHtYdmNcficcUYy",
+          "name": "Mindee V2"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c928a691-4ac1-482d-b801-bc29dbaa5b3d",
+              "name": "inference",
+              "value": "={{ $json.inference }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        672,
+        288
+      ],
+      "id": "d99753b5-7d1f-46a0-b85b-704094c1fb05",
+      "name": "Result"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -864,
+        -240
+      ],
+      "id": "772df0a7-420e-4096-b744-2bd80c227fb4",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/mindee/client-lib-test-data/main/v2/products/financial_document/default_sample.jpg",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -624,
+        -240
+      ],
+      "id": "0f1f8ada-6692-421c-8fe7-74b24236d670",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Mindee V2 POST": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP POST Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Mindee V2 GET Inference",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP GET Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Polling delay",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Processing Failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Initial delay": {
+      "main": [
+        [
+          {
+            "node": "Mindee V2 GET Job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Initial delay",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP POST Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Polling delay": {
+      "main": [
+        [
+          {
+            "node": "Mindee V2 GET Job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mindee V2 GET Inference": {
+      "main": [
+        [
+          {
+            "node": "Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mindee V2 GET Job": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Mindee V2 POST",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a619e036-7f58-43e3-813f-26d7b72e5ef0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "950d19cccae3a4ec9ff003ce92db1ace53e0617f4a73d9418a3279696bb5fd7a"
+  },
+  "id": "Ag7p9LdBIOYlDDgf",
+  "tags": []
+}

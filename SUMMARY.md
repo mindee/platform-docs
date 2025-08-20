@@ -33,7 +33,7 @@
   * [Send a File or URL](integrations/client-libraries-sdk/send-a-file-or-url.md)
   * [Process the Result](integrations/client-libraries-sdk/process-the-result.md)
 * [No-Code Integrations](integrations/no-code-integrations/README.md)
-  * [n8n Integration](integrations/no-code-integrations/n8n-integration.md)
+  * [n8n Workflows](integrations/no-code-integrations/n8n-workflows.md)
 * [Tutorials](integrations/tutorials/README.md)
   * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [API Reference](integrations/api-reference.md)
