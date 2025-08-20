@@ -1,5 +1,5 @@
 ---
-description: Overview of webhook usage.
+description: Overview of using webhooks for receiving results.
 icon: webhook
 ---
 
@@ -30,8 +30,8 @@ The URL must be public-facing and secured (TLS).
 
 ```mermaid
 sequenceDiagram
-    participant clientsrv as Web Server
-    participant client as Client
+    participant clientsrv as My Web Server
+    participant client as My Client
     participant enqueue as inference/enqueue
     participant srv as Mindee Server
     client->>enqueue: POST file
@@ -56,7 +56,11 @@ In the Mindee platform, navigate to your model by clicking on it from the "My Mo
 
 Once in the model page, there will be a "<i class="fa-webhook">:webhook:</i> Webhooks" link in the left-hand menu, click it.
 
-In the Webhooks page, there will be a "Add Webhook" button, clicking it opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server:
+In the Webhooks page, there will be a "Add Webhook" button, click it:
+
+<figure><img src="../.gitbook/assets/Screenshot_20250820_115103.png" alt=""><figcaption></figcaption></figure>
+
+This then opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server:
 
 * Choose any name that makes sense to you.
 * The URL must be secured using TLS (HTTPS) and must be publicly accessible.
@@ -67,6 +71,10 @@ This is useful for example if you want to send to various different environments
 Once you've entered in the required information, the endpoint will be present in the list of Webhook Endpoints.
 
 There is a "Copy ID" button which will allow you to actually use the webhook in your API calls.
+
+You can also use the "Signing Secret" to validate payloads using HMAC:
+
+<figure><img src="../.gitbook/assets/webhook-copy-secret.png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting an Endpoint
 
