@@ -11,11 +11,11 @@ Support options range from community-driven help to real-time chat with priority
 
 ## Support Overview <a href="#support-overview" id="support-overview"></a>
 
-| Support               |                                            Starter                                           |                                              Pro                                             |                                           Business                                           |
-| --------------------- | :------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
-| **Community Support** | <p>✅ </p><p>Available via <a href="https://feedback.mindee.com/">feedback.mindee.com</a></p> | <p>✅ </p><p>Available via <a href="https://feedback.mindee.com/">feedback.mindee.com</a></p> | <p>✅ </p><p>Available via <a href="https://feedback.mindee.com/">feedback.mindee.com</a></p> |
-| **Live Chat Support** |                                 <p>❌ </p><p>Not included</p>                                 |                              <p>✅ </p><p>Dedicated live chat</p>                             |                              <p>✅ </p><p>Dedicated live chat</p>                             |
-| **Priority Support**  |                                 <p>❌ </p><p>Not included</p>                                 |                                 <p>❌ </p><p>Not included</p>                                 |                           <p>✅ </p><p>Priority handling in chat</p>                          |
+| Support                                                                       | Starter |                 Pro                 |                  Business                 |
+| ----------------------------------------------------------------------------- | :-----: | :---------------------------------: | :---------------------------------------: |
+| **Community Support** via [feedback.mindee.com](https://feedback.mindee.com/) |    ✅    |                  ✅                  |                     ✅                     |
+| **Live Chat Support**                                                         |    ❌    | <p>✅ </p><p>Dedicated live chat</p> |    <p>✅ </p><p>Dedicated live chat</p>    |
+| **Priority Support**                                                          |    ❌    |                  ❌                  | <p>✅ </p><p>Priority handling in chat</p> |
 
 ***
 
