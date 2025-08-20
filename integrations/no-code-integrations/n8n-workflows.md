@@ -81,5 +81,9 @@ Simply click the "Execute workflow" button and follow along as the various nodes
 
 In this way make sure the workflow is able to arrive at the "Result" step. The actual contents of the result don't matter, since the sample file is there only for testing the API connection. The sample file is not meant for testing your model.
 
-Once you're able to get a result, change the "HTTP Request" node to something actually useful to you.\
-For example you can use an FTP connector to process files on an FTP server.
+Once you're able to get a result, change the "HTTP Request" node to something actually useful to you.
+
+Some examples:
+
+* use an IMAP trigger to process email attachments
+* use an FTP trigger to process files on an FTP server
