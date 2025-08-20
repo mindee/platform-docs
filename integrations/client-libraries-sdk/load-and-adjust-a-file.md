@@ -366,10 +366,10 @@ $inputSource->fixPDF();
 {% endtab %}
 
 {% tab title="Ruby" %}
-Simply set the `repair_pdf` flag on any input source object (except UrlInputSource).
+Using the `input_source` instance created above.
 
 ```ruby
-local_input = PathInputSource.new('path/to/the/file.ext', repair_pdf:true)
+input_source.fix_pdf!
 ```
 {% endtab %}
 {% endtabs %}

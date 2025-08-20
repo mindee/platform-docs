@@ -20,7 +20,7 @@ You can also import into an existing workflow, the new nodes will simply be adde
 
 ### Import the Sample Workflow
 
-First step is to download our sample workflow file:
+First step is to download our sample workflow file below:
 
 {% file src="../../.gitbook/assets/n8n_mindeev2-enqueue_and_poll.json" %}
 
