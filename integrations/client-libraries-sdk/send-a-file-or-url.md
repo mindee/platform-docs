@@ -264,7 +264,9 @@ Make sure your webhook is configured as detailed here: [#webhook-configuration](
 * a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindee_client` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+
+The `inference_params` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the `enqueue_inference` method:
 
@@ -293,7 +295,9 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 * a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+
+The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the `enqueueInference` method:
 
@@ -326,7 +330,9 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 * a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-The `$mindeeClient` and `$inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `$mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+
+The `$inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the  `enqueueInference` method:
 
@@ -356,7 +362,9 @@ You'll get the response via polling and webhooks will be used as well.
 * a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindee_client` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+
+The `inference_params` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the `enqueue_inference` method:
 
@@ -385,7 +393,9 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 * a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+
+The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use the `enqueueInference` method:
 
@@ -414,7 +424,9 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 * a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
 
-The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+
+The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 Use `EnqueueInferenceAsync` method:
 
