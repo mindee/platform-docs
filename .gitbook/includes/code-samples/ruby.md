@@ -17,7 +17,7 @@ model_id = 'MY_MODEL_ID'
 mindee_client = Mindee::ClientV2.new(api_key: api_key)
 
 # Set inference parameters
-params = Mindee::Input::InferenceParameters.new(
+inference_params = Mindee::Input::InferenceParameters.new(
     # ID of the model, required.
     model_id,
     # If set to `true`, will enable Retrieval-Augmented Generation.
@@ -30,7 +30,7 @@ input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 # Send for processing using polling
 response = mindee_client.enqueue_and_get_inference(
     input_source,
-    params # Note: this parameter can also be provided as a Hash.
+    inference_params # Note: this parameter can also be provided as a Hash.
 )
 
 # Print a brief summary of the parsed data

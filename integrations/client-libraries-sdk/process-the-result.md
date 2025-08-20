@@ -180,7 +180,7 @@ FieldConfidence? confidence = fields["my_simple_field"].SimpleField.Confidence;
 
 A list of the field's locations on the document.
 
-Only filled if the polygons feature is activated.
+The data are only filled if the [polygons-bounding-boxes.md](../../models/polygons-bounding-boxes.md "mention") feature is activated.
 
 It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
 

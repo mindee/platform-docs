@@ -80,11 +80,11 @@ You'll want to adapt your processing depending on the [type of field](../models/
 {% include "../.gitbook/includes/code-samples/process-ruby.md" %}
 {% endtab %}
 
-{% tab title=".NET" %}
-{% include "../.gitbook/includes/code-samples/process-dotnet.md" %}
-{% endtab %}
-
 {% tab title="Java" %}
 {% include "../.gitbook/includes/code-samples/process-java.md" %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% include "../.gitbook/includes/code-samples/process-dotnet.md" %}
 {% endtab %}
 {% endtabs %}

@@ -34,12 +34,12 @@ Here are basic code examples, these are self-contained and can be run as-is:
 {% include "../../.gitbook/includes/code-samples/ruby.md" %}
 {% endtab %}
 
-{% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/dotnet.md" %}
-{% endtab %}
-
 {% tab title="Java" %}
 {% include "../../.gitbook/includes/code-samples/java.md" %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% include "../../.gitbook/includes/code-samples/dotnet.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -78,12 +78,12 @@ You'll want to adapt your processing depending on the [type of field](../../mode
 {% include "../../.gitbook/includes/code-samples/process-ruby.md" %}
 {% endtab %}
 
-{% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/process-dotnet.md" %}
-{% endtab %}
-
 {% tab title="Java" %}
 {% include "../../.gitbook/includes/code-samples/process-java.md" %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% include "../../.gitbook/includes/code-samples/process-dotnet.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -91,4 +91,4 @@ You'll want to adapt your processing depending on the [type of field](../../mode
 
 For details on available options and advanced usage, check the following sections:
 
-* [#processing-the-results](quick-start.md#processing-the-results "mention")
+* [process-the-result.md](process-the-result.md "mention")
