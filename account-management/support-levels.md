@@ -11,11 +11,11 @@ Support options range from community-driven help to real-time chat with priority
 
 ## Support Overview <a href="#support-overview" id="support-overview"></a>
 
-| Plan         |                                       Community Support                                      |          Live Chat Support          |              Priority Support             | SLA / Response Time |
-| ------------ | :------------------------------------------------------------------------------------------: | :---------------------------------: | :---------------------------------------: | :-----------------: |
-| **Starter**  | <p>✅ </p><p>Available via <a href="https://feedback.mindee.com/">feedback.mindee.com</a></p> |     <p>❌ </p><p>Not included</p>    |        <p>❌ </p><p>Not included</p>       |   Community-based   |
-| **Pro**      |                                   <p>✅ </p><p>Community</p>                                  | <p>✅ </p><p>Dedicated live chat</p> |        <p>❌ </p><p>Not included</p>       |   Within XX hours   |
-| **Business** |                                   <p>✅ </p><p>Community</p>                                  | <p>✅ </p><p>Dedicated live chat</p> | <p>✅ </p><p>Priority handling in chat</p> |   Within XX hours   |
+| Support               |                                            Starter                                           |                 Pro                 |                  Business                 |
+| --------------------- | :------------------------------------------------------------------------------------------: | :---------------------------------: | :---------------------------------------: |
+| **Community Support** | <p>✅ </p><p>Available via <a href="https://feedback.mindee.com/">feedback.mindee.com</a></p> |      <p>✅ </p><p>Community</p>      |         <p>✅ </p><p>Community</p>         |
+| **Live Chat Support** |                                 <p>❌ </p><p>Not included</p>                                 | <p>✅ </p><p>Dedicated live chat</p> |    <p>✅ </p><p>Dedicated live chat</p>    |
+| **Priority Support**  |                                 <p>❌ </p><p>Not included</p>                                 |     <p>❌ </p><p>Not included</p>    | <p>✅ </p><p>Priority handling in chat</p> |
 
 ***
 
