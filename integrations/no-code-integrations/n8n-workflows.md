@@ -86,4 +86,4 @@ Once you're able to get a result, change the "HTTP Request" node to something ac
 Some examples:
 
 * use an IMAP trigger to process email attachments
-* use an FTP trigger to process files on an FTP server
+* use a FTP trigger to process files on a FTP server
