@@ -19,6 +19,7 @@ Currently we have official support for the following platforms:
 
 * n8n: [basic support for workflows](n8n-workflows.md)
 * Zapier: planned, coming soon
+* make: planned, coming soon
 
 Don't see support for your favorite platform? [Make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
 
@@ -39,5 +40,5 @@ Alternatively, loop on the `polling_url` until it redirects to the result.
 
 **Important**: in all cases, wait at least 1 second between each poll.
 
-The result URL will contain the result payload.
+A GET request to the `result_url` will contain the result payload.
 
