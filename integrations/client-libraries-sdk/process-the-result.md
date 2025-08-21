@@ -129,7 +129,39 @@ InferenceResponse response = localResponse.deserializeResponse(
 );
 
 // Print a summary of the parsed data
-System.out.println(response.getDocument().toString());
+System.out.println(response.getInference().toString());
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Assuming you're able to get the raw HTTP request via the variable `request` .
+
+```csharp
+using Mindee.Parsing.V2;
+
+public void HandleMindeeResponse(HttpRequest request)
+{
+    LocalResponse localResponse;
+
+    using (var reader = new StreamReader(request.Body))
+    {
+        localResponse = new LocalResponse(reader.ReadToEnd());
+    }
+    
+    // Verify the HMAC signature.
+    // You'll need to get the "X-Signature" custom HTTP header.
+    string hmacSignature = request.Headers.get("X-Signature");
+    bool isValid = localResponse.IsValidHmacSignature(
+         "obviously-fake-secret-key", hmacSignature);
+    if (!isValid)
+        throw new Exception("Bad HMAC signature! Is someone trying to do evil?");
+
+    // Deserialize the response into objects
+    var response = localResponse.DeserializeResponse<InferenceResponse>();
+    
+    // Print a summary of the parsed data
+    System.Console.WriteLine(response.Inference);
+}
 ```
 {% endtab %}
 {% endtabs %}
