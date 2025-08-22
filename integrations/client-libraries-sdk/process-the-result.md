@@ -264,6 +264,7 @@ Using the `response` deserialized object from either the polling response or a w
 import com.mindee.parsing.v2.field.FieldConfidence;
 import com.mindee.parsing.v2.field.InferenceFields;
 
+
 InferenceFields fields = inference.getResult().getFields();
 
 FieldConfidence confidence = fields.get("my_simple_field").getSimpleField()
@@ -302,6 +303,32 @@ It's possible for a single field to have multiple locations, for example when an
 Each location has a page index and a polygon.
 
 {% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.geometry.Point;
+import com.mindee.geometry.Polygon;
+import com.mindee.parsing.v2.field.FieldLocation;
+import java.util.List;
+
+
+InferenceFields fields = inference.getResult().getFields();
+
+List<FieldLocation> locations = fields.get("my_simple_field").getSimpleField()
+    .getLocations();
+
+// accessing the polygon
+Polygon polygon = Polygon polygon = locations.get(0).getPolygon();
+
+// there are geometry functions available in the Polygon class
+Point center = polygon.getCentroid();
+
+// accessing the page index on which the polygon is
+int pageIndex = locations.get(0).getPage();
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
