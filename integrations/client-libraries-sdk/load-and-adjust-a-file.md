@@ -232,7 +232,7 @@ It must be opened in binary mode.
 
 ```ruby
 file = File.open("/path/to/the/file.ext", 'rb')
-input_source = Mindee::Input::Source::FileInputSource(file, 'file.ext')
+input_source = Mindee::Input::Source::FileInputSource.new(file, 'file.ext')
 ```
 {% endtab %}
 

@@ -192,7 +192,7 @@ The attributes are always present even when not activated.
 
 The confidence level of the extracted value.
 
-The data are only filled if the automation the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") feature is activated.
+The data are only filled if the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") feature is activated.
 
 The attribute is always present, in case of Confidence Score not activated, it will always be null.
 
@@ -205,12 +205,14 @@ All languages use the appropriate enum type.
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
+from mindee.parsing.v2.field import FieldConfidence
+
 fields = response.inference.result.fields
 
 confidence = fields["my_simple_field"].confidence
 
 # compare using the enum `FieldConfidence`
-is_certain_enum = confidence == FieldConfidence.CERTAIN
+is_certain = confidence == FieldConfidence.CERTAIN
 ```
 {% endtab %}
 
@@ -223,7 +225,7 @@ fields = response.inference.result.fields;
 const confidence = fields.get("my_simple_field")?.confidence
 
 // compare using the enum `FieldConfidence`
-const isCertainEnum = confidence === FieldConfidence.Certain;
+const isCertain = confidence === FieldConfidence.Certain;
 ```
 {% endtab %}
 
@@ -239,6 +241,19 @@ $confidence = $fields->get('my_simple_field')->confidence;
 
 // compare using the enum `FieldConfidence`
 $isCertain = $confidence === FieldConfidence::CERTAIN;
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```ruby
+fields = response.inference.result.fields
+
+confidence = fields["my_simple_field"].confidence
+
+# compare using the enum `FieldConfidence`
+is_certain = confidence == Mindee::Parsing::V2::Field::FieldConfidence.CERTAIN
 ```
 {% endtab %}
 

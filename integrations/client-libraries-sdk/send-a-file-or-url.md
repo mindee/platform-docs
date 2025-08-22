@@ -84,7 +84,9 @@ $inputSource = new URLInputSource(
 
 {% tab title="Ruby" %}
 ```ruby
-input_source = Mindee::Input::Source::URLInputSource.new(
+include Mindee::Input::Source::URLInputSource
+
+input_source = URLInputSource.new(
   "https://example.com/file.ext"
 )
 ```
