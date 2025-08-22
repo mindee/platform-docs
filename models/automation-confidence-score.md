@@ -54,13 +54,21 @@ This color-coding system allows product teams to **highlight uncertainty directl
 **Automation** is only available to users with an active **Business** subscription.
 {% endhint %}
 
-{% hint style="warning" %}
-When the **Automation** feature is not activated, the `confidence` key in the JSON response will always be set to `null`.
-{% endhint %}
-
 {% @supademo/embed demoId="cmeie3irw9fe7h3pytuktflxs" url="https://app.supademo.com/demo/cmeie3irw9fe7h3pytuktflxs" %}
 
-## Towards 100% automation
+## Using Automation
+
+{% hint style="info" %}
+When the **Automation** feature is not activated, the `confidence` attribute in the response will always be `null`.
+{% endhint %}
+
+We have full support for handling the confidence score in our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
+
+Specific instructions can be found in the [#confidence](../integrations/client-libraries-sdk/process-the-result.md#confidence "mention") section.
+
+If you're not using our client libraries, check out the [#get-v2-inferences-inference\_id](../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
+
+## Towards 100% Automation
 
 By combining confidence-based automation with Mindee’s **RAG-powered continuous learning loop**, you can drive your workflows toward **near 100% automation**.&#x20;
 
@@ -68,7 +76,7 @@ Low-confidence extractions are not only flagged for human validation, but also u
 
 This creates a virtuous cycle where every uncertain case contributes to future accuracy improvements, progressively reducing manual intervention and expanding the scope of trusted predictions.
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 ### How is the confidence score computed?
 

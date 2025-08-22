@@ -257,6 +257,23 @@ is_certain = confidence == Mindee::Parsing::V2::Field::FieldConfidence.CERTAIN
 ```
 {% endtab %}
 
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.FieldConfidence;
+import com.mindee.parsing.v2.field.InferenceFields;
+
+InferenceFields fields = inference.getResult().getFields();
+
+FieldConfidence confidence = fields.get("my_simple_field").getSimpleField()
+    .getConfidence();
+
+// compare using the enum `FieldConfidence`
+boolean isCertain = confidence == FieldConfidence.Certain;
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
