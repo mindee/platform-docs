@@ -69,22 +69,24 @@ response = local_response.deserialize_response(InferenceResponse)
 Assuming you're able to get the raw HTTP request via the variable `request` .
 
 ```typescript
-function handleMindeeResponse(data, hmacSignature) {
+async handleMindeeResponse(data, hmacSignature) {
   const localResponse = new mindee.LocalResponse(data);
+  await localResponse.init();
+
   const isValid = localResponse.isValidHmacSignature(
       "obviously-fake-secret-key", hmacSignature
     );
   if (!isValid) {
     throw Error("Bad HMAC signature! Is someone trying to do evil?");
   }
-  const response = localResponse.deserializeResponse(
+  const response = await localResponse.deserializeResponse(
     mindee.InferenceResponse
   );
 }
 
 // Getting the data could look something like this.
 // Will vary depending on your implementation.
-function handleMindeePost(request, response) {
+async handleMindeePost(request, response) {
   let body = "";
   request.on("data", function (data) {
     body += data;
@@ -94,7 +96,7 @@ function handleMindeePost(request, response) {
     // You'll need to get the "X-Signature" custom HTTP header.
     const hmacSignature = request.headers.get("X-Signature");
     
-    handleMindeeResponse(data, hmacSignature);
+    await handleMindeeResponse(data, hmacSignature);
   });
 }
 ```
@@ -190,10 +192,56 @@ The attributes are always present even when not activated.
 
 The confidence level of the extracted value.
 
-Only filled if the automation feature is activated.\
-See the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") section for more details.
+The data are only filled if the automation the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") feature is activated.
+
+The attribute is always present, in case of Confidence Score not activated, it will always be null.
+
+The attribute value will be one of: `Certain`, `High`, `Medium`, `Low` .
+
+All languages use the appropriate enum type.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```python
+fields = response.inference.result.fields
+
+confidence = fields["my_simple_field"].confidence
+
+# compare using the enum `FieldConfidence`
+is_certain_enum = confidence == FieldConfidence.CERTAIN
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+fields = response.inference.result.fields;
+
+const confidence = fields.get("my_simple_field")?.confidence
+
+// compare using the enum `FieldConfidence`
+const isCertainEnum = confidence === FieldConfidence.Certain;
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\Field\FieldConfidence;
+
+$fields = $response->inference->result->fields;
+
+$confidence = $fields->get('my_simple_field')->confidence;
+
+// compare using the enum `FieldConfidence`
+$isCertain = $confidence === FieldConfidence::CERTAIN;
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -204,6 +252,9 @@ InferenceFields fields = response.Inference.Result.Fields;
 
 // nullable enum since presence depends on feature activation
 FieldConfidence? confidence = fields["my_simple_field"].SimpleField.Confidence;
+
+// compare using the enum `FieldConfidence`
+bool isCertain = confidence == FieldConfidence.Certain;
 ```
 {% endtab %}
 {% endtabs %}
@@ -230,9 +281,14 @@ InferenceFields fields = response.Inference.Result.Fields;
 
 List<FieldLocation> locations = fields["my_simple_field"].SimpleField.Locations;
 
-// there are geometry functions available in the Polygon class
+// accessing the polygon
 Polygon polygon = locations.First().Polygon;
+
+// there are geometry functions available in the Polygon class
 Point center = polygon.GetCentroid();
+
+// accessing the page index on which the polygon is
+int pageIndex = locations.First().Page;
 ```
 {% endtab %}
 {% endtabs %}

@@ -41,3 +41,9 @@ You can decide on either the polling flow or the webhook flow.
 
 [webhooks.md](webhooks.md "mention") are more suited to heavy production use.
 
+## Ask for Code Samples
+
+You can ask for specific code samples from the documentation AI.
+
+Use the search bar at the top of the page.
+

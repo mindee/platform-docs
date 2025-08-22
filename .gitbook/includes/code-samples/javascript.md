@@ -3,7 +3,7 @@ title: sample-code-javascript
 ---
 
 Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/v/4.29.0-rc1) version **4.29.0-rc5** or greater.
+Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/v/4.29.0-rc1) version **4.29.0-rc6** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript

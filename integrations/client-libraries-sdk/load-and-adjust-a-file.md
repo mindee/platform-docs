@@ -580,7 +580,7 @@ const pageOptions: mindee.PageOptions = {
 };
 
 // Apply in-memory
-await inputDoc.applyPageOptions(pageOptions);
+await inputSource.applyPageOptions(pageOptions);
 ```
 
 Some other examples:
