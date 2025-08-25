@@ -313,7 +313,7 @@ Each item in the list can _theoretically_ be of any type (single, multi, list).\
 Each field in the list will be one of:
 
 * [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention")
-* [#multiple-value-field-objectfield](process-the-result.md#multiple-value-field-objectfield "mention")
+* [#nested-object-field-objectfield](process-the-result.md#nested-object-field-objectfield "mention")
 
 There will **not** be a mix of both types in the same list.
 
