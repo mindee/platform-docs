@@ -7,11 +7,11 @@ icon: passport
 
 Mindee enables automatic extraction of key identity fields from passport documents.
 
-Whether you are building a Know Your Customer (KYC) process, onboarding flow, or document verification pipeline, our AI agent help you parse structured passport data with accuracy.
+Whether you are building a Know Your Customer (KYC) process, onboarding flow, or document verification pipeline, Mindee helps you parse structured passport data with accuracy.
 
 ## Why Use Mindee for Passports?
 
-Passports vary in format depending on the country, language, and issuance authority. Our AI agent simplifies extraction by letting you:
+Passports vary in format depending on the country, language, and issuance authority. Mindee simplifies extraction by letting you:
 
 * Describe which fields matter to you
 * Upload sample documents to refine extraction
@@ -19,7 +19,7 @@ Passports vary in format depending on the country, language, and issuance author
 
 ## What Can Be Extracted from a Passport?
 
-Typical passport documents include a standard set of fields. Our AI agent can, for example, extract the following common fields for passports:
+Typical passport documents include a standard set of fields. You can, for example, extract the following common fields for passports:
 
 | Field             | Description                            |
 | ----------------- | -------------------------------------- |
@@ -52,7 +52,7 @@ Indian passports include additional region-specific fields. If you're processing
 | Address Line 1–3            | Full residential address                     |
 
 {% hint style="info" %}
-You can just upload an Indian passport and ask the agent to extract the fields present—it will learn from your input.
+You can just upload an Indian passport and ask to extract the fields present.
 {% endhint %}
 
 If you want to try and do a live test, here is a sample for Indian passport:
@@ -65,20 +65,20 @@ If you want to try and do a live test, here is a sample for Indian passport:
 
 {% @supademo/embed demoId="cmeqvjfgw3holv9kqocym86w9" url="https://app.supademo.com/demo/cmeqvjfgw3holv9kqocym86w9" %}
 
-### 1. Choose Passport from Our Catalogue (recommended)
+### 1. Choose Passport from Our Catalog (recommended)
 
 * Select "Passport" on our document models.
-* The AI agent will give you a list of fields you can choose from. Select the fields you need and create your first model.
-* Option : if you want to refine your model, go to "Data Schema" and ask the AI agent for additional fields.
+* The AI will give you a list of fields you can choose from. Select the fields you need and create your first model.
+* Option : if you want to refine your model, go to "Data Schema" and ask for additional fields.
 * Now that your model is ready, you can try a live test.
 
 ### 2. Build a Passport Model from Scratch
 
-* Ask the specifications directly to the AI agent (e.g. "_I want a model that extracts the following fields from passports: surname, date of birth and MRZ_").
+* Ask the specifications directly to the AI assistant (e.g. "_I want a model that extracts the following fields from passports: surname, date of birth and MRZ_").
 * Additionally, you can upload a sample passport if needed for clarification.
-* The agent builds a tailored parser in seconds.
+* Mindee builds you a tailored parser in seconds.
 
 ## Document Format
 
-* The AI agent supports both **single-page and multi-page PDFs/images of passports.**
-* You can add the fields of any page in the data schema as they are all supported by our AI agent.
+* We support both **single-page and multi-page PDFs/images of passports.**
+* You can add the fields of any page in the data schema as they are all supported by Mindee.
