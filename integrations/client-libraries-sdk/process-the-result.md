@@ -179,7 +179,7 @@ Accessing a field is done via its name in the Data Schema.
 Each field will be one of the following types:
 
 * A single value, `SimpleField` class.
-* Multiple values (an object), `ObjectField` class.
+* A nested object (sub-fields), `ObjectField` class.
 * A list or array of fields, `ListField` class.
 
 ## Optional Field Attributes
@@ -188,7 +188,7 @@ These field attributes are only filled when their respective features are activa
 
 The attributes are always present even when not activated.
 
-### confidence
+### `confidence`
 
 The confidence level of the extracted value.
 
@@ -261,17 +261,20 @@ is_certain = confidence == Mindee::Parsing::V2::Field::FieldConfidence.CERTAIN
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.FieldConfidence;
 import com.mindee.parsing.v2.field.InferenceFields;
 
+public void handleFieldConfidence(InferenceResponse response) {
+    InferenceFields fields = inference.getResult().getFields();
 
-InferenceFields fields = inference.getResult().getFields();
+    FieldConfidence confidence = fields.get("my_simple_field")
+        .getSimpleField() // needs adjustment depending on actual field type
+        .getConfidence();
 
-FieldConfidence confidence = fields.get("my_simple_field").getSimpleField()
-    .getConfidence();
-
-// compare using the enum `FieldConfidence`
-boolean isCertain = confidence == FieldConfidence.Certain;
+    // compare using the enum `FieldConfidence`
+    boolean isCertain = confidence == FieldConfidence.Certain;
+}
 ```
 {% endtab %}
 
@@ -292,7 +295,7 @@ bool isCertain = confidence == FieldConfidence.Certain;
 {% endtab %}
 {% endtabs %}
 
-### locations
+### `locations`
 
 A list of the field's locations on the document.
 
@@ -309,23 +312,31 @@ Using the `response` deserialized object from either the polling response or a w
 ```java
 import com.mindee.geometry.Point;
 import com.mindee.geometry.Polygon;
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.FieldLocation;
+import com.mindee.parsing.v2.field.InferenceFields;
 import java.util.List;
 
+public void handleFieldLocation(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
 
-InferenceFields fields = inference.getResult().getFields();
+    List<FieldLocation> locations = fields.get("my_simple_field")
+        .getSimpleField() // needs adjustment depending on actual field type
+        .getLocations();
 
-List<FieldLocation> locations = fields.get("my_simple_field").getSimpleField()
-    .getLocations();
+    // accessing the polygon
+    Polygon polygon = Polygon polygon = locations.get(0).getPolygon();
 
-// accessing the polygon
-Polygon polygon = Polygon polygon = locations.get(0).getPolygon();
+    // accessing coordinates
+    List<Point> coords = polygon.getCoordinates();
+    double topX = coords.get(0).getX();
 
-// there are geometry functions available in the Polygon class
-Point center = polygon.getCentroid();
+    // there are geometry functions available in the Polygon class
+    Point center = polygon.getCentroid();
 
-// accessing the page index on which the polygon is
-int pageIndex = locations.get(0).getPage();
+    // accessing the page index on which the polygon is
+    int pageIndex = locations.get(0).getPage();
+}
 ```
 {% endtab %}
 
@@ -343,6 +354,12 @@ List<FieldLocation> locations = fields["my_simple_field"].SimpleField.Locations;
 // accessing the polygon
 Polygon polygon = locations.First().Polygon;
 
+// accessing coordinates: the Polygon class extends List<Point>
+double topX = polygon[0].X;
+
+// alternative notation, since the Point class extends List<double>
+// double topX = polygon[0][0];
+
 // there are geometry functions available in the Polygon class
 Point center = polygon.GetCentroid();
 
@@ -358,7 +375,7 @@ Basic field type having the `value` attribute.
 
 In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
-### value
+### `value`
 
 The extracted data value.\
 Possible types: string, number (integer or floating-point), boolean.\
@@ -370,6 +387,52 @@ These are returned as strings.
 For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
 
 {% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.SimpleField;
+
+InferenceFields fields = response.inference.getResult().getFields();
+
+SimpleField simpleField = fields.get("my_simple_field").getSimpleField();
+```
+
+The `value` attribute is an `Object` type under the hood.
+
+You'll need to explicitly declare the type, otherwise the code will likely not compile.\
+Take a look at your Data Schema to know which type to declare.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+
+InferenceFields fields = response.inference.getResult().getFields();
+
+// texts, dates, classifications ...
+String stringFieldValue = (String) fields.get("string_field").getSimpleField()
+    .getValue();
+
+// a JSON float will be a Double
+Double floatFieldValue = (Double) fields.get("float_field").getSimpleField()
+    .getValue();
+
+// even if the API always returns an integer, the type will be Double
+Double intFieldValue = (Double) fields.get("int_field").getSimpleField()
+    .getValue();
+
+// booleans
+Boolean boolFieldValue = (Boolean) fields.get("bool_field").getSimpleField()
+    .getValue();
+```
+
+If the wrong type is declared, an exception will be raised, something like this:
+
+```
+ClassCast class java.lang.String cannot be cast to class java.lang.Double
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -379,18 +442,15 @@ using Mindee.Parsing.V2.Field;
 InferenceFields fields = response.Inference.Result.Fields;
 
 SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
-var fieldValue = mySimpleField.Value;
 ```
 
 The `Value` attribute is a `dynamic` type under the hood.
 
-You can explicitly declare the type, this is recommended for clarity.\
-You'll need to look at your Data Schema to declare the correct type.
+You should explicitly declare the type, this is recommended for clarity.\
+Take a look at your Data Schema to know which type to declare.
 
 ```csharp
 using Mindee.Parsing.V2.Field;
-
-InferenceFields fields = response.Inference.Result.Fields;
 
 // texts, dates, classifications ...
 string stringFieldValue = fields["string_field"].SimpleField.Value;
@@ -413,16 +473,26 @@ RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
 {% endtab %}
 {% endtabs %}
 
-## Multiple-Value Field - ObjectField
+## Nested Object Field - ObjectField
+
+Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.
+
+In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+
+### `fields`
 
 Each field can _theoretically_ be of any type (single, multi, list).\
 **In practice:** we limit to a single value, meaning no recursive objects nor lists.
 
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
-In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
-
 ## List of Fields - ListField
+
+Field having an `items` attribute which is a list of fields.
+
+In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
+
+### `items`
 
 Each item in the list can _theoretically_ be of any type (single, multi, list).\
 **In practice:** we limit items to be either single or multi field, meaning no lists of lists.
@@ -433,5 +503,3 @@ Each field in the list will be one of:
 * [#multiple-value-field-objectfield](process-the-result.md#multiple-value-field-objectfield "mention")
 
 There will **not** be a mix of both types in the same list.
-
-In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
