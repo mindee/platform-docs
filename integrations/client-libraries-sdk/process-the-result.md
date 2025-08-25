@@ -141,7 +141,7 @@ Assuming you're able to get the raw HTTP request via the variable `request` .
 ```csharp
 using Mindee.Parsing.V2;
 
-public void HandleMindeeResponse(HttpRequest request)
+public void HandleMindeeCallback(HttpRequest request)
 {
     LocalResponse localResponse;
 
@@ -211,9 +211,12 @@ Using the `response` deserialized object from either the polling response or a w
 ```csharp
 using Mindee.Parsing.V2.Field;
 
-InferenceFields fields = response.Inference.Result.Fields;
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
 
-SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
+    SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -280,17 +283,20 @@ Take a look at your Data Schema to know which type to declare.
 ```csharp
 using Mindee.Parsing.V2.Field;
 
-// texts, dates, classifications ...
-string stringFieldValue = fields["string_field"].SimpleField.Value;
+public void HandleResponse(InferenceResponse response)
+{
+    // texts, dates, classifications ...
+    string stringFieldValue = fields["string_field"].SimpleField.Value;
 
-// a JSON float will be a Double
-Double floatFieldValue = fields["float_field"].SimpleField.Value;
+    // a JSON float will be a Double
+    Double floatFieldValue = fields["float_field"].SimpleField.Value;
 
-// even if the API always returns an integer, the type will be Double
-Double intFieldValue = fields["int_field"].SimpleField.Value;
+    // even if the API always returns an integer, the type will be Double
+    Double intFieldValue = fields["int_field"].SimpleField.Value;
 
-// booleans
-Boolean boolFieldValue = fields["bool_field"].SimpleField.Value;
+    // booleans
+    Boolean boolFieldValue = fields["bool_field"].SimpleField.Value;
+}
 ```
 
 If the wrong type is declared, an exception will be raised, something like this:
@@ -323,6 +329,21 @@ public void handleResponse(InferenceResponse response) {
 }
 ```
 {% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
+
+    ObjectField myObjectField = fields["my_object_field"].ObjectField;
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### `fields`
@@ -331,6 +352,33 @@ Each field can _theoretically_ be of any type (single, multi, list).\
 **In practice:** we limit to a single value, meaning no recursive objects nor lists.
 
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.DynamicField;
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.ListField;
+import com.mindee.parsing.v2.field.ObjectField;
+import com.mindee.parsing.v2.field.SimpleField;
+
+public void handleResponse(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
+
+    ObjectField objectField = fields.get("my_object_field").getObjectField();
+    
+    InferenceFields subFields = objectField.getFields();
+    
+    for (Map.Entry<String, DynamicField> entry : subFields.entrySet()) {
+        String fieldName = entry.getKey();
+        SimpleField subField = entry.getValue().getSimpleField();
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ## List of Fields - ListField
 
@@ -354,6 +402,21 @@ public void handleResponse(InferenceResponse response) {
 }
 ```
 {% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
+
+    ListField myListField = fields["my_list_field"].ListField;
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### `items`
@@ -367,6 +430,31 @@ Each field in the list will be one of:
 * [#nested-object-field-objectfield](process-the-result.md#nested-object-field-objectfield "mention")
 
 There will **not** be a mix of both types in the same list.
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.DynamicField;
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.ListField;
+import com.mindee.parsing.v2.field.SimpleField;
+
+public void handleResponse(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
+
+    ListField fieldSimpleList = fields.get("my_simple_list_field").getListField();
+    
+    List<DynamicField> simpleItems = fieldSimpleList.getItems();
+    
+    for (DynamicField item : simpleItems) {
+        SimpleField itemField = item.getSimpleField();
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ## Optional Field Attributes
 
@@ -470,13 +558,17 @@ Using the `response` deserialized object from either the polling response or a w
 ```csharp
 using Mindee.Parsing.V2.Field;
 
-InferenceFields fields = response.Inference.Result.Fields;
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
 
-// nullable enum since presence depends on feature activation
-FieldConfidence? confidence = fields["my_simple_field"].SimpleField.Confidence;
+    // nullable enum since presence depends on feature activation
+    FieldConfidence? confidence = fields["my_simple_field"]
+        .SimpleField.Confidence;
 
-// compare using the enum `FieldConfidence`
-bool isCertain = confidence == FieldConfidence.Certain;
+    // compare using the enum `FieldConfidence`
+    bool isCertain = confidence == FieldConfidence.Certain;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -533,24 +625,28 @@ Using the `response` deserialized object from either the polling response or a w
 using Mindee.Parsing.V2.Field;
 using Mindee.Geometry;
 
-InferenceFields fields = response.Inference.Result.Fields;
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
 
-List<FieldLocation> locations = fields["my_simple_field"].SimpleField.Locations;
+    List<FieldLocation> locations = fields["my_simple_field"]
+        .SimpleField.Locations;
 
-// accessing the polygon
-Polygon polygon = locations.First().Polygon;
+    // accessing the polygon
+    Polygon polygon = locations.First().Polygon;
 
-// accessing coordinates: the Polygon class extends List<Point>
-double topX = polygon[0].X;
+    // accessing coordinates: the Polygon class extends List<Point>
+    double topX = polygon[0].X;
 
-// alternative notation, since the Point class extends List<double>
-// double topX = polygon[0][0];
+    // alternative notation, since the Point class extends List<double>
+    // double topX = polygon[0][0];
 
-// there are geometry functions available in the Polygon class
-Point center = polygon.GetCentroid();
+    // there are geometry functions available in the Polygon class
+    Point center = polygon.GetCentroid();
 
-// accessing the page index on which the polygon is
-int pageIndex = locations.First().Page;
+    // accessing the page index on which the polygon is
+    int pageIndex = locations.First().Page;
+}
 ```
 {% endtab %}
 {% endtabs %}
