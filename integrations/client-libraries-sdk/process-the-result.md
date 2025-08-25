@@ -184,9 +184,39 @@ Each field will be one of the following types:
 
 ## Single-Value Field - SimpleField
 
-Basic field type having the `value` attribute.
+Basic field type having the `value` attribute.\
+See the [#value](process-the-result.md#value "mention") section below.
 
 In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.SimpleField;
+
+public void handleResponse(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
+
+    SimpleField simpleField = fields.get("my_simple_field").getSimpleField();
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+InferenceFields fields = response.Inference.Result.Fields;
+
+SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
+```
+{% endtab %}
+{% endtabs %}
 
 ### `value`
 
@@ -201,17 +231,6 @@ For statically-typed languages (C#, Java), the client library will always return
 
 {% tabs %}
 {% tab title="Java" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
-```java
-import com.mindee.parsing.v2.field.InferenceFields;
-import com.mindee.parsing.v2.field.SimpleField;
-
-InferenceFields fields = response.inference.getResult().getFields();
-
-SimpleField simpleField = fields.get("my_simple_field").getSimpleField();
-```
-
 The `value` attribute is an `Object` type under the hood.
 
 You'll need to explicitly declare the type, otherwise the code will likely not compile.\
@@ -220,23 +239,29 @@ Take a look at your Data Schema to know which type to declare.
 ```java
 import com.mindee.parsing.v2.field.InferenceFields;
 
-InferenceFields fields = response.inference.getResult().getFields();
+public void handleResponse(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
 
-// texts, dates, classifications ...
-String stringFieldValue = (String) fields.get("string_field").getSimpleField()
-    .getValue();
+    // texts, dates, classifications ...
+    String stringFieldValue = (String) fields.get("string_field")
+        .getSimpleField()
+        .getValue();
 
-// a JSON float will be a Double
-Double floatFieldValue = (Double) fields.get("float_field").getSimpleField()
-    .getValue();
+    // a JSON float will be a Double
+    Double floatFieldValue = (Double) fields.get("float_field")
+        .getSimpleField()
+        .getValue();
 
-// even if the API always returns an integer, the type will be Double
-Double intFieldValue = (Double) fields.get("int_field").getSimpleField()
-    .getValue();
+    // even if the API always returns an integer, the type will be Double
+    Double intFieldValue = (Double) fields.get("int_field")
+        .getSimpleField()
+        .getValue();
 
-// booleans
-Boolean boolFieldValue = (Boolean) fields.get("bool_field").getSimpleField()
-    .getValue();
+    // booleans
+    Boolean boolFieldValue = (Boolean) fields.get("bool_field")
+        .getSimpleField()
+        .getValue();
+}
 ```
 
 If the wrong type is declared, an exception will be raised, something like this:
@@ -247,16 +272,6 @@ ClassCast class java.lang.String cannot be cast to class java.lang.Double
 {% endtab %}
 
 {% tab title=".NET" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
-```csharp
-using Mindee.Parsing.V2.Field;
-
-InferenceFields fields = response.Inference.Result.Fields;
-
-SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
-```
-
 The `Value` attribute is a `dynamic` type under the hood.
 
 You should explicitly declare the type, this is recommended for clarity.\
@@ -288,9 +303,27 @@ RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
 
 ## Nested Object Field - ObjectField
 
-Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.
+Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.\
+See the [#fields](process-the-result.md#fields "mention") section below.
 
 In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.ObjectField;
+
+public void handleResponse(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
+
+    ObjectField objectField = fields.get("my_object_field").getObjectField();
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### `fields`
 
@@ -301,9 +334,27 @@ Each sub-field will be a [#single-value-field-simplefield](process-the-result.md
 
 ## List of Fields - ListField
 
-Field having an `items` attribute which is a list of fields.
+Field having an `items` attribute which is a list of fields.\
+See the [#items](process-the-result.md#items "mention") section below.
 
 In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.ListField;
+
+public void handleResponse(InferenceResponse response) {
+    InferenceFields fields = response.inference.getResult().getFields();
+
+    ListField listField = fields.get("my_list_field").getListField();
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### `items`
 
