@@ -5,7 +5,9 @@ icon: passport
 
 # Passport
 
-Mindee enables automatic extraction of key identity fields from passport documents. Whether you are building a KYC process, onboarding flow, or document verification pipeline, our AI agent help you parse structured passport data with accuracy.
+Mindee enables automatic extraction of key identity fields from passport documents.
+
+Whether you are building a Know Your Customer (KYC) process, onboarding flow, or document verification pipeline, our AI agent help you parse structured passport data with accuracy.
 
 ## Why Use Mindee for Passports?
 
