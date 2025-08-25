@@ -25,7 +25,8 @@ Before using the API, you'll need to create an API key.
 
 To create an API Key on the Mindee Platform:
 
-1. On the left-hand menu, click [**API Keys**](https://app.mindee.com/api-keys)
+1. On the left-hand menu, click "<i class="fa-gear">:gear:</i> Settings", then go to the "API Keys" tab.\
+   <a href="https://app.mindee.com/settings?tab=api-keys" class="button primary">Go to API Keys</a>
 2. Click on the **Create API Key** button
 3. Give a name to your key.\
    You'll typically want to name by environment, i.e. `dev`, `staging`, `prod`, \&c
@@ -41,6 +42,7 @@ Any calls to Mindee made using a deleted key will result in a HTTP 401 error cod
 
 To delete a key on the Mindee Platform:
 
-1. On the left-hand menu, click [**API Keys**](https://app.mindee.com/api-keys)
+1. On the left-hand menu, click "<i class="fa-gear">:gear:</i> Settings", then go to the "API Keys" tab.\
+   <a href="https://app.mindee.com/settings?tab=api-keys" class="button primary">Go to API Keys</a>
 2. Next to each key is a **Delete** button, click it.
 3. Click **Delete** in the confirmation dialog, your key is now revoked.
