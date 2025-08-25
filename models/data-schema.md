@@ -4,45 +4,25 @@ icon: atom
 
 # Data Schema
 
-## What is a Data Schema?&#x20;
+## Overview&#x20;
 
 An Extraction Data Schema is a type of structured data that helps the system identify which data points to extract from specific documents. It guides the system on the technical processes required and ensures the extracted data is formatted for easy access by the user.\
 \
 The Data Schema is composed of a certain number of Fields (or data points), each with a type and an example.
 
-### Field Types
+## Field Types
 
-There are six different field types:
+There are seven different field types:
 
-| Field Type       | Description                                                                                        |
-| ---------------- | -------------------------------------------------------------------------------------------------- |
-| `string`         | A sequence of characters representing textual data.                                                |
-| `classification` | A predefined list of categories or types.                                                          |
-| `date`           | A specific year, month, and day, formatted as a `YYYY-MM-DD` date-time.                            |
-| `number`         | Numeric data which could be an integer or a floating-point value.                                  |
-| `boolean`        | Represents two possible values: `true` or `false`                                                  |
-| `nested_object`  | A complex data type that contains multiple sub-fields or properties allowing one level of nesting. |
+<table><thead><tr><th width="224">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>String</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Classification</td><td>A predefined list of categories or types.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date-time.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc</td></tr><tr><td>Nested Object</td><td>A complex data type that contains multiple sub-fields or properties allowing one level of nesting.</td></tr></tbody></table>
 
+### **Example**
 
+An example of the field types for a basic invoice extraction Data Schema:
 
-_**Example of a Basic Invoice Extraction Data Schema**_
+<table><thead><tr><th>Field</th><th width="192">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td>Acme Supplies Ltd.</td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon (bounding box) around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td>(see sub-fields below)</td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td>CRN-20250123</td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td>VAT NUMBER</td></tr><tr><td><strong>Date</strong></td><td>Date</td><td>2025-06-10</td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td>1540.75</td></tr><tr><td><strong>Taxes</strong></td><td>Nested Object</td><td>(see sub-fields below)</td></tr><tr><td><em>Taxes.Rate</em></td><td>number</td><td>0.185</td></tr><tr><td><em>Taxes.Base</em></td><td>number</td><td>1300.00</td></tr><tr><td><em>Taxes.Amount</em></td><td>number</td><td>240.75</td></tr></tbody></table>
 
-| Field                                  | Type           | Example                |
-| -------------------------------------- | -------------- | ---------------------- |
-| **Supplier Name**                      | string         | Acme Supplies Ltd.     |
-| **Supplier Company Registration**      | object         | (see sub-fields below) |
-| _Supplier Company Registration.Number_ | string         | CRN-20250123           |
-| _Supplier Company Registration.Type_   | classification | VAT NUMBER             |
-| **Date**                               | date           | 2025-06-10             |
-| **Total Amount**                       | number         | 1540.75                |
-| **Taxes**                              | object         | (see sub-fields below) |
-| _Taxes.Rate_                           | number         | 0.185                  |
-| _Taxes.Base_                           | number         | 1300.00                |
-| _Taxes.Amount_                         | number         | 240.75                 |
-
-
-
-## How to Build a Top-Performing Data Schema?&#x20;
+## Building a Top-Performing Data Schema
 
 To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.&#x20;
 
