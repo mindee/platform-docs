@@ -68,7 +68,7 @@ response = local_response.deserialize_response(InferenceResponse)
 {% tab title="Node.js" %}
 Assuming you're able to get the raw HTTP request via the variable `request` .
 
-```typescript
+```javascript
 async handleMindeeResponse(data, hmacSignature) {
   const localResponse = new mindee.LocalResponse(data);
   await localResponse.init();
@@ -181,6 +181,141 @@ Each field will be one of the following types:
 * A single value, `SimpleField` class.
 * A nested object (sub-fields), `ObjectField` class.
 * A list or array of fields, `ListField` class.
+
+## Single-Value Field - SimpleField
+
+Basic field type having the `value` attribute.
+
+In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+
+### `value`
+
+The extracted data value.\
+Possible types: string, number (integer or floating-point), boolean.\
+All types can be null.
+
+On the platform, you can specify date and classification types.\
+These are returned as strings.
+
+For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.parsing.v2.field.SimpleField;
+
+InferenceFields fields = response.inference.getResult().getFields();
+
+SimpleField simpleField = fields.get("my_simple_field").getSimpleField();
+```
+
+The `value` attribute is an `Object` type under the hood.
+
+You'll need to explicitly declare the type, otherwise the code will likely not compile.\
+Take a look at your Data Schema to know which type to declare.
+
+```java
+import com.mindee.parsing.v2.field.InferenceFields;
+
+InferenceFields fields = response.inference.getResult().getFields();
+
+// texts, dates, classifications ...
+String stringFieldValue = (String) fields.get("string_field").getSimpleField()
+    .getValue();
+
+// a JSON float will be a Double
+Double floatFieldValue = (Double) fields.get("float_field").getSimpleField()
+    .getValue();
+
+// even if the API always returns an integer, the type will be Double
+Double intFieldValue = (Double) fields.get("int_field").getSimpleField()
+    .getValue();
+
+// booleans
+Boolean boolFieldValue = (Boolean) fields.get("bool_field").getSimpleField()
+    .getValue();
+```
+
+If the wrong type is declared, an exception will be raised, something like this:
+
+```
+ClassCast class java.lang.String cannot be cast to class java.lang.Double
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+InferenceFields fields = response.Inference.Result.Fields;
+
+SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
+```
+
+The `Value` attribute is a `dynamic` type under the hood.
+
+You should explicitly declare the type, this is recommended for clarity.\
+Take a look at your Data Schema to know which type to declare.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+// texts, dates, classifications ...
+string stringFieldValue = fields["string_field"].SimpleField.Value;
+
+// a JSON float will be a Double
+Double floatFieldValue = fields["float_field"].SimpleField.Value;
+
+// even if the API always returns an integer, the type will be Double
+Double intFieldValue = fields["int_field"].SimpleField.Value;
+
+// booleans
+Boolean boolFieldValue = fields["bool_field"].SimpleField.Value;
+```
+
+If the wrong type is declared, an exception will be raised, something like this:
+
+```
+RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
+```
+{% endtab %}
+{% endtabs %}
+
+## Nested Object Field - ObjectField
+
+Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.
+
+In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
+
+### `fields`
+
+Each field can _theoretically_ be of any type (single, multi, list).\
+**In practice:** we limit to a single value, meaning no recursive objects nor lists.
+
+Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
+
+## List of Fields - ListField
+
+Field having an `items` attribute which is a list of fields.
+
+In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
+
+### `items`
+
+Each item in the list can _theoretically_ be of any type (single, multi, list).\
+**In practice:** we limit items to be either single or multi field, meaning no lists of lists.
+
+Each field in the list will be one of:
+
+* [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention")
+* [#multiple-value-field-objectfield](process-the-result.md#multiple-value-field-objectfield "mention")
+
+There will **not** be a mix of both types in the same list.
 
 ## Optional Field Attributes
 
@@ -368,138 +503,3 @@ int pageIndex = locations.First().Page;
 ```
 {% endtab %}
 {% endtabs %}
-
-## Single-Value Field - SimpleField
-
-Basic field type having the `value` attribute.
-
-In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
-
-### `value`
-
-The extracted data value.\
-Possible types: string, number (integer or floating-point), boolean.\
-All types can be null.
-
-On the platform, you can specify date and classification types.\
-These are returned as strings.
-
-For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
-
-{% tabs %}
-{% tab title="Java" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
-```java
-import com.mindee.parsing.v2.field.InferenceFields;
-import com.mindee.parsing.v2.field.SimpleField;
-
-InferenceFields fields = response.inference.getResult().getFields();
-
-SimpleField simpleField = fields.get("my_simple_field").getSimpleField();
-```
-
-The `value` attribute is an `Object` type under the hood.
-
-You'll need to explicitly declare the type, otherwise the code will likely not compile.\
-Take a look at your Data Schema to know which type to declare.
-
-```java
-import com.mindee.parsing.v2.field.InferenceFields;
-
-InferenceFields fields = response.inference.getResult().getFields();
-
-// texts, dates, classifications ...
-String stringFieldValue = (String) fields.get("string_field").getSimpleField()
-    .getValue();
-
-// a JSON float will be a Double
-Double floatFieldValue = (Double) fields.get("float_field").getSimpleField()
-    .getValue();
-
-// even if the API always returns an integer, the type will be Double
-Double intFieldValue = (Double) fields.get("int_field").getSimpleField()
-    .getValue();
-
-// booleans
-Boolean boolFieldValue = (Boolean) fields.get("bool_field").getSimpleField()
-    .getValue();
-```
-
-If the wrong type is declared, an exception will be raised, something like this:
-
-```
-ClassCast class java.lang.String cannot be cast to class java.lang.Double
-```
-{% endtab %}
-
-{% tab title=".NET" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
-```csharp
-using Mindee.Parsing.V2.Field;
-
-InferenceFields fields = response.Inference.Result.Fields;
-
-SimpleField mySimpleField = fields["my_simple_field"].SimpleField;
-```
-
-The `Value` attribute is a `dynamic` type under the hood.
-
-You should explicitly declare the type, this is recommended for clarity.\
-Take a look at your Data Schema to know which type to declare.
-
-```csharp
-using Mindee.Parsing.V2.Field;
-
-// texts, dates, classifications ...
-string stringFieldValue = fields["string_field"].SimpleField.Value;
-
-// a JSON float will be a Double
-Double floatFieldValue = fields["float_field"].SimpleField.Value;
-
-// even if the API always returns an integer, the type will be Double
-Double intFieldValue = fields["int_field"].SimpleField.Value;
-
-// booleans
-Boolean boolFieldValue = fields["bool_field"].SimpleField.Value;
-```
-
-If the wrong type is declared, an exception will be raised, something like this:
-
-```
-RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
-```
-{% endtab %}
-{% endtabs %}
-
-## Nested Object Field - ObjectField
-
-Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.
-
-In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
-
-### `fields`
-
-Each field can _theoretically_ be of any type (single, multi, list).\
-**In practice:** we limit to a single value, meaning no recursive objects nor lists.
-
-Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
-
-## List of Fields - ListField
-
-Field having an `items` attribute which is a list of fields.
-
-In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
-
-### `items`
-
-Each item in the list can _theoretically_ be of any type (single, multi, list).\
-**In practice:** we limit items to be either single or multi field, meaning no lists of lists.
-
-Each field in the list will be one of:
-
-* [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention")
-* [#multiple-value-field-objectfield](process-the-result.md#multiple-value-field-objectfield "mention")
-
-There will **not** be a mix of both types in the same list.
