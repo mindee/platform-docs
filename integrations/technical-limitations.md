@@ -66,6 +66,10 @@ For information about the pricing model of Mindee, please refer yourself to the 
 
 {% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
 
+## Webhooks
+
+{% include "../.gitbook/includes/webhook-technical-limitations.md" %}
+
 [^1]: Joint Photographic Experts Group
 
 [^2]: Portable Network Graphics

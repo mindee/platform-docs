@@ -60,10 +60,11 @@ In the Webhooks page, there will be a "Add Webhook" button, click it:
 
 <figure><img src="../.gitbook/assets/Screenshot_20250820_115103.png" alt=""><figcaption></figcaption></figure>
 
-This then opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server:
+This then opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server.
 
-* Choose any name that makes sense to you.
-* The URL must be secured using TLS (HTTPS) and must be publicly accessible.
+Choose any name that makes sense to you.
+
+{% include "../.gitbook/includes/webhook-technical-limitations.md" %}
 
 You can create any number of webhook endpoints.\
 This is useful for example if you want to send to various different environments in your system (i.e. dev, staging, prod). This also allows for easy local testing.
