@@ -76,3 +76,7 @@ You can specify guidelines in most languages, including, _but not limited to_:
 * African languages: Swahili, Yoruba, Zulu, etc
 
 **Note:** while the models can understand, we are not able to provide in-depth support for all languages.
+
+## Technical Limitations
+
+{% include "../.gitbook/includes/data-schema-technical-limitations.md" %}

@@ -2,7 +2,7 @@
 icon: hand
 ---
 
-# Technical Limits
+# Technical Limitations
 
 ## Overview
 
@@ -62,11 +62,9 @@ For information about the pricing model of Mindee, please refer yourself to the 
 **General tip:** You may space your API requests so that you don't go over the limit.
 {% endhint %}
 
-### Data Schema
+## Data Schema
 
-For your data schema, the recommended maximum number of properties is 25. Beyond this limit, performances will be drastically reduced.
-
-
+{% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
 
 [^1]: Joint Photographic Experts Group
 

@@ -23,7 +23,7 @@
 * [API Overview](integrations/api-overview.md)
 * [API Keys](integrations/api-keys.md)
 * [Technical Guidelines](integrations/technical-guidelines.md)
-* [Technical Limits](integrations/technical-limitations.md)
+* [Technical Limitations](integrations/technical-limitations.md)
 * [Polling for Results](integrations/polling-for-results.md)
 * [Webhook Results](integrations/webhooks.md)
 * [Client Libraries / SDKs](integrations/client-libraries-sdk/README.md)
