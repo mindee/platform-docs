@@ -200,7 +200,7 @@ import com.mindee.parsing.v2.field.SimpleField;
 public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    SimpleField simpleField = fields.get("my_simple_field").getSimpleField();
+    SimpleField simpleField = fields.getSimpleField("my_simple_field");
 }
 ```
 {% endtab %}
@@ -246,28 +246,24 @@ public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
     // texts, dates, classifications ...
-    String stringFieldValue = (String) fields.get("string_field")
-        .getSimpleField()
-        .getValue();
+    String stringFieldValue = fields.getSimpleField("string_field")
+        .getStringValue();
 
     // a JSON float will be a Double
-    Double floatFieldValue = (Double) fields.get("float_field")
-        .getSimpleField()
-        .getValue();
+    Double floatFieldValue = fields.getSimpleField("float_field")
+        .getDoubleValue();
 
     // even if the API always returns an integer, the type will be Double
-    Double intFieldValue = (Double) fields.get("int_field")
-        .getSimpleField()
-        .getValue();
+    Double intFieldValue = fields.getSimpleField("int_field")
+        .getDoubleValue();
 
     // booleans
-    Boolean boolFieldValue = (Boolean) fields.get("bool_field")
-        .getSimpleField()
-        .getValue();
+    Boolean boolFieldValue = fields.getSimpleField("bool_field")
+        .getBooleanValue();
 }
 ```
 
-If the wrong type is declared, an exception will be raised, something like this:
+If the wrong type method is used, an exception will be raised, something like this:
 
 ```
 ClassCast class java.lang.String cannot be cast to class java.lang.Double
@@ -325,7 +321,7 @@ import com.mindee.parsing.v2.field.ObjectField;
 public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    ObjectField objectField = fields.get("my_object_field").getObjectField();
+    ObjectField objectField = fields.getObjectField("my_object_field");
 }
 ```
 {% endtab %}
@@ -358,7 +354,6 @@ Each sub-field will be a [#single-value-field-simplefield](process-the-result.md
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
-import com.mindee.parsing.v2.field.DynamicField;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.ObjectField;
@@ -367,13 +362,17 @@ import com.mindee.parsing.v2.field.SimpleField;
 public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    ObjectField objectField = fields.get("my_object_field").getObjectField();
+    ObjectField objectField = fields.getObjectField("my_object_field");
     
-    InferenceFields subFields = objectField.getFields();
+    HashMap<String, SimpleField> subFields = objectField.getSimpleFields();
     
-    for (Map.Entry<String, DynamicField> entry : subFields.entrySet()) {
+    // grab a single sub-field
+    SimpleField subfield1 = subFields.get("subfield_1");
+    
+    // loop over sub-fields
+    for (Map.Entry<String, SimpleField> entry : subFields.entrySet()) {
         String fieldName = entry.getKey();
-        SimpleField subField = entry.getValue().getSimpleField();
+        SimpleField subField = entry.getValue();
     }
 }
 ```
@@ -398,7 +397,7 @@ import com.mindee.parsing.v2.field.ListField;
 public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    ListField listField = fields.get("my_list_field").getListField();
+    ListField listField = fields.getListField("my_list_field");
 }
 ```
 {% endtab %}
@@ -436,20 +435,55 @@ There will **not** be a mix of both types in the same list.
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
-import com.mindee.parsing.v2.field.DynamicField;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
+import com.mindee.parsing.v2.field.ObjectField;
 import com.mindee.parsing.v2.field.SimpleField;
 
 public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    ListField fieldSimpleList = fields.get("my_simple_list_field").getListField();
+    //
+    // List of Simple fields
+    //
+
+    ListField fieldSimpleList = fields.getListField("my_simple_list_field");
+
+    List<SimpleField> simpleItems = fieldSimpleList.getSimpleItems();
+
+    // Loop over the list of Simple fields
+    for (SimpleField itemField : simpleItems) {
+        // Choose the appropriate value type accessor method:
+        // String, Double, Boolean
+        String fieldValue = itemField.getStringValue();
+    }
+
+    //
+    // List of Object fields
+    //
+
+    ListField fieldObjectList = fields.getListField("my_object_list_field");
+
+    List<ObjectField> objectItems = listField.getObjectItems();
+
+    // Loop over the list of Object fields
+    for (ObjectField itemField : objectItems) {
     
-    List<DynamicField> simpleItems = fieldSimpleList.getItems();
-    
-    for (DynamicField item : simpleItems) {
-        SimpleField itemField = item.getSimpleField();
+        // Object sub-fields will always be Simple fields
+        HashMap<String, SimpleField> subFields = itemField.getSimpleFields();
+
+        // grab a single sub-field
+        SimpleField subfield1 = subFields.get("subfield_1");
+        
+        // Choose the appropriate value type accessor method:
+        // String, Double, Boolean
+        String subFieldValue = subfield1.getStringValue();
+
+        // loop over sub-fields
+        for (Map.Entry<String, SimpleField> entry : subFields.entrySet()) {
+            String fieldName = entry.getKey();
+            SimpleField subField = entry.getValue();
+        }
     }
 }
 ```
@@ -542,8 +576,8 @@ import com.mindee.parsing.v2.field.InferenceFields;
 public void handleFieldConfidence(InferenceResponse response) {
     InferenceFields fields = inference.getResult().getFields();
 
-    FieldConfidence confidence = fields.get("my_simple_field")
-        .getSimpleField() // needs adjustment depending on actual field type
+    // choose the appropriate field type accessor method: Simple, Object, List
+    FieldConfidence confidence = fields.getSimpleField("my_simple_field")
         .getConfidence();
 
     // compare using the enum `FieldConfidence`
@@ -598,8 +632,8 @@ import java.util.List;
 public void handleFieldLocation(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    List<FieldLocation> locations = fields.get("my_simple_field")
-        .getSimpleField() // needs adjustment depending on actual field type
+    // choose the appropriate field type accessor method: Simple, Object
+    List<FieldLocation> locations = fields.getSimpleField("my_simple_field")
         .getLocations();
 
     // accessing the polygon

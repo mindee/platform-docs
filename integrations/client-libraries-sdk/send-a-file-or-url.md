@@ -36,14 +36,7 @@ You'll need a Remote Input Source as described below.
 
 ### Requirements
 
-The source URL must adhere to the following rules:
-
-* Secured using TLS (HTTPS).
-* Publicly available using only the URL, no authentication _headers_.
-* Authentication may be provided in the URL: username/password or token.\
-  For example, Amazon S3 signed URLs will work.
-* Contents must be a binary file (raw bytes, _not_ base64-encoded).
-* No redirections (HTTP 3xx), these will _not_ work.
+{% include "../../.gitbook/includes/file-url-technical-limitation.md" %}
 
 ### Initialize the URL
 
