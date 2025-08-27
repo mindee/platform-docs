@@ -23,7 +23,7 @@ All plans include access to our AI agent to build custom document parsers.
 
 More information in the [billing.md](billing.md "mention") section.
 
-## Feature comparison
+## Feature Comparison
 
 | Feature                                                |        Starter       |          Pro         |       Business       |      Enterprise      |
 | ------------------------------------------------------ | :------------------: | :------------------: | :------------------: | :------------------: |
