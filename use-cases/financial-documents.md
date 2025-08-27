@@ -6,7 +6,7 @@ icon: coins
 
 # Financial documents
 
-Mindee allows you to process a wide variety of financial documents using an AI agent that adapts to your specific needs. Whether you're working with invoices, bank statements, receipts, or account summaries, you can define exactly which fields you want to extract: no pre-training, templates, or fixed models required.
+Mindee allows you to process a wide variety of financial documents and adapts to your specific needs. Whether you're working with invoices, bank statements, receipts, or account summaries, you can define exactly which fields you want to extract: no pre-training, templates, or fixed models required.
 
 ## Why Use Mindee for Financial Documents?
 
