@@ -78,7 +78,7 @@ Requires .NET ≥ 6.0.\
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
 
 ```sh
-dotnet add package Mindee --version 3.30
+dotnet add package Mindee --version 3.31
 ```
 {% endtab %}
 {% endtabs %}

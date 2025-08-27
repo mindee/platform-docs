@@ -185,6 +185,22 @@ It contains the following attributes:
 You can access various metadata concerning the file sent for processing.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```python
+from mindee import InferenceResponse
+from mindee.parsing.v2 import InferenceFile
+
+def handle_response(response: InferenceResponse):
+    inference_file: InferenceFile = response.inference.file
+
+    # various attributes are available, such as:
+    filename: str = inference_file.name
+    page_count: int = file.page_count
+```
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -456,16 +472,16 @@ public void HandleResponse(InferenceResponse response)
 
     ObjectField objectField = fields["my_object_field"].ObjectField;
 
-    InferenceFields subFields = objectField.Fields;
+    Dictionary<string, SimpleField> subFields = objectField.SimpleFields;
 
     // grab a single sub-field
-    SimpleField subField1 = subFields["subfield_1"].SimpleField;
+    SimpleField subField1 = subFields["subfield_1"];
 
     // loop over sub-fields
-    foreach (var entry in subFields)
+    foreach (KeyValuePair<string, SimpleField> entry in subFields)
     {
         string fieldName = entry.Key;
-        SimpleField subField = entry.Value.SimpleField;
+        SimpleField subField = entry.Value;
     }
 }
 ```
@@ -596,14 +612,14 @@ public void HandleResponse(InferenceResponse response)
 
     ListField fieldSimpleList = fields["my_simple_list_field"].ListField;
 
-    List<DynamicField> simpleItems = fieldSimpleList.Items;
+    List<SimpleField> simpleItems = fieldSimpleList.SimpleItems;
 
     // Loop over the list of Simple fields
-    foreach (DynamicField itemField in simpleItems)
+    foreach (SimpleField itemField in simpleItems)
     {
         // Choose the appropriate value type:
         // string, Double, Boolean
-        string fieldValue = itemField.SimpleField.Value;
+        string fieldValue = itemField.Value;
     }
 
     //
@@ -612,25 +628,25 @@ public void HandleResponse(InferenceResponse response)
     
     ListField fieldObjectList = fields["my_simple_list_field"].ListField;
     
-    List<DynamicField> objectItems = fieldObjectList.Items;
+    List<ObjectField> objectItems = fieldObjectList.ObjectItems;
     
     // Loop over the list of Object fields
-    foreach (DynamicField itemField in objectItems)
+    foreach (ObjectField itemField in objectItems)
     {
-        InferenceFields subFields = itemField.ObjectField.Fields;
-        
+        Dictionary<string, SimpleField> subFields = objectField.SimpleFields;
+    
         // grab a single sub-field
-        SimpleField subField1 = subFields["subfield_1"].SimpleField;
+        SimpleField subField1 = subFields["subfield_1"];
         
         // Choose the appropriate value type:
         // string, Double, Boolean
         string subFieldValue = subField1.Value;
-        
+    
         // loop over sub-fields
-        foreach (var entry in subFields)
+        foreach (KeyValuePair<string, SimpleField> entry in subFields)
         {
             string fieldName = entry.Key;
-            SimpleField subField = entry.Value.SimpleField;
+            SimpleField subField = entry.Value;
         }
     }
 }

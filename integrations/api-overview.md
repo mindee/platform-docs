@@ -1,9 +1,9 @@
 ---
-description: General description of how to use the Mindee API.
+description: General description of how to integrate the Mindee API.
 icon: globe
 ---
 
-# API Overview
+# Integration Overview
 
 ## General Description
 
@@ -25,7 +25,23 @@ We highly recommend using one of our [client-libraries-sdk](client-libraries-sdk
 
 They are the fastest and easiest way to call our APIs, and allow our support teams to better help you.
 
-You can also integrate directly by looking at our [api-reference.md](api-reference.md "mention") section.
+### Client Libraries
+
+For a quick introduction and copy-paste ready code, look in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section.
+
+#### Ask for Code Samples
+
+You can also ask for specific code samples from the documentation AI.
+
+Use the search bar at the top of the page.
+
+### No-Code or Low-Code
+
+If you're integrating using a no-code or low-code platform, take a look at the [no-code-integrations](no-code-integrations/ "mention") section.
+
+### Manual Integration
+
+If none of the above options fit your requirements, take a look at the [api-reference.md](api-reference.md "mention") section.
 
 ## What to Send
 
@@ -40,10 +56,4 @@ You can decide on either the polling flow or the webhook flow.
 [polling-for-results.md](polling-for-results.md "mention") is better suited to testing and small volumes.
 
 [webhooks.md](webhooks.md "mention") are more suited to heavy production use.
-
-## Ask for Code Samples
-
-You can ask for specific code samples from the documentation AI.
-
-Use the search bar at the top of the page.
 

@@ -20,7 +20,7 @@
 
 ## Integrations
 
-* [API Overview](integrations/api-overview.md)
+* [Integration Overview](integrations/api-overview.md)
 * [API Keys](integrations/api-keys.md)
 * [Technical Guidelines](integrations/technical-guidelines.md)
 * [Technical Limitations](integrations/technical-limitations.md)

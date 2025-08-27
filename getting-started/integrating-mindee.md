@@ -17,74 +17,18 @@ Click on create API Key, choose a name for this API Key, and validate.
 
 You're now ready to go!
 
-## Sending a File
+## Integrate the Mindee API
 
-To process your document using Mindee, simply send the file using the [REST API](../integrations/api-overview.md).
+### Client Libraries
 
-Make a note of your model's ID for use in the API.
+We highly recommend using one of our official [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention") .
 
-When getting started, we recommend using the [#polling](../integrations/api-overview.md#polling "mention") method which will be quickest (unless you happen to already have access to a public-facing Web server).
+For a quick introduction and copy-paste ready code, look in the [quick-start.md](../integrations/client-libraries-sdk/quick-start.md "mention") section.
 
-Here are some code examples, these are self-contained and can be run as-is:
+### No-Code or Low-Code
 
-{% tabs %}
-{% tab title="Python" %}
-{% include "../.gitbook/includes/code-samples/python.md" %}
-{% endtab %}
+If you're integrating using a no-code or low-code platform, take a look at the [no-code-integrations](../integrations/no-code-integrations/ "mention") section.
 
-{% tab title="Node.js" %}
-{% include "../.gitbook/includes/code-samples/javascript.md" %}
-{% endtab %}
+### Manual Integration
 
-{% tab title="PHP" %}
-{% include "../.gitbook/includes/code-samples/php.md" %}
-{% endtab %}
-
-{% tab title="Ruby" %}
-{% include "../.gitbook/includes/code-samples/ruby.md" %}
-{% endtab %}
-
-{% tab title="Java" %}
-{% include "../.gitbook/includes/code-samples/java.md" %}
-{% endtab %}
-
-{% tab title=".NET" %}
-{% include "../.gitbook/includes/code-samples/dotnet.md" %}
-{% endtab %}
-{% endtabs %}
-
-## Processing the Results
-
-Once you've sent the file and retrieved the results, you can start extracting the JSON payload.
-
-The model's fields will be in the `fields` object in the returned JSON, in the `response` variable returned from the above step.
-
-Each key in the `fields` object corresponds to the field's `name` in your model configuration.
-
-You'll want to adapt your processing depending on the [type of field](../models/data-schema.md#field-types), for example looping over lists.
-
-{% tabs %}
-{% tab title="Python" %}
-{% include "../.gitbook/includes/code-samples/process-python.md" %}
-{% endtab %}
-
-{% tab title="Node.js" %}
-{% include "../.gitbook/includes/code-samples/process-javascript.md" %}
-{% endtab %}
-
-{% tab title="PHP" %}
-{% include "../.gitbook/includes/code-samples/process-php.md" %}
-{% endtab %}
-
-{% tab title="Ruby" %}
-{% include "../.gitbook/includes/code-samples/process-ruby.md" %}
-{% endtab %}
-
-{% tab title="Java" %}
-{% include "../.gitbook/includes/code-samples/process-java.md" %}
-{% endtab %}
-
-{% tab title=".NET" %}
-{% include "../.gitbook/includes/code-samples/process-dotnet.md" %}
-{% endtab %}
-{% endtabs %}
+If none of the above options fit your requirements, take a look at the [api-reference.md](../integrations/api-reference.md "mention") section.

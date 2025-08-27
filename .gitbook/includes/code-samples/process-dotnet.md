@@ -7,24 +7,40 @@ Accessing a simple value, where `my_simple_field` is the name of the field in th
 We need to specify that the field is a `SimpleField` in order to access its `Value`.
 
 ```csharp
-var mySimpleField = response.Inference.Result.Fields["my_simple_field"];
-var fieldValue = mySimpleField.SimpleField.Value;
+using Mindee.Parsing.V2;
+using Mindee.Parsing.V2.Field;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.inference.Result.Fields;
+
+    var mySimpleField = fields["my_simple_field"].SimpleField;
+    var fieldValue = mySimpleField.Value;
+}
 ```
 
-Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+Accessing a list of simple values, where `my_list_field` is the name of the field in the Model.
 
-We need to specify that the field is a `ListField` in order to access its `Items`.
+We need to specify that the field is a `ListField` in order to access its `SimpleItems`.
 
 ```csharp
-var myListField = response.Inference.Result.Fields["my_list_field"];
+using Mindee.Parsing.V2;
+using Mindee.Parsing.V2.Field;
 
-// access a value at a given position
-var fieldFirstValue = myListField.ListField.Items[0].SimpleField.Value;
+public void HandleResponse(InferenceResponse response)
+{    
+    InferenceFields fields = response.inference.Result.Fields;
 
-// loop over all values in the list
-foreach (var listItem in myListField.ListField.Items)
-{
-    var itemValue = listItem.SimpleField.Value;
+    var myListField = fields["my_list_field"].ListField;
+
+    // access a value at a given position
+    var fieldFirstValue = myListField.SimpleItems[0].Value;
+
+    // loop over all values in the list
+    foreach (var listItem in myListField.SimpleItems)
+    {
+        var itemValue = listItem.Value;
+    }
 }
 ```
 
@@ -32,23 +48,40 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 In this hypothetical case, the object has a sub-field named `sub_field` .
 
 ```csharp
-var objectField = response.Inference.Fields["my_object_field"];
-var subField = objectField.ObjectField.Fields["sub_field"];
-var subFieldValue = subField.SimpleField.Value;
+using Mindee.Parsing.V2;
+using Mindee.Parsing.V2.Field;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.inference.Result.Fields;
+
+    var objectField = fields["my_object_field"].ObjectField;
+
+    SimpleField subField = objectField.SimpleFields["sub_field"];
+    var subFieldValue = subField.Value;
+}
 ```
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
 ```csharp
-objectListField = response.Inference.Fields["my_object_list_field"];
+using Mindee.Parsing.V2;
+using Mindee.Parsing.V2.Field;
 
-// access an object at a given position
-var objectItem0 = objectListField.ListField.Items[0];
-var subField0Value = objectItem0.ObjectField.Items["sub_field"].Value;
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.inference.Result.Fields;
+    
+    objectListField = fields["my_object_list_field"].ListField;
 
-// loop over object lists
-foreach (var objectItem in objectListField.ListField.Items) {
-    var subField = objectItem.ObjectField.Fields["sub_field"];
-    var subFieldValue = subField.SimpleField.Value;
+    // access an object at a given position
+    var objectItem0 = objectListField.ObjectItems[0];
+    var subField0Value = objectItem0.SimpleFields["sub_field"].Value;
+
+    // loop over object lists
+    foreach (var objectItem in objectListField.ObjectItems) {
+        SimpleField subField = objectItem.SimpleFields["sub_field"];
+        var subFieldValue = subField.SimpleField.Value;
+    }
 }
 ```
