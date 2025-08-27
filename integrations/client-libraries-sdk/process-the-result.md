@@ -185,6 +185,20 @@ It contains the following attributes:
 You can access various metadata concerning the file sent for processing.
 
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+handleResponse(response) {
+  const file = response.inference.file;
+  
+  // various attributes are available, such as:
+  const filename = file.name;
+  const pageCount = file.pageCount;
+}
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -760,6 +774,25 @@ Points are listed in clockwise order, where index `0` is top left.
 Point X,Y coordinates are normalized floats from 0.0 to 1.0, relative to the page dimensions.
 
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+fields = response.inference.result.fields;
+
+const locations = fields.get("my_simple_field")?.locations;
+
+// accessing the polygon
+const polygon = locations![0].polygon!;
+
+// accessing points: the Polygon class extends Array<Point>
+double topX = polygon[0][0];
+
+// accessing the page index on which the polygon is
+const pageIndex = locations![0].page!;
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -779,7 +812,7 @@ public void handleResponse(InferenceResponse response) {
         .getLocations();
 
     // accessing the polygon
-    Polygon polygon = Polygon polygon = locations.get(0).getPolygon();
+    Polygon polygon = locations.get(0).getPolygon();
 
     // accessing points
     List<Point> points = polygon.getCoordinates();
