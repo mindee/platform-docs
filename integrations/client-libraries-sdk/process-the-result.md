@@ -665,7 +665,15 @@ The data are only filled if the [polygons-bounding-boxes.md](../../models/polygo
 
 It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
 
-Each location has a page index and a polygon.
+Each location has a page index and a Polygon.
+
+Page indexes are 0-based, so the first page is `0`.
+
+A Polygon class contains a list of Points, the specific implementation will depend on the language.
+
+Points are listed in clockwise order, where index `0` is top left.
+
+Point X,Y coordinates are normalized floats from 0.0 to 1.0, relative to the page dimensions.
 
 {% tabs %}
 {% tab title="Java" %}
@@ -689,9 +697,9 @@ public void handleResponse(InferenceResponse response) {
     // accessing the polygon
     Polygon polygon = Polygon polygon = locations.get(0).getPolygon();
 
-    // accessing coordinates
-    List<Point> coords = polygon.getCoordinates();
-    double topX = coords.get(0).getX();
+    // accessing points
+    List<Point> points = polygon.getCoordinates();
+    double topX = points.get(0).getX();
 
     // there are geometry functions available in the Polygon class
     Point center = polygon.getCentroid();
@@ -719,7 +727,7 @@ public void HandleResponse(InferenceResponse response)
     // accessing the polygon
     Polygon polygon = locations.First().Polygon;
 
-    // accessing coordinates: the Polygon class extends List<Point>
+    // accessing points: the Polygon class extends List<Point>
     double topX = polygon[0].X;
 
     // alternative notation, since the Point class extends List<double>

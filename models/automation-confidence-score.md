@@ -50,9 +50,7 @@ This color-coding system allows product teams to **highlight uncertainty directl
 
 ## How to Activate Automation
 
-{% hint style="info" %}
-**Automation** is only available to users with an active **Business** subscription.
-{% endhint %}
+{% include "../.gitbook/includes/feature-availability.md" %}
 
 {% @supademo/embed demoId="cmeie3irw9fe7h3pytuktflxs" url="https://app.supademo.com/demo/cmeie3irw9fe7h3pytuktflxs" %}
 

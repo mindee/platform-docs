@@ -22,11 +22,9 @@ To make the RAG system effective, there are 3 main steps to have in mind.&#x20;
 2. Retrieval: When a next document will be send with the RAG option activated, the model will try to search for a similar example in the existing database. The question here is : "Maybe there is an existing example where I need to follow the instructions so that I'm not doing a same mistake again".  If no example found, no need to augment the prediction. If an examples is matched in the RAG Database, here comes step 3.&#x20;
 3. Augmented Generation: A document was matched in the RAG Database. The model will use the instructions you gave on the RAG sample to make a better prediction this time. The prediction generated is augmented with an existing context helping the model to be better this time.
 
-## How do I set up RAG with Mindee?&#x20;
+## How do I set up RAG with Mindee?
 
-{% hint style="info" %}
-**RAG** is only available to users with an active **Pro** or **Business** subscription.
-{% endhint %}
+{% include "../.gitbook/includes/feature-availability.md" %}
 
 To use RAG on a given Extraction Model, you should click on the RAG tab. \
 \

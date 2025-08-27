@@ -6,10 +6,10 @@ icon: vector-square
 
 ## Overview
 
-The `polygons` parameter, also commonly referred to as **bounding boxes**, is an option you can select in your Models. \
+The `polygons` parameter, also commonly referred to as **bounding boxes**, is an option you can select in your Models.\
 It indicates the precise polygonal area on the document where the value for each extracted field was detected.
 
-* These polygons define the **exact region on the document image** containing the extracted data.
+* These polygons define the **exact location on the document** containing the extracted data.
 * They enable visual verification by highlighting where the model found each value on the document.
 * This feature is especially useful for building user interfaces that overlay extracted data on document images for validation or review.
 
@@ -21,34 +21,13 @@ It indicates the precise polygonal area on the document where the value for each
   * `(0, 0)` corresponds to the top-left corner; `(1, 1)` corresponds to the bottom-right corner.
 * Multiple polygons can be returned if there are several extracted fields or data areas.
 
-## Example Polygon JSON Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
+## Using the Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
 
-Here is an example of how the polygons parameter appears in the JSON response for a field named `date`:
+We highly recommend using our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention"), as they include various geometry functions for ease of processing.
 
-```json
-"fields": {
-  "date": {
-    "locations": [
-      {
-        "polygon": [
-          [0.15, 0.35],
-          [0.85, 0.35],
-          [0.85, 0.30],
-          [0.15, 0.30]
-        ],
-        "page": 0
-      }
-    ],
-    "confidence": null,
-    "value": "2000-01-01"
-  }
-  ...
-}
-```
+Specifically for handling polygons, take a look at the [#locations](../integrations/client-libraries-sdk/process-the-result.md#locations "mention") section.
 
-* The `polygon` array defines a rectangular bounding polygon for the detected date value on page 0.
-* Coordinates are normalized floats from 0 to 1, relative to the page dimensions.
-* `locations` can contain multiple polygon/page objects if the field appears multiple times or on multiple pages.
+Otherwise, take a look at the [#get-v2-inferences-inference\_id](../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
 
 ## Use Cases <a href="#use-cases" id="use-cases"></a>
 
@@ -56,11 +35,9 @@ Here is an example of how the polygons parameter appears in the JSON response fo
 * Debugging extraction quality by analyzing detected regions.
 * Enhancing UI with highlighted fields for better user experience.
 
-## **How to activate Polygons?**&#x20;
+## **How to activate Polygons?**
 
-{% hint style="info" %}
-**Polygons** option is only available to users with an active **Pro** or **Business** subscription.
-{% endhint %}
+{% include "../.gitbook/includes/feature-availability.md" %}
 
 {% hint style="warning" %}
 When the **Polygons** feature is not activated, the `locations` keys in the JSON response will always be set to an empty list.
