@@ -177,7 +177,8 @@ It contains the following attributes:
 * `id` UUID of the inference
 * `model` Model used for the inference
 * `file` Metadata concerning the file used for the inference
-* `result` Result of inference processing, the most important portion of the response
+* `result` Result of inference processing, the most important portion of the response.\
+  See the [#accessing-result-fields](process-the-result.md#accessing-result-fields "mention") section.
 
 ### File Metadata
 
@@ -222,7 +223,7 @@ public void HandleResponse(InferenceResponse response)
 
 Fields are completely dynamic and depend on your model's [data-schema.md](../../models/data-schema.md "mention").
 
-In the client library, you'll have access to the various fields as a mapping type (Python's `dict`, Java's `HashMap`, etc).
+In the client library, you'll have access to the various fields as a key-value mapping type (Python's `dict`, Java's `HashMap`, etc).
 
 Accessing a field is done via its name in the Data Schema.
 
@@ -394,8 +395,9 @@ public void HandleResponse(InferenceResponse response)
 
 ### `fields`
 
-Each field can _theoretically_ be of any type (single, multi, list).\
-**In practice:** we limit to a single value, meaning no recursive objects nor lists.
+The sub-fields as a key-value mapping type (Python's `dict`, Java's `HashMap`, etc).
+
+Accessing a sub-field is done via its name in the Data Schema.
 
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
@@ -423,6 +425,33 @@ public void handleResponse(InferenceResponse response) {
     for (Map.Entry<String, SimpleField> entry : subFields.entrySet()) {
         String fieldName = entry.getKey();
         SimpleField subField = entry.getValue();
+    }
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
+
+    ObjectField objectField = fields["my_object_field"].ObjectField;
+
+    InferenceFields subFields = objectField.Fields;
+
+    // grab a single sub-field
+    SimpleField subField1 = subFields["subfield_1"].SimpleField;
+
+    // loop over sub-fields
+    foreach (var entry in subFields)
+    {
+        string fieldName = entry.Key;
+        SimpleField subField = entry.Value.SimpleField;
     }
 }
 ```
@@ -471,9 +500,7 @@ public void HandleResponse(InferenceResponse response)
 ### `items`
 
 Each item in the list can _theoretically_ be of any type (single, multi, list).\
-**In practice:** we limit items to be either single or multi field, meaning no lists of lists.
-
-Each field in the list will be one of:
+**In practice:** Each field in the list will be one of:
 
 * [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention")
 * [#nested-object-field-objectfield](process-the-result.md#nested-object-field-objectfield "mention")
@@ -533,6 +560,63 @@ public void handleResponse(InferenceResponse response) {
         for (Map.Entry<String, SimpleField> entry : subFields.entrySet()) {
             String fieldName = entry.getKey();
             SimpleField subField = entry.getValue();
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2.Field;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFields fields = response.Inference.Result.Fields;
+
+    //
+    // List of Simple fields
+    //
+
+    ListField fieldSimpleList = fields["my_simple_list_field"].ListField;
+
+    List<DynamicField> simpleItems = fieldSimpleList.Items;
+
+    // Loop over the list of Simple fields
+    foreach (DynamicField itemField in simpleItems)
+    {
+        // Choose the appropriate value type:
+        // string, Double, Boolean
+        string fieldValue = itemField.SimpleField.Value;
+    }
+
+    //
+    // List of Object fields
+    //
+    
+    ListField fieldObjectList = fields["my_simple_list_field"].ListField;
+    
+    List<DynamicField> objectItems = fieldObjectList.Items;
+    
+    // Loop over the list of Object fields
+    foreach (DynamicField itemField in objectItems)
+    {
+        InferenceFields subFields = itemField.ObjectField.Fields;
+        
+        // grab a single sub-field
+        SimpleField subField1 = subFields["subfield_1"].SimpleField;
+        
+        // Choose the appropriate value type:
+        // string, Double, Boolean
+        string subFieldValue = subField1.Value;
+        
+        // loop over sub-fields
+        foreach (var entry in subFields)
+        {
+            string fieldName = entry.Key;
+            SimpleField subField = entry.Value.SimpleField;
         }
     }
 }
