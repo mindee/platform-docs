@@ -168,7 +168,57 @@ public void HandleMindeeCallback(HttpRequest request)
 {% endtab %}
 {% endtabs %}
 
-## Accessing Fields
+## The Inference Object
+
+This is the top-level object in the response.
+
+It contains the following attributes:
+
+* `id` UUID of the inference
+* `model` Model used for the inference
+* `file` Metadata concerning the file used for the inference
+* `result` Result of inference processing, the most important portion of the response
+
+### File Metadata
+
+You can access various metadata concerning the file sent for processing.
+
+{% tabs %}
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.InferenceFile;
+
+public void handleResponse(InferenceResponse response) {
+    InferenceFile file = response.inference.getFile();
+
+    // various attributes are available, such as:
+    String filename = file.getName();
+    int pageCount = file.getPageCount();
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```csharp
+using Mindee.Parsing.V2;
+
+public void HandleResponse(InferenceResponse response)
+{
+    InferenceFile file = response.Inference.File;
+
+    // various attributes are available, such as:
+    string filename = file.Name;
+    int pageCount = file.PageCount;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## Accessing Result Fields
 
 Fields are completely dynamic and depend on your model's [data-schema.md](../../models/data-schema.md "mention").
 
@@ -573,7 +623,7 @@ import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.FieldConfidence;
 import com.mindee.parsing.v2.field.InferenceFields;
 
-public void handleFieldConfidence(InferenceResponse response) {
+public void handleResponse(InferenceResponse response) {
     InferenceFields fields = inference.getResult().getFields();
 
     // choose the appropriate field type accessor method: Simple, Object, List
@@ -629,7 +679,7 @@ import com.mindee.parsing.v2.field.FieldLocation;
 import com.mindee.parsing.v2.field.InferenceFields;
 import java.util.List;
 
-public void handleFieldLocation(InferenceResponse response) {
+public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
     // choose the appropriate field type accessor method: Simple, Object
