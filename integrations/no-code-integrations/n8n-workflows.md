@@ -14,7 +14,7 @@ We are working on updating the Mindee n8n node.
 
 ## Use a Sample Workflow
 
-Use our provided sample workflow and use it as base for creating your own workflow.
+Use our provided sample workflow file and use it as base for creating your own workflow.
 
 You can also import into an existing workflow, the new nodes will simply be added.
 

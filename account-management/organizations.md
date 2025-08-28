@@ -10,7 +10,7 @@ icon: users-rectangle
 
 # Organizations
 
-### 👥 Roles
+### Roles
 
 Each organization is governed by a **role system**. A user must be explicitly added to an organization to access it — except for the **creator**, who is automatically granted the `owner` role.
 
@@ -26,34 +26,34 @@ Each organization is governed by a **role system**. A user must be explicitly ad
 ⚠️ Only one **owner** per workflow. Ownership is set at creation and cannot be transferred via API.
 {% endhint %}
 
-### 🔐 Role Behavior & Rules
+### Role Behavior & Rules
 
 * The **creator** of an organization is always set as its `owner` automatically.
 * Organization **admins don't have the same right as owners**.
 * **Admins cannot promote, edit, or remove owners or other admins**.
 
-### 🔄 Managing Members
+### Managing Members
 
 These endpoints are available to **organization users** only.
 
-#### ➕ Add a Member
+#### Add a Member
 
 **Role required:** `admin` or `owner`
 
-#### 📋 List Members
+#### List Members
 
 **Role required:** `approver` or higher
 
-#### ✏️ Update Member Role
+#### Update Member Role
 
 **Role required:** `admin` or `own`
 
-#### ❌ Remove Member
+#### Remove Member
 
 **Role required:** `admin` or `owner`
 
 {% hint style="warning" %}
-⚠️ You cannot remove existing `owners` or `admins`.
+You cannot remove existing `owners` or `admins`.
 {% endhint %}
 
 Only users in an **organization** can be assigned roles. Standalone users are considered `owners` by default.

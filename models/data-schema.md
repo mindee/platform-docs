@@ -6,7 +6,9 @@ icon: atom
 
 ## Overview&#x20;
 
-An Extraction Data Schema is a type of structured data that helps the system identify which data points to extract from specific documents. It guides the system on the technical processes required and ensures the extracted data is formatted for easy access by the user.\
+An Extraction Data Schema is a type of structured data that helps the system identify which data points to extract from specific documents.
+
+A Data Schema guides the system on the technical processes required and ensures the extracted data is formatted for easy access by the user.\
 \
 The Data Schema is composed of a certain number of Fields (or data points), each with a type and an example.
 

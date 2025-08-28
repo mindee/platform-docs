@@ -55,7 +55,8 @@ You'll need to make a separate instance of the client classes:
 * .NET and Java, use `MindeeClient` and `MindeeClientV2`
 * all others, use `Client` and `ClientV2`
 
-The code to make requests and to process results is completely different.\
+The code to make requests and to process results is **completely different** between v1 and v2.
+
 We highly recommend having different files (or even modules) for handling each API version.
 
 ### Can I send only a specific page of a multi-page PDF?

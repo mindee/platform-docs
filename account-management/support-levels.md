@@ -7,17 +7,13 @@ icon: hands-holding-heart
 Mindee provides different levels of support depending on your subscription plan.\
 Support options range from community-driven help to real-time chat with priority handling for urgent needs.
 
-***
-
 ## Support Overview <a href="#support-overview" id="support-overview"></a>
 
-| Support                                                                       | Starter |                 Pro                 |                  Business                 |
-| ----------------------------------------------------------------------------- | :-----: | :---------------------------------: | :---------------------------------------: |
-| **Community Support** via [feedback.mindee.com](https://feedback.mindee.com/) |    ✅    |                  ✅                  |                     ✅                     |
-| **Live Chat Support**                                                         |    ❌    | <p>✅ </p><p>Dedicated live chat</p> |    <p>✅ </p><p>Dedicated live chat</p>    |
-| **Priority Support**                                                          |    ❌    |                  ❌                  | <p>✅ </p><p>Priority handling in chat</p> |
-
-***
+| Support                                                                       | Starter |               Pro              |                  Business                 |
+| ----------------------------------------------------------------------------- | :-----: | :----------------------------: | :---------------------------------------: |
+| **Community Support** via [feedback.mindee.com](https://feedback.mindee.com/) |    ✅    |               ✅                |                     ✅                     |
+| **Chat Support**                                                              |    ❌    | <p>✅ </p><p>Dedicated chat</p> |       <p>✅ </p><p>Dedicated chat</p>      |
+| **Priority Support**                                                          |    ❌    |               ❌                | <p>✅ </p><p>Priority handling in chat</p> |
 
 ## Support Options <a href="#support-options" id="support-options"></a>
 
@@ -26,15 +22,13 @@ Support options range from community-driven help to real-time chat with priority
 All plans include access to our community forum at [feedback.mindee.com](https://feedback.mindee.com/).\
 This is the best place to ask questions, exchange ideas with other users, and access responses from the Mindee team.
 
-### Live Chat Support
+### Chat Support
 
-Available from the **Pro plan** onwards, Live Chat connects you directly with our support team via a dedicated chat channel for faster and more direct assistance.
+Available from the **Pro plan** onward, our Chat connects you directly with our support team via a dedicated chat channel for faster and more direct assistance.
 
 ### Priority Support
 
 Included in the **Business plan**, Priority Support ensures that your requests are addressed first in the chat queue, reducing waiting times for critical issues.
-
-***
 
 ## Choosing the Right Level <a href="#choosing-the-right-level" id="choosing-the-right-level"></a>
 
