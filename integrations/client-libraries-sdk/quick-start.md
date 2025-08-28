@@ -35,6 +35,50 @@ Here are basic code examples, these are self-contained and can be run as-is:
 {% endtab %}
 
 {% tab title="Java" %}
+{% include "../../.gitbook/includes/code-samples/java.md" %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% include "../../.gitbook/includes/code-samples/dotnet.md" %}
+{% endtab %}
+{% endtabs %}
+
+### Details on Sending
+
+For details on available options and advanced usage, check the following sections:
+
+* [configure-the-client.md](configure-the-client.md "mention")
+* [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* [send-a-file-or-url.md](send-a-file-or-url.md "mention")
+
+## Processing the Results
+
+Once you've sent the file and retrieved the results, you can start extracting the JSON payload.
+
+The model's fields will be in the `fields` object in the returned JSON, in the `response` variable returned from the above step.
+
+Each key in the `fields` object corresponds to the field's `name` in your model configuration.
+
+You'll want to adapt your processing depending on the [type of field](../../models/data-schema.md#field-types), for example looping over lists.
+
+{% tabs %}
+{% tab title="Python" %}
+{% include "../../.gitbook/includes/code-samples/process-python.md" %}
+{% endtab %}
+
+{% tab title="Node.js" %}
+{% include "../../.gitbook/includes/code-samples/process-javascript.md" %}
+{% endtab %}
+
+{% tab title="PHP" %}
+{% include "../../.gitbook/includes/code-samples/process-php.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+{% include "../../.gitbook/includes/code-samples/process-ruby.md" %}
+{% endtab %}
+
+{% tab title="Java" %}
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 We need to access the field as a `SimpleField` instance in order to access its `value`.
@@ -138,50 +182,6 @@ for (ObjectField itemField : objectItems) {
 ```
 
 Depending on your requirements, this can be simplified using various custom methods.
-{% endtab %}
-
-{% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/dotnet.md" %}
-{% endtab %}
-{% endtabs %}
-
-### Details on Sending
-
-For details on available options and advanced usage, check the following sections:
-
-* [configure-the-client.md](configure-the-client.md "mention")
-* [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* [send-a-file-or-url.md](send-a-file-or-url.md "mention")
-
-## Processing the Results
-
-Once you've sent the file and retrieved the results, you can start extracting the JSON payload.
-
-The model's fields will be in the `fields` object in the returned JSON, in the `response` variable returned from the above step.
-
-Each key in the `fields` object corresponds to the field's `name` in your model configuration.
-
-You'll want to adapt your processing depending on the [type of field](../../models/data-schema.md#field-types), for example looping over lists.
-
-{% tabs %}
-{% tab title="Python" %}
-{% include "../../.gitbook/includes/code-samples/process-python.md" %}
-{% endtab %}
-
-{% tab title="Node.js" %}
-{% include "../../.gitbook/includes/code-samples/process-javascript.md" %}
-{% endtab %}
-
-{% tab title="PHP" %}
-{% include "../../.gitbook/includes/code-samples/process-php.md" %}
-{% endtab %}
-
-{% tab title="Ruby" %}
-{% include "../../.gitbook/includes/code-samples/process-ruby.md" %}
-{% endtab %}
-
-{% tab title="Java" %}
-{% include "../../.gitbook/includes/code-samples/process-java.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
