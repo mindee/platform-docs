@@ -1,3 +1,7 @@
+---
+icon: lock
+---
+
 # Data Processing Policies
 
 Mindee provides flexible options to help you manage how and where your document data is processed, stored, and deleted. This ensures compliance with regional regulations and gives you better control over data retention and privacy.
