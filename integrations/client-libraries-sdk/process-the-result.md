@@ -198,6 +198,7 @@ def handle_response(response: InferenceResponse):
     # various attributes are available, such as:
     filename: str = inference_file.name
     page_count: int = file.page_count
+    mime_type: str = file.mine_type
 ```
 {% endtab %}
 
@@ -207,11 +208,47 @@ Using the `response` deserialized object from either the polling response or a w
 ```javascript
 handleResponse(response) {
   const file = response.inference.file;
-  
+
   // various attributes are available, such as:
   const filename = file.name;
   const pageCount = file.pageCount;
+  const mimeType = file.mimeType;
 }
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $file = $response->inference->file;
+
+    // various attributes are available, such as:
+    $filename = $file->name;
+    $pageCount = $file->pageCount;
+    $mimeType = $file->mimeType;
+}
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```ruby
+require 'mindee'
+
+def handle_response(response)
+  file = response.inference.file
+
+  # various attributes are available, such as:
+  filename = inference_file.name
+  page_count = file.page_count
+  mime_type = file.mime_type
+end
 ```
 {% endtab %}
 
@@ -220,6 +257,7 @@ Using the `response` deserialized object from either the polling response or a w
 
 ```java
 import com.mindee.parsing.v2.InferenceFile;
+import com.mindee.parsing.v2.InferenceResponse;
 
 public void handleResponse(InferenceResponse response) {
     InferenceFile file = response.inference.getFile();
@@ -227,6 +265,7 @@ public void handleResponse(InferenceResponse response) {
     // various attributes are available, such as:
     String filename = file.getName();
     int pageCount = file.getPageCount();
+    String mimeType = file.getMimeType();
 }
 ```
 {% endtab %}
@@ -244,6 +283,7 @@ public void HandleResponse(InferenceResponse response)
     // various attributes are available, such as:
     string filename = file.Name;
     int pageCount = file.PageCount;
+    string mimeType = file.MimeType;
 }
 ```
 {% endtab %}
