@@ -315,6 +315,7 @@ In addition, the `Simplefield` class has [#confidence](process-the-result.md#con
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.SimpleField;
 
@@ -361,6 +362,7 @@ You'll need to explicitly declare the type, otherwise the code will likely not c
 Take a look at your Data Schema to know which type to declare.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.InferenceFields;
 
 public void handleResponse(InferenceResponse response) {
@@ -436,6 +438,7 @@ In addition, the `ObjectField` class has [#confidence](process-the-result.md#con
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ObjectField;
 
@@ -465,7 +468,7 @@ public void HandleResponse(InferenceResponse response)
 
 ### `fields`
 
-The sub-fields as a key-value mapping type (Python's `dict`, Java's `HashMap`, etc).
+The sub-fields as a key-value mapping type (Python `dict`, Java `HashMap`, etc).
 
 Accessing a sub-field is done via its name in the Data Schema.
 
@@ -476,6 +479,7 @@ Each sub-field will be a [#single-value-field-simplefield](process-the-result.md
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.ObjectField;
@@ -540,6 +544,7 @@ In addition, the `ListField` class has a [#confidence](process-the-result.md#con
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 
@@ -569,8 +574,9 @@ public void HandleResponse(InferenceResponse response)
 
 ### `items`
 
-Each item in the list can _theoretically_ be of any type (single, multi, list).\
-**In practice:** Each field in the list will be one of:
+List of fields as a variable-length array type (Python `list`, Java `List`, etc).
+
+Each item in the list will be one of:
 
 * [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention")
 * [#nested-object-field-objectfield](process-the-result.md#nested-object-field-objectfield "mention")
@@ -582,6 +588,7 @@ There will **not** be a mix of both types in the same list.
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
+import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.ObjectField;
