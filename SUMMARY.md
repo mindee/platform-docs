@@ -16,6 +16,7 @@
 * [Polygons (Bounding Boxes)](models/polygons-bounding-boxes.md)
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
+* [Data Processing Policies](models/data-processing-policies.md)
 * [Tutorials](models/tutorials.md)
 
 ## Integrations
