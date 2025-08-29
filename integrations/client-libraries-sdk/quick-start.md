@@ -67,11 +67,42 @@ You'll want to adapt your processing depending on the [type of field](../../mode
 {% endtab %}
 
 {% tab title="Node.js" %}
-{% include "../../.gitbook/includes/code-samples/process-javascript.md" %}
+Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/javascript-process-simplefield.md" %}
+
+Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/javascript-process-listfield-simplefield.md" %}
+
+Accessing an object field, where `my_object_field` is the name of the field in the Model.\
+In this hypothetical case, the object has a sub-field named `sub_field` .
+
+{% include "../../.gitbook/includes/code-samples/javascript-process-objectfield.md" %}
+
+Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/javascript-process-listfield-objectfield.md" %}
+
 {% endtab %}
 
 {% tab title="PHP" %}
-{% include "../../.gitbook/includes/code-samples/process-php.md" %}
+Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/php-process-simplefield.md" %}
+
+Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/php-process-listfield-simplefield.md" %}
+
+Accessing an object field, where `my_object_field` is the name of the field in the Model.
+In this hypothetical case, the object has a sub-field named `sub_field`.
+
+{% include "../../.gitbook/includes/code-samples/php-process-objectfield.md" %}
+
+Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/php-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
@@ -86,7 +117,7 @@ We need to access the field as a `SimpleField` instance in order to access its v
 We also need to specify the type of value, the possible types are `String` , `Boolean` , `Double` .\
 Notice that these are all classes, not primitives: this is to allow `null` values.
 
-{% include "../../.gitbook/includes/java-process-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-simplefield.md" %}
 
 Accessing a list of simple values, where `my_simple_list_field` is the name of the field in the Model.
 
@@ -94,22 +125,41 @@ We need to specify that the field is a `ListField` in order to access its `Simpl
 
 For each item in the list, we also need to specify the correct field and value type, as described above.
 
-{% include "../../.gitbook/includes/java-process-listfield-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-listfield-simplefield.md" %}
 
 Accessing an object field, where `my_object_field` is the name of the field in the Model.\
 In this hypothetical case, the object has a sub-field named `subfield_1` .
 
-{% include "../../.gitbook/includes/java-process-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-objectfield.md" %}
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
-{% include "../../.gitbook/includes/java-process-listfield-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-listfield-objectfield.md" %}
 
 Depending on your requirements, this can be simplified using various custom methods.
 {% endtab %}
 
 {% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/process-dotnet.md" %}
+Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+
+We need to specify that the field is a `SimpleField` in order to access its value.
+
+{% include "../../.gitbook/includes/code-samples/dotnet-process-simplefield.md" %}
+
+Accessing a list of simple values, where `my_list_field` is the name of the field in the Model.
+
+We need to specify that the field is a `ListField` in order to access its `SimpleItems`.
+
+{% include "../../.gitbook/includes/code-samples/dotnet-process-listfield-simplefield.md" %}
+
+Accessing an object field, where `my_object_field` is the name of the field in the Model.\
+In this hypothetical case, the object has a sub-field named `sub_field` .
+
+{% include "../../.gitbook/includes/code-samples/dotnet-process-objectfield.md" %}
+
+Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/dotnet-process-listfield-objectfield.md" %}
 {% endtab %}
 {% endtabs %}
 

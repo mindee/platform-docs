@@ -373,7 +373,7 @@ The `value` attribute is an `Object` type under the hood.
 You should use the explicitly-typed accessors, this is recommended for clarity.\
 Take a look at your Data Schema to know which typed accessor to use.
 
-{% include "../../.gitbook/includes/javascript-process-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-process-simplefield.md" %}
 
 If the wrong accessor type is used, an exception will be thrown, something like this:
 
@@ -388,7 +388,7 @@ The `value` attribute is an `Object` type under the hood.
 You'll need to explicitly declare the type, otherwise the code will likely not compile.\
 Take a look at your Data Schema to know which type to declare.
 
-{% include "../../.gitbook/includes/java-process-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-simplefield.md" %}
 
 If the wrong type method is used, an exception will be thrown, something like this:
 
@@ -403,7 +403,7 @@ The `Value` attribute is a `dynamic` type under the hood.
 You should explicitly declare the type, this is recommended for clarity.\
 Take a look at your Data Schema to know which type to declare.
 
-{% include "../../.gitbook/includes/dotnet-process-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-process-simplefield.md" %}
 
 If the wrong type is declared, an exception will be raised, something like this:
 
@@ -477,19 +477,19 @@ Each sub-field will be a [#single-value-field-simplefield](process-the-result.md
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/javascript-process-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-process-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/java-process-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-objectfield.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/dotnet-process-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-process-objectfield.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -562,19 +562,19 @@ There will **not** be a mix of both types in the same list.
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/javascript-process-listfield-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-process-listfield-simplefield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/java-process-listfield-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-listfield-simplefield.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/dotnet-process-listfield-simplefield.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-process-listfield-simplefield.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -584,19 +584,19 @@ Using the `response` deserialized object from either the polling response or a w
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/javascript-process-listfield-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/java-process-listfield-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/java-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-{% include "../../.gitbook/includes/dotnet-process-listfield-objectfield.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-process-listfield-objectfield.md" %}
 {% endtab %}
 {% endtabs %}
 
