@@ -27,7 +27,9 @@ Don't see support for your favorite platform? [Make a feature request!](https://
 
 You'll need to use HTTP nodes in your workflow that can POST and GET a specified URL.
 
-First, POST a file to the [#post-v2-inferences-enqueue](../api-reference.md#post-v2-inferences-enqueue "mention") route. You'll need you API key and Model ID.
+First, POST a file to the [#post-v2-inferences-enqueue](../api-reference.md#post-v2-inferences-enqueue "mention") route. You'll need you API key and Model ID.\
+Authenticate using an `Authorization` header containing only your API key.\
+The Model ID must be sent as a form parameter.
 
 In this POST response, there will be a `polling_url` attribute, save its value.
 
