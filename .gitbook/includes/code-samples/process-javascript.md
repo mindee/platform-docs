@@ -5,8 +5,11 @@ title: process-javascript
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
 ```javascript
-const mySimpleField = response.inference.result.fields.get("my_simple_field");
-const fieldValue = mySimpleField.value;
+handleResponse(response) {
+  const fields = response.inference.result.fields;
+  const simpleField = fields.getSimpleField("my_simple_field");
+  const fieldValue = mySimpleField.value;
+}
 ```
 
 Accessing a list of values, where `my_list_field` is the name of the field in the Model.

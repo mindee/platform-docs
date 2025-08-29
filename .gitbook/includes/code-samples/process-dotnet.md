@@ -4,7 +4,7 @@ title: process-dotnet
 
 Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
 
-We need to specify that the field is a `SimpleField` in order to access its `Value`.
+We need to specify that the field is a `SimpleField` in order to access its value.
 
 ```csharp
 using Mindee.Parsing.V2;

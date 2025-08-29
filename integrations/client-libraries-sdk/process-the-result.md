@@ -311,6 +311,18 @@ See the [#value](process-the-result.md#value "mention") section below.
 In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+handleResponse(response) {
+  const fields = response.inference.result.fields;
+
+  const simpleField = fields.getSimpleField("my_simple_field");
+}
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -355,38 +367,30 @@ These are returned as strings.
 For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
 
 {% tabs %}
+{% tab title="Node.js" %}
+The `value` attribute is an `Object` type under the hood.
+
+You should use the explicitly-typed accessors, this is recommended for clarity.\
+Take a look at your Data Schema to know which typed accessor to use.
+
+{% include "../../.gitbook/includes/javascript-process-simplefield.md" %}
+
+If the wrong accessor type is used, an exception will be thrown, something like this:
+
+```
+"Value is not a number"
+```
+{% endtab %}
+
 {% tab title="Java" %}
 The `value` attribute is an `Object` type under the hood.
 
 You'll need to explicitly declare the type, otherwise the code will likely not compile.\
 Take a look at your Data Schema to know which type to declare.
 
-```java
-import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
+{% include "../../.gitbook/includes/java-process-simplefield.md" %}
 
-public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
-
-    // texts, dates, classifications ...
-    String stringFieldValue = fields.getSimpleField("string_field")
-        .getStringValue();
-
-    // a JSON float will be a Double
-    Double floatFieldValue = fields.getSimpleField("float_field")
-        .getDoubleValue();
-
-    // even if the API always returns an integer, the type will be Double
-    Double intFieldValue = fields.getSimpleField("int_field")
-        .getDoubleValue();
-
-    // booleans
-    Boolean boolFieldValue = fields.getSimpleField("bool_field")
-        .getBooleanValue();
-}
-```
-
-If the wrong type method is used, an exception will be raised, something like this:
+If the wrong type method is used, an exception will be thrown, something like this:
 
 ```
 ClassCast class java.lang.String cannot be cast to class java.lang.Double
@@ -399,24 +403,7 @@ The `Value` attribute is a `dynamic` type under the hood.
 You should explicitly declare the type, this is recommended for clarity.\
 Take a look at your Data Schema to know which type to declare.
 
-```csharp
-using Mindee.Parsing.V2.Field;
-
-public void HandleResponse(InferenceResponse response)
-{
-    // texts, dates, classifications ...
-    string stringFieldValue = fields["string_field"].SimpleField.Value;
-
-    // a JSON float will be a Double
-    Double floatFieldValue = fields["float_field"].SimpleField.Value;
-
-    // even if the API always returns an integer, the type will be Double
-    Double intFieldValue = fields["int_field"].SimpleField.Value;
-
-    // booleans
-    Boolean boolFieldValue = fields["bool_field"].SimpleField.Value;
-}
-```
+{% include "../../.gitbook/includes/dotnet-process-simplefield.md" %}
 
 If the wrong type is declared, an exception will be raised, something like this:
 
@@ -434,6 +421,18 @@ See the [#fields](process-the-result.md#fields "mention") section below.
 In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+handleResponse(response) {
+  const fields = response.inference.result.fields;
+
+  const objectField = fields.getObjectField("my_object_field");
+}
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -475,60 +474,22 @@ Accessing a sub-field is done via its name in the Data Schema.
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/javascript-process-objectfield.md" %}
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-```java
-import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
-import com.mindee.parsing.v2.field.ListField;
-import com.mindee.parsing.v2.field.ObjectField;
-import com.mindee.parsing.v2.field.SimpleField;
-
-public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
-
-    ObjectField objectField = fields.getObjectField("my_object_field");
-    
-    HashMap<String, SimpleField> subFields = objectField.getSimpleFields();
-    
-    // grab a single sub-field
-    SimpleField subfield1 = subFields.get("subfield_1");
-    
-    // loop over sub-fields
-    for (Map.Entry<String, SimpleField> entry : subFields.entrySet()) {
-        String fieldName = entry.getKey();
-        SimpleField subField = entry.getValue();
-    }
-}
-```
+{% include "../../.gitbook/includes/java-process-objectfield.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-```csharp
-using Mindee.Parsing.V2.Field;
-
-public void HandleResponse(InferenceResponse response)
-{
-    InferenceFields fields = response.Inference.Result.Fields;
-
-    ObjectField objectField = fields["my_object_field"].ObjectField;
-
-    Dictionary<string, SimpleField> subFields = objectField.SimpleFields;
-
-    // grab a single sub-field
-    SimpleField subField1 = subFields["subfield_1"];
-
-    // loop over sub-fields
-    foreach (KeyValuePair<string, SimpleField> entry in subFields)
-    {
-        string fieldName = entry.Key;
-        SimpleField subField = entry.Value;
-    }
-}
-```
+{% include "../../.gitbook/includes/dotnet-process-objectfield.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -540,6 +501,18 @@ See the [#items](process-the-result.md#items "mention") section below.
 In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
 
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+handleResponse(response) {
+  const fields = response.inference.result.fields;
+
+  const listField = fields.getListField("my_list_field");
+}
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -583,121 +556,47 @@ Each item in the list will be one of:
 
 There will **not** be a mix of both types in the same list.
 
+#### SimpleField List
+
 {% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/javascript-process-listfield-simplefield.md" %}
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-```java
-import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
-import com.mindee.parsing.v2.field.ListField;
-import com.mindee.parsing.v2.field.ObjectField;
-import com.mindee.parsing.v2.field.SimpleField;
-
-public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
-
-    //
-    // List of Simple fields
-    //
-
-    ListField fieldSimpleList = fields.getListField("my_simple_list_field");
-
-    List<SimpleField> simpleItems = fieldSimpleList.getSimpleItems();
-
-    // Loop over the list of Simple fields
-    for (SimpleField itemField : simpleItems) {
-        // Choose the appropriate value type accessor method:
-        // String, Double, Boolean
-        String fieldValue = itemField.getStringValue();
-    }
-
-    //
-    // List of Object fields
-    //
-
-    ListField fieldObjectList = fields.getListField("my_object_list_field");
-
-    List<ObjectField> objectItems = listField.getObjectItems();
-
-    // Loop over the list of Object fields
-    for (ObjectField itemField : objectItems) {
-    
-        // Object sub-fields will always be Simple fields
-        HashMap<String, SimpleField> subFields = itemField.getSimpleFields();
-
-        // grab a single sub-field
-        SimpleField subfield1 = subFields.get("subfield_1");
-        
-        // Choose the appropriate value type accessor method:
-        // String, Double, Boolean
-        String subFieldValue = subfield1.getStringValue();
-
-        // loop over sub-fields
-        for (Map.Entry<String, SimpleField> entry : subFields.entrySet()) {
-            String fieldName = entry.getKey();
-            SimpleField subField = entry.getValue();
-        }
-    }
-}
-```
+{% include "../../.gitbook/includes/java-process-listfield-simplefield.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
-```csharp
-using Mindee.Parsing.V2.Field;
+{% include "../../.gitbook/includes/dotnet-process-listfield-simplefield.md" %}
+{% endtab %}
+{% endtabs %}
 
-public void HandleResponse(InferenceResponse response)
-{
-    InferenceFields fields = response.Inference.Result.Fields;
+#### ObjectField List
 
-    //
-    // List of Simple fields
-    //
+{% tabs %}
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
 
-    ListField fieldSimpleList = fields["my_simple_list_field"].ListField;
+{% include "../../.gitbook/includes/javascript-process-listfield-objectfield.md" %}
+{% endtab %}
 
-    List<SimpleField> simpleItems = fieldSimpleList.SimpleItems;
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
 
-    // Loop over the list of Simple fields
-    foreach (SimpleField itemField in simpleItems)
-    {
-        // Choose the appropriate value type:
-        // string, Double, Boolean
-        string fieldValue = itemField.Value;
-    }
+{% include "../../.gitbook/includes/java-process-listfield-objectfield.md" %}
+{% endtab %}
 
-    //
-    // List of Object fields
-    //
-    
-    ListField fieldObjectList = fields["my_simple_list_field"].ListField;
-    
-    List<ObjectField> objectItems = fieldObjectList.ObjectItems;
-    
-    // Loop over the list of Object fields
-    foreach (ObjectField itemField in objectItems)
-    {
-        Dictionary<string, SimpleField> subFields = objectField.SimpleFields;
-    
-        // grab a single sub-field
-        SimpleField subField1 = subFields["subfield_1"];
-        
-        // Choose the appropriate value type:
-        // string, Double, Boolean
-        string subFieldValue = subField1.Value;
-    
-        // loop over sub-fields
-        foreach (KeyValuePair<string, SimpleField> entry in subFields)
-        {
-            string fieldName = entry.Key;
-            SimpleField subField = entry.Value;
-        }
-    }
-}
-```
+{% tab title=".NET" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/dotnet-process-listfield-objectfield.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -739,12 +638,14 @@ is_certain = confidence == FieldConfidence.CERTAIN
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```javascript
-fields = response.inference.result.fields;
+handleResponse(response) {
+  const fields = response.inference.result.fields;
 
-const confidence = fields.get("my_simple_field")?.confidence
+  const confidence = fields.getSimpleField("my_simple_field")?.confidence
 
-// compare using the enum `FieldConfidence`
-const isCertain = confidence === FieldConfidence.Certain;
+  // compare using the enum `FieldConfidence`
+  const isCertain = confidence === FieldConfidence.Certain;
+}
 ```
 {% endtab %}
 
@@ -841,18 +742,23 @@ Point X,Y coordinates are normalized floats from 0.0 to 1.0, relative to the pag
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```javascript
-fields = response.inference.result.fields;
+handleResponse(response) {
+  const fields = response.inference.result.fields;
 
-const locations = fields.get("my_simple_field")?.locations;
+  const locations = fields.getSimpleField("my_simple_field")?.locations;
 
-// accessing the polygon
-const polygon = locations![0].polygon!;
+  // accessing the polygon
+  const polygon = locations![0].polygon!;
 
-// accessing points: the Polygon class extends Array<Point>
-double topX = polygon[0][0];
+  // accessing points: the Polygon class extends Array<Point>
+  const topX = polygon[0][0];
 
-// accessing the page index on which the polygon is
-const pageIndex = locations![0].page!;
+  // there are geometry functions available in the Polygon class
+  const center = polygon.getCentroid();
+
+  // accessing the page index on which the polygon is
+  const pageIndex = locations![0].page!;
+}
 ```
 {% endtab %}
 
