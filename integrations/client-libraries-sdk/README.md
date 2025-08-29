@@ -18,7 +18,7 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 
 ## Basic Usage
 
-To get started, take a look at the [quickstart.md](../../getting-started/quickstart.md "mention") page.
+To get started, take a look at the [quick-start.md](quick-start.md "mention")  page.
 
 ## Usage Details
 
