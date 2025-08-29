@@ -3,12 +3,14 @@ title: python-process-listfield-simplefield
 ---
 
 ```python
-my_list_field = response.inference.result.fields["my_list_field"]
+from mindee import InferenceResponse
 
-# access a value at a given position
-field_first_value = my_list_field.items[0].value
+def handle_response(response: InferenceResponse):
+    fields = response.inference.result.fields
 
-# loop over all values in the list
-for list_item in my_list_field:
-    item_value = list_item.value
+    my_list_field = fields["my_list_field"]
+
+    # loop over all values in the list
+    for list_item in my_list_field:
+        item_value = list_item.value
 ```

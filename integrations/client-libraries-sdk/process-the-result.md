@@ -367,6 +367,12 @@ These are returned as strings.
 For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/python-process-simplefield.md" %}
+{% endtab %}
+
 {% tab title="Node.js" %}
 The `value` attribute is an `Object` type under the hood.
 
@@ -380,6 +386,18 @@ If the wrong accessor type is used, an exception will be thrown, something like 
 ```
 "Value is not a number"
 ```
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/php-process-simplefield.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-simplefield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
@@ -474,10 +492,28 @@ Accessing a sub-field is done via its name in the Data Schema.
 Each sub-field will be a [#single-value-field-simplefield](process-the-result.md#single-value-field-simplefield "mention").
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/python-process-objectfield.md" %}
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-objectfield.md" %}
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/php-process-objectfield.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
@@ -559,10 +595,28 @@ There will **not** be a mix of both types in the same list.
 #### SimpleField List
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/python-process-listfield-simplefield.md" %}
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-listfield-simplefield.md" %}
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/php-process-listfield-simplefield.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-listfield-simplefield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
@@ -581,10 +635,28 @@ Using the `response` deserialized object from either the polling response or a w
 #### ObjectField List
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/python-process-listfield-objectfield.md" %}
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-listfield-objectfield.md" %}
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/php-process-listfield-objectfield.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}

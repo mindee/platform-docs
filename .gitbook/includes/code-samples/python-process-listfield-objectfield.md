@@ -3,13 +3,14 @@ title: python-process-listfield-objectfield
 ---
 
 ```python
-object_list_field = response.inference.result.fields["my_object_list_field"]
+from mindee import InferenceResponse
 
-# access an object at a given position
-object_item_0 = object_list_field.items[0]
-sub_field_0_value = object_item_0["sub_field"].value
+def handle_response(response: InferenceResponse):
+    fields = response.inference.result.fields
 
-# loop over object lists
-for object_item in object_list_field.items:
-  sub_field_value = object_item.fields["sub_field"].value
+    object_list_field = fields["my_object_list_field"]
+
+    # loop over object lists
+    for object_item in object_list_field.items:
+      sub_field_value = object_item.fields["sub_field"].value
 ```
