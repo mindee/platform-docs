@@ -63,7 +63,22 @@ You'll want to adapt your processing depending on the [type of field](../../mode
 
 {% tabs %}
 {% tab title="Python" %}
-{% include "../../.gitbook/includes/code-samples/process-python.md" %}
+Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/python-process-simplefield.md" %}
+
+Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/python-process-listfield-simplefield.md" %}
+
+Accessing an object field, where `my_object_field` is the name of the field in the Model.\
+In this hypothetical case, the object has a sub-field named `sub_field` .
+
+{% include "../../.gitbook/includes/code-samples/python-process-objectfield.md" %}
+
+Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/python-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Node.js" %}
@@ -83,7 +98,6 @@ In this hypothetical case, the object has a sub-field named `sub_field` .
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-listfield-objectfield.md" %}
-
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -106,7 +120,22 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 {% endtab %}
 
 {% tab title="Ruby" %}
-{% include "../../.gitbook/includes/code-samples/process-ruby.md" %}
+Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-simplefield.md" %}
+
+Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-listfield-simplefield.md" %}
+
+Accessing an object field, where `my_object_field` is the name of the field in the Model.\
+In this hypothetical case, the object has a sub-field named `sub_field` .
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-objectfield.md" %}
+
+Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
+
+{% include "../../.gitbook/includes/code-samples/ruby-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
