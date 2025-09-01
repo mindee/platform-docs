@@ -221,7 +221,7 @@ No — V1 APIs are no longer being developed. The focus has fully shifted to V2,
 
 ### Pricing Structure & Strategy
 
-You can take a look at the [billing](https://docs.mindee.com/account-management/billing) and [plans](https://docs.mindee.com/account-management/plans) documentation for more details.
+For more information, see the [billing](https://docs.mindee.com/account-management/billing) and [plans](https://docs.mindee.com/account-management/plans) documentation.
 
 <details>
 
