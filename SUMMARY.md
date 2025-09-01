@@ -12,7 +12,7 @@
 * [Models Overview](models/models-overview.md)
 * [Data Schema](models/data-schema.md)
 * [Continuous Learning (RAG)](models/improving-accuracy.md)
-* [Automation (Confidence Score)](models/automation-confidence-score.md)
+* [Confidence Scores (for Automation)](models/automation-confidence-score.md)
 * [Polygons (Bounding Boxes)](models/polygons-bounding-boxes.md)
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)

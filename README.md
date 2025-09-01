@@ -18,4 +18,4 @@ Mindee helps anyone automate document processing through data recognition, compu
 
 Our mission is to provide real-time, human-level accuracy in data extraction from paper and digital documents.
 
-{% include ".gitbook/includes/quickstart-supademo.md" %}
+{% @supademo/embed demoId="cmewtri4u8939v9kqh3q6u1g7" url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" %}

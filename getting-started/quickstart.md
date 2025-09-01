@@ -43,4 +43,4 @@ You'll need some way of importing the JSON structure and manipulating it.
 
 For quick testing, we recommend to [process-the-result.md](../integrations/client-libraries-sdk/process-the-result.md "mention") using our client libraries.
 
-{% include "../.gitbook/includes/quickstart-supademo.md" %}
+{% @supademo/embed demoId="cmewtri4u8939v9kqh3q6u1g7" url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" fullWidth="false" %}
