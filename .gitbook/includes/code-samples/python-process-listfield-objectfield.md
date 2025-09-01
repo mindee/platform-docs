@@ -6,11 +6,11 @@ title: python-process-listfield-objectfield
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields = response.inference.result.fields
+    fields: dict = response.inference.result.fields
 
     object_list_field = fields["my_object_list_field"]
 
-    # loop over object lists
+    # Loop over the list of Object fields
     for object_item in object_list_field.items:
       sub_field_value = object_item.fields["sub_field"].value
 ```

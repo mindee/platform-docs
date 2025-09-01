@@ -64,3 +64,9 @@ We highly recommend having different files (or even modules) for handling each A
 Yes. All libraries have support for cutting/extracting PDF pages.
 
 Check the [#pdf-page-manipulations](load-and-adjust-a-file.md#pdf-page-manipulations "mention") section.
+
+### Which features are supported?
+
+Anything documented here is supported and is considered stable for production use.
+
+Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.

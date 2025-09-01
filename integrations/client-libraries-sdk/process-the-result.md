@@ -318,7 +318,7 @@ Using the `response` deserialized object from either the polling response or a w
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields = response.inference.result.fields
+    fields: dict = response.inference.result.fields
 
     my_simple_field = fields["my_simple_field"]
 ```
@@ -550,6 +550,19 @@ See the [#items](process-the-result.md#items "mention") section below.
 In addition, the `ListField` class has a [#confidence](process-the-result.md#confidence "mention") attribute.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```python
+from mindee import InferenceResponse
+
+def handle_response(response: InferenceResponse):
+    fields: dict = response.inference.result.fields
+
+    my_list_field = fields["my_list_field"]
+```
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -710,12 +723,13 @@ Using the `response` deserialized object from either the polling response or a w
 ```python
 from mindee.parsing.v2.field import FieldConfidence
 
-fields = response.inference.result.fields
+def handle_response(response: InferenceResponse):
+    fields: dict = response.inference.result.fields
 
-confidence = fields["my_simple_field"].confidence
+    confidence = fields["my_simple_field"].confidence
 
-# compare using the enum `FieldConfidence`
-is_certain = confidence == FieldConfidence.CERTAIN
+    # compare using the enum `FieldConfidence`
+    is_certain = confidence == FieldConfidence.CERTAIN
 ```
 {% endtab %}
 

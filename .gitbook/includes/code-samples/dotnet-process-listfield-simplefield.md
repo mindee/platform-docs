@@ -9,9 +9,9 @@ public void HandleResponse(InferenceResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 
-    ListField fieldSimpleList = fields["my_simple_list_field"].ListField;
+    ListField simpleListField = fields["my_simple_list_field"].ListField;
 
-    List<SimpleField> simpleItems = fieldSimpleList.SimpleItems;
+    List<SimpleField> simpleItems = simpleListField.SimpleItems;
 
     // Loop over the list of Simple fields
     foreach (SimpleField itemField in simpleItems)

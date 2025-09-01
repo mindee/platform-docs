@@ -6,7 +6,7 @@ title: python-process-simplefield
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-  fields = response.inference.result.fields
+  fields: dict = response.inference.result.fields
 
   # texts, dates, classifications ...
   string_field_value: str = fields["string_field"].value;

@@ -10,7 +10,7 @@ $myObjectListField = $inferenceFields["my_object_list_field"];
 $objectItem0 = $myObjectListField->items[0];
 $subField0Value = $objectItem0["sub_field"]->value;
 
-// loop over object lists
+// Loop over the list of Object fields
 foreach ($myObjectListField->items as $objectItem) {
     $subFieldValue = $objectItem["sub_field"]->value;
 }

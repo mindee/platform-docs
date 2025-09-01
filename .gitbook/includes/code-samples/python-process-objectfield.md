@@ -6,8 +6,16 @@ title: python-process-objectfield
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields = response.inference.result.fields
+    fields: dict = response.inference.result.fields
 
     object_field = fields["my_object_field"]
-    sub_field_value = object_field.fields["sub_field"].value
+
+    sub_fields: dict = object_field.fields
+
+    # grab a single sub-field
+    subfield_1 = sub_fields["subfield_1"]
+
+    # loop over sub-fields
+    for field_name, sub_field in sub_fields.items():
+        sub_field.value
 ```

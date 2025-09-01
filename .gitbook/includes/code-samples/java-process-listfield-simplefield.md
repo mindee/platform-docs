@@ -11,9 +11,9 @@ import com.mindee.parsing.v2.field.SimpleField;
 public void handleResponse(InferenceResponse response) {
     InferenceFields fields = response.inference.getResult().getFields();
 
-    ListField fieldSimpleList = fields.getListField("my_simple_list_field");
+    ListField simpleListField = fields.getListField("my_simple_list_field");
 
-    List<SimpleField> simpleItems = fieldSimpleList.getSimpleItems();
+    List<SimpleField> simpleItems = simpleListField.getSimpleItems();
 
     // Loop over the list of Simple fields
     for (SimpleField itemField : simpleItems) {

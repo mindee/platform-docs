@@ -6,9 +6,9 @@ title: javascript-process-listfield-simplefield
 handleResponse(response) {
   const fields = response.inference.result.fields;
 
-  const fieldSimpleList = fields.getListField("my_simple_list_field");
+  const simpleListField = fields.getListField("my_simple_list_field");
 
-  const simpleItems = fieldSimpleList.simpleItems;
+  const simpleItems = simpleListField.simpleItems;
 
   // Loop over the list of Simple fields
   for (const itemField of simpleItems) {

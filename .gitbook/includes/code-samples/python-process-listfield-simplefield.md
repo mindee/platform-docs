@@ -6,11 +6,11 @@ title: python-process-listfield-simplefield
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields = response.inference.result.fields
+    fields: dict = response.inference.result.fields
 
-    my_list_field = fields["my_list_field"]
+    simple_list_field = fields["my_simple_list_field"]
 
-    # loop over all values in the list
-    for list_item in my_list_field.items:
+    # Loop over the list of Simple fields
+    for list_item in simple_list_field.items:
         item_value = list_item.value
 ```
