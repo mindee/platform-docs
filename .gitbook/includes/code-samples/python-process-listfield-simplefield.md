@@ -11,6 +11,6 @@ def handle_response(response: InferenceResponse):
     my_list_field = fields["my_list_field"]
 
     # loop over all values in the list
-    for list_item in my_list_field:
+    for list_item in my_list_field.items:
         item_value = list_item.value
 ```
