@@ -4,6 +4,8 @@ icon: vector-square
 
 # Polygons (Bounding Boxes)
 
+<figure><img src="../.gitbook/assets/image (4).png" alt="" width="375"><figcaption></figcaption></figure>
+
 ## Overview
 
 The `polygons` parameter, also commonly referred to as **bounding boxes**, is an option you can select in your Models.\
