@@ -45,7 +45,7 @@ You'll need a Remote Input Source as described below.
 Use the `URLInputSource` class.
 
 ```python
-from mindee.input import UrlInputSource
+from mindee import UrlInputSource
 
 input_source = UrlInputSource(
     "https://example.com/file.ext"

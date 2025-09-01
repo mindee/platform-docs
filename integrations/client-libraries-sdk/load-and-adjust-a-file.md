@@ -29,62 +29,68 @@ If you're unsure of which to use, we recommend loading from a path.
 
 {% tabs %}
 {% tab title="Python" %}
-You'll need to use the `mindee_client` instance created in [configure-the-client.md](configure-the-client.md "mention").
+To load a file, you'll need to import the corresponding input class from the `mindee` module.
 
-To load a path string, use `source_from_path` .
+To load a path string, use `PathInput` .
 
 ```python
+from mindee import PathInput
+
 input_path = "/path/to/the/file.ext"
-input_source = mindee_client.source_from_path(input_path)
+input_source = PathInput(input_path)
 ```
 
-To load a `Path` instance, use `source_from_path`.
+To load a `Path` instance, use `PathInput`.
 
 ```python
 from pathlib import Path
+from mindee import PathInput
 
 input_path = Path("/path/to/the/file.ext")
-input_source = mindee_client.source_from_path(input_path)
+input_source = PathInput(input_path)
 ```
 
-To load raw bytes, use `source_from_bytes` .
+To load raw bytes, use `BytesInput` .
 
 ```python
 from pathlib import Path
+from mindee import BytesInput
 
 input_path = Path("/path/to/the/file.ext")
 with input_path.open("rb") as fh:
     input_bytes = fh.read()
 
-input_source = mindee_client.source_from_bytes(
+input_source = BytesInput(
     input_bytes,
     filename="file.ext",
 )
 ```
 
-To load a base-64 string, use `source_from_b64string` .\
+To load a base-64 string, use `Base64Input` .\
 The string will be decoded into bytes internally.
 
 ```python
 from pathlib import Path
+from mindee import Base64Input
 
 input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
 
-input_source = mindee_client.source_from_b64string(
+input_source = Base64Input(
     input_base64,
     filename="base64_file.txt",
 )
 ```
 
-To load a file handle, use `source_from_file`.\
+To load a file handle, use `FileInput`.\
 It **must** be opened in binary mode, as a `BinaryIO` .
 
 ```python
 from pathlib import Path
+from mindee import FileInput
 
 input_path = Path("/path/to/the/file.ext")
 with input_path.open("rb") as fh:
-    input_source = mindee_client.source_from_file(fh)
+    input_source = FileInput(fh)
     # IMPORTANT:
     # Continue all operations inside the 'with' statement.
     mindee_client.enqueue_and_get_inference(
