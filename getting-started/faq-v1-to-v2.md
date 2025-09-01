@@ -74,6 +74,16 @@ Yes, V2 supports webhook integration for asynchronous document processing.&#x20;
 
 </details>
 
+<details>
+
+<summary>How do rate limits work in V2?</summary>
+
+The Mindee API allows up to 3,000 requests per hour (120 per minute, 5 per second). If you exceed these limits, requests will be rejected. For higher volumes, contact our sales team.
+
+More details on [technical limitations ](../integrations/technical-limitations.md)
+
+</details>
+
 ### Models performance
 
 <details>
