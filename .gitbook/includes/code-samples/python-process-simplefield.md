@@ -6,8 +6,17 @@ title: python-process-simplefield
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields = response.inference.result.fields
+  fields = response.inference.result.fields
 
-    my_simple_field = fields["my_simple_field"]
-    field_value = my_simple_field.value
+  # texts, dates, classifications ...
+  string_field_value: str = fields["string_field"].value;
+
+  # a JSON float will be a float
+  float_field_value: float = fields["float_field"].value;
+
+  # even if the API always returns an integer, the type will be float
+  int_field_value: float = fields["int_field"].value;
+
+  # booleans
+  bool_field_value: bool = fields["bool_field"].value;
 ```

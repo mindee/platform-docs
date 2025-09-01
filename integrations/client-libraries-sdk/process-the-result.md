@@ -311,6 +311,19 @@ See the [#value](process-the-result.md#value "mention") section below.
 In addition, the `Simplefield` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```python
+from mindee import InferenceResponse
+
+def handle_response(response: InferenceResponse):
+    fields = response.inference.result.fields
+
+    my_simple_field = fields["my_simple_field"]
+```
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
