@@ -221,6 +221,8 @@ No — V1 APIs are no longer being developed. The focus has fully shifted to V2,
 
 ### Pricing Structure & Strategy
 
+You can take a look at the [billing](https://docs.mindee.com/account-management/billing) and [plans](https://docs.mindee.com/account-management/plans) documentation for more details.
+
 <details>
 
 <summary>What are the main pricing changes in V2?</summary>
@@ -277,56 +279,6 @@ When you exceed your plan limits, overage charges are automatically billed on yo
 <summary>Can I try the v2 before committing to a paid plan?</summary>
 
 The v2 offers a 14-day & 500-page free trial (no credit card required), allowing you to test all features and functionality (Continuous Learning, API Keys, Polygons,…) before committing to a paid plan.
-
-</details>
-
-### Plan Management
-
-<details>
-
-<summary>Can I change plans mid-cycle?</summary>
-
-You can upgrade your plan at any time, even if you’re currently committed to another one. Just go to the Billing page and you’ll have the opportunity to switch to an other plan.
-
-</details>
-
-<details>
-
-<summary>What happens to unused pages at the end of the subscription?</summary>
-
-At the moment, pages are not carried over across different periods.
-
-</details>
-
-<details>
-
-<summary>Can I purchase additional pages without upgrading my plan?</summary>
-
-Additional page purchases are not available. Any usage beyond your plan limit will be billed at the overage rate.
-
-</details>
-
-<details>
-
-<summary>Can I pause or suspend my subscription temporarily?</summary>
-
-You can cancel your subscription and reactivate it at any time. Your models and settings will be saved, but you won't be able to process documents until you subscribe again.
-
-</details>
-
-<details>
-
-<summary>What's the cancellation policy for V2 subscriptions?</summary>
-
-You can cancel your subscription at any time through the billing tab in your account, and you don't need to give any notice. The cancellation will take effect at the end of your current billing cycle. You might be charged for any extra usage beyond your plan's limits during that cycle.
-
-</details>
-
-<details>
-
-<summary>What's included in "Priority Support"?</summary>
-
-Priority Support grants you direct access to Mindee's support team, ensuring faster resolution of your questions and issues. Your concerns will be given priority over other messages we may receive.
 
 </details>
 
@@ -496,15 +448,84 @@ Yes, absolutely. Running both platforms in parallel is not only supported but re
 
 <details>
 
-<summary></summary>
+<summary>What's the step-by-step migration process? (a checker)</summary>
 
+**Quick Overview:**
 
+1. **Assessment**: Analyze your current V1 usage and identify V2 plan requirements
+2. **Setup**: Create your V2 account and configure basic settings
+3. **Testing**: Use our migration testing checklist (see below)
+4. **Integration**: Update your applications with V2 API endpoints
+5. **Validation**: Run parallel processing to compare results
+6. **Cutover**: Gradually shift traffic from V1 to V2
+7. **Optimization**: Leverage V2's new features to enhance your workflows
+
+**Documentation Includes:**
+
+* Code examples for common migration scenarios
+* Troubleshooting guides for common migration issues
+* Rollback procedures if needed
 
 </details>
 
+<details>
 
+<summary>What migration support is provided?</summary>
 
+Mindee V2 offers [guided documentation](https://docs.mindee.com/), 1:1 support for Enterprise customers, and step-by-step upgrade paths to help you transition from V1 to V2 smoothly.
 
+</details>
 
+<details>
 
+<summary>What happens if I encounter issues during migration?</summary>
 
+If you face issues, you can contact Mindee’s support team via Intercom or email. For Business and Enterprise plans, priority assistance is available to resolve migration blockers quickly.
+
+</details>
+
+### Data & Configuration Migration
+
+<details>
+
+<summary>Can I migrate my existing documents and processing configurations?</summary>
+
+No, you’ll need to manually re-upload the documents to your RAG for instance. For Enterprise users, we can offer this transition as a service.
+
+</details>
+
+<details>
+
+<summary>What about existing webhooks and callbacks?</summary>
+
+You’ll need to reconfigure webhooks in V2 as the endpoint structure and authentication method differ from V1.
+
+</details>
+
+## 📞 Resources
+
+### Learning & Documentation
+
+<details>
+
+<summary>Where can I find V2 documentation and resources?</summary>
+
+All V2 developer documentation (with demos) is available at [docs.mindee.com](https://docs.mindee.com/).
+
+</details>
+
+<details>
+
+<summary>How do I stay updated on new V2 features?</summary>
+
+You can give feedback and follow product updates directly in [https://feedback.mindee.com/](https://feedback.mindee.com/)
+
+</details>
+
+<details>
+
+<summary>How can I ask for a feature or give a feedback?</summary>
+
+You can give feedback and follow product updates directly in [https://feedback.mindee.com/](https://feedback.mindee.com/)
+
+</details>
