@@ -452,6 +452,19 @@ See the [#fields](process-the-result.md#fields "mention") section below.
 In addition, the `ObjectField` class has [#confidence](process-the-result.md#confidence "mention") and [#locations](process-the-result.md#locations "mention") attributes.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```python
+from mindee import InferenceResponse
+
+def handle_response(response: InferenceResponse):
+    fields: dict = response.inference.result.fields
+
+    object_field = fields["my_object_field"]
+```
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -721,6 +734,7 @@ All languages use the appropriate enum type.
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
+from mindee import InferenceResponse
 from mindee.parsing.v2.field import FieldConfidence
 
 def handle_response(response: InferenceResponse):
@@ -837,6 +851,34 @@ Points are listed in clockwise order, where index `0` is top left.
 Point X,Y coordinates are normalized floats from 0.0 to 1.0, relative to the page dimensions.
 
 {% tabs %}
+{% tab title="Python" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```python
+from mindee import InferenceResponse
+
+def handle_response(response: InferenceResponse):
+    fields: dict = response.inference.result.fields
+    
+    locations = fields["my_simple_field"].locations
+
+    # accessing the polygon
+    polygon = locations[0].polygon
+
+    # accessing points: the Polygon class extends List[Point]
+    top_x = polygon[0].x
+
+    # alternative syntax:
+    # top_x = polygon[0][0]
+
+    # there are geometry functions available in the Polygon class
+    center = polygon.centroid
+
+    # accessing the page index on which the polygon is
+    page_index = locations[0].page
+```
+{% endtab %}
+
 {% tab title="Node.js" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
