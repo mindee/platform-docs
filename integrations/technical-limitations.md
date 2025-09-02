@@ -97,9 +97,23 @@ Processing options which impact processing time:
 
 ### Minimum Response Time
 
-To achieve the lowest possible response times, use [webhooks.md](webhooks.md "mention") since we will send the result as soon as the file is processed.
+For a very simple case:
 
-In all cases, response time will be at least 2 seconds.
+* 3 fields
+* no options activated
+* a small image file
+
+minimum time will be 1 second.
+
+For an average use case:
+
+* our invoice model, 18 fields
+* no options activated
+* a single page text PDF invoice file
+
+minimum time will be 2 seconds.
+
+To achieve the lowest possible response times on your end, use [webhooks.md](webhooks.md "mention") since we will send the result as soon as the file is processed.
 
 ## Data Schema
 
