@@ -71,6 +71,36 @@ For information about the pricing model of Mindee, please refer yourself to the 
 **General tip:** You may space your API requests so that you don't go over the limit.
 {% endhint %}
 
+## Response Times
+
+Response time will vary depending on the document, the Data Schema, and the options selected.
+
+Unfortunately, there is no free lunch.
+
+Source files properties which impact processing time:
+
+* file size, especially for images
+* number of pages
+* density of text
+
+Take a look at the [#guidelines-for-uploading-files](technical-guidelines.md#guidelines-for-uploading-files "mention") section for ways to improve source files.
+
+Data Schema properties which impact processing time:
+
+* number of fields
+* complexity of guidelines
+
+Processing options which impact processing time:
+
+* [improving-accuracy.md](../models/improving-accuracy.md "mention")
+* [automation-confidence-score.md](../models/automation-confidence-score.md "mention")
+
+### Minimum Response Time
+
+To achieve the lowest possible response times, use [webhooks.md](webhooks.md "mention") since we will send the result as soon as the file is processed.
+
+In all cases, response times will never be under 2 seconds.
+
 ## Data Schema
 
 {% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
@@ -78,6 +108,8 @@ For information about the pricing model of Mindee, please refer yourself to the 
 ## Webhooks
 
 {% include "../.gitbook/includes/webhook-technical-limitations.md" %}
+
+
 
 [^1]: Joint Photographic Experts Group
 

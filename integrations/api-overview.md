@@ -51,9 +51,11 @@ However, when using our client libraries, you can [#adjust-the-source-file](clie
 
 ## How to Receive Results
 
-You can decide on either the polling flow or the webhook flow.
+Inference operations are always asynchronous, meaning there is a route to POST the file and another mechanism to retrieve the results.
 
-[polling-for-results.md](polling-for-results.md "mention") is better suited to testing and small volumes.
+You can decide on using either the polling flow or the webhook flow.
 
-[webhooks.md](webhooks.md "mention") are more suited to heavy production use.
+[polling-for-results.md](polling-for-results.md "mention") uses a GET route, and is better suited to testing and small volumes.
+
+[webhooks.md](webhooks.md "mention") sends directly to your server, and is more suited to heavy production use.
 
