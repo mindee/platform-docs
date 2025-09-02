@@ -90,8 +90,8 @@ Data Schema properties which impact response time:
 * number of fields
 * complexity of guidelines
 
-Additionally, if there are list fields in the Data Schema and many items in the source document.\
-For example: a receipt document with many products purchased, and each product being returned in the response.
+Additionally, if there are lists of nested objects in the Data Schema and many corresponding items in the source document.\
+For example: a receipt document with many products purchased, and each product having multiple fields returned in the response.
 
 Processing options which impact response time:
 
