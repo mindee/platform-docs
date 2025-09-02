@@ -77,7 +77,7 @@ Response time will vary depending on the document, the Data Schema, and the opti
 
 Unfortunately, there is no free lunch.
 
-Source files properties which impact processing time:
+Source file properties which impact response time:
 
 * file size, especially for images files
 * number of pages
@@ -85,41 +85,19 @@ Source files properties which impact processing time:
 
 Take a look at the [#guidelines-for-uploading-files](technical-guidelines.md#guidelines-for-uploading-files "mention") section for ways to improve source files.
 
-Data Schema properties which impact processing time:
+Data Schema properties which impact response time:
 
 * number of fields
 * complexity of guidelines
 
-Processing options which impact processing time:
+Additionally, if there are list fields in the Data Schema and many items in the source document.\
+For example: a receipt document with many products purchased, and each product being returned in the response.
+
+Processing options which impact response time:
 
 * [improving-accuracy.md](../models/improving-accuracy.md "mention")
 * [automation-confidence-score.md](../models/automation-confidence-score.md "mention")
-
-### Minimum Response Time
-
-The shortest possible response time for a given configuration.
-
-For a very simple case:
-
-* 3 fields
-* no options activated
-* a small image file
-
-minimum time will be 1 second.
-
-For an average use case:
-
-* our invoice model, 18 fields
-* no options activated
-* a single page text PDF invoice file
-
-minimum time will be 2 seconds.
-
-{% hint style="warning" %}
-Actual response times will vary greatly depending on the source document.
-{% endhint %}
-
-To achieve the lowest possible response times on your end, use [webhooks.md](webhooks.md "mention") since we will send the result as soon as the file is processed.
+* [polygons-bounding-boxes.md](../models/polygons-bounding-boxes.md "mention")
 
 ## Data Schema
 
