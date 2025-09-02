@@ -97,6 +97,8 @@ Processing options which impact processing time:
 
 ### Minimum Response Time
 
+The shortest possible response time for a given configuration.
+
 For a very simple case:
 
 * 3 fields
@@ -112,6 +114,10 @@ For an average use case:
 * a single page text PDF invoice file
 
 minimum time will be 2 seconds.
+
+{% hint style="warning" %}
+Actual response times will vary greatly depending on the source document.
+{% endhint %}
 
 To achieve the lowest possible response times on your end, use [webhooks.md](webhooks.md "mention") since we will send the result as soon as the file is processed.
 
