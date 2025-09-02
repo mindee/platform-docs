@@ -79,7 +79,7 @@ Unfortunately, there is no free lunch.
 
 Source files properties which impact processing time:
 
-* file size, especially for images
+* file size, especially for images files
 * number of pages
 * density of text
 
@@ -99,7 +99,7 @@ Processing options which impact processing time:
 
 To achieve the lowest possible response times, use [webhooks.md](webhooks.md "mention") since we will send the result as soon as the file is processed.
 
-In all cases, response times will never be under 2 seconds.
+In all cases, response times will be at least 2 seconds.
 
 ## Data Schema
 
