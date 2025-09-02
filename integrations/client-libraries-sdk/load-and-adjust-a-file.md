@@ -11,7 +11,9 @@ icon: file-lines
 
 ## Requirements
 
-You'll nee to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") section.
+In most cases you'll be loading a source file for use in the Mindee Client, take a look at the [configure-the-client.md](configure-the-client.md "mention") section for more info.
+
+However, you don't actually need the client initialized to use these features, only the client library installed.
 
 ## Overview
 

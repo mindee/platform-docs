@@ -7,7 +7,7 @@ Requires the [Mindee Python client library](https://pypi.org/project/mindee/) ve
 
 {% code lineNumbers="true" %}
 ```python
-from mindee import ClientV2, InferenceParameters
+from mindee import ClientV2, InferenceParameters, PathInput
 
 input_path = "/path/to/the/file.ext"
 api_key = "MY_API_KEY"
@@ -25,7 +25,7 @@ params = InferenceParameters(
 )
 
 # Load a file from disk
-input_source = mindee_client.source_from_path(input_path)
+input_source = PathInput(input_path)
 
 # Send for processing using polling
 response = mindee_client.enqueue_and_get_inference(
