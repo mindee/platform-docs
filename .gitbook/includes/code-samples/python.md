@@ -3,7 +3,7 @@ title: sample-code-python
 ---
 
 Requires Python ≥ 3.9. Python ≥ 3.10 is highly recommended.\
-Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.28.0** or greater.
+Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.28.1** or greater.
 
 {% code lineNumbers="true" %}
 ```python
@@ -20,8 +20,18 @@ mindee_client = ClientV2(api_key)
 params = InferenceParameters(
     # ID of the model, required.
     model_id=model_id,
-    # If set to `True`, will enable Retrieval-Augmented Generation.
-    rag=False,
+
+    # Options: set to `True` or `False` to override defaults
+
+    # Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag=None,
+    # Extract the full text content from the document as strings.
+    raw_text=None,
+    # Calculate bounding box polygons for all fields.
+    polygon=None,
+    # Boost the precision and accuracy of all extractions.
+    # Calculate confidence scores for all fields.
+    confidence=None,
 )
 
 # Load a file from disk

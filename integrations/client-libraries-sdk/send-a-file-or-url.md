@@ -451,5 +451,5 @@ You'll get the response via polling and webhooks will be used as well.
 
 Now that your file or URL has been handled by the Mindee servers, you'll want to process the results and use them in your application.
 
-Head on over to the [process-the-result.md](process-the-result.md "mention") section for details on the next step.
+Head on over to the [process-the-response.md](process-the-response.md "mention") section for details on the next step.
 

@@ -109,8 +109,7 @@ Accessing a list of values, where `my_list_field` is the name of the field in th
 
 {% include "../../.gitbook/includes/code-samples/php-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model.
-In this hypothetical case, the object has a sub-field named `sub_field`.
+Accessing an object field, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `sub_field`.
 
 {% include "../../.gitbook/includes/code-samples/php-process-objectfield.md" %}
 
@@ -196,4 +195,4 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 
 For details on available options and advanced usage, check the following sections:
 
-* [process-the-result.md](process-the-result.md "mention")
+* [process-the-response.md](process-the-response.md "mention")

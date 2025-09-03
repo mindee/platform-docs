@@ -3,7 +3,7 @@ title: code-sample-dotnet
 ---
 
 Requires .NET ≥ 6.\
-Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **3.31** or greater.
+Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **3.32** or greater.
 
 {% code lineNumbers="true" %}
 ```csharp
@@ -20,8 +20,18 @@ MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
 // Set inference parameters
 var inferenceParams = new InferenceParameters(
     modelId: modelId
-    // If set to `true`, will enable Retrieval-Augmented Generation.
-    , rag: false
+
+    // Options: set to `true` or `false` to override defaults
+
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    , rag: null
+    // Extract the full text content from the document as strings.
+    , rawText: null
+    // Calculate bounding box polygons for all fields.
+    , polygon: null
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    , confidence: null
 );
 
 // Load a file from disk

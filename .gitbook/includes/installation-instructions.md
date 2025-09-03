@@ -10,7 +10,7 @@ Python ≥ 3.10 is highly recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```sh
-pip install mindee>=4.28.0
+pip install mindee>=4.28.1
 ```
 {% endtab %}
 
@@ -78,7 +78,7 @@ Requires .NET ≥ 6.0.\
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
 
 ```sh
-dotnet add package Mindee --version 3.31
+dotnet add package Mindee --version 3.32
 ```
 {% endtab %}
 {% endtabs %}

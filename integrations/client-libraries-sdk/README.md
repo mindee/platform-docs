@@ -32,8 +32,12 @@ Overall, the steps to using the Mindee service are:
    2. _Optional_: adjust the source file before sending.
 3. [send-a-file-or-url.md](send-a-file-or-url.md "mention")
    1. Send the file or an URL with the proper parameters.
-4. [process-the-result.md](process-the-result.md "mention")
+4. [process-the-response.md](process-the-response.md "mention")
    1. Optional: load from a webhook.
+   2. Optional: access document metadata
+5. [process-result-fields.md](process-result-fields.md "mention")
+   1. Handle the field values extracted from the document
+   2. Optional: access field metadata (polygons, confidence score)
 
 ## Frequently Asked Questions
 

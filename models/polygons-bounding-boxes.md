@@ -27,7 +27,7 @@ It indicates the precise polygonal area on the document where the value for each
 
 We highly recommend using our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention"), as they include various geometry functions for ease of processing.
 
-Specifically for handling polygons, take a look at the [#locations](../integrations/client-libraries-sdk/process-the-result.md#locations "mention") section.
+Specifically for handling polygons, take a look at the [#locations](../integrations/client-libraries-sdk/process-the-response.md#locations "mention") section.
 
 Otherwise, take a look at the [#get-v2-inferences-inference\_id](../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
 

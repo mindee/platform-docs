@@ -41,6 +41,6 @@ Otherwise, you can use the built-in client in our [api-reference.md](../integrat
 
 You'll need some way of importing the JSON structure and manipulating it.
 
-For quick testing, we recommend to [process-the-result.md](../integrations/client-libraries-sdk/process-the-result.md "mention") using our client libraries.
+For quick testing, we recommend to [process-the-response.md](../integrations/client-libraries-sdk/process-the-response.md "mention") using our client libraries.
 
 {% @supademo/embed demoId="cmewtri4u8939v9kqh3q6u1g7" url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" fullWidth="false" %}

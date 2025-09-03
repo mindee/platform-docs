@@ -2,7 +2,7 @@
 icon: bolt-auto
 ---
 
-# Automation (Confidence Score)
+# Confidence Scores (for Automation)
 
 ## Overview
 
@@ -62,7 +62,7 @@ When the **Automation** feature is not activated, the `confidence` attribute in 
 
 We have full support for handling the confidence score in our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
-Specific instructions can be found in the [#confidence](../integrations/client-libraries-sdk/process-the-result.md#confidence "mention") section.
+Specific instructions can be found in the [#confidence](../integrations/client-libraries-sdk/process-the-response.md#confidence "mention") section.
 
 If you're not using our client libraries, check out the [#get-v2-inferences-inference\_id](../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
 
