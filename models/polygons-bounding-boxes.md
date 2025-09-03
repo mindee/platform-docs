@@ -4,7 +4,7 @@ icon: vector-square
 
 # Polygons (Bounding Boxes)
 
-<figure><img src="../.gitbook/assets/image (4).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt="bounding-box polygons displayed in the Live Interface" width="375"><figcaption></figcaption></figure>
 
 ## Overview
 

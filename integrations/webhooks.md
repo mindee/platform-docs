@@ -58,7 +58,7 @@ Once in the model page, there will be a "<i class="fa-webhook">:webhook:</i> Web
 
 In the Webhooks page, there will be a "Add Webhook" button, click it:
 
-<figure><img src="../.gitbook/assets/Screenshot_20250820_115103.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot_20250820_115103.png" alt="adding a webhook endpoint"><figcaption></figcaption></figure>
 
 This then opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server.
 
@@ -75,7 +75,7 @@ There is a "Copy ID" button which will allow you to actually use the webhook in 
 
 You can also use the "Signing Secret" to validate payloads using HMAC:
 
-<figure><img src="../.gitbook/assets/webhook-copy-secret.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/webhook-copy-secret.png" alt="copying the signing secret key for a webhook"><figcaption></figcaption></figure>
 
 ### Deleting an Endpoint
 

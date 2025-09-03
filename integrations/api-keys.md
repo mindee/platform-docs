@@ -17,7 +17,7 @@ An organization can have multiple API keys.
 
 Each API Key grants access to all models within the organization.
 
-Keys have an unlimited lifetime and must be manually revoked by deleting them.
+API Keys, unlike tokens, have an unlimited lifetime and must be manually revoked.
 
 ### Key Creation
 
