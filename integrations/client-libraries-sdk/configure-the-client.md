@@ -210,9 +210,14 @@ Inference parameters control:
 * server-side processing options
 * how the results will be returned to you
 
-### Processing Options
+### Processing Parameters
 
-These are mostly the same options as present in the Web API.
+These are mostly the same parameters as present in the Web API.
+
+Default values for the processing Options can be changed on the platform.\
+Any values set here will override the defaults, leave empty to use the default values.
+
+For example: if the polygon feature is enabled on the platform, and polygon is explicitly set to `false` in the parameters ⇒ the polygon feature will not be enabled for the API call.
 
 {% tabs %}
 {% tab title="Python" %}
