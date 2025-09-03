@@ -12,10 +12,10 @@ Mindee allows you to process a wide variety of financial documents and adapts to
 
 Financial documents come in all shapes and formats, with layouts that vary significantly across countries, industries, and even vendors. Mindee’s AI agent helps you:
 
-* 🧠 Build custom extraction logic based on your documents
-* ✍️ Prompt the agent with the fields you need (e.g. “Extract invoice number, total amount, and due date”)
-* 📄 Upload example documents to help the agent learn your document structure
-* ⚡ Skip complex rule-based templates or manual data entry
+* Build custom extraction logic based on your documents
+* Prompt the agent with the fields you need (e.g. “Extract invoice number, total amount, and due date”)
+* Upload example documents to help the agent learn your document structure
+* Skip complex rule-based templates or manual data entry
 
 ## Common Use Cases
 
