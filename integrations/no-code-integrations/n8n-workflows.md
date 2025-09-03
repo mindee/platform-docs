@@ -12,13 +12,13 @@ Use the instructions below to integrate n8n.
 We are working on updating the Mindee n8n node.
 {% endhint %}
 
-## Use a Sample Workflow
+## Use a Sample n8n Workflow
 
-Use our provided sample workflow file and use it as base for creating your own workflow.
+Use our provided sample n8n workflow file and use it as base for creating your own workflow.
 
 You can also import into an existing workflow, the new nodes will simply be added.
 
-### Import the Sample Workflow
+### Import the Sample n8n Workflow
 
 First step is to download our sample workflow file below:
 
@@ -50,7 +50,7 @@ It should look something like this when done:
 
 <figure><img src="../../.gitbook/assets/n8n_auth-params.png" alt=""><figcaption></figcaption></figure>
 
-Next, make sure the following nodes are all using the Credential just created:
+Next, make sure the following n8n nodes are all using the Credential just created:
 
 * "Mindee V2 GET Job"&#x20;
 * "Mindee V2 GET Inference"
@@ -73,11 +73,11 @@ It should look something like this:
 
 The workflow is now configured to use the specified model.
 
-### Test the Workflow
+### Test the n8n Workflow
 
 We've included a "HTTP Request" node that will download a sample invoice file from our Github repository.
 
-Simply click the "Execute workflow" button and follow along as the various nodes/steps are executed.
+In n8n, simply click the "Execute workflow" button and follow along as the various nodes/steps are executed.
 
 In this way make sure the workflow is able to arrive at the "Result" step. The actual contents of the result don't matter, since the sample file is there only for testing the API connection. The sample file is not meant for testing your model.
 
