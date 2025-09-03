@@ -36,6 +36,7 @@ More information in the [billing.md](billing.md "mention") section.
 | [Data processing localization](#user-content-fn-6)[^6] |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Confidence score](#user-content-fn-7)[^7]             |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | Polygons[^8]                                           |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| Boosted accuracy and precision                         |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | Custom pricing                                         |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
 | Dedicated account manager                              |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
 | Premium technical support                              |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
