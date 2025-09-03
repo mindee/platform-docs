@@ -26,7 +26,7 @@ First step is to download our sample workflow file below:
 
 Next, import it into a new or existing n8n workflow:
 
-<figure><img src="../../.gitbook/assets/n8n_import-workflow-file.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/n8n_import-workflow-file.png" alt="importing the sample n8n workflow"><figcaption></figcaption></figure>
 
 Once the file is imported the nodes and steps will show up.
 
@@ -34,7 +34,7 @@ Once the file is imported the nodes and steps will show up.
 
 Open the "Mindee V2 Post" node by double-clicking it, and create a Header Auth Credential:
 
-<figure><img src="../../.gitbook/assets/n8n_create-auth-credentials.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/n8n_create-auth-credentials.png" alt="adding mindee authentication in n8n"><figcaption></figcaption></figure>
 
 When creating your Credential, first choose one of your [api-keys.md](../api-keys.md "mention").
 
@@ -48,7 +48,7 @@ Then, set the following values in the Credential dialog box:
 
 It should look something like this when done:
 
-<figure><img src="../../.gitbook/assets/n8n_auth-params.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/n8n_auth-params.png" alt="configuring mindee authentication in n8n"><figcaption></figcaption></figure>
 
 Next, make sure the following n8n nodes are all using the Credential just created:
 
@@ -69,7 +69,7 @@ Set the value of the "model\_id" parameter to your model's ID.
 
 It should look something like this:
 
-<figure><img src="../../.gitbook/assets/n8n_model-id-param.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/n8n_model-id-param.png" alt="mindee model configuration in n8n"><figcaption></figcaption></figure>
 
 The workflow is now configured to use the specified model.
 
