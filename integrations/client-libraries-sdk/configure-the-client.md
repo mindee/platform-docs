@@ -223,14 +223,21 @@ inference_params = InferenceParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     
-    # Options:
-
-    # If set to `True`, will enable Retrieval-Augmented Generation.
-    rag=True,
-
     # Use an alias to link the file to your own DB.
     # If empty, no alias will be used.
     alias="MY_ALIAS",
+    
+    # Options: set to `True` or `False` to override defaults
+
+    # Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag=None,
+    # Extract the full text content from the document as strings.
+    raw_text=None,
+    # Calculate bounding box polygons for all fields.
+    polygon=None,
+    # Boost the precision and accuracy of all extractions.
+    # Calculate confidence scores for all fields.
+    confidence=None,
 )
 ```
 {% endtab %}
@@ -242,15 +249,15 @@ Only the `modelId` is required.
 const inferenceParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
+  
+  // Use an alias to link the file to your own DB.
+  // If empty, no alias will be used.
+  alias: "MY_ALIAS"
 
   // Options:
 
   // If set to `true`, will enable Retrieval-Augmented Generation.
   rag: false,
-
-  // Use an alias to link the file to your own DB.
-  // If empty, no alias will be used.
-  alias: "MY_ALIAS"
 };
 ```
 {% endtab %}
@@ -262,15 +269,15 @@ Only the `modelId` is required.
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID",
-    
+
+    // Use an alias to link the file to your own DB.
+    // If not set, no alias will be used.
+    alias: "MY_ALIAS",
+
     // Options:
 
     // If set to `true`, will enable Retrieval-Augmented Generation.
     rag: false,
-    
-    // Use an alias to link the file to your own DB.
-    // If not set, no alias will be used.
-    alias: "MY_ALIAS",
 );
 ```
 {% endtab %}
@@ -282,14 +289,15 @@ Only the `model_id` is required.
 inference_params = Mindee::Input::InferenceParameters.new(
     # ID of the model, required.
     model_id,
+    
+    # Use an alias to link the file to your own DB.
+    # If empty, no alias will be used.
+    file_alias: "MY_ALIAS"
+
     # Options:
 
     # If set to `true`, will enable Retrieval-Augmented Generation.
     rag: false,
-
-    # Use an alias to link the file to your own DB.
-    # If empty, no alias will be used.
-    file_alias: "MY_ALIAS"
 )
 ```
 {% endtab %}
@@ -301,15 +309,15 @@ Only the `modelId` is required.
 InferenceParameters params = InferenceParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
+    
+    // Use an alias to link the file to your own DB.
+    // If empty, no alias will be used.
+    .alias("MY_ALIAS")
 
     // options
 
     // If set to `true`, will enable Retrieval-Augmented Generation.
     .rag(false)
-
-    // Use an alias to link the file to your own DB.
-    // If empty, no alias will be used.
-    .alias("MY_ALIAS")
 
     // complete the builder
     .build();
@@ -324,14 +332,21 @@ var inferenceParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
 
-    // Options:
-
-    // If set to `true`, will enable Retrieval-Augmented Generation.
-    , rag: false
-
     // Use an alias to link the file to your own DB.
     // If empty, no alias will be used.
     , alias: "MY_ALIAS"
+    
+    // Options: set to `true` or `false` to override defaults
+
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    , rag: null
+    // Extract the full text content from the document as strings.
+    , rawText: null
+    // Calculate bounding box polygons for all fields.
+    , polygon: null
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    , confidence: null
 );
 ```
 {% endtab %}
