@@ -8,6 +8,10 @@ Mindee enables automatic extraction of key identity fields from passport documen
 
 Whether you are building a Know Your Customer (KYC) process, onboarding flow, or document verification pipeline, Mindee helps you parse structured passport data with accuracy.
 
+Check out our demo for Indian Passport:
+
+{% @supademo/embed demoId="cmeqvjfgw3holv9kqocym86w9" url="https://app.supademo.com/demo/cmeqvjfgw3holv9kqocym86w9" %}
+
 ## Why Use Mindee for Passports?
 
 Passports vary in format depending on the country, language, and issuance authority. Mindee simplifies extraction by letting you:
@@ -61,8 +65,6 @@ If you want to try and do a live test, here is a sample for Indian passport:
 <figure><img src="../.gitbook/assets/mindee-indian-passport.png" alt=""><figcaption></figcaption></figure>
 
 ## Two Ways to Start
-
-{% @supademo/embed demoId="cmeqvjfgw3holv9kqocym86w9" url="https://app.supademo.com/demo/cmeqvjfgw3holv9kqocym86w9" %}
 
 ### 1. Choose Passport from Our Catalog (recommended)
 
