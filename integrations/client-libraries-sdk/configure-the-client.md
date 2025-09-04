@@ -319,10 +319,17 @@ InferenceParameters params = InferenceParameters
     // If empty, no alias will be used.
     .alias("MY_ALIAS")
 
-    // options
+    // Options: set to `true` or `false` to override defaults
 
-    // If set to `true`, will enable Retrieval-Augmented Generation.
-    .rag(false)
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    .rag(null)
+    // Extract the full text content from the document as strings.
+    .rawText(null)
+    // Calculate bounding box polygons for all fields.
+    .polygon(null)
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    .confidence(null)
 
     // complete the builder
     .build();

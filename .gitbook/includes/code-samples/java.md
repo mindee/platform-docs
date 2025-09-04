@@ -3,7 +3,7 @@ title: code-sample-java
 ---
 
 Requires Java ≥ 8. Java ≥ 11 recommended.\
-Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.34.0** or greater.
+Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.35.0** or greater.
 
 ```java
 import com.mindee.MindeeClientV2;
@@ -27,9 +27,22 @@ public class SimpleMindeeClient {
 
     // Set inference parameters
     // Note: modelId is mandatory.
-    InferenceParameters options = InferenceParameters.builder(modelId)
-        // If set to `true`, will enable Retrieval-Augmented Generation.
-        .rag(false)
+    InferenceParameters options = InferenceParameters
+        // ID of the model, required.
+        .builder(modelId)
+        
+        // Options: set to `true` or `false` to override defaults
+
+        // Enhance extraction accuracy with Retrieval-Augmented Generation.
+        .rag(null)
+        // Extract the full text content from the document as strings.
+        .rawText(null)
+        // Calculate bounding box polygons for all fields.
+        .polygon(null)
+        // Boost the precision and accuracy of all extractions.
+        // Calculate confidence scores for all fields.
+        .confidence(null)
+        
         .build();
 
     // Load a file from disk
