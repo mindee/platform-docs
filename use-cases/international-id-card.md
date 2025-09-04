@@ -1,4 +1,8 @@
 ---
+description: >-
+  Mindee enables the automatic extraction of structured identity data from ID
+  cards, a critical component for use cases like identity verification, KYC, and
+  onboarding.
 hidden: true
 noIndex: true
 icon: address-card
@@ -6,9 +10,7 @@ icon: address-card
 
 # International ID Card
 
-Mindee enables the automatic extraction of structured identity data from **ID cards,** a critical component for use cases like identity verification, KYC, and onboarding.
-
-
+Watch this short demo to see how quickly you can set up and test the French ID Card model with Mindee:
 
 {% @supademo/embed demoId="cmf59btop30t539ozuva4neqi" url="https://app.supademo.com/demo/cmf59btop30t539ozuva4neqi" %}
 
