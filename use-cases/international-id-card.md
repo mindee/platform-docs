@@ -4,7 +4,7 @@ noIndex: true
 icon: address-card
 ---
 
-# ID Card
+# International ID Card
 
 Mindee enables the automatic extraction of structured identity data from **ID cards,** a critical component for use cases like identity verification, KYC, and onboarding.
 
@@ -39,7 +39,7 @@ Mindee’s ID card API returns structured fields found on most ID documents:
 | Address                | (when applicable)                  |
 | Additional metada      | Depends on region/document         |
 | Signature              | Signature of the holder            |
-| ID photo               |                                    |
+| ID photo               | Photo of the holder                |
 
 ## Example: French National ID Card (Carte Nationale d’Identité – France)
 
