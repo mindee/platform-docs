@@ -50,7 +50,7 @@
 
 ## Use Cases
 
-* [ID Card](use-cases/id-card.md)
+* [International ID Card](use-cases/international-id-card.md)
 * [Financial documents](use-cases/financial-documents.md)
 * [Passport](use-cases/passport.md)
 
