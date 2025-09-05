@@ -23,26 +23,30 @@ It indicates the precise polygonal area on the document where the value for each
   * `(0, 0)` corresponds to the top-left corner; `(1, 1)` corresponds to the bottom-right corner.
 * Multiple polygons can be returned if there are several extracted fields or data areas.
 
-## Using the Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
+## **Activate Polygons**
+
+{% include "../.gitbook/includes/feature-availability.md" %}
+
+### Activate Polygons on the Platform UI
+
+{% @supademo/embed demoId="cmeidsob99f8xh3pybta14v42" url="https://app.supademo.com/demo/cmeidsob99f8xh3pybta14v42" %}
+
+### Activate Polygons via API Calls
+
+Check the [#set-inference-parameters](../integrations/client-libraries-sdk/configure-the-client.md#set-inference-parameters "mention") section if using our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
+
+Otherwise take a look at the [#post-v2-inferences-enqueue](../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
+
+## Use the Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
 
 We highly recommend using our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention"), as they include various geometry functions for ease of processing.
 
-Specifically for handling polygons, take a look at the [#locations](../integrations/client-libraries-sdk/process-the-response.md#locations "mention") section.
+Specifically for handling polygons, take a look at the [#locations](../integrations/client-libraries-sdk/process-result-fields.md#locations "mention") section.
 
 Otherwise, take a look at the [#get-v2-inferences-inference\_id](../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
 
-## Use Cases <a href="#use-cases" id="use-cases"></a>
+## Some Use Cases <a href="#use-cases" id="use-cases"></a>
 
 * Visual validation by overlaying bounding boxes on document previews for users to confirm extraction accuracy.
 * Debugging extraction quality by analyzing detected regions.
 * Enhancing UI with highlighted fields for better user experience.
-
-## **How to activate Polygons?**
-
-{% include "../.gitbook/includes/feature-availability.md" %}
-
-{% hint style="warning" %}
-When the **Polygons** feature is not activated, the `locations` keys in the JSON response will always be set to an empty list.
-{% endhint %}
-
-{% @supademo/embed demoId="cmeidsob99f8xh3pybta14v42" url="https://app.supademo.com/demo/cmeidsob99f8xh3pybta14v42" %}
