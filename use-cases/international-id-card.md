@@ -3,8 +3,6 @@ description: >-
   Mindee enables the automatic extraction of structured identity data from ID
   cards, a critical component for use cases like identity verification, KYC, and
   onboarding.
-hidden: true
-noIndex: true
 icon: address-card
 ---
 
