@@ -10,6 +10,8 @@ When using an Extraction Model regularly, it can happen that the extraction is n
 
 If you notice this, you have a way to improve durably the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
 
+{% @supademo/embed demoId="cmfb3c7166gdc39ozj39wogrz" url="https://app.supademo.com/demo/cmfb3c7166gdc39ozj39wogrz" %}
+
 ## Basics of RAG Inner Workings
 
 RAG stands for Retrieval-Augmented Generation, a novel approach in artificial intelligence that combines the strengths of retrieval-based models with generative LLM text production.
@@ -36,9 +38,11 @@ You need to annotate the document, ticking the fields you want to be covered by 
 Most of the time, the annotation is sufficient to make the model understand the issue. We recommend using the guideline only when the annotation only didn't solve the problem.
 {% endhint %}
 
-Once this document is annotated, **be sure to activate it**, and go to the Live test tab.\
+Once this document is annotated, **be sure to validate it**, and go to the Live test tab.\
 \
-You should click on RAG Activated, and upload a document. Ideally, pick a document with the same template (another invoice from the same supplier for instance), but not exactly the one you used in the RAG database. You will see the before/after predictions and should be able to check that the extra instructions were taken into account to augment properly the prediction.\
+You should upload a document, and leave "Show RAG extraction" ticked.
+
+Ideally, pick a document with the same template (another invoice from the same supplier for instance), but not exactly the one you used in the RAG database. You will see the before/after predictions and should be able to check that the extra instructions were taken into account to augment properly the prediction.\
 \
 In the future, the documents respecting the same template should be augmented, which should increase a lot the performances on this given template. For other types of documents, the behavior remain the same, which means that RAG is improving the result with no regression on other documents.
 
