@@ -26,6 +26,7 @@
 * [API Keys](integrations/api-keys.md)
 * [Technical Guidelines](integrations/technical-guidelines.md)
 * [Technical Limitations](integrations/technical-limitations.md)
+* [Response Times](integrations/response-times.md)
 * [Polling for Results](integrations/polling-for-results.md)
 * [Webhook Results](integrations/webhooks.md)
 * [Client Libraries / SDKs](integrations/client-libraries-sdk/README.md)
