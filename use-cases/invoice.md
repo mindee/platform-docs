@@ -9,6 +9,10 @@ icon: file-invoice-dollar
 
 # Invoice
 
+Watch our quick demo to see how you can easily set up your custom invoice model with Mindee:
+
+{% @supademo/embed demoId="cmfci0aiy7nt739ozcvdq9hqa" url="https://app.supademo.com/demo/cmfci0aiy7nt739ozcvdq9hqa" %}
+
 ## Why use Mindee for invoices?
 
 Invoices can vary widely by supplier, format, and layout. The Invoice model is designed to handle these differences, so you get consistent and reliable data extraction without custom development.
@@ -52,7 +56,11 @@ Here is the list of fields that are already in our pre-trained invoice model:
 | Supplier Email                                                                                                                    | `text`                 |
 | Customer ID                                                                                                                       | `text`                 |
 
-Keep in mind that user can add their own fields or delete existing fields while reviewing the data schema.
+Keep in mind that users can add their own fields or delete existing fields while reviewing the data schema.
+
+You can use this invoice sample if you want to try and do a live test yourself:
+
+<figure><img src="../.gitbook/assets/invoice-sample.jpg" alt="a fake invoice from Turnpike Designs"><figcaption></figcaption></figure>
 
 ## Two Ways to Start Building your Invoice Model
 
