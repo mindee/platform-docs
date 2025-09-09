@@ -2,6 +2,7 @@
 description: >-
   With Mindee, you can instantly parse receipts and extract all the key details
   using the pre-trained Receipt model available in the Catalog.
+hidden: true
 noIndex: true
 icon: receipt
 ---
