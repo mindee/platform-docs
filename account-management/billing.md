@@ -34,11 +34,7 @@ To change your plan:
 
 1. Go to **Settings → Billing**
 2. Choose a new plan under the available options
-3. Click **Subscribe**
-
-{% hint style="warning" %}
-Click Contact Sales. Someone from out team will contact you shortly for the upgrade.
-{% endhint %}
+3. Click **on Downgrade or Upgrade**
 
 ## What You Can Do from Stripe
 
