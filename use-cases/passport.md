@@ -1,14 +1,14 @@
 ---
+description: >-
+  Whether you are building a Know Your Customer (KYC) process, onboarding flow,
+  or document verification pipeline, Mindee helps you parse structured passport
+  data with accuracy.
 icon: passport
 ---
 
 # Passport
 
-Mindee enables automatic extraction of key identity fields from passport documents.
-
-Whether you are building a Know Your Customer (KYC) process, onboarding flow, or document verification pipeline, Mindee helps you parse structured passport data with accuracy.
-
-Check out our demo for Indian Passport:
+Take a look at our demo for the Indian Passport model:
 
 {% @supademo/embed demoId="cmeqvjfgw3holv9kqocym86w9" url="https://app.supademo.com/demo/cmeqvjfgw3holv9kqocym86w9" %}
 
@@ -19,6 +19,27 @@ Passports vary in format depending on the country, language, and issuance author
 * Describe which fields matter to you
 * Upload sample documents to refine extraction
 * Get structured outputs without training models yourself
+
+## Two Ways to Start Building your Passport Model
+
+### 1. Choose Passport from Our Catalog (recommended)
+
+* Select "Passport" on our document models.
+* The AI will give you a list of fields you can choose from. Select the fields you need and create your first model.
+* Option : if you want to refine your model, go to "Data Schema" and ask for additional fields.
+* Now that your model is ready, you can try a live test.
+
+### 2. Build a Passport Model from Scratch
+
+* Ask the specifications directly to the AI assistant (e.g. "_I want a model that extracts the following fields from passports: surname, date of birth and MRZ_").
+* Additionally, you can upload a sample passport if needed for clarification.
+* Mindee builds you a tailored parser in seconds.
+
+If you want to try and do a live test, here is a sample for Indian passport:
+
+<figure><img src="../.gitbook/assets/indian-passport-sample.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/mindee-indian-passport.png" alt=""><figcaption></figcaption></figure>
 
 ## What Can Be Extracted from a Passport?
 
@@ -57,27 +78,6 @@ Indian passports include additional region-specific fields. If you're processing
 {% hint style="info" %}
 You can just upload an Indian passport and ask to extract the fields present.
 {% endhint %}
-
-If you want to try and do a live test, here is a sample for Indian passport:
-
-<figure><img src="../.gitbook/assets/indian-passport-sample.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/mindee-indian-passport.png" alt=""><figcaption></figcaption></figure>
-
-## Two Ways to Start
-
-### 1. Choose Passport from Our Catalog (recommended)
-
-* Select "Passport" on our document models.
-* The AI will give you a list of fields you can choose from. Select the fields you need and create your first model.
-* Option : if you want to refine your model, go to "Data Schema" and ask for additional fields.
-* Now that your model is ready, you can try a live test.
-
-### 2. Build a Passport Model from Scratch
-
-* Ask the specifications directly to the AI assistant (e.g. "_I want a model that extracts the following fields from passports: surname, date of birth and MRZ_").
-* Additionally, you can upload a sample passport if needed for clarification.
-* Mindee builds you a tailored parser in seconds.
 
 ## Document Format
 
