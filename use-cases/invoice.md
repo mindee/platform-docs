@@ -23,6 +23,25 @@ Common use cases:
 * Expense and cost tracking
 * Tax and compliance reporting
 
+## Two Ways to Start Building your Invoice Model
+
+### 1. Choose “Invoice” in the Catalog (Recommended)
+
+* Open the **Document Catalog** in your dashboard and select **“Invoice.”**
+* The model comes pre-configured with the standard financial fields listed above.
+* You can start using it right away, or adjust the schema in **Data Schema** if you need additional fields.
+* Once selected, you can immediately test the model with your own invoices.
+
+### 2. Build a Custom Invoice Model with the AI Agent
+
+* If your workflow requires extra fields (e.g. purchase order number, IBAN, payment terms), you can describe them directly to the AI Agent.
+* Optionally upload a sample invoice for context.
+* The Agent will generate a tailored schema that extends beyond the built-in Invoice parser.
+
+You can use this invoice sample if you want to try and do a live test yourself:
+
+<figure><img src="../.gitbook/assets/invoice-sample.jpg" alt="a fake invoice from Turnpike Designs"><figcaption></figcaption></figure>
+
 ## What can be extracted from invoices?
 
 Here is the list of fields that are already in our pre-trained invoice model:
@@ -57,25 +76,6 @@ Here is the list of fields that are already in our pre-trained invoice model:
 | Customer ID                                                                                                                       | `text`                 |
 
 Keep in mind that users can add their own fields or delete existing fields while reviewing the data schema.
-
-You can use this invoice sample if you want to try and do a live test yourself:
-
-<figure><img src="../.gitbook/assets/invoice-sample.jpg" alt="a fake invoice from Turnpike Designs"><figcaption></figcaption></figure>
-
-## Two Ways to Start Building your Invoice Model
-
-### 1. Choose “Invoice” in the Catalog (Recommended)
-
-* Open the **Document Catalog** in your dashboard and select **“Invoice.”**
-* The model comes pre-configured with the standard financial fields listed above.
-* You can start using it right away, or adjust the schema in **Data Schema** if you need additional fields.
-* Once selected, you can immediately test the model with your own invoices.
-
-### 2. Build a Custom Invoice Model with the AI Agent
-
-* If your workflow requires extra fields (e.g. purchase order number, IBAN, payment terms), you can describe them directly to the AI Agent.
-* Optionally upload a sample invoice for context.
-* The Agent will generate a tailored schema that extends beyond the built-in Invoice parser.
 
 ## Document format support
 
