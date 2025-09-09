@@ -51,10 +51,11 @@
 
 ## Use Cases
 
-* [Boarding Pass](use-cases/boarding-pass.md)
-* [International ID Card](use-cases/international-id-card.md)
+* [Receipt](use-cases/receipt.md)
 * [Financial documents](use-cases/financial-documents.md)
+* [International ID Card](use-cases/international-id-card.md)
 * [Passport](use-cases/passport.md)
+* [Boarding Pass](use-cases/boarding-pass.md)
 
 ## Community
 
