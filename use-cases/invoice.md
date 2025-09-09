@@ -11,7 +11,7 @@ Watch our quick demo to see how you can easily set up your custom invoice model 
 
 {% @supademo/embed demoId="cmfci0aiy7nt739ozcvdq9hqa" url="https://app.supademo.com/demo/cmfci0aiy7nt739ozcvdq9hqa" %}
 
-## Why use Mindee for invoices?
+## Why use Mindee for Invoices?
 
 Invoices can vary widely by supplier, format, and layout. The Invoice model is designed to handle these differences, so you get consistent and reliable data extraction without custom development.
 
@@ -40,7 +40,7 @@ You can use this invoice sample if you want to try and do a live test yourself:
 
 <figure><img src="../.gitbook/assets/invoice-sample.jpg" alt="a fake invoice from Turnpike Designs"><figcaption></figcaption></figure>
 
-## What can be extracted from invoices?
+## What can be Extracted from Invoices?
 
 Here is the list of fields that are already in our pre-trained invoice model:
 
