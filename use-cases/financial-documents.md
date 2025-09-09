@@ -1,14 +1,15 @@
 ---
 description: >-
   Mindee allows you to process a wide variety of financial documents and adapts
-  to your specific needs. Whether you're working with invoices, bank statements,
-  receipts, or account summaries, you can def
+  to your specific needs.
 hidden: true
 noIndex: true
 icon: coins
 ---
 
 # Financial documents
+
+{% @supademo/embed demoId="cmfcuyiub84i439ozhjunffyc" url="https://app.supademo.com/demo/cmfcuyiub84i439ozhjunffyc" %}
 
 ## Why Use Mindee for Financial Documents?
 
@@ -19,7 +20,7 @@ Financial documents come in all shapes and formats, with layouts that vary signi
 * Upload example documents to help the agent learn your document structure
 * Skip complex rule-based templates or manual data entry
 
-## Common Use Cases
+### Common Use Cases
 
 You can use Mindee to extract structured data from:
 
@@ -29,7 +30,7 @@ You can use Mindee to extract structured data from:
 * Account summaries or balance sheets
 * Custom internal financial reports
 
-### Example Fields You Can Extract
+## Example Fields You Can Extract
 
 Depending on your document type, here are example fields our users often request:
 
@@ -40,22 +41,20 @@ Depending on your document type, here are example fields our users often request
 | Receipt        | Merchant name, transaction date, payment method, item lines, subtotal, tax, total amount                                       |
 | Balance Sheet  | Company name, statement date/statement end date, assets, liabilities, net equity                                               |
 
-## Two Ways to Start
+## Two Ways to Get Started
 
-### 1. You Know the Fields You Want
+### **1. Use the pre-trained Financial Document model (Recommended)**
 
-* Prompt the agent with something like:\
-  &#xNAN;_“Extract the invoice date, supplier name, total amount including VAT, and payment due date from these financial documents.”_
-* Upload a sample PDF to guide the agent if needed
-* Get your own custom document parser in seconds
+* Go to the **Document Catalog** and select **“Financial Document.”**
+* The model already includes standard fields such as invoice date, supplier name, totals and payment due date.
+* You can use it as is, or ask the AI Agent to refine the schema by adding or removing fields.
+* Once selected, you can test it immediately with your own documents.
 
-### 2. You Don’t Know the Fields You Need Yet
+### **2. Build a tailored Financial Document model with the AI Agent**
 
-* Upload a few sample documents to the Mindee app
-* Ask the agent: _“What fields can you extract from this?”_
-* Review the output and refine the prompt to match your use case
-
-This path is ideal when you’re still exploring your data model or working with a new document type.
+* If you need additional or non-standard fields (e.g. purchase order number, internal reference codes, bank account details), start a conversation with the Agent.
+* Describe what you want extracted and optionally upload a sample document.
+* The Agent will propose a schema, which you can refine until it matches your requirements.
 
 ## Supported Formats
 
