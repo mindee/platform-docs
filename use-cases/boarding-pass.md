@@ -44,7 +44,7 @@ Here is a boarding pass sample if you want to try a live test for your model:
 
 ## How to Create your Boarding Pass Model
 
-Since there is no pre-trained boarding pass model in the catalog, you will need to build your own using the AI Agent:
+Since there is no pre-trained boarding pass model in the catalog, you will need to build your own custom model using the AI Agent:
 
 1. Describe what you want to the AI assistant (e.g. _“I want to capture passenger name, flight number, departure date, and airports from boarding passes. Also add an object detection field for the barcode zone.”_)
 2. Optionally upload a sample boarding pass to give more context.
