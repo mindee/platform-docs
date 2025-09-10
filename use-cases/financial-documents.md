@@ -56,6 +56,10 @@ Depending on your document type, here are example fields our users often request
 * Describe what you want extracted and optionally upload a sample document.
 * The Agent will propose a schema, which you can refine until it matches your requirements.
 
+You can use this financial document sample to do a live test yourself:
+
+<figure><img src="../.gitbook/assets/invoice-model-sample.png" alt="an anonymized invoice sample"><figcaption></figcaption></figure>
+
 ## Supported Formats
 
 * **PDF files** — single-page or multi-page
