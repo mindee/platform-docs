@@ -26,7 +26,7 @@ npm install mindee@4.29.0
 {% endtab %}
 
 {% tab title="PHP" %}
-Requires PHP ≥ 8.0.\
+Requires PHP ≥ 8.1.\
 PHP ≥ 8.3 is recommended.
 
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
