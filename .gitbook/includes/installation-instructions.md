@@ -32,20 +32,7 @@ PHP ≥ 8.3 is recommended.
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
 ```sh
-php composer.phar require "mindee/mindee:>=1.23"
-```
-
-If you get an error message like this:
-
-```
-found mindee/mindee[v1.23.0-rc3] but it does not match your minimum-stability.
-```
-
-You'll need to configure your composer settings to allow installing an RC version:
-
-```sh
-php composer.phar config minimum-stability RC
-php composer.phar config prefer-stable true
+php composer.phar require "mindee/mindee:>=2.0"
 ```
 {% endtab %}
 

@@ -9,7 +9,7 @@ handleResponse(response) {
   // texts, dates, classifications ...
   const stringFieldValue = fields.getSimpleField("string_field").stringValue;
   
-  // no distinction between floats and numbers
+  // no distinction between floats and integers
   const floatFieldValue = fields.getSimpleField("float_field").numberValue;
   const intFieldValue = fields.getSimpleField("int_field").numberValue;
   

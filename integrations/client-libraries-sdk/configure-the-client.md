@@ -273,16 +273,19 @@ Only the `modelId` is required.
 ```php
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
-    modelId: "MY_MODEL_ID",
+    $modelId,
 
-    // Use an alias to link the file to your own DB.
-    // If not set, no alias will be used.
-    alias: "MY_ALIAS",
+    // Options: set to `true` or `false` to override defaults
 
-    // Options:
-
-    // If set to `true`, will enable Retrieval-Augmented Generation.
-    rag: false,
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag: null,
+    // Extract the full text content from the document as strings.
+    rawText: null,
+    // Calculate bounding box polygons for all fields.
+    polygon: null,
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    confidence: null
 );
 ```
 {% endtab %}

@@ -2,8 +2,8 @@
 title: sample-code-php
 ---
 
-Requires PHP ≥ 8.0.\
-Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **1.23.0-rc3** or greater.
+Requires PHP ≥ 8.1\
+Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **2.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```php
@@ -24,9 +24,20 @@ $mindeeClient = new ClientV2($apiKey);
 // Set inference parameters
 // Note: modelId is mandatory.
 $inferenceParams = new InferenceParameters(
+    // ID of the model, required.
     $modelId,
-    // If set to `true`, will enable Retrieval-Augmented Generation.
-    false
+
+    // Options: set to `true` or `false` to override defaults
+
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag: null,
+    // Extract the full text content from the document as strings.
+    rawText: null,
+    // Calculate bounding box polygons for all fields.
+    polygon: null,
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    confidence: null
 );
 
 // Load a file from disk

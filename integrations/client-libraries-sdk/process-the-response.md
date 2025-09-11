@@ -314,6 +314,27 @@ def handle_response(response: InferenceResponse):
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $rawText = $inference->result->rawText;
+    
+    // get the entire document as a single string
+    $documentText = strval($rawText);
+    
+    // loop over pages
+    foreach ($rawText->pages as $page) {
+        echo $page->content;
+    }
+}
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 

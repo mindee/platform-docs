@@ -58,6 +58,21 @@ handleResponse(response) {
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $fields = $response->inference->result->fields;
+
+    $simpleField = $fields->getSimpleField('my_simple_field');
+}
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -199,6 +214,21 @@ handleResponse(response) {
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $fields = $response->inference->result->fields;
+
+    $objectField = $fields->getObjectField('my_object_field');
+}
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -306,6 +336,21 @@ handleResponse(response) {
   const fields = response.inference.result.fields;
 
   const listField = fields.getListField("my_list_field");
+}
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $fields = $response->inference->result->fields;
+    
+    $listField = $fields->getListField('my_list_field');
 }
 ```
 {% endtab %}
@@ -488,14 +533,18 @@ handleResponse(response) {
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
 ```php
+use Mindee\Parsing\V2\InferenceResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
-$fields = $response->inference->result->fields;
+public function handleResponse(InferenceResponse $response)
+{
+    $fields = $response->inference->result->fields;
 
-$confidence = $fields->get('my_simple_field')->confidence;
+    $confidence = $fields->get('my_simple_field')->confidence;
 
-// compare using the enum `FieldConfidence`
-$isCertain = $confidence === FieldConfidence::CERTAIN;
+    // compare using the enum `FieldConfidence`
+    $isCertain = $confidence === FieldConfidence::Certain;
+}
 ```
 {% endtab %}
 
@@ -590,7 +639,7 @@ def handle_response(response: InferenceResponse):
     # accessing points: the Polygon class extends List[Point]
     top_x = polygon[0].x
 
-    # alternative syntax:
+    # alternative syntax, since the Point class extends List<float>
     # top_x = polygon[0][0]
 
     # there are geometry functions available in the Polygon class
@@ -621,6 +670,37 @@ handleResponse(response) {
 
   // accessing the page index on which the polygon is
   const pageIndex = locations![0].page!;
+}
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\Parsing\V2\Field\FieldConfidence;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $fields = $response->inference->result->fields;
+
+    $locations = $fields->get('my_simple_field')->locations;
+
+    // accessing the polygon
+    $polygon = $locations[0]->polygon;
+    
+    // accessing points:
+    $points = $polygon->coordinates;
+    $topX = $points[0]->getX();
+    // alternative syntax, since the Point class extends Array<float>
+    // $topX = $points[0][0]
+
+    // there are geometry functions available in the Polygon class
+    $center = $polygon->getCentroid();
+    
+    // accessing the page index on which the polygon is
+    $pageIndex = $locations[0]->page;
 }
 ```
 {% endtab %}
