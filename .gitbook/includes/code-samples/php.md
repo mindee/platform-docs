@@ -3,7 +3,7 @@ title: sample-code-php
 ---
 
 Requires PHP ≥ 8.0.\
-Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **1.23.0-rc2** or greater.
+Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **1.23.0-rc3** or greater.
 
 {% code lineNumbers="true" %}
 ```php

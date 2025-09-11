@@ -38,7 +38,7 @@ php composer.phar require "mindee/mindee:>=1.23"
 If you get an error message like this:
 
 ```
-found mindee/mindee[v1.23.0-rc2] but it does not match your minimum-stability.
+found mindee/mindee[v1.23.0-rc3] but it does not match your minimum-stability.
 ```
 
 You'll need to configure your composer settings to allow installing an RC version:
