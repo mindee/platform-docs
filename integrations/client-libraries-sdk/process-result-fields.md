@@ -7,6 +7,8 @@ icon: brain-circuit
 
 # Process Result Fields
 
+{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
+
 ## Requirements
 
 You'll need to have a response object as described in the [process-the-response.md](process-the-response.md "mention") section.

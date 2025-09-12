@@ -1,11 +1,11 @@
 ---
-title: This is reference documenta...
+title: hint reference documentation
 ---
 
 {% hint style="info" %}
 **This is reference documentation.**
 
-Code shown are only examples, and will not work as-is.\
+Code samples shown are only examples, and will not work as-is.\
 You'll need to copy-paste and modify according to your requirements.
 
 Looking for a quick TL;DR, or full code samples?
