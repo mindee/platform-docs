@@ -28,6 +28,15 @@ For the vast majority of image files, 3-5 megapixels is enough. Just make sure t
 We offer free tooling for compressing and resizing images or PDFs before sending them.\
 Details here: [#compress-files](client-libraries-sdk/load-and-adjust-a-file.md#compress-files "mention")
 
+### **Send Only What You Need**
+
+When processing multi-page PDFs, in some cases not all pages are required to be sent for your use case.
+
+For example, on some invoice templates the last page will be terms and conditions, this is typically very dense text that will slow down processing (and cost you money).
+
+We offer free tooling for removing pages from PDFs before sending them.\
+Details here: [#manipulate-pdf-pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages "mention")
+
 ### **Do not upscale or enhance**
 
 Never upscale a low-resolution image, adding extra pixels only adds to processing time without an increase in accuracy.\
