@@ -314,6 +314,24 @@ def handle_response(response: InferenceResponse):
 ```
 {% endtab %}
 
+{% tab title="Node.js" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```javascript
+handleResponse(response) {
+  const rawText = response.inference.result.rawText;
+
+  // get the entire document as a single string
+  const documentText = rawText.toString();
+  
+  // loop over pages
+  for (const page of rawText.pages) {
+    const pageText = page.content;
+  }
+}
+```
+{% endtab %}
+
 {% tab title="PHP" %}
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
