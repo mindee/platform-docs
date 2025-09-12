@@ -16,6 +16,7 @@
   * [Continuous Learning (RAG)](models/optional-features/improving-accuracy.md)
   * [Confidence Score and Accuracy Boost](models/optional-features/automation-confidence-score.md)
   * [Polygons (Bounding Boxes)](models/optional-features/polygons-bounding-boxes.md)
+  * [Raw Text (Full OCR)](models/optional-features/raw-text-full-ocr.md)
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
 * [Data Processing Policies](models/data-processing-policies.md)

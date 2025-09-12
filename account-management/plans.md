@@ -31,11 +31,12 @@ More information in the [billing.md](billing.md "mention") section.
 | RAG[^1]                                                |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
 | [AI Agent for custom model](#user-content-fn-2)[^2]    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Community support](#user-content-fn-3)[^3]            | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Chat support](#user-content-fn-4)[^4]                 |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Members[^5]                                            |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Data processing localization](#user-content-fn-6)[^6] |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Polygons[^7]                                           |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Confidence score](#user-content-fn-8)[^8]             |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| [Raw Text](#user-content-fn-4)[^4]                     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Chat support](#user-content-fn-5)[^5]                 |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Members[^6]                                            |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Data processing localization](#user-content-fn-7)[^7] |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Polygons[^8]                                           |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Confidence score](#user-content-fn-9)[^9]             |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | Boosted accuracy and precision                         |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | Custom pricing                                         |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
 | Dedicated account manager                              |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
@@ -62,15 +63,17 @@ More information in the [billing.md](billing.md "mention") section.
 
 [^3]: Access to our [Feedback](https://feedback.mindee.com/) page
 
-[^4]: Get support from our team via Intercom and priority support if you're Business or above
+[^4]: Extract the full text content of your documents.
 
-[^5]: Add members to your organization
+[^5]: Get support from our team via Intercom and priority support if you're Business or above
 
-[^6]: Choose the region where your data is processed: Europe, United States, or Global&#x20;
+[^6]: Add members to your organization
 
-[^7]: Use advanced polygon-based extraction to capture data from complex layouts
+[^7]: Choose the region where your data is processed: Europe, United States, or Global&#x20;
 
-[^8]: Leverage confidence score to selectively automate document processing.
+[^8]: Use advanced polygon-based extraction to capture data from complex layouts
+
+[^9]: Leverage confidence score to selectively automate document processing.
 
 
 

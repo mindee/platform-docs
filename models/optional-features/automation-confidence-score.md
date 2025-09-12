@@ -65,7 +65,7 @@ This color-coding system allows product teams to **highlight uncertainty directl
 When the **Automation** feature is not activated, the `confidence` attribute in the response will always be `null`.
 {% endhint %}
 
-Check the [#set-inference-parameters](../../integrations/client-libraries-sdk/configure-the-client.md#set-inference-parameters "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
 Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 

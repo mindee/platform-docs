@@ -51,7 +51,7 @@ In the future, the documents respecting the same template should be augmented, w
 
 ### Activate RAG via API Calls
 
-Check the [#set-inference-parameters](../../integrations/client-libraries-sdk/configure-the-client.md#set-inference-parameters "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
 Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 

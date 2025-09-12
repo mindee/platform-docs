@@ -310,7 +310,7 @@ def handle_response(response: InferenceResponse):
     
     # loop over pages
     for page in raw_text.pages:
-        print(page.content)
+        page_text = page.content
 ```
 {% endtab %}
 
@@ -323,13 +323,35 @@ use Mindee\Parsing\V2\InferenceResponse;
 public function handleResponse(InferenceResponse $response)
 {
     $rawText = $inference->result->rawText;
-    
+
     // get the entire document as a single string
     $documentText = strval($rawText);
-    
+
     // loop over pages
     foreach ($rawText->pages as $page) {
-        echo $page->content;
+        $pageText = $page->content;
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Java" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```java
+import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.parsing.v2.RawText;
+import com.mindee.parsing.v2.RawTextPage;
+
+public void handleResponse(InferenceResponse response) {
+    RawText rawText = response.getInference().getResult().getRawText();
+    
+    // get the entire document as a single string
+    String documentText = rawText.toString();
+    
+    // loop over pages
+    for (RawTextPage page : rawText.getPages()) {
+        String pageText = page.getContent();
     }
 }
 ```
@@ -351,7 +373,7 @@ public void HandleResponse(InferenceResponse response)
     // loop over pages
     foreach (RawTextPage page in rawText.Pages)
     {
-        System.Console.WriteLine(page.Content);
+        string pageText = page.Content;
     }
 }
 ```

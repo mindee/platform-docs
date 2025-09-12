@@ -34,11 +34,11 @@ It indicates the precise polygonal area on the document where the value for each
 
 ### Activate Polygons via API Calls
 
-Check the [#set-inference-parameters](../../integrations/client-libraries-sdk/configure-the-client.md#set-inference-parameters "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
 Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 
-## Use the Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
+## Use the Polygon Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
 
 We highly recommend using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention"), as they include various geometry functions for ease of processing.
 
