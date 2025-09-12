@@ -63,7 +63,10 @@ You'll want to adapt your processing depending on the [type of field](../../mode
 
 {% tabs %}
 {% tab title="Python" %}
-Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+Accessing simple values, using the name of the field in the Data Schema.
+
+We can (should!) specify the type of value, the possible types are `str` , `bool` , `float` .\
+Note that all types may be `None`.
 
 {% include "../../.gitbook/includes/code-samples/python-process-simplefield.md" %}
 
@@ -82,11 +85,15 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 {% endtab %}
 
 {% tab title="Node.js" %}
-Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+Accessing simple values, using the name of the field in the Data Schema.
+
+We need to access the field as a `SimpleField` instance in order to access its value.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-simplefield.md" %}
 
-Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+Accessing a list of values, where `my_simple_list_field` is the name of the field in the Model.
+
+We need to specify that the field is a `ListField` in order to access its items.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-listfield-simplefield.md" %}
 
@@ -97,15 +104,21 @@ In this hypothetical case, the object has a sub-field named `sub_field` .
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
+We need to specify that the field is a `ListField` in order to access its items.
+
 {% include "../../.gitbook/includes/code-samples/javascript-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="PHP" %}
-Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+Accessing simple values, using the name of the field in the Data Schema.
+
+We need to access the field as a `SimpleField` instance in order to access its value.
 
 {% include "../../.gitbook/includes/code-samples/php-process-simplefield.md" %}
 
-Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+Accessing a list of values, where `my_simple_list_field` is the name of the field in the Model.
+
+We need to specify that the field is a `ListField` in order to access its items.
 
 {% include "../../.gitbook/includes/code-samples/php-process-listfield-simplefield.md" %}
 
@@ -115,15 +128,17 @@ Accessing an object field, where `my_object_field` is the name of the field in t
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
+We need to specify that the field is a `ListField` in order to access its items.
+
 {% include "../../.gitbook/includes/code-samples/php-process-listfield-objectfield.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
-Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+Accessing a simple field's values, where different types are defined in the Data Schema.
 
 {% include "../../.gitbook/includes/code-samples/ruby-process-simplefield.md" %}
 
-Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+Accessing a list of values, where `my_simple_list_field` is the name of the field in the Model.
 
 {% include "../../.gitbook/includes/code-samples/ruby-process-listfield-simplefield.md" %}
 
@@ -138,12 +153,12 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 {% endtab %}
 
 {% tab title="Java" %}
-Accessing simple values, using the name of the field in the Model.
+Accessing simple values, using the name of the field in the Data Schema.
 
 We need to access the field as a `SimpleField` instance in order to access its value.
 
 We also need to specify the type of value, the possible types are `String` , `Boolean` , `Double` .\
-Notice that these are all classes, not primitives: this is to allow `null` values.
+Note that all types may be `null`.
 
 {% include "../../.gitbook/includes/code-samples/java-process-simplefield.md" %}
 
@@ -168,9 +183,12 @@ Depending on your requirements, this can be simplified using various custom meth
 {% endtab %}
 
 {% tab title=".NET" %}
-Accessing a simple value, where `my_simple_field` is the name of the field in the Model.
+Accessing simple values, using the name of the field in the Data Schema.
 
-We need to specify that the field is a `SimpleField` in order to access its value.
+We need to access the field as a `SimpleField` instance in order to access its value.
+
+We also need to specify the type of value, the possible types are `string` , `Boolean` , `Double` .\
+Note that all types may be `null`.
 
 {% include "../../.gitbook/includes/code-samples/dotnet-process-simplefield.md" %}
 

@@ -12,7 +12,7 @@ public function handleResponse(InferenceResponse $response)
     $simpleListField = $fields->getListField('my_simple_list_field');
 
     // access a value at a given position
-    $fieldFirstValue = $simpleListField[0]->value;
+    $fieldFirstValue = $simpleListField->items[0]->value;
 
     // Loop over the list of Simple fields
     foreach ($simpleListField->items as $listItem) {
