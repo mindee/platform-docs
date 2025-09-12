@@ -210,14 +210,13 @@ Inference parameters control:
 * server-side processing options
 * how the results will be returned to you
 
-### Processing Parameters
+### Use an Alias
 
-These are mostly the same parameters as present in the Web API.
+You can set an alias for linking the sent file to your own system.
 
-Default values for the processing Options can be changed on the platform.\
-Any values set here will override the defaults, leave empty to use the default values.
+For example, you could use an internal PO number, or your database ID.
 
-For example: if the polygon feature is enabled on the platform, and polygon is explicitly set to `false` in the parameters ⇒ the polygon feature will not be enabled for the API call.
+Aliases are not unique in our database, you can use the same alias multiple times.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -232,17 +231,7 @@ inference_params = InferenceParameters(
     # If empty, no alias will be used.
     alias="MY_ALIAS",
     
-    # Options: set to `True` or `False` to override defaults
-
-    # Enhance extraction accuracy with Retrieval-Augmented Generation.
-    rag=None,
-    # Extract the full text content from the document as strings.
-    raw_text=None,
-    # Calculate bounding box polygons for all fields.
-    polygon=None,
-    # Boost the precision and accuracy of all extractions.
-    # Calculate confidence scores for all fields.
-    confidence=None,
+    # ... any other options ...
 )
 ```
 {% endtab %}
@@ -257,12 +246,9 @@ const inferenceParams = {
   
   // Use an alias to link the file to your own DB.
   // If empty, no alias will be used.
-  alias: "MY_ALIAS"
-
-  // Options:
-
-  // If set to `true`, will enable Retrieval-Augmented Generation.
-  rag: false,
+  alias: "MY_ALIAS",
+  
+  // ... any other options ...
 };
 ```
 {% endtab %}
@@ -275,17 +261,11 @@ $inferenceParams = new InferenceParameters(
     // ID of the model, required.
     $modelId,
 
-    // Options: set to `true` or `false` to override defaults
-
-    // Enhance extraction accuracy with Retrieval-Augmented Generation.
-    rag: null,
-    // Extract the full text content from the document as strings.
-    rawText: null,
-    // Calculate bounding box polygons for all fields.
-    polygon: null,
-    // Boost the precision and accuracy of all extractions.
-    // Calculate confidence scores for all fields.
-    confidence: null
+    // Use an alias to link the file to your own DB.
+    // If empty, no alias will be used.
+    alias: "MY_ALIAS",
+    
+    // ... any other options ...
 );
 ```
 {% endtab %}
@@ -300,12 +280,9 @@ inference_params = Mindee::Input::InferenceParameters.new(
     
     # Use an alias to link the file to your own DB.
     # If empty, no alias will be used.
-    file_alias: "MY_ALIAS"
-
-    # Options:
-
-    # If set to `true`, will enable Retrieval-Augmented Generation.
-    rag: false,
+    file_alias: "MY_ALIAS",
+    
+    # ... any other options ...
 )
 ```
 {% endtab %}
@@ -321,18 +298,8 @@ InferenceParameters params = InferenceParameters
     // Use an alias to link the file to your own DB.
     // If empty, no alias will be used.
     .alias("MY_ALIAS")
-
-    // Options: set to `true` or `false` to override defaults
-
-    // Enhance extraction accuracy with Retrieval-Augmented Generation.
-    .rag(null)
-    // Extract the full text content from the document as strings.
-    .rawText(null)
-    // Calculate bounding box polygons for all fields.
-    .polygon(null)
-    // Boost the precision and accuracy of all extractions.
-    // Calculate confidence scores for all fields.
-    .confidence(null)
+    
+    // ... any other options ...
 
     // complete the builder
     .build();
@@ -351,7 +318,163 @@ var inferenceParams = new InferenceParameters(
     // If empty, no alias will be used.
     , alias: "MY_ALIAS"
     
-    // Options: set to `true` or `false` to override defaults
+    // ... any other options ...
+);
+```
+{% endtab %}
+{% endtabs %}
+
+### Optional Features Configuration
+
+Enable or disable [optional-features](../../models/optional-features/ "mention").
+
+{% hint style="info" %}
+Enabling a feature not in your plan will result in a Payment Required error (HTTP 402).
+
+Check the [#feature-comparison](../../account-management/plans.md#feature-comparison "mention") section for more information.
+{% endhint %}
+
+The default activation states for Optional Features are set on the platform.\
+Any values set here will override the defaults.
+
+Leave empty or null to use the default values.
+
+For example: if the Polygon feature is enabled on the platform, and polygon is explicitly set to `false` in the parameters ⇒ the Polygon feature will **not** be enabled for the API call.
+
+{% tabs %}
+{% tab title="Python" %}
+Only the `model_id` is required.
+
+```python
+inference_params = InferenceParameters(
+    # ID of the model, required.
+    model_id="MY_MODEL_ID",
+
+    # Optional Features: set to `True` or `False` to override defaults
+
+    # Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag=None,
+    # Extract the full text content from the document as strings.
+    raw_text=None,
+    # Calculate bounding box polygons for all fields.
+    polygon=None,
+    # Boost the precision and accuracy of all extractions.
+    # Calculate confidence scores for all fields.
+    confidence=None,
+    
+    # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Only the `modelId` is required.
+
+```typescript
+const inferenceParams = {
+  // ID of the model, required.
+  modelId: "MY_MODEL_ID",
+
+  // Optional Features: set to `true` or `false` to override defaults
+
+  // Enhance extraction accuracy with Retrieval-Augmented Generation.
+  rag: undefined,
+  // Extract the full text content from the document as strings.
+  rawText: undefined,
+  // Calculate bounding box polygons for all fields.
+  polygon: undefined,
+  // Boost the precision and accuracy of all extractions.
+  // Calculate confidence scores for all fields.
+  confidence: undefined,
+  
+  // ... any other options ...
+};
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Only the `modelId` is required.
+
+```php
+$inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    $modelId,
+
+    // Optional Features: set to `true` or `false` to override defaults
+
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag: null,
+    // Extract the full text content from the document as strings.
+    rawText: null,
+    // Calculate bounding box polygons for all fields.
+    polygon: null,
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    confidence: null,
+    
+    // ... any other options ...
+);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Only the `model_id` is required.
+
+```ruby
+inference_params = Mindee::Input::InferenceParameters.new(
+    # ID of the model, required.
+    model_id,
+    
+    # Use an alias to link the file to your own DB.
+    # If empty, no alias will be used.
+    file_alias: "MY_ALIAS"
+
+    # Optional Features: set to `true` or `false` to override defaults
+
+    # If set to `true`, will enable Retrieval-Augmented Generation.
+    rag: false,
+    
+    # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+Only the `modelId` is required.
+
+```java
+InferenceParameters params = InferenceParameters
+    // ID of the model, required.
+    .builder("MY_MODEL_ID")
+
+    // Optional Features: set to `true` or `false` to override defaults
+
+    // Enhance extraction accuracy with Retrieval-Augmented Generation.
+    .rag(null)
+    // Extract the full text content from the document as strings.
+    .rawText(null)
+    // Calculate bounding box polygons for all fields.
+    .polygon(null)
+    // Boost the precision and accuracy of all extractions.
+    // Calculate confidence scores for all fields.
+    .confidence(null)
+    
+    // ... any other options ...
+
+    // complete the builder
+    .build();
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Only the `modelId` is required.
+
+```csharp
+var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID"
+
+    // Optional Features: set to `true` or `false` to override defaults
 
     // Enhance extraction accuracy with Retrieval-Augmented Generation.
     , rag: null
@@ -362,6 +485,8 @@ var inferenceParams = new InferenceParameters(
     // Boost the precision and accuracy of all extractions.
     // Calculate confidence scores for all fields.
     , confidence: null
+    
+    // ... any other options ...
 );
 ```
 {% endtab %}
@@ -386,6 +511,7 @@ However, **we do not recommend** setting this option unless you are encountering
 from mindee import PollingOptions
 
 inference_params = InferenceParameters(
+    # ID of the model, required.
     model_id="MY_MODEL_ID",
     
     # Set only if having timeout issues.
@@ -397,6 +523,7 @@ inference_params = InferenceParameters(
         # Total number of polling attempts.
         max_retries=80,
     ),
+
     # ... any other options ...
 )
 ```
@@ -426,6 +553,7 @@ const inferenceParams = {
     // Total number of polling attempts.
     maxRetries: 80
   }
+
   // ... any other options ...
 }
 ```
@@ -457,6 +585,7 @@ $inferenceParams = new InferenceParameters(
         // Total number of polling attempts.
         maxRetries: 80,
     ),
+
     // ... any other options ...
 );
 ```
@@ -476,6 +605,7 @@ However, **we do not recommend** setting this option unless you are encountering
 require 'mindee'
 
 inference_params = Mindee::Input::InferenceParameters.new(
+  # ID of the model, required.
   "MY_MODEL_ID",
 
   # Set only if having timeout issues.
@@ -487,7 +617,8 @@ inference_params = Mindee::Input::InferenceParameters.new(
     # Total number of polling attempts.
     max_retries: 80,
   ),
-# ... any other options ...
+
+  # ... any other options ...
 )
 ```
 {% endtab %}
@@ -506,24 +637,25 @@ However, **we do not recommend** setting this option unless you are encountering
 
 ```java
 InferenceParameters params = InferenceParameters
-        .builder("MY_MODEL_ID")
+    // ID of the model, required.
+    .builder("MY_MODEL_ID")
         
-        // Set only if having timeout issues.
-        .pollingOptions(
-            AsyncPollingOptions.builder()
-                // Initial delay before the first polling attempt.
-                .initialDelaySec(3.0)
-                // Delay between each polling attempt.
-                .intervalSec(1.5)
-                // Total number of polling attempts.
-                .maxRetries(80)
-                // complete the builder
-                .build()
+    // Set only if having timeout issues.
+    .pollingOptions(
+        AsyncPollingOptions.builder()
+            // Initial delay before the first polling attempt.
+            .initialDelaySec(3.0)
+            // Delay between each polling attempt.
+            .intervalSec(1.5)
+            // Total number of polling attempts.
+            .maxRetries(80)
+            // complete the polling builder
+            .build()
         )
-    
-        // ... any other options ...
-    
-        .build();
+
+    // ... any other options ...
+
+    .build();
 ```
 {% endtab %}
 
@@ -539,6 +671,7 @@ However, **we do not recommend** setting this option unless you are encountering
 
 ```csharp
 var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
     modelId: "MY_MODEL_ID"
     
     // Set only if having timeout issues.
@@ -550,6 +683,7 @@ var inferenceParams = new InferenceParameters(
         // Total number of polling attempts.
         maxRetries: 80
     )
+
     // ... any other options ...
 );
 ```
@@ -568,7 +702,10 @@ When using a webhook, you'll need to set the model ID and the webhook ID(s) to u
 {% tab title="Python" %}
 ```python
 inference_params = InferenceParameters(
+    # ID of the model, required.
     model_id="MY_MODEL_ID",
+    
+    # Add any number of webhook IDs here.
     webhook_ids=["ENDPOINT_1_UUID"],
     
     # ... any other options ...
@@ -579,7 +716,10 @@ inference_params = InferenceParameters(
 {% tab title="Node.js" %}
 ```typescript
 const inferenceParams = {
+  // ID of the model, required.
   modelId: "MY_MODEL_ID",
+  
+  // Add any number of webhook IDs here.
   webhookIds: ["ENDPOINT_1_UUID"],
 
   // ... any other options ...
@@ -590,7 +730,10 @@ const inferenceParams = {
 {% tab title="PHP" %}
 ```php
 $inferenceParams = new InferenceParameters(
+    // ID of the model, required.
     modelId: "MY_MODEL_ID",
+    
+    // Add any number of webhook IDs here.
     webhooksIds: array("ENDPOINT_1_UUID"),
 
     // ... any other options ...
@@ -601,10 +744,13 @@ $inferenceParams = new InferenceParameters(
 {% tab title="Ruby" %}
 ```ruby
 inference_params = Mindee::Input::InferenceParameters.new(
+  # ID of the model, required.
   "MY_MODEL_ID",
+  
+  # Add any number of webhook IDs here.
   webhook_ids: ["ENDPOINT_1_UUID"],
 
-# ... any other options ...
+  # ... any other options ...
 )
 ```
 {% endtab %}
@@ -612,7 +758,10 @@ inference_params = Mindee::Input::InferenceParameters.new(
 {% tab title="Java" %}
 ```java
 InferenceParameters params = InferenceParameters
+    // ID of the model, required.
     .builder("MY_MODEL_ID")
+    
+    // Add any number of webhook IDs here.
     .webhookIds(new String[]{"ENDPOINT_1_UUID"})
     
     // ... any other options ...
@@ -624,7 +773,10 @@ InferenceParameters params = InferenceParameters
 {% tab title=".NET" %}
 ```csharp
 var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
     modelId: "MY_MODEL_ID"
+    
+    // Add any number of webhook IDs here.
     , webhookIds: new List<string>{ "ENDPOINT_1_UUID" }
     
     // ... any other options ...

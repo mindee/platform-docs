@@ -26,7 +26,7 @@ An example of the field types for a basic invoice extraction Data Schema:
 
 ## Building a Top-Performing Data Schema
 
-To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.&#x20;
+To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](optional-features/improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.&#x20;
 
 > _If the foundation is solid, the house is solid_
 

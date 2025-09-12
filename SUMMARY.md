@@ -12,9 +12,10 @@
 
 * [Models Overview](models/models-overview.md)
 * [Data Schema](models/data-schema.md)
-* [Continuous Learning (RAG)](models/improving-accuracy.md)
-* [Confidence Scores (for Automation)](models/automation-confidence-score.md)
-* [Polygons (Bounding Boxes)](models/polygons-bounding-boxes.md)
+* [Optional Features](models/optional-features/README.md)
+  * [Continuous Learning (RAG)](models/optional-features/improving-accuracy.md)
+  * [Confidence Score and Accuracy Boost](models/optional-features/automation-confidence-score.md)
+  * [Polygons (Bounding Boxes)](models/optional-features/polygons-bounding-boxes.md)
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
 * [Data Processing Policies](models/data-processing-policies.md)

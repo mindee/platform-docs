@@ -1,4 +1,7 @@
 ---
+description: >-
+  Enhance extraction accuracy with Retrieval-Augmented Generation using your own
+  documents.
 icon: layer-group
 ---
 
@@ -8,7 +11,7 @@ icon: layer-group
 
 When using an Extraction Model regularly, it can happen that the extraction is not satisfying on a given document or particular template.
 
-If you notice this, you have a way to improve durably the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
+If you notice this, you have a way to durably improve the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
 
 {% @supademo/embed demoId="cmfb3c7166gdc39ozj39wogrz" url="https://app.supademo.com/demo/cmfb3c7166gdc39ozj39wogrz" %}
 
@@ -24,9 +27,9 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 2. Retrieval: When a next document will be send with the RAG option activated, the model will try to search for a similar example in the existing database. The question here is : "Maybe there is an existing example where I need to follow the instructions so that I'm not doing a same mistake again".  If no example found, no need to augment the prediction. If an examples is matched in the RAG Database, here comes step 3.
 3. Augmented Generation: A document was matched in the RAG Database. The model will use the instructions you gave on the RAG sample to make a better prediction this time. The prediction generated is augmented with an existing context helping the model to be better this time.
 
-## How to Activate RAG
+## Activate RAG
 
-{% include "../.gitbook/includes/feature-availability.md" %}
+{% include "../../.gitbook/includes/feature-availability.md" %}
 
 To use RAG on a given Extraction Model, you should click on the RAG tab. \
 \
@@ -45,6 +48,12 @@ You should upload a document, and leave "Show RAG extraction" ticked.
 Ideally, pick a document with the same template (another invoice from the same supplier for instance), but not exactly the one you used in the RAG database. You will see the before/after predictions and should be able to check that the extra instructions were taken into account to augment properly the prediction.\
 \
 In the future, the documents respecting the same template should be augmented, which should increase a lot the performances on this given template. For other types of documents, the behavior remain the same, which means that RAG is improving the result with no regression on other documents.
+
+### Activate RAG via API Calls
+
+Check the [#set-inference-parameters](../../integrations/client-libraries-sdk/configure-the-client.md#set-inference-parameters "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+
+Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 
 ## Frequently Asked Questions
 

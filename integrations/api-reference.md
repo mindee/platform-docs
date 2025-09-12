@@ -14,11 +14,8 @@ icon: code
 Take a look at the [api-overview.md](api-overview.md "mention") if you are setting up your integration for the first time.
 {% endhint %}
 
-{% hint style="info" %}
-If you would like to download the OpenAPI specification directly, it is available here:
-
+If you would like to download the OpenAPI specification directly, it is available here:\
 [https://api-v2.mindee.net/openapi.json](https://api-v2.mindee.net/openapi.json)
-{% endhint %}
 
 {% openapi-operation spec="mindee-api" path="/v2/inferences/enqueue" method="post" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)

@@ -31,9 +31,9 @@ Additionally, lists of nested objects in the Data Schema and many corresponding 
 
 Processing options which impact response time:
 
-* [improving-accuracy.md](../models/improving-accuracy.md "mention")\
+* [improving-accuracy.md](../models/optional-features/improving-accuracy.md "mention")\
   Before performing the inference, the RAG database must be searched.
-* [automation-confidence-score.md](../models/automation-confidence-score.md "mention")\
+* [automation-confidence-score.md](../models/optional-features/automation-confidence-score.md "mention")\
   Several models are called in parallel, results are then analyzed and combined.
-* [polygons-bounding-boxes.md](../models/polygons-bounding-boxes.md "mention")\
+* [polygons-bounding-boxes.md](../models/optional-features/polygons-bounding-boxes.md "mention")\
   Additional information must be extracted from the document, then polygons must be calculated.

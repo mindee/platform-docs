@@ -1,8 +1,11 @@
 ---
+description: >-
+  Enable automated workflows by enhancing model accuracy and measuring field
+  confidence.
 icon: bolt-auto
 ---
 
-# Confidence Scores (for Automation)
+# Confidence Score and Accuracy Boost
 
 ## Overview
 
@@ -46,25 +49,25 @@ The default color scheme is as follows:
 | 🟩 High          | `High`           | Green      | Can be auto-processed    | Model consensus is strong; prediction is likely accurate.                |
 | 🟦 Certain       | `Certain` (soon) | Blue       | Safe for full automation | Full confidence, human-level precision                                   |
 
-This color-coding system allows product teams to **highlight uncertainty directly in the user interface**, enabling faster decisions, reducing cognitive load, and streamlining exception handling.&#x20;
+This color-coding system allows product teams to **highlight uncertainty directly in the user interface**, enabling faster decisions, reducing cognitive load, and streamlining exception handling.
 
-## How to Activate Automation
+## Activate Confidence Scores
 
-{% include "../.gitbook/includes/feature-availability.md" %}
+{% include "../../.gitbook/includes/feature-availability.md" %}
+
+### Activate Confidence Scores on the Platform
 
 {% @supademo/embed demoId="cmeie3irw9fe7h3pytuktflxs" url="https://app.supademo.com/demo/cmeie3irw9fe7h3pytuktflxs" %}
 
-## Using Automation
+### Activate Confidence Scores via API Calls
 
 {% hint style="info" %}
 When the **Automation** feature is not activated, the `confidence` attribute in the response will always be `null`.
 {% endhint %}
 
-We have full support for handling the confidence score in our [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
+Check the [#set-inference-parameters](../../integrations/client-libraries-sdk/configure-the-client.md#set-inference-parameters "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
-Specific instructions can be found in the [#confidence](../integrations/client-libraries-sdk/process-the-response.md#confidence "mention") section.
-
-If you're not using our client libraries, check out the [#get-v2-inferences-inference\_id](../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
+Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 
 ## Towards 100% Automation
 

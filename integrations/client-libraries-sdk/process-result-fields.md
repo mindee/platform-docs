@@ -488,7 +488,7 @@ The attributes are always present even when not activated.
 
 The confidence level of the extracted value.
 
-The data are only filled if the [automation-confidence-score.md](../../models/automation-confidence-score.md "mention") feature is activated.
+The data are only filled if the [automation-confidence-score.md](../../models/optional-features/automation-confidence-score.md "mention") feature is activated.
 
 The attribute is always present, in case of Confidence Score not activated, it will always be null.
 
@@ -607,7 +607,7 @@ public void HandleResponse(InferenceResponse response)
 
 A list of the field's locations on the document.
 
-The data are only filled if the [polygons-bounding-boxes.md](../../models/polygons-bounding-boxes.md "mention") feature is activated.
+The data are only filled if the [polygons-bounding-boxes.md](../../models/optional-features/polygons-bounding-boxes.md "mention") feature is activated.
 
 It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
 

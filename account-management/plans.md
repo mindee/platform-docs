@@ -74,4 +74,4 @@ More information in the [billing.md](billing.md "mention") section.
 
 
 
-    Learn more on our [Automation documentation](../models/automation-confidence-score.md)
+    Learn more on our [Automation documentation](../models/optional-features/automation-confidence-score.md)
