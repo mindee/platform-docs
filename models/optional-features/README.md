@@ -49,5 +49,5 @@ Details on setting features in the API: [#optional-features-configuration](../..
   Add a confidence score to each extracted field.
 * [polygons-bounding-boxes.md](polygons-bounding-boxes.md "mention")\
   Add the polygon coordinates of each extracted field to the API response.
-  * Raw Text\
-    Add the full text content of your documents to the API response.
+* Raw Text\
+  Add the full text content of your documents to the API response.
