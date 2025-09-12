@@ -1,5 +1,5 @@
 ---
-icon: atom
+icon: database
 ---
 
 # Data Schema
