@@ -1,14 +1,18 @@
 ---
 description: >-
-  Boarding passes contain all the information needed for a passenger to access a
-  flight: traveler identity, flight details, departure and arrival airports, and
-  boarding information. With Mindee, you can
+  With Mindee, you can extract all the information needed for a passenger to
+  access a flight: traveler identity, flight details, departure and arrival
+  airports, and boarding information.
 hidden: true
 noIndex: true
 icon: ticket-airline
 ---
 
 # Boarding Pass
+
+Here is how to build your custom Boarding Pass model with Mindee in just a few minutes:
+
+{% @supademo/embed demoId="cmfl5e3l1erva39ozltfkx1ta" url="https://app.supademo.com/demo/cmfl5e3l1erva39ozltfkx1ta" %}
 
 ## Why use Mindee for boarding passes?
 
@@ -54,4 +58,4 @@ Since there is no pre-trained boarding pass model in the catalog, you will need 
 
 ## Document format support
 
-The custom model accepts PDF and common image formats (JPG, PNG). It works with digital boarding passes as well as photos or scans of printed passes.
+The custom model accepts PDF and common image formats (JPG, PNG). It works with digital boarding passes as well as photos or scans of printed passes. See full [list of accepted files](https://docs.mindee.com/integrations/technical-limitations#accepted-files).
