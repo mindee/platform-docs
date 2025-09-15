@@ -9,7 +9,7 @@ icon: coins
 
 # Financial documents
 
-{% @supademo/embed demoId="cmfcuyiub84i439ozhjunffyc" url="https://app.supademo.com/demo/cmfcuyiub84i439ozhjunffyc" %}
+{% @supademo/embed demoId="cmfdw3e3q90i539ozo0p7lqiu" url="https://app.supademo.com/demo/cmfdw3e3q90i539ozo0p7lqiu" %}
 
 ## Why Use Mindee for Financial Documents?
 
@@ -58,7 +58,7 @@ Depending on your document type, here are example fields our users often request
 
 You can use this financial document sample to do a live test yourself:
 
-<figure><img src="../.gitbook/assets/invoice-model-sample.png" alt="an anonymized invoice sample"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/invoice-sample-mindee.png" alt="a fake invoice from John Smith"><figcaption></figcaption></figure>
 
 ## Supported Formats
 
