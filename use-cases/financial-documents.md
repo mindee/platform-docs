@@ -13,12 +13,23 @@ icon: coins
 
 ## Why Use Mindee for Financial Documents?
 
-Financial documents come in all shapes and formats, with layouts that vary significantly across countries, industries, and even vendors. Mindee’s AI agent helps you:
+Here is a quick demo on how to set up your Financial Document model:
 
-* Build custom extraction logic based on your documents
-* Prompt the agent with the fields you need (e.g. “Extract invoice number, total amount, and due date”)
-* Upload example documents to help the agent learn your document structure
-* Skip complex rule-based templates or manual data entry
+{% @supademo/embed demoId="cmfdw3e3q90i539ozo0p7lqiu" url="https://app.supademo.com/demo/cmfdw3e3q90i539ozo0p7lqiu" %}
+
+## Why Use Mindee for Financial Documents?
+
+### Unified processing for multiple financial document types
+
+With the Financial Document model, you don’t need to build a separate parser for each kind of document.\
+Invoices, bank statements, receipts, or even balance sheets can all be uploaded to the same endpoint.\
+The model automatically interprets the type of document and extracts the relevant fields accordingly.
+
+This allows you to:
+
+* Centralize all your financial document workflows in one place
+* Avoid managing multiple APIs for each document type
+* Scale faster when new document formats appear in your processes
 
 ### Common Use Cases
 
@@ -59,6 +70,8 @@ Depending on your document type, here are example fields our users often request
 You can use this financial document sample to do a live test yourself:
 
 <figure><img src="../.gitbook/assets/invoice-sample-mindee.png" alt="a fake invoice from John Smith"><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/invoice-sample-mindee (1).png" alt="an invoice sample from Mindee"><figcaption></figcaption></figure>
 
 ## Supported Formats
 
