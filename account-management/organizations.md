@@ -3,8 +3,6 @@ description: >-
   The Organizations feature in Mindee enables collaborative work: users can
   belong to an organization and participate in workspaces with role-based access
   control.
-hidden: true
-noIndex: true
 icon: users-rectangle
 ---
 
