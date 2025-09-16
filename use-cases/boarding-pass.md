@@ -3,7 +3,6 @@ description: >-
   With Mindee, you can extract all the information needed for a passenger to
   access a flight: traveler identity, flight details, departure and arrival
   airports, and boarding information.
-hidden: true
 noIndex: true
 icon: ticket-airline
 ---
@@ -42,9 +41,7 @@ Depending on your needs, you can also add fields such as **Seat Number**, **Gate
 
 Here is a boarding pass sample if you want to try a live test for your model:
 
-<figure><img src="../.gitbook/assets/boarding-pass-sample.png" alt="the image of a boarding pass of John Doe"><figcaption></figcaption></figure>
-
-
+<figure><img src="../.gitbook/assets/boarding-pass-sample.jpg" alt="a fake boarding pass"><figcaption></figcaption></figure>
 
 ## How to Create your Boarding Pass Model
 

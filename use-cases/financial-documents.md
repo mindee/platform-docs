@@ -2,16 +2,10 @@
 description: >-
   Mindee allows you to process a wide variety of financial documents and adapts
   to your specific needs.
-hidden: true
-noIndex: true
 icon: coins
 ---
 
 # Financial documents
-
-{% @supademo/embed demoId="cmfdw3e3q90i539ozo0p7lqiu" url="https://app.supademo.com/demo/cmfdw3e3q90i539ozo0p7lqiu" %}
-
-## Why Use Mindee for Financial Documents?
 
 Here is a quick demo on how to set up your Financial Document model:
 
@@ -71,9 +65,9 @@ You can use this financial document sample to do a live test yourself:
 
 <figure><img src="../.gitbook/assets/invoice-sample-mindee.png" alt="a fake invoice from John Smith"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/invoice-sample-mindee (1).png" alt="an invoice sample from Mindee"><figcaption></figcaption></figure>
-
 ## Supported Formats
 
 * **PDF files** — single-page or multi-page
 * **Images** — JPG, PNG, TIFF, and more
+
+See full [list of accepted files](https://docs.mindee.com/integrations/technical-limitations#accepted-files).&#x20;
