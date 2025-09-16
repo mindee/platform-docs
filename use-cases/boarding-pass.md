@@ -3,7 +3,6 @@ description: >-
   With Mindee, you can extract all the information needed for a passenger to
   access a flight: traveler identity, flight details, departure and arrival
   airports, and boarding information.
-noIndex: true
 icon: ticket-airline
 ---
 
