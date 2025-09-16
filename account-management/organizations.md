@@ -12,7 +12,7 @@ icon: users-rectangle
 
 ## Organization Settings
 
-When you go to **Settings > Organization** in the Mindee app, you can:
+When you go to **Settings > Organization** in the Mindee platform, you can:
 
 ### **Edit Organization Details**
 
