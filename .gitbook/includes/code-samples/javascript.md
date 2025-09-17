@@ -21,14 +21,24 @@ const mindeeClient = new mindee.ClientV2({ apiKey: apiKey });
 // Set inference parameters
 const inferenceParams = {
   modelId: modelId,
-  // If set to `true`, will enable Retrieval-Augmented Generation.
-  rag: false
+
+  // Options: set to `true` or `false` to override defaults
+
+  // Enhance extraction accuracy with Retrieval-Augmented Generation.
+  rag: undefined,
+  // Extract the full text content from the document as strings.
+  rawText: undefined,
+  // Calculate bounding box polygons for all fields.
+  polygon: undefined,
+  // Boost the precision and accuracy of all extractions.
+  // Calculate confidence scores for all fields.
+  confidence: undefined,
 };
 
 // Load a file from disk
 const inputSource = new mindee.PathInput({ inputPath: filePath });
 
-// Send for processing using polling
+// Send for processing
 const response = mindeeClient.enqueueAndGetInference(
   inputSource,
   inferenceParams
