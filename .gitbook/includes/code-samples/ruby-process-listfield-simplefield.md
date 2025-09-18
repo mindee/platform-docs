@@ -4,7 +4,9 @@ title: ruby-process-listfield-simplefield
 
 ```ruby
 def handle_response(response)
-  my_list_field = response.inference.fields.get('my_simple_list_field')
+  fields = response.inference.result.fields
+  
+  my_list_field = fields.get('my_simple_list_field')
 
   # access a value at a given position
   simple_list_field = my_list_field.items[0].value
