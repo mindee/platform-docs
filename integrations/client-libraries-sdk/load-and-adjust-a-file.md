@@ -232,7 +232,9 @@ The string will be decoded into bytes internally.
 
 ```ruby
 input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
-input_source = Mindee::Input::Source::Base64InputSource.new(input_base64, 'file.ext')
+input_source = Mindee::Input::Source::Base64InputSource.new(
+    input_base64, 'file.ext'
+)
 ```
 
 To load a file handle, use `FileInputSource`.\
