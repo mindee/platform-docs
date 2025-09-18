@@ -134,7 +134,7 @@ We need to specify that the field is a `ListField` in order to access its items.
 {% endtab %}
 
 {% tab title="Ruby" %}
-Accessing a simple field's values, where different types are defined in the Data Schema.
+Accessing simple values, using the name of the field in the Data Schema.
 
 {% include "../../.gitbook/includes/code-samples/ruby-process-simplefield.md" %}
 
