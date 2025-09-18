@@ -303,7 +303,7 @@ Using the `response` deserialized object from either the polling response or a w
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    raw_text = inference.result.raw_text
+    raw_text = response.inference.result.raw_text
     
     # get the entire document as a single string
     document_text = str(raw_text)
@@ -340,7 +340,7 @@ use Mindee\Parsing\V2\InferenceResponse;
 
 public function handleResponse(InferenceResponse $response)
 {
-    $rawText = $inference->result->rawText;
+    $rawText = $response->inference->result->rawText;
 
     // get the entire document as a single string
     $documentText = strval($rawText);
@@ -350,6 +350,23 @@ public function handleResponse(InferenceResponse $response)
         $pageText = $page->content;
     }
 }
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```ruby
+require 'mindee'
+
+def handle_response(response)
+  raw_text = response.inference.result.raw_text
+  
+  # loop over pages
+  raw_text.pages.each do |page|
+    page_text = page.content
+  end
+end
 ```
 {% endtab %}
 

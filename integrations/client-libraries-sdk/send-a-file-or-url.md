@@ -80,7 +80,7 @@ $inputSource = new URLInputSource(
 require 'mindee'
 
 input_source = Mindee::Input::Source::URLInputSource.new(
-  "https://example.com/file.ext"
+  'https://example.com/file.ext'
 )
 ```
 {% endtab %}

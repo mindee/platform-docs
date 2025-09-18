@@ -216,7 +216,7 @@ $inputSource = Base64Input($inputBase64, "base64_file.txt");
 To load a path string, use the `PathInputSource` class.
 
 ```ruby
-input_path = "/path/to/the/file.ext"
+input_path = '/path/to/the/file.ext'
 input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 ```
 
@@ -231,7 +231,7 @@ To load a base-64 string, use `Base64InputSource`.\
 The string will be decoded into bytes internally.
 
 ```ruby
-input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
+input_base64 = 'iVBORw0KGgoAAAANSUhEUgAAABgAAA ...'
 input_source = Mindee::Input::Source::Base64InputSource.new(
     input_base64, 'file.ext'
 )
@@ -241,7 +241,7 @@ To load a file handle, use `FileInputSource`.\
 It must be opened in binary mode.
 
 ```ruby
-file = File.open("/path/to/the/file.ext", 'rb')
+file = File.open('/path/to/the/file.ext', 'rb')
 input_source = Mindee::Input::Source::FileInputSource.new(file, 'file.ext')
 ```
 {% endtab %}

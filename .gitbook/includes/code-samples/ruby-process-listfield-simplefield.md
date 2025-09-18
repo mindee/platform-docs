@@ -6,13 +6,13 @@ title: ruby-process-listfield-simplefield
 def handle_response(response)
   fields = response.inference.result.fields
   
-  my_list_field = fields.get('my_simple_list_field')
+  my_list_field = fields.get_list_field('my_simple_list_field')
 
   # access a value at a given position
-  simple_list_field = my_list_field.items[0].value
+  simple_list_field = my_list_field.simple_items[0].value
 
   # Loop over the list of Simple fields
-  simple_list_field.items.each do |list_item|
+  simple_list_field.simple_items.each do |list_item|
     item_value = list_item.value
   end
 end

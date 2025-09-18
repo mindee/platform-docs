@@ -259,7 +259,7 @@ Only the `modelId` is required.
 ```php
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
-    $modelId,
+    "MY_MODEL_ID",
 
     // Use an alias to link the file to your own DB.
     // If empty, no alias will be used.
@@ -276,11 +276,11 @@ Only the `model_id` is required.
 ```ruby
 inference_params = Mindee::Input::InferenceParameters.new(
     # ID of the model, required.
-    model_id,
+    'MY_MODEL_ID',
     
     # Use an alias to link the file to your own DB.
     # If empty, no alias will be used.
-    file_alias: "MY_ALIAS",
+    file_alias: 'MY_ALIAS',
     
     # ... any other options ...
 )
@@ -398,7 +398,7 @@ Only the `modelId` is required.
 ```php
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
-    $modelId,
+    "MY_MODEL_ID",
 
     // Optional Features: set to `true` or `false` to override defaults
 
@@ -423,16 +423,19 @@ Only the `model_id` is required.
 ```ruby
 inference_params = Mindee::Input::InferenceParameters.new(
     # ID of the model, required.
-    model_id,
-    
-    # Use an alias to link the file to your own DB.
-    # If empty, no alias will be used.
-    file_alias: "MY_ALIAS"
+    'MY_MODEL_ID',
 
-    # Optional Features: set to `true` or `false` to override defaults
+    # Options: set to `true` or `false` to override defaults
 
-    # If set to `true`, will enable Retrieval-Augmented Generation.
-    rag: false,
+    # Enhance extraction accuracy with Retrieval-Augmented Generation.
+    rag: nil,
+    # Extract the full text content from the document as strings.
+    raw_text: nil,
+    # Calculate bounding box polygons for all fields.
+    polygon: nil,
+    # Boost the precision and accuracy of all extractions.
+    # Calculate confidence scores for all fields.
+    confidence: nil,
     
     # ... any other options ...
 )
@@ -606,7 +609,7 @@ require 'mindee'
 
 inference_params = Mindee::Input::InferenceParameters.new(
   # ID of the model, required.
-  "MY_MODEL_ID",
+  'MY_MODEL_ID',
 
   # Set only if having timeout issues.
   polling_options: Mindee::Input::PollingOptions.new(
@@ -745,8 +748,8 @@ $inferenceParams = new InferenceParameters(
 ```ruby
 inference_params = Mindee::Input::InferenceParameters.new(
   # ID of the model, required.
-  "MY_MODEL_ID",
-  
+  'MY_MODEL_ID',
+
   # Add any number of webhook IDs here.
   webhook_ids: ["ENDPOINT_1_UUID"],
 

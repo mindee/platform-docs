@@ -75,6 +75,18 @@ public function handleResponse(InferenceResponse $response)
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+Using the `response` deserialized object from either the polling response or a webhook payload.
+
+```ruby
+def handle_response(response)
+  fields = response.inference.result.fields
+
+  simple_field = fields.get_simple_field('my_simple_field')
+end
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
@@ -554,12 +566,18 @@ public function handleResponse(InferenceResponse $response)
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```ruby
-fields = response.inference.result.fields
+def handle_response(response)
+  fields = response.inference.result.fields
 
-confidence = fields["my_simple_field"].confidence
+  confidence = fields["my_simple_field"].confidence
 
-# compare using the enum `FieldConfidence`
-is_certain = confidence == Mindee::Parsing::V2::Field::FieldConfidence.CERTAIN
+  # compare using the class `FieldConfidence`
+  FieldConfidence = Mindee::Parsing::V2::Field::FieldConfidence
+  
+  is_certain = confidence == FieldConfidence.CERTAIN
+  is_lte_medium = confidence <= FieldConfidence.MEDIUM
+  is_gte_low = confidence >= FieldConfidence.LOW
+end
 ```
 {% endtab %}
 
@@ -704,6 +722,32 @@ public function handleResponse(InferenceResponse $response)
     // accessing the page index on which the polygon is
     $pageIndex = $locations[0]->page;
 }
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Using the `$response` deserialized object from either the polling response or a webhook payload.
+
+```ruby
+def handle_response(response)
+  fields = response.inference.result.fields
+
+  locations = fields.get_simple_field('my_simple_field').locations
+
+  # accessing the polygon
+  polygon = locations[0].polygon
+
+  # accessing points:
+  top_x = polygon[0].x
+  # alternative syntax
+  # top_x = polygon[0][0]
+
+  # there are geometry functions available in the Polygon class
+  center = polygon.centroid
+
+  # accessing the page index on which the polygon is
+  page_index = locations[0].page
+end
 ```
 {% endtab %}
 

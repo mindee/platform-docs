@@ -87,7 +87,7 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 {% tab title="Node.js" %}
 Accessing simple values, using the name of the field in the Data Schema.
 
-We need to access the field as a `SimpleField` instance in order to access its value.
+Access fields as `SimpleField` instances when retrieving their value.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-simplefield.md" %}
 
@@ -112,7 +112,7 @@ We need to specify that the field is a `ListField` in order to access its items.
 {% tab title="PHP" %}
 Accessing simple values, using the name of the field in the Data Schema.
 
-We need to access the field as a `SimpleField` instance in order to access its value.
+Access fields as `SimpleField` instances when retrieving their value.
 
 {% include "../../.gitbook/includes/code-samples/php-process-simplefield.md" %}
 
@@ -136,9 +136,13 @@ We need to specify that the field is a `ListField` in order to access its items.
 {% tab title="Ruby" %}
 Accessing simple values, using the name of the field in the Data Schema.
 
+Access fields as `SimpleField` instances when retrieving their value.
+
 {% include "../../.gitbook/includes/code-samples/ruby-process-simplefield.md" %}
 
 Accessing a list of values, where `my_simple_list_field` is the name of the field in the Model.
+
+Access the list as a `ListField` instance, and the items as `SimpleField` instances.
 
 {% include "../../.gitbook/includes/code-samples/ruby-process-listfield-simplefield.md" %}
 
@@ -149,13 +153,21 @@ In this hypothetical case, the object has a sub-field named `sub_field` .
 
 Accessing a list of objects, where `my_object_list_field` is the name of the field in the Model.
 
+Access the list as a `ListField` instance, and the items as `ObjectField` instances.
+
 {% include "../../.gitbook/includes/code-samples/ruby-process-listfield-objectfield.md" %}
+
+{% hint style="info" %}
+You can technically access all field types by their index: `fields['field_name']`&#x20;
+
+This is heavily discouraged and **unsupported**.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Java" %}
 Accessing simple values, using the name of the field in the Data Schema.
 
-We need to access the field as a `SimpleField` instance in order to access its value.
+Access fields as `SimpleField` instances when retrieving their value.
 
 We also need to specify the type of value, the possible types are `String` , `Boolean` , `Double` .\
 Note that all types may be `null`.
@@ -185,7 +197,7 @@ Depending on your requirements, this can be simplified using various custom meth
 {% tab title=".NET" %}
 Accessing simple values, using the name of the field in the Data Schema.
 
-We need to access the field as a `SimpleField` instance in order to access its value.
+Access fields as `SimpleField` instances when retrieving their value.
 
 We also need to specify the type of value, the possible types are `string` , `Boolean` , `Double` .\
 Note that all types may be `null`.
