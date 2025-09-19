@@ -9,7 +9,7 @@ description: Integrating Mindee in n8n workflows.
 
 Use the instructions below to integrate n8n.
 
-We are working on updating the Mindee n8n node.
+We are working on [updating the Mindee n8n node](https://github.com/n8n-io/n8n/pull/18986).
 {% endhint %}
 
 ## Use a Sample n8n Workflow
