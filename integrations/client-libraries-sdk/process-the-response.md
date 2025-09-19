@@ -361,7 +361,10 @@ require 'mindee'
 
 def handle_response(response)
   raw_text = response.inference.result.raw_text
-  
+
+  # get the entire document as a single string
+  document_text = raw_text.to_s
+
   # loop over pages
   raw_text.pages.each do |page|
     page_text = page.content
