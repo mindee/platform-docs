@@ -1,14 +1,17 @@
 ---
+description: >-
+  The Live Test page from Mindee allows you to test your model, download sample
+  documents or view your document history.
 icon: circle-play
 ---
 
 # Live Test
 
+{% @supademo/embed demoId="cmfmnqqnqgjnb39ozfh42qw7z" url="https://app.supademo.com/demo/cmfmnqqnqgjnb39ozfh42qw7z" %}
+
 ## Overview
 
 The **Live Test** page lets you **interactively test your model** on real documents and visually inspect the extraction results in one click. It’s the perfect place to debug, validate, and refine your model’s behavior before moving to production.
-
-<figure><img src="../.gitbook/assets/live-test-demo.gif" alt="Overview animation of Mindee Live View"><figcaption></figcaption></figure>
 
 ## Key Features
 
@@ -21,13 +24,10 @@ The **Live Test** page lets you **interactively test your model** on real docume
 ## How it Works
 
 1. Upload or drag a document (PDF or image) directly into the interface.
-2.  Mindee runs the current version of your model on the document.
-
-    <figure><img src="../.gitbook/assets/live-test-processing.png" alt="importing docs into the Live View"><figcaption></figcaption></figure>
-3.  The extracted fields appear on the right-hand side, alongside the image preview.
-
-    <figure><img src="../.gitbook/assets/live-test-done.png" alt="extracted fields in the Live View"><figcaption></figcaption></figure>
+2. Mindee runs the current version of your model on the document.
+3. The extracted fields appear on the right-hand side, alongside the image preview.
 4. Each field is:
    * **highlighted on the document** with color-coded overlays, showcasing the polygon features that can be enabled in the data schema option.
    * listed in the right panel with values, field names, and optionally confidence scores if the [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention") feature is enabled.
 
+<figure><img src="../.gitbook/assets/live-test-demo.gif" alt="Overview animation of Mindee Live View"><figcaption><p>By clicking the polygon, you can also see its corresponding field on the right side.</p></figcaption></figure>
