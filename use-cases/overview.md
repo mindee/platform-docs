@@ -1,6 +1,5 @@
 ---
 description: Which kind of models are users building on Mindee?
-hidden: true
 icon: print-magnifying-glass
 ---
 
