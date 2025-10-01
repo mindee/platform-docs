@@ -1,5 +1,7 @@
 ---
 description: Common error messages and their handling.
+hidden: true
+noIndex: true
 icon: hexagon-exclamation
 ---
 
