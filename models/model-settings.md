@@ -28,7 +28,13 @@ You can send documents from any country to the Mindee API!
 
 ## Storage Policy
 
-We have the capacity to store the documents and the extracted data for a certain duration. \
+We can store the extracted data (inference) for a certain duration.
+
+If "Delete extracted data when fetched" is checked, the inference will be deleted right away, when either:
+
+* the inference is access using a GET request (usually when polling)
+* the inference is successfully sent to your server
+
 This setting allows you to enter your storage conditions:&#x20;
 
 Storage duration corresponds to the number of hours you allow Mindee to store your documents and extracted data.
