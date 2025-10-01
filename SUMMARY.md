@@ -40,6 +40,7 @@
   * [Process Result Fields](integrations/client-libraries-sdk/process-result-fields.md)
 * [No-Code Integrations](integrations/no-code-integrations/README.md)
   * [n8n Workflows](integrations/no-code-integrations/n8n-workflows.md)
+* [Error Handling](integrations/problem-database.md)
 * [Tutorials](integrations/tutorials/README.md)
   * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [API Reference](integrations/api-reference.md)
