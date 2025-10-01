@@ -117,3 +117,6 @@ The payload is identical to a polling result and processing its contents is done
 More details here: [process-the-response.md](client-libraries-sdk/process-the-response.md "mention")
 
 We **highly recommend** saving all received payloads to disk or a database before attempting to load the inference. We will not be able to provide support if you are not able to retrieve payloads after having received them.
+
+## Frequently Asked Questions
+
