@@ -7,7 +7,14 @@ icon: hexagon-exclamation
 
 # Error Handling
 
-4xx Errors - Client Errors
+## Error Responses
+
+All errors will contain the following information:
+
+* Status: an HTTP status code.
+* Detail: a human-readable description of the error.
+
+## 4xx Errors - Client Errors
 
 <table>
   <thead>
@@ -24,11 +31,19 @@ icon: hexagon-exclamation
     <tr>
       <td>402</td>
       <td>An optional feature is not in your plan.
-      <br>There is a problem with your subscription.</td>
+      <br>Your subscription is either not active or exceeded limits.</td>
+    </tr>
+    <tr>
+      <td>403</td>
+      <td>You don't have access to the requested resource.</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>The requested resource does not exist.</td>
     </tr>
     <tr>
       <td>422</td>
-      <td>Wrong format for UUID.<br>Missing Parameter in request.</td>
+      <td>Wrong format for a UUID.<br>Missing Parameter in a request.</td>
     </tr>
     <tr>
       <td></td>
