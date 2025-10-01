@@ -13,8 +13,7 @@ This section only applies when sending documents via API call.
 
 Data is automatically deleted as soon as the storage duration expires.
 
-During this time, you may make GET requests to retrieve the payload using its inference ID.\
-After this period, any calls to the inference ID will result in a 404 error.
+During this time, you may make GET requests to retrieve the payload using its inference ID. After this period, any calls to the inference ID will result in a 404 error.
 
 This setting helps balance between accessibility of results for your workflow and minimizing retention for privacy and compliance.
 
@@ -29,7 +28,6 @@ When **enabled**, extracted data is automatically and permanently deleted immedi
 
 The data will be deleted regardless of the Storage Period setting.
 
-Once the Storage Period is passed, the data will be deleted regardless of whether this option is enabled.\
-Once the data are deleted, any calls to the inference ID will result in a 404 error.
+Once the Storage Period is passed, the data will be deleted regardless of whether this option is enabled. Once the data are deleted, any calls to the inference ID will result in a 404 error.
 
 This option is recommended for workflows where you only need the extracted data once and do not require retrieval beyond the initial API call.
