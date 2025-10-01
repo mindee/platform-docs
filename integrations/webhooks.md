@@ -36,6 +36,7 @@ sequenceDiagram
     participant srv as Mindee Server
     client->>enqueue: POST file
     enqueue->>client: HTTP 202
+    client-->>client: save Job ID
     enqueue->>+srv: Start processing
     srv->>srv: Process file
     srv->>-clientsrv: POST results
