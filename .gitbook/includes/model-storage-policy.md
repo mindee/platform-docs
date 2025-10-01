@@ -1,5 +1,3 @@
-## Storage Policy
-
 The **Storage Policy** defines how long extracted data (i.e., the results of document processing) is retained in Mindee’s systems before being permanently deleted.
 
 This section only applies when sending documents via API call.

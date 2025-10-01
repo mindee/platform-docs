@@ -10,21 +10,9 @@ On the Model Settings page, you'll have the opportunity to modify the model name
 
 ## Processing Zone
 
-This setting determines the geographic region of where your data is processed.
+{% include "/.gitbook/includes/model-processing-zone.md" %}
 
-There are 3 available options for processing location:&#x20;
-
-* Europe
-* United States
-* Global
-
-Selecting **Global** means your data could be processed in Europe and/or the United States.
-
-{% hint style="info" %}
-This is only an indication for processing, not support.
-
-You can send documents from any country to the Mindee API!
-{% endhint %}
+## Storage Policy
 
 {% include "/.gitbook/includes/model-storage-policy.md" %}
 
@@ -34,5 +22,8 @@ To prevent unintended changes once your data schema is finalized, you have the o
 
 ## Copying, Transferring, Deleting Models
 
-These operations are available in the "Danger Zone" are of the model settings.
+These operations are available in the "Danger Zone" area of the model settings.
 
+{% hint style="warning" %}
+Operations in the "Danger Zone" are irreversible!
+{% endhint %}
