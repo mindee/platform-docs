@@ -26,32 +26,7 @@ This is only an indication for processing, not support.
 You can send documents from any country to the Mindee API!
 {% endhint %}
 
-## Storage Policy
-
-This section only applies when sending documents via API call.
-
-### Retrieval Period
-
-By default, extracted data (inferences) are stored for 12 hours after their completion.
-
-During this time, you may make GET requests to retrieve the payload using its inference ID.
-
-After this period, any calls to the inference ID will result in a 404 error.
-
-You may adjust this period from between 1 to 24 hours.
-
-### Immediate Deletetion
-
-If "Delete extracted data when fetched" is checked, the inference will be deleted when either:&#x20;
-
-* the inference is accessed using a GET request (usually when polling)
-* the inference is successfully sent to your server via a [webhook](/integrations/webhooks.md)
-
-The data will be deleted immediately regardless of the Retrieval Period setting.
-
-Once the Retrieval Period is passed, the data will be deleted regardless of whether Immediate Deletion is activated.
-
-Once the data are deleted, any calls to the inference ID will result in a 404 error.
+{% include "/.gitbook/includes/model-storage-policy.md" %}
 
 ## Locking the Data Schema
 
