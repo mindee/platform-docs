@@ -23,7 +23,7 @@ The source has no impact on server-side processing nor on the result.
 
 A local file can be manipulated and adjusted before sending, as described in the [#adjust-the-source-file](load-and-adjust-a-file.md#adjust-the-source-file "mention") section.
 
-An URL cannot be manipulated locally for obvious reasons.\
+The contents of a URL **cannot** be manipulated locally.\
 You'll need to download it to the local machine if you wish to adjust the file in any way before sending.
 
 ## Use a File
