@@ -619,8 +619,8 @@ public void HandleResponse(InferenceResponse response)
     // compare using the enum `FieldConfidence`
     bool isCertain = confidence == FieldConfidence.Certain;
     // cast to int for relative inequalities
-    bool isLteMedium = (int?)confidence <= (int)FieldConfidence.Medium
-    bool isGteLow = (int?)confidence >= (int)FieldConfidence.Low
+    bool isLteMedium = (int?)confidence <= (int)FieldConfidence.Medium;
+    bool isGteLow = (int?)confidence >= (int)FieldConfidence.Low;
 }
 ```
 {% endtab %}
