@@ -16,7 +16,7 @@ There are 3 available options for processing location:&#x20;
 
 * Europe
 * United States
-* Global&#x20;
+* Global
 
 Selecting **Global** means your data could be processed in Europe and/or the United States.
 
@@ -28,16 +28,30 @@ You can send documents from any country to the Mindee API!
 
 ## Storage Policy
 
-We can store the extracted data (inference) for a certain duration.
+This section only applies when sending documents via API call.
 
-If "Delete extracted data when fetched" is checked, the inference will be deleted right away, when either:
+### Retrieval Period
 
-* the inference is access using a GET request (usually when polling)
-* the inference is successfully sent to your server
+By default, extracted data (inferences) are stored for 12 hours after their completion.
 
-This setting allows you to enter your storage conditions:&#x20;
+During this time, you may make GET requests to retrieve the payload using its inference ID.
 
-Storage duration corresponds to the number of hours you allow Mindee to store your documents and extracted data.
+After this period, any calls to the inference ID will result in a 404 error.
+
+You may adjust this period from between 1 to 24 hours.
+
+### Immediate Deletetion
+
+If "Delete extracted data when fetched" is checked, the inference will be deleted when either:&#x20;
+
+* the inference is accessed using a GET request (usually when polling)
+* the inference is successfully sent to your server via a [webhook](/integrations/webhooks.md)
+
+The data will be deleted immediately regardless of the Retrieval Period setting.
+
+Once the Retrieval Period is passed, the data will be deleted regardless of whether Immediate Deletion is activated.
+
+Once the data are deleted, any calls to the inference ID will result in a 404 error.
 
 ## Locking the Data Schema
 
