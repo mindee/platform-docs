@@ -37,3 +37,33 @@ Processing options which impact response time:
   Several models are called in parallel, results are then analyzed and combined.
 * [polygons-bounding-boxes.md](../models/optional-features/polygons-bounding-boxes.md "mention")\
   Additional information must be extracted from the document, then polygons must be calculated.
+
+## Examples
+
+Common combinations of document types and models.
+
+### Fast
+
+Single page with few fields.
+
+* ID documents: passports, driver licenses, etc.
+* Healthcare cards
+* Tickets, boarding passes
+* Envelopes, packages
+
+### Average
+
+Single page with nested objects. Multiple pages with no nested objects.
+
+* Most receipts
+* Single page invoices
+* Bills of lading
+* Most business contracts
+
+### Slower
+
+Multiple pages with nested objects and small text.
+
+* Very long receipts with many items and small text (like groceries for the week)
+* Invoices with more than 10 pages, each page having many items
+* Monthly bank statements
