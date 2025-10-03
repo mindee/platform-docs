@@ -8,13 +8,17 @@ icon: sliders-up
 
 On the Model Settings page, you'll have the opportunity to modify the model name and the cover image. Feel free to set them up so that the Model will be easy to retrieve among all your other Models.
 
+## Model ID
+
+In the Model Settings page, you can view and copy the **Model ID**. The Mindee Support team may request this ID to diagnose issues and provide solutions.
+
 ## Processing Zone
 
-{% include "/.gitbook/includes/model-processing-zone.md" %}
+{% include "../.gitbook/includes/model-processing-zone.md" %}
 
 ## Storage Policy
 
-{% include "/.gitbook/includes/model-storage-policy.md" %}
+{% include "../.gitbook/includes/model-storage-policy.md" %}
 
 ## Locking the Data Schema
 
