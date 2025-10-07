@@ -10,7 +10,7 @@ Python ≥ 3.10 is highly recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```sh
-pip install mindee>=4.28.1
+pip install mindee>=4.29.0
 ```
 {% endtab %}
 
@@ -21,7 +21,7 @@ Node.js ≥ 22 is recommended.
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
 ```sh
-npm install mindee@4.29.0
+npm install mindee@4.31.0
 ```
 {% endtab %}
 
@@ -49,8 +49,8 @@ gem install mindee -v '~> 4.7'
 Requires Java ≥ 8.\
 Java ≥ 11 is highly recommended.
 
-Group ID: `com.mindee.sdk` \
-Artifact ID: `mindee-api-java` \
+Group ID: `com.mindee.sdk`\
+Artifact ID: `mindee-api-java`\
 Version: ![](https://img.shields.io/maven-central/v/com.mindee.sdk/mindee-api-java?style=flat-square\&label=%20)
 
 There are various installation methods, Maven, Gradle, etc:

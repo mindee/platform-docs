@@ -525,6 +525,8 @@ def handle_response(response: InferenceResponse):
 
     # compare using the enum `FieldConfidence`
     is_certain = confidence == FieldConfidence.CERTAIN
+    is_lte_medium = confidence <= FieldConfidence.MEDIUM
+    is_gte_low = confidence >= FieldConfidence.LOW
 ```
 {% endtab %}
 
@@ -539,6 +541,12 @@ handleResponse(response) {
 
   // compare using the enum `FieldConfidence`
   const isCertain = confidence === FieldConfidence.Certain;
+  const isLteMedium = FieldConfidence.lessThanOrEqual(
+    confidence, FieldConfidence.Medium
+  );
+  const isGteLow = FieldConfidence.greaterThanOrEqual(
+    dateField.confidence, FieldConfidence.Low
+  );
 }
 ```
 {% endtab %}
