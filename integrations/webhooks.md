@@ -74,7 +74,7 @@ Once you've entered in the required information, the endpoint will be present in
 
 There is a "Copy ID" button which will allow you to actually use the webhook in your API calls.
 
-You can also use the "Signing Secret" to validate payloads using HMAC:
+You can also use the "Signing Secret" to [validate payloads using HMAC](client-libraries-sdk/process-the-response.md#load-from-webhook):
 
 <figure><img src="../.gitbook/assets/webhook-copy-secret.png" alt="copying the signing secret key for a webhook"><figcaption></figcaption></figure>
 
@@ -100,7 +100,7 @@ Otherwise take a look at the [#post-v2-inferences-enqueue](api-reference.md#post
 
 ## Local Testing
 
-To test your integration locally, there a number of use open-source solutions like [rathole](https://github.com/rathole-org/rathole),  [frp](https://github.com/fatedier/frp), or [localtunnel](https://www.npmjs.com/package/localtunnel).
+To test your integration locally, there a number of use open-source solutions like [rathole](https://github.com/rathole-org/rathole), [frp](https://github.com/fatedier/frp), or [localtunnel](https://www.npmjs.com/package/localtunnel).
 
 There are also proprietary products like [ngrok](https://ngrok.com/use-cases/webhook-testing).
 
@@ -125,7 +125,7 @@ We **highly recommend** saving all received payloads to disk or a database befor
 Yes, under some conditions.
 
 If your server returns an error when we POST the webhook, the inference will be available on the server for some time.\
-The exact time the data are stored depends on the model's [Storage Settings](/models/data-processing-policies.md#storage-policy), but the _minimum_ time stored is 1 hour.
+The exact time the data are stored depends on the model's [Storage Settings](../models/data-processing-policies.md#storage-policy), but the _minimum_ time stored is 1 hour.
 
 You can make a GET request on the job ID to retrieve the data for as long as the inference is on the server. The job ID is always returned when a document is sent successfully, it's important to store this ID when using webhooks for this type of scenario.
 
@@ -135,4 +135,4 @@ You can create any number of webhook endpoints: create one for each environment.
 
 In your code, add an environment variable like `MINDEE_V2_WEBHOOK_ID` and set it according to the corresponding endpoint.
 
-When sending a file for inference, [specify the webhook ID](/integrations/client-libraries-sdk/configure-the-client.md#webhook-configuration) using the environment variable.
+When sending a file for inference, [specify the webhook ID](client-libraries-sdk/configure-the-client.md#webhook-configuration) using the environment variable.
