@@ -178,8 +178,9 @@ It contains the following attributes:
 * `id` UUID of the inference
 * `model` Model used for the inference
 * `file` Metadata concerning the file used for the inference
-* `result` Result of inference processing, the most important portion of the response.\
-  For handling the extracted fields, see the [process-result-fields.md](process-result-fields.md "mention") section.
+* `result` Result of inference processing, the most important portion of the response.
+  * Fields: For handling the extracted fields, see the [process-result-fields.md](process-result-fields.md "mention") section.
+  * Raw Text: For using the extracted text, see the [#raw-text](process-the-response.md#raw-text "mention") section.
 
 ## File Metadata
 
