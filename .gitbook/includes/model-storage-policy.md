@@ -1,3 +1,7 @@
+---
+title: Storage Policy
+---
+
 The **Storage Policy** defines how long extracted data (i.e., the results of document processing) is retained in Mindee’s systems before being permanently deleted.
 
 This section only applies when sending documents via API call.
@@ -19,10 +23,10 @@ This setting helps balance between accessibility of results for your workflow an
 
 When **disabled**, data will be retained until the configured **Storage Duration** elapses. **(Default)**
 
-When **enabled**, extracted data is automatically and permanently deleted immediately after:&#x20;
+When **enabled**, extracted data is automatically and permanently deleted immediately after:
 
 * the inference is accessed using a GET request (usually when polling)
-* the inference is successfully sent to your server via a [webhook](/integrations/webhooks.md)
+* the inference is successfully sent to your server via a [webhook](../../integrations/webhooks.md)
 
 The data will be deleted regardless of the Storage Period setting.
 

@@ -1,3 +1,7 @@
+---
+title: model-processing-zone
+---
+
 The **Processing Zone** setting determines the geographic region where your document data will be processed. This option can impact compliance with data residency requirements (e.g., GDPR, CCPA).
 
 Available options:

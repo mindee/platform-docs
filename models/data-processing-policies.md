@@ -10,11 +10,11 @@ Below, you’ll find details on the configurable settings you can find **under e
 
 ## Processing Zone
 
-{% include "/.gitbook/includes/model-processing-zone.md" %}
+{% include "../.gitbook/includes/model-processing-zone.md" %}
 
 ## Storage Policy
 
-{% include "/.gitbook/includes/model-storage-policy.md" %}
+{% include "../.gitbook/includes/model-storage-policy.md" %}
 
 ## Best Practices
 
@@ -35,7 +35,7 @@ With this setup, all documents are processed in EU data centers, results are sto
 {% include "../.gitbook/includes/feature-availability.md" %}
 
 {% hint style="warning" %}
-&#x20;**Important**: Once selected, your choice of processing zone applies only to this specific model.
+**Important**: Once selected, your choice of processing zone applies only to this specific model.
 {% endhint %}
 
-{% @supademo/embed demoId="cmevfnfze75icv9kqgqida892" url="https://app.supademo.com/demo/cmevfnfze75icv9kqgqida892" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmevfnfze75icv9kqgqida892" demoId="cmevfnfze75icv9kqgqida892" %}

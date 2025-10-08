@@ -40,6 +40,8 @@
   * [Process the Response](integrations/client-libraries-sdk/process-the-response.md)
   * [Process Result Fields](integrations/client-libraries-sdk/process-result-fields.md)
 * [No-Code Integrations](integrations/no-code-integrations/README.md)
+  * [make.com Scenarios](integrations/no-code-integrations/make.com-scenarios.md)
+  * [Zapier Zaps](integrations/no-code-integrations/zapier-zaps.md)
   * [n8n Workflows](integrations/no-code-integrations/n8n-workflows.md)
 * [Error Handling](integrations/problem-database.md)
 * [Tutorials](integrations/tutorials/README.md)
