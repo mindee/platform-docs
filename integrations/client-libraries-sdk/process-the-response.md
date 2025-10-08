@@ -291,6 +291,10 @@ public void HandleResponse(InferenceResponse response)
 
 ## Results
 
+### Fields
+
+For handling the extracted fields, see the [process-result-fields.md](process-result-fields.md "mention") section.
+
 ### Raw Text
 
 Access the full text content from the document, extracted as strings.
@@ -417,7 +421,3 @@ public void HandleResponse(InferenceResponse response)
 ```
 {% endtab %}
 {% endtabs %}
-
-### Fields
-
-For handling the extracted fields, see the [process-result-fields.md](process-result-fields.md "mention") section.
