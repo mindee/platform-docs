@@ -96,7 +96,8 @@ async handleMindeePost(request, response) {
     // You'll need to get the "X-Signature" custom HTTP header.
     const hmacSignature = request.headers.get("X-Signature");
     
-    await handleMindeeResponse(data, hmacSignature);
+    // validate using the entire body of the response with the signature header
+    await handleMindeeResponse(body, hmacSignature);
   });
 }
 ```
