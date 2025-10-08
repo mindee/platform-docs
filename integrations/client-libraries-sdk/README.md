@@ -74,3 +74,9 @@ Check the [#pdf-page-manipulations](load-and-adjust-a-file.md#pdf-page-manipulat
 Anything documented here is supported and is considered stable for production use.
 
 Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
+
+### I'm using a Supabase edge function, should I use the API directly?
+
+We recommend using the Mindee [Node.js client library](https://github.com/mindee/mindee-api-nodejs) in Supabase.
+
+You can install it in your edge function(s) using `npm`.
