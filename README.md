@@ -8,13 +8,13 @@ icon: book-open
 # Mindee Documentation
 
 {% hint style="info" %}
-**This is the documentation for** [**app.mindee.com**](https://app.mindee.com/)
+**This is the documentation for:** [**Mindee V2 - latest**](https://app.mindee.com/)
 
 
 
-Looking for the documentation for platform.mindee.com?
+If you're looking for the documentation for: [Mindee V1](https://platform.mindee.com/)
 
-Go here: [https://developers.mindee.com](https://developers.mindee.com/)
+Take a look at the [V1 Section](https://app.gitbook.com/s/2al1MDqAP9Dg9iDRjkWg/get-started/what-is-mindee)
 {% endhint %}
 
 Mindee helps anyone automate document processing through data recognition, computer vision, and machine learning.
