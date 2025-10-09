@@ -19,7 +19,7 @@ Currently we have official support for the following platforms:
 
 * **n8n**: [basic support for workflows](n8n-workflows.md), official support [coming soon](https://github.com/n8n-io/n8n/pull/18986)
 * **Zapier**: planned, coming soon
-* **Make**: official support in progress
+* **Make**: [officially supported](make.com-scenarios.md)
 
 Don't see support for your favorite platform? [Make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
 

@@ -1,6 +1,5 @@
 ---
 description: Integrating Mindee in make.com scenarios.
-hidden: true
 ---
 
 # make.com Scenarios

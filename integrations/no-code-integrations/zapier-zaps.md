@@ -1,5 +1,6 @@
 ---
 description: Integrating Mindee in Zapier zaps.
+hidden: true
 noIndex: true
 ---
 
