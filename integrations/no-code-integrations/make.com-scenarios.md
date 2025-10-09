@@ -16,7 +16,7 @@ You can use the Mindee app in any make.com scenario.
 
 When adding a module, search for "mindee" and select **Mindee V2**:
 
-<figure><img src="../../.gitbook/assets/make_select-app.png" alt="add Mindee V2 to make.com" width="563"><figcaption><p>Adding Mindee V2 to a scenario. Make sure to use the "verified" version.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/make_select-app.png" alt="add Mindee V2 to make.com" width="563"><figcaption></figcaption></figure>
 
 The Mindee V2 app has several possible modules, choose "Enqueue and Retrieve an Inference".
 
@@ -26,7 +26,7 @@ The other modules are for specific requirements and are not recommended for gene
 
 <figure><img src="../../.gitbook/assets/make_select-enqueue-retrieve.png" alt="Selecting &#x22;Enqueue and Retrieve an Inference&#x22; in make.com scenario" width="563"><figcaption></figcaption></figure>
 
-Once you have the "Enqueue and Retrieve an Inference" module in your scenario, you'll need to connect it to your [API key](../api-keys.md).
+Once you have the "Enqueue and Retrieve an Inference" module in your scenario, you'll need to connect it to your [API key](../api-keys.md#key-creation).
 
 For this, click on the "Create a connection" button:
 
@@ -35,7 +35,7 @@ For this, click on the "Create a connection" button:
 In the Create a connection dialog box, fill in the following information:
 
 * A name for your connection, it should be in the format: `Mindeev2-` + your API key's name
-* your API key
+* your [Mindee V2 API key](../api-keys.md#key-creation)
 
 Finish by clicking "Save".
 
