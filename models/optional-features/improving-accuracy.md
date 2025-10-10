@@ -27,6 +27,8 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 2. Retrieval: When a next document will be send with the RAG option activated, the model will try to search for a similar example in the existing database. The question here is : "Maybe there is an existing example where I need to follow the instructions so that I'm not doing a same mistake again".  If no example found, no need to augment the prediction. If an examples is matched in the RAG Database, here comes step 3.
 3. Augmented Generation: A document was matched in the RAG Database. The model will use the instructions you gave on the RAG sample to make a better prediction this time. The prediction generated is augmented with an existing context helping the model to be better this time.
 
+<figure><img src="../../.gitbook/assets/rag-process-overview.jpeg" alt="RAG process overview" width="563"><figcaption></figcaption></figure>
+
 ## Activate RAG
 
 {% include "../../.gitbook/includes/feature-availability.md" %}
@@ -58,6 +60,8 @@ Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/ap
 ## Frequently Asked Questions
 
 ### Is my data shared with other users?
+
+No, never.
 
 A unique RAG, and thus a unique RAG Database is linked to a unique Model.
 

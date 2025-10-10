@@ -14,7 +14,7 @@ icon: book-open
 
 If you're looking for the documentation for: [Mindee V1](https://platform.mindee.com/)
 
-Take a look at the [V1 Section](https://app.gitbook.com/s/2al1MDqAP9Dg9iDRjkWg/get-started/what-is-mindee)
+Take a look at the [V1 Section](https://app.gitbook.com/s/2al1MDqAP9Dg9iDRjkWg/get-started/readme)
 {% endhint %}
 
 Mindee helps anyone automate document processing through data recognition, computer vision, and machine learning.
