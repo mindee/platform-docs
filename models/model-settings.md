@@ -28,6 +28,6 @@ To prevent unintended changes once your data schema is finalized, you have the o
 
 These operations are available in the "Danger Zone" area of the model settings.
 
-{% hint style="warning" %}
-Operations in the "Danger Zone" are irreversible!
+{% hint style="danger" %}
+All operations in the "Danger Zone" are irreversible!
 {% endhint %}

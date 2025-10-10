@@ -93,7 +93,9 @@ However, depending on the number and complexity of models involved, or the docum
 
 ### What should I do with low confidence extractions?
 
-We recommend routing `Low` (and optionally `Medium`) confidence extractions to a human validation layer, or using fallback logic (e.g., default values, user input). These extractions are also ideal candidates for feedback-driven improvement via our continuous learning loop using the RAG feature.
+We recommend routing `Medium` and lower confidence extractions to a human validation layer, or using fallback logic (e.g., default values, user input).
+
+Lower confidence extractions are ideal candidates for feedback-driven improvement via our continuous learning loop using the RAG feature.
 
 ### Does Automation work with any type of documents or fields?
 

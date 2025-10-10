@@ -27,12 +27,6 @@ Specifically, we accept the following image types:
 
 <table><thead><tr><th width="140">Type</th><th width="158.5">Media Type</th><th width="135.5">Extensions</th><th>Notes</th></tr></thead><tbody><tr><td> <a data-footnote-ref href="#user-content-fn-1">JPEG</a></td><td>image/jpeg</td><td>jpeg, jpg</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-2">PNG</a></td><td>image/png</td><td>png</td><td>non-animated only</td></tr><tr><td>WebP</td><td>image/webp</td><td>webp</td><td></td></tr><tr><td> <a data-footnote-ref href="#user-content-fn-3">TIFF</a></td><td>image/tiff</td><td>tiff, tif</td><td>single page or multiple pages</td></tr><tr><td> <a data-footnote-ref href="#user-content-fn-4">HEIC</a></td><td>image/heic</td><td>heic</td><td></td></tr></tbody></table>
 
-### URLs
-
-When sending a file through an URL rather than binary data.
-
-{% include "../.gitbook/includes/file-url-technical-limitation.md" %}
-
 ### File Limits
 
 These limits apply to all files, regardless of source or type.
@@ -49,10 +43,16 @@ If you can have the file locally, there are workarounds available for these limi
 
 Requires using our [client-libraries-sdk](client-libraries-sdk/ "mention").
 
+### URLs
+
+When sending a file as an URL rather than as binary data.
+
+{% include "../.gitbook/includes/file-url-technical-limitation.md" %}
+
 ## Rate Limits
 
-{% hint style="info" %}
-If you have needs beyond these limits, get in touch with the sales team for a custom solution.
+{% hint style="success" %}
+If you have needs beyond these limits, get in touch with the [sales team](mailto:contact@mindee.com) for a custom solution.
 {% endhint %}
 
 ### API Calls

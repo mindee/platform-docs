@@ -42,9 +42,9 @@ Processing options which impact response time:
 
 Common combinations of document types and models.
 
-### Fast
+### Fastest
 
-Single page with few fields.
+Single page documents with few fields.
 
 * ID documents: passports, driver licenses, etc.
 * Healthcare cards
@@ -53,7 +53,8 @@ Single page with few fields.
 
 ### Average
 
-Single page with nested objects. Multiple pages with no nested objects.
+Single page documents with nested objects.\
+Multiple page documents with no nested objects.
 
 * Most receipts
 * Single page invoices
@@ -62,8 +63,10 @@ Single page with nested objects. Multiple pages with no nested objects.
 
 ### Slower
 
-Multiple pages with nested objects and small text.
+Multiple page documents with nested objects and small text.
 
-* Very long receipts with many items and small text (like groceries for the week)
+* Very long receipts with many items and small text (i.e. long list of groceries for the week)
 * Invoices with more than 10 pages, each page having many items
-* Monthly bank statements
+* Monthly bank statements, especially when over 10 pages
+
+Whenever possible, [remove any unnecessary pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages) before uploading the document.

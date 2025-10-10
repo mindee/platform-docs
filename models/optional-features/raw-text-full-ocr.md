@@ -22,6 +22,10 @@ Having access to the raw text can be particularly useful when:
 
 ## Activate Raw Text
 
+{% hint style="success" %}
+This feature is available on all plans.
+{% endhint %}
+
 ### Activate Raw Text via API Calls
 
 Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").

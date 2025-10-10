@@ -2,7 +2,9 @@
 title: file-url-technical-limitation
 ---
 
-The source URL must adhere to the following rules:
+All file [size limitations](../../integrations/technical-limitations.md#file-limits) and [accepted types](../../integrations/technical-limitations.md#accepted-files) apply.
+
+In addition, the source URL must adhere to the following rules:
 
 * Secured using TLS (HTTPS).
 * Publicly available using only the URL, no authentication _headers_.

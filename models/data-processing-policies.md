@@ -34,7 +34,7 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 {% include "../.gitbook/includes/feature-availability.md" %}
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Important**: Once selected, your choice of processing zone applies only to this specific model.
 {% endhint %}
 
