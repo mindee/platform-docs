@@ -52,7 +52,7 @@ When sending a file as an URL rather than as binary data.
 ## Rate Limits
 
 {% hint style="success" %}
-If you have needs beyond these limits, get in touch with the [sales team](mailto:contact@mindee.com) for a custom solution.
+If you have needs beyond these limits, get in touch with the [sales team](mailto:hello@mindee.com) for a custom solution.
 {% endhint %}
 
 ### API Calls
