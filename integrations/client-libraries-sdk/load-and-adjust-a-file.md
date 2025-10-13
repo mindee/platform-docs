@@ -376,7 +376,7 @@ number_of_pages = input_source.page_count
 {% tab title=".NET" %}
 ```csharp
 string filename = inputSource.Filename;
-bool isPdf = inputSource.isPdf();
+bool isPdf = inputSource.IsPdf();
 int numberOfPages = inputSource.GetPageCount();
 ```
 {% endtab %}

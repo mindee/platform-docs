@@ -3,7 +3,7 @@ description: Overview of Models
 icon: file-lines
 ---
 
-# Models
+# Models Overview
 
 ## What is a Model?
 
@@ -35,15 +35,18 @@ Those APIs are pre-existing Data Schemas you can copy to immediately benefit fro
 
 ## Modifying Your Data Schema
 
-Once you have created or copied a [data-schema.md](data-schema.md "mention") you can refine it by making necessary modifications to better suit your needs. Navigate to the Data Schema page where you can adjust fields, update configurations, and customize settings according to your requirements.\
-You can proceed manually or use the dialog box to do the modifications with the AI Agent. \
+Once you have created or copied a [data-schema.md](data-schema.md "mention") you can refine it by making necessary modifications to better suit your needs.
+
+Navigate to the Data Schema page where you can adjust fields, update configurations, and customize settings according to your requirements. You can proceed manually or use the dialog box to do the modifications with the AI Agent.
+
+Be as accurate as possible with field names, exact names and values should be in quotation marks.\
 \
 Examples of sentences to modify your data schema:&#x20;
 
-* "Add a new document id field"
-* "Rename the date field to invoice date"
-* "Change the document type field to a classification field. The expected classes are INVOICE and RECEIPT"
+* Add a new field: "document\_id"
+* Rename the "date" field to "invoice\_date"
+* Change the "document\_type" field to a classification field. The expected classes are "INVOICE" and "RECEIPT"
 
 ## Configuration Options
 
-All options are detailed in the [model-settings.md](model-settings.md "mention")page.
+All options are detailed in the [model-settings.md](model-settings.md "mention") page.
