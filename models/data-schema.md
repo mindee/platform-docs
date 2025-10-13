@@ -38,7 +38,7 @@ Enable "Filter out duplicates from the list of items" to fix this.
 
 An example of the field types for a basic invoice extraction Data Schema:
 
-<table><thead><tr><th>Field</th><th width="203.5">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes.Rate</em></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes.Base</em></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes.Amount</em></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
+<table><thead><tr><th>Field</th><th width="203.5">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes[0].Rate</em></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes[0].Base</em></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes[0].Amount</em></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
 
 ## Building a Top-Performing Data Schema
 
@@ -70,7 +70,7 @@ It clearly tells the AI to get only the name, and of the invoice supplier.
 
 ### Field Type
 
-Try to use the [#field-types](data-schema.md#field-types "mention")that will best suits the field you need.
+Try to use the [#field-types](data-schema.md#field-types "mention") that will best suits the field you need.
 
 For the `due_date`, you could use a string, but a date field is definitely a better solution.
 
