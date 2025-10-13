@@ -18,17 +18,33 @@ There are seven different field types:
 
 <table><thead><tr><th width="224">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>String</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Classification</td><td>A predefined list of categories or types.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date-time.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc</td></tr><tr><td>Nested Object</td><td>A complex data type that contains multiple sub-fields or properties allowing one level of nesting.</td></tr></tbody></table>
 
+### **Arrays**
+
+Any field can be made into an array, a list of values.
+
+Simply enable "Multiple items can be extracted" when creating or modifying the field.
+
+The return type will be an array of the base type, for example a list of text values.
+
+It's possible to have lists of nested objects, but not a list of lists.
+
+{% hint style="info" %}
+In some cases, there can be duplicate items, for example when the same value appears on several pages.
+
+Enable "Filter out duplicates from the list of items" to fix this.
+{% endhint %}
+
 ### **Example**
 
 An example of the field types for a basic invoice extraction Data Schema:
 
-<table><thead><tr><th>Field</th><th width="192">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td>Acme Supplies Ltd.</td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon (bounding box) around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td>(see sub-fields below)</td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td>CRN-20250123</td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td>VAT NUMBER</td></tr><tr><td><strong>Date</strong></td><td>Date</td><td>2025-06-10</td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td>1540.75</td></tr><tr><td><strong>Taxes</strong></td><td>Nested Object</td><td>(see sub-fields below)</td></tr><tr><td><em>Taxes.Rate</em></td><td>number</td><td>0.185</td></tr><tr><td><em>Taxes.Base</em></td><td>number</td><td>1300.00</td></tr><tr><td><em>Taxes.Amount</em></td><td>number</td><td>240.75</td></tr></tbody></table>
+<table><thead><tr><th>Field</th><th width="203.5">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td>Acme Supplies Ltd.</td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td>(see sub-fields below)</td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td>CRN-20250123</td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td>VAT NUMBER</td></tr><tr><td><strong>Date</strong></td><td>Date</td><td>2025-06-10</td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td>1540.75</td></tr><tr><td><strong>Taxes</strong></td><td>List of Nested Objects</td><td>(see sub-fields below)</td></tr><tr><td><em>Taxes.Rate</em></td><td>number</td><td>0.185</td></tr><tr><td><em>Taxes.Base</em></td><td>number</td><td>1300.00</td></tr><tr><td><em>Taxes.Amount</em></td><td>number</td><td>240.75</td></tr></tbody></table>
 
 ## Building a Top-Performing Data Schema
 
 To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](optional-features/improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.&#x20;
 
-> _If the foundation is solid, the house is solid_
+> _If the foundation is solid, the house is solid._
 
 ### **Field Name and Title**
 
@@ -41,7 +57,7 @@ The goal is to avoid any possible confusion between data points present in the d
 
 Consider wanting to extract the name of the company that issued an invoice.
 
-In our model, we've used the field _name_: `supplier_name`\
+In our model, we've used the field _name_:  `supplier_name`\
 It clearly tells the AI to get only the name, and of the invoice supplier.
 
 :white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
