@@ -14,11 +14,11 @@ The Data Schema is composed of a certain number of Fields (or data points), each
 
 ## Field Types
 
-There are seven different field types:
+### Base Types
 
 <table><thead><tr><th width="224">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>String</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Classification</td><td>A predefined list of categories or types.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date-time.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc</td></tr><tr><td>Nested Object</td><td>A complex data type that contains multiple sub-fields or properties allowing one level of nesting.</td></tr></tbody></table>
 
-### **Arrays**
+### **Array Types**
 
 Any field can be made into an array, a list of values.
 
@@ -26,7 +26,7 @@ Simply enable "Multiple items can be extracted" when creating or modifying the f
 
 The return type will be an array of the base type, for example a list of text values.
 
-It's possible to have lists of nested objects, but not a list of lists.
+It is possible to have a list of nested objects, but not a list of lists.
 
 {% hint style="info" %}
 In some cases, there can be duplicate items, for example when the same value appears on several pages.
@@ -34,7 +34,7 @@ In some cases, there can be duplicate items, for example when the same value app
 Enable "Filter out duplicates from the list of items" to fix this.
 {% endhint %}
 
-### **Example**
+## **Example**
 
 An example of the field types for a basic invoice extraction Data Schema:
 
