@@ -339,6 +339,49 @@ var inputSource = new LocalInputSource(fileStream, filename)
 {% endtab %}
 {% endtabs %}
 
+## Source File Metadata
+
+Once a source file is loaded, various metadata can be accessed.
+
+Here are some examples.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+filename = input_source.filename
+is_pdf = input_source.is_pdf
+number_of_pages = input_source.page_count
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+// make sure to initialze the source first
+await inputSource.init();
+
+const filename = inputSource.filename;
+const isPdf = inputSource.isPdf();
+const numberOfPages = await inputSource.getPageCount();
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+filename = input_source.filename
+is_pdf = input_source.pdf?
+number_of_pages = input_source.page_count
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+string filename = inputSource.Filename;
+bool isPdf = inputSource.isPdf();
+int numberOfPages = inputSource.GetPageCount();
+```
+{% endtab %}
+{% endtabs %}
+
 ## Adjust the Source File
 
 Optionally make changes and adjustments to the source file before sending.
@@ -420,7 +463,7 @@ Using the `inputSource` instance created above.
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```typescript
-inputSource.compress(85);
+await inputSource.compress(85);
 ```
 
 For images, you can also set a maximum height and/or width.\
@@ -429,7 +472,7 @@ The aspect ratio will always be preserved.
 For example to compress and resize to no greater than 1920x1920 pixels:
 
 ```typescript
-inputSource.compress(85, 1920, 1920);
+await inputSource.compress(85, 1920, 1920);
 ```
 {% endtab %}
 
