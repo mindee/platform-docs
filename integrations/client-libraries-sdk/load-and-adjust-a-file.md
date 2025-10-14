@@ -343,6 +343,13 @@ var inputSource = new LocalInputSource(fileStream, filename)
 
 Once a source file is loaded, various metadata can be accessed.
 
+This can be useful for applying business rules based on the input file, for example:
+
+* Send PDFs to one model, images to another
+* Don't send PDFs with too many pages
+* Save the filename to a database
+* ...
+
 {% include "../../.gitbook/includes/code-samples-input-source.md" %}
 
 {% tabs %}
