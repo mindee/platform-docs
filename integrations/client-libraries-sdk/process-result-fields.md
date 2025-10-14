@@ -96,9 +96,9 @@ import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.SimpleField;
 
 public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
+  InferenceFields fields = response.inference.getResult().getFields();
 
-    SimpleField simpleField = fields.getSimpleField("my_simple_field");
+  SimpleField simpleField = fields.getSimpleField("my_simple_field");
 }
 ```
 {% endtab %}
@@ -252,9 +252,9 @@ import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ObjectField;
 
 public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
+  InferenceFields fields = response.inference.getResult().getFields();
 
-    ObjectField objectField = fields.getObjectField("my_object_field");
+  ObjectField objectField = fields.getObjectField("my_object_field");
 }
 ```
 {% endtab %}
@@ -378,9 +378,9 @@ import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 
 public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
+  InferenceFields fields = response.inference.getResult().getFields();
 
-    ListField listField = fields.getListField("my_list_field");
+  ListField listField = fields.getListField("my_list_field");
 }
 ```
 {% endtab %}
@@ -407,8 +407,8 @@ List of fields as a variable-length array type (Python `list`, Java `List`, etc)
 
 Each item in the list will be one of:
 
-* [#single-value-field-simplefield](process-result-fields.md#single-value-field-simplefield "mention")
-* [#nested-object-field-objectfield](process-result-fields.md#nested-object-field-objectfield "mention")
+* [#simplefield-single-value-field](process-result-fields.md#simplefield-single-value-field "mention")
+* [#objectfield-nested-object-field](process-result-fields.md#objectfield-nested-object-field "mention")
 
 There will **not** be a mix of both types in the same list.
 
@@ -545,7 +545,7 @@ handleResponse(response) {
     confidence, FieldConfidence.Medium
   );
   const isGteLow = FieldConfidence.greaterThanOrEqual(
-    dateField.confidence, FieldConfidence.Low
+    confidence, FieldConfidence.Low
   );
 }
 ```
@@ -598,14 +598,16 @@ import com.mindee.parsing.v2.field.FieldConfidence;
 import com.mindee.parsing.v2.field.InferenceFields;
 
 public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = inference.getResult().getFields();
+  InferenceFields fields = inference.getResult().getFields();
 
-    // choose the appropriate field type accessor method: Simple, Object, List
-    FieldConfidence confidence = fields.getSimpleField("my_simple_field")
-        .getConfidence();
+  // choose the appropriate field type accessor method: Simple, Object, List
+  FieldConfidence confidence = fields.getSimpleField("my_simple_field")
+      .getConfidence();
 
-    // compare using the enum `FieldConfidence`
-    boolean isCertain = confidence == FieldConfidence.Certain;
+  // compare using the enum `FieldConfidence`
+  boolean isCertain = confidence === FieldConfidence.Certain;
+  boolean isLteMedium = confidence.lessThanOrEqual(FieldConfidence.Medium);
+  boolean isGteLow = confidence.greaterThanOrEqual(FieldConfidence.Low);
 }
 ```
 {% endtab %}
@@ -774,24 +776,24 @@ import com.mindee.parsing.v2.field.InferenceFields;
 import java.util.List;
 
 public void handleResponse(InferenceResponse response) {
-    InferenceFields fields = response.inference.getResult().getFields();
+  InferenceFields fields = response.inference.getResult().getFields();
 
-    // choose the appropriate field type accessor method: Simple, Object
-    List<FieldLocation> locations = fields.getSimpleField("my_simple_field")
-        .getLocations();
+  // choose the appropriate field type accessor method: Simple, Object
+  List<FieldLocation> locations = fields.getSimpleField("my_simple_field")
+      .getLocations();
+  
+  // accessing the polygon
+  Polygon polygon = locations.get(0).getPolygon();
 
-    // accessing the polygon
-    Polygon polygon = locations.get(0).getPolygon();
+  // accessing points
+  List<Point> points = polygon.getCoordinates();
+  double topX = points.get(0).getX();
 
-    // accessing points
-    List<Point> points = polygon.getCoordinates();
-    double topX = points.get(0).getX();
+  // there are geometry functions available in the Polygon class
+  Point center = polygon.getCentroid();
 
-    // there are geometry functions available in the Polygon class
-    Point center = polygon.getCentroid();
-
-    // accessing the page index on which the polygon is
-    int pageIndex = locations.get(0).getPage();
+  // accessing the page index on which the polygon is
+  int pageIndex = locations.get(0).getPage();
 }
 ```
 {% endtab %}

@@ -388,6 +388,14 @@ number_of_pages = input_source.page_count
 ```
 {% endtab %}
 
+{% tab title="Java" %}
+```java
+String filename = inputSource.getFilename();
+boolean isPdf = inputSource.isPdf();
+int numberOfPages = inputSource.getPageCount();
+```
+{% endtab %}
+
 {% tab title=".NET" %}
 ```csharp
 string filename = inputSource.Filename;
