@@ -348,9 +348,9 @@ Here are some examples.
 {% tabs %}
 {% tab title="Python" %}
 ```python
-filename = input_source.filename
-is_pdf = input_source.is_pdf
-number_of_pages = input_source.page_count
+filename: str = input_source.filename
+is_pdf: bool = input_source.is_pdf
+number_of_pages: int = input_source.page_count
 ```
 {% endtab %}
 
@@ -362,6 +362,13 @@ await inputSource.init();
 const filename = inputSource.filename;
 const isPdf = inputSource.isPdf();
 const numberOfPages = await inputSource.getPageCount();
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+$isPdf = inputSource->isPdf();
+$numberOfPages = inputSource->getPageCount();
 ```
 {% endtab %}
 
