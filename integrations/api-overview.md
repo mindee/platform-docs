@@ -43,6 +43,8 @@ If you're integrating using a no-code or low-code platform, take a look at the [
 
 If none of the above options fit your requirements, take a look at the [api-reference.md](api-reference.md "mention") section.
 
+Note: We do not guarantee full support in the case of a direct/manual integration.
+
 ## What to Send
 
 You can send either a local file or an URL, it makes no difference for server-side processing.

@@ -63,17 +63,27 @@ The code to make requests and to process results is **completely different** bet
 
 We highly recommend having different files (or even modules) for handling each API version.
 
+### Which library features are officially supported?
+
+Anything documented here is officially supported and is considered stable for production use.
+
+Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
+
 ### Can I send only a specific page of a multi-page PDF?
 
 Yes. All libraries have support for cutting/extracting PDF pages.
 
-Check the [#pdf-page-manipulations](load-and-adjust-a-file.md#pdf-page-manipulations "mention") section.
+Check the [#manipulate-pdf-pages](load-and-adjust-a-file.md#manipulate-pdf-pages "mention") section.
 
-### Which features are supported?
+### How to stop PDFs with too many pages from being sent?
 
-Anything documented here is supported and is considered stable for production use.
+**Do not use file size**, a text PDF with 200 pages can be smaller than a single photo.
 
-Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
+Much more reliable to count the actual number of pages in the PDF document.
+
+Use the built-in file metadata methods and properties to easily add business rules based on the number of pages (among other data).
+
+Check the [#source-file-metadata](load-and-adjust-a-file.md#source-file-metadata "mention") section.
 
 ### I'm using a Supabase edge function, should I use the API directly?
 
