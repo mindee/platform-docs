@@ -367,6 +367,7 @@ const numberOfPages = await inputSource.getPageCount();
 
 {% tab title="PHP" %}
 ```php
+$filename = inputSource->fileName;
 $isPdf = inputSource->isPdf();
 $numberOfPages = inputSource->getPageCount();
 ```
