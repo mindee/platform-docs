@@ -343,7 +343,7 @@ var inputSource = new LocalInputSource(fileStream, filename)
 
 Once a source file is loaded, various metadata can be accessed.
 
-Here are some examples.
+{% include "../../.gitbook/includes/code-samples-input-source.md" %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -367,9 +367,9 @@ const numberOfPages = await inputSource.getPageCount();
 
 {% tab title="PHP" %}
 ```php
-$filename = inputSource->fileName;
-$isPdf = inputSource->isPdf();
-$numberOfPages = inputSource->getPageCount();
+$filename = $inputSource->fileName;
+$isPdf = $inputSource->isPdf();
+$numberOfPages = $inputSource->getPageCount();
 ```
 {% endtab %}
 
@@ -409,26 +409,22 @@ You can try to fix the headers using the provided functions.
 
 **Note:** this feature is not yet available for all languages.
 
+{% include "../../.gitbook/includes/code-samples-input-source.md" %}
+
 {% tabs %}
 {% tab title="Python" %}
-Using the `input_source` instance created above.
-
 ```python
 input_source.fix_pdf()
 ```
 {% endtab %}
 
 {% tab title="PHP" %}
-Using the `$inputSource` instance created above.
-
 ```php
 $inputSource->fixPDF();
 ```
 {% endtab %}
 
 {% tab title="Ruby" %}
-Using the `input_source` instance created above.
-
 ```ruby
 input_source.fix_pdf!
 ```
@@ -443,10 +439,10 @@ Unfortunately, many modern smartphones can take very high resolution images.
 
 We provide a way to compress images before sending to the API.
 
+{% include "../../.gitbook/includes/code-samples-input-source.md" %}
+
 {% tabs %}
 {% tab title="Python" %}
-Using the `input_source` instance created above.
-
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```python
@@ -466,8 +462,6 @@ input_source.compress(
 {% endtab %}
 
 {% tab title="Node.js" %}
-Using the `inputSource` instance created above.
-
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```typescript
@@ -485,8 +479,6 @@ await inputSource.compress(85, 1920, 1920);
 {% endtab %}
 
 {% tab title="PHP" %}
-Using the `$inputSource` instance created above.
-
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```php
@@ -506,7 +498,6 @@ $inputSource->compress(
 {% endtab %}
 
 {% tab title="Ruby" %}
-Using the `input_source` instance created above.\
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```ruby
@@ -524,8 +515,6 @@ input_source.compress!(
 {% endtab %}
 
 {% tab title="Java" %}
-Using the `inputSource` instance created above.
-
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```java
@@ -543,8 +532,6 @@ inputSource.compress(85, 1920, 1920);
 {% endtab %}
 
 {% tab title=".NET" %}
-Using the `inputSource` instance created above.
-
 Basic usage is very simple, and can be applied to both images and PDFs:
 
 ```csharp
@@ -581,12 +568,12 @@ It is therefore in your best interest to remove them before sending.
   One of "Keep Only" or "Remove".
 * "On Min Pages" is optional and specifies the minimum number of pages a document must have for the operation to take place. The value of `0` means any number of pages.
 
-Exact naming of parameters will depend on the language, see below.
+Exact naming of parameters will depend on the language.
+
+{% include "../../.gitbook/includes/code-samples-input-source.md" %}
 
 {% tabs %}
 {% tab title="Python" %}
-Using the `input_source` instance created above.
-
 ```python
 from mindee import PageOptions
 
@@ -630,8 +617,6 @@ PageOptions(
 {% endtab %}
 
 {% tab title="Node.js" %}
-Using the `inputSource` instance created above.
-
 ```typescript
 // Set the options as follows:
 // For all documents, keep only the first page
@@ -673,8 +658,6 @@ const pageOptions: mindee.PageOptions = {
 {% endtab %}
 
 {% tab title="PHP" %}
-Using the `$inputSource` instance created above.
-
 ```php
 use Mindee\Input\PageOptions;
 use const Mindee\Input\KEEP_ONLY;
@@ -723,8 +706,6 @@ $pageOptions = new PageOptions(
 {% endtab %}
 
 {% tab title="Ruby" %}
-Using the `input_source` instance created above.
-
 ```ruby
 # Set the options as follows:
 # For all documents, keep only the first page
@@ -768,8 +749,6 @@ Mindee::PageOptions.new(
 {% endtab %}
 
 {% tab title="Java" %}
-Using the `inputSource` instance created above.
-
 ```java
 import com.mindee.input.PageOptions;
 import com.mindee.input.PageOptionsOperation;
@@ -814,8 +793,6 @@ PageOptions pageOptions = new PageOptions.Builder()
 {% endtab %}
 
 {% tab title=".NET" %}
-Using the `inputSource` instance created above.
-
 ```csharp
 // Set the options as follows:
 // For all documents, keep only the first page
