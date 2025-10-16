@@ -38,7 +38,7 @@ php composer.phar require "mindee/mindee:>=2.0"
 
 {% tab title="Ruby" %}
 Requires Ruby ≥ 3.0.\
-Simply install the [gem](https://rubygems.org/gems/mindee/versions/4.7.0.pre.rc1) using:
+Simply install the [gem](https://rubygems.org/gems/mindee) using:
 
 ```shell
 gem install mindee -v '~> 4.7'
@@ -62,7 +62,7 @@ There are various installation methods, Maven, Gradle, etc:
 Requires .NET ≥ 6.0.\
 .NET ≥ 8.0 is recommended.
 
-Simply install the [NuGet package](https://www.nuget.org/packages/Mindee/3.29.0-rc4) using .NET CLI:
+Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using .NET CLI:
 
 ```sh
 dotnet add package Mindee --version 3.34
