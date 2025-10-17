@@ -9,8 +9,10 @@ icon: hexagon-exclamation
 
 All errors will contain the following information:
 
-* Status: an HTTP status code.
-* Detail: a human-readable description of the error.
+* Status: the HTTP status code.
+* Title: a human-readable short description, it may not be unique.
+* Detail: a human-readable description of the error, it will be unique.
+* Code: a code to identify the specific error.
 
 ## 4xx Errors - Client Errors
 
