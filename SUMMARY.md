@@ -3,6 +3,7 @@
 ## Getting Started
 
 * [Mindee Documentation](README.md)
+* [Key Features](getting-started/key-features.md)
 * [Quickstart](getting-started/quickstart.md)
 * [Defining a Model](getting-started/defining-a-model.md)
 * [Integrating Mindee](getting-started/integrating-mindee.md)
