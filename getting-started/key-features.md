@@ -10,10 +10,10 @@ Mindee headline features center on custom models, RAG, confidence scores, and ri
 ## Models
 
 Build fully customizable extraction models with interactive data schemas and an AI assistant for fast iteration and control over fields and guidelines.\
-Learn more in [data-schema.md](../models/data-schema.md "mention").
+Learn more at [data-schema.md](../models/data-schema.md "mention").
 
 Live Test UI for side-by-side visual validation, JSON inspection, and RAG simulation before production.\
-Learn more in [live-test.md](../models/live-test.md "mention").
+Learn more at [live-test.md](../models/live-test.md "mention").
 
 ## Optional Features
 
@@ -46,5 +46,5 @@ Mindee pricing is plan-based with included pages, overages, and feature tiers.
 
 Pay annually to save money, or monthly.
 
-Compare all plans and features here at [plans.md](../account-management/plans.md "mention").
+Compare all plans and their features at [plans.md](../account-management/plans.md "mention").
 
