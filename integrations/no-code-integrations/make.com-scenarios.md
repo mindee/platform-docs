@@ -34,7 +34,7 @@ For this, click on the "Create a connection" button:
 
 In the Create a connection dialog box, fill in the following information:
 
-* A name for your connection, it should be in the format: `Mindeev2-` + your API key's name
+* A name for your connection, it should be in the format: `MindeeV2-` + your API key's name
 * your [Mindee V2 API key](../api-keys.md#key-creation)
 
 Finish by clicking "Save".
