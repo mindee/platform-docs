@@ -26,7 +26,7 @@ The other modules are for specific requirements and are not recommended for gene
 
 <figure><img src="../../.gitbook/assets/make_select-enqueue-retrieve.png" alt="Selecting &#x22;Enqueue and Retrieve an Inference&#x22; in make.com scenario" width="563"><figcaption></figcaption></figure>
 
-Once you have the "Enqueue and Retrieve an Inference" module in your scenario, you'll need to connect it to your [API key](../api-keys.md#key-creation).
+Once you have the "Enqueue and Retrieve an Inference" module in your scenario, you'll need to connect it to one of your [api-keys.md](../api-keys.md "mention").
 
 For this, click on the "Create a connection" button:
 
