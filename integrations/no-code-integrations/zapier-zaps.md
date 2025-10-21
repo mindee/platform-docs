@@ -61,7 +61,8 @@ As an example, here is what it looks like when connecting to a Drive folder:
 
 You can also set various options:
 
-* For model options, see the [optional-features](../../models/optional-features/ "mention") section.
+{% include "../../.gitbook/includes/available-optional-features.md" %}
+
 * "Polling Timeout" - The maximum number of seconds to attempt retrieving results, before stopping with an error. Increase this value if you are sending documents with many pages and are consistently getting timeout errors.
 
 Next, to test the step, click on "Continue" at the bottom of the screen.

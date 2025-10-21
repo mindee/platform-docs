@@ -42,12 +42,4 @@ Details on setting features in the API: [#optional-features-configuration](../..
 
 ## Available Features
 
-* [improving-accuracy.md](improving-accuracy.md "mention")\
-  Enhance extraction accuracy with Retrieval-Augmented Generation using your own documents.
-* [automation-confidence-score.md](automation-confidence-score.md "mention") \
-  🚀 Boost the precision and accuracy of all extractions.\
-  Add a confidence score to each extracted field.
-* [polygons-bounding-boxes.md](polygons-bounding-boxes.md "mention")\
-  Add the polygon coordinates of each extracted field to the API response.
-* [raw-text-full-ocr.md](raw-text-full-ocr.md "mention")\
-  Add the full text content of your documents to the API response.
+{% include "../../.gitbook/includes/available-optional-features.md" %}
