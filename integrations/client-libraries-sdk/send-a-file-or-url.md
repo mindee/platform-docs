@@ -111,17 +111,14 @@ var inputSource = new UrlInputSource(
 
 There's no difference between sending a file or an URL, both are considered valid Input Sources.
 
-You can send either using polling or webhooks.
+You can send either using [polling](../polling-for-results.md) or [webhooks](../webhooks.md).
 
 ### Send with Polling
 
+{% include "../../.gitbook/includes/input-source-requirements.md" %}
+
 {% tabs %}
 {% tab title="Python" %}
-`input_source`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueue_and_get_inference` method.
@@ -138,11 +135,6 @@ print(response.inference)
 {% endtab %}
 
 {% tab title="Node.js" %}
-`inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueueAndGetInference` method:
@@ -163,11 +155,6 @@ response.then((resp) => {
 {% endtab %}
 
 {% tab title="PHP" %}
-`$inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `$mindeeClient` and `$inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueueAndGetInference` method:
@@ -185,11 +172,6 @@ echo strval($response->inference);
 {% endtab %}
 
 {% tab title="Ruby" %}
-`input_source`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueue_and_get_inference` method.
@@ -207,11 +189,6 @@ puts response.inference
 {% endtab %}
 
 {% tab title="Java" %}
-`inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueueAndGetInference` method:
@@ -228,11 +205,6 @@ System.out.println(response.getInference().toString());
 {% endtab %}
 
 {% tab title=".NET" %}
-`inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `EnqueueAndGetInferenceAsync` method:
@@ -250,15 +222,12 @@ System.Console.WriteLine(response.Inference.ToString());
 
 ### Send with Webhook
 
+{% include "../../.gitbook/includes/input-source-requirements.md" %}
+
 Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
 {% tabs %}
 {% tab title="Python" %}
-`input_source`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindee_client` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 The `inference_params` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
@@ -285,11 +254,6 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 
 {% tab title="Node.js" %}
-`inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
@@ -320,11 +284,6 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 
 {% tab title="PHP" %}
-`$inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `$mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 The `$inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
@@ -352,11 +311,6 @@ You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="Ruby" %}
-`input_source`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindee_client` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 The `inference_params` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
@@ -383,12 +337,7 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 
 {% tab title="Java" %}
-`inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
-The The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
@@ -414,11 +363,6 @@ You'll get the response via polling and webhooks will be used as well.&#x20;
 {% endtab %}
 
 {% tab title=".NET" %}
-`inputSource`  is any valid input source, one of:
-
-* a local source created in [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* a remote source created in [#use-an-url](send-a-file-or-url.md#use-an-url "mention")
-
 The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
