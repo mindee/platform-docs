@@ -21,6 +21,10 @@ If you would like to download the OpenAPI specification directly, it is availabl
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
 
+Here is a working example of the built-in test client:
+
+<figure><img src="../.gitbook/assets/api-example_post-inference.png" alt=""><figcaption></figcaption></figure>
+
 {% openapi-operation spec="mindee-api" path="/v2/jobs/{job_id}" method="get" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
