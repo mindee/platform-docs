@@ -7,7 +7,7 @@ icon: code
 
 
 {% hint style="warning" %}
-**You'll need your Model ID and an API key to use the API.**
+**You'll need your Model ID and an** [**API key**](api-keys.md) **to use the API.**
 {% endhint %}
 
 {% hint style="info" %}

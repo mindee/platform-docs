@@ -7,13 +7,24 @@ icon: lightbulb
 
 Mindee headline features center on custom models, RAG, confidence scores, and rich outputs.
 
-## Models
+## Custom Models
 
 Build fully customizable extraction models with interactive data schemas and an AI assistant for fast iteration and control over fields and guidelines.\
 Learn more at [data-schema.md](../models/data-schema.md "mention").
 
 Live Test UI for side-by-side visual validation, JSON inspection, and RAG simulation before production.\
 Learn more at [live-test.md](../models/live-test.md "mention").
+
+## Model Catalog
+
+Choose from our ready-to-use catalog models. You can also modify them as needed, just like our custom models.
+
+Some popular use cases include:
+
+* **Billing**: Financial Document, Invoice, Receipt, ...
+* **Travel**: Passport, ID Documents, Driver License, ...
+* **Banking**: Checks, Bank Statements, ...
+* **Logistics**: Bill of Lading, Vehicle Registration, ...
 
 ## Optional Features
 
