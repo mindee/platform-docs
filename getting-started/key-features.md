@@ -27,7 +27,7 @@ Some popular use cases include:
 * **Banking**: Check, Bank Statement, ...
 * **Logistics**: Bill of Lading, Vehicle Registration, ...
 
-## Optional Features
+## Advanced Features
 
 Retrieval-Augmented Generation (RAG) to continuously improve accuracy using your own documents and corrections.\
 Learn more at [improving-accuracy.md](../models/optional-features/improving-accuracy.md "mention").
