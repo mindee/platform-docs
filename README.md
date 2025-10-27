@@ -8,11 +8,11 @@ icon: book-open
 # Mindee Documentation
 
 {% hint style="info" %}
-**This is the documentation for:** [**Mindee V2 - latest**](https://app.mindee.com/)
+**This is the documentation for:** [**app.mindee.com**](https://app.mindee.com/) **(V2 - Latest)**
 
 
 
-If you're looking for the documentation for: [Mindee V1](https://platform.mindee.com/)
+If you're looking for the documentation for: [platform.mindee.com](https://platform.mindee.com/) (V1)
 
 Take a look at the [V1 Section](https://app.gitbook.com/s/2al1MDqAP9Dg9iDRjkWg/get-started/readme)
 {% endhint %}
