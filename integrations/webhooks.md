@@ -90,7 +90,9 @@ The endpoint's ID is a UUID v4, and can be obtained by clicking on the "Copy ID"
 
 Each endpoint in the given list will be sent the inference results.
 
-Begin by following the instructions in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section, then modify as required in the  [#send-with-webhook](client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section. Typically you only need to specify the Webhook IDs parameter.
+Begin by following the instructions in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section, then modify as required in the  [#send-with-webhook](client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section.
+
+Typically you only need to specify the Webhook IDs parameter.
 
 ## Local Testing
 
