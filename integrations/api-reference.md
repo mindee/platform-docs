@@ -1,18 +1,25 @@
 ---
-icon: code
+icon: handshake-simple
 ---
 
-# API Reference
+# Manual Integration
 
+{% hint style="info" %}
+We **do not recommend** manually integrating the Mindee API.
 
+Recommended integrations:
 
-{% hint style="warning" %}
-**You'll need your Model ID and an** [**API key**](api-keys.md) **to use the API.**
+* [client-libraries-sdk](client-libraries-sdk/ "mention")
+* [no-code-integrations](no-code-integrations/ "mention")
+
+Also take a look at the [api-overview.md](api-overview.md "mention") if you are setting up your integration for the first time.
 {% endhint %}
 
 {% hint style="info" %}
-Take a look at the [api-overview.md](api-overview.md "mention") if you are setting up your integration for the first time.
+**You'll need your Model ID and an** [**API key**](api-keys.md) **to use the API.**
 {% endhint %}
+
+
 
 If you would like to download the OpenAPI specification directly, it is available here:\
 [https://api-v2.mindee.net/openapi.json](https://api-v2.mindee.net/openapi.json)

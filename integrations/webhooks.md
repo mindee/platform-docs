@@ -7,8 +7,6 @@ icon: webhook
 
 {% hint style="info" %}
 This page assumes you have experience setting up a Web server in your language of choice.
-
-If you're unsure, take a look at the [polling-for-results.md](polling-for-results.md "mention") section before continuing.
 {% endhint %}
 
 ## Overview
@@ -92,11 +90,7 @@ The endpoint's ID is a UUID v4, and can be obtained by clicking on the "Copy ID"
 
 Each endpoint in the given list will be sent the inference results.
 
-We highly recommend using one of our [client-libraries-sdk](client-libraries-sdk/ "mention").
-
-Instructions for your language of choice are detailed in the [#send-with-webhook](client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section.
-
-Otherwise take a look at the [#post-v2-inferences-enqueue](api-reference.md#post-v2-inferences-enqueue "mention") specification.
+Begin by following the instructions in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section, then modify as required in the  [#send-with-webhook](client-libraries-sdk/send-a-file-or-url.md#send-with-webhook "mention") section. Typically you only need to specify the Webhook IDs parameter.
 
 ## Local Testing
 

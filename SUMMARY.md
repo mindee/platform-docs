@@ -47,7 +47,7 @@
 * [Error Handling](integrations/problem-database.md)
 * [Tutorials](integrations/tutorials/README.md)
   * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
-* [API Reference](integrations/api-reference.md)
+* [Manual Integration](integrations/api-reference.md)
 
 ## Account Management
 
