@@ -18,7 +18,9 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 
 ## Basic Usage
 
+{% hint style="success" %}
 To get started, take a look at the [quick-start.md](quick-start.md "mention")  page.
+{% endhint %}
 
 ## Usage Details
 
@@ -63,12 +65,6 @@ The code to make requests and to process results is **completely different** bet
 
 We highly recommend having different files (or even modules) for handling each API version.
 
-### Which library features are officially supported?
-
-Anything documented here is officially supported and is considered stable for production use.
-
-Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
-
 ### Can I send only a specific page of a multi-page PDF?
 
 Yes. All libraries have support for cutting/extracting PDF pages.
@@ -90,3 +86,9 @@ Check the [#source-file-metadata](load-and-adjust-a-file.md#source-file-metadata
 We recommend using the Mindee [Node.js client library](https://github.com/mindee/mindee-api-nodejs) in Supabase.
 
 You can install it in your edge function(s) using `npm`.
+
+### Which library features are officially supported?
+
+Anything documented here is officially supported and is considered stable for production use.
+
+Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
