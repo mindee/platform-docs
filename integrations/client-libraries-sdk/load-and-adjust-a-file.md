@@ -262,9 +262,9 @@ LocalInputSource inputSource = new LocalInputSource(filePath);
 To load a `Path` instance:
 
 ```java
-Path path = new Path("/path/to/the/file.ext");
+Path filePath = new Path("/path/to/the/file.ext");
 
-LocalInputSource inputSource = new LocalInputSource(path);
+LocalInputSource inputSource = new LocalInputSource(filePath);
 ```
 
 To load a `File` instance:
