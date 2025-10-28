@@ -46,8 +46,8 @@ gem install mindee -v '~> 4.7'
 {% endtab %}
 
 {% tab title="Java" %}
-Requires Java ≥ 8.\
-Java ≥ 11 is highly recommended.
+Requires Java ≥ 11.\
+Java ≥ 17 is recommended.
 
 Group ID: `com.mindee.sdk`\
 Artifact ID: `mindee-api-java`\

@@ -259,6 +259,14 @@ String filePath = "/path/to/the/file.ext";
 LocalInputSource inputSource = new LocalInputSource(filePath);
 ```
 
+To load a `Path` instance:
+
+```java
+Path path = new Path("/path/to/the/file.ext");
+
+LocalInputSource inputSource = new LocalInputSource(path);
+```
+
 To load a `File` instance:
 
 ```java
