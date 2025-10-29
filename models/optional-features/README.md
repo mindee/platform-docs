@@ -19,11 +19,7 @@ There are two ways of enabling and disabling features: on the Platform, or via A
 
 ### Set Default Activation on the Platform
 
-When setting the activation state of a feature on the Platform, this will be the default. All API calls will use the default state unless explicitly set otherwise.
-
-This is useful for project managers, as it allows activating or deactivating a feature across all API calls on that model.
-
-Anyone with write access to the model can set the option's default value.
+{% include "../../.gitbook/includes/default-optional-features.md" %}
 
 ### Set Activation During API Call
 

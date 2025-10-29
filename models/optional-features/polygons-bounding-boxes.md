@@ -30,13 +30,13 @@ It indicates the precise polygonal area on the document where the value for each
 
 ### Activate Polygons on the Platform
 
+{% include "../../.gitbook/includes/default-optional-features.md" %}
+
 {% @supademo/embed demoId="cmeidsob99f8xh3pybta14v42" url="https://app.supademo.com/demo/cmeidsob99f8xh3pybta14v42" %}
 
 ### Activate Polygons via API Calls
 
 Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
-
-Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 
 ## Use the Polygon Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
 

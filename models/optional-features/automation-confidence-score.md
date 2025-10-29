@@ -57,6 +57,8 @@ This color-coding system allows product teams to **highlight uncertainty directl
 
 ### Activate Confidence Scores on the Platform
 
+{% include "../../.gitbook/includes/default-optional-features.md" %}
+
 {% @supademo/embed demoId="cmeie3irw9fe7h3pytuktflxs" url="https://app.supademo.com/demo/cmeie3irw9fe7h3pytuktflxs" %}
 
 ### Activate Confidence Scores via API Calls
@@ -66,8 +68,6 @@ When the **Automation** feature is not activated, the `confidence` attribute in 
 {% endhint %}
 
 Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
-
-Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
 
 ## Towards 100% Automation
 
