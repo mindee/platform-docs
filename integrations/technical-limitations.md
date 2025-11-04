@@ -51,24 +51,16 @@ When sending a file as an URL rather than as binary data.
 
 ## Rate Limits
 
+API calls are limited on a per-organization level. This is regardless of model, IP, or API key.
+
+The following limits are enforced:
+
+* [Send for Processing](client-libraries-sdk/send-a-file-or-url.md#send-for-processing) ⇒ 50 requests per minute
+* Polling ⇒ 300 requests per minute\
+  Normally, this is handled automatically by the client library.
+
 {% hint style="success" %}
 If you have needs beyond these limits, get in touch with the [sales team](mailto:hello@mindee.com) for a custom solution.
-{% endhint %}
-
-### API Calls
-
-For information about the pricing model of Mindee, please refer yourself to the [pricing](https://mindee.com/pricing) on the website.
-
-### Requests
-
-| Maximum request throughput | Limits        |
-| -------------------------- | ------------- |
-| per hour                   | 3000 requests |
-| per minute                 | 120 requests  |
-| per second                 | 5 requests    |
-
-{% hint style="info" %}
-**General tip:** You may space your API requests so that you don't go over the limit.
 {% endhint %}
 
 ## Data Schema
