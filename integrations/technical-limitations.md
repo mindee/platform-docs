@@ -51,13 +51,17 @@ When sending a file as an URL rather than as binary data.
 
 ## Rate Limits
 
-API calls are limited on a per-organization level. This is regardless of model, IP, or API key.
+Calls to the Mindee API are limited to ensure the stability of the platform for all users.
+
+These limits apply to an entire organization, meaning the combination of all models, origin IPs, and API keys.
 
 The following limits are enforced:
 
 * [Send for Processing](client-libraries-sdk/send-a-file-or-url.md#send-for-processing) ⇒ 50 requests per minute
 * Polling ⇒ 300 requests per minute\
   Normally, this is handled automatically by the client library.
+
+If rate limits are exceeded, the server will return a HTTP 429 error.
 
 {% hint style="success" %}
 If you have needs beyond these limits, get in touch with the [sales team](mailto:hello@mindee.com) for a custom solution.
