@@ -19,6 +19,10 @@ All Portable Document Format (PDF) types can be processed, either single page or
 
 Each PDF page can be a combination of text and image elements.
 
+{% hint style="warning" %}
+PDF files cannot be password-protected.
+{% endhint %}
+
 ### Image Files
 
 Most common image types can be processed.
@@ -36,7 +40,7 @@ These limits apply to all files, regardless of source or type.
 | Max file size           | 100 MB      |
 | Maximum number of pages | 200 pages   |
 
-If you can have the file locally, there are workarounds available for these limits:
+If you have access to the file locally, there are workarounds available for these limits:
 
 * [#manipulate-pdf-pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages "mention")
 * [#compress-files](client-libraries-sdk/load-and-adjust-a-file.md#compress-files "mention")
