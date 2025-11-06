@@ -5,7 +5,7 @@ description: Integrating Mindee in make.com scenarios.
 # make.com Scenarios
 
 {% hint style="info" %}
-Only use the official **Mindee V2** app.
+Only use the verified **Mindee V2** app.
 
 Community apps only work for Mindee V1.
 {% endhint %}
@@ -14,19 +14,15 @@ Community apps only work for Mindee V1.
 
 You can use the Mindee app in any make.com scenario.
 
-When adding a module, search for "mindee" and select **Mindee V2**:
+When adding a module, search for "mindee" and select **Mindee V2** verified:
 
 <figure><img src="../../.gitbook/assets/make_select-app.png" alt="add Mindee V2 to make.com" width="563"><figcaption></figcaption></figure>
 
-The Mindee V2 app has several possible modules, choose "Enqueue and Retrieve an Inference".
+Next, choose the "Extract Document Data" action:
 
-You may need to click on "Show more" to access it.
+<figure><img src="../../.gitbook/assets/make_select-extract.png" alt="Selecting &#x22;Enqueue and Retrieve an Inference&#x22; in make.com scenario" width="563"><figcaption></figcaption></figure>
 
-The other modules are for specific requirements and are not recommended for general usage.
-
-<figure><img src="../../.gitbook/assets/make_select-enqueue-retrieve.png" alt="Selecting &#x22;Enqueue and Retrieve an Inference&#x22; in make.com scenario" width="563"><figcaption></figcaption></figure>
-
-Once you have the "Enqueue and Retrieve an Inference" module in your scenario, you'll need to connect it to one of your [api-keys.md](../api-keys.md "mention").
+Once you have the "Extract Document Data" module in your scenario, you'll need to connect it to one of your [api-keys.md](../api-keys.md "mention").
 
 For this, click on the "Create a connection" button:
 
@@ -57,7 +53,9 @@ If there are several matches to your search, choose the correct one from the lis
 
 <figure><img src="../../.gitbook/assets/make_choose-model-from-list.png" alt="choosing a Mindee v2 model in make.com" width="563"><figcaption></figcaption></figure>
 
-That's it, you're done! The Mindee V2 module is now ready to accept connections.
+{% hint style="success" %}
+**That's it, you're done!** The Mindee V2 module is now ready to accept connections.
+{% endhint %}
 
 Click on "Save".
 
