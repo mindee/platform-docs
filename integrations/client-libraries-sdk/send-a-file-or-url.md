@@ -128,7 +128,7 @@ response = mindee_client.enqueue_and_get_inference(
     input_source, inference_params
 )
 
-# To easily test which data was extracted,
+# To easily test which data were extracted,
 # simply print an RST representation of the inference
 print(response.inference)
 ```
@@ -147,7 +147,7 @@ const response = mindeeClient.enqueueAndGetInference(
 
 // Handle the response Promise
 response.then((resp) => {
-  // To easily test which data was extracted,
+  // To easily test which data were extracted,
   // simply print an RST representation of the inference
   console.log(resp.inference.toString());
 });
@@ -165,7 +165,7 @@ $response = $mindeeClient->enqueueAndGetInference(
     $inferenceParams
 );
 
-// To easily test which data was extracted,
+// To easily test which data were extracted,
 // simply print an RST representation of the inference
 echo strval($response->inference);
 ```
@@ -182,7 +182,7 @@ response = mindee_client.enqueue_and_get_inference(
   inference_params
 )
 
-# To easily test which data was extracted,
+# To easily test which data were extracted,
 # simply print an RST representation of the inference
 puts response.inference
 ```
@@ -198,7 +198,7 @@ InferenceResponse response = mindeeClient.enqueueAndGetInference(
     inputSource, inferenceParams
 );
 
-// To easily test which data was extracted,
+// To easily test which data were extracted,
 // simply print an RST representation of the inference
 System.out.println(response.getInference().toString());
 ```
@@ -213,7 +213,7 @@ Use the `EnqueueAndGetInferenceAsync` method:
 var response = await mindeeClient.EnqueueAndGetInferenceAsync(
     inputSource, inferenceParams);
 
-// To easily test which data was extracted,
+// To easily test which data were extracted,
 // simply print an RST representation of the inference
 System.Console.WriteLine(response.Inference.ToString());
 ```
