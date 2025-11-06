@@ -19,7 +19,7 @@ Each API Key grants access to all models within the organization.
 
 API Keys, unlike tokens, have an unlimited lifetime and must be manually revoked.
 
-### Key Creation
+## Key Creation
 
 Before using the API, you'll need to create an API key.
 
@@ -32,7 +32,7 @@ To create an API Key on the Mindee Platform:
    You'll typically want to name by environment, i.e. `dev`, `staging`, `prod`, \&c
 4. Click **Create API**, you key is now ready for use.
 
-### Key Revocation/Deletion
+## Key Revocation/Deletion
 
 You can revoke a key at any time by deleting it.
 
@@ -46,3 +46,9 @@ To delete a key on the Mindee Platform:
    <a href="https://app.mindee.com/settings?tab=api-keys" class="button primary">Go to API Keys</a>
 2. Next to each key is a **Delete** button, click it.
 3. Click **Delete** in the confirmation dialog, your key is now revoked.
+
+## Using an API Key
+
+Simply copy your API key to use it when making API calls.
+
+Take a look at the [#initialize-the-mindee-client](client-libraries-sdk/configure-the-client.md#initialize-the-mindee-client "mention") section for more details.
