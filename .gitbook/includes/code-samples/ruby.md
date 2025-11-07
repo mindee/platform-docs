@@ -55,4 +55,4 @@ fields = response.inference.result.fields
 ```
 {% endcode %}
 
-Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention") documentation.
+Also take a look at the [Processing Results](https://docs.mindee.com/integrations/client-libraries-sdk/quick-start#processing-the-results) documentation.
