@@ -6,7 +6,7 @@ title: ruby-process-listfield-objectfield
 def handle_response(response)
   fields = response.inference.result.fields
   
-  object_list_field = fields.get('my_object_list_field')
+  object_list_field = fields.get_list_field('my_object_list_field')
 
   # access an object at a given position
   object_item_0 = object_list_field.items[0]

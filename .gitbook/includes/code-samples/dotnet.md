@@ -9,6 +9,7 @@ Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee)
 ```csharp
 using Mindee;
 using Mindee.Input;
+using Mindee.Parsing.V2.Field;
 
 string filePath = "/path/to/the/file.ext";
 string apiKey = "MY_API_KEY";
@@ -43,5 +44,10 @@ var response = await mindeeClient.EnqueueAndGetInferenceAsync(
 
 // Print a summary of the response
 System.Console.WriteLine(response.Inference.ToString());
+
+// Access the result fields
+InferenceFields fields = response.Inference.Result.Fields;
 ```
 {% endcode %}
+
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.

@@ -44,5 +44,10 @@ response = mindee_client.enqueue_and_get_inference(
 
 # Print a brief summary of the parsed data
 print(response.inference)
+
+# Acess the result fields
+fields: dict = response.inference.result.fields
 ```
 {% endcode %}
+
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.

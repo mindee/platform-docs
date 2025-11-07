@@ -51,5 +51,10 @@ $response = $mindeeClient->enqueueAndGetInference(
 
 // Print a summary of the response
 echo strval($response->inference);
+
+// Access the result fields
+$fields = $response->inference->result->fields;
 ```
 {% endcode %}
+
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.

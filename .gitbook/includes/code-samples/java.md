@@ -10,6 +10,7 @@ import com.mindee.MindeeClientV2;
 import com.mindee.InferenceParameters;
 import com.mindee.input.LocalInputSource;
 import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.parsing.v2.field.InferenceFields;
 import java.io.File;
 import java.io.IOException;
 
@@ -58,6 +59,11 @@ public class SimpleMindeeClient {
 
     // Print a summary of the response
     System.out.println(response.getInference().toString());
+    
+    // Access the result fields
+    InferenceFields fields = response.getInference().getResult().getFields();
   }
 }
 ```
+
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.

@@ -48,6 +48,11 @@ const response = mindeeClient.enqueueAndGetInference(
 response.then((resp) => {
   // print a string summary
   console.log(resp.inference.toString());
+  
+  // Access the result fields
+  const fields = response.inference.result.fields;
 });
 ```
 {% endcode %}
+
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.
