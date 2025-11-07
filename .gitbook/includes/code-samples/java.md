@@ -66,4 +66,4 @@ public class SimpleMindeeClient {
 }
 ```
 
-Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention") documentation.

@@ -57,4 +57,4 @@ $fields = $response->inference->result->fields;
 ```
 {% endcode %}
 
-Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention")documentation.
+Next take a look at the  [#processing-the-results](../../../integrations/client-libraries-sdk/quick-start.md#processing-the-results "mention") documentation.
