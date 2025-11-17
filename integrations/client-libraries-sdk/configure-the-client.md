@@ -709,6 +709,7 @@ inference_params = InferenceParameters(
     model_id="MY_MODEL_ID",
     
     # Add any number of webhook IDs here.
+    # Note: PHP 8.1 only allows a single ID to be passed.
     webhook_ids=["ENDPOINT_1_UUID"],
     
     # ... any other options ...
