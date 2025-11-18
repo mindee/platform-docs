@@ -84,7 +84,7 @@ async handleMindeeResponse(data, hmacSignature) {
   );
 }
 
-// Getting the data could look something like this.
+// Load the JSON string sent by the Mindee webhook POST callback.
 // Will vary depending on your implementation.
 async handleMindeePost(request, response) {
   let body = "";
@@ -105,12 +105,11 @@ async handleMindeePost(request, response) {
 
 {% tab title="Ruby" %}
 Assuming you're able to get the raw HTTP request via the variable `request` .
+
 ```ruby
 require 'mindee'
-# Load the JSON string sent by the Mindee webhook POST callback.
-# Reading the callback data will vary greatly depending on your HTTP server.
-# This is therefore beyond the scope of this example.
 
+# Load the JSON string sent by the Mindee webhook POST callback.
 local_response = Mindee::Input::LocalResponse.new(request.body.to_s)
 
 # You can also use a File object as the input.
@@ -122,20 +121,19 @@ unless local_response.valid_hmac_signature?(my_secret_key, 'dummy signature')
   raise "Invalid HMAC signature!"
 end
 
-
 # Deserialize the response:
-response = local_response.deserialize_response(Mindee::Parsing::V2::InferenceResponse)
-# Note: this method can also deserialize a JobResponse instead using:
-# job_response = local_response.deserialize_response(Mindee::Parsing::V2::JobResponse)
+response = local_response.deserialize_response(
+  Mindee::Parsing::V2::InferenceResponse
+)
 
 # Print a summary of the parsed data in RST format
 puts response
 ```
 {% endtab %}
 
-
 {% tab title="PHP" %}
 Assuming you're able to get the raw HTTP request via the variable `$requestBody` .
+
 ```php
 <?php
   use Mindee\Input\LocalResponse;
@@ -143,10 +141,8 @@ Assuming you're able to get the raw HTTP request via the variable `$requestBody`
   use Mindee\Parsing\V2\InferenceResponse;
 
   // Load the JSON string sent by the Mindee webhook POST callback.
-  // Reading the callback data will vary greatly depending on your HTTP server.
-  // This is therefore beyond the scope of this example.
-
   $localResponse = new LocalResponse($requestBody);
+  
   // Or load from a file path:
   // $localResponse = new LocalResponse($filePath);
 
@@ -155,13 +151,8 @@ Assuming you're able to get the raw HTTP request via the variable `$requestBody`
     throw new MindeeException("Invalid HMAC signature!");
   }
   
-
   // Deserialize the response:
   $response = $localResponse->deserializeResponse(InferenceResponse::class);
-  // Note: this method can also deserialize a JobResponse instead using:
-  // use Mindee\Parsing\V2\JobResponse;
-  // $response = $localResponse->deserializeResponse(JobResponse::class);
-  // var_dump($response->job);
 
   // Print a summary of the parsed data in RST format
   echo $response->inference;
