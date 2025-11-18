@@ -61,9 +61,7 @@ These limits apply to an entire organization, meaning the combination of all mod
 
 The following limits are enforced:
 
-* [Send for Processing](client-libraries-sdk/send-a-file-or-url.md#send-for-processing) ⇒ 50 requests per minute
-* Polling ⇒ 300 requests per minute\
-  Normally, this is handled automatically by the client library.
+<table><thead><tr><th width="254">Limit Type</th><th>Limit Value</th></tr></thead><tbody><tr><td><a href="client-libraries-sdk/send-a-file-or-url.md#send-for-processing">Send for Processing</a></td><td>200 requests per minute</td></tr><tr><td>Polling</td><td>1200 requests per minute<br><em>Normally, this is handled by the client library.</em></td></tr></tbody></table>
 
 If rate limits are exceeded, the server will return a HTTP 429 error.
 
