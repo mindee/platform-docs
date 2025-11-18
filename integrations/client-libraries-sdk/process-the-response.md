@@ -106,11 +106,12 @@ async handleMindeePost(request, response) {
 {% tab title="Ruby" %}
 Assuming you're able to get the raw HTTP request via the variable `request` .
 ```ruby
+require 'mindee'
 # Load the JSON string sent by the Mindee webhook POST callback.
 # Reading the callback data will vary greatly depending on your HTTP server.
 # This is therefore beyond the scope of this example.
 
-local_response = Mindee::Input::LocalResponse.new(request.body.string)
+local_response = Mindee::Input::LocalResponse.new(request.body.to_s)
 
 # You can also use a File object as the input.
 # FILE_PATH = File.join('path', 'to', 'file.json').freeze
