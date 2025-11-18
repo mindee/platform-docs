@@ -103,6 +103,70 @@ async handleMindeePost(request, response) {
 ```
 {% endtab %}
 
+{% tab title="Ruby" %}
+Assuming you're able to get the raw HTTP request via the variable `request` .
+```ruby
+# Load the JSON string sent by the Mindee webhook POST callback.
+# Reading the callback data will vary greatly depending on your HTTP server.
+# This is therefore beyond the scope of this example.
+
+local_response = Mindee::Input::LocalResponse.new(request.body.string)
+
+# You can also use a File object as the input.
+# FILE_PATH = File.join('path', 'to', 'file.json').freeze
+# local_response = Mindee::Input::LocalResponse.new(FILE_PATH);
+
+# Optional: verify the HMAC signature.
+unless local_response.valid_hmac_signature?(my_secret_key, 'dummy signature')
+  raise "Invalid HMAC signature!"
+end
+
+
+# Deserialize the response:
+response = local_response.deserialize_response(Mindee::Parsing::V2::InferenceResponse)
+# Note: this method can also deserialize a JobResponse instead using:
+# job_response = local_response.deserialize_response(Mindee::Parsing::V2::JobResponse)
+
+# Print a summary of the parsed data in RST format
+puts response
+```
+{% endtab %}
+
+
+{% tab title="PHP" %}
+Assuming you're able to get the raw HTTP request via the variable `$requestBody` .
+```php
+<?php
+  use Mindee\Input\LocalResponse;
+  use Mindee\Error\MindeeException;
+  use Mindee\Parsing\V2\InferenceResponse;
+
+  // Load the JSON string sent by the Mindee webhook POST callback.
+  // Reading the callback data will vary greatly depending on your HTTP server.
+  // This is therefore beyond the scope of this example.
+
+  $localResponse = new LocalResponse($requestBody);
+  // Or load from a file path:
+  // $localResponse = new LocalResponse($filePath);
+
+  // Optional: verify the HMAC signature.
+  if (!$localResponse->isValidHmacSignature($mySecretKey, 'dummy signature')){
+    throw new MindeeException("Invalid HMAC signature!");
+  }
+  
+
+  // Deserialize the response:
+  $response = $localResponse->deserializeResponse(InferenceResponse::class);
+  // Note: this method can also deserialize a JobResponse instead using:
+  // use Mindee\Parsing\V2\JobResponse;
+  // $response = $localResponse->deserializeResponse(JobResponse::class);
+  // var_dump($response->job);
+
+  // Print a summary of the parsed data in RST format
+  echo $response->inference;
+```
+{% endtab %}
+
 {% tab title="Java" %}
 Assuming you have a Web server instance `myHttpServer` .
 
