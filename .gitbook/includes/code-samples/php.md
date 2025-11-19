@@ -22,7 +22,6 @@ $modelId = "MY_MODEL_ID";
 $mindeeClient = new ClientV2($apiKey);
 
 // Set inference parameters
-// Note: modelId is mandatory.
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
     $modelId,

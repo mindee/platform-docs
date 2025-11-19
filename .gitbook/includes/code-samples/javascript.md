@@ -20,6 +20,7 @@ const mindeeClient = new mindee.ClientV2({ apiKey: apiKey });
 
 // Set inference parameters
 const inferenceParams = {
+  // ID of the model, required.
   modelId: modelId,
 
   // Options: set to `true` or `false` to override defaults

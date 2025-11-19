@@ -59,23 +59,22 @@ The model's fields will be in the `fields` object in the returned JSON, in the `
 
 Each key in the `fields` object corresponds to the field's `name` in your model configuration.
 
-You'll want to adapt your processing depending on the [type of field](../../models/data-schema.md#field-types), for example looping over lists.
+You'll want to adapt your processing depending on the [type of field](../../models/data-schema.md#field-types), for example when looping over lists or accessing sub-fields.
 
 {% tabs %}
 {% tab title="Python" %}
 Accessing simple values, using the name of the field in the Data Schema.
 
-We can (should!) specify the type of value, the possible types are `str` , `bool` , `float` .\
+You can (should!) specify the type of value, the possible types are `str` , `bool` , `float` .\
 Note that all types may be `None`.
 
 {% include "../../.gitbook/includes/code-samples/python-process-simplefield.md" %}
 
-Accessing a list of values, where `my_list_field` is the name of the field in the Model.
+Accessing a list of simple values, where `my_list_field` is the name of the field in the Model.
 
 {% include "../../.gitbook/includes/code-samples/python-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model.\
-In this hypothetical case, the object has a sub-field named `sub_field` .
+Accessing an object field and its sub-fields, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `subfield_1` .
 
 {% include "../../.gitbook/includes/code-samples/python-process-objectfield.md" %}
 
@@ -97,8 +96,7 @@ We need to specify that the field is a `ListField` in order to access its items.
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model.\
-In this hypothetical case, the object has a sub-field named `sub_field` .
+Accessing an object field and its sub-fields, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `subfield_1` .
 
 {% include "../../.gitbook/includes/code-samples/javascript-process-objectfield.md" %}
 
@@ -122,7 +120,7 @@ We need to specify that the field is a `ListField` in order to access its items.
 
 {% include "../../.gitbook/includes/code-samples/php-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `sub_field`.
+Accessing an object field and its sub-fields, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `subfield_1` .
 
 {% include "../../.gitbook/includes/code-samples/php-process-objectfield.md" %}
 
@@ -146,8 +144,7 @@ Access the list as a `ListField` instance, and the items as `SimpleField` instan
 
 {% include "../../.gitbook/includes/code-samples/ruby-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model.\
-In this hypothetical case, the object has a sub-field named `sub_field` .
+Accessing an object field and its sub-fields, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `subfield_1` .
 
 {% include "../../.gitbook/includes/code-samples/ruby-process-objectfield.md" %}
 
@@ -158,7 +155,7 @@ Access the list as a `ListField` instance, and the items as `ObjectField` instan
 {% include "../../.gitbook/includes/code-samples/ruby-process-listfield-objectfield.md" %}
 
 {% hint style="info" %}
-You can technically access all field types by their index: `fields['field_name']`&#x20;
+You can technically access all field types by their index: `fields['field_name']`
 
 This is heavily discouraged and **unsupported**.
 {% endhint %}
@@ -182,8 +179,7 @@ For each item in the list, we also need to specify the correct field and value t
 
 {% include "../../.gitbook/includes/code-samples/java-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model.\
-In this hypothetical case, the object has a sub-field named `subfield_1` .
+Accessing an object field and its sub-fields, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `subfield_1` .
 
 {% include "../../.gitbook/includes/code-samples/java-process-objectfield.md" %}
 
@@ -210,8 +206,7 @@ We need to specify that the field is a `ListField` in order to access its `Simpl
 
 {% include "../../.gitbook/includes/code-samples/dotnet-process-listfield-simplefield.md" %}
 
-Accessing an object field, where `my_object_field` is the name of the field in the Model.\
-In this hypothetical case, the object has a sub-field named `sub_field` .
+Accessing an object field and its sub-fields, where `my_object_field` is the name of the field in the Model. In this hypothetical case, the object has a sub-field named `subfield_1` .
 
 {% include "../../.gitbook/includes/code-samples/dotnet-process-objectfield.md" %}
 

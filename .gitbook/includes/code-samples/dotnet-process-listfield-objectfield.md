@@ -26,6 +26,7 @@ public void HandleResponse(InferenceResponse response)
         string subFieldValue = subField1.Value;
     
         // loop over sub-fields
+        // Note: in C#14, 'field' is a reserved keyword, hence use of 'entry'.
         foreach (KeyValuePair<string, SimpleField> entry in subFields)
         {
             string fieldName = entry.Key;

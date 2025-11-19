@@ -27,7 +27,6 @@ public class SimpleMindeeClient {
     MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
 
     // Set inference parameters
-    // Note: modelId is mandatory.
     InferenceParameters options = InferenceParameters
         // ID of the model, required.
         .builder(modelId)
