@@ -566,6 +566,8 @@ public function handleResponse(InferenceResponse $response)
 
     // compare using the enum `FieldConfidence`
     $isCertain = $confidence === FieldConfidence::Certain;
+    $isLteMedium = $confidence->lessThanOrEqual(FieldConfidence::Medium);
+    $isGteLow = $confidence->greaterThanOrEqual(FieldConfidence::Low);
 }
 ```
 {% endtab %}
