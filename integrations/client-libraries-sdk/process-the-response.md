@@ -488,14 +488,14 @@ from mindee import InferenceResponse
 def handle_response(response: InferenceResponse):
   rag = response.inference.result.rag
 
-  if (rag is not None):
+  if (rag is None):
     print("No RAG operation took place.")
   else:
     print("A RAG operation took place:")
 
     rag_doc_id = rag.retrieved_document_id
 
-    if (rag_doc_id is not None):
+    if (rag_doc_id is None):
       print("No matching document found in RAG database.")
     else
       print(f"Matched on document with ID: {rag_doc_id}")
