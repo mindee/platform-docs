@@ -519,7 +519,7 @@ handleResponse(response) {
             console.log("No matching document found in RAG database.");
          }
          else {
-             console.log("Matched on document with ID: $ragDocId");
+             console.log(`Matched on document with ID: ${ragDocId}`);
          }
     }
 }
@@ -535,15 +535,15 @@ public function handleResponse(InferenceResponse $response)
     $rag = response->inference->result->rag;
 
     if ($rag == null) {
-        echo "No RAG operation took place.";
+        echo 'No RAG operation took place.';
     }
     else {
-        echo "A RAG operation took place:";
+        echo 'A RAG operation took place:';
 
         $ragDocId = $rag->retrievedDocumentId;
 
         if ($ragDocId == null) {
-            echo "No matching document found in RAG database.";
+            echo 'No matching document found in RAG database.';
          }
          else {
              echo "Matched on document with ID: $ragDocId";
