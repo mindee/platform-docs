@@ -357,10 +357,12 @@ For handling the extracted fields, see the [process-result-fields.md](process-re
 
 Access the full text content from the document, extracted as strings.
 
+The object will always be null if the [raw-text-full-ocr.md](../../models/optional-features/raw-text-full-ocr.md "mention") feature was not activated.
+
+Using the `InferenceResponse` deserialized object from either the polling response or a webhook payload.
+
 {% tabs %}
 {% tab title="Python" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```python
 from mindee import InferenceResponse
 
@@ -377,8 +379,6 @@ def handle_response(response: InferenceResponse):
 {% endtab %}
 
 {% tab title="Node.js" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```javascript
 handleResponse(response) {
   const rawText = response.inference.result.rawText;
@@ -395,8 +395,6 @@ handleResponse(response) {
 {% endtab %}
 
 {% tab title="PHP" %}
-Using the `$response` deserialized object from either the polling response or a webhook payload.
-
 ```php
 use Mindee\Parsing\V2\InferenceResponse;
 
@@ -416,8 +414,6 @@ public function handleResponse(InferenceResponse $response)
 {% endtab %}
 
 {% tab title="Ruby" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```ruby
 require 'mindee'
 
@@ -436,8 +432,6 @@ end
 {% endtab %}
 
 {% tab title="Java" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.RawText;
@@ -458,8 +452,6 @@ public void handleResponse(InferenceResponse response) {
 {% endtab %}
 
 {% tab title=".NET" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```csharp
 using Mindee.Parsing.V2;
 
@@ -474,6 +466,165 @@ public void HandleResponse(InferenceResponse response)
     foreach (RawTextPage page in rawText.Pages)
     {
         string pageText = page.Content;
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### RAG
+
+Access information related to the RAG operation. This allows you to add various business logic depending on whether a document was matched (retrieved) during the RAG operation.
+
+The object will always be null if the [improving-accuracy.md](../../models/optional-features/improving-accuracy.md "mention") feature was not activated.
+
+Using the `InferenceResponse` deserialized object from either the polling response or a webhook payload.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+from mindee import InferenceResponse
+
+def handle_response(response: InferenceResponse):
+  rag = response.inference.result.rag
+
+  if (rag is not None):
+    print("No RAG operation took place.")
+  else:
+    print("A RAG operation took place:")
+
+    rag_doc_id = rag.retrieved_document_id
+
+    if (rag_doc_id is not None):
+      print("No matching document found in RAG database.")
+    else
+      print(f"Matched on document with ID: {rag_doc_id}")
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+handleResponse(response) {
+  const rag = response.inference.result.rag;
+
+    if (rag === undefined) {
+        console.log("No RAG operation took place.");
+    }
+    else {
+        console.log("A RAG operation took place:");
+
+        const ragDocId = rag.retrievedDocumentId;
+
+        if (ragDocId === undefined) {
+            console.log("No matching document found in RAG database.");
+         }
+         else {
+             console.log("Matched on document with ID: $ragDocId");
+         }
+    }
+}
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $rag = response->inference->result->rag;
+
+    if ($rag == null) {
+        echo "No RAG operation took place.";
+    }
+    else {
+        echo "A RAG operation took place:";
+
+        $ragDocId = $rag->retrievedDocumentId;
+
+        if ($ragDocId == null) {
+            echo "No matching document found in RAG database.";
+         }
+         else {
+             echo "Matched on document with ID: $ragDocId";
+         }
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require 'mindee'
+
+def handle_response(response)
+  rag = response.inference.result.rag
+
+  if (rag.nil?)
+    puts 'No RAG operation took place.'
+  else
+    puts 'A RAG operation took place:'
+
+    rag_doc_id = rag.retrieved_document_id
+
+    if (rag_doc_id.nil?)
+      puts 'No matching document found in RAG database.'
+    else
+      puts "Matched on document with ID:  #{rag_doc_id}"
+    end
+end
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.parsing.v2.RagMetadata;
+
+public void handleResponse(InferenceResponse response) {
+    RagMetadata rag = response.getInference().getResult().getRag();
+
+    if (rag == null) {
+        System.out.println("No RAG operation took place.");
+    }
+    else {
+        System.out.println("A RAG operation took place:");
+
+        String ragDocId = rag.getRetrievedDocumentId();
+
+        if (ragDocId == null) {
+            System.out.println("No matching document found in RAG database.");
+         }
+         else {
+             System.out.println("Matched on document with ID: " + ragDocId);
+         }
+    }
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+using Mindee.Parsing.V2;
+
+public void HandleResponse(InferenceResponse response)
+{
+    RagMetadata rag = response.Inference.Result.Rag;
+
+    if (rag == null)
+        System.Console.WriteLine("No RAG operation took place.");
+    else
+    {
+        System.Console.WriteLine("A RAG operation took place:");
+
+        string ragDocId = rag.RetrievedDocumentId;
+
+        if (ragDocId == null)
+            System.Console.WriteLine(
+                 "No matching document was found in the RAG database.");
+         else
+             System.Console.WriteLine(
+                "Matched on RAG document with ID: " + ragDocId);
     }
 }
 ```
