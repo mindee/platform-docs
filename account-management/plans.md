@@ -14,12 +14,12 @@ All plans include access to our AI agent to build custom document parsers.
 
 ## Plan Overview & Pricing
 
-| Plan       | Monthly price (billed annually) | Annual pages included | Overage rate    |
-| ---------- | ------------------------------- | --------------------- | --------------- |
-| Starter    | €44 / month                     | 6,000 pages           | €0.05 per page  |
-| Pro        | €179 / month                    | 30,000 pages          | €0.04 per page  |
-| Business   | €584 / month                    | 120,000 pages         | €0.035 per page |
-| Enterprise | Custom pricing                  | +250,000 pages        | Custom          |
+| Plan       | Monthly price (with annual billing) | Annual pages included | Overage rate    |
+| ---------- | ----------------------------------- | --------------------- | --------------- |
+| Starter    | €44 / month                         | 6,000 pages           | €0.05 per page  |
+| Pro        | €179 / month                        | 30,000 pages          | €0.04 per page  |
+| Business   | €584 / month                        | 120,000 pages         | €0.035 per page |
+| Enterprise | Custom pricing                      | +250,000 pages        | Custom          |
 
 More information in the [billing.md](billing.md "mention") section.
 
@@ -44,7 +44,7 @@ More information in the [billing.md](billing.md "mention") section.
 
 ## Plan Details
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>200 pages or 14 days</li><li>Access to <a href="../models/optional-features/">Optional Features</a></li><li>API integration</li><li>Access to the full documentation</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><mark style="color:$primary;"><strong>Starter</strong></mark></td><td><ul><li>6,000 pages/year</li></ul><ul><li>Unlimited models</li><li>Community support</li><li><a href="../models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li>No user management</li></ul><ul><li>RAG not included</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 pages/year</li></ul><ul><li>Chat support</li><li>Multi-user access</li><li><a href="../models/optional-features/improving-accuracy.md">RAG</a>: 20 documents</li><li><a href="../models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><mark style="color:$success;"><strong>Business</strong></mark></td><td><ul><li>Everything in Pro</li><li>120,000 pages/year</li></ul><ul><li>Unlimited members</li><li>Priority chat support</li><li><a href="../models/optional-features/improving-accuracy.md">RAG</a>: unlimited documents</li><li>Full feature access including localization</li><li>Confidence score available</li><li><a href="../models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li></ul></td><td><a href="../.gitbook/assets/business-plan-mindee.png">business-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li></ul><ul><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium onboarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>200 pages or 14 days</li><li>Access to <a href="../models/optional-features/">Optional Features</a></li><li>API integration</li><li>Access to the full documentation</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>6,000 pages/year</li><li>Unlimited models</li><li>Community support</li><li><a href="../models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li>No user management</li><li>RAG not included</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 pages/year</li><li>Chat support</li><li>Multi-user access</li><li><a href="../models/optional-features/improving-accuracy.md">RAG</a>: 20 documents</li><li><a href="../models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><strong>Business</strong></td><td><ul><li>Everything in Pro</li><li>120,000 pages/year</li><li>Unlimited members</li><li>Priority chat support</li><li><a href="../models/optional-features/improving-accuracy.md">RAG</a>: unlimited documents</li><li>Full feature access including localization</li><li>Confidence score available</li><li><a href="../models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li></ul></td><td><a href="../.gitbook/assets/business-plan-mindee.png">business-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium onboarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
 
 ## Billing & Upgrades
 
@@ -67,12 +67,10 @@ More information in the [billing.md](billing.md "mention") section.
 
 [^6]: Add members to your organization
 
-[^7]: Choose the region where your data is processed: Europe, United States, or Global&#x20;
+[^7]: Choose the region where your data is processed: Europe, United States, or Global
 
 [^8]: Use advanced polygon-based extraction to capture data from complex layouts
 
 [^9]: Leverage confidence score to selectively automate document processing.
-
-
 
     Learn more on our [Automation documentation](../models/optional-features/automation-confidence-score.md)
