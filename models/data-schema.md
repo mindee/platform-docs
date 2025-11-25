@@ -4,7 +4,7 @@ icon: database
 
 # Data Schema
 
-## Overview&#x20;
+## Overview
 
 An Extraction Data Schema is a type of structured data that helps the system identify which data points to extract from specific documents.
 
@@ -16,7 +16,7 @@ The Data Schema is composed of a certain number of Fields (or data points), each
 
 ### Base Types
 
-<table><thead><tr><th width="224">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>String</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Classification</td><td>A predefined list of categories or types.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date-time.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc</td></tr><tr><td>Nested Object</td><td>A complex data type that contains multiple sub-fields or properties allowing one level of nesting.</td></tr></tbody></table>
+<table><thead><tr><th width="224">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>Text</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date or <code>YYYY-MM-DD HH:mm:ss</code> for a date-time.</td></tr><tr><td>Classification</td><td>A predefined list of categories or types.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Nested Object</td><td>A complex data type containing multiple subfields or properties, allowing one level of nesting.</td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc.</td></tr><tr><td>Barcode</td><td><p>Detect the location of a 1D barcode (i.e  UPC, EAN) or a 2D barcode (i.e. QR Code, Data Matrix).</p><p>Additionally, attempt to decode the contents of the barcode as a string value.</p></td></tr></tbody></table>
 
 ### **Array Types**
 
@@ -42,7 +42,7 @@ An example of the field types for a basic invoice extraction Data Schema:
 
 ## Building a Top-Performing Data Schema
 
-To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](optional-features/improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.&#x20;
+To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](optional-features/improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.
 
 > _If the foundation is solid, the house is solid._
 
@@ -57,7 +57,7 @@ The goal is to avoid any possible confusion between data points present in the d
 
 Consider wanting to extract the name of the company that issued an invoice.
 
-In our model, we've used the field _name_:  `supplier_name`\
+In our model, we've used the field _name_: `supplier_name`\
 It clearly tells the AI to get only the name, and of the invoice supplier.
 
 :white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
@@ -66,7 +66,7 @@ It clearly tells the AI to get only the name, and of the invoice supplier.
 
 :warning:`company_name` might work but is imprecise: we know you need the name of the company, but we don't know if company stands for supplier or customer?
 
-:x:  `company` will likely not work as expected: we do not know neither which information you need nor which company is concerned.
+:x: `company` will likely not work as expected: we do not know neither which information you need nor which company is concerned.
 
 ### Field Type
 
@@ -81,7 +81,7 @@ In that case you have the possibility to add Extraction Guidelines to the field.
 
 Use natural language to explain how to properly extract the data.
 
-For instance, for `supplier_phone_number` , adding the following extraction guidelines could be useful:&#x20;
+For instance, for `supplier_phone_number` , adding the following extraction guidelines could be useful:
 
 > If you find several phone numbers in the document, I need the phone number of the supplier headquarters. Also, I want you to reformat the data to match the international phone number format, as follows : +1-212-456-7890
 
