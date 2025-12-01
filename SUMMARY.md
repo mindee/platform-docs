@@ -22,6 +22,8 @@
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
 * [Data Processing Policies](models/data-processing-policies.md)
+* [Catalog](models/catalog/README.md)
+  * [Invoice](models/catalog/invoice.md)
 * [Tutorials](models/tutorials.md)
 
 ## Integrations
