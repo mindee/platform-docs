@@ -21,7 +21,7 @@ Node.js ≥ 22 is recommended.
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
 ```sh
-npm install mindee@4.33.1
+npm install mindee@4.34.0
 ```
 {% endtab %}
 
@@ -32,7 +32,7 @@ PHP ≥ 8.3 is recommended.
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
 ```sh
-php composer.phar require "mindee/mindee:>=2.2"
+php composer.phar require "mindee/mindee:>=2.3"
 ```
 {% endtab %}
 
