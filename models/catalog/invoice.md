@@ -20,6 +20,7 @@ The name of the supplier of the invoice.
 Accessor: `supplier_name` \
 Value Type: `string`
 
+
 Has a single value.
 
 
@@ -29,6 +30,7 @@ The phone number of the supplier of the invoice.
 
 Accessor: `supplier_phone_number` \
 Value Type: `string`
+
 
 Has a single value.
 
@@ -80,6 +82,7 @@ The number of the invoice.
 Accessor: `invoice_number` \
 Value Type: `string`
 
+
 Has a single value.
 
 
@@ -89,6 +92,7 @@ The date the invoice was issued.
 
 Accessor: `date` \
 Value Type: `date`
+
 
 Has a single value.
 
@@ -100,6 +104,7 @@ The final total amount paid, including all taxes and discounts.
 Accessor: `total_amount` \
 Value Type: `number`
 
+
 Has a single value.
 
 
@@ -110,6 +115,7 @@ The total amount before taxes.
 Accessor: `total_net` \
 Value Type: `number`
 
+
 Has a single value.
 
 
@@ -119,6 +125,7 @@ The total amount of all taxes.
 
 Accessor: `total_tax` \
 Value Type: `number`
+
 
 Has a single value.
 
@@ -206,6 +213,7 @@ Document type of the financial document.
 
 Accessor: `document_type` \
 Possible Values: `invoice`, `payslip`, `quote`, `purchase_order`, `statement`, `receipt`, `credit_note`, `other_financial`
+
 Has a single value.
 
 
@@ -231,6 +239,7 @@ Accessor: `locale`
   Accessor: `currency` \
   Value Type: `string`
 
+
 Has a single value.
 
 
@@ -240,6 +249,7 @@ The name of the customer of the invoice.
 
 Accessor: `customer_name` \
 Value Type: `string`
+
 
 Has a single value.
 
@@ -296,6 +306,7 @@ Accessor: `customer_address`
   Accessor: `country` \
   Value Type: `string`
 
+
 Has a single value.
 
 
@@ -350,6 +361,7 @@ Accessor: `shipping_address`
   The country of the address. \
   Accessor: `country` \
   Value Type: `string`
+
 
 Has a single value.
 
@@ -406,6 +418,7 @@ Accessor: `billing_address`
   Accessor: `country` \
   Value Type: `string`
 
+
 Has a single value.
 
 
@@ -461,6 +474,7 @@ Accessor: `supplier_address`
   Accessor: `country` \
   Value Type: `string`
 
+
 Has a single value.
 
 
@@ -471,6 +485,7 @@ The date on which the invoice is due.
 Accessor: `due_date` \
 Value Type: `date`
 
+
 Has a single value.
 
 
@@ -480,6 +495,7 @@ The purchase order number.
 
 Accessor: `po_number` \
 Value Type: `string`
+
 
 Has a single value.
 
@@ -501,6 +517,7 @@ The date on which the payment is due / was full-filled.
 
 Accessor: `payment_date` \
 Value Type: `date`
+
 
 Has a single value.
 
@@ -543,6 +560,7 @@ The website URL of the supplier or merchant.
 Accessor: `supplier_website` \
 Value Type: `string`
 
+
 Has a single value.
 
 
@@ -553,6 +571,7 @@ The email address of the supplier or merchant.
 Accessor: `supplier_email` \
 Value Type: `string`
 
+
 Has a single value.
 
 
@@ -562,5 +581,6 @@ The customer account number or identifier from the supplier.
 
 Accessor: `customer_id` \
 Value Type: `string`
+
 
 Has a single value.
