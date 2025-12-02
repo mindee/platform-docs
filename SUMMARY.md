@@ -25,6 +25,8 @@
 * [Catalog](models/catalog/README.md)
   * [Invoice](models/catalog/invoice.md)
   * [Receipt](models/catalog/receipt.md)
+  * [Financial Document](models/catalog/financial-document.md)
+  * [International ID](models/catalog/international-id.md)
 * [Tutorials](models/tutorials.md)
 
 ## Integrations
