@@ -26,6 +26,7 @@
   * [Invoice](models/catalog/invoice.md)
   * [Receipt](models/catalog/receipt.md)
   * [Financial Document](models/catalog/financial-document.md)
+  * [Passport](models/catalog/passport.md)
   * [International ID](models/catalog/international-id.md)
 * [Tutorials](models/tutorials.md)
 
