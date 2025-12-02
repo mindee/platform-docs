@@ -52,7 +52,7 @@ Accessor: `customer_company_registration`
   Accessor: `type` \
   Possible Values: `VAT`, `SIRET`, `SIREN`, `NIF`, `CF`, `UID`, `STNR`, `HRA_HRB`, `TIN`, `RFC`, `BTW`, `ABN`, `UEN`, `CVR`, `ORGNRO`, `INN`, `DPH`, `NIP`, `GSTIN`, `CRN`, `KVK`, `DIC`, `TAX_ID`, `CIF`, `GST_HST_CA`, `COC`
 
-Can have multiple values, is a list.
+Can have multiple values (is a list/array).
 
 
 ### Supplier Company Registration
@@ -72,7 +72,7 @@ Accessor: `supplier_company_registration`
   Accessor: `type` \
   Possible Values: `VAT`, `SIRET`, `SIREN`, `NIF`, `CF`, `UID`, `STNR`, `HRA_HRB`, `TIN`, `RFC`, `BTW`, `ABN`, `UEN`, `CVR`, `ORGNRO`, `INN`, `DPH`, `NIP`, `GSTIN`, `CRN`, `KVK`, `DIC`, `TAX_ID`, `CIF`, `GST_HST_CA`, `COC`
 
-Can have multiple values, is a list.
+Can have multiple values (is a list/array).
 
 
 ### Invoice Number
@@ -153,7 +153,7 @@ Accessor: `taxes`
   Value Type: `number`
 
 
-Can have multiple values, is a list.
+Can have multiple values (is a list/array).
 
 
 ### Line Items
@@ -204,7 +204,7 @@ Accessor: `line_items`
   Value Type: `string`
 
 
-Can have multiple values, is a list.
+Can have multiple values (is a list/array).
 
 
 ### Document Type
@@ -508,7 +508,7 @@ Accessor: `reference_numbers` \
 Value Type: `string`
 
 
-Can have multiple values, is a list.
+Can have multiple values (is a list/array).
 
 
 ### Payment Date
@@ -550,7 +550,7 @@ Accessor: `supplier_payment_details`
   Value Type: `string`
 
 
-Can have multiple values, is a list.
+Can have multiple values (is a list/array).
 
 
 ### Supplier Website
