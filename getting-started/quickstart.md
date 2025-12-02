@@ -43,4 +43,4 @@ You'll need some way of importing the JSON structure and manipulating it.
 
 For quick testing, we recommend to [process-the-response.md](../integrations/client-libraries-sdk/process-the-response.md "mention") using our client libraries.
 
-{% @supademo/embed demoId="cmewtri4u8939v9kqh3q6u1g7" url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" fullWidth="false" %}
+{% @supademo/embed demoId="cmewtri4u8939v9kqh3q6u1g7" url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" %}

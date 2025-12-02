@@ -13,7 +13,7 @@ When using an Extraction Model regularly, it can happen that the extraction is n
 
 If you notice this, you have a way to durably improve the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
 
-{% @supademo/embed demoId="cmfb3c7166gdc39ozj39wogrz" url="https://app.supademo.com/demo/cmfb3c7166gdc39ozj39wogrz" %}
+{% embed url="http://app.supademo.com/demo/cmfb3c7166gdc39ozj39wogrz" %}
 
 ## Basics of RAG Inner Workings
 
@@ -24,7 +24,7 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 ### Overall Steps of RAG
 
 1. Annotating a given sample, which means giving the model the difference between the extracted data and the expected value(s). When activated, this example will be added to the RAG Database for the future.
-2. Retrieval: When a next document will be send with the RAG option activated, the model will try to search for a similar example in the existing database. The question here is : "Maybe there is an existing example where I need to follow the instructions so that I'm not doing a same mistake again".  If no example found, no need to augment the prediction. If an examples is matched in the RAG Database, here comes step 3.
+2. Retrieval: When a next document will be send with the RAG option activated, the model will try to search for a similar example in the existing database. The question here is : "Maybe there is an existing example where I need to follow the instructions so that I'm not doing a same mistake again". If no example found, no need to augment the prediction. If an examples is matched in the RAG Database, here comes step 3.
 3. Augmented Generation: A document was matched in the RAG Database. The model will use the instructions you gave on the RAG sample to make a better prediction this time. The prediction generated is augmented with an existing context helping the model to be better this time.
 
 <figure><img src="../../.gitbook/assets/rag-process-overview.jpeg" alt="RAG process overview" width="563"><figcaption></figcaption></figure>
@@ -33,7 +33,7 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 
 {% include "../../.gitbook/includes/feature-availability.md" %}
 
-To use RAG on a given Extraction Model, you should click on the RAG tab. \
+To use RAG on a given Extraction Model, you should click on the RAG tab.\
 \
 This tab allows you to enrich your RAG Database by uploading a document with an unsatisfying behavior.
 
@@ -69,4 +69,4 @@ It means the only people who will have access to your RAG data are the users of 
 
 ### How do I benefit from RAG when processing my documents?
 
-When enqueuing a file, simply add `rag=true`&#x20;
+When enqueuing a file, simply add `rag=true`
