@@ -24,6 +24,7 @@
 * [Data Processing Policies](models/data-processing-policies.md)
 * [Catalog](models/catalog/README.md)
   * [Invoice](models/catalog/invoice.md)
+  * [Receipt](models/catalog/receipt.md)
 * [Tutorials](models/tutorials.md)
 
 ## Integrations
