@@ -28,6 +28,7 @@
   * [Financial Document](models/catalog/financial-document.md)
   * [Passport](models/catalog/passport.md)
   * [International ID](models/catalog/international-id.md)
+  * [Bill of Lading](models/catalog/bill-of-lading.md)
 * [Tutorials](models/tutorials.md)
 
 ## Integrations
