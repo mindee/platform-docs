@@ -23,7 +23,7 @@ Here are some examples of models you can build with Mindee:
 
 * [**International ID Card** ](extraction-models/international-id-card.md)— Capture personal details for KYC or onboarding.
 * [**Passport**](extraction-models/passport.md) — Parse official ID data from passports with high accuracy.
-* **Driver License** — Extract identity details from driver licenses for fast verification.
+* [**Driver's License**](extraction-models/drivers-license.md) — Extract identity details from driver licenses for fast verification.
 * **Proof of Address** — Extract address fields from utility bills or bank statements.
 
 ## Travel & Logistics

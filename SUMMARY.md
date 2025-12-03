@@ -65,6 +65,7 @@
   * [Receipt](use-cases/extraction-models/receipt.md)
   * [International ID Card](use-cases/extraction-models/international-id-card.md)
   * [Passport](use-cases/extraction-models/passport.md)
+  * [Driver's License](use-cases/extraction-models/drivers-license.md)
   * [Boarding Pass](use-cases/extraction-models/boarding-pass.md)
   * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
 
