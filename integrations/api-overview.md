@@ -44,7 +44,7 @@ If you're integrating using a no-code or low-code platform, take a look at the [
 If none of the above options fit your requirements, take a look at the [api-reference.md](api-reference.md "mention") section.
 
 {% hint style="warning" %}
-We do not recommend manually integrating, and cannot guarantee full support in this case.
+We do not recommend manually integrating, and cannot provide full support in this case.
 {% endhint %}
 
 ## What to Send
@@ -62,4 +62,3 @@ You can decide on using either the polling flow or the webhook flow.
 [polling-for-results.md](polling-for-results.md "mention") uses a GET route, and is better suited for testing and small volumes.
 
 [webhooks.md](webhooks.md "mention") sends directly to your server, and is more suited for heavy production use.
-
