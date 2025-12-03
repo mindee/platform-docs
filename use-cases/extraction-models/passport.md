@@ -10,7 +10,7 @@ icon: passport
 
 Take a look at our demo for the Indian Passport model:
 
-{% @supademo/embed demoId="cmeqvjfgw3holv9kqocym86w9" url="https://app.supademo.com/demo/cmeqvjfgw3holv9kqocym86w9" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmeqvjfgw3holv9kqocym86w9" demoId="cmeqvjfgw3holv9kqocym86w9" %}
 
 ## Why Use Mindee for Passports?
 
@@ -37,28 +37,9 @@ Passports vary in format depending on the country, language, and issuance author
 
 If you want to try and do a live test, here is a sample for Indian passport:
 
-<figure><img src="../.gitbook/assets/indian-passport-sample.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/indian-passport-sample.png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/mindee-indian-passport.png" alt=""><figcaption></figcaption></figure>
-
-## What Can Be Extracted from a Passport?
-
-Typical passport documents include a standard set of fields. You can, for example, extract the following common fields for passports:
-
-| Field             | Description                            |
-| ----------------- | -------------------------------------- |
-| Page Number       | Internal page number (if visible)      |
-| Country Code      | Country of issuance                    |
-| Identity Number   | Passport number                        |
-| Given Name(s)     | First and middle names                 |
-| Surname           | Last name                              |
-| Date of Birth     | In the YYYY-MM-DD format               |
-| Place of Birth    | City or region of birth                |
-| Place of Issue    | Location where the passport was issued |
-| Gender            | M / F / X                              |
-| Issuance Date     | Passport issue date                    |
-| Expiry Date       | Passport expiration date               |
-| MRZ Row #1/Row #2 | Machine-readable zone lines            |
+<figure><img src="../../.gitbook/assets/mindee-indian-passport.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Indian Passport Example
 
@@ -83,3 +64,119 @@ You can just upload an Indian passport and ask to extract the fields present.
 
 * We support both **single-page and multi-page PDFs/images of passports.**
 * You can add the fields of any page in the data schema as they are all supported by Mindee.
+
+## Passport Fields
+
+Documentation for all fields present in the data schema.
+
+Field _accessors_ are used as the keys for accessing the values in the returned data. On the data schema interface, this is the "Field Name".
+
+Field _value types_ indicate how the value is returned by the API. On the data schema interface, this is the "Field Type".
+
+### Given Names
+
+The given names (first names) of the passport holder.
+
+Accessor: `given_names`\
+Value Type: `string`
+
+Has a single value.
+
+### Surnames
+
+The surnames (last names) of the passport holder.
+
+Accessor: `surnames`\
+Value Type: `string`
+
+Has a single value.
+
+### Date of Birth
+
+The date of birth of the passport holder.
+
+Accessor: `date_of_birth`\
+Value Type: `date`
+
+Has a single value.
+
+### Place of Birth
+
+The place of birth of the passport holder.
+
+Accessor: `place_of_birth`\
+Value Type: `string`
+
+Has a single value.
+
+### Passport Number
+
+The passport number.
+
+Accessor: `passport_number`\
+Value Type: `string`
+
+Has a single value.
+
+### Issuing Country
+
+The country that issued the passport.
+
+Accessor: `issuing_country`\
+Value Type: `string`
+
+Has a single value.
+
+### Nationality
+
+The nationality of the passport holder.
+
+Accessor: `nationality`\
+Value Type: `string`
+
+Has a single value.
+
+### Date of Issue
+
+The date the passport was issued.
+
+Accessor: `date_of_issue`\
+Value Type: `date`
+
+Has a single value.
+
+### Date of Expiry
+
+The date the passport expires.
+
+Accessor: `date_of_expiry`\
+Value Type: `date`
+
+Has a single value.
+
+### Sex
+
+The sex of the passport holder.
+
+Accessor: `sex`\
+Possible Values: `Male`, `Female`, `Other`
+
+Has a single value.
+
+### MRZ Line 1
+
+The first line of the Machine Readable Zone (MRZ).
+
+Accessor: `mrz_line_1`\
+Value Type: `string`
+
+Has a single value.
+
+### MRZ Line 2
+
+The second line of the Machine Readable Zone (MRZ).
+
+Accessor: `mrz_line_2`\
+Value Type: `string`
+
+Has a single value.

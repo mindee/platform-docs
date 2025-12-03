@@ -22,13 +22,6 @@
 * [Model Settings](models/model-settings.md)
 * [Live Test](models/live-test.md)
 * [Data Processing Policies](models/data-processing-policies.md)
-* [Catalog](models/catalog/README.md)
-  * [Invoice](models/catalog/invoice.md)
-  * [Receipt](models/catalog/receipt.md)
-  * [Financial Document](models/catalog/financial-document.md)
-  * [Passport](models/catalog/passport.md)
-  * [International ID](models/catalog/international-id.md)
-  * [Bill of Lading](models/catalog/bill-of-lading.md)
 * [Tutorials](models/tutorials.md)
 
 ## Integrations
@@ -66,11 +59,14 @@
 ## Use Cases
 
 * [Overview](use-cases/overview.md)
-* [Invoice](use-cases/invoice.md)
-* [Financial documents](use-cases/financial-documents.md)
-* [International ID Card](use-cases/international-id-card.md)
-* [Passport](use-cases/passport.md)
-* [Boarding Pass](use-cases/boarding-pass.md)
+* [Extraction Models](use-cases/extraction-models/README.md)
+  * [Financial Document](use-cases/extraction-models/financial-documents.md)
+  * [Invoice](use-cases/extraction-models/invoice.md)
+  * [Receipt](use-cases/extraction-models/receipt.md)
+  * [International ID Card](use-cases/extraction-models/international-id-card.md)
+  * [Passport](use-cases/extraction-models/passport.md)
+  * [Boarding Pass](use-cases/extraction-models/boarding-pass.md)
+  * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
 
 ## Community
 

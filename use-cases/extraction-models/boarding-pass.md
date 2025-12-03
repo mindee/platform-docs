@@ -10,7 +10,7 @@ icon: ticket-airline
 
 Here is how to build your custom Boarding Pass model with Mindee in just a few minutes:
 
-{% @supademo/embed demoId="cmfl5e3l1erva39ozltfkx1ta" url="https://app.supademo.com/demo/cmfl5e3l1erva39ozltfkx1ta" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmfl5e3l1erva39ozltfkx1ta" demoId="cmfl5e3l1erva39ozltfkx1ta" %}
 
 ## Why use Mindee for boarding passes?
 
@@ -40,7 +40,7 @@ Depending on your needs, you can also add fields such as **Seat Number**, **Gate
 
 Here is a boarding pass sample if you want to try a live test for your model:
 
-<figure><img src="../.gitbook/assets/boarding-pass-sample.jpg" alt="a fake boarding pass"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/boarding-pass-sample.jpg" alt="a fake boarding pass"><figcaption></figcaption></figure>
 
 ## How to Create your Boarding Pass Model
 
