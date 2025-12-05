@@ -33,8 +33,6 @@ The resulting output has a different output structure which is much more generic
 
 [See Client Libraries](https://docs.mindee.com/integrations/client-libraries-sdk)
 
-[See API Reference](https://docs.mindee.com/integrations/api-reference)
-
 </details>
 
 <details>
@@ -67,7 +65,7 @@ V2 authentication is based on the same API key system but with a dedicated set o
 
 <summary>Are there webhook capabilities in V2?</summary>
 
-Yes, V2 supports webhook integration for asynchronous document processing.&#x20;
+Yes, V2 supports webhook integration for asynchronous document processing.
 
 [See Webhook Integration](https://docs.mindee.com/integrations/api-overview/webhooks)
 
@@ -79,7 +77,7 @@ Yes, V2 supports webhook integration for asynchronous document processing.&#x20;
 
 The Mindee API allows up to 3,000 requests per hour (120 per minute, 5 per second). If you exceed these limits, requests will be rejected. For higher volumes, contact our sales team.
 
-More details on [technical limitations ](../integrations/technical-limitations.md)
+More details on [technical limitations](../integrations/technical-limitations.md)
 
 </details>
 
@@ -137,7 +135,7 @@ Yes, V2 allows full control for the users with interactive model customization.
 
 <summary>What file formats are supported?</summary>
 
-Supported formats include PDF, PNG, JPEG, and TIFF, similar to V1. Multi-page PDFs and high-res images are fully compatible.&#x20;
+Supported formats include PDF, PNG, JPEG, and TIFF, similar to V1. Multi-page PDFs and high-res images are fully compatible.
 
 [See more about file formats](https://docs.mindee.com/integrations/api-overview#accepted-file-types)
 
@@ -435,15 +433,13 @@ Our migration recommendations depend on your current V1 plan:
 * **Paying customers (Pay-per-use & Enterprise)**: Consider migrating if you see improvements for your use case and want to benefit from V2's enhanced features
 * **Timeline**: Test V2 thoroughly in parallel with your V1 usage, then migrate only if you're confident V2 better serves your needs
 
-There's no pressure to migrate from V1 - it remains fully supported for paying customers.
-
 </details>
 
 <details>
 
 <summary>When will V2 be available and when will V1 be discontinued?</summary>
 
-V2 is already available and V1 will be discontinued for free plan users ONLY on September 25th, 2025. For the paying customers on V1, no sunset date available yet.
+V2 is already available and V1 will be discontinued for free plan users ONLY on September 25th, 2025. For enterprise customers on V1, there is no sunset date.
 
 </details>
 
@@ -514,14 +510,6 @@ You’ll need to reconfigure webhooks in V2 as the endpoint structure and authen
 ## 📞 Resources
 
 ### Learning & Documentation
-
-<details>
-
-<summary>Where can I find V2 documentation and resources?</summary>
-
-All V2 developer documentation (with demos) is available at [docs.mindee.com](https://docs.mindee.com/).
-
-</details>
 
 <details>
 

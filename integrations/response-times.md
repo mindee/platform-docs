@@ -31,10 +31,10 @@ Additionally, lists of nested objects in the Data Schema and many corresponding 
 
 Processing options which impact response time:
 
-* [improving-accuracy.md](../models/optional-features/improving-accuracy.md "mention")\
-  Before performing the inference, the RAG database must be searched.
 * [automation-confidence-score.md](../models/optional-features/automation-confidence-score.md "mention")\
   Several models are called in parallel, results are then analyzed and combined.
+* [improving-accuracy.md](../models/optional-features/improving-accuracy.md "mention")\
+  Before performing the inference, the RAG database must be searched.
 * [polygons-bounding-boxes.md](../models/optional-features/polygons-bounding-boxes.md "mention")\
   Additional information must be extracted from the document, then polygons must be calculated.
 
@@ -54,11 +54,12 @@ Single page documents with few fields.
 ### Average
 
 Single page documents with nested objects.\
-Multiple page documents with no nested objects.
+— Or —\
+Multiple page documents with **no** nested objects.
 
 * Most receipts
 * Single page invoices
-* Bills of lading
+* Most bills of lading
 * Most business contracts
 
 ### Slower

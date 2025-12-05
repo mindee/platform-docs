@@ -29,7 +29,3 @@ For a quick introduction and copy-paste ready code, look in the [quick-start.md]
 ### No-Code or Low-Code
 
 If you're integrating using a no-code or low-code platform, take a look at the [no-code-integrations](../integrations/no-code-integrations/ "mention") section.
-
-### Manual Integration
-
-If none of the above options fit your requirements, take a look at the [api-reference.md](../integrations/api-reference.md "mention") section.

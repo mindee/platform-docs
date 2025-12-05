@@ -8,9 +8,9 @@ icon: circle-info
 
 We **do not recommend** using the Mindee API directly in an application running in the final user's web browser.
 
-Users will trivially be able to intercept the API Key used for the Mindee requests, and impersonate your account.
+Users will be **trivially** able to intercept the API Key used for the Mindee requests, and impersonate your account.
 
-Our official guideline is to always pass your user requests through a server which you control.\
+Our official guideline is to **always** pass your user requests through a server which you control.\
 Not only will this prevent leakage of sensitive data, it will allow you to much more easily diagnose any issues your users may have.
 
 ## Guidelines For Uploading Files

@@ -35,8 +35,6 @@ You can easily send a file or an URL using one of our officially-supported [clie
 
 For a quick introduction and ready to use code samples, check out the [quick-start.md](../integrations/client-libraries-sdk/quick-start.md "mention") section.
 
-Otherwise, you can use the built-in client in our [api-reference.md](../integrations/api-reference.md "mention").
-
 ## Process the Result
 
 You'll need some way of importing the JSON structure and manipulating it.

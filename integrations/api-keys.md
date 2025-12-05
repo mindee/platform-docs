@@ -49,6 +49,8 @@ To delete a key on the Mindee Platform:
 
 ## Using an API Key
 
-Simply copy your API key to use it when making API calls.
+Make sure to copy your API key and store it somewhere safe.
+
+You can then to use it when making API calls.
 
 Take a look at the [#initialize-the-mindee-client](client-libraries-sdk/configure-the-client.md#initialize-the-mindee-client "mention") section for more details.

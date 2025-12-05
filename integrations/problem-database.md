@@ -12,7 +12,8 @@ All errors will contain the following information:
 * Status: the HTTP status code.
 * Title: a human-readable short description, it may not be unique.
 * Detail: a human-readable description of the error, it will be unique.
-* Code: a code to identify the specific error.
+* Code: a code to identify the specific error.\
+  Provide this code when asking for support.
 
 ## 4xx Errors - Client Errors
 
