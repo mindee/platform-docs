@@ -2,8 +2,6 @@
 title: model-fields_bill-of-lading
 ---
 
-# Bill of Lading Fields
-
 Documentation for all fields present in the data schema.
 
 Field _accessors_ are used as the keys for accessing the values in the returned data. On the data schema interface, this is the "Field Name".
