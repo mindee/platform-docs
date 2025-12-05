@@ -6,4 +6,4 @@ icon: ship
 
 Documentation for the data schema of the Bill of Lading model.
 
-{% include "../../.gitbook/includes/model_fields-bill-of-lading.md" %}
+{% include "../../.gitbook/includes/model-fields/bill-of-lading.md" %}

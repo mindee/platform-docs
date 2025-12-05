@@ -1,5 +1,5 @@
 ---
-title: model_fields-bill-of-lading
+title: model-fields_bill-of-lading
 ---
 
 # Bill of Lading Fields
