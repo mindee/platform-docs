@@ -61,5 +61,4 @@ You can use this financial document sample to do a live test yourself:
 
 See full [list of accepted files](https://docs.mindee.com/integrations/technical-limitations#accepted-files).
 
-
-{% include "../../.gitbook/includes/model-fields/financial-document.md" %}
+{% include "../../.gitbook/includes/model-fields/financial-documents.md" %}

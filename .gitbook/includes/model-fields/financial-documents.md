@@ -2,15 +2,13 @@
 title: model-fields_financial-document
 ---
 
-## Financial Document Fields
-
 Documentation for all fields present in the data schema.
 
 Field _accessors_ are used as the keys for accessing the values in the returned data. On the data schema interface, this is the "Field Name".
 
 Field _value types_ indicate how the value is returned by the API. On the data schema interface, this is the "Field Type".
 
-### Supplier Name
+# Supplier Name
 
 The name of the supplier of the invoice.
 
@@ -19,7 +17,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Supplier Phone Number
+# Supplier Phone Number
 
 The phone number of the supplier of the invoice.
 
@@ -28,13 +26,13 @@ Value Type: `string`
 
 Has a single value.
 
-### Customer Company Registration
+# Customer Company Registration
 
 A list of company registration details including type and number, for the customer of the invoice.
 
 Accessor: `customer_company_registration`
 
-#### Subfields
+## Subfields
 
 * **Number**\
   The company registration number.\
@@ -47,13 +45,13 @@ Accessor: `customer_company_registration`
 
 Can have multiple values (is a list/array).
 
-### Supplier Company Registration
+# Supplier Company Registration
 
 A list of company registration details including type and number, for the supplier of the invoice.
 
 Accessor: `supplier_company_registration`
 
-#### Subfields
+## Subfields
 
 * **Number**\
   The company registration number.\
@@ -66,7 +64,7 @@ Accessor: `supplier_company_registration`
 
 Can have multiple values (is a list/array).
 
-### Invoice Number
+# Invoice Number
 
 The number of the invoice.
 
@@ -75,7 +73,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Date
+# Date
 
 The date the invoice was issued.
 
@@ -84,7 +82,7 @@ Value Type: `date`
 
 Has a single value.
 
-### Total Amount
+# Total Amount
 
 The final total amount paid, including all taxes and discounts.
 
@@ -93,7 +91,7 @@ Value Type: `number`
 
 Has a single value.
 
-### Total Net
+# Total Net
 
 The total amount before taxes.
 
@@ -102,7 +100,7 @@ Value Type: `number`
 
 Has a single value.
 
-### Total Tax
+# Total Tax
 
 The total amount of all taxes.
 
@@ -111,13 +109,13 @@ Value Type: `number`
 
 Has a single value.
 
-### Taxes
+# Taxes
 
 A list of individual taxes applied, each including rate, base and amount.
 
 Accessor: `taxes`
 
-#### Subfields
+## Subfields
 
 * **Rate**\
   The tax rate of this tax as a decimal.\
@@ -134,13 +132,13 @@ Accessor: `taxes`
 
 Can have multiple values (is a list/array).
 
-### Line Items
+# Line Items
 
 A list of line items in the invoice.
 
 Accessor: `line_items`
 
-#### Subfields
+## Subfields
 
 * **Description**\
   A description of the item or service.\
@@ -177,7 +175,7 @@ Accessor: `line_items`
 
 Can have multiple values (is a list/array).
 
-### Document Type
+# Document Type
 
 Document type of the financial document.
 
@@ -186,13 +184,13 @@ Possible Values: `invoice`, `payslip`, `quote`, `purchase_order`, `statement`, `
 
 Has a single value.
 
-### Locale
+# Locale
 
 The locale contains the language, country and currency of the invoice.
 
 Accessor: `locale`
 
-#### Subfields
+## Subfields
 
 * **Language**\
   The language of the invoice, ISO 639-1 language code.\
@@ -209,7 +207,7 @@ Accessor: `locale`
 
 Has a single value.
 
-### Customer Name
+# Customer Name
 
 The name of the customer of the invoice.
 
@@ -218,13 +216,13 @@ Value Type: `string`
 
 Has a single value.
 
-### Customer Address
+# Customer Address
 
 The full address of the customer and the breakdown of the address in components.
 
 Accessor: `customer_address`
 
-#### Subfields
+## Subfields
 
 * **Address**\
   The full raw address of the customer as written in the document.\
@@ -265,13 +263,13 @@ Accessor: `customer_address`
 
 Has a single value.
 
-### Shipping Address
+# Shipping Address
 
 The full shipping address and the breakdown of the address in components.
 
 Accessor: `shipping_address`
 
-#### Subfields
+## Subfields
 
 * **Address**\
   The full raw shipping address as written in the document.\
@@ -312,13 +310,13 @@ Accessor: `shipping_address`
 
 Has a single value.
 
-### Billing Address
+# Billing Address
 
 The full billing address and the breakdown of the address in components.
 
 Accessor: `billing_address`
 
-#### Subfields
+## Subfields
 
 * **Address**\
   The full full raw billing address as written in the document.\
@@ -359,13 +357,13 @@ Accessor: `billing_address`
 
 Has a single value.
 
-### Supplier Address
+# Supplier Address
 
 The full address of the supplier and the breakdown of the address in components.
 
 Accessor: `supplier_address`
 
-#### Subfields
+## Subfields
 
 * **Address**\
   The full raw supplier address as written in the document.\
@@ -406,7 +404,7 @@ Accessor: `supplier_address`
 
 Has a single value.
 
-### Due Date
+# Due Date
 
 The date on which the invoice is due.
 
@@ -415,7 +413,7 @@ Value Type: `date`
 
 Has a single value.
 
-### PO Number
+# PO Number
 
 The purchase order number.
 
@@ -424,7 +422,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Reference Numbers
+# Reference Numbers
 
 List of all reference numbers on the invoice, including the purchase order number.
 
@@ -433,7 +431,7 @@ Value Type: `string`
 
 Can have multiple values (is a list/array).
 
-### Payment Date
+# Payment Date
 
 The date on which the payment is due / was full-filled.
 
@@ -442,13 +440,13 @@ Value Type: `date`
 
 Has a single value.
 
-### Supplier Payment Details
+# Supplier Payment Details
 
 List of payment details associated to the supplier of the invoice.
 
 Accessor: `supplier_payment_details`
 
-#### Subfields
+## Subfields
 
 * **IBAN**\
   The International Bank Account Number (IBAN).\
@@ -469,7 +467,7 @@ Accessor: `supplier_payment_details`
 
 Can have multiple values (is a list/array).
 
-### Supplier Website
+# Supplier Website
 
 The website URL of the supplier or merchant.
 
@@ -478,7 +476,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Supplier Email
+# Supplier Email
 
 The email address of the supplier or merchant.
 
@@ -487,7 +485,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Customer ID
+# Customer ID
 
 The customer account number or identifier from the supplier.
 
@@ -496,7 +494,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Purchase Category
+# Purchase Category
 
 The category of the receipt.
 
@@ -505,7 +503,7 @@ Possible Values: `food`, `gasoline`, `parking`, `toll`, `accommodation`, `transp
 
 Has a single value.
 
-### Purchase Subcategory
+# Purchase Subcategory
 
 The purchase subcategory of the receipt.
 
@@ -514,7 +512,7 @@ Possible Values: `restaurant`, `delivery`, `train`, `public`, `taxi`, `car_renta
 
 Has a single value.
 
-### Receipt Number
+# Receipt Number
 
 The receipt number or identifier only if document is a receipt.
 
@@ -523,7 +521,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Document Number
+# Document Number
 
 The document number or identifier (invoice number or receipt number).
 
@@ -532,7 +530,7 @@ Value Type: `string`
 
 Has a single value.
 
-### Tip and Gratuity
+# Tip and Gratuity
 
 The total amount of tip and gratuity
 
@@ -541,7 +539,7 @@ Value Type: `number`
 
 Has a single value.
 
-### Purchase Time
+# Purchase Time
 
 The time the purchase was made (only for receipts).
 
