@@ -38,22 +38,22 @@ The party responsible for shipping the goods
 Accessor: `shipper`
 
 #### Subfields
-  - **Name**\
+- **Name**\
   Shipper s name\
   Accessor: `name`\
   Value Type: `string`
 
-  - **Address**\
+- **Address**\
   Shipper s address\
   Accessor: `address`\
   Value Type: `string`
 
-  - **Phone**\
+- **Phone**\
   Shipper s phone number\
   Accessor: `phone`\
   Value Type: `string`
 
-  - **Email**\
+- **Email**\
   Shipper s email address\
   Accessor: `email`\
   Value Type: `string`
@@ -71,22 +71,22 @@ The party to whom the goods are being shipped
 Accessor: `consignee`
 
 #### Subfields
-  - **Name**\
+- **Name**\
   Consignee s name\
   Accessor: `name`\
   Value Type: `string`
 
-  - **Address**\
+- **Address**\
   Consignee s address\
   Accessor: `address`\
   Value Type: `string`
 
-  - **Phone**\
+- **Phone**\
   Consignee s phone number\
   Accessor: `phone`\
   Value Type: `string`
 
-  - **Email**\
+- **Email**\
   Consignee s email address\
   Accessor: `email`\
   Value Type: `string`
@@ -104,22 +104,22 @@ The party to be notified of the arrival of the goods
 Accessor: `notify_party`
 
 #### Subfields
-  - **Name**\
+- **Name**\
   Notify party s name\
   Accessor: `name`\
   Value Type: `string`
 
-  - **Address**\
+- **Address**\
   Notify party s address\
   Accessor: `address`\
   Value Type: `string`
 
-  - **Phone**\
+- **Phone**\
   Notify party s phone number\
   Accessor: `phone`\
   Value Type: `string`
 
-  - **Email**\
+- **Email**\
   Notify party s email address\
   Accessor: `email`\
   Value Type: `string`
@@ -137,17 +137,17 @@ The shipping company responsible for transporting the goods
 Accessor: `carrier`
 
 #### Subfields
-  - **Name**\
+- **Name**\
   Carrier s name\
   Accessor: `name`\
   Value Type: `string`
 
-  - **Professional Number**\
+- **Professional Number**\
   Carrier s professional number\
   Accessor: `professional_number`\
   Value Type: `string`
 
-  - **SCAC**\
+- **SCAC**\
   Carrier s SCAC code\
   Accessor: `scac`\
   Value Type: `string`
@@ -165,32 +165,32 @@ The goods being shipped
 Accessor: `carrier_items`
 
 #### Subfields
-  - **Description**\
+- **Description**\
   Description of the item\
   Accessor: `description`\
   Value Type: `string`
 
-  - **Quantity**\
+- **Quantity**\
   Quantity of the item\
   Accessor: `quantity`\
   Value Type: `number`
 
-  - **Gross Weight**\
+- **Gross Weight**\
   Gross weight of the item\
   Accessor: `gross_weight`\
   Value Type: `number`
 
-  - **Weight Unit**\
+- **Weight Unit**\
   Unit of weight\
   Accessor: `weight_unit`\
   Value Type: `string`
 
-  - **Measurement**\
+- **Measurement**\
   Measurement of the item\
   Accessor: `measurement`\
   Value Type: `number`
 
-  - **Measurement Unit**\
+- **Measurement Unit**\
   Unit of measurement\
   Accessor: `measurement_unit`\
   Value Type: `string`
@@ -264,5 +264,3 @@ Value Type: `date`
 Has a single value.
 
 </details>
-
-
