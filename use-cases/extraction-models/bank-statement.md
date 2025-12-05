@@ -1,5 +1,5 @@
 ---
-icon: id-card
+icon: file-lines
 ---
 
 # Bank Statement
