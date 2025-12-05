@@ -2,7 +2,7 @@
 title: model-fields_financial-document
 ---
 
-## Financial Document Fields
+# Financial Document Fields
 
 Documentation for all fields present in the data schema.
 
