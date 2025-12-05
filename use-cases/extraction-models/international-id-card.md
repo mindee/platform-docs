@@ -77,4 +77,6 @@ If you want to try and do a live test, you can use this French ID example:
 
 The API handles both PDF and common image formats (JPG, PNG), including smartphone photos. It applies reliably to front/back sides and both old and new French ID layouts.
 
+## International ID Fields
+
 {% include "../../.gitbook/includes/model-fields/international-id.md" %}

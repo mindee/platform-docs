@@ -67,7 +67,9 @@
   * [Passport](use-cases/extraction-models/passport.md)
   * [Driver's License](use-cases/extraction-models/drivers-license.md)
   * [Boarding Pass](use-cases/extraction-models/boarding-pass.md)
+  * [Resume](use-cases/extraction-models/resume.md)
   * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
+  * [Bank Statement](use-cases/extraction-models/bank-statement.md)
 
 ## Community
 
