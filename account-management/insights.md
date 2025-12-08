@@ -23,7 +23,7 @@ The following data are available for viewing.
 * Traffic: the number of calls and the number of pages processed.
 * Processing Time: the average time requests take to process, in seconds.
 * Errors: the number of processing (inference) errors.\
-  Note: this does not show user errors (HTTP 4xx)
+  Note: does not show user errors (HTTP 4xx).
 
 ## Data Filters
 
