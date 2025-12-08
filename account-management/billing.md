@@ -1,10 +1,11 @@
 ---
+description: >-
+  The Billing page in your Mindee account lets you manage your subscription,
+  view usage, and access past invoices.
 icon: wallet
 ---
 
 # Billing
-
-The **Billing** page in your Mindee account lets you manage your subscription, view usage, and access past invoices.
 
 ## Who Can Access Billing?
 
@@ -52,7 +53,7 @@ Choose any payment method supported by Stripe.
 
 ## Page Usage & Overages
 
-Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.&#x20;
+Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.
 
 If you exceed it, additional pages are charged automatically on your payment method:
 

@@ -1,11 +1,12 @@
 ---
+description: >-
+  Mindee provides different levels of support depending on your subscription
+  plan. Support options range from community-driven help to real-time chat with
+  priority handling for urgent needs.
 icon: hands-holding-heart
 ---
 
 # Support Levels
-
-Mindee provides different levels of support depending on your subscription plan.\
-Support options range from community-driven help to real-time chat with priority handling for urgent needs.
 
 ## Support Overview <a href="#support-overview" id="support-overview"></a>
 

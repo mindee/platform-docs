@@ -55,6 +55,7 @@
 * [Support Levels](account-management/support-levels.md)
 * [Organizations](account-management/organizations.md)
 * [Billing](account-management/billing.md)
+* [Insights](account-management/insights.md)
 
 ## Use Cases
 
