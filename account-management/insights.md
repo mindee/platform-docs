@@ -23,18 +23,33 @@ Or simply click here:
 
 <div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204036.png" alt="Insights - data view selector"><figcaption></figcaption></figure></div>
 
-The following data are available for viewing.
+### Traffic
 
-* Traffic: the number of calls and the number of pages processed.
-* Processing Time: the average time requests take to process, in seconds.
-* Errors: the number of processing (inference) errors.\
-  Note: does not show user errors (HTTP 4xx).
+The number of calls and the number of pages successfully processed.
+
+This does not include calls that resulted in an error.
+
+These requests count towards your plan's billing.
+
+### Processing Time
+
+The average time requests take to process, in seconds.
+
+Processing time is calculated from when the request was received to when the inference was finished.
+
+### Errors
+
+The number of processing (inference) errors.
+
+Does not include user errors (HTTP 4xx), since these requests get rejected before any processing takes place.
+
+Errors do **not** count towards your plan's billing.
 
 ## Data Filters
 
 For all data views, the following filters are available.
 
-#### Origin
+### Origin
 
 Filter based on the origin of the request.
 
@@ -44,31 +59,31 @@ Filter based on the origin of the request.
 
 "API" is for any request made using an API key.
 
-#### Date Range
+### Date Range
 
 Filter based on start and end dates.
 
 <div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204353.png" alt=""><figcaption></figcaption></figure></div>
 
-#### Group By
+### Group By
 
 Only affects the visualization, group results by day, month, or year.
 
 <div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204425.png" alt=""><figcaption></figcaption></figure></div>
 
-#### API Key
+### API Key
 
 Show all API keys or filter on a specific one.
 
 <div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204442.png" alt=""><figcaption></figcaption></figure></div>
 
-#### Options Used
+### Activated Options
 
 Filter by [optional features](../models/optional-features/) activated in the call.
 
 <div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204502.png" alt=""><figcaption></figcaption></figure></div>
 
-3 states to choose:
+3 states to choose from:
 
 * empty: no filter
 * check mark: show only calls with the option **active**
