@@ -40,7 +40,7 @@ An example of the field types for a basic invoice extraction Data Schema:
 
 <table><thead><tr><th>Field</th><th width="203.5">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes[0].Rate</em></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes[0].Base</em></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes[0].Amount</em></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
 
-## Building a Top-Performing Data Schema
+## Performance Optimization
 
 To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](optional-features/improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.
 
@@ -74,6 +74,18 @@ Try to use the [#field-types](data-schema.md#field-types "mention") that will be
 
 For the `due_date`, you could use a string, but a date field is definitely a better solution.
 
+### Field Description
+
+The field's description also has an impact on the model's performance.
+
+Use it to describe what the field represents, and/or of what its use is to you.
+
+For example, the `supplier_name` field could have:
+
+> The name of the supplier.
+>
+> Used in internal processing to match our supplier ID with the name found on the document.
+
 ### Extraction Guidelines
 
 Sometimes changing the field name and type is not enough to explain what you need for one field.\
@@ -83,9 +95,15 @@ Use natural language to explain how to properly extract the data.
 
 For instance, for `supplier_phone_number` , adding the following extraction guidelines could be useful:
 
-> If you find several phone numbers in the document, I need the phone number of the supplier headquarters. Also, I want you to reformat the data to match the international phone number format, as follows : +1-212-456-7890
+> If you find several phone numbers in the document, use the phone number of the supplier headquarters.
+>
+> Always reformat the data to match the international phone number format, as follows : +1-212-456-7890
 
-You can specify guidelines in most languages, including, _but not limited to_:
+### Language
+
+You can specify a field's title, description, and guidelines in most languages.
+
+This includes, _but is not limited to_:
 
 * European languages: English, French, Spanish, German, Italian, Portuguese, Russian, Greek, etc
 * Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
