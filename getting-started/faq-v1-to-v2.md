@@ -75,9 +75,7 @@ Yes, V2 supports webhook integration for asynchronous document processing.
 
 <summary>How do rate limits work in V2?</summary>
 
-The Mindee API allows up to 3,000 requests per hour (120 per minute, 5 per second). If you exceed these limits, requests will be rejected. For higher volumes, contact our sales team.
-
-More details on [technical limitations](../integrations/technical-limitations.md)
+Check the [technical limitations](../integrations/technical-limitations.md) section.
 
 </details>
 
@@ -158,6 +156,10 @@ In order to optimize the performance of a given model, the first step is to [opt
 We officially support Python, Node.js, Ruby, PHP, Java and .NET, when these are used in conjunction with our official client libraries.
 
 [See Client Libraries](https://docs.mindee.com/integrations/client-libraries-sdk)
+
+For no-code/low-code, we officially support Make.com, n8n, and Zapier
+
+[See No-Code](../integrations/no-code-integrations/)
 
 However, any language or system able to make an HTTP call and receive a JSON response can be used and supported by the community.
 
@@ -421,16 +423,7 @@ We're committed to maintaining V1 for our paying customers while encouraging exp
 
 <summary>What's the recommended migration timeline?</summary>
 
-Our migration recommendations depend on your current V1 plan:
-
-**Priority Migration (Immediate):**
-
-* **Free tier users**: Migrate before **September 15, 2025** to avoid service interruption
-* **Timeline**: Complete migration by **August 2025** to allow for testing and adjustment
-
-**Optional Migration (Your Choice):**
-
-* **Paying customers (Pay-per-use & Enterprise)**: Consider migrating if you see improvements for your use case and want to benefit from V2's enhanced features
+* **Paying customers (high Pay-per-use & Enterprise)**: Consider migrating if you see improvements for your use case and want to benefit from V2's enhanced features
 * **Timeline**: Test V2 thoroughly in parallel with your V1 usage, then migrate only if you're confident V2 better serves your needs
 
 </details>
@@ -439,13 +432,15 @@ Our migration recommendations depend on your current V1 plan:
 
 <summary>When will V2 be available and when will V1 be discontinued?</summary>
 
-V2 is already available and V1 will be discontinued for free plan users ONLY on September 25th, 2025. For enterprise customers on V1, there is no sunset date.
+V2 is already available and no new V1 accounts can be created.
+
+For enterprise customers on V1, there is no sunset date.
 
 </details>
 
 <details>
 
-<summary>Can I run V1 and V2 in parallel during migration?</summary>
+<summary>Can I run V1 and V2 in parallel?</summary>
 
 Yes, absolutely. Running both platforms in parallel is not only supported but recommended for a smooth transition
 
@@ -453,7 +448,7 @@ Yes, absolutely. Running both platforms in parallel is not only supported but re
 
 <details>
 
-<summary>What's the step-by-step migration process? (a checker)</summary>
+<summary>What's the step-by-step migration process?</summary>
 
 **Quick Overview:**
 
