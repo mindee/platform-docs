@@ -25,17 +25,17 @@ Or simply click here:
 
 From the **Billing** tab, you can:
 
-* **View your current subscription**
-* **Switch billing frequency** (monthly or annual)
-* **Access your Stripe account settings**
+* View your current subscription
+* Switch billing frequency (monthly or annual)
+* Access your Stripe account settings
 
 ### Upgrading or Changing Plans
 
 To change your plan:
 
-1. Go to **Settings → Billing**
+1. Go to **Settings** → **Billing**
 2. Choose a new plan under the available options
-3. Click **on Downgrade or Upgrade**
+3. Click on **Downgrade** or **Upgrade**
 
 ## What You Can Do from Stripe
 
@@ -55,13 +55,23 @@ Choose any payment method supported by Stripe.
 
 Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.
 
-If you exceed it, additional pages are charged automatically on your payment method:
+If you exceed it, additional pages are charged automatically on your payment method.
 
 | Plan     | Included Pages | Overage Rate  |
 | -------- | -------------- | ------------- |
 | Starter  | 6,000 / year   | €0.05 / page  |
 | Pro      | 30,000 / year  | €0.04 / page  |
 | Business | 120,000 / year | €0.035 / page |
+
+{% hint style="info" %}
+**Pages are calculated based on successfully processed documents.**
+
+Client errors (HTTP 4xx) and processing errors will **not** count towards your page usage.
+{% endhint %}
+
+To track your page usage, you can consult the [insights.md](insights.md "mention") page.
+
+Additionally, API responses contain the number of pages processed in the [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention") object.
 
 ## Supported Payment Methods
 
