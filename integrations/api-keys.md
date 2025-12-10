@@ -31,11 +31,11 @@ To create an API Key on the Mindee Platform:
 3. Give a name to your key.\
    You'll typically want to name by environment, i.e. `dev`, `staging`, `prod`, \&c
 4. Click **Create API**, you key is now ready for use.
+5. Your new key will be displayed, click **Copy**, and store your key somewhere safe.\
+   ![Copy the API key](../.gitbook/assets/Screenshot_20251210_185634.png)
 
-{% hint style="info" %}
-**Make sure to copy your API key and store it somewhere safe.**
-
-As a security precaution, you will **not** be able to retrieve the key afterwards!
+{% hint style="warning" %}
+As a security precaution, you will **not** be able to retrieve the key after creation!
 {% endhint %}
 
 ## Key Revocation/Deletion
