@@ -32,6 +32,12 @@ To create an API Key on the Mindee Platform:
    You'll typically want to name by environment, i.e. `dev`, `staging`, `prod`, \&c
 4. Click **Create API**, you key is now ready for use.
 
+{% hint style="info" %}
+**Make sure to copy your API key and store it somewhere safe.**
+
+As a security precaution, you will **not** be able to retrieve the key afterwards!
+{% endhint %}
+
 ## Key Revocation/Deletion
 
 You can revoke a key at any time by deleting it.
@@ -49,7 +55,7 @@ To delete a key on the Mindee Platform:
 
 ## Using an API Key
 
-Make sure to copy your API key and store it somewhere safe.
+When creating an API key, make sure to copy the key and store it somewhere safe.
 
 You can then to use it when making API calls.
 
