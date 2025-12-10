@@ -10,7 +10,7 @@ Beyond this limit, performance will be drastically reduced.
 
 ## Names of Fields
 
-The field _name_ must only contain:
+The field _ame_ must only contain:
 
 * lowercase Latin letters without accents (a-z)
 * numbers (0-9)

@@ -50,16 +50,16 @@ The various properties of the field all have a role to play in getting the best 
 
 ### **Field Name and Title**
 
-The field _name_ is automatically generated from the field _title_. You can however modify the _title_ afterwards.
+The field _Name_ is automatically generated from the field _Title_. You can however modify the _Title_ afterwards.
 
-Both the _name_ and _title_ are used during processing (inference), but the _name_ is more important.
+Both the _Name_ and _Title_ are used during processing (inference), but the _Name_ is more important.
 
 Try to use clear, simple names that will precisely describe the field you want to extract.\
 The goal is to avoid any possible confusion between data points present in the document.
 
 Consider wanting to extract the name of the company that issued an invoice.
 
-In our model, we've used the field _name_:  `supplier_name`\
+In our model, we've used the field _Name_:  `supplier_name`\
 It clearly tells the AI to get only the name, and of the invoice supplier.
 
 :white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
@@ -78,7 +78,7 @@ For example, while you could use a string for `due_date`, a date field type is d
 
 ### Field Description
 
-The field's description also has an impact on the model's performance.
+The field's _Description_ also has an impact on the model's performance.
 
 Use it to describe what the field represents, and/or of what its use is to you.
 
@@ -91,7 +91,7 @@ For example, the `supplier_name` field could have:
 ### Field Extraction Guidelines
 
 Sometimes changing the field name and type is not enough to explain what you need for one field.\
-In that case you have the possibility to add Extraction Guidelines to the field.
+In that case you have the possibility to add extraction _Guidelines_ to the field.
 
 Use natural language to explain how to properly extract the data, and/or any extra steps like formatting.
 
@@ -115,7 +115,8 @@ In the following table, "Normal Fields" are those that extract textual informati
 
 ### Language
 
-You can specify a field's title, description, and guidelines in most languages.
+You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.\
+Note that the _Name_ can only contains ASCII characters.
 
 This includes, _but is not limited to_:
 
