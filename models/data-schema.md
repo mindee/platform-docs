@@ -107,9 +107,9 @@ Not all field properties have the same importance or weight when it comes to how
 
 Additionally, not all types of fields are handled the same way.
 
-In the following table, "Normal Fields" are those that extract textual information from the document (string, date, numbers, etc), whether they are simple fields, lists, or nested object fields.
+In the following table, "Normal Fields" are those that extract textual information from the document (text, dates, numbers, etc), whether they are simple fields, lists, or nested object fields.
 
-"Object Detection" refers to specific processing to extract polygons of various elements from  the document, such as signatures, photos, etc.
+"Object Detection" refers to specific processing to extract polygons of various elements on the document, such as signatures, ID photos, etc.
 
 <table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>description</td><td>Complementary</td><td>Not used</td></tr><tr><td>guideline</td><td>Complementary</td><td>Not used</td></tr><tr><td>classification values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
 
