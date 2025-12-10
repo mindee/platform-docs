@@ -46,18 +46,20 @@ To get the best possible extraction data from a model, you can of course use the
 
 > _If the foundation is solid, the house is solid._
 
+The various properties of the field all have a role to play in getting the best possible performance.
+
 ### **Field Name and Title**
 
-The field _name_ is automatically generated from the field _title_.
+The field _name_ is automatically generated from the field _title_. You can however modify the _title_ afterwards.
 
-While the _title_ is purely for humans, the _name_ has an influence on how the AI system performs the extraction operation.
+Both the _name_ and _title_ are used during processing (inference), but the _name_ is more important.
 
-Try to use simple names that will precisely describe the field you want to extract.\
+Try to use clear, simple names that will precisely describe the field you want to extract.\
 The goal is to avoid any possible confusion between data points present in the document.
 
 Consider wanting to extract the name of the company that issued an invoice.
 
-In our model, we've used the field _name_: `supplier_name`\
+In our model, we've used the field _name_:  `supplier_name`\
 It clearly tells the AI to get only the name, and of the invoice supplier.
 
 :white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
@@ -72,7 +74,7 @@ It clearly tells the AI to get only the name, and of the invoice supplier.
 
 Try to use the [#field-types](data-schema.md#field-types "mention") that will best suits the field you need.
 
-For the `due_date`, you could use a string, but a date field is definitely a better solution.
+For example, while you could use a string for `due_date`, a date field type is definitely better.
 
 ### Field Description
 
@@ -86,18 +88,30 @@ For example, the `supplier_name` field could have:
 >
 > Used in internal processing to match our supplier ID with the name found on the document.
 
-### Extraction Guidelines
+### Field Extraction Guideline
 
 Sometimes changing the field name and type is not enough to explain what you need for one field.\
-In that case you have the possibility to add Extraction Guidelines to the field.
+In that case you have the possibility to add an Extraction Guideline to the field.
 
-Use natural language to explain how to properly extract the data.
+Use natural language to explain how to properly extract the data, and/or any extra steps like formatting.
 
-For instance, for `supplier_phone_number` , adding the following extraction guidelines could be useful:
+For instance, with `supplier_phone_number` , adding the following extraction guidelines could be useful:
 
 > If you find several phone numbers in the document, use the phone number of the supplier headquarters.
 >
-> Always reformat the data to match the international phone number format, as follows : +1-212-456-7890
+> Always reformat the data to match the international phone number format, as follows: +1-212-456-7890
+
+### Relative Importance of Field Properties
+
+Not all field properties have the same importance or weight when it comes to how the models process files.
+
+Additionally, not all types of fields are handled the same way.
+
+In the following table, "Normal Fields" are those that extract textual information from the document (string, date, numbers, etc), whether they are simple fields, lists, or nested object fields.
+
+"Object Detection" refers to specific processing to extract polygons of various elements from  the document, such as signatures, photos, etc.
+
+<table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>description</td><td>Complementary</td><td>Not used</td></tr><tr><td>guideline</td><td>Complementary</td><td>Not used</td></tr><tr><td>classification values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
 
 ### Language
 

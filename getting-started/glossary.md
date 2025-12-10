@@ -15,4 +15,5 @@ You will frequently encounter these concepts throughout this documentation as Mi
 * **SDK**: SDK (Software Development Kit) is a set of software development tools developers can use to facilitate the creation of applications.
 * **OpenAPI**: A specification that defines a standard, language-agnostic interface for RESTful APIs.
 * **Payload**: A payload refers to data that is submitted to the Mindee server and the data returned by the server when you an API request is made.
-* **Inference**: This refers to response or results that our APIs deliver on a given document.
+* **Inference**: The processing step where a ML model performs an operation on a file.\
+  By extension, this also refers to response or results that our APIs deliver on a given document.
