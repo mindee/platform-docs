@@ -17,7 +17,8 @@ Learn more at [live-test.md](../models/live-test.md "mention").
 
 ## Model Catalog
 
-Choose from our ready-to-use catalog models. You can also modify them as needed, just like our custom models.
+Choose from our ready-to-use catalog models for data extraction.\
+You can also modify them as needed, just like our custom models.
 
 Some popular use cases include:
 
@@ -26,6 +27,8 @@ Some popular use cases include:
 * **Employment**: Resume or CV, Payslip, ...
 * **Banking**: Check, Bank Statement, ...
 * **Logistics**: Bill of Lading, Vehicle Registration, ...
+
+Learn more at [extraction-models](../use-cases/extraction-models/ "mention")
 
 ## Advanced Features
 
@@ -59,4 +62,3 @@ Mindee pricing is plan-based with included pages, overages, and feature tiers.
 Pay annually to save money, or monthly.
 
 Compare all plans and their features at [plans.md](../account-management/plans.md "mention").
-
