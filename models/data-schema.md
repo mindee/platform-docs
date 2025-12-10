@@ -88,10 +88,10 @@ For example, the `supplier_name` field could have:
 >
 > Used in internal processing to match our supplier ID with the name found on the document.
 
-### Field Extraction Guideline
+### Field Extraction Guidelines
 
 Sometimes changing the field name and type is not enough to explain what you need for one field.\
-In that case you have the possibility to add an Extraction Guideline to the field.
+In that case you have the possibility to add Extraction Guidelines to the field.
 
 Use natural language to explain how to properly extract the data, and/or any extra steps like formatting.
 
@@ -111,7 +111,7 @@ In the following table, "Normal Fields" are those that extract textual informati
 
 "Object Detection" refers to specific processing to extract polygons of various elements on the document, such as signatures, ID photos, etc.
 
-<table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>description</td><td>Complementary</td><td>Not used</td></tr><tr><td>guideline</td><td>Complementary</td><td>Not used</td></tr><tr><td>classification values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
+<table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>Name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>Title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>Description</td><td>Complementary</td><td>Not used</td></tr><tr><td>Guidelines</td><td>Complementary</td><td>Not used</td></tr><tr><td>Classification Values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
 
 ### Language
 
