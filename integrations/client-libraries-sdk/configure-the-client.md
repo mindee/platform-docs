@@ -337,7 +337,7 @@ Check the [#feature-comparison](../../account-management/plans.md#feature-compar
 The default activation states for Optional Features are set on the platform.\
 Any values set here will override the defaults.
 
-Leave empty or null to use the default values.
+Leave empty or null to use the default platform values.
 
 For example: if the Polygon feature is enabled on the platform, and polygon is explicitly set to `false` in the parameters ⇒ the Polygon feature will **not** be enabled for the API call.
 
