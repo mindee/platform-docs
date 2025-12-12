@@ -39,7 +39,7 @@ Finish by clicking "Save".
 
 Now you can specify which model to use. For this click on "Search Model":
 
-<figure><img src="../../.gitbook/assets/Screenshot_20251009_102507.png" alt="opening the search model for mindee v2 in make.com" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/make-search-model-button.png" alt="opening the search model for mindee v2 in make.com" width="563"><figcaption></figcaption></figure>
 
 In the dialog window, you'll be able to enter a search string.
 

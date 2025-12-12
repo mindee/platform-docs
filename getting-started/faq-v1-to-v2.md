@@ -472,7 +472,7 @@ Yes, absolutely. Running both platforms in parallel is not only supported but re
 
 <summary>What migration support is provided?</summary>
 
-Mindee V2 offers [guided documentation](https://docs.mindee.com/), 1:1 support for Enterprise customers, and step-by-step upgrade paths to help you transition from V1 to V2 smoothly.
+Mindee V2 offers 1:1 support for Business and Enterprise customers, with step-by-step upgrade paths to help you transition from V1 to V2 smoothly.
 
 </details>
 

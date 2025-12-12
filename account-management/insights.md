@@ -8,7 +8,7 @@ icon: chart-column
 
 The insights page allows you to view various data concerning your usage of the Mindee platform and API.
 
-<figure><img src="../.gitbook/assets/Ekrankopio_20251208_205921.png" alt="Insights - general view" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/insights-overview.png" alt="Insights - general view" width="563"><figcaption></figcaption></figure>
 
 ## Accessing the Insights Page
 
@@ -21,7 +21,7 @@ Or simply click here:
 
 ## Data Views
 
-<div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204036.png" alt="Insights - data view selector"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/insights-show-data.png" alt="Insights - data view selector"><figcaption></figcaption></figure></div>
 
 ### Traffic
 
@@ -53,7 +53,7 @@ For all data views, the following filters are available.
 
 Filter based on the origin of the request.
 
-<div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204330.png" alt="Insights - filter data based on origin"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/insights-filter-origin.png" alt="Insights - filter data based on origin"><figcaption></figcaption></figure></div>
 
 "Live Test" is when using the [live test](../models/live-test.md) functionality on the platform.
 
@@ -63,25 +63,25 @@ Filter based on the origin of the request.
 
 Filter based on start and end dates.
 
-<div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204353.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/insights-date-select.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Group By
 
 Only affects the visualization, group results by day, month, or year.
 
-<div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204425.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/insights-summarize.png" alt=""><figcaption></figcaption></figure></div>
 
 ### API Key
 
 Show all API keys or filter on a specific one.
 
-<div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204442.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/insights-filter-api-key.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Activated Options
 
 Filter by [optional features](../models/optional-features/) activated in the call.
 
-<div align="left"><figure><img src="../.gitbook/assets/Ekrankopio_20251208_204502.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/insights-filter-options.png" alt=""><figcaption></figcaption></figure></div>
 
 3 states to choose from:
 

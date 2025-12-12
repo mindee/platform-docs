@@ -1,5 +1,6 @@
 ---
 description: How to integrate Mindee into your application.
+hidden: true
 noIndex: true
 icon: plug-circle-check
 ---
