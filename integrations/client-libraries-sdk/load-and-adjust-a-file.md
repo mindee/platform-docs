@@ -107,7 +107,6 @@ To load a file, you'll need to import the corresponding input class and instanti
 Make sure to import the needed classes:
 
 ```typescript
-end using TypeScript.
 const mindee = require("mindee");
 // for TS or modules:
 // import * as mindee from "mindee";
@@ -149,7 +148,7 @@ To load a `Stream`, use `StreamInput`.
 ```typescript
 const stream = fs.createReadStream("/path/to/the/file.ext");
 
-const input = new mindee.StreamInput({
+const inputSource = new mindee.StreamInput({
   inputStream: stream,
   filename: "file.ext",
 });
@@ -160,7 +159,7 @@ To load a base-64 string, use `Base64Input` .
 ```typescript
 const b64String = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
 
-const input = new mindee.Base64Input({
+const inputSource = new mindee.Base64Input({
   inputString: b64String,
   filename: "base64_file.txt",
 });
@@ -251,7 +250,7 @@ To load a file, initialize it using the `LocalInputSource` class.
 
 This class has different constructors to allow for opening various types of inputs.
 
-&#x20;To load a path string:
+To load a path string:
 
 ```java
 String filePath = "/path/to/the/file.ext";
@@ -310,7 +309,7 @@ To load a file, initialize it using the `LocalInputSource` class.
 
 This class has different constructors to allow for opening various types of inputs.
 
-&#x20;To load a path string:
+To load a path string:
 
 ```csharp
 string filePath = "/path/to/the/file.ext";
