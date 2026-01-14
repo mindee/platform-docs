@@ -4,7 +4,7 @@ icon: file-lines
 
 # Bank Statement
 
-Documentation for the data schema of the Bill of Lading model.
+Documentation for the data schema of the Bank Statement model.
 
 ## Bank Statement
 
