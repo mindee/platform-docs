@@ -71,6 +71,9 @@
   * [Resume](use-cases/extraction-models/resume.md)
   * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
   * [Bank Statement](use-cases/extraction-models/bank-statement.md)
+* [Utilities](use-cases/extraction-models-1/README.md)
+  * [Split](use-cases/extraction-models-1/bank-statement.md)
+  * [Crop](use-cases/extraction-models-1/bank-statement-1.md)
 
 ## Community
 
