@@ -25,7 +25,7 @@ By combining multiple models and analyzing their agreement, Automation ensures t
 
 ### Full Automation
 
-By leveraging **confidence score thresholds**, you can selectively **automate decisions** in your processing pipeline, triggering downstream actions only when extractions meet a predefined reliability level.&#x20;
+By leveraging **confidence score thresholds**, you can selectively **automate decisions** in your processing pipeline, triggering downstream actions only when extractions meet a predefined reliability level.
 
 For example, fields marked with a `High` or `Certain` confidence score can be automatically approved and pushed to your ERP or CRM system, while extractions with `Low` or `Medium` confidence can be routed for human review or fallback logic. This selective gating mechanism allows teams to implement **fully automated flows** for clean, predictable documents, while still handling edge cases gracefully.
 
@@ -42,12 +42,12 @@ This visual feedback is especially useful in UI-driven workflows, where operator
 
 The default color scheme is as follows:
 
-| Confidence Level | Label            | Color Code | Suggested Action         | Description                                                              |
-| ---------------- | ---------------- | ---------- | ------------------------ | ------------------------------------------------------------------------ |
-| 🟥 Low           | `Low`            | Red        | Manual review required   | Extraction is uncertain or likely incorrect. Model disagreement is high. |
-| 🟧 Medium        | `Medium`         | Orange     | Optional review          | Some confidence, but context or format may impact correctness.           |
-| 🟩 High          | `High`           | Green      | Can be auto-processed    | Model consensus is strong; prediction is likely accurate.                |
-| 🟦 Certain       | `Certain` (soon) | Blue       | Safe for full automation | Full confidence, human-level precision                                   |
+| Confidence Level | Label      | Color Code | Suggested Action       | Description                                                              |
+| ---------------- | ---------- | ---------- | ---------------------- | ------------------------------------------------------------------------ |
+| 🟦 Certain       | `Certain`  | Blue       | Safe for  automation   | Full confidence, human-level precision                                   |
+| 🟩 High          | `High`     | Green      | Can be auto-processed  | Model consensus is strong; prediction is likely accurate.                |
+| 🟧 Medium        | `Medium`   | Orange     | Optional review        | Some confidence, but context or format may impact correctness.           |
+| 🟥 Low           | `Low`      | Red        | Manual review required | Extraction is uncertain or likely incorrect. Model disagreement is high. |
 
 This color-coding system allows product teams to **highlight uncertainty directly in the user interface**, enabling faster decisions, reducing cognitive load, and streamlining exception handling.
 
@@ -59,7 +59,7 @@ This color-coding system allows product teams to **highlight uncertainty directl
 
 {% include "../../.gitbook/includes/default-optional-features.md" %}
 
-{% @supademo/embed demoId="cmeie3irw9fe7h3pytuktflxs" url="https://app.supademo.com/demo/cmeie3irw9fe7h3pytuktflxs" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmeie3irw9fe7h3pytuktflxs" demoId="cmeie3irw9fe7h3pytuktflxs" %}
 
 ### Activate Confidence Scores via API Calls
 
@@ -69,11 +69,17 @@ When the **Automation** feature is not activated, the `confidence` attribute in 
 
 Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
+### Using Confidence Scores in Processing
+
+You can easily add various business and/or processing logic rules in your code to handle complex workflows.
+
+Take a look at the [#confidence](../../integrations/client-libraries-sdk/process-result-fields.md#confidence "mention") section for implementation details.
+
 ## Towards 100% Automation
 
-By combining confidence-based automation with Mindee’s **RAG-powered continuous learning loop**, you can drive your workflows toward **near 100% automation**.&#x20;
+By combining confidence-based automation with Mindee’s **RAG-powered continuous learning loop**, you can drive your workflows toward **near 100% automation**.
 
-Low-confidence extractions are not only flagged for human validation, but also used as feedback signals to refine models dynamically, through retrieval-augmented generation and targeted retraining.&#x20;
+Low-confidence extractions are not only flagged for human validation, but also used as feedback signals to refine models dynamically, through retrieval-augmented generation and targeted retraining.
 
 This creates a virtuous cycle where every uncertain case contributes to future accuracy improvements, progressively reducing manual intervention and expanding the scope of trusted predictions.
 
@@ -100,6 +106,6 @@ Lower confidence extractions are ideal candidates for feedback-driven improvemen
 ### Does Automation work with any type of documents or fields?
 
 Automation is fully compatible with all document types and extracted fields supported by Mindee.\
-Every extracted field,  whether it's a piece of text, a number, a date, an amount, or any other data type, benefits from the same ensemble evaluation and confidence scoring logic. This consistent approach ensures a uniform and predictable developer experience, regardless of the document format or use case.
+Every extracted field, whether it's a piece of text, a number, a date, an amount, or any other data type, benefits from the same ensemble evaluation and confidence scoring logic. This consistent approach ensures a uniform and predictable developer experience, regardless of the document format or use case.
 
 Moreover, nested objects and arrays of objects (e.g., `line_items` in invoices or tables in receipts) also receive individual confidence scores per field, enabling fine-grained control over complex data structures.
