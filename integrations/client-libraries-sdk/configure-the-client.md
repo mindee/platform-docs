@@ -11,7 +11,7 @@ icon: wrench
 
 Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
 
-You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and one or several [Models](../../models/models-overview.md) configured.
+You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and one or several [Models](../../extraction-models/models-overview.md) configured.
 
 ## Overview
 
@@ -326,7 +326,7 @@ var inferenceParams = new InferenceParameters(
 
 ### Optional Features Configuration
 
-Enable or disable [optional-features](../../models/optional-features/ "mention").
+Enable or disable [optional-features](../../extraction-models/optional-features/ "mention").
 
 {% hint style="info" %}
 Enabling a feature not in your plan will result in a Payment Required error (HTTP 402).

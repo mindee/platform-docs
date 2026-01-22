@@ -15,7 +15,7 @@ You'll need to have a response object as described in the [process-the-response.
 
 ## Accessing Result Fields
 
-Fields are completely dynamic and depend on your model's [data-schema.md](../../models/data-schema.md "mention").
+Fields are completely dynamic and depend on your model's [data-schema.md](../../extraction-models/data-schema.md "mention").
 
 In the client library, you'll have access to the various fields as a key-value mapping type (Python's `dict`, Java's `HashMap`, etc).
 
@@ -502,7 +502,7 @@ The attributes are always present even when not activated.
 
 The confidence level of the extracted value.
 
-The data are only filled if the [automation-confidence-score.md](../../models/optional-features/automation-confidence-score.md "mention") feature is activated.
+The data are only filled if the [automation-confidence-score.md](../../extraction-models/optional-features/automation-confidence-score.md "mention") feature is activated.
 
 The attribute is always present, in case of Confidence Score not activated, it will always be null.
 
@@ -642,7 +642,7 @@ public void HandleResponse(InferenceResponse response)
 
 A list of the field's locations on the document.
 
-The data are only filled if the [polygons-bounding-boxes.md](../../models/optional-features/polygons-bounding-boxes.md "mention") feature is activated.
+The data are only filled if the [polygons-bounding-boxes.md](../../extraction-models/optional-features/polygons-bounding-boxes.md "mention") feature is activated.
 
 It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
 

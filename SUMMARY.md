@@ -10,19 +10,19 @@
 * [FAQ V1 to V2](getting-started/faq-v1-to-v2.md)
 * [Glossary](getting-started/glossary.md)
 
-## Models
+## Extraction Models
 
-* [Models Overview](models/models-overview.md)
-* [Data Schema](models/data-schema.md)
-* [Optional Features](models/optional-features/README.md)
-  * [Continuous Learning (RAG)](models/optional-features/improving-accuracy.md)
-  * [Confidence Score and Accuracy Boost](models/optional-features/automation-confidence-score.md)
-  * [Polygons (Bounding Boxes)](models/optional-features/polygons-bounding-boxes.md)
-  * [Raw Text (Full OCR)](models/optional-features/raw-text-full-ocr.md)
-* [Model Settings](models/model-settings.md)
-* [Live Test](models/live-test.md)
-* [Data Processing Policies](models/data-processing-policies.md)
-* [Tutorials](models/tutorials.md)
+* [Models Overview](extraction-models/models-overview.md)
+* [Data Schema](extraction-models/data-schema.md)
+* [Optional Features](extraction-models/optional-features/README.md)
+  * [Continuous Learning (RAG)](extraction-models/optional-features/improving-accuracy.md)
+  * [Confidence Score and Accuracy Boost](extraction-models/optional-features/automation-confidence-score.md)
+  * [Polygons (Bounding Boxes)](extraction-models/optional-features/polygons-bounding-boxes.md)
+  * [Raw Text (Full OCR)](extraction-models/optional-features/raw-text-full-ocr.md)
+* [Model Settings](extraction-models/model-settings.md)
+* [Live Test](extraction-models/live-test.md)
+* [Data Processing Policies](extraction-models/data-processing-policies.md)
+* [Tutorials](extraction-models/tutorials.md)
 
 ## Integrations
 

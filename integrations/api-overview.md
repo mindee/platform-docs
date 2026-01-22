@@ -13,9 +13,9 @@ In this section we'll go over the major steps required for a successful integrat
 
 ## Before Starting
 
-You'll need at least one model configured, see the [models-overview.md](../models/models-overview.md "mention") section for more details.
+You'll need at least one model configured, see the [models-overview.md](../extraction-models/models-overview.md "mention") section for more details.
 
-We recommend using the [live-test.md](../models/live-test.md "mention") feature before attempting to integrate the API.
+We recommend using the [live-test.md](../extraction-models/live-test.md "mention") feature before attempting to integrate the API.
 
 You'll also need at least one API key, see the [api-keys.md](api-keys.md "mention") section for more info.
 

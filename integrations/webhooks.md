@@ -121,7 +121,7 @@ We **highly recommend** saving all received payloads to disk or a database befor
 Yes, under some conditions.
 
 If your server returns an error when we POST the webhook, the inference will be available on the server for some time.\
-The exact time the data are stored depends on the model's [Storage Settings](../models/data-processing-policies.md#storage-policy), but the **minimum** time stored is 1 hour.
+The exact time the data are stored depends on the model's [Storage Settings](../extraction-models/data-processing-policies.md#storage-policy), but the **minimum** time stored is 1 hour.
 
 You can make a GET request on the job ID to retrieve the data for as long as the inference is on the server. The job ID is always returned when a document is sent successfully, it's important to store this ID when using webhooks for this type of scenario.
 

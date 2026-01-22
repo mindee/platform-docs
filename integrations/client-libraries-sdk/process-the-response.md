@@ -357,7 +357,7 @@ For handling the extracted fields, see the [process-result-fields.md](process-re
 
 Access the full text content from the document, extracted as strings.
 
-The object will always be null if the [raw-text-full-ocr.md](../../models/optional-features/raw-text-full-ocr.md "mention") feature was not activated.
+The object will always be null if the [raw-text-full-ocr.md](../../extraction-models/optional-features/raw-text-full-ocr.md "mention") feature was not activated.
 
 Using the `InferenceResponse` deserialized object from either the polling response or a webhook payload.
 
@@ -476,7 +476,7 @@ public void HandleResponse(InferenceResponse response)
 
 Access information related to the RAG operation. This allows you to add various business logic depending on whether a document was matched (retrieved) during the RAG operation.
 
-The object will always be null if the [improving-accuracy.md](../../models/optional-features/improving-accuracy.md "mention") feature was not activated.
+The object will always be null if the [improving-accuracy.md](../../extraction-models/optional-features/improving-accuracy.md "mention") feature was not activated.
 
 Using the `InferenceResponse` deserialized object from either the polling response or a webhook payload.
 
