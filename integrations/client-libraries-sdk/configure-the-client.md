@@ -513,6 +513,16 @@ In the rare cases when Text Context and/or RAG is not enough.
 
 Directly modify the Data Schema: add, remove, or change fields.
 
+#### Code Sample
+
+The Data Schema can be passed as a JSON string or by instantiating the appropriate classes.
+
+If passed as a JSON string, it will be validated in the client before being sent to the server.
+
+{% hint style="info" %}
+We are in the process of making it easier to access a model's Data Schema JSON on the Mindee platform, and will update the documentation with better instructions soon.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Python" %}
 Only the `model_id` is required.
@@ -580,10 +590,10 @@ inference_params = Mindee::Input::InferenceParameters.new(
     'MY_MODEL_ID',
     
     # Text Context
-    text_context="this is an invoice.",
+    text_context: "this is an invoice.",
     
     # Data Schema
-    data_schema="{ ... JSON DATA ... }",
+    data_schema: "{ ... JSON DATA ... }",
     
     # ... any other options ...
 )
