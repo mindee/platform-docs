@@ -495,6 +495,142 @@ var inferenceParams = new InferenceParameters(
 {% endtab %}
 {% endtabs %}
 
+### Dynamic Model Options
+
+These options allow changing how the model performs an inference on a per-call basis.
+
+As such they can only be used via API.
+
+#### Text Context
+
+Give additional guidelines to the model to help it better process a specific document.
+
+This is a free-form text format.
+
+#### Data Schema
+
+In the rare cases when Text Context and/or RAG is not enough.
+
+Directly modify the Data Schema: add, remove, or change fields.
+
+{% tabs %}
+{% tab title="Python" %}
+Only the `model_id` is required.
+
+```python
+inference_params = InferenceParameters(
+    # ID of the model, required.
+    model_id="MY_MODEL_ID",
+    
+    # Text Context
+    text_context="this is an invoice.",
+    
+    # Data Schema
+    data_schema="{ ... JSON DATA ... }",
+    
+    # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+Only the `modelId` is required.
+
+```typescript
+const inferenceParams = {
+  // ID of the model, required.
+  modelId: "MY_MODEL_ID",
+  
+  // Text Context
+  textContext: "this is an invoice.",
+    
+  // Data Schema
+  dataSchema: "{ ... JSON DATA ... }",
+  
+  // ... any other options ...
+};
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+Only the `modelId` is required.
+
+```php
+$inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    "MY_MODEL_ID",
+
+    // Text Context
+    textContext: "this is an invoice.",
+
+    // Data Schema
+    dataSchema: "{ ... JSON DATA ... }",
+
+    // ... any other options ...
+);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+Only the `model_id` is required.
+
+```ruby
+inference_params = Mindee::Input::InferenceParameters.new(
+    # ID of the model, required.
+    'MY_MODEL_ID',
+    
+    # Text Context
+    text_context="this is an invoice.",
+    
+    # Data Schema
+    data_schema="{ ... JSON DATA ... }",
+    
+    # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+Only the `modelId` is required.
+
+```java
+InferenceParameters params = InferenceParameters
+    // ID of the model, required.
+    .builder("MY_MODEL_ID")
+    
+    // Text Context
+    .textContext("this is an invoice.")
+    
+    // Data Schema
+    .dataSchema("{ ... JSON DATA ... }")
+    
+    // ... any other options ...
+
+    // complete the builder
+    .build();
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+Only the `modelId` is required.
+
+```csharp
+var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID"
+    
+    // Text Context
+    , textContext: "this is an invoice."
+    
+    // Data Schema
+    , dataSchema: "{ ... JSON DATA ... }"
+    
+    // ... any other options ...
+);
+```
+{% endtab %}
+{% endtabs %}
+
 ### Polling Configuration
 
 The client library will POST the request for you, and then automatically poll the API.
