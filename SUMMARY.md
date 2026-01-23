@@ -72,6 +72,7 @@
   * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
   * [Bank Statement](use-cases/extraction-models/bank-statement.md)
   * [European Vehicle Registration](use-cases/extraction-models/european-vehicle-registration.md)
+  * [Nutrition Facts](use-cases/extraction-models/bill-of-lading-1.md)
 * [Utilities](use-cases/utilities/README.md)
   * [Split](use-cases/utilities/split.md)
   * [Crop](use-cases/utilities/crop.md)
