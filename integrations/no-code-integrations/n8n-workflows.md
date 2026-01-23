@@ -52,7 +52,7 @@ It should look something like this when done:
 
 Next, make sure the following n8n nodes are all using the Credential just created:
 
-* "Mindee V2 GET Job"&#x20;
+* "Mindee V2 GET Job"
 * "Mindee V2 GET Inference"
 
 It should be done automatically, but please open each node and make sure!
@@ -87,3 +87,7 @@ Some examples:
 
 * use an IMAP trigger to process email attachments
 * use a FTP trigger to process files on a FTP server
+
+#### Something not working as expected?
+
+Check the [problem-database.md](../problem-database.md "mention") section.
