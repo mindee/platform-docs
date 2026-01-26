@@ -29,11 +29,13 @@ They are the fastest and easiest way to call our APIs, and allow our support tea
 
 For a quick introduction and copy-paste ready code, look in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section.
 
+{% hint style="success" %}
 #### Ask for Code Samples
 
-You can also ask for specific code samples from the documentation AI.
+You can ask for specific code samples from the documentation AI.
 
-Use the search bar at the top of the page.
+**Use the search bar at the top of the page.**
+{% endhint %}
 
 ### No-Code or Low-Code
 
