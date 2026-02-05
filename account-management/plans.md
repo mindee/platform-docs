@@ -25,22 +25,22 @@ More information in the [billing.md](billing.md "mention") section.
 
 ## Feature Comparison
 
-| Feature                                                |        Starter       |          Pro         |       Business       |      Enterprise      |
-| ------------------------------------------------------ | :------------------: | :------------------: | :------------------: | :------------------: |
-| Number of pages included                               |     6,000 / year     |     30,000 / year    |    120,000 / year    |    +250,000 / year   |
-| RAG[^1]                                                |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
-| [AI Agent for custom model](#user-content-fn-2)[^2]    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Community support](#user-content-fn-3)[^3]            | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Raw Text](#user-content-fn-4)[^4]                     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Chat support](#user-content-fn-5)[^5]                 |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Members[^6]                                            |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Data processing localization](#user-content-fn-7)[^7] |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Polygons[^8]                                           |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Confidence score](#user-content-fn-9)[^9]             |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| Boosted accuracy and precision                         |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| Custom pricing                                         |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
-| Dedicated account manager                              |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
-| Premium technical support                              |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
+| Feature                                                    |        Starter       |          Pro         |       Business       |      Enterprise      |
+| ---------------------------------------------------------- | :------------------: | :------------------: | :------------------: | :------------------: |
+| Number of pages included                                   |     6,000 / year     |     30,000 / year    |    120,000 / year    |    +250,000 / year   |
+| RAG[^1]                                                    |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
+| [AI Agent for custom model](#user-content-fn-2)[^2]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Community support](#user-content-fn-3)[^3]                | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Raw Text](#user-content-fn-4)[^4]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Chat support](#user-content-fn-5)[^5]                     |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Members[^6]                                                |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Data processing localization](#user-content-fn-7)[^7]     |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Polygons[^8]                                               |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Confidence score](#user-content-fn-9)[^9]                 |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| [Boosted accuracy and precision](#user-content-fn-10)[^10] |          :x:         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| Custom pricing                                             |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
+| Dedicated account manager                                  |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
+| Premium technical support                                  |          :x:         |          :x:         |          :x:         | :white\_check\_mark: |
 
 ## Plan Details
 
@@ -71,6 +71,9 @@ More information in the [billing.md](billing.md "mention") section.
 
 [^8]: Use advanced polygon-based extraction to capture data from complex layouts
 
-[^9]: Leverage confidence score to selectively automate document processing.
+[^9]: Leverage confidence scores to selectively automate document processing. Also boosts accuracy.<br>
 
     Learn more on our [Automation documentation](../extraction-models/optional-features/automation-confidence-score.md)
+
+[^10]: Uses multiple models to boost accuracy. Also adds confidence scores.\
+    Learn more on our Automation documentation
