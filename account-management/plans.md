@@ -28,10 +28,10 @@ More information in the [billing.md](billing.md "mention") section.
 | Feature                                                    |        Starter       |          Pro         |       Business       |      Enterprise      |
 | ---------------------------------------------------------- | :------------------: | :------------------: | :------------------: | :------------------: |
 | Number of pages included                                   |     6,000 / year     |     30,000 / year    |    120,000 / year    |    +250,000 / year   |
-| RAG[^1]                                                    |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
-| [AI Agent for custom model](#user-content-fn-2)[^2]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Community support](#user-content-fn-3)[^3]                | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Raw Text](#user-content-fn-4)[^4]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [AI Agent for custom model](#user-content-fn-1)[^1]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Community support](#user-content-fn-2)[^2]                | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Raw Text](#user-content-fn-3)[^3]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| RAG[^4]                                                    |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
 | [Chat support](#user-content-fn-5)[^5]                     |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | Members[^6]                                                |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Data processing localization](#user-content-fn-7)[^7]     |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
@@ -53,15 +53,15 @@ More information in the [billing.md](billing.md "mention") section.
 * You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
 * Overage charges are calculated automatically based on your plan’s rate.
 
-[^1]: Enhance your AI models with custom document knowledge bases.
+[^1]: Build your own document parsers by describing the fields you need
+
+[^2]: Access to our [Feedback](https://feedback.mindee.com/) page
+
+[^3]: Extract the [full text content](../extraction-models/optional-features/raw-text-full-ocr.md) of your documents.
+
+[^4]: Enhance your AI models with custom document knowledge bases.
 
     Learn more on our [RAG documentation](https://docs.mindee.com/models/improving-accuracy)
-
-[^2]: Build your own document parsers by describing the fields you need
-
-[^3]: Access to our [Feedback](https://feedback.mindee.com/) page
-
-[^4]: Extract the [full text content](../extraction-models/optional-features/raw-text-full-ocr.md) of your documents.
 
 [^5]: Get support from our team via Intercom and priority support if you're Business or above
 
