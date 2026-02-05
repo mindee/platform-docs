@@ -61,7 +61,7 @@ More information in the [billing.md](billing.md "mention") section.
 
 [^3]: Access to our [Feedback](https://feedback.mindee.com/) page
 
-[^4]: Extract the full text content of your documents.
+[^4]: Extract the [full text content](../extraction-models/optional-features/raw-text-full-ocr.md) of your documents.
 
 [^5]: Get support from our team via Intercom and priority support if you're Business or above
 
@@ -69,11 +69,8 @@ More information in the [billing.md](billing.md "mention") section.
 
 [^7]: Choose the region where your data is processed: Europe, United States, or Global
 
-[^8]: Use advanced polygon-based extraction to capture data from complex layouts
+[^8]: Use advanced [polygon](../extraction-models/optional-features/polygons-bounding-boxes.md) extraction to capture data from complex layouts.
 
-[^9]: Leverage confidence scores to selectively automate document processing. Also boosts accuracy.<br>
+[^9]: Leverage [confidence scores](../extraction-models/optional-features/automation-confidence-score.md) to selectively automate document processing. Also boosts accuracy.
 
-    Learn more on our [Automation documentation](../extraction-models/optional-features/automation-confidence-score.md)
-
-[^10]: Uses multiple models to boost accuracy. Also adds confidence scores.\
-    Learn more on our Automation documentation
+[^10]: Uses multiple models to [boost accuracy](../extraction-models/optional-features/automation-confidence-score.md). Also adds confidence scores.
