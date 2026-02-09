@@ -513,20 +513,21 @@ In the rare cases when Text Context and/or RAG is not enough.
 
 Directly modify the Data Schema: add, remove, or change fields.
 
-#### Code Sample
-
-The Data Schema can be passed as a JSON string or by instantiating the appropriate classes.
-
-If passed as a JSON string, it will be validated in the client before being sent to the server.
-
 To download the JSON string appropriate for your model:
 
 1. Go to your model's page
 2. On the left-hand menu, click on "General Settings"
 3. Scroll down to the "Actions" section
-4. Click on the "Download Data Schema" button:
+4.  Click on the "Download Data Schema" button:\
+    <br>
 
-![](../../.gitbook/assets/json-schema-download.png)
+    <figure><img src="../../.gitbook/assets/json-schema-download.png" alt="" width="530"><figcaption></figcaption></figure>
+
+#### Code Sample
+
+The Data Schema can be passed as a JSON string or by instantiating the appropriate classes.
+
+If passed as a JSON string, it will be validated in the client before being sent to the server.
 
 {% tabs %}
 {% tab title="Python" %}
