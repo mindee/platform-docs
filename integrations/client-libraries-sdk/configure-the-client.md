@@ -519,9 +519,14 @@ The Data Schema can be passed as a JSON string or by instantiating the appropria
 
 If passed as a JSON string, it will be validated in the client before being sent to the server.
 
-{% hint style="info" %}
-We are in the process of making it easier to access a model's Data Schema JSON on the Mindee platform, and will update the documentation with better instructions soon.
-{% endhint %}
+To download the JSON string appropriate for your model:
+
+1. Go to your model's page
+2. On the left-hand menu, click on "General Settings"
+3. Scroll down to the "Actions" section
+4. Click on the "Download Data Schema" button:
+
+![](../../.gitbook/assets/json-schema-download.png)
 
 {% tabs %}
 {% tab title="Python" %}
