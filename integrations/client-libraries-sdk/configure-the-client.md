@@ -520,7 +520,7 @@ To download the JSON string appropriate for your model:
 3. Scroll down to the "Actions" section
 4.  Click on the "Download Data Schema" button:<br>
 
-    <figure><img src="../../.gitbook/assets/json-schema-download.png" alt="" width="530"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/json-schema-download.png" alt="The &#x22;Download Data Schema&#x22; button" width="530"><figcaption></figcaption></figure>
 
 #### Code Sample
 
