@@ -518,8 +518,7 @@ To download the JSON string appropriate for your model:
 1. Go to your model's page
 2. On the left-hand menu, click on "General Settings"
 3. Scroll down to the "Actions" section
-4.  Click on the "Download Data Schema" button:\
-    <br>
+4.  Click on the "Download Data Schema" button:<br>
 
     <figure><img src="../../.gitbook/assets/json-schema-download.png" alt="" width="530"><figcaption></figcaption></figure>
 
