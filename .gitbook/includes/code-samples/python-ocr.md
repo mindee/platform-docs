@@ -1,5 +1,5 @@
 ---
-title: sample-code-python
+title: sample-code-python-ocr
 ---
 
 Requires Python ≥ 3.9. Python ≥ 3.10 is highly recommended.\
