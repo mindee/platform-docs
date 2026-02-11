@@ -32,80 +32,7 @@ You'll need a Local Input Source as described in the [load-and-adjust-a-file.md]
 
 ## Use an URL
 
-You'll need a Remote Input Source as described below.
-
-### Requirements
-
-{% include "../../.gitbook/includes/file-url-technical-limitation.md" %}
-
-### Initialize the URL
-
-{% tabs %}
-{% tab title="Python" %}
-Use the `URLInputSource` class.
-
-```python
-from mindee import UrlInputSource
-
-input_source = UrlInputSource(
-    "https://example.com/file.ext"
-)
-```
-{% endtab %}
-
-{% tab title="Node.js" %}
-Use the `URLInput` class.
-
-```typescript
-const inputSource = new mindee.UrlInput({
-  url: "https://example.com/file.ext"
-});
-```
-{% endtab %}
-
-{% tab title="PHP" %}
-Use the `URLInputSource` class.
-
-```php
-use Mindee\Input\URLInputSource;
-
-$inputSource = new URLInputSource(
-  url: "https://example.com/file.ext"
-);
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-```ruby
-require 'mindee'
-
-input_source = Mindee::Input::Source::URLInputSource.new(
-  'https://example.com/file.ext'
-)
-```
-{% endtab %}
-
-{% tab title="Java" %}
-Use the `URLInputSource` class.
-
-```java
-import com.mindee.input.URLInputSource;
-
-URLInputSource inputSource = URLInputSource
-    .builder("https://example.com/file.ext")
-    .build();
-```
-{% endtab %}
-
-{% tab title=".NET" %}
-Use the `URLInputSource` class.
-
-```csharp
-var inputSource = new UrlInputSource(
-    "https://example.com/file.ext");
-```
-{% endtab %}
-{% endtabs %}
+You'll need a URL Input Source as described in the [load-an-url.md](load-an-url.md "mention") section.
 
 ## Send for Processing
 
@@ -252,7 +179,7 @@ print(response.job.alias)
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
-You'll get the response via polling and webhooks will be used as well.&#x20;
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="Node.js" %}
@@ -281,8 +208,8 @@ response.then((resp) => {
 **Note:** You can use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `enqueueAndGetInference`  and handle the promise.\
-You'll get the response via polling and webhooks will be used as well.&#x20;
+Then, call `enqueueAndGetInference` and handle the promise.\
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -290,7 +217,7 @@ The `$mindeeClient` as created in [#initialize-the-mindee-client](configure-the-
 
 The `$inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
 
-Use the  `enqueueInference` method:
+Use the `enqueueInference` method:
 
 ```php
 $response = $mindeeClient->enqueueInference(
@@ -335,7 +262,7 @@ puts response.job.alias
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
-You'll get the response via polling and webhooks will be used as well.&#x20;
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="Java" %}
@@ -360,8 +287,8 @@ System.out.println(response.getJob().getAlias());
 **Note:** You can use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `enqueueAndGetInference`  and handle the promise.\
-You'll get the response via polling and webhooks will be used as well.&#x20;
+Then, call `enqueueAndGetInference` and handle the promise.\
+You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title=".NET" %}
@@ -383,8 +310,6 @@ System.Console.WriteLine(response.Job.Id);
 System.Console.WriteLine(response.Job.Alias);
 ```
 
-
-
 **Note:** You can also use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
@@ -398,4 +323,3 @@ You'll get the response via polling and webhooks will be used as well.
 Now that your file or URL has been handled by the Mindee servers, you'll want to process the results and use them in your application.
 
 Head on over to the [process-the-response.md](process-the-response.md "mention") section for details on the next step.
-
