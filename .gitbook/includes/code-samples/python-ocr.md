@@ -40,7 +40,7 @@ response = mindee_client.enqueue_and_get_result(
 # Print a brief summary of the parsed data
 print(response.inference)
 
-# Access the ocr result
+# Access the OCR result
 pages: list = response.inference.result.pages
 ```
 {% endcode %}
