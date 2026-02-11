@@ -121,11 +121,13 @@ You can send either using [polling](../polling-for-results.md) or [webhooks](../
 {% tab title="Python" %}
 The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueue_and_get_inference` method.
+Use the `enqueue_and_get_result` method.
 
 ```python
-response = mindee_client.enqueue_and_get_inference(
-    input_source, inference_params
+response = mindee_client.enqueue_and_get_result(
+    InferenceResponse,
+    input_source,
+    params,
 )
 
 # To easily test which data were extracted,

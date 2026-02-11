@@ -95,8 +95,10 @@ with input_path.open("rb") as fh:
     input_source = FileInput(fh)
     # IMPORTANT:
     # Continue all operations inside the 'with' statement.
-    mindee_client.enqueue_and_get_inference(
-        input_source, params
+    response = mindee_client.enqueue_and_get_result(
+        InferenceResponse,
+        input_source,
+        params,
     )
 ```
 {% endtab %}

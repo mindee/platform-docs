@@ -32,7 +32,12 @@ The client instance is thread-safe where applicable.
 First import the needed classes:
 
 ```python
-from mindee import ClientV2, InferenceParameters
+from mindee import (
+    ClientV2,
+    InferenceParameters,
+    InferenceResponse,
+    PathInput,  # for loading files from disk
+)
 ```
 
 For the API key, you can pass it directly to the client.\
