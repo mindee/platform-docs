@@ -3,7 +3,7 @@ title: sample-code-python
 ---
 
 Requires Python ≥ 3.9. Python ≥ 3.10 is highly recommended.\
-Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.32.1** or greater.
+Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.33.0** or greater.
 
 {% code lineNumbers="true" %}
 ```python
@@ -40,8 +40,8 @@ response = mindee_client.enqueue_and_get_result(
 # Print a brief summary of the parsed data
 print(response.inference)
 
-# Access the result
-result: dict = response.inference.result
+# Access the split result
+splits: list = response.inference.result.splits
 ```
 {% endcode %}
 
