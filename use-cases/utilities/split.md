@@ -6,9 +6,7 @@ icon: file-lines
 
 This utility is designed to allow you automatically breaking a multi-page source file into separate documents and associate a class to each one.&#x20;
 
-
-
-## How to set it up ?&#x20;
+## Setup
 
 
 
@@ -18,7 +16,9 @@ This utility is designed to allow you automatically breaking a multi-page source
    \
    &#xNAN;_&#x45;xample: If the files you are receiving may contain invoices, receipts, and driving licenses you may select the three classes "INVOICE", "RECEIPT", "DRIVING LICENSE"._&#x20;
 
-_Don't forget to add the class "Other" if you need the model to identify documents that are not one of the precedent document types._&#x20;
+{% hint style="info" %}
+Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -31,11 +31,4 @@ Your utility is now available in your **Models** tab:
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-\
 <br>

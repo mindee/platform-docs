@@ -11,9 +11,7 @@ It is particularly useful when :&#x20;
 * dealing with documents that may contain several documents (receipts for instance) within each page
 * searching to remove the background from a document
 
-
-
-## How to set it up ?&#x20;
+## Setup
 
 
 
@@ -35,8 +33,3 @@ _Don't forget to add the class "Other" if you need the model to identify documen
 Your utility is now available in your **Models** tab:
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
-
-
-\
-<br>
