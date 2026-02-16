@@ -6,7 +6,7 @@ icon: bolt
 
 ## Sign Up!
 
-You'll need an account ;-)
+<a href="https://app.mindee.com/signup" class="button primary" data-icon="user-plus">Sign Up to Mindee</a>
 
 You can connect using your Google or Github account, or create an account using good old-fashioned email and password.
 
