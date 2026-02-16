@@ -27,7 +27,7 @@ Here are basic code examples, these are self-contained and can be run as-is:
 {% endtab %}
 
 {% tab title="PHP" %}
-{% include "../../.gitbook/includes/code-samples/php-extraction.md" %}
+{% include "../../.gitbook/includes/code-samples/php-extraction (1).md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}

@@ -34,7 +34,7 @@ For a quick introduction and copy-paste ready code, look in the [quick-start.md]
 
 You can ask for specific code samples from the documentation AI.
 
-**Use the search bar at the top of the page.**
+**Use the search bar or the "Ask" button at the top of the page.**
 {% endhint %}
 
 ### No-Code or Low-Code
