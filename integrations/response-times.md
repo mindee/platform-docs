@@ -42,7 +42,7 @@ Processing options which impact response time:
 
 Common combinations of document types and models.
 
-### Fastest
+### Faster
 
 Single page documents with few fields.
 
