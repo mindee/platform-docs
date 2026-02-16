@@ -19,27 +19,27 @@ Here are basic code examples, these are self-contained and can be run as-is:
 
 {% tabs %}
 {% tab title="Python" %}
-{% include "../../.gitbook/includes/code-samples/python.md" %}
+{% include "../../.gitbook/includes/code-samples/python-extraction.md" %}
 {% endtab %}
 
 {% tab title="Node.js" %}
-{% include "../../.gitbook/includes/code-samples/javascript.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-extraction.md" %}
 {% endtab %}
 
 {% tab title="PHP" %}
-{% include "../../.gitbook/includes/code-samples/php.md" %}
+{% include "../../.gitbook/includes/code-samples/php-extraction.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
-{% include "../../.gitbook/includes/code-samples/ruby.md" %}
+{% include "../../.gitbook/includes/code-samples/ruby-extraction.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
-{% include "../../.gitbook/includes/code-samples/java.md" %}
+{% include "../../.gitbook/includes/code-samples/java-extraction.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/dotnet.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-extraction.md" %}
 {% endtab %}
 {% endtabs %}
 
