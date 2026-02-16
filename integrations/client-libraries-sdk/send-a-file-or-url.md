@@ -26,27 +26,227 @@ A local file can be manipulated and adjusted before sending, as described in the
 The contents of a URL **cannot** be manipulated locally.\
 You'll need to download it to the local machine if you wish to adjust the file in any way before sending.
 
-## Use a File
-
-You'll need a Local Input Source as described in the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") section.
-
-## Use an URL
-
-You'll need a URL Input Source as described in the [load-an-url.md](load-an-url.md "mention") section.
-
-## Send for Processing
+## Load for Sending
 
 There's no difference between sending a file or an URL, both are considered valid Input Sources.
 
-You can send either using [polling](../polling-for-results.md) or [webhooks](../webhooks.md).
+### Use a File
 
-### Send with Polling
+You'll need a Local Input Source as described in the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") section.
+
+### Use an URL
+
+You'll need a URL Input Source as described in the [load-an-url.md](load-an-url.md "mention") section.
+
+## Send with Polling
+
+Send a document using [polling](../polling-for-results.md), this is the simplest way to get started.
+
+The client library will POST the request for you, and then automatically poll the API.
+
+### Polling Configuration
+
+{% tabs %}
+{% tab title="Python" %}
+When polling you really only need to set the `model_id` .
+
+```python
+inference_params = InferenceParameters(model_id="MY_MODEL_ID")
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```python
+from mindee import PollingOptions
+
+inference_params = InferenceParameters(
+    # ID of the model, required.
+    model_id="MY_MODEL_ID",
+    
+    # Set only if having timeout issues.
+    polling_options=PollingOptions(
+        # Initial delay before the first polling attempt.
+        initial_delay_sec=3,
+        # Delay between each polling attempt.
+        delay_sec=1.5,
+        # Total number of polling attempts.
+        max_retries=80,
+    ),
+
+    # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+When polling you really only need to set the `modelId` .
+
+```typescript
+const inferenceParams = {modelId: "MY_MODEL_ID"};
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```typescript
+const inferenceParams = {
+  // ID of the model, required.
+  modelId: "MY_MODEL_ID",
+  
+  // Set only if having timeout issues.
+  pollingOptions: {
+    // Initial delay before the first polling attempt.
+    initialDelaySec: 3.0,
+    // Delay between each polling attempt.
+    delaySec: 1.5,
+    // Total number of polling attempts.
+    maxRetries: 80
+  }
+
+  // ... any other options ...
+}
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+When polling you really only need to set the `modelId` .
+
+```php
+$inferenceParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```php
+use Mindee\Input\PollingOptions;
+
+$inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID",
+    
+    // Set only if having timeout issues.
+    pollingOptions: new PollingOptions(
+        // Initial delay before the first polling attempt.
+        initialDelaySec: 3.0,
+        // Delay between each polling attempt.
+        delaySec: 1.5,
+        // Total number of polling attempts.
+        maxRetries: 80,
+    ),
+
+    // ... any other options ...
+);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+When polling you really only need to set the `model_id` .
+
+```ruby
+inference_params = Mindee::Input::InferenceParameters.new("MY_MODEL_ID")
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```ruby
+require 'mindee'
+
+inference_params = Mindee::Input::InferenceParameters.new(
+  # ID of the model, required.
+  'MY_MODEL_ID',
+
+  # Set only if having timeout issues.
+  polling_options: Mindee::Input::PollingOptions.new(
+    # Initial delay before the first polling attempt.
+    initial_delay_sec: 3,
+    # Delay between each polling attempt.
+    delay_sec: 1.5,
+    # Total number of polling attempts.
+    max_retries: 80,
+  ),
+
+  # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+When polling you really only need to set the `modelId` .
+
+```java
+InferenceParameters params = InferenceParameters
+        .builder("MY_MODEL_ID")
+        .build();
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```java
+InferenceParameters params = InferenceParameters
+    // ID of the model, required.
+    .builder("MY_MODEL_ID")
+        
+    // Set only if having timeout issues.
+    .pollingOptions(
+        AsyncPollingOptions.builder()
+            // Initial delay before the first polling attempt.
+            .initialDelaySec(3.0)
+            // Delay between each polling attempt.
+            .intervalSec(1.5)
+            // Total number of polling attempts.
+            .maxRetries(80)
+            // complete the polling builder
+            .build()
+        )
+
+    // ... any other options ...
+
+    .build();
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+When polling you really only need to set the `modelId` .
+
+```csharp
+var inferenceParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+```
+
+You can also set the various polling parameters.\
+However, **we do not recommend** setting this option unless you are encountering timeout problems.
+
+```csharp
+var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID"
+    
+    // Set only if having timeout issues.
+    , pollingOptions: new AsyncPollingOptions(
+        // Initial delay before the first polling attempt.
+        initialDelaySec: 3.0,
+        // Delay between each polling attempt.
+        intervalSec: 1.5,
+        // Total number of polling attempts.
+        maxRetries: 80
+    )
+
+    // ... any other options ...
+);
+```
+{% endtab %}
+{% endtabs %}
+
+### Polling Method Call
 
 {% include "../../.gitbook/includes/input-source-requirements.md" %}
 
 {% tabs %}
 {% tab title="Python" %}
-The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueue_and_get_result` method.
 
@@ -64,7 +264,7 @@ print(response.inference)
 {% endtab %}
 
 {% tab title="Node.js" %}
-The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueueAndGetInference` method:
 
@@ -84,7 +284,7 @@ response.then((resp) => {
 {% endtab %}
 
 {% tab title="PHP" %}
-The `$mindeeClient` and `$inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `$mindeeClient` , created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueueAndGetInference` method:
 
@@ -101,7 +301,7 @@ echo strval($response->inference);
 {% endtab %}
 
 {% tab title="Ruby" %}
-The `mindee_client` and `inference_params` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueue_and_get_inference` method.
 
@@ -118,7 +318,7 @@ puts response.inference
 {% endtab %}
 
 {% tab title="Java" %}
-The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `enqueueAndGetInference` method:
 
@@ -134,7 +334,7 @@ System.out.println(response.getInference().toString());
 {% endtab %}
 
 {% tab title=".NET" %}
-The `mindeeClient` and `inferenceParams` are created in [configure-the-client.md](configure-the-client.md "mention").
+The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
 Use the `EnqueueAndGetInferenceAsync` method:
 
@@ -149,17 +349,115 @@ System.Console.WriteLine(response.Inference.ToString());
 {% endtab %}
 {% endtabs %}
 
-### Send with Webhook
+## Send with Webhook
+
+Send a document using [webhooks](../webhooks.md), this is recommended for production use, in particular for high volume.
 
 {% include "../../.gitbook/includes/input-source-requirements.md" %}
 
-Make sure your webhook is configured as detailed here: [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+### Webhook Configuration
+
+The client library will POST the request to your Web server, as configured by your webhook endpoint.
+
+For more information on webhooks, take a look at the [webhooks.md](../webhooks.md "mention") page.
+
+When using a webhook, you'll need to set the model ID and the webhook ID(s) to use.
 
 {% tabs %}
 {% tab title="Python" %}
-The `mindee_client` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+```python
+inference_params = InferenceParameters(
+    # ID of the model, required.
+    model_id="MY_MODEL_ID",
+    
+    # Add any number of webhook IDs here.
+    webhook_ids=["ENDPOINT_1_UUID"],
+    
+    # ... any other options ...
+)
+```
+{% endtab %}
 
-The `inference_params` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+{% tab title="Node.js" %}
+```typescript
+const inferenceParams = {
+  // ID of the model, required.
+  modelId: "MY_MODEL_ID",
+  
+  // Add any number of webhook IDs here.
+  webhookIds: ["ENDPOINT_1_UUID"],
+
+  // ... any other options ...
+};
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+$inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID",
+    
+    // Add any number of webhook IDs here.
+    // Note: PHP 8.1 only allows a single ID to be passed.
+    webhooksIds: array("ENDPOINT_1_UUID"),
+
+    // ... any other options ...
+);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+inference_params = Mindee::Input::InferenceParameters.new(
+  # ID of the model, required.
+  'MY_MODEL_ID',
+
+  # Add any number of webhook IDs here.
+  webhook_ids: ["ENDPOINT_1_UUID"],
+
+  # ... any other options ...
+)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+InferenceParameters params = InferenceParameters
+    // ID of the model, required.
+    .builder("MY_MODEL_ID")
+    
+    // Add any number of webhook IDs here.
+    .webhookIds(new String[]{"ENDPOINT_1_UUID"})
+    
+    // ... any other options ...
+    
+    .build();
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+var inferenceParams = new InferenceParameters(
+    // ID of the model, required.
+    modelId: "MY_MODEL_ID"
+    
+    // Add any number of webhook IDs here.
+    , webhookIds: new List<string>{ "ENDPOINT_1_UUID" }
+    
+    // ... any other options ...
+);
+```
+{% endtab %}
+{% endtabs %}
+
+### Webhook Method Call
+
+You can specify any number of webhook endpoint IDs, each will be sent the payload.
+
+{% tabs %}
+{% tab title="Python" %}
+The `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueue_inference` method:
 
@@ -183,9 +481,7 @@ You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="Node.js" %}
-The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
-
-The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueueInference` method:
 
@@ -213,9 +509,7 @@ You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="PHP" %}
-The `$mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
-
-The `$inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+The `$mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueueInference` method:
 
@@ -240,9 +534,7 @@ You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="Ruby" %}
-The `mindee_client` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
-
-The `inference_params` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+The `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueue_inference` method:
 
@@ -266,9 +558,7 @@ You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title="Java" %}
-The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
-
-The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueueInference` method:
 
@@ -292,9 +582,7 @@ You'll get the response via polling and webhooks will be used as well.
 {% endtab %}
 
 {% tab title=".NET" %}
-The `mindeeClient` as created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
-
-The `inferenceParams` as created in [#webhook-configuration](configure-the-client.md#webhook-configuration "mention").
+The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use `EnqueueInferenceAsync` method:
 
