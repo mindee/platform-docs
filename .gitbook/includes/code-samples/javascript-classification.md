@@ -3,7 +3,7 @@ title: sample-code-javascript-classification
 ---
 
 Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0-alpha2** or greater.
+Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0-rc1** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript

@@ -1,5 +1,5 @@
 ---
-title: sample-code-php
+title: sample-code-php-extraction
 ---
 
 Requires PHP ≥ 8.1\

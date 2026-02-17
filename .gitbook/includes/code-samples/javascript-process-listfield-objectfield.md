@@ -12,7 +12,7 @@ handleResponse(response) {
 
   // Loop over the list of Object fields
   for (const itemField of objectItems) {
-    const subFields = itemField.simpleFields;
+    const simpleSubFields = itemField.simpleFields;
 
     // grab a single sub-field
     const subField1 = subFields.get("subfield_1");
@@ -21,12 +21,15 @@ handleResponse(response) {
     // stringValue, doubleValue, booleanValue
     const subFieldValue = subField1.stringValue;
 
-    // loop over sub-fields
-    subFields.forEach((subField, fieldName) => {
+    // loop over simple sub-fields
+    simpleSubFields.forEach((subField, fieldName) => {
       // Choose the appropriate accessor:
       // stringValue, doubleValue, booleanValue
       const fieldValue = subField.stringValue;
     });
+
+    // Object fields can also have lists:
+    const listSubFields = itemField.listFields;
   }
 }
 ```
