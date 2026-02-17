@@ -25,7 +25,7 @@ It’s the perfect place to debug, validate, and refine your model’s behavior 
 
 ## Accessing the Live Test Page
 
-The Live Test is available for all Mindee models.
+The Live Test is available for all Mindee models: extraction, crop, split, classification, ....
 
 From your home page on the Mindee platform, simply click on any model.
 

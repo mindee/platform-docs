@@ -13,7 +13,7 @@ Models allow you to automate the process of turning unstructured document images
 
 On the Models page, you can view, search, and manage all your document extraction models. Each model is represented as a card showing its name, a preview (if available), and a summary of the main fields it extracts. This makes it easy to organize, access, and deploy models for your document processing tasks.
 
-Each Model contains a certain set of tools/features :&#x20;
+Each Model contains a certain set of tools/features :
 
 * a dedicated Data Schema: a model is also defined by a Data Schema, that sets the list of fields the API should extract for a given type of documents.
 * a dedicated Continuous Learning (RAG) system: it allows the user to give additional instruction on some examples with unexpected behavior to durably improve the extraction performance of the model.
@@ -29,11 +29,11 @@ Once a first good-enough data schema is proposed, we recommend to create the Mod
 
 ## Copying / Creating from Existing
 
-If the document you're trying to automate is a pretty standard document, it is likely to be already managed by a Catalog API such as Invoice, Receipt, Financial Document, ID Card... \
+If the document you're trying to automate is a pretty standard document, it is likely to be already managed by a Catalog API such as Invoice, Receipt, Financial Document, ID Card...\
 \
 Those APIs are pre-existing Data Schemas you can copy to immediately benefit from a well setup basis. You'll be able to modify it, but it can help win a bit of time.
 
-## Modifying Your Data Schema
+## Modifying Your Extraction Data Schema
 
 Once you have created or copied a [data-schema.md](data-schema.md "mention") you can refine it by making necessary modifications to better suit your needs.
 
@@ -41,7 +41,7 @@ Navigate to the Data Schema page where you can adjust fields, update configurati
 
 Be as accurate as possible with field names, exact names and values should be in quotation marks.\
 \
-Examples of sentences to modify your data schema:&#x20;
+Examples of sentences to modify your data schema:
 
 * Add a new field: "document\_id"
 * Rename the "date" field to "invoice\_date"

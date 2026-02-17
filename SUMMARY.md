@@ -22,7 +22,6 @@
 * [Model Settings](extraction-models/model-settings.md)
 * [Live Test](extraction-models/live-test.md)
 * [Data Processing Policies](extraction-models/data-processing-policies.md)
-* [Tutorials](extraction-models/tutorials.md)
 
 ## Integrations
 
@@ -46,8 +45,6 @@
 * [Polling for Results](integrations/polling-for-results.md)
 * [Webhook Results](integrations/webhooks.md)
 * [Error Handling](integrations/problem-database.md)
-* [Tutorials](integrations/tutorials/README.md)
-  * [Testing a Webhook Locally](integrations/tutorials/testing-a-webhook-locally.md)
 * [Manual Integration](integrations/api-reference.md)
 
 ## Account Management

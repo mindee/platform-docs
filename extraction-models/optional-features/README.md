@@ -36,6 +36,6 @@ Anyone with access to the API (via an API Key) can enable or disable a feature w
 
 Details on setting features in the API: [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention")
 
-## Available Features
+## Available Extraction Features
 
 {% include "../../.gitbook/includes/available-optional-features.md" %}
