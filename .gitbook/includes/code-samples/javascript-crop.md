@@ -3,7 +3,7 @@ title: sample-code-javascript-crop
 ---
 
 Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0-alpha1** or greater.
+Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0-alpha2** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript
@@ -30,7 +30,7 @@ const inputSource = new mindee.PathInput({ inputPath: filePath });
 
 // Send for processing
 const response = await mindeeClient.enqueueAndGetResult(
-  mindee.v2.product.Crop,
+  mindee.product.Crop,
   inputSource,
   params,
 );
