@@ -1,5 +1,5 @@
 ---
-icon: file-lines
+icon: rectangle-vertical-history
 ---
 
 # Split

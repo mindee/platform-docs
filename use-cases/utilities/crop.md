@@ -1,5 +1,5 @@
 ---
-icon: file-lines
+icon: crop-simple
 ---
 
 # Crop

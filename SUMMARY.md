@@ -77,6 +77,7 @@
 * [Utilities](use-cases/utilities/README.md)
   * [Split](use-cases/utilities/split.md)
   * [Crop](use-cases/utilities/crop.md)
+  * [Classify](use-cases/utilities/split-1.md)
 
 ## Community
 
