@@ -32,12 +32,18 @@ You can have a base "template" model that is not called directly, but is used to
 
 ## Locking the Data Schema
 
-To prevent unintended changes once your data schema is finalized, you have the option to lock it. This ensures that the model remains stable and any modifications are controlled. You can unlock the data schema when changes are needed.
+To prevent unintended changes once your data schema is finalized, you have the option to lock it. This ensures that the model remains stable and any modifications are controlled.
+
+{% hint style="warning" %}
+Locking the Data Schema is an **irreversible action**, you will not be able to unlock it afterwards.
+
+Note: you can copy a locked model and modify the copy.
+{% endhint %}
 
 ## Deleting the Model
 
 You can delete a model at any time.
 
 {% hint style="danger" %}
-Deleting a model is an **irreversible action**, you will never be able to recover it!
+Deleting a model is an **irreversible action**, you will never be able to recover a deleted model!
 {% endhint %}
