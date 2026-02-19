@@ -135,4 +135,6 @@ When sending a file for inference, [specify the webhook ID](client-libraries-sdk
 
 ### I need to filter incoming requests, do you have a static IP?
 
-Enterprise customers can contact us for the static IP range.
+Our outgoing webhook server (incoming for you) does have a static IP address.
+
+Enterprise customers can contact us for the IP range.
