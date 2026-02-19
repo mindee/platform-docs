@@ -10,7 +10,11 @@ On the Model Settings page, you'll have the opportunity to modify the model name
 
 ## Model ID
 
-In the Model Settings page, you can view and copy the **Model ID**. The Mindee Support team may request this ID to diagnose issues and provide solutions.
+In the Model Settings page, you can view and copy the **Model ID**.&#x20;
+
+You will need the Model ID in order to [integrate the Mindee API](../integrations/api-overview.md).
+
+The Mindee Support team may also request the Model ID to diagnose issues and provide solutions.
 
 ## Processing Zone
 
@@ -20,14 +24,20 @@ In the Model Settings page, you can view and copy the **Model ID**. The Mindee S
 
 {% include "../.gitbook/includes/model-storage-policy.md" %}
 
+## Copying the Model
+
+It can be useful to copy an existing model for some types of workflows.
+
+You can have a base "template" model that is not called directly, but is used to make derivative models. This way you can have a common base and then modify the Data Schema to account for different providers, geographies, downstream users, etc. Each of these derivative models would be a copy of the "template" model.
+
 ## Locking the Data Schema
 
 To prevent unintended changes once your data schema is finalized, you have the option to lock it. This ensures that the model remains stable and any modifications are controlled. You can unlock the data schema when changes are needed.
 
-## Copying, Transferring, Deleting Models
+## Deleting the Model
 
-These operations are available in the "Danger Zone" area of the model settings.
+You can delete a model at any time.
 
 {% hint style="danger" %}
-All operations in the "Danger Zone" are irreversible!
+Deleting a model is an **irreversible action**, you will never be able to recover it!
 {% endhint %}
