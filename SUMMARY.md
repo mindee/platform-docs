@@ -13,6 +13,7 @@
 ## Extraction Models
 
 * [Models Overview](extraction-models/models-overview.md)
+* [Live Test](extraction-models/live-test.md)
 * [Data Schema](extraction-models/data-schema.md)
 * [Optional Features](extraction-models/optional-features/README.md)
   * [Continuous Learning (RAG)](extraction-models/optional-features/improving-accuracy.md)
@@ -20,8 +21,14 @@
   * [Polygons (Bounding Boxes)](extraction-models/optional-features/polygons-bounding-boxes.md)
   * [Raw Text (Full OCR)](extraction-models/optional-features/raw-text-full-ocr.md)
 * [Model Settings](extraction-models/model-settings.md)
-* [Live Test](extraction-models/live-test.md)
 * [Data Processing Policies](extraction-models/data-processing-policies.md)
+
+## Utility Models
+
+* [Split](utility-models/split.md)
+* [Crop](utility-models/crop.md)
+* [Classify](utility-models/split-1.md)
+* [OCR](utility-models/split-2.md)
 
 ## Integrations
 
@@ -71,11 +78,6 @@
   * [Bank Statement](use-cases/extraction-models/bank-statement.md)
   * [European Vehicle Registration](use-cases/extraction-models/european-vehicle-registration.md)
   * [Nutrition Facts](use-cases/extraction-models/bill-of-lading-1.md)
-* [Utilities](use-cases/utilities/README.md)
-  * [Split](use-cases/utilities/split.md)
-  * [Crop](use-cases/utilities/crop.md)
-  * [Classify](use-cases/utilities/split-1.md)
-  * [OCR](use-cases/utilities/split-2.md)
 
 ## Community
 
