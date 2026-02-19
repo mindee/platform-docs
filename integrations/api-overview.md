@@ -34,7 +34,9 @@ For a quick introduction and copy-paste ready code, look in the [quick-start.md]
 
 You can ask for specific code samples from the documentation AI.
 
-**Use the search bar or the "Ask" button at the top of the page.**
+Use the "Ask" button at the top of any page, or click below:
+
+<button type="button" class="button primary" data-action="ask" data-query="Write a code sample for my extraction model, ask for my model ID and  language first" data-icon="gitbook-assistant">Ask "Write a code sample for my extraction model, ask for my model ID and  language first"</button>
 {% endhint %}
 
 ### No-Code or Low-Code
