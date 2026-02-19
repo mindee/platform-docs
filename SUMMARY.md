@@ -75,6 +75,7 @@
   * [Split](use-cases/utilities/split.md)
   * [Crop](use-cases/utilities/crop.md)
   * [Classify](use-cases/utilities/split-1.md)
+  * [OCR](use-cases/utilities/split-2.md)
 
 ## Community
 

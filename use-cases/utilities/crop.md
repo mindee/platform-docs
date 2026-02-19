@@ -33,3 +33,7 @@ _Don't forget to add the class "Other" if you need the model to identify documen
 Your utility is now available in your **Models** tab:
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+Here is a step-by-step tutorial that shows you how to properly create a Crop Utility :&#x20;
+
+{% @supademo/embed demoId="cmlrtp7mk0u531189vkn2azqr" url="https://app.supademo.com/demo/cmlrtp7mk0u531189vkn2azqr" %}

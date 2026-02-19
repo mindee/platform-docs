@@ -32,3 +32,9 @@ Add the class "Other" if you need the model to identify documents that are not o
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>
 
 Your utility is now available in your **Models** tab.
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Here is a step-by-step tutorial that shows you how to properly create a Classify Utility :
+
+{% @supademo/embed demoId="cmls1rubd1jal11896wj0sg8q" url="https://app.supademo.com/demo/cmls1rubd1jal11896wj0sg8q" %}

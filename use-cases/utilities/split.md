@@ -31,4 +31,7 @@ Your utility is now available in your **Models** tab:
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-<br>
+Here is a step-by-step tutorial that shows you how to properly create a Split Utility : <br>
+
+{% @supademo/embed demoId="cmls4fbup1r1611891nvrrlyw" url="https://app.supademo.com/demo/cmls4fbup1r1611891nvrrlyw" %}
+
