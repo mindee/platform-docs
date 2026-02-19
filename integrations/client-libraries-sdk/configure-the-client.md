@@ -65,9 +65,9 @@ mindee_client = ClientV2()
 First import the needed classes. We recommend using TypeScript.
 
 ```typescript
-const mindee = require("mindee");
-// for TS or modules:
-// import * as mindee from "mindee";
+import * as mindee from "mindee";
+// If you're on CommonJS:
+// const mindee = require("mindee");
 ```
 
 For the API key, you can pass it directly to the client.\
@@ -245,7 +245,7 @@ inference_params = InferenceParameters(
 Only the `modelId` is required.
 
 ```typescript
-const inferenceParams = {
+const productParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
   
@@ -376,7 +376,7 @@ inference_params = InferenceParameters(
 Only the `modelId` is required.
 
 ```typescript
-const inferenceParams = {
+const productParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
 
@@ -557,7 +557,7 @@ inference_params = InferenceParameters(
 Only the `modelId` is required.
 
 ```typescript
-const inferenceParams = {
+const productParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
   
