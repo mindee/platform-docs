@@ -3,24 +3,25 @@ title: sample-code-javascript-extraction
 ---
 
 Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **4.36.2** or greater.
+Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript
-const mindee = require("mindee");
-// for TS or modules:
-// import * as mindee from "mindee";
+import * as mindee from "mindee";
+// If you're on CommonJS:
+// const mindee = require("mindee");
 
 const apiKey = "MY_API_KEY";
 const filePath = "/path/to/the/file.ext";
 const modelId = "MY_MODEL_ID";
 
 // Init a new client
-const mindeeClient = new mindee.ClientV2({ apiKey: apiKey });
+const mindeeClient = new mindee.Client(
+  { apiKey: apiKey }
+);
 
-// Set inference parameters
-const inferenceParams = {
-  // ID of the model, required.
+// Set product parameters
+const productParams = {
   modelId: modelId,
 
   // Options: set to `true` or `false` to override defaults
@@ -40,19 +41,17 @@ const inferenceParams = {
 const inputSource = new mindee.PathInput({ inputPath: filePath });
 
 // Send for processing
-const response = mindeeClient.enqueueAndGetInference(
+const response = await mindeeClient.enqueueAndGetResult(
+  mindee.product.Extraction,
   inputSource,
-  inferenceParams
+  productParams,
 );
 
-// Handle the response Promise
-response.then((resp) => {
-  // print a string summary
-  console.log(resp.inference.toString());
-  
-  // Access the result fields
-  const fields = response.inference.result.fields;
-});
+// print a string summary
+console.log(response.inference.toString());
+
+// Access the result fields
+const fields = response.inference.result.fields;
 ```
 {% endcode %}
 
