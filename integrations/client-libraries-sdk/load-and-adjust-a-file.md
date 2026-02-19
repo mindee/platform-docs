@@ -72,11 +72,9 @@ To load a base-64 string, use `Base64Input` .\
 The string will be decoded into bytes internally.
 
 ```python
-from pathlib import Path
 from mindee import Base64Input
 
 input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
-
 input_source = Base64Input(
     input_base64,
     filename="base64_file.txt",
