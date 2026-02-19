@@ -7,7 +7,7 @@ icon: lightbulb
 
 Mindee headline features center on custom models, RAG, confidence scores, and rich outputs.
 
-## Custom Models
+## Custom Extraction Models
 
 Build fully customizable extraction models with interactive data schemas and an AI assistant for fast iteration and control over fields and guidelines.\
 Learn more at [data-schema.md](../extraction-models/data-schema.md "mention").
@@ -15,7 +15,7 @@ Learn more at [data-schema.md](../extraction-models/data-schema.md "mention").
 Live Test UI for side-by-side visual validation, JSON inspection, and RAG simulation before production.\
 Learn more at [live-test.md](../extraction-models/live-test.md "mention").
 
-## Model Catalog
+## Extraction Model Catalog
 
 Choose from our ready-to-use catalog models for data extraction.\
 You can also modify them as needed, just like our custom models.
@@ -29,6 +29,21 @@ Some popular use cases include:
 * **Logistics**: Bill of Lading, Vehicle Registration, ...
 
 Learn more at [extraction-models](../use-cases/extraction-models/ "mention")
+
+## Utility Models
+
+In addition to extraction models, Mindee also provides utility models that can be used either separately or in conjunction with Extraction Models.
+
+These utilities allow for more complex workflows and greater flexibility.
+
+* **Split**: Detect separate documents in a multi-page source file, matching each document to a category.
+* **Crop**: Detect document boundaries on each page, matching each document to a category.
+* **Classification**: Automatically assign images and scanned documents to the right category.
+* **OCR**: Extract raw text and word boundaries from any document with high precision.
+
+{% hint style="info" %}
+Utilities are currently in beta: they are usable, with full integration support coming soon.
+{% endhint %}
 
 ## Advanced Features
 
