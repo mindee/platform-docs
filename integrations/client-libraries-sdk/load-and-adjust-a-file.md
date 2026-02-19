@@ -109,9 +109,9 @@ To load a file, you'll need to import the corresponding input class and instanti
 Make sure to import the needed classes:
 
 ```typescript
-const mindee = require("mindee");
-// for TS or modules:
-// import * as mindee from "mindee";
+import * as mindee from "mindee";
+// If you're on CommonJS:
+// const mindee = require("mindee");
 ```
 
 To load a path string, use `PathInput`.

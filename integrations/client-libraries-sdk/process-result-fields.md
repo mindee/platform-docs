@@ -403,7 +403,7 @@ public void HandleResponse(InferenceResponse response)
 
 ### `items`
 
-List of fields as a variable-length array type (Python `list`, Java `List`, etc).
+List of fields as a variable-length array type (Python `list`, JavaScript `Array`, Java `List`, etc).
 
 Each item in the list will be one of:
 

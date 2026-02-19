@@ -10,7 +10,7 @@ Python ≥ 3.10 is highly recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```sh
-pip install mindee>=4.32
+pip install mindee~=4.32
 ```
 {% endtab %}
 
@@ -21,7 +21,7 @@ Node.js ≥ 22 is recommended.
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
 ```sh
-npm install mindee@5.0.0
+npm install mindee@^5.0.0
 ```
 {% endtab %}
 

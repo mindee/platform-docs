@@ -13,7 +13,7 @@ icon: paper-plane
 
 You'll need to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") section.
 
-Both the Client and the Inference Parameters are required.
+Both the Client and the Product Parameters are required.
 
 ## Overview
 
@@ -83,28 +83,21 @@ inference_params = InferenceParameters(
 When polling you really only need to set the `modelId` .
 
 ```typescript
-const inferenceParams = {modelId: "MY_MODEL_ID"};
+const productParams = {modelId: "MY_MODEL_ID"};
 ```
 
 You can also set the various polling parameters.\
 However, **we do not recommend** setting this option unless you are encountering timeout problems.
 
 ```typescript
-const inferenceParams = {
-  // ID of the model, required.
-  modelId: "MY_MODEL_ID",
-  
-  // Set only if having timeout issues.
-  pollingOptions: {
-    // Initial delay before the first polling attempt.
-    initialDelaySec: 3.0,
-    // Delay between each polling attempt.
-    delaySec: 1.5,
-    // Total number of polling attempts.
-    maxRetries: 80
-  }
-
-  // ... any other options ...
+// Optional, set only if having timeout issues.
+const pollingOptions = {
+  // Initial delay before the first polling attempt.
+  initialDelaySec: 3.0,
+  // Delay between each polling attempt.
+  delaySec: 1.5,
+  // Total number of polling attempts.
+  maxRetries: 80,
 }
 ```
 {% endtab %}
@@ -266,12 +259,15 @@ print(response.inference)
 {% tab title="Node.js" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetInference` method:
+Use the `enqueueAndGetResult` method:
 
 ```typescript
-const response = mindeeClient.enqueueAndGetInference(
+const response = mindeeClient.enqueueAndGetResult(
+  mindee.product.Extraction,
   inputSource,
-  inferenceParams
+  inferenceParams,
+  // optional, set only if having timeout issues.
+  // pollingOptions,
 );
 
 // Handle the response Promise
@@ -380,10 +376,10 @@ inference_params = InferenceParameters(
 
 {% tab title="Node.js" %}
 ```typescript
-const inferenceParams = {
+const productParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
-  
+
   // Add any number of webhook IDs here.
   webhookIds: ["ENDPOINT_1_UUID"],
 
@@ -477,35 +473,33 @@ print(response.job.alias)
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
-You'll get the response via polling and webhooks will be used as well.
+You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="Node.js" %}
 The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
-Use the `enqueueInference` method:
+Use the `enqueue` method:
 
 ```typescript
-const response = mindeeClient.enqueueInference(
+const response = await mindeeClient.enqueue(
+  mindee.product.Extraction,
   inputSource,
-  inferenceParams
+  productParams
 );
 
-// Handle the response Promise
-response.then((resp) => {
-  // You should save the job ID for your records
-  console.log(resp.job.id);
-  
-  // If you set an `alias`, you can verify it was taken into account
-  console.log(resp.job.alias);
-});
+// You should save the job ID for your records
+console.log(response.job.id);
+
+// If you set an `alias`, you can verify it was taken into account
+console.log(response.job.alias);
 ```
 
 **Note:** You can use both methods!
 
-First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `enqueueAndGetInference` and handle the promise.\
-You'll get the response via polling and webhooks will be used as well.
+First, make sure you've added a webhook ID to the `productParams` object.\
+Then, call `enqueueAndGetResult` and `await` the promise.\
+You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -530,7 +524,7 @@ echo strval($response->job->alias);
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueueAndGetInferenceAsync`.\
-You'll get the response via polling and webhooks will be used as well.
+You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="Ruby" %}
@@ -554,7 +548,7 @@ puts response.job.alias
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueue_and_get_inference` .\
-You'll get the response via polling and webhooks will be used as well.
+You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="Java" %}
@@ -578,7 +572,7 @@ System.out.println(response.getJob().getAlias());
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `enqueueAndGetInference` and handle the promise.\
-You'll get the response via polling and webhooks will be used as well.
+You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title=".NET" %}
@@ -602,7 +596,7 @@ System.Console.WriteLine(response.Job.Alias);
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
 Then, call `EnqueueAndGetInferenceAsync`.\
-You'll get the response via polling and webhooks will be used as well.
+You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 {% endtabs %}
 
