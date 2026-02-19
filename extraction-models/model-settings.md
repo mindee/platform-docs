@@ -30,6 +30,8 @@ It can be useful to copy an existing model for some types of workflows.
 
 You can have a base "template" model that is not called directly, but is used to make derivative models. This way you can have a common base and then modify the Data Schema to account for different providers, geographies, downstream users, etc. Each of these derivative models would be a copy of the "template" model.
 
+You can also us this as way for testing changes to a model. For example you can copy a model used in production, modify the copy, and test the modifications in staging. Once the modifications are tested successfully, switch production over to the new model.
+
 ## Locking the Data Schema
 
 To prevent unintended changes once your data schema is finalized, you have the option to lock it. This ensures that the model remains stable and any modifications are controlled.
