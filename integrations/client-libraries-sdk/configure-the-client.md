@@ -76,7 +76,7 @@ This is useful for quick testing.
 ```typescript
 const apiKey = "MY_API_KEY";
 
-const mindeeClient = new mindee.ClientV2({ apiKey: apiKey });
+const mindeeClient = new mindee.Client({ apiKey: apiKey });
 ```
 
 Instead of passing the key directly, you can also set the following environment variable:
@@ -87,7 +87,7 @@ This is recommended for production use.\
 In this way there is no need to pass the `apiKey` argument when initializing the client.
 
 ```typescript
-const mindeeClient = new mindee.ClientV2();
+const mindeeClient = new mindee.Client();
 ```
 {% endtab %}
 
