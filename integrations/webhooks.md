@@ -132,3 +132,7 @@ You can create any number of webhook endpoints: create one for each environment.
 In your code, add an environment variable like `MINDEE_V2_WEBHOOK_ID` and set it according to the corresponding endpoint.
 
 When sending a file for inference, [specify the webhook ID](client-libraries-sdk/configure-the-client.md#webhook-configuration) using the environment variable.
+
+### I need to filter incoming requests, do you have a static IP?
+
+Enterprise customers can contact us for the IP range.
