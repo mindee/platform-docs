@@ -39,6 +39,8 @@ Use the "Ask" button at the top of any page, or click below:
 <button type="button" class="button primary" data-action="ask" data-query="Write a code sample for my extraction model, ask for my model ID and  language first" data-icon="gitbook-assistant">Ask "Write a code sample for my extraction model, ask for my model ID and  language first"</button>
 {% endhint %}
 
+Supported languages/frameworks: Python, Node.js (JS/TS), PHP, Ruby, Java, .NET (C#).
+
 ### No-Code or Low-Code
 
 If you're integrating using a no-code or low-code platform, take a look at the [no-code-integrations](no-code-integrations/ "mention") section.
