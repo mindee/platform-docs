@@ -102,14 +102,20 @@ In the rare case where you need a specific dispatcher for Mindee, you can set it
 ```javascript
 import { Agent, interceptors } from "undici",
 
-// Init your custom Dispatcher
+// Init the custom Dispatcher
 // REPLACE THE LINE BELOW WITH YOUR CODE - this example will NOT work!
 const myAgent = new Agent();
 
-// pass your custom dispatcher to the Mindee client
-const mindeeClient = new mindee.Client(
-  { apiKey: apiKey, debug: true, dispatcher: myAgent }
-);
+const mindeeClient = new mindee.Client({
+  // Don't set if using an environment variable
+  apiKey: apiKey,
+
+  // Activates verbose logging - disable in production!
+  debug: true,
+
+  // Pass the custom dispatcher to the Mindee client
+  dispatcher: myAgent,
+});
 ```
 {% endtab %}
 
