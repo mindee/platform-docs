@@ -62,7 +62,7 @@ mindee_client = ClientV2()
 {% endtab %}
 
 {% tab title="Node.js" %}
-First import the needed classes. We recommend using TypeScript.
+First import the needed classes. We recommend using ES Modules.
 
 ```typescript
 import * as mindee from "mindee";
@@ -88,6 +88,27 @@ In this way there is no need to pass the `apiKey` argument when initializing the
 
 ```typescript
 const mindeeClient = new mindee.Client();
+```
+
+#### Advanced Usage
+
+internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, and when the client is initialized `getGlobalDispatcher` is called.
+
+**This is perfectly fine for the vast majority of cases:**\
+If you set a custom Agent as the global dispatcher, Mindee will use it.
+
+In the rare case where you need a specific dispatcher for Mindee, you can set it as follows:
+
+```javascript
+import { Agent, interceptors } from 'undici'
+
+// DO NOT DO THIS! Just to show where to init your custom Dispatcher
+const myAgent = new Agent();
+
+// pass your custom dispatcher to the Mindee client
+const mindeeClient = new mindee.Client(
+  { apiKey: apiKey, debug: true, dispatcher: myAgent }
+);
 ```
 {% endtab %}
 
