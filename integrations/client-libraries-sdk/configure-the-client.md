@@ -100,11 +100,11 @@ If you set a custom Agent as the global dispatcher, Mindee will use it.
 In the rare case where you need a specific dispatcher for Mindee, you can set it as follows:
 
 ```javascript
-import { Agent, interceptors } from "undici",
+import { Agent, interceptors } from "undici";
 
 // Init the custom Dispatcher
 // REPLACE THE LINE BELOW WITH YOUR CODE - this example will NOT work!
-const myAgent = new Agent();
+const myDispatcher = new Agent().compose( ... );
 
 const mindeeClient = new mindee.Client({
   // Don't set if using an environment variable
@@ -114,7 +114,7 @@ const mindeeClient = new mindee.Client({
   debug: true,
 
   // Pass the custom dispatcher to the Mindee client
-  dispatcher: myAgent,
+  dispatcher: myDispatcher,
 });
 ```
 {% endtab %}
