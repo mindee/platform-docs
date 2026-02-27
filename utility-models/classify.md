@@ -1,10 +1,11 @@
 ---
+description: >-
+  Automatically attribute a class to a given document, from a list of classes
+  you define yourself.
 icon: tag
 ---
 
 # Classify
-
-This utility is designed to allow you automatically attribute a class to a given document, from a list of classes you define yourself.&#x20;
 
 {% hint style="success" %}
 If your documents have one or several pages and you want to get the most appropriate class for the whole document, **Classify** is definitely your best option.&#x20;
@@ -26,14 +27,14 @@ If your documents have more than one page, and you need to find the different do
 Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt="" width="375"><figcaption></figcaption></figure>
 
 4. Once ready, click on **Create Utility** to create your custom Classify Utility.
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>
 
 Your utility is now available in your **Models** tab.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 Here is a step-by-step tutorial that shows you how to properly create a Classify Utility :
 

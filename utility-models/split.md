@@ -1,14 +1,13 @@
 ---
+description: >-
+  Automatically breaking a multi-page source file into separate documents and
+  associate a class to each one.
 icon: rectangle-vertical-history
 ---
 
 # Split
 
-This utility is designed to allow you automatically breaking a multi-page source file into separate documents and associate a class to each one.&#x20;
-
 ## Setup
-
-
 
 1. To create a Split utility, you need to click on **Models**, and then on **Create your document AI model**.
 2. Under the **Document Utilities** section, click on **Split.**
@@ -20,7 +19,7 @@ This utility is designed to allow you automatically breaking a multi-page source
 Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 
@@ -29,7 +28,7 @@ Add the class "Other" if you need the model to identify documents that are not o
 
 Your utility is now available in your **Models** tab:
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Here is a step-by-step tutorial that shows you how to properly create a Split Utility : <br>
 

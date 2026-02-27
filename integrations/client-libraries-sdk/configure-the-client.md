@@ -11,7 +11,7 @@ icon: wrench
 
 Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
 
-You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and one or several [Models](../../extraction-models/models-overview.md) configured.
+You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and one or several [Models](../../models/models-overview.md) configured.
 
 ## Overview
 

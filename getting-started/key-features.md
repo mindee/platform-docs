@@ -13,7 +13,7 @@ Build fully customizable extraction models with interactive data schemas and an 
 Learn more at [data-schema.md](../extraction-models/data-schema.md "mention").
 
 Live Test UI for side-by-side visual validation, JSON inspection, and RAG simulation before production.\
-Learn more at [live-test.md](../extraction-models/live-test.md "mention").
+Learn more at [live-test.md](../models/live-test.md "mention").
 
 ## Extraction Model Catalog
 
@@ -60,7 +60,7 @@ Full text content output for complete OCR alongside structured fields.\
 Learn more at [raw-text-full-ocr.md](../extraction-models/optional-features/raw-text-full-ocr.md "mention").
 
 Data residency controls (EU/US) for privacy and compliance (GDPR, SOC 2 Type II).\
-Learn more at [data-processing-policies.md](../extraction-models/data-processing-policies.md "mention").
+Learn more at [data-processing-policies.md](../models/data-processing-policies.md "mention").
 
 ## Integrations
 

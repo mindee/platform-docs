@@ -55,7 +55,7 @@ Filter based on the origin of the request.
 
 <div align="left"><figure><img src="../.gitbook/assets/insights-filter-origin.png" alt="Insights - filter data based on origin"><figcaption></figcaption></figure></div>
 
-"Live Test" is when using the [live test](../extraction-models/live-test.md) functionality on the platform.
+"Live Test" is when using the [live test](../models/live-test.md) functionality on the platform.
 
 "API" is for any request made using an API key.
 

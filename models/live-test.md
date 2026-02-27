@@ -40,6 +40,6 @@ You can always go back to the Live Test page by clicking on the left-hand model 
 3. The extracted fields appear on the right-hand side, alongside the image preview.
 4. Each field is:
    * **highlighted on the document** with color-coded overlays, showcasing the polygon features that can be enabled in the data schema option.
-   * listed in the right panel with values, field names, and optionally confidence scores if the [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention") feature is enabled.
+   * listed in the right panel with values, field names, and optionally confidence scores if the [automation-confidence-score.md](../extraction-models/optional-features/automation-confidence-score.md "mention") feature is enabled.
 
 <figure><img src="../.gitbook/assets/live-test-demo.gif" alt="Overview animation of Mindee Live View"><figcaption><p>By clicking the polygon, you can also see its corresponding field on the right side.</p></figcaption></figure>
