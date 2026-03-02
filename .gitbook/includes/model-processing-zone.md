@@ -14,7 +14,7 @@ Available options:
   Forces all data processing to occur exclusively within data centers located in the United States. Recommended for organizations subject to U.S. data governance or compliance policies.
 
 {% hint style="info" %}
-This is only an indication for processing, not support.
+This is only a zone for _processing_, not extraction or analysis support.
 
-You can send documents from any country to the Mindee API!
+**You can send documents from any country to the Mindee API!**
 {% endhint %}

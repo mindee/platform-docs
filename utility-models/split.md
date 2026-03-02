@@ -15,7 +15,7 @@ icon: rectangle-vertical-history
    \
    &#xNAN;_&#x45;xample: If the files you are receiving may contain invoices, receipts, and driving licenses you may select the three classes "INVOICE", "RECEIPT", "DRIVING LICENSE"._&#x20;
 
-{% hint style="info" %}
+{% hint style="info" icon="lightbulb" %}
 Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
 {% endhint %}
 

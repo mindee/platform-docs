@@ -45,10 +45,10 @@ When creating a new Model, click on **"Custom document".**
 
 A dialog box will give you the opportunity to explain your need. You should explain precisely the document you want to process, and discuss the fields to be extracted. Our AI Agent will help you quickly define an initial data schema that you'll be able to adjust later.
 
-{% hint style="info" %}
+{% hint style="info" icon="lightbulb" %}
 **We recommend creating an initial model quickly.**
 
-Once created, refine its [data-schema.md](data-schema.md "mention") on the platform, using the [live-test.md](../models/live-test.md "mention") feature to fine-tune your fields and guidelines.
+Once created, refine the new model's [data-schema.md](data-schema.md "mention") on the platform, using the [live-test.md](../models/live-test.md "mention") feature to fine-tune your fields and guidelines.
 {% endhint %}
 
 ## Modifying Your Extraction Data Schema

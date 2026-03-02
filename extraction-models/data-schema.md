@@ -12,6 +12,10 @@ A Data Schema guides the system on the technical processes required and ensures 
 \
 The Data Schema is composed of a certain number of Fields (or data points), each with a type and an example.
 
+{% hint style="info" icon="lightbulb" %}
+Use the [live-test.md](../models/live-test.md "mention") when working on your Data Schema to quickly validate changes.
+{% endhint %}
+
 ## Field Types
 
 ### Base Types
@@ -28,7 +32,7 @@ The return type will be an array of the base type, for example a list of text va
 
 It is possible to have a list of nested objects, but not a list of lists.
 
-{% hint style="info" %}
+{% hint style="info" icon="lightbulb" %}
 In some cases, there can be duplicate items, for example when the same value appears on several pages.
 
 Enable "Filter out duplicates from the list of items" to fix this.
@@ -116,7 +120,7 @@ In the following table, "Normal Fields" are those that extract textual informati
 ### Language
 
 You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.\
-Note that the _Name_ can only contains ASCII characters.
+Note that the _Name_ can only contain ASCII characters.
 
 This includes, _but is not limited to_:
 
@@ -131,3 +135,7 @@ This includes, _but is not limited to_:
 ## Technical Limitations
 
 {% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
+
+## Next Steps
+
+Once you are satisfied with your Data Schema, you'll likely to want to use one of our [Broken link](/broken/pages/iREYUuRlIfMqqSxTfHZF "mention") to connect your model with your platform.
