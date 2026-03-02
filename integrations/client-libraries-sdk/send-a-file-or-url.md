@@ -626,12 +626,12 @@ job_id = response.job.id
 job_response = mindee_client.get_job(job_id)
 
 # some metadata, check your IDE for all available attributes
-print(response.job.status)
-print(response.job.created_at)
-print(response.job.completed_at)
+print(job_response.job.status)
+print(job_response.job.created_at)
+print(job_response.job.completed_at)
 
 # check webhooks
-for webhook in response.job.webhooks:
+for webhook in job_response.job.webhooks:
     print(f"{webhook.id} status: {webhook.status}")
 ```
 {% endtab %}
@@ -647,12 +647,12 @@ const jobId = response.job.id;
 const jobResponse = await mindeeClient.getJob(jobId);
 
 // some metadata, check your IDE for all available attributes
-console.log(response.job.status);
-console.log(response.job.createdAt);
-console.log(response.job.completedAt);
+console.log(jobResponse.job.status);
+console.log(jobResponse.job.createdAt);
+console.log(jobResponse.job.completedAt);
 
 // check webhooks
-response.job.webhooks.forEach((webhook) => {
+jobResponse.job.webhooks.forEach((webhook) => {
   console.log(`${webhook.id} status: ${webhook.status}`);
 });
 ```
@@ -669,12 +669,12 @@ $jobId = $response->job->id;
 $jobResponse = $mindeeClient->getJob($jobId);
 
 // some metadata, check your IDE for all available attributes
-echo $response->job->status;
-echo $response->job->createdAt->format('Y-m-d H:i:s');
-echo $response->job->completedAt?->format('Y-m-d H:i:s');
+echo $jobResponse->job->status;
+echo $jobResponse->job->createdAt->format('Y-m-d H:i:s');
+echo $jobResponse->job->completedAt?->format('Y-m-d H:i:s');
 
 // check webhooks
-foreach ($response->job->webhooks as $webhook) {
+foreach ($jobResponse->job->webhooks as $webhook) {
     echo "{$webhook->id} status: {$webhook->status}";
 }
 ```
@@ -691,12 +691,12 @@ job_id = response.job.id
 job_response = mindee_client.get_job(job_id)
 
 # some metadata, check your IDE for all available attributes
-puts response.job.status
-puts response.job.created_at
-puts response.job.completed_at
+puts job_response.job.status
+puts job_response.job.created_at
+puts job_response.job.completed_at
 
 # check webhooks
-response.job.webhooks.each do |webhook|
+job_response.job.webhooks.each do |webhook|
   puts "#{webhook.id} status: #{webhook.status}"
 end
 ```
