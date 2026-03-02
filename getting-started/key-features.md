@@ -17,8 +17,8 @@ Learn more at [live-test.md](../models/live-test.md "mention").
 
 ## Extraction Model Catalog
 
-Choose from our ready-to-use catalog models for data extraction.\
-You can also modify them as needed, just like our custom models.
+Choose from our catalog models with predefined fields for data extraction.\
+You can modify them as needed, just like our custom models.
 
 Some popular use cases include:
 
@@ -77,3 +77,5 @@ Mindee pricing is plan-based with included pages, overages, and feature tiers.
 Pay annually to save money, or monthly.
 
 Compare all plans and their features at [plans.md](../account-management/plans.md "mention").
+
+{% include "../.gitbook/includes/sign-up-button.md" %}
