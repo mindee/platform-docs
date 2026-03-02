@@ -462,7 +462,7 @@ response = mindee_client.enqueue_inference(
     input_source, inference_params
 )
 
-# You should save the job ID for your records
+# You should save the job ID for your records/debugging
 print(response.job.id)
 
 # If you set an `alias`, you can verify it was taken into account
@@ -488,7 +488,7 @@ const response = await mindeeClient.enqueue(
   productParams
 );
 
-// You should save the job ID for your records
+// You should save the job ID for your records/debugging
 console.log(response.job.id);
 
 // If you set an `alias`, you can verify it was taken into account
@@ -513,7 +513,7 @@ $response = $mindeeClient->enqueueInference(
     $inferenceParams
 );
 
-// You should save the job ID for your records
+// You should save the job ID for your records/debugging
 echo strval($response->job->id);
 
 // If you set an `alias`, you can verify it was taken into account
@@ -537,7 +537,7 @@ response = mindee_client.enqueue_inference(
     input_source, inference_params
 )
 
-# You should save the job ID for your records
+# You should save the job ID for your records/debugging
 puts response.job.id
 
 # If you set an `alias`, you can verify it was taken into account
@@ -561,7 +561,7 @@ JobResponse response = mindeeClient.enqueueInference(
     inputSource, inferenceParams
 );
 
-// You should save the job ID for your records
+// You should save the job ID for your records/debugging
 System.out.println(response.getJob().getId());
 
 // If you set an `alias`, you can verify it was taken into account
@@ -585,7 +585,7 @@ var response = mindeeClient.EnqueueInferenceAsync(
     inputSource, inferenceParams
 );
 
-// You should save the job ID for your records
+// You should save the job ID for your records/debugging
 System.Console.WriteLine(response.Job.Id);
 
 // If you set an `alias`, you can verify it was taken into account
@@ -599,6 +599,157 @@ Then, call `EnqueueAndGetInferenceAsync`.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 {% endtabs %}
+
+## Get Processing Status
+
+Accessing processing information is done using the `Job` object and related method calls.
+
+If you are using webhooks, we highly recommend storing the job's ID so you can retrieve this information for debugging purposes.
+
+You can access:
+
+* overall processing status
+* detailed errors, if any
+* status for each webhook sent
+* creation and completion times
+* etc
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+# from `enqueue` method (typically for webhook)
+job_id = response.job.id
+
+# from `enqueue_and_get_result` method (typically for polling)
+# job_id = response.inference.job.id
+
+job_response = mindee_client.get_job(job_id)
+
+# some metadata, check your IDE for all available attributes
+print(response.job.status)
+print(response.job.created_at)
+print(response.job.completed_at)
+
+# check webhooks
+for webhook in response.job.webhooks:
+    print(f"{webhook.id} status: {webhook.status}")
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```typescript
+// from `enqueue` method (typically for webhook)
+const jobId = response.job.id;
+
+// from `enqueueAndGetResult` method (typically for polling)
+//const jobId = response.inference.job.id;
+
+const jobResponse = await mindeeClient.getJob(jobId);
+
+// some metadata, check your IDE for all available attributes
+console.log(response.job.status);
+console.log(response.job.createdAt);
+console.log(response.job.completedAt);
+
+// check webhooks
+response.job.webhooks.forEach((webhook) => {
+  console.log(`${webhook.id} status: ${webhook.status}`);
+});
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+// from `enqueueInference` method (typically for webhook)
+$jobId = $response->job->id;
+
+// from `enqueueAndGetInference` method (typically for polling)
+// $jobId = $response->inference->job->id;
+
+$jobResponse = $mindeeClient->getJob($jobId);
+
+// some metadata, check your IDE for all available attributes
+echo $response->job->status;
+echo $response->job->createdAt->format('Y-m-d H:i:s');
+echo $response->job->completedAt?->format('Y-m-d H:i:s');
+
+// check webhooks
+foreach ($response->job->webhooks as $webhook) {
+    echo "{$webhook->id} status: {$webhook->status}";
+}
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+# from `enqueue_inference` method (typically for webhook)
+job_id = response.job.id
+
+# from `enqueue_and_get_inference` method (typically for polling)
+# job_id = response.inference.job.id
+
+job_response = mindee_client.get_job(job_id)
+
+# some metadata, check your IDE for all available attributes
+puts response.job.status
+puts response.job.created_at
+puts response.job.completed_at
+
+# check webhooks
+response.job.webhooks.each do |webhook|
+  puts "#{webhook.id} status: #{webhook.status}"
+end
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+// from `enqueueInference` method (typically for webhook)
+String jobId = response.getJob().getId();
+
+// from `enqueueAndGetInference` method (typically for polling)
+// String jobId = response.getInference().getJob().getId();
+
+JobResponse jobResponse = mindeeClient.getJob(jobId);
+
+// some metadata, check your IDE for all available attributes
+Job job = jobResponse.getJob();
+System.out.println(job.getStatus());
+System.out.println(job.getCreatedAt());
+System.out.println(job.getCompletedAt());
+
+// check webhooks
+job.getWebhooks().forEach(webhook ->
+    System.out.println(webhook.getId() + " status: " + webhook.getStatus())
+);
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+// from `EnqueueInferenceAsync` method (typically for webhook)
+var jobId = response.Job.Id;
+
+// from `EnqueueAndGetInferenceAsync` method (typically for polling)
+// var jobId = response.Inference.Job.Id;
+
+var jobResponse = await mindeeClientV2.GetJobAsync(jobId);
+
+// some metadata, check your IDE for all available attributes
+Console.WriteLine(jobResponse.Job.Status);
+Console.WriteLine(jobResponse.Job.CreatedAt);
+Console.WriteLine(jobResponse.Job.CompletedAt);
+
+// check webhooks
+foreach (var webhook in jobResponse.Job.Webhooks)
+{
+    Console.WriteLine($"{webhook.Id} status: {webhook.Status}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ## Process the Result
 
