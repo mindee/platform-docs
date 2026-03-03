@@ -31,7 +31,7 @@
 * [Utility Models Overview](utility-models/utility-models-overview.md)
 * [Split](utility-models/split.md)
 * [Crop](utility-models/crop.md)
-* [Classify](utility-models/classify.md)
+* [Classification](utility-models/classification.md)
 * [OCR](utility-models/ocr.md)
 
 ## Integrations

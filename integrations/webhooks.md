@@ -59,7 +59,7 @@ In the Webhooks page, there will be a "Add Webhook" button, click it:
 
 <figure><img src="../.gitbook/assets/Screenshot_20250820_115103.png" alt="adding a webhook endpoint"><figcaption></figcaption></figure>
 
-This then opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server.
+This opens a dialog allowing you to enter the name of the webhook, and the URL of your Web server.
 
 Choose any name that makes sense to you.
 

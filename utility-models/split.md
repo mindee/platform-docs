@@ -7,10 +7,10 @@ icon: rectangle-vertical-history
 
 # Split
 
-## Setup
+## Create a Split Model
 
 1. To create a Split utility, you need to click on **Models**, and then on **Create your document AI model**.
-2. Under the **Document Utilities** section, click on **Split.**
+2. Scroll to the **Document Utilities** section, click on **Split.**
 3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the documents you want to process. \
    \
    &#xNAN;_&#x45;xample: If the files you are receiving may contain invoices, receipts, and driving licenses you may select the three classes "INVOICE", "RECEIPT", "DRIVING LICENSE"._&#x20;
@@ -34,3 +34,6 @@ Here is a step-by-step tutorial that shows you how to properly create a Split Ut
 
 {% @supademo/embed demoId="cmls4fbup1r1611891nvrrlyw" url="https://app.supademo.com/demo/cmls4fbup1r1611891nvrrlyw" %}
 
+## Integration
+
+Once your Split model is created and tested, integration documentation is provided in the "Documentation" page.

@@ -14,10 +14,10 @@ The Crop model is particularly useful when :&#x20;
 * dealing with documents that may contain several documents (receipts for instance) within each page
 * searching to remove the background from a document
 
-## Setup
+## Create a Crop Model
 
-1. To create a Crop utility, you need to click on **Models**, and then on **Create your document AI model**.
-2. Under the **Document Utilities** section, click on **Crop.**
+1. To create a Crop utility, click on **Models**, and then click on **Create your document AI model**.
+2. Scroll to the **Document Utilities** section, click on **Crop.**
 3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the pages you want to process. \
    \
    &#xNAN;_&#x45;xample: If the files you are receiving may contain ID cards and passports, you may select the three classes :_ _"ID Card Front", "ID Card Back", "Passport"._&#x20;
@@ -38,3 +38,7 @@ Your utility is now available in your **Models** tab:
 Here is a step-by-step tutorial that shows you how to properly create a Crop Utility :&#x20;
 
 {% @supademo/embed demoId="cmlrtp7mk0u531189vkn2azqr" url="https://app.supademo.com/demo/cmlrtp7mk0u531189vkn2azqr" %}
+
+## Integration
+
+Once your Crop model is created and tested, integration documentation is provided in the "Documentation" page.
