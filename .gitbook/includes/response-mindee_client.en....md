@@ -4,7 +4,8 @@ title: response = mindee_client.en...
 
 ```ruby
 
-response = mindee_client.enqueue_and_get_inference(
+response = mindee_client.enqueue_and_get_result(
+  Mindee::V2::Product::Extraction::Extraction,
   input_source,
   inference_params
 )

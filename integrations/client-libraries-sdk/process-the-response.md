@@ -123,7 +123,7 @@ end
 
 # Deserialize the response:
 response = local_response.deserialize_response(
-  Mindee::Parsing::V2::InferenceResponse
+  Mindee::V2::Product::Extraction::ExtractionResponse
 )
 
 # Print a summary of the parsed data in RST format

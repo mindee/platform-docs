@@ -138,7 +138,7 @@ $inferenceParams = new InferenceParameters(
 When polling you really only need to set the `model_id` .
 
 ```ruby
-inference_params = Mindee::Input::InferenceParameters.new("MY_MODEL_ID")
+inference_params = { model_id: "MY_MODEL_ID" }
 ```
 
 You can also set the various polling parameters.\
@@ -147,9 +147,9 @@ However, **we do not recommend** setting this option unless you are encountering
 ```ruby
 require 'mindee'
 
-inference_params = Mindee::Input::InferenceParameters.new(
+inference_params = {
   # ID of the model, required.
-  'MY_MODEL_ID',
+  model_id: 'MY_MODEL_ID',
 
   # Set only if having timeout issues.
   polling_options: Mindee::Input::PollingOptions.new(
@@ -162,7 +162,7 @@ inference_params = Mindee::Input::InferenceParameters.new(
   ),
 
   # ... any other options ...
-)
+}
 ```
 {% endtab %}
 
@@ -299,10 +299,11 @@ echo strval($response->inference);
 {% tab title="Ruby" %}
 The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueue_and_get_inference` method.
+Use the `enqueue_and_get_result` method.
 
 ```ruby
-response = mindee_client.enqueue_and_get_inference(
+response = mindee_client.enqueue_and_get_result(
+  Mindee::V2::Product::Extraction::Extraction,
   input_source,
   inference_params
 )
@@ -405,15 +406,15 @@ $inferenceParams = new InferenceParameters(
 
 {% tab title="Ruby" %}
 ```ruby
-inference_params = Mindee::Input::InferenceParameters.new(
+inference_params = {
   # ID of the model, required.
-  'MY_MODEL_ID',
+  model_id: 'MY_MODEL_ID',
 
   # Add any number of webhook IDs here.
   webhook_ids: ["ENDPOINT_1_UUID"],
 
   # ... any other options ...
-)
+}
 ```
 {% endtab %}
 
@@ -472,7 +473,7 @@ print(response.job.alias)
 **Note:** You can use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `enqueue_and_get_inference` .\
+Then, call `enqueue_and_get_result` .\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
@@ -530,10 +531,11 @@ You'll get the response via polling and webhooks will be sent as well.
 {% tab title="Ruby" %}
 The `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
-Use the `enqueue_inference` method:
+Use the `enqueue` method:
 
 ```ruby
-response = mindee_client.enqueue_inference(
+response = mindee_client.enqueue(
+    Mindee::V2::Product::Extraction::Extraction,
     input_source, inference_params
 )
 
@@ -546,8 +548,8 @@ puts response.job.alias
 
 **Note:** You can use both methods!
 
-First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `enqueue_and_get_inference` .\
+First, make sure you've added a webhook ID to the `inference_params` hash.\
+Then, call `enqueue_and_get_result` .\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
@@ -682,10 +684,10 @@ foreach ($jobResponse->job->webhooks as $webhook) {
 
 {% tab title="Ruby" %}
 ```ruby
-# from `enqueue_inference` method (typically for webhook)
+# from `enqueue` method (typically for webhook)
 job_id = response.job.id
 
-# from `enqueue_and_get_inference` method (typically for polling)
+# from `enqueue_and_get_result` method (typically for polling)
 # job_id = response.inference.job.id
 
 job_response = mindee_client.get_job(job_id)
