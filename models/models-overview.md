@@ -9,7 +9,7 @@ icon: print-magnifying-glass
 
 A **Model** in the Mindee platform is a configurable and reusable template designed to process documents. In technical terms, a model performs an inference on files uploaded to Mindee.
 
-Various types of models are available, from simple text recognition to data extraction and classification. All model use Optical Character Recognition (OCR) combined with sophisticated data processing techniques.
+Various types of models are available, from simple text recognition to data extraction and classification. Models use Optical Character Recognition (OCR) combined with sophisticated data processing techniques.
 
 Models allow you to automate the process of turning unstructured document images into actionable, structured data. They can be tailored to different document types and business needs, ensuring that only the most relevant information is captured for your workflows.
 
@@ -38,5 +38,7 @@ Once a model is created you can test it directly on the platform. You can use yo
 More details in the [live-test.md](live-test.md "mention") section.
 
 ## Changing Settings
+
+Settings control the high-level options of the model, such as storage duration and processing zone.
 
 All options are detailed in the [model-settings.md](model-settings.md "mention") section.

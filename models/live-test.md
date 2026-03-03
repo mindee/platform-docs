@@ -11,7 +11,7 @@ icon: circle-play
 
 ## Overview
 
-The **Live Test** page lets you _interactively test your model_ on real documents and visually inspect the extraction results in one click.
+The **Live Test** page lets you interactively test your model on real documents and visually inspect the extraction results in one click.
 
 It’s the perfect place to debug, validate, and refine your model’s behavior before moving to production.
 
@@ -21,11 +21,11 @@ It’s the perfect place to debug, validate, and refine your model’s behavior 
 * **Interactive document viewer**: Hover, click, and inspect highlighted fields directly on the image. Tooltips show extracted values and metadata in context.
 * **View raw JSON output**: Toggle to display the full JSON response returned by the API, allowing developers to inspect field names, values, coordinates, confidence scores, and nested structures.
 * **Instant visual feedback**: See where each field was extracted directly on the document.
-* **RAG Toggle**: If your have added documents into your RAG database, you can simulate how RAG would influence the output.
+* **RAG Toggle**: If your have added documents into your RAG database, you can preview how RAG would influence the output.
 
 ## Accessing the Live Test Page
 
-The Live Test is available for all Mindee models: extraction, crop, split, classification, ....
+The Live Test is available for all Mindee model types: extraction, crop, split, classification, ....
 
 From your home page on the Mindee platform, simply click on any model.
 
@@ -33,9 +33,10 @@ The first page you see will be the Live Test page.
 
 You can always go back to the Live Test page by clicking on the left-hand model menu.
 
-## How it Works
+## Uploading a File for Testing
 
-1. Upload or drag a document (PDF or image) directly into the interface.
+1. Upload a valid file (PDF or image) directly into the interface.\
+   You can click the "Upload Document" button or drag and drop into the center of the window.
 2. Mindee runs the current version of your model on the document.
 3. The extracted fields appear on the right-hand side, alongside the image preview.
 4. Each field is:
