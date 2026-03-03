@@ -41,7 +41,7 @@ Requires Ruby ≥ 3.0.\
 Simply install the [gem](https://rubygems.org/gems/mindee) using:
 
 ```shell
-gem install mindee -v '~> 4.10'
+gem install mindee -v '~> 4.13'
 ```
 {% endtab %}
 

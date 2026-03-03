@@ -307,16 +307,16 @@ $inferenceParams = new InferenceParameters(
 Only the `model_id` is required.
 
 ```ruby
-inference_params = Mindee::Input::InferenceParameters.new(
+inference_params = {
     # ID of the model, required.
-    'MY_MODEL_ID',
+    model_id: 'MY_MODEL_ID',
     
     # Use an alias to link the file to your own DB.
     # If empty, no alias will be used.
     file_alias: 'MY_ALIAS',
     
     # ... any other options ...
-)
+}
 ```
 {% endtab %}
 
@@ -454,9 +454,9 @@ $inferenceParams = new InferenceParameters(
 Only the `model_id` is required.
 
 ```ruby
-inference_params = Mindee::Input::InferenceParameters.new(
+inference_params = {
     # ID of the model, required.
-    'MY_MODEL_ID',
+    model_id: 'MY_MODEL_ID',
 
     # Options: set to `true` or `false` to override defaults
 
@@ -471,7 +471,7 @@ inference_params = Mindee::Input::InferenceParameters.new(
     confidence: nil,
     
     # ... any other options ...
-)
+}
 ```
 {% endtab %}
 
@@ -623,9 +623,9 @@ $inferenceParams = new InferenceParameters(
 Only the `model_id` is required.
 
 ```ruby
-inference_params = Mindee::Input::InferenceParameters.new(
+inference_params = {
     # ID of the model, required.
-    'MY_MODEL_ID',
+    model_id: 'MY_MODEL_ID',
     
     # Text Context
     text_context: "this is an invoice.",
@@ -634,7 +634,7 @@ inference_params = Mindee::Input::InferenceParameters.new(
     data_schema: "{ ... JSON DATA ... }",
     
     # ... any other options ...
-)
+}
 ```
 {% endtab %}
 
