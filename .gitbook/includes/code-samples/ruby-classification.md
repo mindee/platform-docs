@@ -1,5 +1,5 @@
 ---
-title: sample-code-ruby-crop
+title: sample-code-ruby-classification
 ---
 
 
