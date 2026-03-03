@@ -1,12 +1,13 @@
 ---
+description: >-
+  Mindee provides flexible options to help you manage how and where your
+  document data is processed, stored, and deleted.
 icon: lock
 ---
 
 # Data Processing Policies
 
-Mindee provides flexible options to help you manage how and where your document data is processed, stored, and deleted. This ensures compliance with regional regulations and gives you better control over data retention and privacy.
-
-Below, you’ll find details on the configurable settings you can find **under each Model**:
+The following features help ensure compliance with your regional regulations and allow control over data retention and privacy.
 
 ## Processing Zone
 
@@ -18,9 +19,10 @@ Below, you’ll find details on the configurable settings you can find **under e
 
 ## Best Practices
 
-* **For maximum privacy:** Set a **short Storage Duration** (1–2 hours) and enable **Delete When Fetched**.
-* **For debugging or testing:** Use a longer Storage Duration (up to 24 hours) to allow time to re-check and validate processed results.
-* **For compliance:** Always select the Processing Zone that matches your legal and regulatory requirements.
+* **For testing and setup:** Use a longer Storage Duration (up to 24 hours) to allow time to check and validate processed results. This is particularly useful when setting up a webhook workflow.
+* **For general production use:** Set a relatively short Storage Duration (3-5 hours).
+* **For maximum privacy:** Always enable **Delete When Fetched.** Best to also set a short Storage Duration (1 hour) in case of failed calls (i.e. network failure on GET).
+* **For compliance:** Select the Processing Zone that matches your legal and regulatory requirements.
 
 ### Example Configuration
 

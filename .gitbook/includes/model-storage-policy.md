@@ -15,7 +15,7 @@ This section only applies when sending documents via API call.
 
 Data is automatically deleted as soon as the storage duration expires.
 
-During this time, you may make GET requests to retrieve the payload using its inference ID. After this period, any calls to the inference ID will result in a 404 error.
+During this time, you may make GET requests to retrieve the payload using its inference ID. After this period, any calls to the inference ID or job ID will result in a 404 error.
 
 This setting helps balance between accessibility of results for your workflow and minimizing retention for privacy and compliance.
 
