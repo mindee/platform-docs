@@ -1,16 +1,19 @@
 ---
+description: Officially supported client libraries for integrating the Mindee platform.
 icon: terminal
 ---
 
 # Client Libraries / SDKs
 
-Our client libraries are the preferred way of integrating with the Mindee platform.
+By using the client libraries you'll be able to integrate faster and lower your maintenance costs.
 
 Some useful tools are also provided, for example PDF processing and image compression.
 
 You can use the client libraries to make API requests following the polling and webhook patterns.
 
 All our client libraries are open-source (MIT license) and hosted on [GitHub](https://github.com/mindee).
+
+Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby**, **Java**, **.NET** (C#).
 
 ## Installation Instructions
 
@@ -19,7 +22,7 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 ## Basic Usage
 
 {% hint style="success" %}
-To get started, take a look at the [quick-start.md](quick-start.md "mention")  page.
+To get started, take a look at the [quick-start.md](quick-start.md "mention") page.
 {% endhint %}
 
 ## Usage Details
