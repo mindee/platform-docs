@@ -681,8 +681,9 @@ var inferenceParams = new InferenceParameters(
 
 ## Next Steps
 
-Now that everything is ready to, it's time to send your files to the Mindee servers.
+Now that everything is ready, it's time to send your files to the Mindee servers.
 
-If you're sending a local file, head on over to the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") section for details on the next step.
+For details on the next steps, to process:
 
-If you're sending an URL, head on over to the [send-a-file-or-url.md](send-a-file-or-url.md "mention") section.
+* a local file or raw data ⇒  [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
+* a remote file (URL) ⇒  [load-an-url.md](load-an-url.md "mention")&#x20;
