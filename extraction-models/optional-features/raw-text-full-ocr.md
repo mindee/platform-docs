@@ -36,4 +36,4 @@ We highly recommend using our [client-libraries-sdk](../../integrations/client-l
 
 Specifically for handling the raw text, take a look at the [#raw-text](../../integrations/client-libraries-sdk/process-the-response.md#raw-text "mention") section.
 
-Otherwise, take a look at the [#get-v2-inferences-inference\_id](../../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
+Otherwise, take a look at the [#get-v2-inferences-inference\_id](../../integrations/api-reference/#get-v2-inferences-inference_id "mention") section.

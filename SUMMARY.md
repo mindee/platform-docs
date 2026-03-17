@@ -56,7 +56,12 @@
 * [Polling for Results](integrations/polling-for-results.md)
 * [Webhook Results](integrations/webhooks.md)
 * [Error Handling](integrations/problem-database.md)
-* [Manual Integration](integrations/api-reference.md)
+* [Manual Integration](integrations/api-reference/README.md)
+  * [Extraction Models](integrations/api-reference/extraction-models.md)
+  * [Split Models](integrations/api-reference/split-models.md)
+  * [Crop Models](integrations/api-reference/crop-models.md)
+  * [Classification Models](integrations/api-reference/classification-models.md)
+  * [OCR Models](integrations/api-reference/ocr-models.md)
 
 ## Account Management
 

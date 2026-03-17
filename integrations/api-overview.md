@@ -47,7 +47,7 @@ If you're integrating using a no-code or low-code platform, take a look at the [
 
 ### Manual Integration
 
-If none of the above options fit your requirements, take a look at the [api-reference.md](api-reference.md "mention") section.
+If none of the above options fit your requirements, take a look at the [api-reference](api-reference/ "mention") section.
 
 {% hint style="warning" %}
 **We do not recommend manually integrating**, and cannot provide full support in this case.

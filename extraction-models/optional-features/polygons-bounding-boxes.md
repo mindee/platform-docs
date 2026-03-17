@@ -44,7 +44,7 @@ We highly recommend using our [client-libraries-sdk](../../integrations/client-l
 
 Specifically for handling polygons, take a look at the [#locations](../../integrations/client-libraries-sdk/process-result-fields.md#locations "mention") section.
 
-Otherwise, take a look at the [#get-v2-inferences-inference\_id](../../integrations/api-reference.md#get-v2-inferences-inference_id "mention") section.
+Otherwise, take a look at the [#get-v2-inferences-inference\_id](../../integrations/api-reference/#get-v2-inferences-inference_id "mention") section.
 
 ## Some Use Cases <a href="#use-cases" id="use-cases"></a>
 
