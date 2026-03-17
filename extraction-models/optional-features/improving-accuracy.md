@@ -63,15 +63,17 @@ Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/ap
 
 No, never.
 
-RAG data is only accessible to the users of the organization the model is associated with.
+RAG data is only accessible to the users of the organization that the model belongs to.
 
-Mindee never sells data to 3rd parties, and all storage and retrieval is done on Mindee's servers.
+Mindee never sells data to 3rd parties.
+
+All storage and retrieval of RAG data is done on Mindee's dedicated servers.
 
 ### Does Mindee use my RAG data for training?
 
 No, never.
 
-We only use RAG data internally for debugging, and with your explicit knowledge and consent.
+We only use RAG data internally for debugging or testing, and with your explicit knowledge and consent.
 
 ### How do I benefit from RAG when processing my documents?
 
