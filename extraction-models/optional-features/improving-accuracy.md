@@ -33,14 +33,19 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 
 {% include "../../.gitbook/includes/feature-availability.md" %}
 
-To use RAG on a given Extraction Model, you should click on the RAG tab.\
-\
-This tab allows you to enrich your RAG Database by uploading a document with an unsatisfying behavior.
+### Set Up the RAG Database
 
-You need to annotate the document, ticking the fields you want to be covered by the RAG augmentation on this template, and having the possibility to give additional guidelines using natural language.
+To use RAG on a given Extraction Model, you'll need to first set up the RAG database which will contain your documents and data.
+
+Access the database by clicking on the "Continuous Learning (RAG)" link in the model's configuration section.\
+\
+You can then enrich your RAG database by uploading documents with an unsatisfying behavior.
+
+You need to annotate the document, ticking the fields you want to be covered by the RAG augmentation on this template. You can also add additional guidelines using plain language.
 
 {% hint style="success" %}
-Most of the time, the annotation is sufficient to make the model understand the issue. We recommend using the guideline only when the annotation only didn't solve the problem.
+Most of the time, the annotation is sufficient to make the model understand the issue.\
+We recommend using the guideline only when the annotation doesn't solve the problem.
 {% endhint %}
 
 Once this document is annotated, **be sure to validate it**, and go to the Live test tab.\
@@ -51,11 +56,17 @@ Ideally, pick a document with the same template (another invoice from the same s
 \
 In the future, the documents respecting the same template should be augmented, which should increase a lot the performances on this given template. For other types of documents, the behavior remain the same, which means that RAG is improving the result with no regression on other documents.
 
+### Activate RAG on the Platform
+
+{% include "../../.gitbook/includes/default-optional-features.md" %}
+
+Click on "Data Schema" then "Optional Features" tab. There you can activate the "RAG Processing" feature.
+
 ### Activate RAG via API Calls
 
-Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+If you need finer-grained control over when the feature is activated, you can activate or deactivate when making API calls.
 
-Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
+Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
 ## Frequently Asked Questions
 
@@ -74,7 +85,3 @@ All storage and retrieval of RAG data is done on Mindee's dedicated servers.
 No, never.
 
 We only use RAG data internally for debugging or testing, and with your explicit knowledge and consent.
-
-### How do I benefit from RAG when processing my documents?
-
-When enqueuing a file, simply add `rag=true`

@@ -9,7 +9,7 @@ icon: vector-square
 
 ## Overview
 
-The `polygons` parameter, also commonly referred to as **bounding boxes**, is a feature you can enable in your Models.\
+The **polygons** option, also commonly referred to as **bounding boxes**, is a feature you can enable in your Models.\
 It indicates the precise polygonal area on the document where the value for each extracted field was detected.
 
 * These polygons define the **exact location on the document** containing the extracted data.
@@ -32,7 +32,7 @@ It indicates the precise polygonal area on the document where the value for each
 
 {% include "../../.gitbook/includes/default-optional-features.md" %}
 
-{% @supademo/embed demoId="cmeidsob99f8xh3pybta14v42" url="https://app.supademo.com/demo/cmeidsob99f8xh3pybta14v42" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmeidsob99f8xh3pybta14v42" demoId="cmeidsob99f8xh3pybta14v42" %}
 
 ### Activate Polygons via API Calls
 

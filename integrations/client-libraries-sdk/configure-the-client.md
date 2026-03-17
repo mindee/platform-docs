@@ -90,7 +90,7 @@ In this way there is no need to pass the `apiKey` argument when initializing the
 const mindeeClient = new mindee.Client();
 ```
 
-#### Advanced Usage
+**Advanced Usage**
 
 internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, and when the client is initialized `getGlobalDispatcher` is called.
 
@@ -361,7 +361,7 @@ var inferenceParams = new InferenceParameters(
 
 Enable or disable [optional-features](../../extraction-models/optional-features/ "mention").
 
-{% hint style="info" %}
+{% hint style="warning" icon="money-check-dollar-pen" %}
 Enabling a feature not in your plan will result in a Payment Required error (HTTP 402).
 
 Check the [#feature-comparison](../../account-management/plans.md#feature-comparison "mention") section for more information.
