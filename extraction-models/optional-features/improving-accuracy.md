@@ -59,13 +59,13 @@ Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/ap
 
 ## Frequently Asked Questions
 
-### Is my RAG data shared with other users or 3rd parties?
+### Is my RAG data shared with other users or sold to 3rd parties?
 
 No, never.
 
 RAG data is only accessible to the users of the organization the model is associated with.
 
-Mindee never sells data to 3rd parties for any reason, and all storage and processing is done on Mindee's servers.
+Mindee never sells data to 3rd parties, and all storage and processing is done on Mindee's servers.
 
 ### Does Mindee use my RAG data for training?
 
