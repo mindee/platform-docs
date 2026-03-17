@@ -36,7 +36,7 @@ It indicates the precise polygonal area on the document where the value for each
 
 ### Activate Polygons via API Calls
 
-Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+{% include "../../.gitbook/includes/api-optional-features.md" %}
 
 ## Use the Polygon Result <a href="#example-polygon-bounding-box-data" id="example-polygon-bounding-box-data"></a>
 

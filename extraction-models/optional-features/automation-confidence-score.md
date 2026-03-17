@@ -63,11 +63,11 @@ This color-coding system allows product teams to **highlight uncertainty directl
 
 ### Activate Confidence Scores via API Calls
 
+{% include "../../.gitbook/includes/api-optional-features.md" %}
+
 {% hint style="info" %}
 When the **Automation** feature is not activated, the `confidence` attribute in the response will always be `null`.
 {% endhint %}
-
-Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
 
 ### Using Confidence Scores in Processing
 

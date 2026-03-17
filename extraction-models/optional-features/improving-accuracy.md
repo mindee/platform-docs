@@ -64,9 +64,7 @@ Click on "Data Schema" then "Optional Features" tab. There you can activate the 
 
 ### Activate RAG via API Calls
 
-If you need finer-grained control over when the feature is activated, you can activate or deactivate when making API calls.
-
-Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
+{% include "../../.gitbook/includes/api-optional-features.md" %}
 
 ## Frequently Asked Questions
 

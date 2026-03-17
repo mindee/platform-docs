@@ -28,9 +28,7 @@ This feature is available on all plans.
 
 ### Activate Raw Text via API Calls
 
-Check the [#optional-features-configuration](../../integrations/client-libraries-sdk/configure-the-client.md#optional-features-configuration "mention") section if using our [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention").
-
-Otherwise, take a look at the [#post-v2-inferences-enqueue](../../integrations/api-reference.md#post-v2-inferences-enqueue "mention") section.
+{% include "../../.gitbook/includes/api-optional-features.md" %}
 
 ## Use the Raw Text Result
 
