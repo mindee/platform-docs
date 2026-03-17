@@ -15,7 +15,7 @@ If you would like to download the OpenAPI specification directly, it is availabl
 
 API routes and schemas are organized according to the type of model:
 
-* [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention")
+* [extraction-models.md](extraction-models.md "mention")
 * [split-models.md](split-models.md "mention")
 * [crop-models.md](crop-models.md "mention")
 * [classification-models.md](classification-models.md "mention")
