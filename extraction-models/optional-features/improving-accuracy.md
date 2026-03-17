@@ -59,13 +59,19 @@ Otherwise take a look at the [#post-v2-inferences-enqueue](../../integrations/ap
 
 ## Frequently Asked Questions
 
-### Is my data shared with other users?
+### Is my RAG data shared with other users or 3rd parties?
 
 No, never.
 
-A unique RAG, and thus a unique RAG Database is linked to a unique Model.
+RAG data is only accessible to the users of the organization the model is associated with.
 
-It means the only people who will have access to your RAG data are the users of the organization the model is associated with.
+Mindee never sells data to 3rd parties for any reason, and all storage and processing is done on Mindee's servers.
+
+### Does Mindee use my RAG data for training?
+
+No, never.
+
+We only use RAG data internally for debugging, and with your explicit knowledge and consent.
 
 ### How do I benefit from RAG when processing my documents?
 
