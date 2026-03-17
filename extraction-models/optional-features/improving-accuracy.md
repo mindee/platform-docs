@@ -65,7 +65,7 @@ No, never.
 
 RAG data is only accessible to the users of the organization the model is associated with.
 
-Mindee never sells data to 3rd parties, and all storage and processing is done on Mindee's servers.
+Mindee never sells data to 3rd parties, and all storage and retrieval is done on Mindee's servers.
 
 ### Does Mindee use my RAG data for training?
 
