@@ -42,5 +42,3 @@ console.log(response.inference.toString());
 const crops = response.inference.result.pages;
 ```
 {% endcode %}
-
-Also take a look at the [Processing Results](https://docs.mindee.com/integrations/client-libraries-sdk/quick-start#processing-the-results) documentation.

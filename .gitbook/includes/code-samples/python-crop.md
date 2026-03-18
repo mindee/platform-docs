@@ -44,5 +44,3 @@ print(response.inference)
 crops: list = response.inference.result.crops
 ```
 {% endcode %}
-
-Also take a look at the [Processing Results](https://docs.mindee.com/integrations/client-libraries-sdk/quick-start#processing-the-results) documentation.
