@@ -12,7 +12,7 @@ If your documents have one or several pages and you want to get the most appropr
 {% endhint %}
 
 {% hint style="warning" %}
-If your documents have more than one page, and you need to find the different document types present in the whole file, then [**Split**](split.md) is probably a better utility for your use case.
+If your documents have more than one page, and you need to find the different document types present in the whole file, then [**Split**](split/) is probably a better utility for your use case.
 {% endhint %}
 
 ## Create a Classification Model

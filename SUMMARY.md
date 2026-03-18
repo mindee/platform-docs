@@ -29,7 +29,8 @@
 ## Utility Models
 
 * [Utility Models Overview](utility-models/utility-models-overview.md)
-* [Split](utility-models/split.md)
+* [Split](utility-models/split/README.md)
+  * [Integration](utility-models/split/integration.md)
 * [Crop](utility-models/crop.md)
 * [Classification](utility-models/classification.md)
 * [OCR](utility-models/ocr.md)

@@ -19,7 +19,7 @@ icon: rectangle-vertical-history
 Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 
@@ -28,7 +28,7 @@ Add the class "Other" if you need the model to identify documents that are not o
 
 Your utility is now available in your **Models** tab:
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Here is a step-by-step tutorial that shows you how to properly create a Split Utility : <br>
 

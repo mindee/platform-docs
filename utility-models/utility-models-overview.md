@@ -27,7 +27,7 @@ A creation dialog will appear, allowing you to set initial an configuration for 
 
 More information is available for each model type:
 
-* [split.md](split.md "mention")
+* [split](split/ "mention")
 * [crop.md](crop.md "mention")
 * [classification.md](classification.md "mention")
 * [ocr.md](ocr.md "mention")
