@@ -32,6 +32,6 @@ Coming soon
 {% endtab %}
 
 {% tab title=".NET" %}
-Coming soon
+{% include "../../.gitbook/includes/code-samples/dotnet-split.md" %}
 {% endtab %}
 {% endtabs %}
