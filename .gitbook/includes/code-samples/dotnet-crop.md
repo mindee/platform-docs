@@ -36,6 +36,6 @@ var response = await mindeeClient.EnqueueAndGetResultAsync<CropResponse>(
 System.Console.WriteLine(response.Inference.ToString());
 
 // Access the crop results
-var = response.Inference.Result.Crops;
+var crops = response.Inference.Result.Crops;
 ```
 {% endcode %}
