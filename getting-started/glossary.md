@@ -11,8 +11,9 @@ You will frequently encounter these concepts throughout this documentation as Mi
 * **API**: An API (Application Programming Interface), is an interface that define how applications or devices can connect to and communicate with each other defined by a set of protocols and rules.
 * **Document**: This includes semi-structured documents such as an invoice, receipt, ID document, W9-forms, train-ticket, etc in a PDF or image format.
 * **Data Schema**: A set of fields and their guidelines for data extraction. Associated to a model.
+* **Field**: a single data point to extract from a document. Part of a Data Schema.
 * **Model**: A set of instructions for extracting data from a document. Includes a Data Schema and any optional features.
-* **SDK**: SDK (Software Development Kit) is a set of software development tools developers can use to facilitate the creation of applications.
+* **SDK**: (Software Development Kit) A set of software development tools developers can use to facilitate the creation of applications.
 * **OpenAPI**: A specification that defines a standard, language-agnostic interface for RESTful APIs.
 * **Payload**: A payload refers to data that is submitted to the Mindee server and the data returned by the server when you an API request is made.
 * **Inference**: The processing step where a ML model performs an operation on a file.\
