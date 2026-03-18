@@ -1,0 +1,41 @@
+---
+title: code-sample-dotnet-ocr
+---
+
+Requires .NET ≥ 6.\
+Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0-beta1** or greater.
+
+{% code lineNumbers="true" %}
+```csharp
+using Mindee;
+using Mindee.Input;
+using Mindee.V2;
+using Mindee.V2.Product.Ocr;
+using Mindee.V2.Product.Ocr.Params;
+
+string filePath = "/path/to/the/file.ext";
+string apiKey = "MY_API_KEY";
+string modelId = "MY_MODEL_ID";
+
+// Construct a new client
+Client mindeeClient = new Client(apiKey);
+
+// Set inference parameters
+var productParams = new OcrParameters(
+    modelId: modelId
+);
+
+// Load a file from disk
+var inputSource = new LocalInputSource(filePath);
+
+// Upload the file
+var response = await mindeeClient.EnqueueAndGetResultAsync<OcrResponse>(
+    inputSource, productParams);
+
+// Print a summary of the response
+System.Console.WriteLine(response.Inference.ToString());
+
+// Access the OCR result pages
+var ocrPages = response.Inference.Result.Pages;
+```
+{% endcode %}

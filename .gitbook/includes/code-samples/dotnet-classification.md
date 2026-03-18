@@ -1,0 +1,41 @@
+---
+title: code-sample-dotnet-classification
+---
+
+Requires .NET ≥ 6.\
+Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0-beta1** or greater.
+
+{% code lineNumbers="true" %}
+```csharp
+using Mindee;
+using Mindee.Input;
+using Mindee.V2;
+using Mindee.V2.Product.Classification;
+using Mindee.V2.Product.Classification.Params;
+
+string filePath = "/path/to/the/file.ext";
+string apiKey = "MY_API_KEY";
+string modelId = "MY_MODEL_ID";
+
+// Construct a new client
+Client mindeeClient = new Client(apiKey);
+
+// Set inference parameters
+var productParams = new ClassificationParameters(
+    modelId: modelId
+);
+
+// Load a file from disk
+var inputSource = new LocalInputSource(filePath);
+
+// Upload the file
+var response = await mindeeClient.EnqueueAndGetResultAsync<ClassificationResponse>(
+    inputSource, productParams);
+
+// Print a summary of the response
+System.Console.WriteLine(response.Inference.ToString());
+
+// Access the classification results
+var classification = response.Inference.Result.Classification;
+```
+{% endcode %}
