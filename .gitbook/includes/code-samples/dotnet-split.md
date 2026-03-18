@@ -36,6 +36,6 @@ var response = await mindeeClient.EnqueueAndGetResultAsync<SplitResponse>(
 System.Console.WriteLine(response.Inference.ToString());
 
 // Access the split range results
-var splitRanges = response.Inference.Splits;
+var splitRanges = response.Inference.Result.Splits;
 ```
 {% endcode %}
