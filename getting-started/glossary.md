@@ -8,6 +8,7 @@ This glossary introduces common Mindee terminology.
 
 You will frequently encounter these concepts throughout this documentation as Mindee is centered around them.
 
+* **Annotation** - These are the labels used to train custom APIs; in other words, it refers to labels produced and provided to our API when the training Interface is used
 * **API**: An API (Application Programming Interface), is an interface that define how applications or devices can connect to and communicate with each other defined by a set of protocols and rules.
 * **Document**: This includes semi-structured documents such as an invoice, receipt, ID document, W9-forms, train-ticket, etc in a PDF or image format.
 * **Data Schema**: A set of fields and their guidelines for data extraction. Associated to a model.
