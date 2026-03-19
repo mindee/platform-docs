@@ -14,11 +14,11 @@ Use the client library to send the file to your OCR Model and return the result.
 
 {% tabs %}
 {% tab title="Python" %}
-{% include "../../.gitbook/includes/code-samples/python-split.md" %}
+{% include "../../.gitbook/includes/code-samples/python-ocr.md" %}
 {% endtab %}
 
 {% tab title="Node.js" %}
-{% include "../../.gitbook/includes/code-samples/javascript-split.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-ocr.md" %}
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -26,14 +26,14 @@ Coming soon
 {% endtab %}
 
 {% tab title="Ruby" %}
-{% include "../../.gitbook/includes/code-samples/ruby-split.md" %}
+{% include "../../.gitbook/includes/code-samples/ruby-ocr.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
-{% include "../../.gitbook/includes/code-samples/java-split.md" %}
+{% include "../../.gitbook/includes/code-samples/java-ocr.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/dotnet-split.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-ocr.md" %}
 {% endtab %}
 {% endtabs %}

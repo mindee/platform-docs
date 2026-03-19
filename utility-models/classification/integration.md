@@ -14,11 +14,11 @@ Use the client library to send the file to your Classification Model and return 
 
 {% tabs %}
 {% tab title="Python" %}
-{% include "../../.gitbook/includes/code-samples/python-split.md" %}
+{% include "../../.gitbook/includes/code-samples/python-classification.md" %}
 {% endtab %}
 
 {% tab title="Node.js" %}
-{% include "../../.gitbook/includes/code-samples/javascript-split.md" %}
+{% include "../../.gitbook/includes/code-samples/javascript-classification.md" %}
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -26,14 +26,14 @@ Coming soon
 {% endtab %}
 
 {% tab title="Ruby" %}
-{% include "../../.gitbook/includes/code-samples/ruby-split.md" %}
+{% include "../../.gitbook/includes/code-samples/ruby-classification.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
-{% include "../../.gitbook/includes/code-samples/java-split.md" %}
+{% include "../../.gitbook/includes/code-samples/java-classification.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/dotnet-split.md" %}
+{% include "../../.gitbook/includes/code-samples/dotnet-classification.md" %}
 {% endtab %}
 {% endtabs %}
