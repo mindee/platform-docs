@@ -27,7 +27,7 @@ From the **Billing** tab, you can:
 
 * View your current subscription
 * Switch billing frequency (monthly or annual)
-* Access your Stripe account settings
+* Access your Stripe customer portal
 
 ### Upgrading or Changing Plans
 
@@ -37,7 +37,11 @@ To change your plan:
 2. Choose a new plan under the available options
 3. Click on **Downgrade** or **Upgrade**
 
-## What You Can Do from Stripe
+## Stripe Customer Portal
+
+To access your Stripe customer portal, click on the "Manage Subscription" button.
+
+<figure><img src="../.gitbook/assets/billing-manage-subscription.png" alt="Manage Subscription button - access Stripe customer portal" width="563"><figcaption></figcaption></figure>
 
 ### Invoices
 
