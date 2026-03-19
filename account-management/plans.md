@@ -1,12 +1,11 @@
 ---
-description: >-
-  Mindee offers flexible subscription plans to suit individual developers,
-  growing teams, and enterprise-scale organizations.  Choose the plan that best
-  fits your volume, support, and automation needs.
+description: Pricing plans & feature comparison
 icon: money-check-dollar-pen
 ---
 
 # Plans
+
+Mindee offers flexible subscription plans to suit individual developers, growing teams, and enterprise-scale organizations. Choose the plan that best fits your volume, support, and automation needs.
 
 {% hint style="success" %}
 All plans include access to our AI agent to build custom document parsers.
@@ -14,14 +13,33 @@ All plans include access to our AI agent to build custom document parsers.
 
 ## Plan Overview & Pricing
 
-| Plan       | Monthly price (with annual billing) | Annual pages included | Overage rate    |
-| ---------- | ----------------------------------- | --------------------- | --------------- |
-| Starter    | €44 / month                         | 6,000 pages           | €0.05 per page  |
-| Pro        | €179 / month                        | 30,000 pages          | €0.04 per page  |
-| Business   | €584 / month                        | 120,000 pages         | €0.035 per page |
-| Enterprise | Custom pricing                      | +250,000 pages        | Custom          |
+| Plan       | Monthly price (with annual billing) | Annual pages included | Overage rate     |
+| ---------- | ----------------------------------- | --------------------- | ---------------- |
+| Starter    | €44 / month                         | 6,000 pages           | €0.05 per page   |
+| Pro        | €179 / month                        | 30,000 pages          | €0.04 per page   |
+| Business   | €584 / month                        | 120,000 pages         | €0.035 per page  |
+| Enterprise | Custom pricing                      | +250,000 pages        | _Custom pricing_ |
+
+* All plans are available in **monthly** or **annual** billing.
+* **Annual plans save 10%** compared to monthly pricing.
+* You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
+* Overage charges are calculated automatically based on your plan’s rate.
 
 More information in the [billing.md](billing.md "mention") section.
+
+## Selecting the Right Plan <a href="#h_bbb10a2ad9" id="h_bbb10a2ad9"></a>
+
+When choosing between plans, it's essential to align your selection with your processing volume. Startups with minimal daily usage can start small, while enterprises with consistent heavy usage should consider higher-tier plans for scalability and technical support.
+
+For example, the Starter Plan is ideal for businesses with limited API requirements, while teams handling higher daily volumes might benefit from the Business Plan. Consider your usage volume to balance cost and efficiency effectively.
+
+Start with the Starter Plan if you're processing fewer than 100 pages per day. For higher API demands, such as 300 pages daily, the Business Plan can provide value and cost predictability.
+
+{% hint style="info" %}
+We offer a 14-day free trial including 200 free pages.
+
+Reach out if you would like to activate some extra features to test!
+{% endhint %}
 
 ## Feature Comparison
 
@@ -49,13 +67,6 @@ Some features are only applicable to extraction models.
 ## Plan Details
 
 <table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>200 pages or 14 days</li><li>Access to all model types</li><li>Access to <a href="../extraction-models/optional-features/">Optional Features</a></li><li>API integration</li><li>Access to the full documentation</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>6,000 pages/year</li><li>Access to all model types</li><li>Unlimited models</li><li>Community support</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li>No user management</li><li>RAG not included</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 pages/year</li><li>Chat support</li><li>Multi-user access</li><li><a href="../extraction-models/optional-features/improving-accuracy.md">RAG</a>: 20 documents</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><strong>Business</strong></td><td><ul><li>Everything in Pro</li><li>120,000 pages/year</li><li>Unlimited members</li><li>Priority chat support</li><li><a href="../extraction-models/optional-features/improving-accuracy.md">RAG</a>: unlimited documents</li><li>Full feature access including localization</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li></ul></td><td><a href="../.gitbook/assets/business-plan-mindee.png">business-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium on-boarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
-
-## Billing & Upgrades
-
-* All plans are available in **monthly** or **annual** billing.
-* **Annual plans save 10%** compared to monthly pricing.
-* You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
-* Overage charges are calculated automatically based on your plan’s rate.
 
 [^1]: Build your own document parsers by describing the fields you need
 
