@@ -22,7 +22,7 @@ Use the client library to send the file to your Classification Model and return 
 {% endtab %}
 
 {% tab title="PHP" %}
-Coming soon
+{% include "../../.gitbook/includes/code-samples/php-classification.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}

@@ -3,7 +3,7 @@ title: sample-code-php-extraction
 ---
 
 Requires PHP ≥ 8.1\
-Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **2.7.0** or greater.
+Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **2.3.0** or greater.
 
 {% code lineNumbers="true" %}
 ```php
@@ -12,6 +12,7 @@ Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/m
 use Mindee\ClientV2;
 use Mindee\Input\InferenceParameters;
 use Mindee\Input\PathInput;
+use Mindee\Error\MindeeException;
 
 $apiKey = "MY_API_KEY";
 $filePath = "/path/to/the/file.ext";
@@ -42,7 +43,7 @@ $inferenceParams = new InferenceParameters(
 $inputSource = new PathInput($filePath);
 
 // Send for processing using polling
-$response = $mindeeClient->enqueueAndGetResult(
+$response = $mindeeClient->enqueueAndGetInference(
     $inputSource,
     $inferenceParams
 );

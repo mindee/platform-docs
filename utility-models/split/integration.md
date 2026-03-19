@@ -20,7 +20,7 @@ Use the client library to send the file to your Split Model and return the resul
 {% endtab %}
 
 {% tab title="PHP" %}
-Coming soon
+{% include "../../.gitbook/includes/code-samples/php-split.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}

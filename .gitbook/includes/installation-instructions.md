@@ -32,7 +32,7 @@ PHP ≥ 8.3 is recommended.
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
 ```sh
-php composer.phar require "mindee/mindee:>=2.3"
+php composer.phar require "mindee/mindee:>=2.7"
 ```
 {% endtab %}
 
@@ -59,7 +59,6 @@ There are various installation methods, Maven, Gradle, etc:
 {% endtab %}
 
 {% tab title=".NET" %}
-Requires .NET ≥ 6.0.\
 .NET ≥ 8.0 is recommended.
 
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using .NET CLI:

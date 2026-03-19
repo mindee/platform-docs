@@ -22,7 +22,7 @@ Use the client library to send the file to your Crop Model and return the result
 {% endtab %}
 
 {% tab title="PHP" %}
-Coming soon
+{% include "../../.gitbook/includes/code-samples/php-crop.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
