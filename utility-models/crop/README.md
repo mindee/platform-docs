@@ -24,7 +24,7 @@ The Crop model is particularly useful when :&#x20;
 
 _Don't forget to add the class "Other" if you need the model to identify documents that are not one of the precedent document types._&#x20;
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 
@@ -33,7 +33,7 @@ _Don't forget to add the class "Other" if you need the model to identify documen
 
 Your utility is now available in your **Models** tab:
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 Here is a step-by-step tutorial that shows you how to properly create a Crop Utility :&#x20;
 
