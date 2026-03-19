@@ -60,3 +60,17 @@ When creating an API key, make sure to copy the key and store it somewhere safe.
 You can then to use it when making API calls.
 
 Take a look at the [#initialize-the-mindee-client](client-libraries-sdk/configure-the-client.md#initialize-the-mindee-client "mention") section for more details.
+
+## Best practices for API keys
+
+1. Keeping your API keys in your environment variables is a good and safe practice.
+2. Don’t store your API key directly in your code or in your front-end.
+3. Avoid exposing your secret API keys on GitHub, on the client-side, or in any other location that is open to the public.
+4. If you have any doubt your API Key leaked, delete it and replace it as soon as possible.
+5.  Periodically change your API keys
+
+    To do so:
+
+    1. Create a new API key;
+    2. Update your application with the new API key;
+    3. Delete the old API key.
