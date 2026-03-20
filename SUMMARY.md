@@ -25,18 +25,19 @@
   * [Confidence Score and Accuracy Boost](extraction-models/optional-features/automation-confidence-score.md)
   * [Polygons (Bounding Boxes)](extraction-models/optional-features/polygons-bounding-boxes.md)
   * [Raw Text (Full OCR)](extraction-models/optional-features/raw-text-full-ocr.md)
+* [Integration](extraction-models/integration.md)
 
 ## Utility Models
 
 * [Utility Models Overview](utility-models/utility-models-overview.md)
 * [Split Model](utility-models/split/README.md)
-  * [Integration](utility-models/split/integration.md)
+  * [Split Model Integration](utility-models/split/integration.md)
 * [Crop Model](utility-models/crop/README.md)
-  * [Integration](utility-models/crop/integration.md)
+  * [Crop Model Integration](utility-models/crop/integration.md)
 * [Classification Model](utility-models/classification/README.md)
-  * [Integration](utility-models/classification/integration.md)
+  * [Classification Model Integration](utility-models/classification/integration.md)
 * [OCR Model](utility-models/ocr/README.md)
-  * [Integration](utility-models/ocr/integration.md)
+  * [OCR Model Integration](utility-models/ocr/integration.md)
 
 ## Integrations
 

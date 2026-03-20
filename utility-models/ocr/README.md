@@ -3,7 +3,9 @@ description: Automatically extract the raw text from each page of a document.
 icon: text
 ---
 
-# OCR
+# OCR Model
+
+A file sent to the OCR Model may have any number of pages, [within limits](../../integrations/technical-limitations.md#file-limits).&#x20;
 
 ## Create an OCR Model
 
@@ -21,4 +23,4 @@ Here is a step-by-step tutorial that shows you how to properly create an OCR uti
 
 ## Integration
 
-Once your OCR model is created and tested, integration documentation is provided in the "Documentation" page.
+Once your OCR model is created and tested, integration documentation is provided in the "Documentation" page, or here: [integration.md](integration.md "mention")

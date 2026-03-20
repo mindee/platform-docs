@@ -5,14 +5,24 @@ description: >-
 icon: tag
 ---
 
-# Classification
+# Classification Model
 
-{% hint style="success" %}
-If your documents have one or several pages and you want to get the most appropriate class for the whole document, **Classify** is definitely your best option.&#x20;
-{% endhint %}
+## Use Cases
 
-{% hint style="warning" %}
-If your documents have more than one page, and you need to find the different document types present in the whole file, then [**Split**](../split/) is probably a better utility for your use case.
+Process a single document sent in a single file. The classifier looks at all pages of the document in order to identify its type.
+
+Some common examples:
+
+* You have multiple types of files in your workflow input, with different business rules
+* You want to identify the region or language of documents
+
+A file sent to the Classification Model may have any number of pages, [within limits](../../integrations/technical-limitations.md#file-limits).
+
+{% hint style="info" %}
+If there is a high possibility of having multiple documents within the same file, use:
+
+* [split](../split/ "mention") ⇒ multiple documents in the same file
+* [crop](../crop/ "mention") ⇒ multiple documents on the same page
 {% endhint %}
 
 ## Create a Classification Model
@@ -21,11 +31,9 @@ If your documents have more than one page, and you need to find the different do
 2. Scroll to the **Document Utilities** section, click on **Classify.**
 3. A pop-up will appear, allowing you to enter the classes you want. Most of the time, you'll use one possible document type per class.\
    \
-   &#xNAN;_&#x45;xample: If the files you are receiving may contain invoices, receipts, and driving licenses you may select the three classes "INVOICES", "IDENTITY DOCUMENTS", "CONTRACTS"._
+   For example, f the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICES`, `IDENTITY DOCUMENTS`, `CONTRACTS`.
 
-{% hint style="info" %}
-Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
-{% endhint %}
+{% include "../../.gitbook/includes/utilities-other-class.md" %}
 
 <figure><img src="../../.gitbook/assets/image (11).png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -42,4 +50,6 @@ Here is a step-by-step tutorial that shows you how to properly create a Classify
 
 ## Integration
 
-Once your Classification model is created and tested, integration documentation is provided in the "Documentation" page.
+{% include "../../.gitbook/includes/utilities-class-names.md" %}
+
+Once your Classification model is created and tested, integration documentation is provided in the "Documentation" page, or here: [integration.md](../crop/integration.md "mention").

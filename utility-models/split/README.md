@@ -16,8 +16,10 @@ Some common examples, where a single PDF contains:
 * Several different invoices
 * A mix of invoices, receipts, and bank statements
 * The person's driver license, vehicle registration, insurance
-* The front and back of an ID card
+* Front and back of an ID card, each on a separate page
 * The same type of document, but from different regions or languages
+
+A file sent to the Split Model may have any number of pages, [within limits](../../integrations/technical-limitations.md#file-limits).
 
 ## Create a Split Model
 
@@ -25,11 +27,9 @@ Some common examples, where a single PDF contains:
 2. Scroll to the **Document Utilities** section, click on **Split.**
 3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the documents you want to process.\
    \
-   For example, if the files you are receiving may contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVING LICENSE`.&#x20;
+   For example, if the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVING LICENSE`.
 
-{% hint style="info" icon="lightbulb" %}
-Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
-{% endhint %}
+{% include "../../.gitbook/includes/utilities-other-class.md" %}
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -48,4 +48,6 @@ Here is a step-by-step tutorial that shows you how to properly create a Split Ut
 
 ## Integration
 
-Once your Split model is created and tested, integration documentation is provided in the "Documentation" page.
+{% include "../../.gitbook/includes/utilities-class-names.md" %}
+
+Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [integration.md](integration.md "mention").

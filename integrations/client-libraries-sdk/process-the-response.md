@@ -347,7 +347,15 @@ public void HandleResponse(InferenceResponse response)
 {% endtab %}
 {% endtabs %}
 
-## Results
+## Extraction Results
+
+{% hint style="info" %}
+The following section only applies to **Extraction Models**.
+
+
+
+We are currently re-organizing the documentation, please bear with us!
+{% endhint %}
 
 ### Fields
 

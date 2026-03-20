@@ -5,24 +5,29 @@ description: >-
 icon: crop-simple
 ---
 
-# Crop
+# Crop Model
 
-## Overview
+## Use Cases
 
-The Crop model is particularly useful when :&#x20;
+Process different documents sent on the same page (usually a photo). The result has both the location (page and coordinates) and the class for each document identified, allowing for complex workflows.
 
-* dealing with documents that may contain several documents (receipts for instance) within each page
-* searching to remove the background from a document
+A file sent to the Crop Model may have any number of pages, [within limits](../../integrations/technical-limitations.md#file-limits). Use the page index in the results to identify on which page the document was found.
+
+Some common examples:
+
+* Single photo of a bunch of receipts on the table
+* Front and back of an ID card, each on the same PDF page
+* Remove the background from all documents in a multi-page PDF
 
 ## Create a Crop Model
 
 1. To create a Crop utility, click on **Models**, and then click on **Create your document AI model**.
 2. Scroll to the **Document Utilities** section, click on **Crop.**
-3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the pages you want to process. \
+3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the pages you want to process.\
    \
-   &#xNAN;_&#x45;xample: If the files you are receiving may contain ID cards and passports, you may select the three classes :_ _"ID Card Front", "ID Card Back", "Passport"._&#x20;
+   For example, if the files you are processing contain ID cards and passports, set the classes as: `ID Card Front`, `ID Card Back`, `Passport`.
 
-_Don't forget to add the class "Other" if you need the model to identify documents that are not one of the precedent document types._&#x20;
+{% include "../../.gitbook/includes/utilities-other-class.md" %}
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -40,5 +45,7 @@ Here is a step-by-step tutorial that shows you how to properly create a Crop Uti
 {% @supademo/embed demoId="cmlrtp7mk0u531189vkn2azqr" url="https://app.supademo.com/demo/cmlrtp7mk0u531189vkn2azqr" %}
 
 ## Integration
+
+{% include "../../.gitbook/includes/utilities-class-names.md" %}
 
 Once your Crop model is created and tested, integration documentation is provided in the "Documentation" page.
