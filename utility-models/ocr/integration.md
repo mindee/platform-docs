@@ -1,6 +1,8 @@
+---
+description: Integrate an OCR Model.
+---
+
 # Integration
-
-
 
 ## Install the Client Library
 

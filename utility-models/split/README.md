@@ -5,7 +5,18 @@ description: >-
 icon: rectangle-vertical-history
 ---
 
-# Split
+# Split Model
+
+## Use Cases
+
+Process a bundle of different documents sent in the same file.
+
+Some common examples, where a single PDF contains:
+
+* Several different invoices
+* A mix of invoices, receipts, and a bank statement
+* The person's driver license, vehicle registration, insurance
+* The front and back of an ID card
 
 ## Create a Split Model
 

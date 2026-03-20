@@ -27,7 +27,7 @@ A creation dialog will appear, allowing you to set initial an configuration for 
 
 More information is available for each model type:
 
-* [split](split/ "mention")
-* [crop](crop/ "mention")
-* [classification](classification/ "mention")
-* [ocr](ocr/ "mention")
+* [split](split/ "mention") ⇒ find documents in a multi-page file
+* [crop](crop/ "mention") ⇒ find documents on a single page
+* [classification](classification/ "mention") ⇒ identify file contents&#x20;
+* [ocr](ocr/ "mention")⇒ structured text extraction

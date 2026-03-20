@@ -29,13 +29,13 @@
 ## Utility Models
 
 * [Utility Models Overview](utility-models/utility-models-overview.md)
-* [Split](utility-models/split/README.md)
+* [Split Model](utility-models/split/README.md)
   * [Integration](utility-models/split/integration.md)
-* [Crop](utility-models/crop/README.md)
+* [Crop Model](utility-models/crop/README.md)
   * [Integration](utility-models/crop/integration.md)
-* [Classification](utility-models/classification/README.md)
+* [Classification Model](utility-models/classification/README.md)
   * [Integration](utility-models/classification/integration.md)
-* [OCR](utility-models/ocr/README.md)
+* [OCR Model](utility-models/ocr/README.md)
   * [Integration](utility-models/ocr/integration.md)
 
 ## Integrations

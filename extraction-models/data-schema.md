@@ -6,11 +6,15 @@ icon: database
 
 ## Overview
 
-An Extraction Data Schema is a type of structured data that helps the system identify which data points to extract from specific documents.
+An **Extraction Data Schema** defines which data should be extracted, and in what way, from documents sent to the model.
 
-A Data Schema guides the system on the technical processes required and ensures the extracted data is formatted for easy access by the user.\
+You can think of the Data Schema as a map to the documents you send to the model for extraction.
+
+This map includes which data to extract, how to format the data, pitfalls to avoid, etc.\
 \
-The Data Schema is composed of a certain number of Fields (or data points), each with a type and an example.
+To do this, the Data Schema is composed of Fields (or data points), each field having its own configuration.
+
+In this way the Data Schema is the foundation of your model. All other features will use and depend on the Data Schema.
 
 {% hint style="info" icon="lightbulb" %}
 Use the [live-test.md](../models/live-test.md "mention") when working on your Data Schema to quickly validate changes.

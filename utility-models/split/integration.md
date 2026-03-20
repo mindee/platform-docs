@@ -1,3 +1,7 @@
+---
+description: Integrate a Split Model.
+---
+
 # Integration
 
 ## Install the Client Library
