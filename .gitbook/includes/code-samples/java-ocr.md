@@ -5,7 +5,6 @@ title: code-sample-java-ocr
 Requires Java ≥ 8. Java ≥ 11 recommended.\
 Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.43.0** or greater.
 
-{% code lineNumbers="true" %}
 ```java
 import com.mindee.MindeeClientV2;
 import com.mindee.input.LocalInputSource;
@@ -50,4 +49,3 @@ public class SimpleMindeeClientV2 {
   }
 }
 ```
-{% endcode %}

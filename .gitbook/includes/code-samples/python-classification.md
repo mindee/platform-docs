@@ -44,3 +44,5 @@ print(response.inference)
 classification: str = response.inference.result.classification.document_type
 ```
 {% endcode %}
+
+Also take a look at the [Processing Results](https://docs.mindee.com/integrations/client-libraries-sdk/quick-start#processing-the-results) documentation.

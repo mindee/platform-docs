@@ -51,3 +51,11 @@ Here is a step-by-step tutorial that shows you how to properly create a Split Ut
 {% include "../../.gitbook/includes/utilities-class-names.md" %}
 
 Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [integration.md](integration.md "mention").
+
+## Frequently Asked Questions
+
+### Does the Split return the split files, or only indexes?
+
+At the moment the Split will return page indexes for each split.
+
+We are in the process of [adding crop extraction support to the SDKs](https://feedback.mindee.com/p/add-image-extraction-to-crop).
