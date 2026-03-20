@@ -9,22 +9,23 @@ icon: rectangle-vertical-history
 
 ## Use Cases
 
-Process a bundle of different documents sent in the same file.
+Process a bundle of different documents sent in the same file. The result has both the page range and the class for each document identified, allowing for complex workflows.
 
 Some common examples, where a single PDF contains:
 
 * Several different invoices
-* A mix of invoices, receipts, and a bank statement
+* A mix of invoices, receipts, and bank statements
 * The person's driver license, vehicle registration, insurance
 * The front and back of an ID card
+* The same type of document, but from different regions or languages
 
 ## Create a Split Model
 
 1. To create a Split utility, you need to click on **Models**, and then on **Create your document AI model**.
 2. Scroll to the **Document Utilities** section, click on **Split.**
-3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the documents you want to process. \
+3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the documents you want to process.\
    \
-   &#xNAN;_&#x45;xample: If the files you are receiving may contain invoices, receipts, and driving licenses you may select the three classes "INVOICE", "RECEIPT", "DRIVING LICENSE"._&#x20;
+   For example, if the files you are receiving may contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVING LICENSE`.&#x20;
 
 {% hint style="info" icon="lightbulb" %}
 Add the class "Other" if you need the model to identify documents that are not one of the precedent document types.
