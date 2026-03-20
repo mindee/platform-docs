@@ -3,7 +3,7 @@ title: code-sample-dotnet-crop
 ---
 
 Requires .NET ≥ 6.\
-Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0-beta1** or greater.
+Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0-rc1** or greater.
 
 {% code lineNumbers="true" %}
 ```csharp
