@@ -39,6 +39,6 @@ const response = await mindeeClient.enqueueAndGetResult(
 console.log(response.inference.toString());
 
 // Access the result OCR pages
-const crops = response.inference.result.pages;
+const pages = response.inference.result.pages;
 ```
 {% endcode %}
