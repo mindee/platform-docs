@@ -2,7 +2,7 @@
 title: code-sample-dotnet-ocr
 ---
 
-Requires .NET ≥ 6.\
+.NET ≥ 8.0 is recommended.\
 Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0-rc1** or greater.
 
 {% code lineNumbers="true" %}
