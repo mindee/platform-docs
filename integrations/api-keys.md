@@ -30,7 +30,7 @@ API Keys, unlike tokens, have an unlimited lifetime and must be manually revoked
 Or, click this button:\
 <a href="https://app.mindee.com/settings?tab=api-keys" class="button primary">Go to API Keys</a>
 
-## Key Creation
+## API Key Creation
 
 Before using the API, you'll need to create an API key.
 
@@ -50,7 +50,7 @@ As a security precaution, you will **not** be able to retrieve the key after cre
 
 Your key is now ready for use.
 
-## Key Revocation/Deletion
+## API Key Revocation/Deletion
 
 You can revoke a key at any time by deleting it.
 
