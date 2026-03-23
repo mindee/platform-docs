@@ -50,6 +50,7 @@ Single page documents with few fields.
 * Healthcare cards
 * Tickets, boarding passes
 * Envelopes, packages
+* Simple forms
 
 ### Average
 
@@ -60,7 +61,8 @@ Multiple page documents with **no** nested objects.
 * Most receipts
 * Single page invoices
 * Most bills of lading
-* Most business contracts
+* Single-page government forms
+* Most résumés, CVs
 
 ### Slower
 
@@ -69,5 +71,6 @@ Multiple page documents with nested objects and small text.
 * Very long receipts with many items and small text (i.e. long list of groceries for the week)
 * Invoices with more than 10 pages, each page having many items
 * Monthly bank statements, especially when over 10 pages
+* Complex, multi-page government forms
 
 Whenever possible, [remove any unnecessary pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages) before uploading the document.
