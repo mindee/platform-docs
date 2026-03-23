@@ -11,8 +11,33 @@ We **do not recommend** using the Mindee API directly in an application running 
 
 Users will be **trivially** able to intercept the API Key used for the Mindee requests, and impersonate your account.
 
-Our official guideline is to **always** pass your user requests through a server which you control.\
+Our official guideline for Web Applications is to **always** pass your user requests through a server which you control.\
 Not only will this prevent leakage of sensitive data, it will allow you to much more easily diagnose any issues your users may have.
+
+{% hint style="info" %}
+**In short:&#x20;**_**never**_**&#x20;do this**. It will only cause suffering.
+{% endhint %}
+
+## Usage in Mobile Applications
+
+We **do not recommend** using the Mindee API directly in an application running in the final user's mobile device.
+
+Users may be able to obtain your API key from the device.
+
+We recommend cycling through API keys at regular intervals. Depending on your application's setup, it could be problematic to update the API Keys on the device.
+
+Potentially, users interact with the Mindee service outside of your control. This can lead to unexpected charges to your account.
+
+Our official guideline for Mobile Applications is to **strongly prefer** passing your user requests through a server which you control. It will allow you to much more easily diagnose any issues your users may have. You'll also benefit from increased security and control.
+
+Possible exceptions:
+
+* Usage in internal applications on devices/environments you control
+* The API Key is easily revocable on the device, and _never_ user-accessible
+
+{% hint style="info" %}
+**In short: avoid if at all possible**. Only use if you really need it and know what you're doing.
+{% endhint %}
 
 ## Guidelines For Uploading Files
 
@@ -46,3 +71,7 @@ It is best to avoid very low-resolution images, if possible.
 ### **Keep the aspect ratio**
 
 Never change the original aspect ratio. Doing so will create distortions and degrade the performance of the OCR.
+
+### Use Text PDFs
+
+Text (or native) PDFs are easier and faster to process. In addition, using a text PDF will provide better accuracy than a scanned (or image) PDF.
