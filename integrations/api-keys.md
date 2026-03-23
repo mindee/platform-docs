@@ -27,7 +27,7 @@ API Keys, unlike tokens, have an unlimited lifetime and must be manually revoked
 2. On the left-hand menu, click "<i class="fa-gear">:gear:</i> **Settings**"
 3. In the Settings page, click on the "**API Keys**" tab.
 
-Or, click the button below:\
+Or, click this button:\
 <a href="https://app.mindee.com/settings?tab=api-keys" class="button primary">Go to API Keys</a>
 
 ## Key Creation
