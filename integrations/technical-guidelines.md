@@ -73,5 +73,5 @@ Possible exceptions:
 * The API Key is easily revocable on the device, and _never_ user-accessible
 
 {% hint style="info" %}
-**In short: avoid if at all possible**. Only use if you really need it and know what you're doing.
+**In short: avoid if at all possible**. Only use if you really need it and understand the risks involved.
 {% endhint %}
