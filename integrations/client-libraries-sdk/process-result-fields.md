@@ -281,7 +281,7 @@ The sub-fields as a key-value mapping type (Python `dict`, Java `HashMap`, etc).
 
 Accessing a sub-field is done via its name in the Data Schema.
 
-Each sub-field will be a [#single-value-field-simplefield](process-result-fields.md#single-value-field-simplefield "mention").
+Each sub-field will be a [#single-value-field-simplefield](process-result-fields.md#single-value-field-simplefield "mention")or a [#listfield-list-of-fields](process-result-fields.md#listfield-list-of-fields "mention").
 
 {% tabs %}
 {% tab title="Python" %}
