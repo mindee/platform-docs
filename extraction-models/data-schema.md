@@ -50,9 +50,9 @@ An example of the field types for a basic invoice extraction Data Schema:
 
 ## Global Guidelines
 
-In addition to field guidelines, a global guideline can be used in your Data Schema.
+In addition to individual field guidelines, a global guideline can be used in your Data Schema.
 
-The guideline text will apply to all or some fields, depending on your instructions.
+The global guideline text will apply to all or some fields, depending on your instructions.
 
 You may put different guidelines in the text, separate each guideline with a new line.
 
@@ -88,9 +88,9 @@ It clearly tells the AI to get only the name, and of the invoice supplier.
 
 :white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
 
-:warning:`supplier` might work but is imprecise: which information about the supplier do you need?
+:warning: `supplier` might work but is imprecise: which information about the supplier do you need?
 
-:warning:`company_name` might work but is imprecise: we know you need the name of the company, but we don't know if company stands for supplier or customer?
+:warning: `company_name` might work but is imprecise: we know you need the name of the company, but we don't know if company stands for supplier or customer?
 
 :x: `company` will likely not work as expected: we do not know neither which information you need nor which company is concerned.
 
