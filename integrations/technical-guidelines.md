@@ -52,7 +52,7 @@ Our official guideline for Web Applications is to **always** pass your user requ
 Not only will this prevent leakage of sensitive data, it will allow you to much more easily diagnose any issues your users may have.
 
 {% hint style="info" %}
-**In short: **__never__ do this**. It will only cause suffering.
+**In short:&#x20;**_**never**_**&#x20;do this**. It will only cause suffering.
 {% endhint %}
 
 ## Usage in Mobile Applications
