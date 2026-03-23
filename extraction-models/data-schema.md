@@ -59,10 +59,10 @@ You may put different guidelines in the text, separate each guideline with a new
 Use global guidelines when you want to:
 
 * Generalize instructions to several specific fields. For example:
-  * "Number fields related to amounts should always have 3 decimal places."
-  * "Country fields should return the ISO alpha-3 code of the country."
+  * _"Number fields related to amounts should always have 3 decimal places."_
+  * _"Country fields should return the ISO alpha-3 code of the country."_
 * Provide general instructions or context for all fields. For example:
-  * "Ensure ASCII compliance by removing all diacritics from return values."
+  * _"Ensure ASCII compliance by removing all diacritics from return values."_
 
 ## Performance Optimization
 
