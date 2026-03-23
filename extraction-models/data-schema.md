@@ -42,11 +42,27 @@ In some cases, there can be duplicate items, for example when the same value app
 Enable "Filter out duplicates from the list of items" to fix this.
 {% endhint %}
 
-## **Example**
+## **Field Examples**
 
 An example of the field types for a basic invoice extraction Data Schema:
 
 <table><thead><tr><th>Field</th><th width="203.5">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes[0].Rate</em></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes[0].Base</em></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes[0].Amount</em></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
+
+## Global Guidelines
+
+In addition to field guidelines, a global guideline can be used in your Data Schema.
+
+The guideline text will apply to all or some fields, depending on your instructions.
+
+You may put different guidelines in the text, separate each guideline with a new line.
+
+Use global guidelines when you want to:
+
+* Generalize instructions to several specific fields. For example:
+  * "Number fields related to amounts should always have 3 decimal places."
+  * "Country fields should return the ISO alpha-3 code of the country."
+* Provide general instructions or context for all fields. For example:
+  * "Ensure ASCII compliance by removing all diacritics from return values."
 
 ## Performance Optimization
 
