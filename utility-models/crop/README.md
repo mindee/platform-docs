@@ -49,11 +49,3 @@ Here is a step-by-step tutorial that shows you how to properly create a Crop Uti
 {% include "../../.gitbook/includes/utilities-class-names.md" %}
 
 Once your Crop model is created and tested, integration documentation is provided in the "Documentation" page.
-
-## Frequently Asked Questions
-
-### Does the Crop return the cropped image(s), or only coordinates?
-
-At the moment the Crop will return coordinates.
-
-We are in the process of [adding crop extraction support to the SDKs](https://feedback.mindee.com/p/add-image-extraction-to-crop).

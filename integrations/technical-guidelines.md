@@ -1,8 +1,9 @@
 ---
+description: Technical guidelines for an optimal integration.
 icon: circle-info
 ---
 
-# Technical Guidelines
+# Best Technical Practices
 
 ## Usage in Web Applications
 

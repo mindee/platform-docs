@@ -55,7 +55,7 @@
   * [n8n Workflows](integrations/no-code-integrations/n8n-workflows.md)
   * [Zapier Zaps](integrations/no-code-integrations/zapier-zaps.md)
 * [API Keys](integrations/api-keys.md)
-* [Technical Guidelines](integrations/technical-guidelines.md)
+* [Best Technical Practices](integrations/technical-guidelines.md)
 * [Technical Limitations](integrations/technical-limitations.md)
 * [Response Times](integrations/response-times.md)
 * [Polling for Results](integrations/polling-for-results.md)
