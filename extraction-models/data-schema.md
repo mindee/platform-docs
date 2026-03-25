@@ -176,6 +176,22 @@ A simpler, better version would be:
 
 > Use the value of "customer invoice number" if "order number" is missing in the document.
 
+### Remove Ambiguity with Extra Fields
+
+In some cases, it can be beneficial to add extra fields you don't actually need in order to remove ambiguity on the data you do need.
+
+Let's say you are processing invoices, and need to extract the "Reference Number". When processing the invoices, you notice that, sometimes, the "Order Number" is picked up as the reference number.
+
+A first logical step would be to add a guideline, something like _"NEVER use the 'Order Number' to populate this field"_. While this should work in most cases, the distinction between a Reference and Order is may not be perfectly clear to the model.
+
+Adding more text, more detailed information is potentially [counter-productive](data-schema.md#less-is-more).
+
+A potential fix would be to add the "Reference Number" field in your Data Schema, in addition to the "Order Number" field. This way the ambiguity is lifted, it is now very clear to the model that these are separate data points.
+
+In your data processing flow, simply ignore the extra field.
+
+As a reminder, there is no additional cost to you for the number of fields in the Data Schema.
+
 ## Technical Limitations
 
 {% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
