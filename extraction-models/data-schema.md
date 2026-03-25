@@ -133,22 +133,6 @@ For instance, with `supplier_phone_number` , adding the following extraction gui
 >
 > Always reformat the data to match the international phone number format, as follows: +1-212-456-7890
 
-#### Less Is More
-
-It can be tempting to use very detailed instructions in the guidelines. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
-
-Here is an example of too many details (don't do this):
-
-> The order number is usually next to the words "order no" on the invoice, but sometimes there is no order number, so it will be next to the words "customer invoice no". It is usually present on the first page, in a green box.
-
-What's wrong here? Well first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
-
-So what's left is just the instruction about the _customer invoice_ and _order number_.
-
-A simpler, better version would be:
-
-> Use the value of "customer invoice number" if "order number" is missing in the document.
-
 ### Relative Importance of Field Properties
 
 Not all field properties have the same importance or weight when it comes to how the models process files.
@@ -175,6 +159,22 @@ This includes, _but is not limited to_:
 * African languages: Swahili, Yoruba, Zulu, etc
 
 **Note:** while the models can understand, we are not able to provide in-depth support for all languages.
+
+### Less Is More
+
+It can be tempting to use very detailed instructions in guidelines and descriptions. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
+
+Here is an example of too many details (don't do this):
+
+> The order number is usually next to the words "order no" on the invoice, but sometimes there is no order number, so it will be next to the words "customer invoice no". It is usually present on the first page, in a green box.
+
+What's wrong here? Well first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
+
+So what's left is just the instruction about the _customer invoice_ and _order number_.
+
+A simpler, better version would be:
+
+> Use the value of "customer invoice number" if "order number" is missing in the document.
 
 ## Technical Limitations
 
