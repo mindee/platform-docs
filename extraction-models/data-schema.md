@@ -22,17 +22,21 @@ Use the [live-test.md](../models/live-test.md "mention") when working on your Da
 
 ## Field Types
 
+A field's type determines how it will be formatted when returned by the API.
+
+The type also gives an indication on what to look for in the input file.
+
 ### Base Types
 
-<table><thead><tr><th width="191.2000732421875">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>Text</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date or <code>YYYY-MM-DD HH:mm:ss</code> for a date-time.</td></tr><tr><td>Classification</td><td>A predefined list of categories or types.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Nested Object</td><td>A complex data type containing multiple subfields or properties, allowing one level of nesting.</td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc.</td></tr><tr><td>Barcode</td><td><p>Detect the location of a 1D barcode (i.e. UPC, EAN) or a 2D barcode (i.e. QR Code, Data Matrix, 2D-DOC, PDF417).</p><p>Additionally, attempt to decode the contents of the barcode as a string value.</p></td></tr></tbody></table>
+<table><thead><tr><th width="191.2000732421875">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>Text</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Number</td><td>Numeric data which could be an integer or a floating-point value.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date or <code>YYYY-MM-DD HH:mm:ss</code> for a date-time.</td></tr><tr><td>Classification</td><td>A defined list of categories or types to match.</td></tr><tr><td>Boolean</td><td>Represents two possible values: <code>true</code> or <code>false</code></td></tr><tr><td>Nested Object</td><td>A complex data type containing multiple subfields or properties, allowing one level of nesting.</td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc.</td></tr><tr><td>Barcode</td><td><p>Detect the location of a 1D barcode (i.e. UPC, EAN) or a 2D barcode (i.e. QR Code, Data Matrix, 2D-DOC, PDF417).</p><p>Additionally, attempt to decode the contents of the barcode as a string value.</p></td></tr></tbody></table>
 
 ### **Array Types**
 
-Any field can be made into an array, a list of values.
+Any field type can be made into an array, a list of values.
 
 Simply enable "Multiple items can be extracted" when creating or modifying the field.
 
-The return type will be an array of the base type, for example a list of text values.
+The return type will be an array of the base type, for example a list of text values, or a list of numbers.
 
 It is possible to have a list of nested objects, but not a list of lists.
 
@@ -44,17 +48,15 @@ Enable "Filter out duplicates from the list of items" to fix this.
 
 ## **Field Examples**
 
-An example of the field types for a basic invoice extraction Data Schema:
+Some examples for the best field types to use, given a basic invoice extraction Data Schema.
 
-<table><thead><tr><th>Field</th><th width="203.5">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.Number</em></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.Type</em></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes[0].Rate</em></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes[0].Base</em></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes[0].Amount</em></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
+<table><thead><tr><th>Field Name</th><th width="203.5">Field Type</th><th>Example Return Value</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.</em><strong>Number</strong></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.</em><strong>Type</strong></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Invoice Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes[0].</em><strong>Rate</strong></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes[0].</em><strong>Base</strong></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes[0].</em><strong>Amount</strong></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
 
 ## Global Guidelines
 
 In addition to individual field guidelines, a global guideline can be used in your Data Schema.
 
 The global guideline text will apply to all or some fields, depending on your instructions.
-
-You may put different guidelines in the text, separate each guideline with a new line.
 
 Use global guidelines when you want to:
 
@@ -64,11 +66,17 @@ Use global guidelines when you want to:
 * Provide general instructions or context for all fields. For example:
   * _"Ensure ASCII compliance by removing all diacritics from return values."_
 
+{% hint style="info" %}
+You may put any number of unrelated guidelines in the text, for example all of the samples above.
+
+For best results, separate each different guideline with a new line.
+{% endhint %}
+
 ## Performance Optimization
 
-To get the best possible extraction data from a model, you can of course use the [improving-accuracy.md](optional-features/improving-accuracy.md "mention") feature, but the very first step is to ensure the Data Schema you're using is optimized.
+To get the best possible extraction data from a model, the most important is to ensure the Data Schema you're using is clear and optimized.
 
-> _If the foundation is solid, the house is solid._
+Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention")will rely heavily on the Data Schema.
 
 The various properties of the field all have a role to play in getting the best possible performance.
 
@@ -96,13 +104,13 @@ It clearly tells the AI to get only the name, and of the invoice supplier.
 
 ### Field Type
 
-Try to use the [#field-types](data-schema.md#field-types "mention") that will best suits the field you need.
+Try to use the [#field-types](data-schema.md#field-types "mention") that will best suits how the field is used and present in the document.
 
 For example, while you could use a string for `due_date`, a date field type is definitely better.
 
 ### Field Description
 
-The field's _Description_ also has an impact on the model's performance.
+The field's _Description_ has an impact on the model's performance.
 
 Use it to describe what the field represents, and/or of what its use is to you.
 
@@ -124,6 +132,22 @@ For instance, with `supplier_phone_number` , adding the following extraction gui
 > If you find several phone numbers in the document, use the phone number of the supplier headquarters.
 >
 > Always reformat the data to match the international phone number format, as follows: +1-212-456-7890
+
+#### Less Is More
+
+It can be tempting to use very detailed instructions in the guidelines. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
+
+Here is an example of too many details (don't do this):
+
+> The order number is usually next to the words "order no" on the invoice, but sometimes there is no order number, so it will be next to the words "customer invoice no". It is usually present on the first page, in a green box.
+
+What's wrong here? Well first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
+
+So what's left is just the instruction about the _customer invoice_ and _order number_.
+
+A simpler, better version would be:
+
+> Use the value of "customer invoice number" if "order number" is missing in the document.
 
 ### Relative Importance of Field Properties
 
