@@ -168,7 +168,7 @@ Here is an example of too many details (don't do this):
 
 > The order number is usually next to the words "order no" on the invoice, but sometimes there is no order number, so it will be next to the words "customer invoice no". It is usually present on the first page, in a green box.
 
-What's wrong here? Well first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
+What's wrong here? Well, the first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
 
 So what's left is just the instruction about the _customer invoice_ and _order number_.
 
