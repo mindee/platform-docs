@@ -162,7 +162,7 @@ This includes, _but is not limited to_:
 
 ### Less Is More
 
-It can be tempting to use very detailed instructions in guidelines and descriptions. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
+It can be tempting to give very detailed instructions in guidelines and descriptions. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
 
 Here is an example of too many details (don't do this):
 
