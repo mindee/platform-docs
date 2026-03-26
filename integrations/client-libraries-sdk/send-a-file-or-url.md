@@ -60,19 +60,22 @@ However, **we do not recommend** setting this option unless you are encountering
 ```python
 from mindee import PollingOptions
 
+# Use only if having timeout issues.
+polling_options=PollingOptions(
+    # Initial delay before the first polling attempt.
+    initial_delay_sec=3,
+    # Delay between each polling attempt.
+    delay_sec=1.5,
+    # Total number of polling attempts.
+    max_retries=80,
+)
+
 inference_params = InferenceParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     
     # Set only if having timeout issues.
-    polling_options=PollingOptions(
-        # Initial delay before the first polling attempt.
-        initial_delay_sec=3,
-        # Delay between each polling attempt.
-        delay_sec=1.5,
-        # Total number of polling attempts.
-        max_retries=80,
-    ),
+    # polling_options=polling_options,
 
     # ... any other options ...
 )
@@ -750,8 +753,6 @@ foreach (var webhook in jobResponse.Job.Webhooks)
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ## Process the Result
 
