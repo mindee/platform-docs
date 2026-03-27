@@ -38,7 +38,7 @@ sequenceDiagram
     client->>client: process JSON result
 ```
 
-## Specifying on File Upload
+## Specify on File Upload
 
 This is the default behavior as described in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section.
 

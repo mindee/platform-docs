@@ -44,7 +44,7 @@ During the trial period, we can activate certain features for you to test specif
 Don't hesitate to reach out to us!
 {% endhint %}
 
-## Selecting the Right Plan <a href="#h_bbb10a2ad9" id="h_bbb10a2ad9"></a>
+## Select the Right Plan <a href="#h_bbb10a2ad9" id="h_bbb10a2ad9"></a>
 
 When choosing between plans, it's essential to align your selection with your processing volume. Startups with minimal daily usage can start small, while enterprises with consistent heavy usage should consider higher-tier plans for scalability and technical support.
 
@@ -54,7 +54,7 @@ Start with the Starter Plan if you're processing fewer than 100 pages per day. F
 
 ## Feature Comparison
 
-"Number of pages included" is for all types of models combined (extraction, split, crop, etc).
+"Number of pages included" is for all types of models combined ([Extraction](/broken/pages/ywb5XsDuWyBy07coiRb0) and [Utility](/broken/pages/jqljfGxEsmDTKtOnQDrR)).
 
 Some features are only applicable to extraction models.
 
@@ -91,8 +91,7 @@ To benefit from a particular feature, you will need to upgrade to the plan which
 
 ### Can Mindee Add a Feature I Need?
 
-Our product team is always interested in new features to help our users.\
-[Make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
+{% include "../.gitbook/includes/generic-feature-request.md" %}
 
 Enterprise customers can ask us directly for specific features they need.
 

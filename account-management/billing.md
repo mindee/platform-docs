@@ -7,31 +7,30 @@ icon: wallet
 
 # Billing
 
-## Accessing the Billing Page
+## Overview
+
+From the Billing page, you can:
+
+* View your current plan
+* Choose a new plan (upgrade or downgrade)
+* Access your Stripe customer portal
+
+## Access the Billing Page
 
 1. Go to [app.mindee.com](https://app.mindee.com/)
-2. On the left-hand menu, click on **Settings**
-3. Select the **Billing** tab
+2. On the left-hand menu, click on "<i class="fa-gear">:gear:</i> Settings"
+3. Select the "Billing" tab
 
 Or simply click here: <a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a>
 
-Only **Organization Admins** can access and modify billing details.
+Only `admin` and `owner` [users](organizations.md#team-members) can access and modify billing details.
 
-## Manage Billing Settings
-
-From the **Billing** tab, you can:
-
-* View your current subscription
-* Switch billing frequency (monthly or annual)
-* Access your Stripe customer portal
-
-### Upgrading or Changing Plans
+## Change Your Plan
 
 To change your plan:
 
-1. Go to **Settings** → **Billing**
-2. Choose a new plan under the available options
-3. Click on **Downgrade** or **Upgrade**
+1. Find the plan under the available options
+2. Click on the "Downgrade" or "Upgrade" button at the bottom of the plan
 
 ## Stripe Customer Portal
 
@@ -39,7 +38,7 @@ To access your Stripe customer portal, click on the "Manage Subscription" button
 
 <figure><img src="../.gitbook/assets/billing-manage-subscription.png" alt="Manage Subscription button - access Stripe customer portal" width="563"><figcaption></figcaption></figure>
 
-### Invoices
+### Access Invoices
 
 You can download past invoices anytime on your Stripe account.
 
@@ -77,8 +76,12 @@ To track your page usage, you can consult the [insights.md](insights.md "mention
 
 Additionally, API responses contain the number of pages processed in the [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention") object.
 
+Finally, you can be notified when your plan is reaching its limit by setting [#usage-alerts](organizations.md#usage-alerts "mention").
+
+## Billing Frequency
+
 You will be billed as soon as you complete your subscription payment online.
 
 Payment is required upfront to access the platform and the features included in your plan.
 
-Enterprise customers have different billing methods, please reach out to us directly.
+Enterprise customers have access to different billing methods, please reach out to us directly.

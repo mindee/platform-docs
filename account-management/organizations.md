@@ -7,7 +7,7 @@ icon: users-rectangle
 
 # Organization & Members
 
-## Accessing Organization Settings
+## Access Organization Settings
 
 Click on "<i class="fa-gear">:gear:</i> Settings" in the main menu, then on the "Organization" tab.
 

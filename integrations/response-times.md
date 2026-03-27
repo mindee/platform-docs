@@ -46,6 +46,8 @@ Common combinations of document types and models.
 
 Single page documents with few fields.
 
+Examples:
+
 * ID documents: passports, driver licenses, etc.
 * Healthcare cards
 * Tickets, boarding passes
@@ -58,6 +60,8 @@ Single page documents with nested objects.\
 — Or —\
 Multiple page documents with **no** nested objects.
 
+Examples:
+
 * Most receipts
 * Single page invoices
 * Most bills of lading
@@ -67,6 +71,8 @@ Multiple page documents with **no** nested objects.
 ### Slower
 
 Multiple page documents with nested objects and small text.
+
+Examples:
 
 * Very long receipts with many items and small text (i.e. long list of groceries for the week)
 * Invoices with more than 10 pages, each page having many items

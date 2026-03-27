@@ -2,13 +2,15 @@
 icon: bolt
 ---
 
-# Quickstart
+# Quick Start
 
 ## Sign Up!
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
 
-You can connect using your Google or Github account, or create an account using good old-fashioned email and password.
+You can sign up and connect using your Google or Github account.
+
+You can also create an account using good old-fashioned email and password.
 
 ## Create a Model
 

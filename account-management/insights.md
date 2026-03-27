@@ -9,7 +9,7 @@ icon: chart-column
 
 <figure><img src="../.gitbook/assets/insights-overview.png" alt="Insights - general view" width="563"><figcaption></figcaption></figure>
 
-## Accessing the Insights Page
+## Access the Insights Page
 
 1. Go to [app.mindee.com](https://app.mindee.com/)
 2. On the left-hand menu, click on **Insights**

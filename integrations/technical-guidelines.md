@@ -70,11 +70,11 @@ Users may be able to obtain your API key from the device.
 
 We recommend cycling through API keys at regular intervals. Depending on your application's setup, it could be problematic to update the API Keys on the device.
 
-Potentially, users interact with the Mindee service outside of your control. This can lead to unexpected charges to your account.
+Potentially, users interact with the Mindee service outside of your control. This can lead to unexpected overage charges to your account.
 
-Possible exceptions:
+Possible exceptions to the recommendation:
 
-* Usage in internal applications on devices/environments you control
+* Usage in internal applications on devices or environments you control
 * The API Key is easily revocable on the device, and _never_ user-accessible
 
 {% hint style="info" %}

@@ -79,3 +79,7 @@ Pay annually to save money, or monthly.
 Compare all plans and their features at [plans.md](../account-management/plans.md "mention").
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
+
+## Need Something Else?
+
+{% include "../.gitbook/includes/generic-feature-request.md" %}
