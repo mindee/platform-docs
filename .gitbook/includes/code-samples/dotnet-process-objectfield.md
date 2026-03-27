@@ -3,9 +3,9 @@ title: dotnet-process-objectfield
 ---
 
 ```csharp
-using Mindee.Parsing.V2.Field;
+using Mindee.V2.Parsing.Inference.Field;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 

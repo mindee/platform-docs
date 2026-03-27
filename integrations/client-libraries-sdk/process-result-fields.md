@@ -107,9 +107,10 @@ public void handleResponse(InferenceResponse response) {
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```csharp
-using Mindee.Parsing.V2.Field;
+using Mindee.V2.Product.Extraction;
+using Mindee.V2.Parsing.Inference.Field;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 
@@ -263,9 +264,9 @@ public void handleResponse(InferenceResponse response) {
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```csharp
-using Mindee.Parsing.V2.Field;
+using Mindee.V2.Parsing.Inference.Field;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 
@@ -389,9 +390,9 @@ public void handleResponse(InferenceResponse response) {
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```csharp
-using Mindee.Parsing.V2.Field;
+using Mindee.V2.Parsing.Inference.Field;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 
@@ -618,9 +619,9 @@ public void handleResponse(InferenceResponse response) {
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```csharp
-using Mindee.Parsing.V2.Field;
+using Mindee.V2.Parsing.Inference.Field;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 
@@ -804,10 +805,10 @@ public void handleResponse(InferenceResponse response) {
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```csharp
-using Mindee.Parsing.V2.Field;
+using Mindee.V2.Parsing.Inference.Field;
 using Mindee.Geometry;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     InferenceFields fields = response.Inference.Result.Fields;
 

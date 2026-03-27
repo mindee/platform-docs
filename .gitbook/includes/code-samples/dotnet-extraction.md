@@ -9,18 +9,19 @@ Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee)
 ```csharp
 using Mindee;
 using Mindee.Input;
-using Mindee.Parsing.V2.Field;
+using Mindee.V2;
+using Mindee.V2.Product.Extraction;
+using Mindee.V2.Product.Extraction.Params;
 
 string filePath = "/path/to/the/file.ext";
 string apiKey = "MY_API_KEY";
 string modelId = "MY_MODEL_ID";
 
 // Construct a new client
-MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+Client mindeeClient = new Client(apiKey);
 
-// Set inference parameters
-var inferenceParams = new InferenceParameters(
-    // ID of the model, required.
+// Set parameters
+var productParams = new ExtractionParameters(
     modelId: modelId
 
     // Options: set to `true` or `false` to override defaults
@@ -39,15 +40,15 @@ var inferenceParams = new InferenceParameters(
 // Load a file from disk
 var inputSource = new LocalInputSource(filePath);
 
-// Send for processing using polling
-var response = await mindeeClient.EnqueueAndGetInferenceAsync(
-    inputSource, inferenceParams);
+// Upload the file
+var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(
+    inputSource, productParams);
 
 // Print a summary of the response
 System.Console.WriteLine(response.Inference.ToString());
 
-// Access the result fields
-InferenceFields fields = response.Inference.Result.Fields;
+// Access the extracted fields
+var fields = response.Inference.Result.Fields;
 ```
 {% endcode %}
 

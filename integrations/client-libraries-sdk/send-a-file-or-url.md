@@ -209,28 +209,22 @@ InferenceParameters params = InferenceParameters
 When polling you really only need to set the `modelId` .
 
 ```csharp
-var inferenceParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+var inferenceParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
 ```
 
 You can also set the various polling parameters.\
 However, **we do not recommend** setting this option unless you are encountering timeout problems.
 
 ```csharp
-var inferenceParams = new InferenceParameters(
-    // ID of the model, required.
-    modelId: "MY_MODEL_ID"
-    
-    // Set only if having timeout issues.
-    , pollingOptions: new AsyncPollingOptions(
-        // Initial delay before the first polling attempt.
-        initialDelaySec: 3.0,
-        // Delay between each polling attempt.
-        intervalSec: 1.5,
-        // Total number of polling attempts.
-        maxRetries: 80
-    )
+using Mindee.V2.ClientOptions;
 
-    // ... any other options ...
+var pollingOptions = new PollingOptions(
+    // Initial delay before the first polling attempt.
+    initialDelaySec: 3.5,
+    // Delay between each polling attempt.
+    intervalSec: 1.5,
+    // Total number of polling attempts.
+    maxRetries: 80
 );
 ```
 {% endtab %}
@@ -336,11 +330,15 @@ System.out.println(response.getInference().toString());
 {% tab title=".NET" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `EnqueueAndGetInferenceAsync` method:
+Use the `EnqueueAndGetResultAsync` method:
 
 ```csharp
-var response = await mindeeClient.EnqueueAndGetInferenceAsync(
-    inputSource, inferenceParams);
+var response = await mindeeClient.EnqueueAndGetResultAsync(
+    inputSource
+    , inferenceParams
+    // optional, set only if having timeout issues.
+    //, pollingOptions
+);
 
 // To easily test which data were extracted,
 // simply print an RST representation of the inference
@@ -527,7 +525,7 @@ echo strval($response->job->alias);
 **Note:** You can also use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `enqueueAndGetInferenceAsync`.\
+Then, call `EnqueueAndGetResultAsync`.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
@@ -600,7 +598,7 @@ System.Console.WriteLine(response.Job.Alias);
 **Note:** You can also use both methods!
 
 First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `EnqueueAndGetInferenceAsync`.\
+Then, call `EnqueueAndGetResultAsync`.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 {% endtabs %}
@@ -735,7 +733,7 @@ job.getWebhooks().forEach(webhook ->
 // from `EnqueueInferenceAsync` method (typically for webhook)
 var jobId = response.Job.Id;
 
-// from `EnqueueAndGetInferenceAsync` method (typically for polling)
+// from `EnqueueAndGetResultAsync` method (typically for polling)
 // var jobId = response.Inference.Job.Id;
 
 var jobResponse = await mindeeClientV2.GetJobAsync(jobId);
