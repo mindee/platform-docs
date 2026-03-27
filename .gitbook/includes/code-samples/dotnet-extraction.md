@@ -3,7 +3,7 @@ title: code-sample-dotnet-extraction
 ---
 
 .NET ≥ 8.0 is recommended.\
-Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **3.39.0** or greater.
+Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```csharp
