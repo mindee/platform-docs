@@ -1,23 +1,31 @@
 ---
 description: >-
-  The Organizations feature in Mindee enables collaborative work: users can
-  belong to an organization and participate in workspaces with role-based access
-  control.
+  Organizations in Mindee enable collaborative work: users can belong to an
+  organization and participate in workspaces with role-based access control.
 icon: users-rectangle
 ---
 
-# Organizations
+# Organization & Members
 
-## Organization Settings
+## Accessing Organization Settings
 
-When you go to **Settings > Organization** in the Mindee platform, you can:
+Click on "<i class="fa-gear">:gear:</i> Settings" in the main menu, then on the "Organization" tab.
 
-### **Edit Organization Details**
+Or simply click here: <a href="https://app.mindee.com/settings?tab=organization" class="button primary">Go to Organization page</a>
 
-* _Organization Name_: Customize the display name of your organization.
-* _Organization ID_: A unique identifier generated automatically (read-only).
+## Organization Details
 
-### **Manage Team Members**
+Customize the display name of your organization.
+
+Access your Organization ID, a unique identifier generated automatically.
+
+## Actions
+
+### Usage Alerts
+
+You can set an alert to receive an email when your [plan](plans.md) has reached a certain percentage of use.
+
+## **Team Members**
 
 The **Team Members** section lists all users who belong to your organization, along with their:
 
@@ -25,53 +33,46 @@ The **Team Members** section lists all users who belong to your organization, al
 * **Role** – `owner` , `admin` or `member`
 * **Status** – shows as _Active_ for members with access.
 
-### **Actions on Members**
+### Add New Team Members
 
-* **Invite Member**: Use the _Invite Member_ button to add a new user by email.
-* **Update Role**: If you are `owner` or `admin`, you can change a member’s role (within the limits described in Role Behavior & Rules).
-* **Remove Member**: Available for `admin` and `owner`, except for existing owners or admins (cannot be removed as per restrictions).
+Use the "Invite Member" button to add a new user.
+
+Enter their email address and select their role.
+
+They will receive an email allowing them to create an account and join your organization.
+
+{% hint style="info" icon="money-check-dollar-pen" %}
+You can only invite members to your organization if you have the the Pro, Business, or Enterprise [plans.md](plans.md "mention").
+{% endhint %}
+
+### Remove Team Members
+
+Use the "<i class="fa-trash-can">:trash-can:</i>" button to remove a member from your organization.
+
+You must have the `admin` or `owner` role to remove users.
+
+You must have the `owner` role to remove users with the `admin` role.
+
+### Update a Member's Role
+
+Use the "Edit Role" button to change a member's role.
+
+You must have the `admin` or `owner` role to update users.
+
+You must have the `owner` role to update users with the `admin` role.
+
+#### Member Roles
+
+Each organization is governed by a **role system**.
+
+A user must be explicitly added to an organization to access it, except for the **creator**, who is automatically granted the `owner` role.
+
+| Role     | Permissions summary                                                                                                                           |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `member` | <p>Add and manage models<br>Run Live Tests<br>Manage API keys</p>                                                                             |
+| `admin`  | <p>All  <code>member</code> permissions<br>Manage <code>member</code> users</p><p>Update Organization settings<br>Manage Billing settings</p> |
+| `owner`  | <p>All <code>admin</code> permissions</p><p>Can add and remove <code>admin</code> users</p>                                                   |
 
 {% hint style="info" %}
-You can only invite members to your organization if you have the Pro plan or above.
+Only one `owner` per organization. Ownership is set at creation and cannot be transferred.
 {% endhint %}
-
-## How do Roles Work?
-
-Each organization is governed by a **role system**. A user must be explicitly added to an organization to access it — except for the **creator**, who is automatically granted the `owner` role.
-
-| Role     | Permissions summary                                      |
-| -------- | -------------------------------------------------------- |
-| `owner`  | Full control of the workspace                            |
-| `admin`  | Can manage members (except owners/admins), edit settings |
-| `member` | Can only view/review executions                          |
-
-{% hint style="warning" %}
-⚠️ Only one **owner** per organization. Ownership is set at creation and cannot be transferred via API.
-{% endhint %}
-
-### Role Behavior & Rules
-
-* The **creator** of an organization is always set as its `owner` automatically.
-* **Admins cannot promote, edit, or remove owners or other admins**.
-
-## Managing Members
-
-These endpoints are available to **organization users** only.
-
-#### Add a Member
-
-**Role required:** `admin` or `owner`
-
-#### Update Member Role
-
-**Role required:** `admin` or `owner`
-
-#### Remove Member
-
-**Role required:** `admin` or `owner`
-
-{% hint style="warning" %}
-You cannot remove existing `owners` or `admins`.
-{% endhint %}
-
-Only users in an **organization** can be assigned roles. Standalone users are considered `owners` by default.

@@ -33,7 +33,11 @@ Each type of model will have different creation options.
 
 ## Live Test
 
-Once a model is created you can test it directly on the platform. You can use your own files or choose from our samples selection.
+Once a model is created you can process documents directly on the platform. Use your own files or choose from our samples selection.
+
+You can also view your document history.
+
+This allows easily testing a model before integrating the API and going live to production.
 
 More details in the [live-test.md](live-test.md "mention") section.
 

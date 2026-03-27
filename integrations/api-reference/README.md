@@ -1,7 +1,7 @@
 ---
 description: Manual integration - reference only.
 noRobotsIndex: true
-icon: handshake-simple
+icon: turtle
 ---
 
 # Manual Integration

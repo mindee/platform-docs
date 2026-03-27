@@ -1,12 +1,11 @@
 ---
+description: >-
+  The insights page allows you to view various data concerning your usage of the
+  Mindee platform and API.
 icon: chart-column
 ---
 
 # Insights
-
-## Overview
-
-The insights page allows you to view various data concerning your usage of the Mindee platform and API.
 
 <figure><img src="../.gitbook/assets/insights-overview.png" alt="Insights - general view" width="563"><figcaption></figcaption></figure>
 
@@ -15,9 +14,7 @@ The insights page allows you to view various data concerning your usage of the M
 1. Go to [app.mindee.com](https://app.mindee.com/)
 2. On the left-hand menu, click on **Insights**
 
-Or simply click here:
-
-<a href="https://app.mindee.com/insights" class="button primary">Go to Insights page</a>
+Or simply click here: :<a href="https://app.mindee.com/insights" class="button primary">Go to Insights page</a>
 
 ## Data Views
 
@@ -67,7 +64,7 @@ Filter based on start and end dates.
 
 ### Group By
 
-Only affects the visualization, group results by day, month, or year.
+Only affects the visualization. Group results by day, month, or year.
 
 <div align="left"><figure><img src="../.gitbook/assets/insights-summarize.png" alt=""><figcaption></figcaption></figure></div>
 

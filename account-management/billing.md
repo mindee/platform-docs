@@ -1,27 +1,23 @@
 ---
 description: >-
-  The Billing page in your Mindee account lets you manage your subscription,
-  view usage, and access past invoices.
+  The Billing page in your Mindee account lets you manage your subscription and
+  access past invoices.
 icon: wallet
 ---
 
 # Billing
 
-## Who Can Access Billing?
-
-Only **Organization Admins** can access and modify billing details.
-
-## Where to Find Billing Settings
+## Accessing the Billing Page
 
 1. Go to [app.mindee.com](https://app.mindee.com/)
 2. On the left-hand menu, click on **Settings**
 3. Select the **Billing** tab
 
-Or simply click here:
+Or simply click here: <a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a>
 
-<a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a>
+Only **Organization Admins** can access and modify billing details.
 
-## What You Can Do from the Billing Tab
+## Manage Billing Settings
 
 From the **Billing** tab, you can:
 
@@ -51,15 +47,19 @@ You can download past invoices anytime on your Stripe account.
 Invoices are issued automatically at the start of each billing period.
 {% endhint %}
 
-### Change Payment Method
+## Supported Payment Methods
 
-Choose any payment method supported by Stripe.
+You can use any payment method supported by Stripe for all self-serve plans.
 
-## Page Usage & Overages
+Among these, the most popular are credit and debit cards.
+
+Custom payment options are available for Enterprise customers.
+
+## Included Pages and Overages
 
 Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.
 
-If you exceed it, additional pages are charged automatically on your payment method.
+If you exceed the included pages in your plan, these will be charged according to the Overage Rate. These extra calls will be invoiced every €100, or at the end of your subscription.
 
 | Plan     | Included Pages | Overage Rate  |
 | -------- | -------------- | ------------- |
@@ -77,8 +77,8 @@ To track your page usage, you can consult the [insights.md](insights.md "mention
 
 Additionally, API responses contain the number of pages processed in the [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention") object.
 
-## Supported Payment Methods
+You will be billed as soon as you complete your subscription payment online.
 
-We currently support **credit and debit cards** for all self-serve plans.
+Payment is required upfront to access the platform and the features included in your plan.
 
-Custom payment options are also available for Enterprise.
+Enterprise customers have different billing methods, please reach out to us directly.
