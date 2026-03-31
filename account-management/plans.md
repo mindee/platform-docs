@@ -31,13 +31,13 @@ More information in the [billing.md](billing.md "mention") section.
 
 ## Try Mindee for Free!
 
-You can try Mindee free for 14 days, this includes 200 pages.
+You can try Mindee free for 14 days, this includes 200 pages. You can use the platform and make API calls.
 
 Simply sign up to get started.
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
 
-Once the trial period ends, you’ll need to choose a subscription plan.
+Once the trial period ends, you’ll need to choose a subscription plan to continue using the service.
 
 {% hint style="success" %}
 During the trial period, we can activate certain features for you to test specific use cases.\
