@@ -10,7 +10,7 @@ Python ≥ 3.11 is highly recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```sh
-pip install -U mindee~=4.34
+pip install -U mindee~=4.35
 ```
 {% endtab %}
 
