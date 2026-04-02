@@ -532,7 +532,13 @@ var inferenceParams = new InferenceParameters(
 
 These options allow changing how the model performs an inference on a per-call basis.
 
-As such they can only be used via API.
+As such they can **only** be used via API.
+
+{% hint style="info" %}
+These advanced features are not generally meant for improving model accuracy.
+
+Instead, make sure the Data Schema has been [properly optimized](../../extraction-models/data-schema.md#performance-optimization).&#x20;
+{% endhint %}
 
 #### Text Context
 
@@ -542,9 +548,9 @@ This is a free-form text format.
 
 #### Data Schema
 
-In the rare cases when Text Context and/or RAG is not enough.
+Allows changing the Data Schema on a per-call basis: directly modify the Data Schema: add, remove, or change fields.
 
-Directly modify the Data Schema: add, remove, or change fields.
+The typical use case is when the data needing to be extracted change based on internal business logic.
 
 To download the JSON string appropriate for your model:
 
