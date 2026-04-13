@@ -25,13 +25,22 @@ Don't see support for your favorite platform? [Make a feature request!](https://
 
 ## Generic No-Code Integration
 
+{% hint style="info" %}
+Only use this method if your no-code platform does not have an official integration.
+{% endhint %}
+
 You'll need to use HTTP nodes in your workflow that can POST and GET a specified URL.
 
-First, POST a file to the [#post-v2-inferences-enqueue](../api-reference/#post-v2-inferences-enqueue "mention") route. You'll need you API key and Model ID.\
-Authenticate using an `Authorization` header containing only your API key.\
-The Model ID must be sent as a form parameter.
+First, POST as form-data to the [#post-v2-inferences-enqueue](../api-reference/#post-v2-inferences-enqueue "mention") route:
 
-In this POST response, there will be a `polling_url` attribute, save its value.
+* The Content-Type header must be set to `multipart/form-data`
+* The `Authorization` header must have only your API key as the value
+* The file or URL to process, one of: `file`, `file_base64`, or `url`
+* The Model ID, `model_id`
+
+If your no-code platform doesn't support the `form-data` Content-Type, you may post as `application/json`. In this case you must use `file_base64` or `url` only.
+
+In the response to the POST, there will be a `polling_url` attribute, save its value.
 
 Wait 3 seconds.
 
