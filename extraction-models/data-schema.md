@@ -150,7 +150,7 @@ In the following table, "Normal Fields" are those that extract textual informati
 You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.\
 Note that the _Name_ can only contain ASCII characters.
 
-This includes, _but is not limited to_:
+This includes, but is **not limited** to:
 
 * European languages: English, French, Spanish, German, Italian, Portuguese, Russian, Greek, etc
 * Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
@@ -182,15 +182,15 @@ In some cases, it can be beneficial to add extra fields you don't actually need 
 
 Let's say you are processing invoices, and need to extract the "Reference Number". When processing the invoices, you notice that, sometimes, the "Order Number" is picked up as the reference number.
 
-A first logical step would be to add a guideline, something like _"NEVER use the 'Order Number' to populate this field"_. While this should work in most cases, the distinction between a Reference and Order may not be perfectly clear to the model.
+A first logical step would be to add a guideline, something like _"NEVER use the 'Order Number' to populate this field"_. While this should work in **most** cases, the distinction between a Reference and Order may not be perfectly clear to the model.
 
 Adding more text, more detailed information is potentially [counter-productive](data-schema.md#less-is-more).
 
 A potential fix would be to add the "Reference Number" field in your Data Schema, in addition to the "Order Number" field. This way the ambiguity is lifted, it is now very clear to the model that these are separate data points.
 
-In your data processing flow, simply ignore the extra field.
+Then, in your data processing flow, simply ignore the extra field.
 
-As a reminder, there is no additional cost to you for the number of fields in the Data Schema.
+As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
 ## Technical Limitations
 
