@@ -53,14 +53,22 @@ Once created, refine the new model's [data-schema.md](data-schema.md "mention") 
 
 ## Modifying Your Extraction Data Schema
 
-Once you have created or copied a model, you can refine its [data-schema.md](data-schema.md "mention") by making modifications to better suit your needs.
+Once you have created or copied a model, you'll likely want to modify its [data-schema.md](data-schema.md "mention") to better suit your needs.
 
-Navigate to the Data Schema page where you can adjust fields, update configurations, and customize settings according to your requirements. You can proceed manually or use the dialog box to do the modifications with the AI Agent.
+Navigate to the Data Schema page where you can adjust fields, update configurations, and customize settings according to your requirements.
+
+### AI Assistant
+
+You can use the "AI Assistant" dialog box for automated improvements.
 
 Be as accurate as possible with field names, exact names and values should be in quotation marks.\
 \
-Examples of sentences to modify your data schema:
+Example sentences to modify your data schema with the AI Assistant:
 
-* Add a new field: "document\_id"
-* Rename the "date" field to "invoice\_date"
-* Change the "document\_type" field to a classification field. The expected classes are "INVOICE" and "RECEIPT"
+* _Add a new field: "document id"_\
+  ⇒ Will create a new text field.
+* _Add a new field: "is past due"_\
+  ⇒ Will create a new boolean field\
+  Hint: boolean field names should start with "is" or "has".
+* _Rename the "date" field to "invoice date"_
+* _Change the "document\_type" field to a classification field. The expected classes are "INVOICE" and "RECEIPT"_
