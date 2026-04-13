@@ -35,7 +35,7 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 
 {% include "../../.gitbook/includes/feature-availability.md" %}
 
-Be sure to follow the [data-schema-best-practices.md](../data-schema-best-practices.md "mention") before activating this feature.
+{% include "../../.gitbook/includes/feature-need-good-data-schema.md" %}
 
 ### Set Up the RAG Database
 
