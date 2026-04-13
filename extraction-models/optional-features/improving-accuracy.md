@@ -11,7 +11,7 @@ icon: layer-group
 
 When using an Extraction Model regularly, it can happen that the extraction is not satisfying on a given document or a particular template.
 
-If you have already followed the [data-schema-best-practices.md](../data-schema-best-practices.md "mention"), and results are still not satisfactory, all is not lost.
+If you have already followed the [data-schema-best-practices.md](../data-schema-best-practices.md "mention"), and results are still not satisfactory, all hope is not lost.
 
 You have a way to durably improve the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
 

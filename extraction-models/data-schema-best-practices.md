@@ -6,11 +6,11 @@ icon: lightbulb
 # Data Schema Best Practices
 
 {% hint style="info" %}
-We recommend taking a look at the [data-schema.md](data-schema.md "mention")first.\
-You'll better understand the terms used on this page.
+We recommend taking a look at [data-schema.md](data-schema.md "mention") first.\
+This will help you understand the terms used on this page.
 {% endhint %}
 
-To get the best possible extraction data from a model, the most important is to ensure the Data Schema you're using is clear and optimized.
+To get the best possible extraction data from a model, the key is to ensure that the Data Schema you're using is clear and optimized.
 
 Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention")will rely heavily on the Data Schema.
 
@@ -34,17 +34,17 @@ As an example, let's extract the name of the company that issued an invoice.
 In our Data Schema, we've used the field _Name_:  `supplier_name`\
 It clearly tells the model to extract only the name of the invoice supplier.
 
-:white\_check\_mark: you could also use `vendor_name`, it has a similar meaning and with equivalent precision.
+:white\_check\_mark: you could also use `vendor_name`, it has a similar meaning and equivalent precision.
 
 :warning: `supplier` might work but is too broad: which information about the supplier is needed, exactly?
 
-:warning: `company_name` might work but is ambiguous: we know you need the name of the company, but we don't know if company stands for supplier or customer?
+:warning: `company_name` might work but is ambiguous: we know you need the name of the company, but we don't know if company stands for supplier or customer.
 
-:x: `company` will likely not work as expected: we do not know neither which information you need nor which company is concerned.
+:x: `company` will likely not work as expected: we know neither what information you need nor which company is concerned.
 
 ### Field Type
 
-Try to use on of the [#field-types](data-schema.md#field-types "mention") that best suits how the field is used and present in the document.
+Try to use one of the [#field-types](data-schema.md#field-types "mention") that best matches how the field is used and how it appears on the document.
 
 For example, while you could use a string for `due_date`, a date field type is definitely better.
 
@@ -63,11 +63,11 @@ For example, the `supplier_name` field could have:
 ### Field Extraction Guidelines
 
 Sometimes changing the field name and type is not enough to explain what you need for one field.\
-In that case you have the possibility to add extraction _Guidelines_ to the field.
+In that case you can add extraction _Guidelines_ to the field.
 
 Use natural language to explain how to properly extract the data, and/or any extra steps like formatting.
 
-For instance, with `supplier_phone_number` , adding the following extraction guidelines could be useful:
+For instance, with `supplier_phone_number`, adding the following extraction guidelines could be useful:
 
 > If you find several phone numbers in the document, use the phone number of the supplier headquarters.
 >
@@ -99,13 +99,13 @@ This includes, but is **not limited** to:
 * Semitic languages: Arabic, Hebrew, Amharic, etc
 * African languages: Swahili, Yoruba, Zulu, etc
 
-**Note:** while the models can understand, we are not able to provide in-depth support for all languages.
+**Note:** while the models can understand these languages, we are not able to provide in-depth support for all languages.
 
 It can be useful to use the same language used in the document to describe the Data Model.
 
 ## Less Is More
 
-It can be tempting to give very detailed instructions in guidelines and descriptions. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
+It can be tempting to give very detailed instructions in guidelines and descriptions. However, in many cases this is actually counterproductive and will lead to diminished accuracy.
 
 Here is an example of too many details (don't do this):
 
@@ -127,7 +127,7 @@ Let's say you are processing invoices, and need to extract the "Reference Number
 
 A first logical step would be to add a guideline, something like _"NEVER use the 'Order Number' to populate this field"_. While this should work in **most** cases, the distinction between a Reference and Order may not be perfectly clear to the model.
 
-Adding more text, more detailed information is potentially [counter-productive](data-schema-best-practices.md#less-is-more).
+Adding more text or more detailed information is potentially [counterproductive](data-schema-best-practices.md#less-is-more).
 
 A potential fix would be to add the "Reference Number" field in your Data Schema, in addition to the "Order Number" field. This way the ambiguity is lifted, it is now very clear to the model that these are separate data points.
 
