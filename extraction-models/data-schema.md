@@ -1,10 +1,9 @@
 ---
+description: General description of an extraction model's Data Schema.
 icon: database
 ---
 
-# Data Schema
-
-## Overview
+# Data Schema Overview
 
 An **Extraction Data Schema** defines which data should be extracted, and in what way, from documents sent to the model.
 
@@ -72,130 +71,6 @@ You may put any number of unrelated guidelines in the text, for example all of t
 For best results, separate each different guideline with a new line.
 {% endhint %}
 
-## Performance Optimization
-
-To get the best possible extraction data from a model, the most important is to ensure the Data Schema you're using is clear and optimized.
-
-Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention")will rely heavily on the Data Schema.
-
-The various properties of the field all have a role to play in getting the best possible performance.
-
-### **Field Name and Title**
-
-The field _Name_ is automatically generated from the field _Title_. You can however modify the _Title_ afterwards.
-
-Both the _Name_ and _Title_ are used during processing (inference), but the _Name_ is more important.
-
-Try to use clear, simple names that will precisely describe the field you want to extract.\
-The goal is to avoid any possible confusion between data points present in the document.
-
-Consider wanting to extract the name of the company that issued an invoice.
-
-In our model, we've used the field _Name_:  `supplier_name`\
-It clearly tells the AI to get only the name, and of the invoice supplier.
-
-:white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
-
-:warning: `supplier` might work but is imprecise: which information about the supplier do you need?
-
-:warning: `company_name` might work but is imprecise: we know you need the name of the company, but we don't know if company stands for supplier or customer?
-
-:x: `company` will likely not work as expected: we do not know neither which information you need nor which company is concerned.
-
-### Field Type
-
-Try to use the [#field-types](data-schema.md#field-types "mention") that will best suits how the field is used and present in the document.
-
-For example, while you could use a string for `due_date`, a date field type is definitely better.
-
-### Field Description
-
-The field's _Description_ has an impact on the model's performance.
-
-Use it to describe what the field represents, and/or of what its use is to you.
-
-For example, the `supplier_name` field could have:
-
-> The name of the supplier.
->
-> Used in internal processing to match our supplier ID with the name found on the document.
-
-### Field Extraction Guidelines
-
-Sometimes changing the field name and type is not enough to explain what you need for one field.\
-In that case you have the possibility to add extraction _Guidelines_ to the field.
-
-Use natural language to explain how to properly extract the data, and/or any extra steps like formatting.
-
-For instance, with `supplier_phone_number` , adding the following extraction guidelines could be useful:
-
-> If you find several phone numbers in the document, use the phone number of the supplier headquarters.
->
-> Always reformat the data to match the international phone number format, as follows: +1-212-456-7890
-
-### Relative Importance of Field Properties
-
-Not all field properties have the same importance or weight when it comes to how the models process files.
-
-Additionally, not all types of fields are handled the same way.
-
-In the following table, "Normal Fields" are those that extract textual information from the document (text, dates, numbers, etc), whether they are simple fields, lists, or nested object fields.
-
-"Object Detection" refers to specific processing to extract polygons of various elements on the document, such as signatures, ID photos, etc.
-
-<table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>Name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>Title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>Description</td><td>Complementary</td><td>Not used</td></tr><tr><td>Guidelines</td><td>Complementary</td><td>Not used</td></tr><tr><td>Classification Values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
-
-### Language
-
-You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.\
-Note that the _Name_ can only contain ASCII characters.
-
-This includes, but is **not limited** to:
-
-* European languages: English, French, Spanish, German, Italian, Portuguese, Russian, Greek, etc
-* Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
-* East Asian languages: Japanese, Mandarin, Korean, Vietnamese, etc
-* Semitic languages: Arabic, Hebrew, Amharic, etc
-* African languages: Swahili, Yoruba, Zulu, etc
-
-**Note:** while the models can understand, we are not able to provide in-depth support for all languages.
-
-### Less Is More
-
-It can be tempting to give very detailed instructions in guidelines and descriptions. However, in many cases this is actually counter-productive and will lead to diminished accuracy.
-
-Here is an example of too many details (don't do this):
-
-> The order number is usually next to the words "order no" on the invoice, but sometimes there is no order number, so it will be next to the words "customer invoice no". It is usually present on the first page, in a green box.
-
-What's wrong here? Well, the first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
-
-So what's left is just the instruction about the _customer invoice_ and _order number_.
-
-A simpler, better version would be:
-
-> Use the value of "customer invoice number" if "order number" is missing in the document.
-
-### Remove Ambiguity with Extra Fields
-
-In some cases, it can be beneficial to add extra fields you don't actually need in order to remove ambiguity on the data you do need.
-
-Let's say you are processing invoices, and need to extract the "Reference Number". When processing the invoices, you notice that, sometimes, the "Order Number" is picked up as the reference number.
-
-A first logical step would be to add a guideline, something like _"NEVER use the 'Order Number' to populate this field"_. While this should work in **most** cases, the distinction between a Reference and Order may not be perfectly clear to the model.
-
-Adding more text, more detailed information is potentially [counter-productive](data-schema.md#less-is-more).
-
-A potential fix would be to add the "Reference Number" field in your Data Schema, in addition to the "Order Number" field. This way the ambiguity is lifted, it is now very clear to the model that these are separate data points.
-
-Then, in your data processing flow, simply ignore the extra field.
-
-As a reminder, the number of fields in the Data Schema has no impact on pricing.
-
-## Technical Limitations
-
-{% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
-
 ## Next Steps
 
-Once you are satisfied with your Data Schema, you'll likely to want to use one of our [Broken link](/broken/pages/iREYUuRlIfMqqSxTfHZF "mention") to connect your model with your platform.
+Now that you're familiar with the different components of the Data Schema, you'll want to take a look at [data-schema-best-practices.md](data-schema-best-practices.md "mention") for tips on building an accurate and well-performing Data Schema.

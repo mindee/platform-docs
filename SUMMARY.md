@@ -19,7 +19,8 @@
 ## Extraction Models
 
 * [Extraction Models Overview](extraction-models/extraction-models-overview.md)
-* [Data Schema](extraction-models/data-schema.md)
+* [Data Schema Overview](extraction-models/data-schema.md)
+* [Data Schema Best Practices](extraction-models/data-schema-best-practices.md)
 * [Optional Features](extraction-models/optional-features/README.md)
   * [Continuous Learning (RAG)](extraction-models/optional-features/improving-accuracy.md)
   * [Confidence Score and Accuracy Boost](extraction-models/optional-features/automation-confidence-score.md)
