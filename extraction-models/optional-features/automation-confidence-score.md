@@ -55,6 +55,8 @@ This color-coding system allows product teams to **highlight uncertainty directl
 
 {% include "../../.gitbook/includes/feature-availability.md" %}
 
+Be sure to follow the [data-schema-best-practices.md](../data-schema-best-practices.md "mention") before activating this feature.
+
 ### Activate Confidence Scores on the Platform
 
 {% include "../../.gitbook/includes/default-optional-features.md" %}

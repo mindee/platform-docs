@@ -9,9 +9,11 @@ icon: layer-group
 
 ## Overview
 
-When using an Extraction Model regularly, it can happen that the extraction is not satisfying on a given document or particular template.
+When using an Extraction Model regularly, it can happen that the extraction is not satisfying on a given document or a particular template.
 
-If you notice this, you have a way to durably improve the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
+If you have already followed the [data-schema-best-practices.md](../data-schema-best-practices.md "mention"), and results are still not satisfactory, all is not lost.
+
+You have a way to durably improve the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
 
 {% embed url="http://app.supademo.com/demo/cmfb3c7166gdc39ozj39wogrz" %}
 
@@ -32,6 +34,8 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 ## Activate RAG
 
 {% include "../../.gitbook/includes/feature-availability.md" %}
+
+Be sure to follow the [data-schema-best-practices.md](../data-schema-best-practices.md "mention") before activating this feature.
 
 ### Set Up the RAG Database
 

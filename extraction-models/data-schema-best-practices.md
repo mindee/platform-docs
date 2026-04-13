@@ -16,35 +16,39 @@ Any additional features you activate to increase accuracy, such as [improving-ac
 
 The various properties of the field all have a role to play in getting the best possible performance.
 
-## **Field Name and Title**
+## **Best Practices for Fields**
 
-The field _Name_ is automatically generated from the field _Title_. You can however modify the _Title_ afterwards.
+**The heart of the Data Schema.**
 
-Both the _Name_ and _Title_ are used during processing (inference), but the _Name_ is more important.
+### **Field Name and Title**
 
-Try to use clear, simple names that will precisely describe the field you want to extract.\
+The field _Name_ is automatically generated from the field _Title_. You can also modify the _Title_ afterwards.
+
+Both the _Name_ and _Title_ are used during processing (inference).
+
+Use clear, simple names that will precisely describe the field you want to extract.\
 The goal is to avoid any possible confusion between data points present in the document.
 
-Consider wanting to extract the name of the company that issued an invoice.
+As an example, let's extract the name of the company that issued an invoice.
 
-In our model, we've used the field _Name_:  `supplier_name`\
-It clearly tells the AI to get only the name, and of the invoice supplier.
+In our Data Schema, we've used the field _Name_:  `supplier_name`\
+It clearly tells the model to extract only the name of the invoice supplier.
 
-:white\_check\_mark: you could also use `vendor_name`, it means the same thing with the same level of precision.
+:white\_check\_mark: you could also use `vendor_name`, it has a similar meaning and with equivalent precision.
 
-:warning: `supplier` might work but is imprecise: which information about the supplier do you need?
+:warning: `supplier` might work but is too broad: which information about the supplier is needed, exactly?
 
-:warning: `company_name` might work but is imprecise: we know you need the name of the company, but we don't know if company stands for supplier or customer?
+:warning: `company_name` might work but is ambiguous: we know you need the name of the company, but we don't know if company stands for supplier or customer?
 
 :x: `company` will likely not work as expected: we do not know neither which information you need nor which company is concerned.
 
-## Field Type
+### Field Type
 
-Try to use the [#field-types](data-schema-best-practices.md#field-types "mention") that will best suits how the field is used and present in the document.
+Try to use on of the [#field-types](data-schema.md#field-types "mention") that best suits how the field is used and present in the document.
 
 For example, while you could use a string for `due_date`, a date field type is definitely better.
 
-## Field Description
+### Field Description
 
 The field's _Description_ has an impact on the model's performance.
 
@@ -56,7 +60,7 @@ For example, the `supplier_name` field could have:
 >
 > Used in internal processing to match our supplier ID with the name found on the document.
 
-## Field Extraction Guidelines
+### Field Extraction Guidelines
 
 Sometimes changing the field name and type is not enough to explain what you need for one field.\
 In that case you have the possibility to add extraction _Guidelines_ to the field.
@@ -83,8 +87,9 @@ In the following table, "Normal Fields" are those that extract textual informati
 
 ## Language
 
-You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.\
-Note that the _Name_ can only contain ASCII characters.
+You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.
+
+This also applies to the Data Schema's [#global-guidelines](data-schema.md#global-guidelines "mention").
 
 This includes, but is **not limited** to:
 
@@ -95,6 +100,8 @@ This includes, but is **not limited** to:
 * African languages: Swahili, Yoruba, Zulu, etc
 
 **Note:** while the models can understand, we are not able to provide in-depth support for all languages.
+
+It can be useful to use the same language used in the document to describe the Data Model.
 
 ## Less Is More
 

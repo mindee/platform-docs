@@ -19,6 +19,20 @@ In this way the Data Schema is the foundation of your model. All other features 
 Use the [live-test.md](../models/live-test.md "mention") when working on your Data Schema to quickly validate changes.
 {% endhint %}
 
+## Fields Overview
+
+A Data Schema is primarily composed of fields.
+
+A field describes a single data point to extract in the document.
+
+Each field has the following properties:
+
+* Title - human-readable
+* Name - machine-readable, used as the field's key in the API return
+* Type - the type of data to extract, more details in [#field-types](data-schema.md#field-types "mention")
+* Description (optional) - provides extra context on how the field is used
+* Guidelines (optional) - provides instructions to better extract the field
+
 ## Field Types
 
 A field's type determines how it will be formatted when returned by the API.
