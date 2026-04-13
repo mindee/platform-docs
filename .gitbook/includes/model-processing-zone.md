@@ -4,6 +4,10 @@ title: model-processing-zone
 
 The **Processing Zone** setting determines the geographic region where your document data will be processed. This option can impact compliance with data residency requirements (e.g., GDPR, CCPA).
 
+The processing zone can be set for all models in the [organization settings page](https://app.mindee.com/settings?tab=organization).
+
+If you need to set the processing zone for a specific model, it can be accessed on the model's "General Settings" page.<br>
+
 Available options:
 
 * **No Preference (Default)**\

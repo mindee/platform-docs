@@ -19,6 +19,12 @@ Customize the display name of your organization.
 
 Access your Organization ID, a unique identifier generated automatically.
 
+### Default Processing Zone
+
+Set the processing zone used for all models by default.
+
+Most users will want to set the processing zone here rather than at the model level.
+
 ## Actions
 
 ### Usage Alerts
