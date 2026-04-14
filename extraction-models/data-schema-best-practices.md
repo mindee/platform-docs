@@ -137,25 +137,27 @@ Typically the follow-up question is: should I use a single model or multiple mod
 
 #### Use of Different Models
 
-If the data changes considerably, it can be beneficial to have different models for different regions. For example:
+If the data changes considerably, it can be beneficial to have different models for different regions.\
+For example:
 
 * different tax lines/calculations on invoices
 * specific fields on ID documents
 * different reporting on energy bills
 
-Having different models to better fit the data to extract will generally provide better results.\
+Having different models to better fit the data to extract will generally provide more accurate results.\
 It will also allow having specific [#field-extraction-guidelines](data-schema-best-practices.md#field-extraction-guidelines "mention").
 
 #### Only One Model Needed
 
-On the other hand, if the data to extract does not vary significantly, even when the language changes, there is generally no need to have different models. For example:
+On the other hand, if the data to extract does not vary significantly, even when the language changes, there is generally no need to have different models.\
+For example:
 
 * same document, different language (multilingual countries like Belgium, Canada, India, etc)
 * same data to extract, even if the document changes (only a subset of data is required)
 
 #### Other Considerations
 
-It can be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. In particular when specific terms are used in the field definition.
+It can be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. This can help improve accuracy, in particular when specific terms are used in the field definition.
 
 
 
