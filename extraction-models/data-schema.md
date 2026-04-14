@@ -101,6 +101,10 @@ This includes, but is **not limited** to:
 
 **Note:** while the models can understand these languages, we are not able to provide in-depth support for all languages.
 
+## Technical Limitations
+
+{% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
+
 ## Next Steps
 
 Now that you're familiar with the different components of the Data Schema, you'll want to take a look at [data-schema-best-practices.md](data-schema-best-practices.md "mention") for tips on building an accurate and well-performing Data Schema.

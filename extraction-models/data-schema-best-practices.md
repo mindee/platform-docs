@@ -12,13 +12,11 @@ This will help you understand the terms used on this page.
 
 To get the best possible extraction data from a model, the key is to ensure that the Data Schema you're using is clear and optimized.
 
-Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention")will rely heavily on the Data Schema.
-
-The various properties of the field all have a role to play in getting the best possible performance.
+Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention") will rely heavily on the Data Schema.
 
 ## **Best Practices for Fields**
 
-**The heart of the Data Schema.**
+The heart of the Data Schema. The various properties of fields all have a role to play in getting the best possible accuracy.
 
 ### **Field Name and Title**
 
@@ -116,10 +114,6 @@ A potential fix would be to add the "Reference Number" field in your Data Schema
 Then, in your data processing flow, simply ignore the extra field.
 
 As a reminder, the number of fields in the Data Schema has no impact on pricing.
-
-## Technical Limitations
-
-{% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
 
 ## Frequently Asked Questions
 
