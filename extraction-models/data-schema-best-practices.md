@@ -127,11 +127,13 @@ As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
 It's important to first make the distinction between _representation_ and _content_.
 
-Representation meaning that equivalent content can be represented differently (for language, this is translation).
+Representation meaning that equivalent content can be showed or displayed differently (for language, this is a translation).
 
-Content meaning that the structure of the data is different, regardless of its representation/language.
+Content meaning that the structure of the data is different, regardless of its representation or language.
 
-In the context of a Data Schema, answering the question mainly depends on whether the data you need to extract (the content) changes depending on the region or language.
+In the context of a Data Schema, the optimal configuration mainly depends on whether the data you need to extract (the content) changes depending on the region or language.
+
+Typically the follow-up question is: should I use a single model or multiple models?
 
 #### Use of Different Models
 
