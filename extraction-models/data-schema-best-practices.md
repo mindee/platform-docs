@@ -129,7 +129,7 @@ It's important to first make the distinction between _representation_ and _conte
 
 Representation meaning that equivalent content can be showed or displayed differently (for language, this is a translation).
 
-Content meaning that the structure of the data is different, regardless of its representation or language.
+Content meaning that the structure of the data is different, regardless of its representation (language).
 
 In the context of a Data Schema, the optimal configuration mainly depends on whether the data you need to extract (the content) changes depending on the region or language.
 
