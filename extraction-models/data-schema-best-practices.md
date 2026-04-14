@@ -85,24 +85,6 @@ In the following table, "Normal Fields" are those that extract textual informati
 
 <table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>Name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>Title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>Description</td><td>Complementary</td><td>Not used</td></tr><tr><td>Guidelines</td><td>Complementary</td><td>Not used</td></tr><tr><td>Classification Values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
 
-## Language
-
-You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.
-
-This also applies to the Data Schema's [#global-guidelines](data-schema.md#global-guidelines "mention").
-
-This includes, but is **not limited** to:
-
-* European languages: English, French, Spanish, German, Italian, Portuguese, Russian, Greek, etc
-* Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
-* East Asian languages: Japanese, Mandarin, Korean, Vietnamese, etc
-* Semitic languages: Arabic, Hebrew, Amharic, etc
-* African languages: Swahili, Yoruba, Zulu, etc
-
-**Note:** while the models can understand these languages, we are not able to provide in-depth support for all languages.
-
-It can be useful to use the same language used in the document to describe the Data Model.
-
 ## Less Is More
 
 It can be tempting to give very detailed instructions in guidelines and descriptions. However, in many cases this is actually counterproductive and will lead to diminished accuracy.
@@ -138,6 +120,42 @@ As a reminder, the number of fields in the Data Schema has no impact on pricing.
 ## Technical Limitations
 
 {% include "../.gitbook/includes/data-schema-technical-limitations.md" %}
+
+## Frequently Asked Questions
+
+### What are best practices for handling different regions or languages?
+
+It's important to first make the distinction between _representation_ and _content_.
+
+Representation meaning that equivalent content can be represented differently (for language, this is translation).
+
+Content meaning that the structure of the data is different, regardless of its representation/language.
+
+In the context of a Data Schema, answering the question mainly depends on whether the data you need to extract (the content) changes depending on the region or language.
+
+#### Use of Different Models
+
+If the data changes considerably, it can be beneficial to have different models for different regions. For example:
+
+* different tax lines/calculations on invoices
+* specific fields on ID documents
+* different reporting on energy bills
+
+Having different models to better fit the data to extract will generally provide better results.\
+It will also allow having specific [#field-extraction-guidelines](data-schema-best-practices.md#field-extraction-guidelines "mention").
+
+#### Only One Model Needed
+
+On the other hand, if the data to extract does not vary significantly, even when the language changes, there is generally no need to have different models. For example:
+
+* same document, different language (multilingual countries like Belgium, Canada, India, etc)
+* same data to extract, even if the document changes (only a subset of data is required)
+
+#### Other Considerations
+
+It can be useful to define the Data Schema, such as field names and descriptions, using the language present in the document.
+
+
 
 ## Next Steps
 
