@@ -22,3 +22,10 @@ All errors will contain the following information:
 ## 5xx Errors - Server Errors
 
 <table><thead><tr><th width="130">HTTP Status</th><th>Possible Reasons</th></tr></thead><tbody><tr><td>500</td><td><ul><li>Failed to run the inference.</li><li>Failed to process the request.</li></ul></td></tr></tbody></table>
+
+### Mindee Status
+
+Check to make sure that the API is fully operational.
+
+[https://status.mindee.com/](https://status.mindee.com/)
+
