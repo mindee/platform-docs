@@ -2,36 +2,30 @@
 icon: comments-question-check
 ---
 
-# FAQ V1 to V2
+# Frequently Asked Questions
 
-## 🚀 Why Mindee V2?
+## 🚀 Why Mindee?
 
 At Mindee, we've been listening to our customers and the evolving needs of document automation. Over the past years, we've learned that businesses don't just want to extract data from documents—they want to **understand, query, and act** on that data with complete autonomy.
-
-**V2 represents the natural evolution of our AI-powered platform, building on the strong foundation of V1:**
 
 * **From extraction to deeper intelligence**: Enhancing our proven AI capabilities with advanced features like RAG, enabling you to not just extract data but have conversations with your documents
 * **From developer-focused to universally accessible**: Building on V1's solid API foundation while adding intuitive self-service tools that empower both technical and non-technical users
 * **From powerful APIs to comprehensive platform**: Expanding beyond our robust V1 APIs to offer a complete ecosystem where users can build, test, and deploy document automation solutions with greater flexibility
 * **User empowerment**: Proactive tools and insights that help users solve challenges independently when they prefer
 
-We're maintaining V1 to ensure continuity for our existing clients who love its simplicity and reliability, while V2 opens up entirely new possibilities for those ready to explore advanced document intelligence. This isn't a replacement—it's an evolution that gives you more choices in how you want to work with document automation.
+## **Technical Changes**
 
-**Both platforms share the same core AI excellence you trust, with V2 offering additional layers of intelligence and user control for those who need them.**
-
-## **🔧 Technical Changes**
-
-### **API & Integration Changes**
+### **API & Integration**
 
 <details>
 
 <summary>How will API calls change in V2?</summary>
 
-V2 has a completely different approach, where models are fully customizable and unique. As such, there is a single API route to send documents for processing. This single route requires the model ID to be given, along with other optional parameters.
+Models are fully customizable and unique. As such, there is a single API route to send documents for processing. This single route requires the model ID to be given, along with other optional parameters.
 
 The resulting output has a different output structure which is much more generic to allow for the unique and custom nature of the models.
 
-[See Client Libraries](https://docs.mindee.com/integrations/client-libraries-sdk)
+[api-overview.md](../integrations/api-overview.md "mention")
 
 </details>
 
@@ -45,37 +39,19 @@ No, V1 and V2 do not share API key information.
 
 <details>
 
-<summary>Will my existing V1 integrations break?</summary>
+<summary>Are there webhook capabilities?</summary>
 
-Paying V1 integrations will not be impacted. Paid customers will retain full access under existing contracts without a defined end date. We do encourage existing users to migrate to the V2 since we will not be adding any features to V1.
+Yes, the API supports webhook integration for asynchronous document processing.
 
-Free-tier will lose access to the service on September 15, 2025 regardless of integration.
-
-</details>
-
-<details>
-
-<summary>How do authentication methods change in V2?</summary>
-
-V2 authentication is based on the same API key system but with a dedicated set of API keys. You’ll need to create an API key on the V2 platform in order to use the service.
+[webhooks.md](../integrations/webhooks.md "mention")
 
 </details>
 
 <details>
 
-<summary>Are there webhook capabilities in V2?</summary>
+<summary>How do rate limits work?</summary>
 
-Yes, V2 supports webhook integration for asynchronous document processing.
-
-[See Webhook Integration](https://docs.mindee.com/integrations/api-overview/webhooks)
-
-</details>
-
-<details>
-
-<summary>How do rate limits work in V2?</summary>
-
-Check the [technical limitations](../integrations/technical-limitations.md) section.
+Check the [#rate-limits](../integrations/technical-limitations.md#rate-limits "mention") section.
 
 </details>
 
@@ -83,41 +59,17 @@ Check the [technical limitations](../integrations/technical-limitations.md) sect
 
 <details>
 
-<summary>What new document types are supported in V2?</summary>
+<summary>What new document types are supported?</summary>
 
-V2 is now giving the opportunity to start creating a custom extraction model for any document type.
+You can create a custom extraction model for any document type.
 
 </details>
 
 <details>
 
-<summary>Which countries/languages are supported in V2?</summary>
+<summary>Which countries/languages are supported?</summary>
 
 V2 models are optimized for global use, we support [most languages and alphabets](https://docs.mindee.com/models/data-schema#extraction-guidelines), and thus documents from most countries.
-
-</details>
-
-<details>
-
-<summary>How has accuracy improved in V2?</summary>
-
-V1 uses advanced vision and OCR models, while V2 also includes the latest language models and advanced ensemble learning algorithms. It also gives access to a brand new RAG feature, allowing continuous learning, and automation feature, in order to reach best in class performances to get close to human-level precision.
-
-</details>
-
-<details>
-
-<summary>How does processing speed compare between V1 and V2?</summary>
-
-Since Accuracy and Reliability are the key objectives of the V2, there may be a slight increase in response time in some cases.
-
-</details>
-
-<details>
-
-<summary>Does V2 support synchronous and asynchronous modes?</summary>
-
-V2 only supports asynchronous modes: polling and webhooks.
 
 </details>
 
@@ -135,7 +87,7 @@ Yes, V2 allows full control for the users with interactive model customization.
 
 Supported formats include PDF, PNG, JPEG, and TIFF, similar to V1. Multi-page PDFs and high-res images are fully compatible.
 
-[See more about file formats](https://docs.mindee.com/integrations/api-overview#accepted-file-types)
+[#accepted-files](../integrations/technical-limitations.md#accepted-files "mention")
 
 </details>
 
@@ -143,7 +95,9 @@ Supported formats include PDF, PNG, JPEG, and TIFF, similar to V1. Multi-page PD
 
 <summary>How do I optimize performances for my specific use case?</summary>
 
-In order to optimize the performance of a given model, the first step is to [optimize the data schema fields and guidelines](https://docs.mindee.com/models/data-schema#how-to-build-a-top-performing-data-schema) so that the model performances are globally better. If after this step, some unexpected behavior happen on some isolated templates, the [RAG feature](https://docs.mindee.com/models/improving-accuracy) has to be used to increase performances on these given templates, with no regression on the rest of the flow.
+In order to optimize the performance of a given model, the first step is to follow the [data-schema-best-practices.md](../extraction-models/data-schema-best-practices.md "mention") so that the model performances are globally better.
+
+If after this step, some unexpected behavior happen on some isolated templates, [improving-accuracy.md](../extraction-models/optional-features/improving-accuracy.md "mention") can to be used to increase performances on these given templates, with no regression on the rest of the flow.
 
 </details>
 
@@ -151,15 +105,15 @@ In order to optimize the performance of a given model, the first step is to [opt
 
 <details>
 
-<summary>Which programming languages are supported in V2?</summary>
+<summary>Which programming languages are supported?</summary>
 
 We officially support Python, Node.js, Ruby, PHP, Java and .NET, when these are used in conjunction with our official client libraries.
 
-[See Client Libraries](https://docs.mindee.com/integrations/client-libraries-sdk)
+[client-libraries-sdk](../integrations/client-libraries-sdk/ "mention")
 
 For no-code/low-code, we officially support Make.com, n8n, and Zapier
 
-[See No-Code](../integrations/no-code-integrations/)
+[no-code-integrations](../integrations/no-code-integrations/ "mention")
 
 However, any language or system able to make an HTTP call and receive a JSON response can be used and supported by the community.
 
@@ -181,21 +135,9 @@ You’ll need to create a new code integration. Use one of our official client l
 
 </details>
 
-## 🎯 Feature Comparison & Use Cases
+## Feature Comparison & Use Cases
 
 ### Feature Analysis
-
-<details>
-
-<summary>What features am I losing/gaining in the transition?</summary>
-
-With the transition to V2, you're gaining a much more powerful and flexible platform. While V1 offered prebuilt, static APIs for common document types, V2 introduces a **modular and customizable approach,** allowing you to **build, modify, and iterate on your own extraction models.** You’ll no longer use predefined endpoints — instead, you’ll create and manage models via an intuitive UI. You’ll also benefit from a brand new Confidence Score per field, now based on the value predicted itself, to help you take decisions based on mindee predictions with more confidence.
-
-In short, you gain full control, smarter AI, and faster iteration cycles.
-
-The only feature no longer available is the synchronous mode.
-
-</details>
 
 <details>
 
@@ -226,46 +168,11 @@ No — V1 APIs are no longer being developed. The focus has fully shifted to V2,
 
 </details>
 
-## 🏷️ Commercial & Pricing Changes
+## Commercial & Pricing Changes
 
 ### Pricing Structure & Strategy
 
 For more information, see the [billing](https://docs.mindee.com/account-management/billing) and [plans](https://docs.mindee.com/account-management/plans) documentation.
-
-<details>
-
-<summary>What are the main pricing changes in V2?</summary>
-
-V2 introduces a subscription-based model :
-
-**V1 Pricing (Current):**
-
-* Pay-as-you-go: €0.10 per page
-* Enterprise packs: Custom pricing based on volumes
-
-**V2 Pricing (New):**
-
-* **Starter**: €49/month (500 pages monthly, 6,000 annually, …)
-* **Pro**: €199/month (2,500 pages monthly, 30,000 annually, … )
-* **Business**: €649/month (10,000 pages monthly, 120,000 annually, …)
-* **Enterprise**: Custom pricing for 250K+ pages yearly
-
-The key change is moving from pay-per-use to monthly subscriptions with included page allowances, plus access to advanced features like RAG, team collaboration, and enhanced automation tools.
-
-More information on the [pricing page](https://docs.mindee.com/account-management/plans) on the V2 platform.
-
-</details>
-
-<details>
-
-<summary>What happens to my current V1 pricing and contracts?</summary>
-
-We're committed to honoring all existing V1 agreements:
-
-* **Pay-as-you-go customers**: you can continue using V1 with existing pricing structure or decide to transition within the V2
-* **Enterprise customers**: Current contracts remain valid with no forced migration. You can contact our account management team to learn more about the V2.
-
-</details>
 
 <details>
 
@@ -285,9 +192,9 @@ When you exceed your plan limits, overage charges are automatically billed on yo
 
 <details>
 
-<summary>Can I try the v2 before committing to a paid plan?</summary>
+<summary>Can I try before committing to a paid plan?</summary>
 
-The v2 offers a 14-day & 500-page free trial (no credit card required), allowing you to test all features and functionality (Continuous Learning, API Keys, Polygons,…) before committing to a paid plan.
+We offer a 14-day & 500-page free trial (no credit card required), allowing you to test all features and functionality (Continuous Learning, API Keys, Polygons,…) before committing to a paid plan.
 
 </details>
 
@@ -295,7 +202,7 @@ The v2 offers a 14-day & 500-page free trial (no credit card required), allowing
 
 <details>
 
-<summary>How will billing change from V1 to V2?</summary>
+<summary>How does billing work?</summary>
 
 Payment is required upfront to access the platform and the features included in your plan. Only extra calls (if you have exceed the ones included in your plan) will be invoiced every 100€ or at the end of your subscription.
 
@@ -303,7 +210,7 @@ Payment is required upfront to access the platform and the features included in 
 
 <details>
 
-<summary>When does billing start for V2?</summary>
+<summary>When does billing start?</summary>
 
 You will be billed as soon as you complete your subscription payment online.
 
@@ -325,7 +232,7 @@ You can see all the details about your pending subscription by clicking on “Ma
 
 </details>
 
-## 🔒 Legal & Security
+## Legal & Security
 
 ### Data Protection & Privacy
 
@@ -339,9 +246,9 @@ You can now set yourself the data processing rules directly in the Settings Page
 
 <details>
 
-<summary>How does data residency work in V2?</summary>
+<summary>How does data residency work?</summary>
 
-Mindee V2 allows you to choose your data residency region (EU or US) at the model level, with the [Model Settings page](https://docs.mindee.com/models/model-settings#processing-zone). All document processing and storage then take place exclusively in that region, ensuring compliance with local regulations.
+Mindee V2 allows you to choose your data residency region (EU or US) at the model or organizational level, with the [#processing-zone](../models/model-settings.md#processing-zone "mention"). All document processing and storage then take place exclusively in that region, ensuring compliance with local regulations.
 
 </details>
 
@@ -371,7 +278,7 @@ Yes. In V2, you have more control over retention. You can set everything up usin
 
 <details>
 
-<summary>Is Mindee still GDPR &#x26; SOC 2 Type II compliant with the V2?</summary>
+<summary>Is Mindee GDPR &#x26; SOC 2 Type II compliant?</summary>
 
 Yes. Mindee V2 is fully GDPR-compliant and maintains its SOC 2 Type II certification, ensuring rigorous security controls, data protection standards, and transparency for enterprise needs.
 
@@ -393,50 +300,9 @@ Yes. You can request full or partial data deletion at any time by contacting sup
 
 </details>
 
-## 📅 Migration & support
+## Migration & support
 
 ### Migration & support
-
-<details>
-
-<summary>How do I migrate from V1 to V2?</summary>
-
-**V2 is available now** and ready for production use. Here's our V1 availability timeline:
-
-**V1 Availability:**
-
-* **Pay-per-use customers**: V1 remains fully available with no discontinuation date planned
-* **Enterprise clients**: V1 remains fully available with no discontinuation date planned, under existing contract terms with full support
-* **Free tier users**: V1 access will be discontinued **mid-September 2025**
-
-**Key Dates:**
-
-* **Now**: V2 fully available for all customers
-* **September 15, 2025**: Free V1 access ends (free users must migrate to V2)
-* **Ongoing**: Paid V1 services continue with full support
-
-We're committed to maintaining V1 for our paying customers while encouraging exploration of V2's enhanced capabilities.
-
-</details>
-
-<details>
-
-<summary>What's the recommended migration timeline?</summary>
-
-* **Paying customers (high Pay-per-use & Enterprise)**: Consider migrating if you see improvements for your use case and want to benefit from V2's enhanced features
-* **Timeline**: Test V2 thoroughly in parallel with your V1 usage, then migrate only if you're confident V2 better serves your needs
-
-</details>
-
-<details>
-
-<summary>When will V2 be available and when will V1 be discontinued?</summary>
-
-V2 is already available and no new V1 accounts can be created.
-
-For enterprise customers on V1, there is no sunset date.
-
-</details>
 
 <details>
 
@@ -502,13 +368,13 @@ You’ll need to reconfigure webhooks in V2 as the endpoint structure and authen
 
 </details>
 
-## 📞 Resources
+## Resources
 
 ### Learning & Documentation
 
 <details>
 
-<summary>How do I stay updated on new V2 features?</summary>
+<summary>How do I stay updated on new features?</summary>
 
 You can give feedback and follow product updates directly in [https://feedback.mindee.com/](https://feedback.mindee.com/)
 
