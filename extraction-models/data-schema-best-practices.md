@@ -155,7 +155,7 @@ On the other hand, if the data to extract does not vary significantly, even when
 
 #### Other Considerations
 
-It can be useful to define the Data Schema, such as field names and descriptions, using the language present in the document.
+It can be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. In particular when specific terms are used in the field definition.
 
 
 
