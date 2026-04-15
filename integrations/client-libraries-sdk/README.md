@@ -1,6 +1,6 @@
 ---
 description: Officially supported client libraries for integrating the Mindee platform.
-icon: terminal
+icon: code
 ---
 
 # Client Libraries / SDKs
