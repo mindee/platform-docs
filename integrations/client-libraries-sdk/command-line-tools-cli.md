@@ -75,6 +75,10 @@ Coming Soon
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
 We are still working hard to make the CLI utilities more complete and useful.
 
+
+
 If you have any ideas to improve them, [make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
+{% endhint %}
