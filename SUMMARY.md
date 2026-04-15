@@ -45,7 +45,7 @@
 * [Integration Overview](integrations/api-overview.md)
 * [Client Libraries / SDKs](integrations/client-libraries-sdk/README.md)
   * [Command Line Tools (CLI)](integrations/client-libraries-sdk/command-line-tools-cli.md)
-  * [Quick Start](integrations/client-libraries-sdk/quick-start.md)
+  * [Integration Quick Start](integrations/client-libraries-sdk/quick-start.md)
   * [Configure the Client](integrations/client-libraries-sdk/configure-the-client.md)
   * [Load and Adjust a File](integrations/client-libraries-sdk/load-and-adjust-a-file.md)
   * [Load an URL](integrations/client-libraries-sdk/load-an-url.md)
