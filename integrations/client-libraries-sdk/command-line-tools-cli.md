@@ -76,7 +76,8 @@ Coming Soon
 {% endtabs %}
 
 {% hint style="info" %}
-We are still working hard to make the CLI utilities more complete and useful.
+We are still working hard to make the CLI utilities more complete and useful.\
+**As a result, the interface is not yet considered stable, and may be subject to change.**
 
 
 
