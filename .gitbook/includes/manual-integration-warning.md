@@ -3,7 +3,9 @@ title: manual-integration-warning
 ---
 
 {% hint style="warning" %}
-**We do not recommend manually integrating**, and cannot guarantee full support in this case.
+**We do not recommend manually integrating**, and cannot guarantee full support.
+
+Pro plans and above benefit from extended integration support.
 {% endhint %}
 
 {% hint style="success" %}
