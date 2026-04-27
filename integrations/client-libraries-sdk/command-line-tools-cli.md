@@ -24,7 +24,7 @@ mindeeV2 --help
 mindeeV2 extraction --help
 
 # Run extraction on a file
-#   --key:   API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   --key: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
 #   --model: Your model ID
 #   Positional arg: Absolute path to the file
 mindeeV2 extraction \
@@ -46,7 +46,7 @@ npm install mindee
 ./node_modules/.bin/mindeeV2 extraction --help
 
 # Run extraction on a file
-#   --api-key:   API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   --api-key: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
 #   --model: Your model ID
 #   Positional arg: Absolute path to the file
 ./node_modules/.bin/mindeeV2 extraction \
@@ -69,11 +69,30 @@ Coming Soon
 {% endtab %}
 
 {% tab title=".NET" %}
-Coming Soon
+First install the CLI package: [https://www.nuget.org/packages/Mindee.Cli](https://www.nuget.org/packages/Mindee.Cli)
 
-[Technically ready](https://github.com/mindee/mindee-api-dotnet/tree/main/src/Mindee.Cli), we just need to publish to Nuget... please bear with us.
+Note: this is a separate package from the general Mindee Client Library.
+
+```bash
+# General help
+Mindee.Cli --help
+
+# Help for extraction models
+Mindee.Cli extraction --help
+
+# Run extraction on a file
+#   --api-key: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   --model-id: Your model ID
+#   Positional arg: Absolute path to the file
+Mindee.Cli extraction \
+  --key md_XXXXXXXXXXXX \
+  --model-id abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  /path/to/the/file.pdf
+```
 {% endtab %}
 {% endtabs %}
+
+
 
 {% hint style="info" %}
 We are still working hard to make the CLI utilities more complete and useful.\

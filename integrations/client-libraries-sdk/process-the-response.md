@@ -196,7 +196,8 @@ System.out.println(response.getInference().toString());
 Assuming you're able to get the raw HTTP request via the variable `request` .
 
 ```csharp
-using Mindee.Parsing.V2;
+using Mindee.V2.Parsing;
+using Mindee.V2.Product.Extraction;
 
 public void HandleMindeeCallback(HttpRequest request)
 {
@@ -216,10 +217,79 @@ public void HandleMindeeCallback(HttpRequest request)
         throw new Exception("Bad HMAC signature! Is someone trying to do evil?");
 
     // Deserialize the response into objects
-    var response = localResponse.DeserializeResponse<InferenceResponse>();
+    var response = localResponse.DeserializeResponse<ExtractionResponse>();
     
     // Print a summary of the parsed data
     System.Console.WriteLine(response.Inference);
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## The Response Object
+
+This is the base object of the response.
+
+It doesn't do much on its own except allow you to access the [Inference object](process-the-response.md#the-inference-object).
+
+The response object can be used to retrieve the raw response from the server, as a JSON string:
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+from mindee import InferenceResponse
+
+def handle_response(response: InferenceResponse):
+    response_json = response.raw_http
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+handleResponse(response) {
+  const responseJson = response.getRawHttp();
+}
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+use Mindee\Parsing\V2\InferenceResponse;
+
+public function handleResponse(InferenceResponse $response)
+{
+    $responseJson = $response->getRawHttp();
+}
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require 'mindee'
+
+def handle_response(response)
+  response_json = response.raw_http
+end
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.mindee.parsing.v2.InferenceResponse;
+
+public void handleResponse(InferenceResponse response) {
+    String responseJSON = response.getRawResponse();
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+using Mindee.V2.Product.Extraction;
+
+public void HandleResponse(ExtractionResponse response)
+{
+    string responseJson = response.RawResponse;
 }
 ```
 {% endtab %}
@@ -242,10 +312,10 @@ It contains the following attributes:
 
 You can access various metadata concerning the file sent for processing.
 
+Using the Response object from either the polling response or a webhook payload:
+
 {% tabs %}
 {% tab title="Python" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```python
 from mindee import InferenceResponse
 from mindee.parsing.v2 import InferenceFile
@@ -261,8 +331,6 @@ def handle_response(response: InferenceResponse):
 {% endtab %}
 
 {% tab title="Node.js" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```javascript
 handleResponse(response) {
   const file = response.inference.file;
@@ -276,8 +344,6 @@ handleResponse(response) {
 {% endtab %}
 
 {% tab title="PHP" %}
-Using the `$response` deserialized object from either the polling response or a webhook payload.
-
 ```php
 use Mindee\Parsing\V2\InferenceResponse;
 
@@ -294,8 +360,6 @@ public function handleResponse(InferenceResponse $response)
 {% endtab %}
 
 {% tab title="Ruby" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```ruby
 require 'mindee'
 
@@ -311,8 +375,6 @@ end
 {% endtab %}
 
 {% tab title="Java" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```java
 import com.mindee.parsing.v2.InferenceFile;
 import com.mindee.parsing.v2.InferenceResponse;
@@ -329,14 +391,12 @@ public void handleResponse(InferenceResponse response) {
 {% endtab %}
 
 {% tab title=".NET" %}
-Using the `response` deserialized object from either the polling response or a webhook payload.
-
 ```csharp
-using Mindee.Parsing.V2;
+using Mindee.V2.Product.Extraction;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
-    InferenceFile file = response.Inference.File;
+    var file = response.Inference.File;
 
     // various attributes are available, such as:
     string filename = file.Name;
@@ -351,8 +411,6 @@ public void HandleResponse(InferenceResponse response)
 
 {% hint style="info" %}
 The following section only applies to **Extraction Models**.
-
-
 
 We are currently re-organizing the documentation, please bear with us!
 {% endhint %}
@@ -461,12 +519,12 @@ public void handleResponse(InferenceResponse response) {
 
 {% tab title=".NET" %}
 ```csharp
-using Mindee.Parsing.V2;
+using Mindee.V2.Product.Extraction;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
-    RawText rawText = response.Inference.Result.RawText;
-    
+    var rawText = response.Inference.Result.RawText;
+
     // get the entire document as a single string
     string documentText = rawText.ToString();
 
@@ -613,9 +671,9 @@ public void handleResponse(InferenceResponse response) {
 
 {% tab title=".NET" %}
 ```csharp
-using Mindee.Parsing.V2;
+using Mindee.V2.Product.Extraction;
 
-public void HandleResponse(InferenceResponse response)
+public void HandleResponse(ExtractionResponse response)
 {
     RagMetadata rag = response.Inference.Result.Rag;
 
