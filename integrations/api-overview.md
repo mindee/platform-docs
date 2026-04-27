@@ -41,6 +41,8 @@ Use the "Ask" button at the top of any page, or click below:
 
 Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby**, **Java**, **.NET** (C#).
 
+We provide full support for Client Libraries regardless of your plan. You can report any issues on our [bug tracker](https://feedback.mindee.com/?b=685c08afd7a1d2e47b124cbb) or directly on [GitHub](https://github.com/orgs/mindee/repositories).
+
 ### No-Code or Low-Code
 
 If you're integrating using a no-code or low-code platform, take a look at the [no-code-integrations](no-code-integrations/ "mention") section.
