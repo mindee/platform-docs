@@ -29,7 +29,7 @@ Most common image types can be processed.
 
 Specifically, we accept the following image types:
 
-<table><thead><tr><th width="140">Type</th><th width="158.5">Media Type</th><th width="135.5">Extensions</th><th>Notes</th></tr></thead><tbody><tr><td> <a data-footnote-ref href="#user-content-fn-1">JPEG</a></td><td>image/jpeg</td><td>jpeg, jpg</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-2">PNG</a></td><td>image/png</td><td>png</td><td>non-animated only</td></tr><tr><td>WebP</td><td>image/webp</td><td>webp</td><td></td></tr><tr><td> <a data-footnote-ref href="#user-content-fn-3">TIFF</a></td><td>image/tiff</td><td>tiff, tif</td><td>single page or multiple pages</td></tr><tr><td> <a data-footnote-ref href="#user-content-fn-4">HEIC</a></td><td>image/heic</td><td>heic</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="140">Type</th><th width="158.5">Media Type</th><th width="135.5">Extensions</th><th>Notes</th></tr></thead><tbody><tr><td><a data-footnote-ref href="#user-content-fn-1">JPEG</a></td><td>image/jpeg</td><td>jpeg, jpg</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-2">PNG</a></td><td>image/png</td><td>png</td><td>non-animated only</td></tr><tr><td>WebP</td><td>image/webp</td><td>webp</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-3">TIFF</a></td><td>image/tiff</td><td>tiff, tif</td><td>single page or multiple pages</td></tr><tr><td><a data-footnote-ref href="#user-content-fn-4">HEIC</a></td><td>image/heic</td><td>heic</td><td></td></tr></tbody></table>
 
 ### File Limits
 
@@ -61,7 +61,7 @@ These limits apply to an entire organization, meaning the combination of all mod
 
 The following limits are enforced:
 
-<table><thead><tr><th width="254">Limit Type</th><th>Limit Value</th></tr></thead><tbody><tr><td><a href="client-libraries-sdk/send-a-file-or-url.md#send-for-processing">Send for Processing</a></td><td>200 requests per minute</td></tr><tr><td>Polling</td><td>1200 requests per minute<br><em>Normally, this is handled by the client library.</em></td></tr></tbody></table>
+<table><thead><tr><th width="254">Limit Type</th><th>Limit Value</th></tr></thead><tbody><tr><td>Send for Processing (POST)</td><td>200 requests per minute</td></tr><tr><td>Polling (GET)</td><td>1200 requests per minute<br><em>Normally, this is handled by the client library.</em></td></tr></tbody></table>
 
 If rate limits are exceeded, the server will return a HTTP 429 error.
 
@@ -76,8 +76,6 @@ If you have needs beyond these limits, get in touch with the [sales team](mailto
 ## Webhooks
 
 {% include "../.gitbook/includes/webhook-technical-limitations.md" %}
-
-
 
 [^1]: Joint Photographic Experts Group
 
