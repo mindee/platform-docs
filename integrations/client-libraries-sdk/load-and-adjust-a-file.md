@@ -782,6 +782,7 @@ var pageOptions = new PageOptions.Builder()
     .operation(PageOptionsOperation.KEEP_ONLY)
     .build();
 
+// Apply in-memory
 inputSource.applyPageOptions(pageOptions);
 ```
 
