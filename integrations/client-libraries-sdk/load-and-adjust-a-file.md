@@ -253,54 +253,54 @@ This class has different constructors to allow for opening various types of inpu
 To load a path string:
 
 ```java
-String filePath = "/path/to/the/file.ext";
+var filePath = "/path/to/the/file.ext";
 
-LocalInputSource inputSource = new LocalInputSource(filePath);
+var inputSource = new LocalInputSource(filePath);
 ```
 
 To load a `Path` instance:
 
 ```java
-Path filePath = new Path("/path/to/the/file.ext");
+var filePath = new Path("/path/to/the/file.ext");
 
-LocalInputSource inputSource = new LocalInputSource(filePath);
+var inputSource = new LocalInputSource(filePath);
 ```
 
 To load a `File` instance:
 
 ```java
-File file = new File("/path/to/the/file.ext");
+var file = new File("/path/to/the/file.ext");
 
-LocalInputSource inputSource = new LocalInputSource(file);
+var inputSource = new LocalInputSource(file);
 ```
 
 To load a byte array:
 
 ```java
-byte[] fileBytes = Files.readAllBytes("/path/to/the/file.ext");
-String filename = "file.ext";
+var fileBytes = Files.readAllBytes("/path/to/the/file.ext");
+var filename = "file.ext";
 
-LocalInputSource inputSource = new LocalInputSource(fileBytes, filename);
+var inputSource = new LocalInputSource(fileBytes, filename);
 ```
 
 To load an `InputStream` instance:
 
 ```java
-InputStream fileStream = new FileInputStream(
+var fileStream = new FileInputStream(
     new File("/path/to/the/file.ext")
 );
-String filename = "file.ext";
+var filename = "file.ext";
 
-LocalInputSource inputSource = new LocalInputSource(fileStream, filename);
+var inputSource = new LocalInputSource(fileStream, filename);
 ```
 
 To load a base-64 string:
 
 ```java
-String inputBase64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
-String filename = "file.ext";
+var inputBase64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
+var filename = "file.ext";
 
-LocalInputSource inputSource = new LocalInputSource(inputBase64, filename);
+var inputSource = new LocalInputSource(inputBase64, filename);
 ```
 {% endtab %}
 
@@ -777,10 +777,12 @@ import com.mindee.input.PageOptionsOperation;
 
 // Set the options as follows:
 // For all documents, keep only the first page
-PageOptions pageOptions = new PageOptions.Builder()
+var pageOptions = new PageOptions.Builder()
     .pageIndexes(new Integer[]{ 0 })
     .operation(PageOptionsOperation.KEEP_ONLY)
     .build();
+
+inputSource.applyPageOptions(pageOptions);
 ```
 
 Some other examples:
@@ -791,7 +793,7 @@ import com.mindee.input.PageOptionsOperation;
 
 // Only for documents having 3 or more pages:
 // Keep only these pages: first, penultimate, last
-PageOptions pageOptions = new PageOptions.Builder()
+var pageOptions = new PageOptions.Builder()
     .pageIndexes(new Integer[]{ 0, -2, -1 })
     .operation(PageOptionsOperation.KEEP_ONLY)
     .onMinPages(3)
@@ -799,14 +801,14 @@ PageOptions pageOptions = new PageOptions.Builder()
 
 // For all documents:
 // Remove the first page
-PageOptions pageOptions = new PageOptions.Builder()
+var pageOptions = new PageOptions.Builder()
     .pageIndexes(new Integer[]{ 0 })
     .operation(PageOptionsOperation.REMOVE)
     .build();
 
 // Only for documents having 10 or more pages:
 // Remove the first 5 pages
-PageOptions pageOptions = new PageOptions.Builder()
+var pageOptions = new PageOptions.Builder()
     .pageIndexes(new Integer[]{ 0, 1, 2, 3, 4 })
     .operation(PageOptionsOperation.REMOVE)
     .onMinPages(10)
