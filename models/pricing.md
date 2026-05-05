@@ -1,20 +1,22 @@
 ---
-description: Information on credit consumption for processing pages with the model.
+description: Information on credit consumption for processing using the model.
 icon: coins
 ---
 
 # Pricing
 
-Each page processed will consume credits, on this page the exact amount of credits will be displayed.
+Each file processed by the model will consume credits based on the number of pages contained in the file. The model's Pricing page shows the exact amount of credits consumed per page.
 
 For files having more than one page, such as PDF or TIFF, this is every page of the file.\
 Single image files count as one page.
 
-Pricing does not take into account the contents of the page.
+For example, assuming 1 credit per page:
+
+* Single page text PDF file ⇒ 1 credit
+* 5 page text and image PDF file ⇒ 5 credits
+* A JPEG file ⇒ 1 credit
 
 {% hint style="info" %}
 Currently pricing is on a 1 to 1 ratio for all models — one page consumes one credit.
-
-This is likely to change as we add advanced features to the models, and as we refine our pricing model.
 {% endhint %}
 
