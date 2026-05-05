@@ -85,9 +85,11 @@ Some features are only applicable to extraction models.
 
 ### How is credit use calculated?
 
-Each page processed consumes a certain number of credits. Currently this is a 1 to 1 ratio — each page consumes one credit.
+Each page processed consumes a certain number of credits.
 
-You can track credit use on the [insights.md](insights.md "mention") page.
+The exact amount of credits used per page is available on each model's [pricing.md](../models/pricing.md "mention") page.
+
+Overall credit consumption can be tracked on the [insights.md](insights.md "mention") page.
 
 ### Can I add features From Another Plan (à la carte pricing)?
 

@@ -15,6 +15,7 @@
 * [Live Test](models/live-test.md)
 * [Model Settings](models/model-settings.md)
 * [Data Processing Policies](models/data-processing-policies.md)
+* [Pricing](models/pricing.md)
 
 ## Extraction Models
 
