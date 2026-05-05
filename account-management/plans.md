@@ -54,7 +54,7 @@ Start with the Starter Plan if you're processing fewer than 100 pages per day. F
 
 ## Feature Comparison
 
-"Number of pages included" is for all types of models combined ([Extraction](/broken/pages/ywb5XsDuWyBy07coiRb0) and [Utility](/broken/pages/jqljfGxEsmDTKtOnQDrR)).
+"Number of credits included" is for all types of models combined ([Extraction](/broken/pages/ywb5XsDuWyBy07coiRb0) and [Utility](/broken/pages/jqljfGxEsmDTKtOnQDrR)).
 
 Some features are only applicable to extraction models.
 
