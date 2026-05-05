@@ -85,7 +85,7 @@ Some features are only applicable to extraction models.
 
 ### How is credit use calculated?
 
-Each page processed consumes a certain number of credits.
+Each file processed by Mindee will consume credits based on the number of pages contained in the file.
 
 The exact amount of credits used per page is available on each model's [pricing.md](../models/pricing.md "mention") page.
 
