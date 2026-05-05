@@ -54,17 +54,17 @@ Among these, the most popular are credit and debit cards.
 
 Custom payment options are available for Enterprise customers.
 
-## Included Pages and Overages
+## Included Credits and Overages
 
 Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.
 
-If you exceed the included pages in your plan, these will be charged according to the Overage Rate. These extra calls will be invoiced every €100, or at the end of your subscription.
+If you exceed the included credits in your plan, these will be charged according to the Overage Rate. These extra calls will be invoiced every €100, or at the end of your subscription.
 
-| Plan     | Included Pages | Overage Rate  |
-| -------- | -------------- | ------------- |
-| Starter  | 6,000 / year   | €0.05 / page  |
-| Pro      | 30,000 / year  | €0.04 / page  |
-| Business | 120,000 / year | €0.035 / page |
+| Plan     | Included Credits | Overage Rate      |
+| -------- | ---------------- | ----------------- |
+| Starter  | 6,000 per year   | €0.05 per credit  |
+| Pro      | 30,000 per year  | €0.04 per credit  |
+| Business | 120,000 per year | €0.035 per credit |
 
 {% hint style="info" %}
 **Pages are calculated based on successfully processed documents.**

@@ -15,12 +15,12 @@ Mindee offers flexible subscription plans to suit individual developers, growing
 
 ## Plan Overview & Pricing
 
-| Plan       | Monthly price (with annual billing) | Annual pages included | Overage rate     |
-| ---------- | ----------------------------------- | --------------------- | ---------------- |
-| Starter    | €44 / month                         | 6,000 pages           | €0.05 per page   |
-| Pro        | €179 / month                        | 30,000 pages          | €0.04 per page   |
-| Business   | €584 / month                        | 120,000 pages         | €0.035 per page  |
-| Enterprise | Custom pricing                      | +250,000 pages        | _Custom pricing_ |
+| Plan       | Monthly price (with annual billing) | Annual credits included | Overage rate      |
+| ---------- | ----------------------------------- | ----------------------- | ----------------- |
+| Starter    | €44 / month                         | 6,000 credits           | €0.05 per credit  |
+| Pro        | €179 / month                        | 30,000 credits          | €0.04 per credit  |
+| Business   | €584 / month                        | 120,000 credits         | €0.035 per credit |
+| Enterprise | Custom pricing                      | +250,000 credits        | _Custom pricing_  |
 
 * All plans are available in **monthly** or **annual** billing.
 * **Annual plans save 10%** compared to monthly pricing.
@@ -60,7 +60,7 @@ Some features are only applicable to extraction models.
 
 | Feature                                                    |        Starter       |          Pro         |       Business       |      Enterprise      |
 | ---------------------------------------------------------- | :------------------: | :------------------: | :------------------: | :------------------: |
-| Number of pages included                                   |     6,000 / year     |     30,000 / year    |    120,000 / year    |    +250,000 / year   |
+| Number of credits included                                 |     6,000 / year     |     30,000 / year    |    120,000 / year    |    +250,000 / year   |
 | [AI Agent for custom model](#user-content-fn-1)[^1]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Community support](#user-content-fn-2)[^2]                | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Raw Text](#user-content-fn-3)[^3]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
@@ -77,11 +77,17 @@ Some features are only applicable to extraction models.
 
 ## Plan Details
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>It's free!</li><li>200 pages or 14 days</li><li>Access to all model types</li><li>Access to <a href="../extraction-models/optional-features/">Optional Features</a></li><li>API integration</li><li>Access to the full documentation</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>6,000 pages/year</li><li>Access to all model types</li><li>Unlimited models</li><li>Community support</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li>No user management</li><li>RAG not included</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 pages/year</li><li>Chat support</li><li>Multi-user access</li><li><a href="../extraction-models/optional-features/improving-accuracy.md">RAG</a>: 20 documents</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><strong>Business</strong></td><td><ul><li>Everything in Pro</li><li>120,000 pages/year</li><li>Unlimited members</li><li>Priority chat support</li><li><a href="../extraction-models/optional-features/improving-accuracy.md">RAG</a>: unlimited documents</li><li>Full feature access including localization</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li></ul></td><td><a href="../.gitbook/assets/business-plan-mindee.png">business-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium on-boarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>It's free!</li><li>200 credits or 14 days</li><li>Access to all model types</li><li>Access to <a href="../extraction-models/optional-features/">Optional Features</a></li><li>API integration</li><li>Access to the full documentation</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>6,000 credits/year</li><li>Access to all model types</li><li>Unlimited models</li><li>Community support</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li>No user management</li><li>RAG not included</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>30,000 credits/year</li><li>Chat support</li><li>Multi-user access</li><li><a href="../extraction-models/optional-features/improving-accuracy.md">RAG</a>: 20 documents</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><strong>Business</strong></td><td><ul><li>Everything in Pro</li><li>120,000 credits/year</li><li>Unlimited members</li><li>Priority chat support</li><li><a href="../extraction-models/optional-features/improving-accuracy.md">RAG</a>: unlimited documents</li><li>Full feature access including localization</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li></ul></td><td><a href="../.gitbook/assets/business-plan-mindee.png">business-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Business</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium on-boarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
 
 ## Frequently Asked Questions
+
+### How is credit use calculated?
+
+Each page processed consumes a certain number of credits. Currently this is a 1 to 1 ratio — each page consumes one credit.
+
+You can track credit use on the [insights.md](insights.md "mention") page.
 
 ### Can I add features From Another Plan (à la carte pricing)?
 

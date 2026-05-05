@@ -36,8 +36,4 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 {% include "../.gitbook/includes/feature-availability.md" %}
 
-{% hint style="info" %}
-**Important**: Once selected, your choice of processing zone applies only to this specific model.
-{% endhint %}
-
 {% @supademo/embed url="https://app.supademo.com/demo/cmevfnfze75icv9kqgqida892" demoId="cmevfnfze75icv9kqgqida892" %}

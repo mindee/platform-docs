@@ -25,7 +25,7 @@ A file sent to the Split Model may have any number of pages, [within limits](../
 
 1. To create a Split utility, you need to click on **Models**, and then on **Create your document AI model**.
 2. Scroll to the **Document Utilities** section, click on **Split.**
-3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a  document type possibly present in the documents you want to process.\
+3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a document type possibly present in the documents you want to process.\
    \
    For example, if the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVING LICENSE`.
 
@@ -33,18 +33,16 @@ A file sent to the Split Model may have any number of pages, [within limits](../
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
-
-
 4. Once ready, click on **Create Utility** to create your custom Split Utility.
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>
 
 Your utility is now available in your **Models** tab:
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/utilities-create.png" alt=""><figcaption></figcaption></figure>
 
-Here is a step-by-step tutorial that shows you how to properly create a Split Utility : <br>
+Here is a step-by-step tutorial that shows you how to properly create a Split Utility :<br>
 
-{% @supademo/embed demoId="cmls4fbup1r1611891nvrrlyw" url="https://app.supademo.com/demo/cmls4fbup1r1611891nvrrlyw" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmls4fbup1r1611891nvrrlyw" demoId="cmls4fbup1r1611891nvrrlyw" %}
 
 ## Integration
 
