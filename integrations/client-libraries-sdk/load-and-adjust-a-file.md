@@ -135,7 +135,9 @@ const inputSource = new mindee.BufferInput({
 To load raw bytes, use `BytesInput` .
 
 ```typescript
-const inputBytes = await fs.promises.readFile("/path/to/the/file.ext");
+const inputBytes = new Uint8Array(
+  await fs.promises.readFile("/path/to/the/file.ext")
+);
 
 const inputSource = new mindee.BytesInput({
   inputBytes: inputBytes,

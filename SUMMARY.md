@@ -57,6 +57,7 @@
   * [make.com Scenarios](integrations/no-code-integrations/make.com-scenarios.md)
   * [n8n Workflows](integrations/no-code-integrations/n8n-workflows.md)
   * [Zapier Zaps](integrations/no-code-integrations/zapier-zaps.md)
+* [AI Coding Assistants](integrations/ai-coding-assistants.md)
 * [Manage API Keys](integrations/api-keys.md)
 * [Technical Best Practices](integrations/technical-guidelines.md)
 * [Technical Limitations](integrations/technical-limitations.md)
