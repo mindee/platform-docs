@@ -117,6 +117,16 @@ As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
 ## Frequently Asked Questions
 
+### When should I use Data Schema guidelines vs RAG guidelines?
+
+Both work in the same way to provide extra context for the model to better identify data to extract it.
+
+The difference is _when_ they are applied:
+
+If the guideline is to be applied to all documents ⇒ use the Data Schema guideline.
+
+If the guideline only applies to a specific template ⇒ use the RAG guideline.
+
 ### Can the model correctly interpret positions like top, bottom, etc?
 
 Mindee models used are multi-modal, meaning they use both textual and visual information.
