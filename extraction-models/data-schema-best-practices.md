@@ -119,9 +119,9 @@ As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
 ### When should I use Data Schema guidelines vs RAG guidelines?
 
-Both work in the same way to provide extra context for the model to better identify data to extract it.
+Both work in the same way to provide extra context for the model to better identify data and extract it.
 
-The difference is _when_ they are applied:
+The major difference is _when_ they are applied:
 
 If the guideline is to be applied to all documents ⇒ use the Data Schema guideline.
 
@@ -188,8 +188,6 @@ For example:
 
 * same document, different language (multilingual countries like Belgium, Canada, India, etc)
 * same data to extract, even if the document changes (only a subset of data is required)
-
-
 
 ## Next Steps
 
