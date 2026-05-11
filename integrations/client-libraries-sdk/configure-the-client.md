@@ -245,24 +245,24 @@ Product parameters control:
 
 ### Use an Alias
 
-You can set an alias for linking the sent file to your own system.
+The optional `alias` field lets you attach your own identifier to a request as a free-form string.
 
-For example, you could use an internal PO number, or your database ID.
+For example, an internal document ID, reference number, or database key.
 
-Aliases are not unique in our database, you can use the same alias multiple times.
+It is echoed back unchanged in both the job and result responses, making it straightforward to correlate API results with your own records.
+
+Aliases are not unique in Mindee, you can use the same alias value multiple times.
 
 {% tabs %}
 {% tab title="Python" %}
-Only the `model_id` is required.
-
 ```python
 inference_params = InferenceParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     
     # Use an alias to link the file to your own DB.
-    # If empty, no alias will be used.
-    alias="MY_ALIAS",
+    # If set, it will be included in the job and result responses.
+    alias="internal-doc-id-123",
     
     # ... any other options ...
 )
@@ -270,16 +270,14 @@ inference_params = InferenceParameters(
 {% endtab %}
 
 {% tab title="Node.js" %}
-Only the `modelId` is required.
-
 ```typescript
 const productParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
   
   // Use an alias to link the file to your own DB.
-  // If empty, no alias will be used.
-  alias: "MY_ALIAS",
+  // If set, it will be included in the job and result responses.
+  alias: "internal-doc-id-123",
   
   // ... any other options ...
 };
@@ -287,16 +285,14 @@ const productParams = {
 {% endtab %}
 
 {% tab title="PHP" %}
-Only the `modelId` is required.
-
 ```php
 $inferenceParams = new InferenceParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 
     // Use an alias to link the file to your own DB.
-    // If empty, no alias will be used.
-    alias: "MY_ALIAS",
+    // If set, it will be included in the job and result responses.
+    alias: "internal-doc-id-123",
     
     // ... any other options ...
 );
@@ -304,16 +300,14 @@ $inferenceParams = new InferenceParameters(
 {% endtab %}
 
 {% tab title="Ruby" %}
-Only the `model_id` is required.
-
 ```ruby
 inference_params = {
     # ID of the model, required.
     model_id: 'MY_MODEL_ID',
     
     # Use an alias to link the file to your own DB.
-    # If empty, no alias will be used.
-    file_alias: 'MY_ALIAS',
+    # If set, it will be included in the job and result responses.
+    file_alias: 'internal-doc-id-123',
     
     # ... any other options ...
 }
@@ -321,16 +315,14 @@ inference_params = {
 {% endtab %}
 
 {% tab title="Java" %}
-Only the `modelId` is required.
-
 ```java
 InferenceParameters params = InferenceParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
     
     // Use an alias to link the file to your own DB.
-    // If empty, no alias will be used.
-    .alias("MY_ALIAS")
+    // If set, it will be included in the job and result responses.
+    .alias("internal-doc-id-123")
     
     // ... any other options ...
 
@@ -340,16 +332,14 @@ InferenceParameters params = InferenceParameters
 {% endtab %}
 
 {% tab title=".NET" %}
-Only the `modelId` is required.
-
 ```csharp
 var inferenceParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
 
     // Use an alias to link the file to your own DB.
-    // If empty, no alias will be used.
-    , alias: "MY_ALIAS"
+    // If set, it will be included in the job and result responses.
+    , alias: "internal-doc-id-123"
     
     // ... any other options ...
 );
