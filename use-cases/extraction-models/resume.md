@@ -1,4 +1,7 @@
 ---
+description: >-
+  Automatically parse résumés/CVs and extract structured candidate data using
+  the pre-trained Resume model available in the Catalog.
 icon: file-user
 ---
 

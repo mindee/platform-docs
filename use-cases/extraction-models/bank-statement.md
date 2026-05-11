@@ -1,4 +1,7 @@
 ---
+description: >-
+  Automatically parse bank statements and extract structured financial data
+  using the pre-trained Bank Statement model available in the Catalog.
 icon: file-lines
 ---
 

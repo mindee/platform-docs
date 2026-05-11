@@ -1,7 +1,7 @@
 ---
 description: >-
-  With Mindee, you can automatically parse invoices and extract structured
-  financial data using the pre-trained Invoice model available in the Catalog.
+  Automatically parse invoices and extract structured financial data using the
+  pre-trained Invoice model available in the Catalog.
 icon: file-invoice-dollar
 ---
 

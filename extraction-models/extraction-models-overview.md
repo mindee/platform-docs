@@ -1,4 +1,7 @@
 ---
+description: >-
+  Extraction models enable structured data extraction based on predefined or
+  custom fields configured for specific document types.
 icon: print-magnifying-glass
 ---
 

@@ -1,4 +1,7 @@
 ---
+description: >-
+  Considerations affecting response times such as document structure, schema
+  complexity, and enabled features.
 icon: watch
 ---
 

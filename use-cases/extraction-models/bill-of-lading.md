@@ -1,4 +1,7 @@
 ---
+description: >-
+  Automatically parse Bills of Lading and extract structured shipping data using
+  the pre-trained Bill of Lading model available in the Catalog.
 icon: ship
 ---
 

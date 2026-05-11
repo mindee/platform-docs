@@ -1,7 +1,7 @@
 ---
 description: >-
-  Mindee allows you to process a wide variety of financial documents and adapts
-  to your specific needs.
+  Process a wide variety of financial documents and adapted to your specific
+  needs.
 icon: coins
 ---
 

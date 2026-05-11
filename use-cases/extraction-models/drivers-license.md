@@ -1,4 +1,7 @@
 ---
+description: >-
+  Automatically parse driver licenses and extract structured driver data using
+  the Driver License model available in the Catalog.
 icon: id-card
 ---
 
