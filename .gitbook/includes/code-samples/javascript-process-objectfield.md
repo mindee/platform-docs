@@ -16,7 +16,7 @@ handleResponse(response) {
   // loop over simple sub-fields
   subFields.forEach((simpleSubFields, fieldName) => {
     // Choose the appropriate accessor:
-    // stringValue, doubleValue, booleanValue
+    // stringValue, numberValue, booleanValue
     const fieldValue = subField.stringValue;
   });
 

@@ -1,6 +1,7 @@
 ---
 description: Integrate an Extraction Model.
 noIndex: true
+icon: code
 ---
 
 # Integration
@@ -11,4 +12,3 @@ Please take a look here:
 
 * [quick-start.md](../integrations/client-libraries-sdk/quick-start.md "mention")
 * [no-code-integrations](../integrations/no-code-integrations/ "mention")
-

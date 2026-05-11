@@ -1,5 +1,7 @@
 ---
-description: Reference documentation on loading URLs using Mindee client libraries.
+description: >-
+  Reference documentation on loading URLs for sending, using Mindee client
+  libraries.
 icon: globe-pointer
 ---
 

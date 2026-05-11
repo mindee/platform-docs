@@ -13,7 +13,7 @@ handleResponse(response) {
   // Loop over the list of Simple fields
   for (const itemField of simpleItems) {
     // Choose the appropriate accessor:
-    // stringValue, doubleValue, booleanValue
+    // stringValue, numberValue, booleanValue
     const fieldValue = itemField.stringValue;
   }
 }

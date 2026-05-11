@@ -1,7 +1,7 @@
 ---
 description: >-
-  Reference documentation on loading and manipulating files using Mindee client
-  libraries.
+  Reference documentation on loading and manipulating files prior to sending,
+  using Mindee client libraries.
 icon: file-lines
 ---
 
