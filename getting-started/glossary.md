@@ -77,6 +77,12 @@ A set of instructions for processing [files](glossary.md#file). There are severa
 
 A model can operate on a single document or multiple documents within the same file.
 
+#### Multimodal Model
+
+A type of deep-learning model that processes multiple types of data, such as text and vision.
+
+Mindee uses multimodal models when processing documents.
+
 #### OpenAPI
 
 An industry specification that defines a language-agnostic interface for RESTful APIs.

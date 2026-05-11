@@ -1,4 +1,7 @@
 ---
+description: >-
+  Build your model from a prebuilt template or create one from scratch using a
+  sample document.
 icon: rectangles-mixed
 ---
 

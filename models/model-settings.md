@@ -1,4 +1,7 @@
 ---
+description: >-
+  Base model settings, model mutability, and legal requirements such as
+  processing zone and document storage.
 icon: sliders-up
 ---
 
@@ -39,7 +42,7 @@ To prevent unintended changes once your data schema is finalized, you have the o
 {% hint style="warning" %}
 Locking the Data Schema is an **irreversible action**, you will not be able to unlock it afterwards.
 
-Note: you can copy a locked model and modify the copy.
+**Note**: you can copy a locked model and modify the copy.
 {% endhint %}
 
 ## Deleting the Model

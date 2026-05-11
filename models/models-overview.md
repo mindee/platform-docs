@@ -1,5 +1,7 @@
 ---
-description: Overview of Models
+description: >-
+  Understand the core concepts of Mindee models, the different types available,
+  and how to use them.
 icon: print-magnifying-glass
 ---
 
@@ -27,7 +29,11 @@ From the Mindee Platform main page, click on **"Create your document AI model".*
 From there you can choose the type of model you want to create:
 
 * [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") to extract structured data from documents
-* [Broken link](/broken/pages/jqljfGxEsmDTKtOnQDrR "mention") to preprocess or analyze documents
+* [Broken link](/broken/pages/jqljfGxEsmDTKtOnQDrR "mention") to preprocess or analyze documents:
+  * [split](../utility-models/split/ "mention") for separating documents in a multi-page file.
+  * [crop](../utility-models/crop/ "mention") for detecting document boundaries on a page.
+  * [classification](../utility-models/classification/ "mention") for assigning a document class.
+  * [ocr](../utility-models/ocr/ "mention") for extracting raw text from documents.
 
 Each type of model will have different creation options.
 

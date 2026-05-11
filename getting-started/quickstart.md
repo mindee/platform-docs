@@ -1,4 +1,7 @@
 ---
+description: >-
+  Follow the fastest path from account creation to your first successful
+  document processing request with Mindee.
 icon: bolt
 ---
 
