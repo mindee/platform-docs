@@ -52,7 +52,7 @@ input_path = Path("/path/to/the/file.ext")
 input_source = PathInput(input_path)
 ```
 
-To load raw bytes, use `BytesInput` .
+To load raw bytes, use `BytesInput` . The `filename` parameter is required.
 
 ```python
 from pathlib import Path
@@ -68,7 +68,7 @@ input_source = BytesInput(
 )
 ```
 
-To load a base-64 string, use `Base64Input` .\
+To load a base-64 string, use `Base64Input` . The `filename` parameter is required.\
 The string will be decoded into bytes internally.
 
 ```python
@@ -77,11 +77,11 @@ from mindee import Base64Input
 input_base64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
 input_source = Base64Input(
     input_base64,
-    filename="base64_file.txt",
+    filename="file.ext",
 )
 ```
 
-To load a file handle, use `FileInput`.\
+To load a file handle, use `FileInput`. \
 It **must** be opened in binary mode, as a `BinaryIO` .
 
 ```python
@@ -119,7 +119,7 @@ const filePath = "/path/to/the/file.ext";
 const inputSource = new mindee.PathInput({ inputPath: filePath });
 ```
 
-To load a `Buffer` instance, use `BufferInput` .
+To load a `Buffer` instance, use `BufferInput` . The `filename` parameter is required.
 
 ```typescript
 const buffer = Buffer.from(
@@ -132,7 +132,7 @@ const inputSource = new mindee.BufferInput({
 });
 ```
 
-To load raw bytes, use `BytesInput` .
+To load raw bytes, use `BytesInput` . The `filename` parameter is required.
 
 ```typescript
 const inputBytes = new Uint8Array(
@@ -145,7 +145,7 @@ const inputSource = new mindee.BytesInput({
 });
 ```
 
-To load a `Stream`, use `StreamInput`.
+To load a `Stream`, use `StreamInput`. The `filename` parameter is required.
 
 ```typescript
 const stream = fs.createReadStream("/path/to/the/file.ext");
@@ -156,14 +156,14 @@ const inputSource = new mindee.StreamInput({
 });
 ```
 
-To load a base-64 string, use `Base64Input` .
+To load a base-64 string, use `Base64Input` . The `filename` parameter is required.
 
 ```typescript
 const b64String = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
 
 const inputSource = new mindee.Base64Input({
   inputString: b64String,
-  filename: "base64_file.txt",
+  filename: "file.ext",
 });
 ```
 {% endtab %}
@@ -189,7 +189,7 @@ $handle = fopen("/path/to/the/file.ext", "rb");
 $inputSource = new FileInput($handle);
 ```
 
-To load raw bytes, use `BytesInput`.
+To load raw bytes, use `BytesInput`. The filename is required.
 
 ```php
 use Mindee\Input\BytesInput;
@@ -202,14 +202,14 @@ $inputSource = new BytesInput($contents, "file.ext");
 ```
 
 To load a base-64 string, use `Base64Input` .\
-The string will be decoded into bytes internally.
+The string will be decoded into bytes internally. The filename is required.
 
 ```php
 use Mindee\Input\Base64Input;
 
 $inputBase64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ..."
 
-$inputSource = Base64Input($inputBase64, "base64_file.txt");
+$inputSource = Base64Input($inputBase64, "file.ext");
 ```
 {% endtab %}
 
@@ -228,7 +228,7 @@ input_bytes = File.binread('/path/to/the/file.ext')
 input_source = Mindee::Input::Source::BytesInputSource.new(input_bytes, file_name)
 ```
 
-To load a base-64 string, use `Base64InputSource`.\
+To load a base-64 string, use `Base64InputSource`. The filename is required.\
 The string will be decoded into bytes internally.
 
 ```ruby
@@ -238,7 +238,7 @@ input_source = Mindee::Input::Source::Base64InputSource.new(
 )
 ```
 
-To load a file handle, use `FileInputSource`.\
+To load a file handle, use `FileInputSource`. The filename is required.\
 It must be opened in binary mode.
 
 ```ruby
@@ -276,7 +276,7 @@ var file = new File("/path/to/the/file.ext");
 var inputSource = new LocalInputSource(file);
 ```
 
-To load a byte array:
+To load a byte array, the filename is required:
 
 ```java
 var fileBytes = Files.readAllBytes("/path/to/the/file.ext");
@@ -285,7 +285,7 @@ var filename = "file.ext";
 var inputSource = new LocalInputSource(fileBytes, filename);
 ```
 
-To load an `InputStream` instance:
+To load an `InputStream` instance, the filename is required:
 
 ```java
 var fileStream = new FileInputStream(
@@ -296,7 +296,7 @@ var filename = "file.ext";
 var inputSource = new LocalInputSource(fileStream, filename);
 ```
 
-To load a base-64 string:
+To load a base-64 string, the filename is required:
 
 ```java
 var inputBase64 = "iVBORw0KGgoAAAANSUhEUgAAABgAAA ...";
@@ -327,7 +327,7 @@ FileInfo fileinfo = new FileInfo("/path/to/the/file.ext");
 var inputSource = new LocalInputSource(fileinfo)
 ```
 
-To load a byte array:
+To load a byte array, the filename is required:
 
 ```csharp
 byte[] fileBytes = File.ReadAllBytes("/path/to/the/file.ext");
@@ -336,7 +336,7 @@ string filename = "file.ext";
 var inputSource = new LocalInputSource(fileBytes, filename)
 ```
 
-To load a `Stream` instance:
+To load a `Stream` instance, the filename is required:
 
 ```csharp
 Stream fileStream = FileStream SourceStream = File.Open(
