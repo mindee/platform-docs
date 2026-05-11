@@ -611,6 +611,7 @@ If you are using webhooks, we highly recommend storing the job's ID so you can r
 
 You can access:
 
+* the result URL
 * overall processing status
 * detailed errors, if any
 * status for each webhook sent
