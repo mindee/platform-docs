@@ -1,5 +1,7 @@
 ---
-description: Information on credit consumption for processing using the model.
+description: >-
+  Information on credit consumption for processing documents using a given
+  model.
 icon: coins
 ---
 
