@@ -117,6 +117,36 @@ As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
 ## Frequently Asked Questions
 
+### Can the model correctly interpret positions like top, bottom, etc?
+
+Mindee models used are multi-modal, meaning they use both textual and visual information.
+
+As such it is possible to write guidelines conveying positional information, for example:
+
+> The supplier logo will always be at the top of the page.
+
+### Can I reference a specific location or text on the page?
+
+Each page of the document is processed as a whole, and the models have both a visual component and a textual component (multi-modal models).
+
+It is therefore possible to reference other locations and texts of the page in guidelines.
+
+This is especially useful to remove ambiguity when similar data is found in multiple locations on the page.
+
+Referencing another location:
+
+> The correct phone number is below the customer name.
+
+Specifying a location and text:
+
+> The correct customer name is found in the first line of the ship-to address.
+
+### Does the model work better with field information in English?
+
+In our own testing, major European languages such as French, Spanish, or German, are comparable to English in terms of modal accuracy.
+
+It can be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. This can help improve accuracy, in particular when specific terms are used in the field definition.
+
 ### What are best practices for handling different regions or languages?
 
 It's important to first make the distinction between _representation_ and _content_.
@@ -148,10 +178,6 @@ For example:
 
 * same document, different language (multilingual countries like Belgium, Canada, India, etc)
 * same data to extract, even if the document changes (only a subset of data is required)
-
-#### Other Considerations
-
-It can be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. This can help improve accuracy, in particular when specific terms are used in the field definition.
 
 
 
