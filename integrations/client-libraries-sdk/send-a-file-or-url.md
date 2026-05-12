@@ -13,30 +13,22 @@ icon: paper-plane
 
 You'll need to have your Mindee client configured correctly as described in the [configure-the-client.md](configure-the-client.md "mention") section.
 
-Both the Client and the Product Parameters are required.
-
-## Overview
-
 You can send either a local file or an URL to Mindee servers for processing.
-
-The source has no impact on server-side processing nor on the result.
-
-A local file can be manipulated and adjusted before sending, as described in the [#adjust-the-source-file](load-and-adjust-a-file.md#adjust-the-source-file "mention") section.
-
-The contents of a URL **cannot** be manipulated locally.\
-You'll need to download it to the local machine if you wish to adjust the file in any way before sending.
-
-## Load for Sending
 
 There's no difference between sending a file or an URL, both are considered valid Input Sources.
 
-### Use a File
+### Using a Local File
 
 You'll need a Local Input Source as described in the [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention") section.
 
-### Use an URL
+A local file can be manipulated and adjusted before sending, as described in the [#adjust-the-source-file](load-and-adjust-a-file.md#adjust-the-source-file "mention") section.
+
+### Using an URL
 
 You'll need a URL Input Source as described in the [load-an-url.md](load-an-url.md "mention") section.
+
+The contents of a URL **cannot** be manipulated locally.\
+You'll need to download it to the local machine if you wish to adjust the file in any way before sending.
 
 ## Send with Polling
 

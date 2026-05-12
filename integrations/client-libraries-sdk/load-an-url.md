@@ -98,4 +98,5 @@ var inputSource = new UrlInputSource(
 
 Now that your URL is ready, you'll want to send it to the Mindee servers for processing.
 
-Head on over to the [#send-for-processing](send-a-file-or-url.md#send-for-processing "mention") section for details on the next step.
+Head on over to the [send-a-file-or-url.md](send-a-file-or-url.md "mention") section for details on the next step.
+

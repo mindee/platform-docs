@@ -51,7 +51,7 @@ For details on available options and advanced usage, check the following section
 * [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * [send-a-file-or-url.md](send-a-file-or-url.md "mention")
 
-## Processing Extraction Results
+## Process Extraction Results
 
 Once you've sent the file and retrieved the response, you can start accessing the results.
 
