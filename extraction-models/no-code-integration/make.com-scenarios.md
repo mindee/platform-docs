@@ -22,7 +22,7 @@ Next, choose the "Extract Document Data" action:
 
 <figure><img src="../../.gitbook/assets/make_select-extract.png" alt="Selecting &#x22;Enqueue and Retrieve an Inference&#x22; in make.com scenario" width="563"><figcaption></figcaption></figure>
 
-Once you have the "Extract Document Data" module in your scenario, you'll need to connect it to one of your [api-keys.md](../api-keys.md "mention").
+Once you have the "Extract Document Data" module in your scenario, you'll need to connect it to one of your [api-keys.md](../../integrations/api-keys.md "mention").
 
 For this, click on the "Create a connection" button:
 
@@ -31,7 +31,7 @@ For this, click on the "Create a connection" button:
 In the Create a connection dialog box, fill in the following information:
 
 * A name for your connection, it should be in the format: `MindeeV2-` + your API key's name
-* your [Mindee V2 API key](../api-keys.md#key-creation)
+* your [Mindee V2 API key](../../integrations/api-keys.md#key-creation)
 
 Finish by clicking "Save".
 

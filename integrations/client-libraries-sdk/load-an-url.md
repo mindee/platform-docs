@@ -93,10 +93,3 @@ var inputSource = new UrlInputSource(
 ```
 {% endtab %}
 {% endtabs %}
-
-## Send the URL
-
-Now that your URL is ready, you'll want to send it to the Mindee servers for processing.
-
-Head on over to the [send-a-file-or-url.md](send-a-file-or-url.md "mention") section for details on the next step.
-

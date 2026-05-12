@@ -36,7 +36,7 @@ Open the "Mindee V2 Post" node by double-clicking it, and create a Header Auth C
 
 <figure><img src="../../.gitbook/assets/n8n_create-auth-credentials.png" alt="adding mindee authentication in n8n"><figcaption></figcaption></figure>
 
-When creating your Credential, first choose one of your [api-keys.md](../api-keys.md "mention").
+When creating your Credential, first choose one of your [api-keys.md](../../integrations/api-keys.md "mention").
 
 Then, set the following values in the Credential dialog box:
 
@@ -90,4 +90,4 @@ Some examples:
 
 #### Something not working as expected?
 
-Check the [problem-database.md](../problem-database.md "mention") section.
+Check the [problem-database.md](../../integrations/problem-database.md "mention") section.

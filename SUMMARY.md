@@ -9,7 +9,7 @@
 * [Frequently Asked Questions](getting-started/faq-v1-to-v2.md)
 * [Glossary](getting-started/glossary.md)
 
-## Models
+## Model Basics <a href="#models" id="models"></a>
 
 * [Models Overview](models/models-overview.md)
 * [Live Test](models/live-test.md)
@@ -19,7 +19,7 @@
 
 ## Extraction Models
 
-* [Extraction Models Overview](extraction-models/extraction-models-overview.md)
+* [Extraction Model Overview](extraction-models/extraction-models-overview.md)
 * [Data Schema Overview](extraction-models/data-schema.md)
 * [Data Schema Best Practices](extraction-models/data-schema-best-practices.md)
 * [Optional Features](extraction-models/optional-features/README.md)
@@ -27,37 +27,46 @@
   * [Confidence Score and Accuracy Boost](extraction-models/optional-features/automation-confidence-score.md)
   * [Polygons (Bounding Boxes)](extraction-models/optional-features/polygons-bounding-boxes.md)
   * [Raw Text (Full OCR)](extraction-models/optional-features/raw-text-full-ocr.md)
-* [Integration](extraction-models/integration.md)
+* [SDK Integration](extraction-models/sdk-integration/README.md)
+  * [Extraction Quick Start](extraction-models/sdk-integration/quick-start.md)
+  * [Extraction Configuration](extraction-models/sdk-integration/extraction-configuration.md)
+  * [Extraction Result Fields](extraction-models/sdk-integration/extraction-result-fields.md)
+* [No-Code Integration](extraction-models/no-code-integration/README.md)
+  * [make.com Scenarios](extraction-models/no-code-integration/make.com-scenarios.md)
+  * [n8n Workflows](extraction-models/no-code-integration/n8n-workflows.md)
+  * [Zapier Zaps](extraction-models/no-code-integration/zapier-zaps.md)
 
-## Utility Models
+## Split Models
 
-* [Utility Models Overview](utility-models/utility-models-overview.md)
-* [Split Model](utility-models/split/README.md)
-  * [Split Model Integration](utility-models/split/integration.md)
-* [Crop Model](utility-models/crop/README.md)
-  * [Crop Model Integration](utility-models/crop/integration.md)
-* [Classification Model](utility-models/classification/README.md)
-  * [Classification Model Integration](utility-models/classification/integration.md)
-* [OCR Model](utility-models/ocr/README.md)
-  * [OCR Model Integration](utility-models/ocr/integration.md)
+* [Split Model Overview](split-models/split.md)
+* [SDK Integration](split-models/sdk-integration.md)
+
+## Crop Models
+
+* [Crop Model Overview](crop-models/crop.md)
+* [SDK Integration](crop-models/sdk-integration.md)
+
+## Classification Models
+
+* [Classification Model Overview](classification-models/classification.md)
+* [SDK Integration](classification-models/sdk-integration.md)
+
+## OCR Models
+
+* [OCR Model Overview](ocr-models/ocr.md)
+* [SDK Integration](ocr-models/sdk-integration.md)
 
 ## Integrations
 
 * [Integration Overview](integrations/api-overview.md)
 * [Client Libraries / SDKs](integrations/client-libraries-sdk/README.md)
   * [Command Line Tools (CLI)](integrations/client-libraries-sdk/command-line-tools-cli.md)
-  * [Integration Quick Start](integrations/client-libraries-sdk/quick-start.md)
-  * [Configure the Client](integrations/client-libraries-sdk/configure-the-client.md)
-  * [Configure the Product](integrations/client-libraries-sdk/configure-the-product.md)
+  * [Client Configuration](integrations/client-libraries-sdk/configure-the-client.md)
+  * [Basic Model Configuration](integrations/client-libraries-sdk/basic-model-configuration.md)
   * [Load and Adjust a File](integrations/client-libraries-sdk/load-and-adjust-a-file.md)
   * [Load an URL](integrations/client-libraries-sdk/load-an-url.md)
   * [Send a File or URL](integrations/client-libraries-sdk/send-a-file-or-url.md)
-  * [Process the Response](integrations/client-libraries-sdk/process-the-response.md)
-  * [Process Result Fields](integrations/client-libraries-sdk/process-result-fields.md)
-* [No-Code Integrations](integrations/no-code-integrations/README.md)
-  * [make.com Scenarios](integrations/no-code-integrations/make.com-scenarios.md)
-  * [n8n Workflows](integrations/no-code-integrations/n8n-workflows.md)
-  * [Zapier Zaps](integrations/no-code-integrations/zapier-zaps.md)
+  * [Response Processing](integrations/client-libraries-sdk/process-the-response.md)
 * [AI Coding Assistants](integrations/ai-coding-assistants.md)
 * [Manage API Keys](integrations/api-keys.md)
 * [Technical Best Practices](integrations/technical-guidelines.md)
@@ -83,11 +92,10 @@
 
 ## Use Cases
 
-* [Overview](use-cases/overview.md)
-* [Extraction Models](use-cases/extraction-models/README.md)
-  * [Financial Document](use-cases/extraction-models/financial-documents.md)
+* [Extraction Use Cases](use-cases/extraction-models/README.md)
   * [Invoice](use-cases/extraction-models/invoice.md)
   * [Receipt](use-cases/extraction-models/receipt.md)
+  * [Financial Document](use-cases/extraction-models/financial-documents.md)
   * [International ID Card](use-cases/extraction-models/international-id-card.md)
   * [Passport](use-cases/extraction-models/passport.md)
   * [Driver's License](use-cases/extraction-models/drivers-license.md)

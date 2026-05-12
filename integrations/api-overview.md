@@ -27,7 +27,7 @@ They are the fastest and easiest way to call our APIs, and allow our support tea
 
 ### Client Libraries
 
-For a quick introduction and copy-paste ready code, look in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section.
+For a quick introduction and copy-paste ready code, look in the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
 
 {% hint style="success" %}
 #### Ask for Code Samples
@@ -45,7 +45,7 @@ We provide full support for Client Libraries regardless of your plan. You can re
 
 ### No-Code or Low-Code
 
-If you're integrating using a no-code or low-code platform, take a look at the [no-code-integrations](no-code-integrations/ "mention") section.
+If you're integrating using a no-code or low-code platform, take a look at the [no-code-integration](../extraction-models/no-code-integration/ "mention") section.
 
 ### Manual Integration
 

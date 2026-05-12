@@ -19,12 +19,6 @@ Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby
 
 {% include "../../.gitbook/includes/installation-instructions.md" %}
 
-## Basic Usage
-
-{% hint style="success" %}
-To get started, take a look at the [quick-start.md](quick-start.md "mention") page.
-{% endhint %}
-
 ## Usage Details
 
 Overall, the steps to using the Mindee service are:
@@ -40,7 +34,7 @@ Overall, the steps to using the Mindee service are:
 4. [process-the-response.md](process-the-response.md "mention")
    1. Optional: load from a webhook.
    2. Optional: access document metadata
-5. [process-result-fields.md](process-result-fields.md "mention")
+5. [extraction-result-fields.md](../../extraction-models/sdk-integration/extraction-result-fields.md "mention")
    1. Handle the field values extracted from the document
    2. Optional: access field metadata (polygons, confidence score)
 

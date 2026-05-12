@@ -68,7 +68,7 @@ Asynchronous processing with polling and webhooks; official SDKs for Python, Nod
 Learn more at [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
 No‑code and low‑code integrations, including an official Make.com app and generic HTTP workflows.\
-Learn more at [no-code-integrations](../integrations/no-code-integrations/ "mention").
+Learn more at [no-code-integration](../extraction-models/no-code-integration/ "mention").
 
 ## Flexible Plans
 

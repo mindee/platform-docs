@@ -20,7 +20,7 @@ Next choose the "Action event" by clicking on "**Document Data Extraction**":
 
 <figure><img src="../../.gitbook/assets/zapier_choose-file-data-extraction.png" alt="Zapier choose Mindee data extraction action" width="563"><figcaption></figcaption></figure>
 
-Next, you'll need to connect the App to one of your [api-keys.md](../api-keys.md "mention").
+Next, you'll need to connect the App to one of your [api-keys.md](../../integrations/api-keys.md "mention").
 
 If you already have a Mindee connection configured in Zapier, you'll have the option to "select" a connection in the "Account" section.
 
@@ -29,7 +29,7 @@ Otherwise, click on the "Sign in" button in the "Account" section.
 Then, in the connection dialog box, fill in the following information:
 
 * A name for your connection, for example your API key's name
-* your [Mindee V2 API key](../api-keys.md#key-creation)
+* your [Mindee V2 API key](../../integrations/api-keys.md#key-creation)
 
 Finish by clicking on "Yes, Continue to Mindee OCR":
 

@@ -22,20 +22,22 @@ Each Model contains a dedicated set of tools:
 * Configuration: a model is defined by its configuration, that sets the way it should extract data from documents or analyze files. Configuration depends on the model type.
 * Settings: overall settings of the model such as processing zone, storage policy, ownership transfer, etc.
 
-## Create a Model
+## Extraction Models
 
-From the Mindee Platform main page, click on **"Create your document AI model".**
+An **Extraction Model** in the Mindee platform is designed to extract structured data from documents using Optical Character Recognition (OCR) combined with data extraction techniques.
 
-From there you can choose the type of model you want to create:
+More information is available in the section: [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention")
 
-* [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") to extract structured data from documents
-* [Broken link](/broken/pages/jqljfGxEsmDTKtOnQDrR "mention") to preprocess or analyze documents:
-  * [split](../utility-models/split/ "mention") for separating documents in a multi-page file.
-  * [crop](../utility-models/crop/ "mention") for detecting document boundaries on a page.
-  * [classification](../utility-models/classification/ "mention") for assigning a document class.
-  * [ocr](../utility-models/ocr/ "mention") for extracting raw text from documents.
+## Utility Models
 
-Each type of model will have different creation options.
+A **Utility Model** in the Mindee platform is designed to perform document analysis, or to preprocess documents in a data extraction workflow.
+
+More information is available for each model type:
+
+* [split.md](../split-models/split.md "mention") ⇒ find documents in a multi-page file
+* [crop.md](../crop-models/crop.md "mention") ⇒ find documents on a single page
+* [classification.md](../classification-models/classification.md "mention") ⇒ identify file contents&#x20;
+* [ocr.md](../ocr-models/ocr.md "mention")⇒ structured text extraction
 
 ## Live Test
 

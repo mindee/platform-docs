@@ -3,7 +3,7 @@ description: No-Code and Low-Code integration support.
 icon: square-share-nodes
 ---
 
-# No-Code Integrations
+# No-Code Integration
 
 ## Overview
 
@@ -11,7 +11,7 @@ The Mindee API is well-suited to integrations in no-code and low-code platforms.
 
 It's a relatively simple RESTful API so most tools and platforms can be integrated using HTTP nodes.
 
-## Officially Supported Integrations
+## Officially Supported Integration
 
 We're hard at work providing official integrations for platforms that allow it.
 
@@ -31,7 +31,7 @@ Only use this method if your no-code platform does not have an official integrat
 
 You'll need to use HTTP nodes in your workflow that can POST and GET a specified URL.
 
-First, POST as form-data to the [#post-v2-inferences-enqueue](../api-reference/#post-v2-inferences-enqueue "mention") route:
+First, POST as form-data to the [#post-v2-inferences-enqueue](../../integrations/api-reference/#post-v2-inferences-enqueue "mention") route:
 
 * The Content-Type header must be set to `multipart/form-data`
 * The `Authorization` header must have only your API key as the value

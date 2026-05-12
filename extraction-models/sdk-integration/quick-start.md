@@ -3,7 +3,7 @@ description: Quickest way to get started using the client libraries.
 icon: rabbit-running
 ---
 
-# Integration Quick Start
+# Extraction Quick Start
 
 ## Installation Instructions
 
@@ -47,9 +47,10 @@ Here are basic code examples, these are self-contained and can be run as-is:
 
 For details on available options and advanced usage, check the following sections:
 
-* [configure-the-client.md](configure-the-client.md "mention")
-* [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
-* [send-a-file-or-url.md](send-a-file-or-url.md "mention")
+* [configure-the-client.md](../../integrations/client-libraries-sdk/configure-the-client.md "mention")
+* [load-and-adjust-a-file.md](../../integrations/client-libraries-sdk/load-and-adjust-a-file.md "mention")
+* [load-an-url.md](../../integrations/client-libraries-sdk/load-an-url.md "mention")
+* [send-a-file-or-url.md](../../integrations/client-libraries-sdk/send-a-file-or-url.md "mention")
 
 ## Process Extraction Results
 
@@ -59,7 +60,7 @@ The Extraction model's fields will be in the `fields` object in the return (the 
 
 Each key in the `fields` object corresponds to the field's `name` in your Data Schema.
 
-You'll want to adapt your processing depending on the [type of field](../../extraction-models/data-schema.md#field-types), for example when looping over lists or accessing sub-fields.
+You'll want to adapt your processing depending on the [type of field](../data-schema.md#field-types), for example when looping over lists or accessing sub-fields.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -216,8 +217,8 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 {% endtab %}
 {% endtabs %}
 
-### Details on Processing
+### Details on Response Processing
 
-For details on available options and advanced usage, check the following sections:
+For more details on using the result fields in your application: [extraction-result-fields.md](extraction-result-fields.md "mention")
 
-* [process-the-response.md](process-the-response.md "mention")
+For details on response metadata: [process-the-response.md](../../integrations/client-libraries-sdk/process-the-response.md "mention")

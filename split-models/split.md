@@ -5,7 +5,7 @@ description: >-
 icon: rectangle-vertical-history
 ---
 
-# Split Model
+# Split Model Overview
 
 ## Use Cases
 
@@ -19,7 +19,7 @@ Some common examples, where a single PDF contains:
 * Front and back of an ID card, each on a separate page
 * The same type of document, but from different regions or languages
 
-A file sent to the Split Model may have any number of pages, [within limits](../../integrations/technical-limitations.md#file-limits).
+A file sent to the Split Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
 
 ## Create a Split Model
 
@@ -29,16 +29,16 @@ A file sent to the Split Model may have any number of pages, [within limits](../
    \
    For example, if the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVING LICENSE`.
 
-{% include "../../.gitbook/includes/utilities-other-class.md" %}
+{% include "../.gitbook/includes/utilities-other-class.md" %}
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
 4. Once ready, click on **Create Utility** to create your custom Split Utility.
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>
 
 Your utility is now available in your **Models** tab:
 
-<figure><img src="../../.gitbook/assets/utilities-create.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/utilities-create.png" alt=""><figcaption></figcaption></figure>
 
 Here is a step-by-step tutorial that shows you how to properly create a Split Utility :<br>
 
@@ -46,6 +46,6 @@ Here is a step-by-step tutorial that shows you how to properly create a Split Ut
 
 ## Integration
 
-{% include "../../.gitbook/includes/utilities-class-names.md" %}
+{% include "../.gitbook/includes/utilities-class-names.md" %}
 
-Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [integration.md](integration.md "mention").
+Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [sdk-integration.md](sdk-integration.md "mention").

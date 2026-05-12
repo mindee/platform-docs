@@ -75,7 +75,7 @@ When the **Automation** feature is not activated, the `confidence` attribute in 
 
 You can easily add various business and/or processing logic rules in your code to handle complex workflows.
 
-Take a look at the [#confidence](../../integrations/client-libraries-sdk/process-result-fields.md#confidence "mention") section for implementation details.
+Take a look at the [#confidence](../sdk-integration/extraction-result-fields.md#confidence "mention") section for implementation details.
 
 ## Towards 100% Automation
 

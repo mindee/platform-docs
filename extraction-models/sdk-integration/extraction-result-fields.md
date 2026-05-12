@@ -5,17 +5,17 @@ description: >-
 icon: brain-circuit
 ---
 
-# Process Result Fields
+# Extraction Result Fields
 
 {% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
 ## Requirements
 
-You'll need to have a response object as described in the [process-the-response.md](process-the-response.md "mention") section.
+You'll need to have a response object as described in the [process-the-response.md](../../integrations/client-libraries-sdk/process-the-response.md "mention") section.
 
 ## Accessing Result Fields
 
-Fields are completely dynamic and depend on your model's [data-schema.md](../../extraction-models/data-schema.md "mention").
+Fields are completely dynamic and depend on your model's [data-schema.md](../data-schema.md "mention").
 
 In the client library, you'll have access to the various fields as a key-value mapping type (Python's `dict`, Java's `HashMap`, etc).
 
@@ -30,9 +30,9 @@ Each field will be one of the following types:
 ## `SimpleField` - Single-Value Field
 
 Basic field type having the `value` attribute.\
-See the [#value](process-result-fields.md#value "mention") section below.
+See the [#value](extraction-result-fields.md#value "mention") section below.
 
-In addition, the `Simplefield` class has [#confidence](process-result-fields.md#confidence "mention") and [#locations](process-result-fields.md#locations "mention") attributes.
+In addition, the `Simplefield` class has [#confidence](extraction-result-fields.md#confidence "mention") and [#locations](extraction-result-fields.md#locations "mention") attributes.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -199,9 +199,9 @@ RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
 ## `ObjectField` - Nested Object Field
 
 Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.\
-See the [#fields](process-result-fields.md#fields "mention") section below.
+See the [#fields](extraction-result-fields.md#fields "mention") section below.
 
-In addition, the `ObjectField` class has [#confidence](process-result-fields.md#confidence "mention") and [#locations](process-result-fields.md#locations "mention") attributes.
+In addition, the `ObjectField` class has [#confidence](extraction-result-fields.md#confidence "mention") and [#locations](extraction-result-fields.md#locations "mention") attributes.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -282,7 +282,7 @@ The sub-fields as a key-value mapping type (Python `dict`, Java `HashMap`, etc).
 
 Accessing a sub-field is done via its name in the Data Schema.
 
-Each sub-field will be a [#single-value-field-simplefield](process-result-fields.md#single-value-field-simplefield "mention")or a [#listfield-list-of-fields](process-result-fields.md#listfield-list-of-fields "mention").
+Each sub-field will be a [#single-value-field-simplefield](extraction-result-fields.md#single-value-field-simplefield "mention")or a [#listfield-list-of-fields](extraction-result-fields.md#listfield-list-of-fields "mention").
 
 {% tabs %}
 {% tab title="Python" %}
@@ -325,9 +325,9 @@ Using the `response` deserialized object from either the polling response or a w
 ## `ListField` - List of Fields
 
 Field having an `items` attribute which is a list of fields.\
-See the [#items](process-result-fields.md#items "mention") section below.
+See the [#items](extraction-result-fields.md#items "mention") section below.
 
-In addition, the `ListField` class has a [#confidence](process-result-fields.md#confidence "mention") attribute.
+In addition, the `ListField` class has a [#confidence](extraction-result-fields.md#confidence "mention") attribute.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -408,8 +408,8 @@ List of fields as a variable-length array type (Python `list`, JavaScript `Array
 
 Each item in the list will be one of:
 
-* [#simplefield-single-value-field](process-result-fields.md#simplefield-single-value-field "mention")
-* [#objectfield-nested-object-field](process-result-fields.md#objectfield-nested-object-field "mention")
+* [#simplefield-single-value-field](extraction-result-fields.md#simplefield-single-value-field "mention")
+* [#objectfield-nested-object-field](extraction-result-fields.md#objectfield-nested-object-field "mention")
 
 There will **not** be a mix of both types in the same list.
 
@@ -503,7 +503,7 @@ The attributes are always present even when not activated.
 
 The confidence level of the extracted value.
 
-The data are only filled if the [automation-confidence-score.md](../../extraction-models/optional-features/automation-confidence-score.md "mention") feature is activated.
+The data are only filled if the [automation-confidence-score.md](../optional-features/automation-confidence-score.md "mention") feature is activated.
 
 The attribute is always present, in case of Confidence Score not activated, it will always be null.
 
@@ -643,7 +643,7 @@ public void HandleResponse(ExtractionResponse response)
 
 A list of the field's locations on the document.
 
-The data are only filled if the [polygons-bounding-boxes.md](../../extraction-models/optional-features/polygons-bounding-boxes.md "mention") feature is activated.
+The data are only filled if the [polygons-bounding-boxes.md](../optional-features/polygons-bounding-boxes.md "mention") feature is activated.
 
 It's possible for a single field to have multiple locations, for example when an invoice item spans two pages.
 

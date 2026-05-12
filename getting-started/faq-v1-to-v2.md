@@ -113,7 +113,7 @@ We officially support Python, Node.js, Ruby, PHP, Java and .NET, when these are 
 
 For no-code/low-code, we officially support Make.com, n8n, and Zapier
 
-[no-code-integrations](../integrations/no-code-integrations/ "mention")
+[no-code-integration](../extraction-models/no-code-integration/ "mention")
 
 However, any language or system able to make an HTTP call and receive a JSON response can be used and supported by the community.
 

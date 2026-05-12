@@ -40,6 +40,6 @@ sequenceDiagram
 
 ## Specify on File Upload
 
-This is the default behavior as described in the [quick-start.md](client-libraries-sdk/quick-start.md "mention") section.
+This is the default behavior as described in the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
 
 Detailed instructions for your language of choice are detailed in the [#send-with-polling](client-libraries-sdk/send-a-file-or-url.md#send-with-polling "mention") section.

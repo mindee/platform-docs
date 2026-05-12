@@ -12,7 +12,7 @@ Pro plans and above benefit from extended integration support.
 **Recommended integrations:**
 
 * [client-libraries-sdk](../../integrations/client-libraries-sdk/ "mention")
-* [no-code-integrations](../../integrations/no-code-integrations/ "mention")
+* [no-code-integration](../../extraction-models/no-code-integration/ "mention")
 
 Also take a look at the [api-overview.md](../../integrations/api-overview.md "mention") if you are setting up your integration for the first time.
 {% endhint %}

@@ -1,14 +1,15 @@
 ---
 description: Integrate a Split Model.
+icon: code
 ---
 
-# Integration
+# SDK Integration
 
 ## Install the Client Library
 
 Install the Mindee Client Library for your language or framework of choice
 
-{% include "../../.gitbook/includes/installation-instructions.md" %}
+{% include "../.gitbook/includes/installation-instructions.md" %}
 
 ## Send a File and Poll
 
@@ -16,26 +17,26 @@ Use the client library to send the file to your Split Model and return the resul
 
 {% tabs %}
 {% tab title="Python" %}
-{% include "../../.gitbook/includes/code-samples/python-split.md" %}
+{% include "../.gitbook/includes/code-samples/python-split.md" %}
 {% endtab %}
 
 {% tab title="Node.js" %}
-{% include "../../.gitbook/includes/code-samples/javascript-split.md" %}
+{% include "../.gitbook/includes/code-samples/javascript-split.md" %}
 {% endtab %}
 
 {% tab title="PHP" %}
-{% include "../../.gitbook/includes/code-samples/php-split.md" %}
+{% include "../.gitbook/includes/code-samples/php-split.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
-{% include "../../.gitbook/includes/code-samples/ruby-split.md" %}
+{% include "../.gitbook/includes/code-samples/ruby-split.md" %}
 {% endtab %}
 
 {% tab title="Java" %}
-{% include "../../.gitbook/includes/code-samples/java-split.md" %}
+{% include "../.gitbook/includes/code-samples/java-split.md" %}
 {% endtab %}
 
 {% tab title=".NET" %}
-{% include "../../.gitbook/includes/code-samples/dotnet-split.md" %}
+{% include "../.gitbook/includes/code-samples/dotnet-split.md" %}
 {% endtab %}
 {% endtabs %}

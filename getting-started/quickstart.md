@@ -38,7 +38,7 @@ On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.m
 
 You can easily send a file or an URL using one of our officially-supported [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
-For a quick introduction and ready to use code samples, check out the [quick-start.md](../integrations/client-libraries-sdk/quick-start.md "mention") section.
+For a quick introduction and ready to use code samples, check out the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
 
 ## Process the Result
 
