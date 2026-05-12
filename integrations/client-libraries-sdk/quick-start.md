@@ -3,7 +3,7 @@ description: Quickest way to get started using the client libraries.
 icon: rabbit-running
 ---
 
-# Quick Start
+# Integration Quick Start
 
 ## Installation Instructions
 
@@ -51,13 +51,13 @@ For details on available options and advanced usage, check the following section
 * [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
 * [send-a-file-or-url.md](send-a-file-or-url.md "mention")
 
-## Processing the Results
+## Processing Extraction Results
 
-Once you've sent the file and retrieved the results, you can start extracting the JSON payload.
+Once you've sent the file and retrieved the response, you can start accessing the results.
 
-The model's fields will be in the `fields` object in the returned JSON, in the `response` variable returned from the above step.
+The Extraction model's fields will be in the `fields` object in the return (the `response` variable returned from the above step).
 
-Each key in the `fields` object corresponds to the field's `name` in your model configuration.
+Each key in the `fields` object corresponds to the field's `name` in your Data Schema.
 
 You'll want to adapt your processing depending on the [type of field](../../extraction-models/data-schema.md#field-types), for example when looping over lists or accessing sub-fields.
 

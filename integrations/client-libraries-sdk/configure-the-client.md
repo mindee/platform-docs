@@ -235,13 +235,14 @@ MindeeClientV2 mindeeClient = new MindeeClientV2();
 {% endtab %}
 {% endtabs %}
 
-## Set Product Parameters
+## Generic Product Parameters
+
+Parameters that apply to all Mindee products (Extraction, Split, Crop, etc).
 
 Product parameters control:
 
 * which model to use
 * server-side processing options
-* how the results will be returned to you
 
 ### Use an Alias
 
@@ -346,6 +347,8 @@ var inferenceParams = new InferenceParameters(
 ```
 {% endtab %}
 {% endtabs %}
+
+## Extraction Product Parameters
 
 ### Optional Features Configuration
 
