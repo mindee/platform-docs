@@ -77,10 +77,10 @@ Take a look at the [#initialize-the-mindee-client](client-libraries-sdk/configur
 ## Best practices for API keys
 
 1. Keeping your API keys in your environment variables is a good and safe practice.
-2. Don’t store your API key directly in your code or in your front-end.
+2. Don’t store your API key directly in your code, especially in your front-end code.
 3. Avoid exposing your secret API keys on GitHub, on the client-side, or in any other location that is open to the public.
-4. If you have any doubt your API Key leaked, delete it and replace it as soon as possible.
-5.  Periodically change your API keys
+4. If you have any doubt that your API Key leaked, delete it and replace it as soon as possible.
+5.  Periodically change your API keys, we recommend changing it every 3 months.
 
     To do so:
 

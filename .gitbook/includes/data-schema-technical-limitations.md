@@ -6,7 +6,7 @@ title: data-schema-technical-limitations
 
 The recommended maximum number of fields is 25 for a Data Schema.
 
-Beyond this limit, performance may be drastically reduced.
+While there will be no errors, beyond this number response times will increase.
 
 ## Names of Fields
 

@@ -5,8 +5,6 @@ icon: hand
 
 # Technical Limitations
 
-## Overview
-
 These limitations are designed to ensure the safety and stability of the Mindee API and platform.
 
 Unless noted otherwise, any action that exceeds or does not comply with the limitations will be rejected with an error.
