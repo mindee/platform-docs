@@ -9,7 +9,7 @@ icon: watch
 
 Response time will vary depending on the source document, the Data Schema, and the optional features enabled.
 
-## Impact of the Source Document
+## Impact of the Source File
 
 Properties of the source document which impact response time:
 
