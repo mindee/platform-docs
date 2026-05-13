@@ -1,9 +1,4 @@
 NODE_CLIENT_VERSION: 5.1.1
-MIN_VERSION_PYTHON: '3.9'
-MIN_VERSION_RUBY: '3.2'
-MIN_VERSION_NODE: '20.1'
-MIN_VERSION_JAVA: '8'
-MIN_VERSION_PHP: '8.1'
 VERSIONS_PYTHON: Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.
 VERSIONS_NODE: Requires Node.js ≥ 20.1. Node.js ≥ 22 is recommended.
 VERSIONS_PHP: Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.
