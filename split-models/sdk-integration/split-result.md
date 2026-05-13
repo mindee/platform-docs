@@ -44,6 +44,13 @@ from mindee import SplitResponse
 
 def handle_response(response: SplitResponse):
     splits: list = response.inference.result.splits
+
+    for split in splits:
+        # 0-based [start_page, end_page] range
+        page_range = split.page_range
+
+        # Document type identified for this split
+        document_type = split.document_type
 ```
 {% endtab %}
 
@@ -89,8 +96,27 @@ public function handleResponse(SplitResponse $response)
 {% tab title="Ruby" %}
 ```ruby
 def handle_response(response)
-  splits = response.inference.result.fields
-end
+  splits = response.inference.result.splits
+
+  splits.each do |split|
+    # 0-based [start_page, end_page] range
+    page_range = split.page_range
+
+    # Document type identified for this split
+    document_type = split.document_type
+
+    puts "Document Type: #{document_type}"
+    puts "Page Range: #{page_range[0]} - #{page_range[1]}"
+
+    # Optional extraction response, present if extraction chaining was requested
+    extraction_response = split.extraction_response
+
+    if extraction_response
+      # Access extracted fields from the split's inference result
+      fields = extraction_response.inference.result.fields
+      puts "Extraction fields: #{fields}"
+    end
+  end
 ```
 {% endtab %}
 

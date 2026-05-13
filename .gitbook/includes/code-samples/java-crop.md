@@ -2,7 +2,7 @@
 title: code-sample-java-crop
 ---
 
-Requires Java ≥ 8. Java ≥ 11 recommended.\
+Requires Java ≥ <code class="expression">space.vars.MIN_VERSION_JAVA</code>. Java ≥ 17 is recommended.\
 Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.43.0** or greater.
 
 {% code lineNumbers="true" %}

@@ -2,9 +2,8 @@
 title: sample-code-ruby-ocr
 ---
 
-
-Requires Ruby ≥ 3.0.\
-Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version **4.13.0** or greater.
+Requires Ruby ≥ 3.2.\
+Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version **5.1.0** or greater.
 
 {% code lineNumbers="true" %}
 ```ruby
@@ -16,7 +15,7 @@ api_key = 'MY_API_KEY'
 model_id = 'MY_MODEL_ID'
 
 # Init a new client
-mindee_client = Mindee::ClientV2.new(api_key: api_key)
+mindee_client = Mindee::V2::Client.new(api_key: api_key)
 
 # Set inference parameters
 ocr_params = {
@@ -29,7 +28,7 @@ input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 
 # Send for processing
 response = mindee_client.enqueue_and_get_result(
-    Mindee::V2::Product::Ocr::Ocr,
+    Mindee::V2::Product::OCR::OCR,
     input_source,
     ocr_params
 )
@@ -37,5 +36,4 @@ response = mindee_client.enqueue_and_get_result(
 # Access the result OCR pages
 puts response.inference.result.pages
 ```
-
 {% endcode %}

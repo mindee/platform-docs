@@ -3,7 +3,7 @@ title: sample-code-ruby-extraction
 ---
 
 Requires Ruby ≥ 3.0.\
-Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version **4.13.0** or greater.
+Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version &#x35;**.1.0** or greater.
 
 {% code lineNumbers="true" %}
 ```ruby
@@ -15,10 +15,10 @@ api_key = 'MY_API_KEY'
 model_id = 'MY_MODEL_ID'
 
 # Init a new client
-mindee_client = Mindee::ClientV2.new(api_key: api_key)
+mindee_client = Mindee::V2::Client.new(api_key: api_key)
 
 # Set inference parameters
-inference_params = {
+extraction_params = {
     # ID of the model, required.
     model_id: model_id,
 
@@ -42,15 +42,18 @@ input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 response = mindee_client.enqueue_and_get_result(
     Mindee::V2::Product::Extraction::Extraction,
     input_source,
-    inference_params
+    extraction_params
 )
 
 # Print a brief summary of the parsed data
 puts response.inference
 
-# fields.get_simple_field('my_field')
-# fields.get_list_field('my_field')
-# fields.get_object_field('my_field')
+# Access the result fields
+fields = response.inference.result.fields
+
+# fields.get_simple_field('my_simple_field')
+# fields.get_list_field('my_list_field')
+# fields.get_object_field('my_object_field')
 ```
 {% endcode %}
 

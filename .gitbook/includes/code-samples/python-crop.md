@@ -2,7 +2,7 @@
 title: sample-code-python-crop
 ---
 
-Requires Python ≥ 3.9. Python ≥ 3.10 is highly recommended.\
+Requires Python ≥ <code class="expression">space.vars.MIN_VERSION_PYTHON</code>. Python ≥ 3.10 is recommended.\
 Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.35.1** or greater.
 
 {% code lineNumbers="true" %}

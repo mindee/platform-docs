@@ -2,8 +2,8 @@
 title: sample-code-javascript-crop
 ---
 
-Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0** or greater.
+Requires Node.js ≥ <code class="expression">space.vars.MIN_VERSION_NODE</code>. Node.js ≥ 22 is recommended.\
+Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.1.1** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript

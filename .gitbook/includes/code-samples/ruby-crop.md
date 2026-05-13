@@ -2,9 +2,8 @@
 title: sample-code-ruby-crop
 ---
 
-
-Requires Ruby ≥ 3.0.\
-Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version **4.13.0** or greater.
+Requires Ruby ≥ <code class="expression">space.vars.MIN_VERSION_RUBY</code>.\
+Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version &#x35;**.1.0** or greater.
 
 {% code lineNumbers="true" %}
 ```ruby
@@ -16,7 +15,7 @@ api_key = 'MY_API_KEY'
 model_id = 'MY_MODEL_ID'
 
 # Init a new client
-mindee_client = Mindee::ClientV2.new(api_key: api_key)
+mindee_client = Mindee::V2::Client.new(api_key: api_key)
 
 # Set inference parameters
 crop_params = {
@@ -37,5 +36,4 @@ response = mindee_client.enqueue_and_get_result(
 # Access the result crops
 puts response.inference.result.crops
 ```
-
 {% endcode %}
