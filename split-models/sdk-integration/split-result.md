@@ -51,6 +51,26 @@ def handle_response(response: SplitResponse):
 ```javascript
 handleResponse(response) {
   const splits = response.inference.result.splits;
+
+  for (const split of splits) {
+    // 0-based [startPage, endPage] range
+    const pageRange = split.pageRange;
+
+    // Document type identified for this split
+    const documentType = split.documentType;
+
+    console.log(`Document Type: ${documentType}`);
+    console.log(`Page Range: ${pageRange[0]} - ${pageRange[1]}`);
+    
+    // Optional extraction response, present if extraction chaining was requested
+    const extractionResponse = split.extractionResponse;
+
+    if (extractionResponse) {
+      // Access extracted fields from the split's inference result
+      const fields = extractionResponse.inference.result.fields;
+      console.log("Extraction fields:", fields.toString());
+    }
+  }
 }
 ```
 {% endtab %}
@@ -96,5 +116,4 @@ public void HandleResponse(SplitResponse response)
 {% endtab %}
 {% endtabs %}
 
-## Access Chained Extraction Results
-
+{% include "../../.gitbook/includes/access-chained-extraction.md" %}

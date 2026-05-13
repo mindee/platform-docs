@@ -70,3 +70,4 @@ public void HandleResponse(CropResponse response)
 {% endtab %}
 {% endtabs %}
 
+{% include "../../.gitbook/includes/access-chained-extraction.md" %}
