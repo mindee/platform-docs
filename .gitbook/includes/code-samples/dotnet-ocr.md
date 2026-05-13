@@ -2,7 +2,7 @@
 title: code-sample-dotnet-ocr
 ---
 
-.NET ≥ 8.0 is recommended.\
+<code class="expression">space.vars.VERSIONS_NET</code>\
 Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **4.0.0** or greater.
 
 {% code lineNumbers="true" %}

@@ -2,7 +2,7 @@
 title: sample-code-php-extraction
 ---
 
-Requires PHP ≥ <code class="expression">space.vars.MIN_VERSION_PHP</code>\
+<code class="expression">space.vars.VERSIONS_PHP</code>\
 Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **2.7.1** or greater.
 
 {% code lineNumbers="true" %}

@@ -2,7 +2,7 @@
 title: sample-code-ruby-crop
 ---
 
-Requires Ruby ≥ <code class="expression">space.vars.MIN_VERSION_RUBY</code>.\
+<code class="expression">space.vars.VERSIONS_RUBY</code>\
 Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version &#x35;**.1.0** or greater.
 
 {% code lineNumbers="true" %}

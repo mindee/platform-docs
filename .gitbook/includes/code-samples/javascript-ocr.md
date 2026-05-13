@@ -2,7 +2,7 @@
 title: sample-code-javascript-ocr
 ---
 
-Requires Node.js ≥ 20. Node.js ≥ 22 is recommended.\
+<code class="expression">space.vars.VERSIONS_NODE</code>\
 Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}

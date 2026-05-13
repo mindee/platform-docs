@@ -2,7 +2,7 @@
 title: sample-code-python-ocr
 ---
 
-Requires Python ≥ 3.9. Python ≥ 3.10 is highly recommended.\
+<code class="expression">space.vars.VERSIONS_PYTHON</code>\
 Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.35.1** or greater.
 
 {% code lineNumbers="true" %}
