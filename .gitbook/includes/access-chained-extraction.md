@@ -2,8 +2,6 @@
 title: access-chained-extraction
 ---
 
-# Access Chained Extraction Results
-
 Chained Extraction results will be an `ExtractionResponse` object. This object is identical to the response of an Extraction model.
 
 Refer to the [extraction-result.md](../../extraction-models/sdk-integration/extraction-result.md "mention") section for details.
