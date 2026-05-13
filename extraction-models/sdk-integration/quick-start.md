@@ -219,6 +219,6 @@ Accessing a list of objects, where `my_object_list_field` is the name of the fie
 
 ### Details on Response Processing
 
-For more details on using the result fields in your application: [extraction-result-fields.md](extraction-result-fields.md "mention")
+For more details on using the result fields in your application: [extraction-result.md](extraction-result.md "mention")
 
 For details on response metadata: [process-the-response.md](../../integrations/client-libraries-sdk/process-the-response.md "mention")

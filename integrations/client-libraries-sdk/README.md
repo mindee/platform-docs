@@ -34,7 +34,7 @@ Overall, the steps to using the Mindee service are:
 4. [process-the-response.md](process-the-response.md "mention")
    1. Optional: load from a webhook.
    2. Optional: access document metadata
-5. [extraction-result-fields.md](../../extraction-models/sdk-integration/extraction-result-fields.md "mention")
+5. [extraction-result.md](../../extraction-models/sdk-integration/extraction-result.md "mention")
    1. Handle the field values extracted from the document
    2. Optional: access field metadata (polygons, confidence score)
 

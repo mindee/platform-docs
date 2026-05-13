@@ -15,7 +15,7 @@ Start with the page that matches your next step:
 
 * [Extraction Quick Start](quick-start.md) — install a client library, send a file, and get your first result.
 * [Extraction Configuration](extraction-configuration.md) — set model-specific parameters and optional features.
-* [Extraction Result Fields](extraction-result-fields.md) — access dynamic fields and metadata in the SDK response.
+* [Extraction Result Fields](extraction-result.md) — access dynamic fields and metadata in the SDK response.
 
 ### Typical SDK workflow
 

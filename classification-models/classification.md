@@ -52,4 +52,4 @@ Here is a step-by-step tutorial that shows you how to properly create a Classify
 
 {% include "../.gitbook/includes/utilities-class-names.md" %}
 
-Once your Classification model is created and tested, integration documentation is provided in the "Documentation" page, or here: [sdk-integration.md](../crop-models/sdk-integration.md "mention").
+Once your Classification model is created and tested, integration documentation is provided in the "Documentation" page, or here: [crop-quick-start.md](../crop-models/sdk-integration/crop-quick-start.md "mention").

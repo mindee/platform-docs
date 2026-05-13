@@ -30,7 +30,7 @@
 * [SDK Integration](extraction-models/sdk-integration/README.md)
   * [Extraction Quick Start](extraction-models/sdk-integration/quick-start.md)
   * [Extraction Configuration](extraction-models/sdk-integration/extraction-configuration.md)
-  * [Extraction Result Fields](extraction-models/sdk-integration/extraction-result-fields.md)
+  * [Extraction Result](extraction-models/sdk-integration/extraction-result.md)
 * [No-Code Integration](extraction-models/no-code-integration/README.md)
   * [make.com Scenarios](extraction-models/no-code-integration/make.com-scenarios.md)
   * [n8n Workflows](extraction-models/no-code-integration/n8n-workflows.md)
@@ -39,22 +39,30 @@
 ## Split Models
 
 * [Split Model Overview](split-models/split.md)
-* [SDK Integration](split-models/sdk-integration.md)
+* [SDK Integration](split-models/sdk-integration/README.md)
+  * [Split Quick Start](split-models/sdk-integration/split-quick-start.md)
+  * [Split Result](split-models/sdk-integration/split-result.md)
 
 ## Crop Models
 
 * [Crop Model Overview](crop-models/crop.md)
-* [SDK Integration](crop-models/sdk-integration.md)
+* [SDK Integration](crop-models/sdk-integration/README.md)
+  * [Crop Quick Start](crop-models/sdk-integration/crop-quick-start.md)
+  * [Crop Result](crop-models/sdk-integration/crop-result.md)
 
 ## Classification Models
 
 * [Classification Model Overview](classification-models/classification.md)
-* [SDK Integration](classification-models/sdk-integration.md)
+* [SDK Integration](classification-models/sdk-integration/README.md)
+  * [Classification Quick Start](classification-models/sdk-integration/classification-quick-start.md)
+  * [Classification Result](classification-models/sdk-integration/classification-result.md)
 
 ## OCR Models
 
 * [OCR Model Overview](ocr-models/ocr.md)
-* [SDK Integration](ocr-models/sdk-integration.md)
+* [SDK Integration](ocr-models/sdk-integration/README.md)
+  * [OCR Quick Start](ocr-models/sdk-integration/ocr-quick-start.md)
+  * [OCR Result](ocr-models/sdk-integration/ocr-result.md)
 
 ## Integrations
 

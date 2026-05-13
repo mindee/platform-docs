@@ -1,11 +1,11 @@
 ---
 description: >-
-  Reference documentation on processing result fields of the response using the
-  Mindee client libraries.
+  Reference documentation on processing an Extraction result using the Mindee
+  SDKs.
 icon: brain-circuit
 ---
 
-# Extraction Result Fields
+# Extraction Result
 
 {% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
@@ -30,9 +30,9 @@ Each field will be one of the following types:
 ## `SimpleField` - Single-Value Field
 
 Basic field type having the `value` attribute.\
-See the [#value](extraction-result-fields.md#value "mention") section below.
+See the [#value](extraction-result.md#value "mention") section below.
 
-In addition, the `Simplefield` class has [#confidence](extraction-result-fields.md#confidence "mention") and [#locations](extraction-result-fields.md#locations "mention") attributes.
+In addition, the `Simplefield` class has [#confidence](extraction-result.md#confidence "mention") and [#locations](extraction-result.md#locations "mention") attributes.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -199,9 +199,9 @@ RuntimeBinderException : Cannot implicitly convert type 'string' to 'double'
 ## `ObjectField` - Nested Object Field
 
 Field having a `fields` attribute which is a hash table (Python's `dict`, Java's `HashMap`, etc) of sub-fields.\
-See the [#fields](extraction-result-fields.md#fields "mention") section below.
+See the [#fields](extraction-result.md#fields "mention") section below.
 
-In addition, the `ObjectField` class has [#confidence](extraction-result-fields.md#confidence "mention") and [#locations](extraction-result-fields.md#locations "mention") attributes.
+In addition, the `ObjectField` class has [#confidence](extraction-result.md#confidence "mention") and [#locations](extraction-result.md#locations "mention") attributes.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -282,7 +282,7 @@ The sub-fields as a key-value mapping type (Python `dict`, Java `HashMap`, etc).
 
 Accessing a sub-field is done via its name in the Data Schema.
 
-Each sub-field will be a [#single-value-field-simplefield](extraction-result-fields.md#single-value-field-simplefield "mention")or a [#listfield-list-of-fields](extraction-result-fields.md#listfield-list-of-fields "mention").
+Each sub-field will be a [#single-value-field-simplefield](extraction-result.md#single-value-field-simplefield "mention")or a [#listfield-list-of-fields](extraction-result.md#listfield-list-of-fields "mention").
 
 {% tabs %}
 {% tab title="Python" %}
@@ -325,9 +325,9 @@ Using the `response` deserialized object from either the polling response or a w
 ## `ListField` - List of Fields
 
 Field having an `items` attribute which is a list of fields.\
-See the [#items](extraction-result-fields.md#items "mention") section below.
+See the [#items](extraction-result.md#items "mention") section below.
 
-In addition, the `ListField` class has a [#confidence](extraction-result-fields.md#confidence "mention") attribute.
+In addition, the `ListField` class has a [#confidence](extraction-result.md#confidence "mention") attribute.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -408,8 +408,8 @@ List of fields as a variable-length array type (Python `list`, JavaScript `Array
 
 Each item in the list will be one of:
 
-* [#simplefield-single-value-field](extraction-result-fields.md#simplefield-single-value-field "mention")
-* [#objectfield-nested-object-field](extraction-result-fields.md#objectfield-nested-object-field "mention")
+* [#simplefield-single-value-field](extraction-result.md#simplefield-single-value-field "mention")
+* [#objectfield-nested-object-field](extraction-result.md#objectfield-nested-object-field "mention")
 
 There will **not** be a mix of both types in the same list.
 

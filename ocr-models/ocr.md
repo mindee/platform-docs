@@ -23,4 +23,4 @@ Here is a step-by-step tutorial that shows you how to properly create an OCR uti
 
 ## Integration
 
-Once your OCR model is created and tested, integration documentation is provided in the "Documentation" page, or here: [sdk-integration.md](sdk-integration.md "mention")
+Once your OCR model is created and tested, integration documentation is provided in the "Documentation" page, or here: [ocr-quick-start.md](sdk-integration/ocr-quick-start.md "mention")

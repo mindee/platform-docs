@@ -48,4 +48,4 @@ Here is a step-by-step tutorial that shows you how to properly create a Split Ut
 
 {% include "../.gitbook/includes/utilities-class-names.md" %}
 
-Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [sdk-integration.md](sdk-integration.md "mention").
+Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [split-quick-start.md](sdk-integration/split-quick-start.md "mention").
