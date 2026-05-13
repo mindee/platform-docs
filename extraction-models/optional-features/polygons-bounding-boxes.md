@@ -1,6 +1,6 @@
 ---
 description: Add the polygon coordinates of each extracted field to the API response.
-icon: vector-square
+icon: draw-square
 ---
 
 # Polygons (Bounding Boxes)

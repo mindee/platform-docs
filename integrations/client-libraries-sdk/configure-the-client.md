@@ -7,25 +7,23 @@ icon: wrench
 
 {% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
-## Requirements
+## Before You Start
 
-Before proceeding you'll need to have one of the [official Mindee client libraries](./) installed.
+You'll need to have one of the [official Mindee client libraries](./) installed.
 
-You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and one or several [Models](../../models/models-overview.md) configured.
+You'll also need to use one of your [#api-keys](../api-overview.md#api-keys "mention") and have at least one [Model](../../models/models-overview.md) configured.
 
-## Overview
-
-Before sending any files to the Mindee servers for processing, you'll need to initialize your client and set inference options.
-
-These settings will determine how your files are sent, including any extra options, and how you want to process the result.
+The client works for all model types.
 
 ## Initialize the Mindee Client
+
+Before sending any files to the Mindee servers for processing, you'll need to initialize your client.
 
 This should be the first step in your code. It will determine which organization is used to make the calls.
 
 You should reuse the same client instance for all calls of the same organization.
 
-The client instance is thread-safe where applicable.
+The client instance is thread-safe in applicable languages.
 
 {% tabs %}
 {% tab title="Python" %}

@@ -29,7 +29,7 @@ The goal is to avoid any possible confusion between data points present in the d
 
 As an example, let's extract the name of the company that issued an invoice.
 
-In our Data Schema, we've used the field _Name_:  `supplier_name`\
+In our Data Schema, we've used the field _Name_: `supplier_name`\
 It clearly tells the model to extract only the name of the invoice supplier.
 
 :white\_check\_mark: you could also use `vendor_name`, it has a similar meaning and equivalent precision.
@@ -69,7 +69,7 @@ For instance, with `supplier_phone_number`, adding the following extraction guid
 
 > If you find several phone numbers in the document, use the phone number of the supplier headquarters.
 >
-> Always reformat the data to match the international phone number format, as follows: +1-212-456-7890
+> Always reformat the data to match the international phone number format, as follows: +1-212-867-5309
 
 ## Relative Importance of Field Properties
 
@@ -81,7 +81,7 @@ In the following table, "Normal Fields" are those that extract textual informati
 
 "Object Detection" refers to specific processing to extract polygons of various elements on the document, such as signatures, ID photos, etc.
 
-<table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage </th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>Name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>Title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>Description</td><td>Complementary</td><td>Not used</td></tr><tr><td>Guidelines</td><td>Complementary</td><td>Not used</td></tr><tr><td>Classification Values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
+<table><thead><tr><th width="208.0001220703125">Property</th><th width="261.4000244140625">Normal Field Usage</th><th>Object Detection Usage</th></tr></thead><tbody><tr><td>Name</td><td><strong>Most important</strong></td><td>Not used</td></tr><tr><td>Title</td><td>Important</td><td><strong>Most important</strong></td></tr><tr><td>Description</td><td>Complementary</td><td>Not used</td></tr><tr><td>Guidelines</td><td>Complementary</td><td>Not used</td></tr><tr><td>Classification Values</td><td>Very important (only for classification fields)</td><td>Not used</td></tr></tbody></table>
 
 ## Less Is More
 
@@ -119,7 +119,7 @@ As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
 ### When should I use Data Schema guidelines vs RAG guidelines?
 
-Both work in the same way to provide extra context for the model to better identify data and extract it.
+Both work in the same way to provide extra context for the model to better identify data and extract them.
 
 The major difference is _when_ they are applied:
 
@@ -129,7 +129,7 @@ If the guideline only applies to a specific template ⇒ use the RAG guideline.
 
 ### Can the model correctly interpret positions like top, bottom, etc?
 
-Mindee models used are multi-modal, meaning they use both textual and visual information.
+Mindee models are multimodal, meaning they use both textual and visual information.
 
 As such it is possible to write guidelines conveying positional information, for example:
 
@@ -137,7 +137,7 @@ As such it is possible to write guidelines conveying positional information, for
 
 ### Can I reference a specific location or text on the page?
 
-Each page of the document is processed as a whole, and the models have both a visual component and a textual component (multi-modal models).
+Each page of the document is processed as a whole, and the models have both a visual component and a textual component (multimodal models).
 
 It is therefore possible to reference other locations and texts of the page in guidelines.
 
@@ -155,7 +155,11 @@ Specifying a location and text:
 
 In our own testing, major European languages such as French, Spanish, or German, are comparable to English in terms of modal accuracy.
 
-It can be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. This can help improve accuracy, in particular when specific terms are used in the field definition.
+In some cases, it _may_ be beneficial to define the Data Schema, such as field names and descriptions, using the language present in the document. This can help improve accuracy, in particular when terms not easily translatable are used in the field definition.
+
+For example, a model for French invoices may use "TVA Intracommunautaire" as the field name rather than "Intra-Community VAT", although both will work.
+
+Best is to try both using the [live-test.md](../models/live-test.md "mention") feature.
 
 ### What are best practices for handling different regions or languages?
 
@@ -169,9 +173,9 @@ In the context of a Data Schema, the optimal configuration mainly depends on whe
 
 Typically the follow-up question is: should I use a single model or multiple models?
 
-#### Use of Different Models
+#### When to use different Models
 
-If the data changes considerably, it can be beneficial to have different models for different regions.\
+If the data changes considerably, it will be beneficial to have different models for different regions.\
 For example:
 
 * different tax lines/calculations on invoices
@@ -181,7 +185,7 @@ For example:
 Having different models to better fit the data to extract will generally provide more accurate results.\
 It will also allow having specific [#field-extraction-guidelines](data-schema-best-practices.md#field-extraction-guidelines "mention").
 
-#### Only One Model Needed
+#### When to use a single Model
 
 On the other hand, if the data to extract does not vary significantly, even when the language changes, there is generally no need to have different models.\
 For example:

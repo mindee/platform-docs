@@ -1,13 +1,15 @@
 ---
-description: Reference documentation on preparing and configuring the Mindee product.
+description: >-
+  Reference documentation on preparing and configuring the Mindee model
+  inference.
 icon: wrench-simple
 ---
 
 # Basic Model Configuration
 
-Parameters that apply to all Mindee products (Extraction, Split, Crop, etc).
+Parameters that apply to all Mindee model types (Extraction, Split, Crop, etc).
 
-Product parameters control:
+Inference parameters control:
 
 * which model to use
 * server-side processing options
