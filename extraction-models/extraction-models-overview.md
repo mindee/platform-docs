@@ -5,15 +5,15 @@ description: >-
 icon: print-magnifying-glass
 ---
 
-# Extraction Models Overview
+# Extraction Model Overview
 
 ## What is an Extraction Model?
 
-An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents using Optical Character Recognition (OCR) combined with data extraction techniques.&#x20;
+An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents using Optical Character Recognition (OCR) combined with data extraction techniques.
 
 Each model defines a set of fields called a [data-schema.md](data-schema.md "mention"). Fields could include "Supplier Name," "Invoice Number," or "Total Amount" for an Invoice Model, as an example. The system will then identify and extract data from uploaded files according to these field definitions.
 
-You can create extraction models for any type of document including: invoices, receipts, passports,  ID cards, financial statements, etc.
+You can create extraction models for any type of document including: invoices, receipts, passports, ID cards, financial statements, etc.
 
 Models allow you to automate the process of turning unstructured document images into actionable, structured data. They can be tailored to different document types and business needs, ensuring that only relevant information is captured for your workflows.
 
@@ -27,16 +27,16 @@ Each Extraction Model contains these dedicated tools and features:
 
 From the Mindee Platform main page, click on **"Create your document AI model".**
 
-### Create from Model Catalog
+### Create From the Model Catalog
 
-Chances are the document you're trying to automate is a known type of document, and likely to be already present in our Model Catalog: Invoice, Receipt, Passport, Financial Document, ID Card...
-
-Simply click on the Model that best fits your needs. You can search our catalog for suitable models.\
+Chances are the document you're trying to automate is a known type of document, and likely to be already present in our Model Catalog: Invoice, Receipt, Passport, Financial Document, ID Card...\
 \
-These Models use Data Schemas created by our Data Science team, allowing you to get started quickly by using a set of predefined fields.
+These are model templates with Data Schemas created by our Data Science team, allowing you to get started quickly by using a set of predefined fields.
+
+You can search our catalog for suitable templates, then simply click on the one that best fits your needs. This will create a new model in your organization's account with its own model ID, allowing you to use and modify it.
 
 {% hint style="info" %}
-**Catalog Models come with generic fields.**
+**Catalog Models come with generic extraction fields.**
 
 You'll likely need to add and/or modify fields to fit your needs and business case.
 {% endhint %}
@@ -56,11 +56,13 @@ Once created, refine the new model's [data-schema.md](data-schema.md "mention") 
 
 ## Modifying Your Extraction Data Schema
 
-Once you have created or copied a model, you'll likely want to modify its [data-schema.md](data-schema.md "mention") to better suit your needs.
+Once you have created a model, you'll likely want to modify its [data-schema.md](data-schema.md "mention") to better suit your needs.
+
+Even if the model was created from the Model Catalog, it is unique to your account and fully customizable.
 
 Navigate to the Data Schema page where you can adjust fields, update configurations, and customize settings according to your requirements.
 
-### AI Assistant
+### Using the AI Assistant
 
 You can use the "AI Assistant" dialog box for automated improvements.
 

@@ -9,15 +9,21 @@ icon: sliders-up
 
 ## Model Name and Cover Image
 
-On the Model Settings page, you'll have the opportunity to modify the model name and the cover image. Feel free to set them up so that the Model will be easy to retrieve among all your other Models.
+On the Model Settings page, you'll have the opportunity to modify the model name and the cover image.
+
+Feel free to set them up so that the Model will be easy to find among all your other Models.
 
 ## Model ID
 
-In the Model Settings page, you can view and copy the **Model ID**.&#x20;
+Every model has a unique ID which is generated at creation time.
 
-You will need the Model ID in order to [integrate the Mindee API](../integrations/api-overview.md).
+This includes models created from the Model Catalog. Catalog models do not have a shared ID, they are templates. For example, if two users create a model from the same catalog template, each model gets a different Model ID.
 
-The Mindee Support team may also request the Model ID to diagnose issues and provide solutions.
+You will need the Model ID in order to [use the Mindee API](../integrations/api-overview.md).
+
+In the Model Settings page, you can view and copy the Model ID.
+
+The Mindee Support team may request the Model ID to diagnose issues and provide solutions.
 
 ## Processing Zone
 
