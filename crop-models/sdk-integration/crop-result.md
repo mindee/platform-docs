@@ -11,13 +11,38 @@ icon: brain-circuit
 
 ## Accessing Crop Items
 
+A `CropItem` describes the location of a single detected object.
+
+In this context, an _object_ can be any element to find on a page.
+
+Most users will look for a document type (like a receipt or an ID), but it could really be anything (a photo, a logo, etc).&#x20;
+
+### `CropItem` Attributes
+
+#### Object Type
+
+The category assigned to the object. It is always filled.
+
+It is returned as a string and is identical to the value entered on the Mindee platform — case, spaces, and punctuation included.
+
+#### Location
+
+The location of the object in the document. It contains the following properties:
+
+* Polygon: Coordinates of the object.
+* Page: 0-based index of the page the coordinates were found on.
+
+#### Extraction Response
+
+Optional extraction response associated with the split. This is only filled if extraction chaining is activated for the model.
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
 from mindee import CropResponse
 
 def handle_response(response: CropResponse):
-    crops: list = response.inference.result.crops
+    crops = response.inference.result.crops
 ```
 {% endtab %}
 

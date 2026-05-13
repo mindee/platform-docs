@@ -43,7 +43,7 @@ You'll usually want to iterate over all split ranges, since the number of ranges
 from mindee import SplitResponse
 
 def handle_response(response: SplitResponse):
-    splits: list = response.inference.result.splits
+    splits = response.inference.result.splits
 
     for split in splits:
         # 0-based [start_page, end_page] range

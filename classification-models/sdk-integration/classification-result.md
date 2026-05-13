@@ -13,13 +13,27 @@ icon: brain-circuit
 
 ## Accessing the Classification
 
+A `Classifier` describes the detected class of the entire document.
+
+### `Classifier` Attributes
+
+#### Document Type
+
+The document category assigned to the sub-document. It is always filled.
+
+It is returned as a string and is identical to the value entered on the Mindee platform — case, spaces, and punctuation included.
+
+#### Extraction Response
+
+Optional extraction response associated with the split. This is only filled if extraction chaining is activated for the model.
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
 from mindee import ClassificationResponse
 
 def handle_response(response: ClassificationResponse):
-    classification = response.inference.result.classification
+    classifier = response.inference.result.classification
 ```
 {% endtab %}
 
@@ -53,7 +67,6 @@ end
 {% tab title="Java" %}
 ```java
 import com.mindee.v2.product.classification.ClassificationResponse;
-import com.mindee.v2.product.classification.ClassificationClassifier;
 
 public void handleResponse(SplitResponse response) {
   var classification = response.getInference().getResult().getClassification();
@@ -72,3 +85,5 @@ public void HandleResponse(ClassificationResponse response)
 ```
 {% endtab %}
 {% endtabs %}
+
+{% include "../../.gitbook/includes/access-chained-extraction.md" %}
