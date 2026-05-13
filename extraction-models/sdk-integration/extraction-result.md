@@ -9,11 +9,9 @@ icon: brain-circuit
 
 {% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
-## Requirements
+{% include "../../.gitbook/includes/result-response-requirements.md" %}
 
-You'll need to have a response object as described in the [process-the-response.md](../../integrations/client-libraries-sdk/process-the-response.md "mention") section.
-
-## Accessing Result Fields
+## Accessing Data Schema Fields
 
 Fields are completely dynamic and depend on your model's [data-schema.md](../data-schema.md "mention").
 
@@ -92,11 +90,10 @@ Using the `response` deserialized object from either the polling response or a w
 
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.SimpleField;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   SimpleField simpleField = fields.getSimpleField("my_simple_field");
 }
@@ -249,11 +246,10 @@ Using the `response` deserialized object from either the polling response or a w
 
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ObjectField;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   ObjectField objectField = fields.getObjectField("my_object_field");
 }
@@ -375,11 +371,10 @@ Using the `response` deserialized object from either the polling response or a w
 
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   ListField listField = fields.getListField("my_list_field");
 }
@@ -505,11 +500,10 @@ The confidence level of the extracted value.
 
 The data are only filled if the [automation-confidence-score.md](../optional-features/automation-confidence-score.md "mention") feature is activated.
 
-The attribute is always present, in case of Confidence Score not activated, it will always be null.
+The instance property is always present, however if the feature is not activated, it will always be empty (the exact type depends on language used: `null`, `undefined`, `None`, etc)
 
-The attribute value will be one of: `Certain`, `High`, `Medium`, `Low` .
-
-All languages use the appropriate enum type.
+The attribute value will be a one of: `Certain`, `High`, `Medium`, `Low` .\
+The language-appropriate enum type will be available for your convenience, mapped from a string value.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -598,10 +592,9 @@ Using the `response` deserialized object from either the polling response or a w
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.FieldConfidence;
-import com.mindee.parsing.v2.field.InferenceFields;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   // choose the appropriate field type accessor method: Simple, Object, List
   FieldConfidence confidence = fields.getSimpleField("my_simple_field")
@@ -775,11 +768,10 @@ import com.mindee.geometry.Point;
 import com.mindee.geometry.Polygon;
 import com.mindee.parsing.v2.InferenceResponse;
 import com.mindee.parsing.v2.field.FieldLocation;
-import com.mindee.parsing.v2.field.InferenceFields;
 import java.util.List;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   // choose the appropriate field type accessor method: Simple, Object
   List<FieldLocation> locations = fields.getSimpleField("my_simple_field")

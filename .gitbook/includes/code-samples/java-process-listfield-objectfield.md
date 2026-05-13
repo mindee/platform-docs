@@ -4,13 +4,12 @@ title: java-process-listfield-objectfield
 
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.ObjectField;
 import com.mindee.parsing.v2.field.SimpleField;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   ListField fieldObjectList = fields.getListField("my_object_list_field");
 

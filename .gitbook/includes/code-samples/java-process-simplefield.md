@@ -4,10 +4,9 @@ title: java-process-simplefield
 
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   // texts, dates, classifications ...
   String stringFieldValue = fields.getSimpleField("string_field")

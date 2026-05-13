@@ -4,12 +4,11 @@ title: java-process-listfield-simplefield
 
 ```java
 import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.SimpleField;
 
 public void handleResponse(InferenceResponse response) {
-  InferenceFields fields = response.inference.getResult().getFields();
+  var fields = response.getInference().getResult().getFields();
 
   ListField simpleListField = fields.getListField("my_simple_list_field");
 
