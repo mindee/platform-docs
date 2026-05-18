@@ -46,6 +46,10 @@ You can download past invoices anytime on your Stripe account.
 Invoices are issued automatically at the start of each billing period.
 {% endhint %}
 
+### Set Your Tax ID
+
+You can set your Tax ID at any time. After clicking on "Manage Subscription", click on "Update Information", and finally edit the "Tax ID" field.
+
 ## Supported Payment Methods
 
 You can use any payment method supported by Stripe for all self-serve plans.
