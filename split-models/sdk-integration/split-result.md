@@ -89,6 +89,26 @@ use Mindee\V2\Product\Split\SplitResponse;
 public function handleResponse(SplitResponse $response)
 {
     $splits = $response->inference->result->splits;
+
+    foreach ($splits as $split) {
+        // 0-based [startPage, endPage] range
+        $pageRange = $split->pageRange;
+
+        // Document type identified for this split
+        $documentType = $split->documentType;
+
+        echo "Document Type: $documentType\n";
+        echo "Page Range: {$pageRange[0]} - {$pageRange[1]}\n";
+
+        // Optional extraction response, present if extraction chaining was requested
+        $extractionResponse = $split->extractionResponse;
+
+        if ($extractionResponse !== null) {
+            // Access extracted fields from the split's inference result
+            $fields = $extractionResponse->inference->result->fields;
+            echo "Extraction fields: " . $fields->toString() . "\n";
+        }
+    }
 }
 ```
 {% endtab %}
