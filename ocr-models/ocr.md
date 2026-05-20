@@ -15,7 +15,7 @@ A file sent to the OCR Model may have any number of pages, [within limits](../in
 
 Your OCR utility is now available in your **Models** tab:
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 Here is a step-by-step tutorial that shows you how to properly create an OCR utility:
 

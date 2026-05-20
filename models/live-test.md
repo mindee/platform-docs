@@ -7,7 +7,7 @@ icon: circle-play
 
 # Live Test
 
-{% @supademo/embed demoId="cmfmnqqnqgjnb39ozfh42qw7z" url="https://app.supademo.com/demo/cmfmnqqnqgjnb39ozfh42qw7z" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmfmnqqnqgjnb39ozfh42qw7z" demoId="cmfmnqqnqgjnb39ozfh42qw7z" %}
 
 ## Overview
 
@@ -44,3 +44,25 @@ You can always go back to the Live Test page by clicking on the left-hand model 
    * listed in the right panel with values, field names, and optionally confidence scores if the [automation-confidence-score.md](../extraction-models/optional-features/automation-confidence-score.md "mention") feature is enabled.
 
 <figure><img src="../.gitbook/assets/live-test-demo.gif" alt="Overview animation of Mindee Live View"><figcaption><p>By clicking the polygon, you can also see its corresponding field on the right side.</p></figcaption></figure>
+
+## Documents History
+
+When testing your model, you'll typically use several documents, and want to use those same documents for testing any changes made to the model.
+
+For this reason you can access the Documents History, where all your tests are stored.
+
+When you access a document in your history after having modified the Data Schema, you'll have a "Outdated Extraction" notice, along with a button to "Rerun Document".
+
+<figure><img src="../.gitbook/assets/live-test-rerun-document.png" alt="Live Test - Rerun Document" width="335"><figcaption></figcaption></figure>
+
+### Deleting Documents
+
+You can delete documents and their results at any time.
+
+On the table view, select the documents you wish to delete, then click on the "<i class="fa-trash-can">:trash-can:</i>" icon at the top of the page.
+
+{% hint style="info" %}
+Deleting a document is an irreversible action!
+
+The file and its corresponding data will be permanently removed from our system.
+{% endhint %}

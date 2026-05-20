@@ -35,7 +35,7 @@ If there is a high possibility of having multiple documents within the same file
 
 {% include "../.gitbook/includes/utilities-other-class.md" %}
 
-<figure><img src="../.gitbook/assets/image (11).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt="" width="375"><figcaption></figcaption></figure>
 
 4. Once ready, click on **Create Utility** to create your custom Classify Utility.
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>

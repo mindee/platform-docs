@@ -21,7 +21,7 @@ Start with the page that matches your next step:
 
 {% stepper %}
 {% step %}
-### Install and authenticate
+#### Install and authenticate
 
 Install the client library for your language.
 
@@ -29,7 +29,7 @@ Prepare your API key and initialize the client.
 {% endstep %}
 
 {% step %}
-### Send a document
+#### Send a document
 
 Choose your model ID and send a file or URL for processing.
 
@@ -37,7 +37,7 @@ Start with polling unless you already use webhooks.
 {% endstep %}
 
 {% step %}
-### Process the results
+#### Process the results
 
 Read extracted values from the response fields.
 
@@ -74,4 +74,3 @@ Extraction integration builds on the same client library concepts used across al
 * [Response Processing](../../integrations/client-libraries-sdk/process-the-response.md)
 * [Webhook Results](../../integrations/webhooks.md)
 * [Error Handling](../../integrations/problem-database.md)
-
