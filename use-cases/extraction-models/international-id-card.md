@@ -61,6 +61,13 @@ If you want to try and do a live test, you can use this French ID example:
 
 ### Two Ways to Start
 
+### 1. Choose "International ID" in the Catalog (Recommended)
+
+* Click on "Create your document AI model" in your dashboard, then select **"**&#x49;nternational I&#x44;**".**
+* The International ID model template comes pre-configured with standard [#international-id-fields](international-id-card.md#international-id-fields "mention").
+* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
+
 #### 1. Pick the ID Card Model from the Catalog (Recommended)
 
 * In your Mindee dashboard, go to the **Document Catalog** and choose the **“International ID”** model.

@@ -37,12 +37,12 @@ You can use Mindee to extract structured data from:
 
 ## Two Ways to Get Started
 
-### **1. Use the pre-trained Financial Document model (Recommended)**
+### 1. Choose "Financial Document" in the Catalog (Recommended)
 
-* Go to the **Document Catalog** and select **“Financial Document.”**
-* The model already includes standard fields such as invoice date, supplier name, totals and payment due date.
-* You can use it as is, or ask the AI Agent to refine the schema by adding or removing fields.
-* Once selected, you can test it immediately with your own documents.
+* Click on "Create your document AI model" in your dashboard, then select **"Financial Document".**
+* The Financial Document model template comes pre-configured with standard [#financial-document-fields](financial-documents.md#financial-document-fields "mention").
+* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
 ### **2. Build a tailored Financial Document model with the AI Agent**
 
@@ -56,8 +56,8 @@ You can use this financial document sample to do a live test yourself:
 
 ## Supported Formats
 
-* **PDF files** — single-page or multi-page
-* **Images** — JPG, PNG, TIFF, and more
+* **PDF files:** single-page or multi-page
+* **Images:** JPG, PNG, TIFF, and more
 
 See full [list of accepted files](https://docs.mindee.com/integrations/technical-limitations#accepted-files).
 

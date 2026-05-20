@@ -9,7 +9,7 @@ icon: receipt
 
 Here is a quick demo of Mindee V2's Receipt model:
 
-{% @supademo/embed demoId="cmiytadiq07vk14g4techyr3b" url="https://app.supademo.com/demo/cmiytadiq07vk14g4techyr3b" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmiytadiq07vk14g4techyr3b" demoId="cmiytadiq07vk14g4techyr3b" %}
 
 ## Why Use Mindee for Receipts?
 
@@ -24,9 +24,12 @@ Receipts vary immensely in format, country, language, and quality. Mindee simpli
 
 Mindee offers two paths to start extracting data from receipts:
 
-### **1. Choose Receipt from Our Catalog**&#x20;
+### 1. Choose "Receipt" in the Catalog (Recommended)
 
-Select the "Receipt" model from our Document Catalog to begin using the pre-trained model immediately. It comes pre-configured to extract all standard financial and descriptive fields (merchant name, total, date, line items, etc.) with high accuracy.
+* Click on "Create your document AI model" in your dashboard, then select **"Receipt".**
+* The Receipt model template comes pre-configured with standard [#receipt-fields](receipt.md#receipt-fields "mention").
+* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
 ### **2. Customize the Model via Data Schema**
 

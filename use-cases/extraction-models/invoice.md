@@ -26,7 +26,7 @@ Common use cases:
 ### 1. Choose "Invoice" in the Catalog (Recommended)
 
 * Click on "Create your document AI model" in your dashboard, then select **"Invoice".**
-* The Invoice model template comes pre-configured with the standard financial fields listed above.
+* The Invoice model template comes pre-configured with the standard [#invoice-fields](invoice.md#invoice-fields "mention").
 * Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
 * Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
