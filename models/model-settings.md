@@ -17,7 +17,11 @@ Feel free to set them up so that the Model will be easy to find among all your o
 
 Every model has a unique ID which is generated at creation time.
 
-This includes models created from the Model Catalog. Catalog models do not have a shared ID, they are templates. For example, if two users create a model from the same catalog template, each model gets a different Model ID.
+{% hint style="info" %}
+Model Templates in the Catalog do not have a Model ID.
+
+The Model ID is generated when the Model is created from the Template. If two users create a Model from the same Template, each Model gets its own unique Model ID.
+{% endhint %}
 
 You will need the Model ID in order to [use the Mindee API](../integrations/api-overview.md).
 

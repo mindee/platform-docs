@@ -7,13 +7,13 @@ icon: file-invoice-dollar
 
 # Invoice
 
-Watch our quick demo to see how you can easily set up your custom invoice model with Mindee:
+Watch our quick demo to see how you can easily create your custom invoice model with Mindee:
 
 {% @supademo/embed url="https://app.supademo.com/demo/cmfci0aiy7nt739ozcvdq9hqa" demoId="cmfci0aiy7nt739ozcvdq9hqa" %}
 
 ## Why use Mindee for Invoices?
 
-Invoices can vary widely by supplier, format, and layout. The Invoice model is designed to handle these differences, so you get consistent and reliable data extraction without custom development.
+Invoices can vary widely by supplier, format, and layout. The Invoice model template is designed to handle these differences, so you get consistent and reliable data extraction without custom development.
 
 Common use cases:
 
@@ -23,12 +23,12 @@ Common use cases:
 
 ## Two Ways to Start Building your Invoice Model
 
-### 1. Choose “Invoice” in the Catalog (Recommended)
+### 1. Choose "Invoice" in the Catalog (Recommended)
 
-* Open the **Document Catalog** in your dashboard and select **“Invoice.”**
-* The model comes pre-configured with the standard financial fields listed above.
-* You can start using it right away, or adjust the schema in **Data Schema** if you need additional fields.
-* Once selected, you can immediately test the model with your own invoices.
+* Click on "Create your document AI model" in your dashboard, then select **"Invoice".**
+* The Invoice model template comes pre-configured with the standard financial fields listed above.
+* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
 ### 2. Build a Custom Invoice Model with the AI Agent
 
