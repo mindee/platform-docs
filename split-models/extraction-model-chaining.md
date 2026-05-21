@@ -7,7 +7,7 @@ icon: link-horizontal
 
 Use Split to automatically extract document data, meaning that several different extractions can be made for a single file.
 
-## Set Up
+## Extraction Set Up
 
 ### At Model Creation
 
@@ -38,3 +38,9 @@ This allows selectively extracting some portions of the file while ignoring othe
 Let's say you receive PDFs from your users, where each PDF is a bundle of different documents: plane tickets, travel receipts, driver licenses, and passports.
 
 You need only passports. In your Split configuration, add a "passport" class and an "other"  class, and only link an extraction model to the "passport" class. By only linking to the documents of interest, we ensure only those will get extracted.
+
+## Access Extraction Results
+
+When an Extraction model is linked, each Split Range with the detected class will contain an Extraction Response object, which is identical when making an Extraction request for a single document.
+
+Check the [split-result.md](sdk-integration/split-result.md "mention") section for more details.
