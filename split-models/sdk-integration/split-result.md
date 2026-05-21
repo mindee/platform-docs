@@ -143,9 +143,32 @@ def handle_response(response)
 {% tab title="Java" %}
 ```java
 import com.mindee.v2.product.split.SplitResponse;
+import com.mindee.v2.product.split.SplitRange;
 
 public void handleResponse(SplitResponse response) {
-  var splits = response.getInference().getResult().getSplits();
+    var splits = response.getInference().getResult().getSplits();
+
+    for (SplitRange split : splits) {
+        // 0-based [startPage, endPage] range
+        var pageRange = split.getPageRange();
+
+        // Document type identified for this split
+        String documentType = split.getDocumentType();
+
+        System.out.println("Document Type: " + documentType);
+        System.out.println(
+            "Page Range: " + pageRange.get(0) + " - " + pageRange.get(1)
+        );
+
+        // Optional extraction response, present if extraction chaining was requested
+        var extractionResponse = split.getExtractionResponse();
+
+        if (extractionResponse != null) {
+            // Access extracted fields from the split's inference result
+            var fields = extractionResponse.getInference().getResult().getFields();
+            System.out.println("Extraction fields: " + fields.toString());
+        }
+    }
 }
 ```
 {% endtab %}
