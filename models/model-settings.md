@@ -47,10 +47,12 @@ You can also us this as way for testing changes to a model. For example you can 
 
 ## Locking the Data Schema
 
-To prevent unintended changes once your data schema is finalized, you have the option to lock it. This ensures that the model remains stable and any modifications are controlled.
+To prevent unintended changes once your model configuration is finalized, you have the option to lock it.
+
+This is useful for ensuring that the model remains stable for production use.
 
 {% hint style="warning" %}
-Locking the Data Schema is an **irreversible action**, you will not be able to unlock it afterwards.
+Locking the Model is an **irreversible action**, you will **not** be able to unlock it afterwards.
 
 **Note**: you can copy a locked model and modify the copy.
 {% endhint %}
@@ -60,5 +62,6 @@ Locking the Data Schema is an **irreversible action**, you will not be able to u
 You can delete a model at any time.
 
 {% hint style="danger" %}
-Deleting a model is an **irreversible action**, you will never be able to recover a deleted model!
+Deleting a model is an **irreversible action**, you will **never** be able to recover a deleted model!
 {% endhint %}
+
