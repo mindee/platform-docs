@@ -27,9 +27,11 @@ Simply go to your Split model's "Utility Configuration" page and adjust as neede
 
 You can add new classes, remove classes, and change Extraction Models.
 
+<figure><img src="../.gitbook/assets/split-created-chaining.png" alt="Configuring extraction model chaining on Split after creation" width="563"><figcaption></figcaption></figure>
+
 ### Selectively Extracting
 
-If no Extraction Model is linked, when the class is detected, no extraction will be performed.&#x20;
+If no Extraction Model is linked, when the class is detected, no extraction will be performed.
 
 This allows selectively extracting some portions of the file while ignoring others.
 
