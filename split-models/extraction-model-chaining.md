@@ -5,7 +5,7 @@ icon: link-horizontal
 
 # Extraction Model Chaining
 
-Use Split to automatically extract document data, meaning that several extractions can be made for a single file.
+Use Split to automatically extract document data, meaning that several different extractions can be made for a single file.
 
 ## Set Up
 
@@ -13,7 +13,7 @@ Use Split to automatically extract document data, meaning that several extractio
 
 When creating your Split model, you'll be adding document classes in the creation window.
 
-For each document class, you can set one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining.
+For each document class, you can set one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Split Model creation.
 
 Use the search field to filter available extraction models.
 
@@ -25,11 +25,11 @@ This works exactly like when creating at model creation.
 
 Simply go to your Split model's "Utility Configuration" page and adjust as needed.
 
-You can add new classes, remove classes, and change extraction models.
+You can add new classes, remove classes, and change Extraction Models.
 
 ### Selectively Extracting
 
-If no extraction model is linked, when the class is detected, no extraction will be performed.&#x20;
+If no Extraction Model is linked, when the class is detected, no extraction will be performed.&#x20;
 
 This allows selectively extracting some portions of the file while ignoring others.
 
