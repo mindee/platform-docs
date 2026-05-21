@@ -31,13 +31,13 @@ You can add new classes, remove classes, and change Extraction Models.
 
 ### Selectively Extracting
 
-If no Extraction Model is linked, when the class is detected, no extraction will be performed.
+If a detected class has no linked Extraction Model, no extraction runs for that crop.
 
-This allows selectively extracting some portions of the file while ignoring others.
+This allows selectively extracting some sections of the file while ignoring others.
 
 Let's say you receive PDFs from your users, where each PDF is a bundle of different documents: plane tickets, travel receipts, driver licenses, and passports.
 
-You need only passports. In your Split configuration, add a "passport" class and an "other"  class, and only link an extraction model to the "passport" class. By only linking to the documents of interest, we ensure only those will get extracted.
+You need only passports. In your Split configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class. By only linking to the documents of interest, we ensure only those will get extracted.
 
 ## Access Extraction Results
 

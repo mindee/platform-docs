@@ -47,6 +47,7 @@
 ## Crop Models
 
 * [Crop Model Overview](crop-models/crop.md)
+* [Extraction Model Chaining](crop-models/extraction-model-chaining.md)
 * [SDK Integration](crop-models/sdk-integration/README.md)
   * [Crop Quick Start](crop-models/sdk-integration/crop-quick-start.md)
   * [Crop Result](crop-models/sdk-integration/crop-result.md)
@@ -54,6 +55,7 @@
 ## Classification Models
 
 * [Classification Model Overview](classification-models/classification.md)
+* [Extraction Model Chaining](classification-models/extraction-model-chaining.md)
 * [SDK Integration](classification-models/sdk-integration/README.md)
   * [Classification Quick Start](classification-models/sdk-integration/classification-quick-start.md)
   * [Classification Result](classification-models/sdk-integration/classification-result.md)
