@@ -33,11 +33,15 @@ If a detected class has no linked Extraction Model, no extraction runs for that 
 
 This allows selectively extracting some parts while ignoring others.
 
-For example, a single image may contain receipts, loyalty cards, and handwritten notes.
+Let's say your users upload images of their trip documents on their hotel table, typically but not limited to: plane tickets, travel receipts, driver license, and passport.
 
-If you only need receipts, link an Extraction Model only to the `receipt` class.
+You need only the passports.
 
-Mindee will still detect the other crop items, but it will only extract the linked ones.
+In your Crop configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class.
+
+All crop items will get classified, but only those linked to an Extraction Model will have extraction results.
+
+{% include "../.gitbook/includes/use-other-classes.md" %}
 
 ## Access Extraction Results
 

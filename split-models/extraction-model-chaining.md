@@ -35,9 +35,15 @@ If a detected class has no linked Extraction Model, no extraction runs for that 
 
 This allows selectively extracting some sections of the file while ignoring others.
 
-Let's say you receive PDFs from your users, where each PDF is a bundle of different documents: plane tickets, travel receipts, driver licenses, and passports.
+Let's say you receive large multi-page PDFs from your users, where each PDF is a bundle of different scanned documents: plane tickets, travel receipts, driver license, and passport.
 
-You need only passports. In your Split configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class. By only linking to the documents of interest, we ensure only those will get extracted.
+You need only the passports.
+
+In your Split configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class.
+
+All split ranges will get classified, but only those linked to an Extraction Model will have extraction results.
+
+{% include "../.gitbook/includes/use-other-classes.md" %}
 
 ## Access Extraction Results
 

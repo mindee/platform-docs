@@ -33,11 +33,13 @@ If a detected class has no linked Extraction Model, no extraction runs for that 
 
 This allows selectively extracting some files while ignoring others.
 
-Let's say you receive mixed file types from your users: plane tickets, travel receipts, driver licenses, and passports.
+Let's say you receive mixed file types from your users, typically but not limited to: plane tickets, travel receipts, driver licenses, and passports.
 
-You need only passports. In your Classification configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class. By only linking to the document class of interest, we ensure only those will get extracted.
+You need only passports. In your Classification configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class.
 
-Other files will still get classified, just no extraction will be run.
+All documents will get classified, but only those linked to an Extraction Model will have extraction results.
+
+{% include "../.gitbook/includes/use-other-classes.md" %}
 
 ## Access Extraction Results
 
