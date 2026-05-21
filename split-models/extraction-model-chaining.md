@@ -5,7 +5,7 @@ icon: link-horizontal
 
 # Extraction Model Chaining
 
-Use Split to automatically extract document data, meaning that several different extractions can be made for a multi-page file.
+Use Split ranges to automatically extract document data, allowing for several different extractions on a multi-page file.
 
 Note: Split Models also work on single-page files, in this case the range will always be exactly one page. If you need multiple extraction results on the same page, take a look at [Broken link](/broken/pages/dDgkS7gHL0rVCFqJERsZ "mention") instead.
 
