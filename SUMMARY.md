@@ -39,6 +39,7 @@
 ## Split Models
 
 * [Split Model Overview](split-models/split.md)
+* [Extraction Model Chaining](split-models/extraction-model-chaining.md)
 * [SDK Integration](split-models/sdk-integration/README.md)
   * [Split Quick Start](split-models/sdk-integration/split-quick-start.md)
   * [Split Result](split-models/sdk-integration/split-result.md)

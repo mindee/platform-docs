@@ -30,13 +30,13 @@ They are the fastest and easiest way to call our APIs, and allow our support tea
 For a quick introduction and copy-paste ready code, look in the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
 
 {% hint style="success" %}
-#### Ask for Code Samples
+**Ask for Code Samples**
 
 You can ask for specific code samples from the documentation AI.
 
 Use the "Ask" button at the top of any page, or click below:
 
-<button type="button" class="button primary" data-action="ask" data-query="Write a code sample for my extraction model, ask for my model ID and  language first" data-icon="gitbook-assistant">Ask "Write a code sample for my extraction model, ask for my model ID and  language first"</button>
+<button type="button" class="button primary" data-action="ask" data-query="Write a code sample for my extraction model, ask for my model ID and  language first" data-icon="gitbook-assistant">Ask "Write a code sample for my extraction model, ask for my model ID and language first"</button>
 {% endhint %}
 
 Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby**, **Java**, **.NET** (C#).
