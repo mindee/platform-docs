@@ -13,9 +13,9 @@ This section helps you choose the right starting point and move through the full
 
 Start with the page that matches your next step:
 
-* [Extraction Quick Start](quick-start.md) — install a client library, send a file, and get your first result.
-* [Extraction Configuration](extraction-configuration.md) — set model-specific parameters and optional features.
-* [Extraction Result Fields](extraction-result.md) — access dynamic fields and metadata in the SDK response.
+* [Extraction Quick Start](quick-start.md) ⇒ install a client library, send a file, and get your first result.
+* [Extraction Configuration](extraction-configuration.md) ⇒ set model-specific parameters and optional features.
+* [Extraction Result Fields](extraction-result.md) ⇒ access dynamic fields and metadata in the SDK response.
 
 ### Typical SDK workflow
 
@@ -66,11 +66,4 @@ For better results, make sure your schema design is solid before tuning request-
 
 ### Shared SDK building blocks
 
-Extraction integration builds on the same client library concepts used across all models.
-
-* [Client Libraries / SDKs](../../integrations/client-libraries-sdk/)
-* [Client Configuration](../../integrations/client-libraries-sdk/configure-the-client.md)
-* [Send a File or URL](../../integrations/client-libraries-sdk/send-a-file-or-url.md)
-* [Response Processing](../../integrations/client-libraries-sdk/process-the-response.md)
-* [Webhook Results](../../integrations/webhooks.md)
-* [Error Handling](../../integrations/problem-database.md)
+{% include "../../.gitbook/includes/generic-sdk-integration.md" %}
