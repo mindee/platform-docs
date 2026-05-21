@@ -5,9 +5,9 @@ icon: link-horizontal
 
 # Extraction Model Chaining
 
-Use Crop to automatically extract data from detected objects.
+Use Crop to automatically extract document data, meaning that several different extractions can be made for a single image.
 
-Several extractions can be made for the same file.
+Note: Crop Models also work on multi-page files, with potentially multiple crop items for each page. However each crop item is limited to an area on a single page. If you need a single extraction result covering multiple pages, take a look at [Broken link](/broken/pages/DQwnO3TRbgwm3KTlXsd8 "mention") instead.
 
 ## Extraction Set Up
 
@@ -15,7 +15,7 @@ Several extractions can be made for the same file.
 
 When creating your Crop model, you'll be adding document classes in the creation window.
 
-For each document class, you can set one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Split Model creation.
+For each document class, you can link one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Crop Model creation.
 
 Use the search field to filter available extraction models.
 
@@ -23,7 +23,7 @@ Use the search field to filter available extraction models.
 
 This works exactly like when creating at model creation.
 
-Simply go to your Split model's "Utility Configuration" page and adjust as needed.
+Simply go to your Crop Model's "Utility Configuration" page and adjust as needed.
 
 You can add new classes, remove classes, and change Extraction Models.
 

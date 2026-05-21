@@ -1,11 +1,13 @@
 ---
-description: Extract data from split ranges.
+description: Extract data from detected split ranges.
 icon: link-horizontal
 ---
 
 # Extraction Model Chaining
 
-Use Split to automatically extract document data, meaning that several different extractions can be made for a single file.
+Use Split to automatically extract document data, meaning that several different extractions can be made for a multi-page file.
+
+Note: Split Models also work on single-page files, in this case the range will always be exactly one page. If you need multiple extraction results on the same page, take a look at [Broken link](/broken/pages/dDgkS7gHL0rVCFqJERsZ "mention") instead.
 
 ## Extraction Set Up
 
@@ -44,6 +46,10 @@ In your Split configuration, add a `passport` class and an `other`  class, and o
 All split ranges will get classified, but only those linked to an Extraction Model will have extraction results.
 
 {% include "../.gitbook/includes/use-other-classes.md" %}
+
+#### Removing Unused Pages
+
+It's also possible to remove pages that are never used in the Extraction. For example to remove terms and conditions from invoices, set up the classes `terms_and_conditions_page` and `invoice_page` , and only link an Extraction Model to the `invoice_page` class.
 
 ## Access Extraction Results
 

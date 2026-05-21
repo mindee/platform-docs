@@ -5,19 +5,19 @@ icon: link-horizontal
 
 # Extraction Model Chaining
 
-Use Classification to automatically extract data from detected objects.
+Use Classification to automatically extract the correct data from files.
 
-A single extraction can be made for a file, depending on the detected class.
+Note: Classification Models always return a single class regardless of the number of pages or if there are multiple documents on the same page.
 
 ## Extraction Set Up
 
 ### At Model Creation
 
-When creating your Classification model, you'll be adding document classes in the creation window.
+When creating your Classification Model, you'll be adding document classes in the creation window.
 
-For each document class, you can set one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Split Model creation.
+For each document class, you can link one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Classification Model creation.
 
-Use the search field to filter available extraction models.
+Use the search field to filter available Extraction Models.
 
 ### After Model Creation
 
