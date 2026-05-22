@@ -3,15 +3,14 @@ title: code-sample-java-extraction
 ---
 
 <code class="expression">space.vars.VERSIONS_JAVA</code>\
-Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.43.0** or greater.
+Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```java
-import com.mindee.MindeeClientV2;
-import com.mindee.InferenceParameters;
 import com.mindee.input.LocalInputSource;
-import com.mindee.parsing.v2.InferenceResponse;
-import com.mindee.parsing.v2.field.InferenceFields;
+import com.mindee.v2.MindeeClient;
+import com.mindee.v2.product.extraction.params.ExtractionParameters;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import java.io.IOException;
 
 public class SimpleMindeeClientV2 {
@@ -20,14 +19,14 @@ public class SimpleMindeeClientV2 {
       throws IOException, InterruptedException
   {
     String apiKey = "MY_API_KEY";
-    String filePath = "/path/to/the/file.ext";
     String modelId = "MY_MODEL_ID";
+    String filePath = "/path/to/the/file.ext";
 
     // Init a new client
-    MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+    var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    InferenceParameters extractionParams = InferenceParameters
+    var extractionParams = ExtractionParameters
         // ID of the model, required.
         .builder(modelId)
 
@@ -46,11 +45,11 @@ public class SimpleMindeeClientV2 {
         .build();
 
     // Load a file from disk
-    LocalInputSource inputSource = new LocalInputSource(filePath);
+    var inputSource = new LocalInputSource(filePath);
 
     // Send for processing using polling
-    InferenceResponse response = mindeeClient.enqueueAndGetResult(
-        InferenceResponse.class,
+    ExtractionResponse response = mindeeClient.enqueueAndGetResult(
+        ExtractionResponse.class,
         inputSource,
         extractionParams
     );
@@ -59,7 +58,7 @@ public class SimpleMindeeClientV2 {
     System.out.println(response.getInference().toString());
 
     // Access the result fields
-    InferenceFields fields = response.getInference().getResult().getFields();
+    var fields = response.getInference().getResult().getFields();
   }
 }
 ```

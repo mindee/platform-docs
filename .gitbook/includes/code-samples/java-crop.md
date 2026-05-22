@@ -3,14 +3,13 @@ title: code-sample-java-crop
 ---
 
 <code class="expression">space.vars.VERSIONS_JAVA</code>\
-Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.43.0** or greater.
+Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```java
-import com.mindee.MindeeClientV2;
 import com.mindee.input.LocalInputSource;
+import com.mindee.v2.MindeeClient;
 import com.mindee.v2.product.crop.CropResponse;
-import com.mindee.v2.product.crop.CropResult;
 import com.mindee.v2.product.crop.params.CropParameters;
 import java.io.IOException;
 
@@ -20,20 +19,20 @@ public class SimpleMindeeClientV2 {
       throws IOException, InterruptedException
   {
     String apiKey = "MY_API_KEY";
-    String filePath = "/path/to/the/file.ext";
     String modelId = "MY_MODEL_ID";
+    String filePath = "/path/to/the/file.ext";
 
     // Init a new client
-    MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+    var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    CropParameters cropParams = CropParameters
+    var cropParams = CropParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
 
     // Load a file from disk
-    LocalInputSource inputSource = new LocalInputSource(filePath);
+    var inputSource = new LocalInputSource(filePath);
 
     // Send for processing using polling
     CropResponse response = mindeeClient.enqueueAndGetResult(
@@ -46,7 +45,7 @@ public class SimpleMindeeClientV2 {
     System.out.println(response.getInference().toString());
 
     // Access the crop results
-    CropResult result = response.getInference().getResult();
+    var crops = response.getInference().getResult().getCrops();
   }
 }
 ```

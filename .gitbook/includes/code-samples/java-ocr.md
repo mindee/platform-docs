@@ -3,14 +3,13 @@ title: code-sample-java-ocr
 ---
 
 <code class="expression">space.vars.VERSIONS_JAVA</code>\
-Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.43.0** or greater.
+Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```java
-import com.mindee.MindeeClientV2;
 import com.mindee.input.LocalInputSource;
+import com.mindee.v2.MindeeClient;
 import com.mindee.v2.product.ocr.OcrResponse;
-import com.mindee.v2.product.ocr.OcrResult;
 import com.mindee.v2.product.ocr.params.OcrParameters;
 import java.io.IOException;
 
@@ -24,16 +23,16 @@ public class SimpleMindeeClientV2 {
     String modelId = "MY_MODEL_ID";
 
     // Init a new client
-    MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+    var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    OcrParameters ocrParams = OcrParameters
+    var ocrParams = OcrParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
 
     // Load a file from disk
-    LocalInputSource inputSource = new LocalInputSource(filePath);
+    var inputSource = new LocalInputSource(filePath);
 
     // Send for processing using polling
     OcrResponse response = mindeeClient.enqueueAndGetResult(
@@ -46,7 +45,7 @@ public class SimpleMindeeClientV2 {
     System.out.println(response.getInference().toString());
 
     // Access the result OCR pages
-    OcrResult result = response.getInference().getResult();
+    var pages = response.getInference().getResult().getPages();
   }
 }
 ```

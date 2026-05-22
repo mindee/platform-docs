@@ -3,15 +3,13 @@ title: code-sample-java-classification
 ---
 
 <code class="expression">space.vars.VERSIONS_JAVA</code>\
-Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **4.43.0** or greater.
+Requires the [Mindee Java client library](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```java
-import com.mindee.MindeeClientV2;
 import com.mindee.input.LocalInputSource;
-import com.mindee.v2.product.classification.ClassificationClassifier;
+import com.mindee.v2.MindeeClient;
 import com.mindee.v2.product.classification.ClassificationResponse;
-import com.mindee.v2.product.classification.ClassificationResult;
 import com.mindee.v2.product.classification.params.ClassificationParameters;
 import java.io.IOException;
 
@@ -21,21 +19,21 @@ public class SimpleMindeeClientV2 {
       throws IOException, InterruptedException
   {
     String apiKey = "MY_API_KEY";
-    String filePath = "/path/to/the/file.ext";
     String modelId = "MY_MODEL_ID";
+    String filePath = "/path/to/the/file.ext";
 
     // Init a new client
-    MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+    var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
     // Note: modelId is mandatory.
-    ClassificationParameters classificationParams = ClassificationParameters
+    var classificationParams = ClassificationParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
 
     // Load a file from disk
-    LocalInputSource inputSource = new LocalInputSource(filePath);
+    var inputSource = new LocalInputSource(filePath);
 
     // Send for processing using polling
     ClassificationResponse response = mindeeClient.enqueueAndGetResult(
@@ -48,10 +46,9 @@ public class SimpleMindeeClientV2 {
     System.out.println(response.getInference().toString());
 
     // Access the classification result
-    ClassificationResult result = response.getInference().getResult();
-    ClassificationClassifier classification = result.getClassification();
+    var result = response.getInference().getResult();
+    String documentType = result.getClassification().getDocumentType();
   }
 }
-
 ```
 {% endcode %}
