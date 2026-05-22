@@ -12,6 +12,10 @@ description: API reference for manually integrating Classification models.
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
 
-{% openapi-schemas spec="mindee-api" schemas="ClassificationResponse" grouped="true" %}
+{% openapi-schemas spec="mindee-api" schemas="ClassificationResponse-Output" grouped="true" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-schemas %}
+
+{% openapi-webhook spec="mindee-api" name="classification-utility-processed" method="post" %}
+[OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
+{% endopenapi-webhook %}

@@ -16,6 +16,10 @@ description: API reference for manually integrating OCR models.
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
 
-{% openapi-schemas spec="mindee-api" schemas="OCRResponse" grouped="true" %}
+{% openapi-schemas spec="mindee-api" schemas="OCRResponse-Output" grouped="true" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-schemas %}
+
+{% openapi-webhook spec="mindee-api" name="ocr-utility-processed" method="post" %}
+[OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
+{% endopenapi-webhook %}
