@@ -31,7 +31,7 @@ Prepare your API key and initialize the client.
 {% step %}
 #### Send a document
 
-Choose your model ID and send a file or URL for processing.
+Set the Classification model's ID and send a file or URL for processing.
 
 Start with polling unless you already use webhooks.
 {% endstep %}
@@ -50,7 +50,7 @@ Use the returned document type to route the document in your workflow.
 Have these ready:
 
 * an API key
-* your model ID
+* the Classification model's unique ID
 * a sample document for testing
 * a language choice for the SDK
 

@@ -31,7 +31,7 @@ Prepare your API key and initialize the client.
 {% step %}
 #### Send a file
 
-Choose your model ID and send a file or URL for processing.
+Set the Crop model's ID and send a file or URL for processing.
 
 Start with polling unless you already use webhooks.
 {% endstep %}
@@ -50,7 +50,7 @@ Use each item's object type, page, and polygon in your workflow.
 Have these ready:
 
 * an API key
-* your model ID
+* the Crop model's unique ID
 * a sample file for testing
 * a language choice for the SDK
 
