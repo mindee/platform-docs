@@ -20,9 +20,9 @@ If you're not sure on what to use, choose this flow.
 ```mermaid
 sequenceDiagram
     participant client as Client
-    participant enqueue as /inferences/enqueue
+    participant enqueue as .../enqueue
     participant job as /jobs
-    participant inference as /inferences
+    participant results as .../results
     client->>enqueue: POST file
     enqueue->>client: HTTP 202
     client->>client: wait 3 seconds
@@ -33,10 +33,14 @@ sequenceDiagram
       client->>job: GET job.id
       job->>client: Processed - HTTP 302
     end
-    client->>inference: GET inference.id
-    inference->>client: HTTP 200
+    client->>results: GET job.result_url
+    results->>client: HTTP 200
     client->>client: process JSON result
 ```
+
+### Remarks
+
+Once a request has been sent, it is not possible to stop or cancel the processing.
 
 ## Specify on File Upload
 

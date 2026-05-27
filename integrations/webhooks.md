@@ -30,7 +30,7 @@ The URL must be public-facing and secured (TLS).
 sequenceDiagram
     participant clientsrv as My Web Server
     participant client as My Client
-    participant enqueue as inference/enqueue
+    participant enqueue as .../enqueue
     participant srv as Mindee Server
     client->>enqueue: POST file
     enqueue->>client: HTTP 202
@@ -40,6 +40,10 @@ sequenceDiagram
     srv->>-clientsrv: POST results
     clientsrv->>clientsrv: process JSON result
 ```
+
+### Remarks
+
+Once a request has been sent, it is not possible to stop or cancel the processing.
 
 ## Platform Set Up
 
