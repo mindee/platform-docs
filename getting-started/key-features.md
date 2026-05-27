@@ -17,8 +17,8 @@ Learn more at [live-test.md](../models/live-test.md "mention").
 
 ## Extraction Model Catalog
 
-Choose from our catalog models with predefined fields for data extraction.\
-You can modify them as needed, just like our custom models.
+Choose from our model templates with predefined fields for data extraction.\
+You can modify models created from templates as needed, just like custom models.
 
 Some popular use cases include:
 
