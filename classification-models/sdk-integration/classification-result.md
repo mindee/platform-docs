@@ -68,8 +68,21 @@ end
 ```java
 import com.mindee.v2.product.classification.ClassificationResponse;
 
-public void handleResponse(SplitResponse response) {
+public void handleResponse(ClassificationResponse response) {
   var classification = response.getInference().getResult().getClassification();
+  
+  // Document type identified for this file
+  String documentType = crop.getDocumentType();
+  System.out.println("Detected type: " + documentType);
+
+  // Optional extraction response, present if extraction chaining was requested
+  var extractionResponse = crop.getExtractionResponse();
+
+  if (extractionResponse != null) {
+    // Access extracted fields from the split's inference result
+    var fields = extractionResponse.getInference().getResult().getFields();
+    System.out.println("Extraction fields: " + fields.toString());
+  }
 }
 ```
 {% endtab %}

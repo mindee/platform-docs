@@ -66,8 +66,8 @@ handleResponse(response) {
     // Document type identified for this split
     const documentType = split.documentType;
 
-    console.log(`Document Type: ${documentType}`);
-    console.log(`Page Range: ${pageRange[0]} - ${pageRange[1]}`);
+    console.log(`Detected type: ${documentType}`);
+    console.log(`On pages: ${pageRange[0]} - ${pageRange[1]}`);
     
     // Optional extraction response, present if extraction chaining was requested
     const extractionResponse = split.extractionResponse;
@@ -97,8 +97,8 @@ public function handleResponse(SplitResponse $response)
         // Document type identified for this split
         $documentType = $split->documentType;
 
-        echo "Document Type: $documentType\n";
-        echo "Page Range: {$pageRange[0]} - {$pageRange[1]}\n";
+        echo "Detected type: $documentType\n";
+        echo "On pages: {$pageRange[0]} - {$pageRange[1]}\n";
 
         // Optional extraction response, present if extraction chaining was requested
         $extractionResponse = $split->extractionResponse;
@@ -125,8 +125,8 @@ def handle_response(response)
     # Document type identified for this split
     document_type = split.document_type
 
-    puts "Document Type: #{document_type}"
-    puts "Page Range: #{page_range[0]} - #{page_range[1]}"
+    puts "Detected type: #{document_type}"
+    puts "On pages: #{page_range[0]} - #{page_range[1]}"
 
     # Optional extraction response, present if extraction chaining was requested
     extraction_response = split.extraction_response
@@ -146,40 +146,58 @@ import com.mindee.v2.product.split.SplitResponse;
 import com.mindee.v2.product.split.SplitRange;
 
 public void handleResponse(SplitResponse response) {
-    var splits = response.getInference().getResult().getSplits();
+  var splits = response.getInference().getResult().getSplits();
 
-    for (SplitRange split : splits) {
-        // 0-based [startPage, endPage] range
-        var pageRange = split.getPageRange();
+  for (SplitRange split : splits) {
+    // 0-based [startPage, endPage] range
+    var pageRange = split.getPageRange();
 
-        // Document type identified for this split
-        String documentType = split.getDocumentType();
+    // Document type identified for this split
+    String documentType = split.getDocumentType();
 
-        System.out.println("Document Type: " + documentType);
-        System.out.println(
-            "Page Range: " + pageRange.get(0) + " - " + pageRange.get(1)
-        );
+    System.out.println("Detected type: " + documentType);
+    System.out.println(
+      "On pages: " + pageRange.get(0) + " - " + pageRange.get(1)
+    );
 
-        // Optional extraction response, present if extraction chaining was requested
-        var extractionResponse = split.getExtractionResponse();
+    // Optional extraction response, present if extraction chaining was requested
+    var extractionResponse = split.getExtractionResponse();
 
-        if (extractionResponse != null) {
-            // Access extracted fields from the split's inference result
-            var fields = extractionResponse.getInference().getResult().getFields();
-            System.out.println("Extraction fields: " + fields.toString());
-        }
+    if (extractionResponse != null) {
+      // Access extracted fields from the split's inference result
+      var fields = extractionResponse.getInference().getResult().getFields();
+      System.out.println("Extraction fields: " + fields.toString());
     }
+  }
 }
 ```
 {% endtab %}
 
 {% tab title=".NET" %}
 ```csharp
+using System;
 using Mindee.V2.Product.Split;
 
 public void HandleResponse(SplitResponse response)
 {
     var splits = response.Inference.Result.Splits;
+
+    foreach (SplitRange split in splits)
+    {
+        var pageRange = split.PageRange;
+        string documentType = split.DocumentType;
+
+        Console.WriteLine($"Detected type: {documentType}");
+        Console.WriteLine($"On pages: {pageRange[0]} - {pageRange[1]}");
+
+        var extractionResponse = split.ExtractionResponse;
+
+        if (extractionResponse != null)
+        {
+            var fields = extractionResponse.Inference.Result.Fields;
+            Console.WriteLine($"Extraction fields: {fields}");
+        }
+    }
 }
 ```
 {% endtab %}
