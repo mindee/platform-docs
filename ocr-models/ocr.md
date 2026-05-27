@@ -10,7 +10,8 @@ A file sent to the OCR Model may have any number of pages, [within limits](../in
 ## Create an OCR Model
 
 1. To create a OCR utility, click on **Models**, and then click on **Create your document AI model**.
-2. Scroll to the **Document Utilities** section, click on **OCR.**
+2. Scroll to the **Document Utilities** section, click on **OCR.**\
+   This step will also generate the model's unique ID.
 3. You can now use the **Live Test** tab to process documents.<br>
 
 Your OCR utility is now available in your **Models** tab:

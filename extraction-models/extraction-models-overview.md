@@ -44,9 +44,10 @@ You'll likely need to add and/or modify fields to fit your needs and business ca
 ### Create a Custom Model <a href="#creating-from-scratch" id="creating-from-scratch"></a>
 
 If none of the catalog models fit your needs, you can start from scratch.\
-When creating a new Model, click on **"Custom document".**
+When creating a new Model, click on **"Custom document".**\
+This step will also generate the model's unique ID.
 
-A dialog box will give you the opportunity to explain your need. You should explain precisely the document you want to process, and discuss the fields to be extracted. Our AI Agent will help you quickly define an initial data schema that you'll be able to adjust later.
+A dialog box will give you the opportunity to explain your need. You should explain precisely the document you want to process, and discuss the fields to be extracted. Our AI Agent will help you to quickly define an initial data schema that you'll be able to adjust later.
 
 {% hint style="info" icon="lightbulb" %}
 **We recommend creating an initial model quickly.**

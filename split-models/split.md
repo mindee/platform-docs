@@ -27,13 +27,14 @@ A file sent to the Split Model may have any number of pages, [within limits](../
 2. Scroll to the **Document Utilities** section, click on **Split.**
 3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a document type possibly present in the documents you want to process.\
    \
-   For example, if the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVING LICENSE`.
+   For example, if the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICE`, `RECEIPT`, `DRIVER_LICENSE`.
 
 {% include "../.gitbook/includes/utilities-other-class.md" %}
 
 <figure><img src="../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
-4. Once ready, click on **Create Utility** to create your custom Split Utility.
+4. Once ready, click on **Create Utility** to create your custom Split Model.\
+   This step will also generate the model's unique ID.
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>
 
 Your utility is now available in your **Models** tab:

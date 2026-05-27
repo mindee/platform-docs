@@ -31,13 +31,15 @@ If there is a high possibility of having multiple documents within the same file
 2. Scroll to the **Document Utilities** section, click on **Classify.**
 3. A pop-up will appear, allowing you to enter the classes you want. Most of the time, you'll use one possible document type per class.\
    \
-   For example, f the files you are processing contain invoices, receipts, and driving licenses, set the classes as: `INVOICES`, `IDENTITY DOCUMENTS`, `CONTRACTS`.
+   For example, if the files you are processing contain invoices, receipts, and driving licenses, set the classes as:\
+   `INVOICES`, `IDENTITY DOCUMENTS`, `CONTRACTS`.
 
 {% include "../.gitbook/includes/utilities-other-class.md" %}
 
 <figure><img src="../.gitbook/assets/image (10).png" alt="" width="375"><figcaption></figcaption></figure>
 
-4. Once ready, click on **Create Utility** to create your custom Classify Utility.
+4. Once ready, click on **Create Utility** to create your custom Classify Model.\
+   This step will also generate the model's unique ID.
 5. You can now use the **Live Test** tab to process documents, and the **Utility Configuration** to update your classes.<br>
 
 Your utility is now available in your **Models** tab.
