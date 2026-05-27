@@ -165,7 +165,7 @@ inference_params = {
 When polling you really only need to set the `modelId` .
 
 ```java
-InferenceParameters params = InferenceParameters
+var params = ExtractionParameters
         .builder("MY_MODEL_ID")
         .build();
 ```
@@ -174,25 +174,17 @@ You can also set the various polling parameters.\
 However, **we do not recommend** setting this option unless you are encountering timeout problems.
 
 ```java
-InferenceParameters params = InferenceParameters
-    // ID of the model, required.
-    .builder("MY_MODEL_ID")
-        
-    // Set only if having timeout issues.
-    .pollingOptions(
-        AsyncPollingOptions.builder()
-            // Initial delay before the first polling attempt.
-            .initialDelaySec(3.0)
-            // Delay between each polling attempt.
-            .intervalSec(1.5)
-            // Total number of polling attempts.
-            .maxRetries(80)
-            // complete the polling builder
-            .build()
-        )
+import com.mindee.v2.clientoptions.PollingOptions;
 
-    // ... any other options ...
-
+var pollingOptions = PollingOptions
+    .builder()
+    // Initial delay before the first polling attempt.
+    .initialDelaySec(3.0)
+    // Delay between each polling attempt.
+    .intervalSec(1.5)
+    // Total number of polling attempts.
+    .maxRetries(80)
+    // complete the polling builder
     .build();
 ```
 {% endtab %}
@@ -252,6 +244,7 @@ Use the `enqueueAndGetResult` method:
 
 ```typescript
 const response = mindeeClient.enqueueAndGetResult(
+  // Use the appropriate product class
   mindee.product.Extraction,
   inputSource,
   inferenceParams,
@@ -292,6 +285,7 @@ Use the `enqueue_and_get_result` method.
 
 ```ruby
 response = mindee_client.enqueue_and_get_result(
+  # Use the appropriate product class
   Mindee::V2::Product::Extraction::Extraction,
   input_source,
   inference_params
@@ -309,8 +303,13 @@ The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md
 Use the `enqueueAndGetInference` method:
 
 ```java
-InferenceResponse response = mindeeClient.enqueueAndGetInference(
-    inputSource, inferenceParams
+InferenceResponse response = mindeeClient.enqueueAndGetResult(
+    // Use the appropriate product class
+    ExtractionResponse.class,
+    inputSource,
+    params
+    // optional, set only if having timeout issues.
+    // pollingOptions
 );
 
 // To easily test which data were extracted,
