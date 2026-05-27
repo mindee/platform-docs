@@ -2,7 +2,7 @@
 title: sample-code-ruby-extraction
 ---
 
-<code class="expression">space.vars.VERSIONS_RUBY</code>\
+Requires Ruby ≥ 3.2.\
 Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version &#x35;**.1.0** or greater.
 
 {% code lineNumbers="true" %}

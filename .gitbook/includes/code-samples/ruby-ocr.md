@@ -2,7 +2,7 @@
 title: sample-code-ruby-ocr
 ---
 
-<code class="expression">space.vars.VERSIONS_RUBY</code>\
+Requires Ruby ≥ 3.2.\
 Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version **5.1.0** or greater.
 
 {% code lineNumbers="true" %}

@@ -2,7 +2,7 @@
 title: sample-code-php-extraction
 ---
 
-<code class="expression">space.vars.VERSIONS_PHP</code>\
+Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.\
 Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **2.7.1** or greater.
 
 {% code lineNumbers="true" %}

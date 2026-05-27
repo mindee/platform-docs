@@ -4,7 +4,7 @@ title: Installation Instructions
 
 {% tabs %}
 {% tab title="Python" %}
-<code class="expression">space.vars.VERSIONS_PYTHON</code>
+Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.
 
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
@@ -14,7 +14,7 @@ pip install -U mindee~=4.35
 {% endtab %}
 
 {% tab title="Node.js" %}
-<code class="expression">space.vars.VERSIONS_NODE</code>
+Requires Node.js ≥ 20.1. Node.js ≥ 22 is recommended.
 
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
@@ -24,7 +24,7 @@ npm install mindee@^5.1.1
 {% endtab %}
 
 {% tab title="PHP" %}
-<code class="expression">space.vars.VERSIONS_PHP</code>
+Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.
 
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
@@ -34,7 +34,7 @@ php composer.phar require "mindee/mindee:>=2.7"
 {% endtab %}
 
 {% tab title="Ruby" %}
-<code class="expression">space.vars.VERSIONS_RUBY</code>
+Requires Ruby ≥ 3.2.
 
 Simply install the [gem](https://rubygems.org/gems/mindee) using:
 
@@ -44,7 +44,7 @@ gem install mindee -v '~> 5.1'
 {% endtab %}
 
 {% tab title="Java" %}
-<code class="expression">space.vars.VERSIONS_JAVA</code>
+Requires Java ≥ 11. Java ≥ 17 is recommended.
 
 Group ID: `com.mindee.sdk`\
 Artifact ID: `mindee-api-java`\
@@ -56,7 +56,7 @@ There are various installation methods, Maven, Gradle, etc:
 {% endtab %}
 
 {% tab title=".NET" %}
-<code class="expression">space.vars.VERSIONS_NET</code>
+.NET ≥ 8.0 is recommended.
 
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using .NET CLI:
 

@@ -2,7 +2,7 @@
 title: code-sample-dotnet-webhook
 ---
 
-<code class="expression">space.vars.VERSIONS_NET</code>\
+.NET ≥ 8.0 is recommended.\
 Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee) version **3.34** or greater.
 
 {% code lineNumbers="true" %}
