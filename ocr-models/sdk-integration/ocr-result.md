@@ -76,6 +76,24 @@ public function handleResponse(OcrResponse $response)
 ```ruby
 def handle_response(response)
   pages = response.inference.result.pages
+
+  pages.each do |page|
+    # Page-level properties
+    page_content = page.content
+    words = page.words
+
+    # Access the full text content extracted from this page.
+    puts "Page content: #{page_content}"
+
+    # Access all words detected on this page.
+    words.each do |word|
+      word_content = word.content
+      word_polygon = word.polygon
+
+      puts "Word: #{word_content}"
+      puts "Polygon: #{word_polygon}"
+    end
+  end
 end
 ```
 {% endtab %}

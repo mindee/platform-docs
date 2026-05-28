@@ -127,6 +127,33 @@ public function handleResponse(CropResponse $response)
 ```ruby
 def handle_response(response)
   crops = response.inference.result.crops
+
+  crops.each do |crop|
+    # Object type identified for this crop
+    object_type = crop.object_type
+    puts "Detected type: #{object_type}"
+
+    # Location of the crop
+    location = crop.location
+
+    # 0-based page index
+    page = location.page
+
+    # Polygon object, which includes some useful methods
+    polygon = location.polygon
+    center = polygon.centroid
+
+    puts "On page #{page}, with center at #{center}"
+
+    # Optional extraction response, present if extraction chaining was requested
+    extraction_response = crop.extraction_response
+
+    unless extraction_response.nil?
+      # Access extracted fields from the split's inference result
+      fields = extraction_response.inference.result.fields
+      puts "Extraction fields: #{fields}"
+    end
+  end
 end
 ```
 {% endtab %}

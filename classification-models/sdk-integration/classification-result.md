@@ -85,6 +85,19 @@ public function handleResponse(SplitResponse $response)
 ```ruby
 def handle_response(response)
   classification = response.inference.result.classification
+
+  # Document type identified for this file
+  document_type = classification.document_type
+  puts "Detected type: #{document_type}"
+
+  # Optional extraction response, present if extraction chaining was requested
+  extraction_response = classification.extraction_response
+
+  unless extraction_response.nil?
+    # Access extracted fields from the split's inference result
+    fields = extraction_response.inference.result.fields
+    puts "Extraction fields: #{fields}"
+  end
 end
 ```
 {% endtab %}
