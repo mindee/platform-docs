@@ -33,8 +33,24 @@ Each word has the following properties:
 ```python
 from mindee import OCRResponse
 
-def handle_response(response: OCRResponse):
+def handle_response(response: OCRResponse) -> None:
     pages = response.inference.result.pages
+
+    for page in pages:
+        # Page-level properties
+        page_content = page.content
+        words = page.words
+
+        # Access the full text content extracted from this page.
+        print(f"Page content: {page_content}")
+
+        # Access all words detected on this page.
+        for word in words:
+            word_content = word.content
+            word_polygon = word.polygon
+
+            print(f"Word: {word_content}")
+            print(f"Polygon: {word_polygon}")
 ```
 {% endtab %}
 
