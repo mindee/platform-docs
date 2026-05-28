@@ -43,7 +43,7 @@ The client library will POST the request for you, and then automatically poll th
 When polling you really only need to set the `model_id` .
 
 ```python
-inference_params = InferenceParameters(model_id="MY_MODEL_ID")
+model_params = InferenceParameters(model_id="MY_MODEL_ID")
 ```
 
 You can also set the various polling parameters.\
@@ -78,7 +78,7 @@ inference_params = InferenceParameters(
 When polling you really only need to set the `modelId` .
 
 ```typescript
-const productParams = {modelId: "MY_MODEL_ID"};
+const modelParams = {modelId: "MY_MODEL_ID"};
 ```
 
 You can also set the various polling parameters.\
@@ -110,7 +110,7 @@ However, **we do not recommend** setting this option unless you are encountering
 ```php
 use Mindee\Input\PollingOptions;
 
-$inferenceParams = new InferenceParameters(
+$modelParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID",
     
@@ -133,39 +133,30 @@ $inferenceParams = new InferenceParameters(
 When polling you really only need to set the `model_id` .
 
 ```ruby
-inference_params = { model_id: "MY_MODEL_ID" }
+model_params = { model_id: "MY_MODEL_ID" }
 ```
 
 You can also set the various polling parameters.\
 However, **we do not recommend** setting this option unless you are encountering timeout problems.
 
 ```ruby
-require 'mindee'
-
-inference_params = {
-  # ID of the model, required.
-  model_id: 'MY_MODEL_ID',
-
-  # Set only if having timeout issues.
-  polling_options: Mindee::Input::PollingOptions.new(
-    # Initial delay before the first polling attempt.
-    initial_delay_sec: 3,
-    # Delay between each polling attempt.
-    delay_sec: 1.5,
-    # Total number of polling attempts.
-    max_retries: 80,
-  ),
-
-  # ... any other options ...
+# Set only if having timeout issues.
+polling_options = {
+  # Initial delay before the first polling attempt.
+  initial_delay_sec: 3,
+  # Delay between each polling attempt.
+  delay_sec: 1.5,
+  # Total number of polling attempts.
+  max_retries: 80,
 }
 ```
 {% endtab %}
 
 {% tab title="Java" %}
-When polling you really only need to set the `modelId` .
+When polling you really only need to set the `modelId` .&#x20;
 
 ```java
-var params = ExtractionParameters
+var modelParams = ExtractionParameters
         .builder("MY_MODEL_ID")
         .build();
 ```
@@ -193,7 +184,7 @@ var pollingOptions = PollingOptions
 When polling you really only need to set the `modelId` .
 
 ```csharp
-var inferenceParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
+var modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
 ```
 
 You can also set the various polling parameters.\
@@ -228,7 +219,7 @@ Use the `enqueue_and_get_result` method.
 response = mindee_client.enqueue_and_get_result(
     InferenceResponse,
     input_source,
-    params,
+    model_params,
 )
 
 # To easily test which data were extracted,
@@ -247,7 +238,7 @@ const response = mindeeClient.enqueueAndGetResult(
   // Use the appropriate product class
   mindee.product.Extraction,
   inputSource,
-  inferenceParams,
+  modelParams,
   // optional, set only if having timeout issues.
   // pollingOptions,
 );
@@ -269,7 +260,7 @@ Use the `enqueueAndGetInference` method:
 ```php
 $response = $mindeeClient->enqueueAndGetInference(
     $inputSource,
-    $inferenceParams
+    $modelParams
 );
 
 // To easily test which data were extracted,
@@ -288,7 +279,9 @@ response = mindee_client.enqueue_and_get_result(
   # Use the appropriate product class
   Mindee::V2::Product::Extraction::Extraction,
   input_source,
-  inference_params
+  model_params,
+  # optional, set only if having timeout issues.
+  # polling_options,
 )
 
 # To easily test which data were extracted,
@@ -307,7 +300,7 @@ InferenceResponse response = mindeeClient.enqueueAndGetResult(
     // Use the appropriate product class
     ExtractionResponse.class,
     inputSource,
-    params
+    modelParams
     // optional, set only if having timeout issues.
     // pollingOptions
 );
@@ -326,7 +319,7 @@ Use the `EnqueueAndGetResultAsync` method:
 ```csharp
 var response = await mindeeClient.EnqueueAndGetResultAsync(
     inputSource
-    , inferenceParams
+    , modelParams
     // optional, set only if having timeout issues.
     //, pollingOptions
 );
@@ -355,7 +348,7 @@ When using a webhook, you'll need to set the model ID and the webhook ID(s) to u
 {% tabs %}
 {% tab title="Python" %}
 ```python
-inference_params = InferenceParameters(
+model_params = InferenceParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     
@@ -369,7 +362,7 @@ inference_params = InferenceParameters(
 
 {% tab title="Node.js" %}
 ```typescript
-const productParams = {
+const modelParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
 
@@ -383,7 +376,7 @@ const productParams = {
 
 {% tab title="PHP" %}
 ```php
-$inferenceParams = new InferenceParameters(
+$modelParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID",
     
@@ -398,7 +391,7 @@ $inferenceParams = new InferenceParameters(
 
 {% tab title="Ruby" %}
 ```ruby
-inference_params = {
+model_params = {
   # ID of the model, required.
   model_id: 'MY_MODEL_ID',
 
@@ -412,7 +405,7 @@ inference_params = {
 
 {% tab title="Java" %}
 ```java
-InferenceParameters params = InferenceParameters
+var modelParams = InferenceParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
     
@@ -427,7 +420,7 @@ InferenceParameters params = InferenceParameters
 
 {% tab title=".NET" %}
 ```csharp
-var inferenceParams = new InferenceParameters(
+var modelParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
     
@@ -452,7 +445,7 @@ Use the `enqueue_inference` method:
 
 ```python
 response = mindee_client.enqueue_inference(
-    input_source, inference_params
+    input_source, model_params
 )
 
 # You should save the job ID for your records/debugging
@@ -478,7 +471,7 @@ Use the `enqueue` method:
 const response = await mindeeClient.enqueue(
   mindee.product.Extraction,
   inputSource,
-  productParams
+  modelParams
 );
 
 // You should save the job ID for your records/debugging
@@ -503,7 +496,7 @@ Use the `enqueueInference` method:
 ```php
 $response = $mindeeClient->enqueueInference(
     $inputSource,
-    $inferenceParams
+    $modelParams
 );
 
 // You should save the job ID for your records/debugging
@@ -528,7 +521,8 @@ Use the `enqueue` method:
 ```ruby
 response = mindee_client.enqueue(
     Mindee::V2::Product::Extraction::Extraction,
-    input_source, inference_params
+    input_source,
+    model_params,
 )
 
 # You should save the job ID for your records/debugging
@@ -552,7 +546,7 @@ Use the `enqueueInference` method:
 
 ```java
 JobResponse response = mindeeClient.enqueueInference(
-    inputSource, inferenceParams
+    inputSource, modelParams
 );
 
 // You should save the job ID for your records/debugging
@@ -576,7 +570,7 @@ Use `EnqueueInferenceAsync` method:
 
 ```csharp
 var response = mindeeClient.EnqueueInferenceAsync(
-    inputSource, inferenceParams
+    inputSource, modelParams
 );
 
 // You should save the job ID for your records/debugging
