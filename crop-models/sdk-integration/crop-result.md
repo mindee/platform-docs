@@ -79,8 +79,35 @@ def handle_response(response: CropResponse) -> None:
 
 {% tab title="Node.js" %}
 ```javascript
-handleResponse(response) {
+function handleResponse(response): void {
   const crops = response.inference.result.crops;
+
+  for (const crop of crops) {
+    // Object type identified for this crop
+    const objectType = crop.objectType;
+    console.log(`Detected type: ${objectType}`);
+
+    // Location of the crop
+    const location = crop.location;
+
+    // 0-based page index
+    const page = location.page;
+
+    // Polygon object, which includes some useful methods
+    const polygon = location.polygon;
+    const center = polygon.getCentroid();
+
+    console.log(`On page ${page}, with center at ${center}`);
+
+    // Optional extraction response, present if extraction chaining was requested
+    const extractionResponse = crop.extractionResponse;
+
+    if (extractionResponse !== undefined) {
+      // Access extracted fields from the crop's inference result
+      const fields = extractionResponse.inference.result.fields;
+      console.log(`Extraction fields: ${fields}`);
+    }
+  }
 }
 ```
 {% endtab %}

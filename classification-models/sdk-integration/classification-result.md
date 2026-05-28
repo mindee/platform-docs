@@ -51,8 +51,21 @@ def handle_response(response: ClassificationResponse) -> None:
 
 {% tab title="Node.js" %}
 ```javascript
-handleResponse(response) {
-  const classification = response.inference.result.classification;
+function handleResponse(response) {
+  const classification = response.getInference().getResult().getClassification();
+
+  // Document type identified for this file
+  const documentType = classification.getDocumentType();
+  console.log(`Detected type: ${documentType}`);
+
+  // Optional extraction response, present if extraction chaining was requested
+  const extractionResponse = classification.getExtractionResponse();
+
+  if (extractionResponse != null) {
+    // Access extracted fields from the split's inference result
+    const fields = extractionResponse.getInference().getResult().getFields();
+    console.log(`Extraction fields: ${fields.toString()}`);
+  }
 }
 ```
 {% endtab %}
