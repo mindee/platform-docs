@@ -23,7 +23,7 @@ Start with the page that matches your next step:
 {% step %}
 #### Create Your Model
 
-Create your Crop Model on the Mindee platform.
+[Create your Crop Model](../crop.md#create-a-crop-model) on the Mindee platform.
 
 Upload some samples to the [live-test.md](../../models/live-test.md "mention") to validate the model.
 {% endstep %}

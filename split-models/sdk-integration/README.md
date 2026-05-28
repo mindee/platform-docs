@@ -23,7 +23,7 @@ Start with the page that matches your next step:
 {% step %}
 #### Create Your Model
 
-Create your Classification Model on the Mindee platform.
+[Create your Split Model](../split.md#create-a-split-model) on the Mindee platform.
 
 Upload some samples to the [live-test.md](../../models/live-test.md "mention") to validate the model.
 {% endstep %}
