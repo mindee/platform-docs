@@ -32,8 +32,20 @@ Optional extraction response associated with the split. This is only filled if e
 ```python
 from mindee import ClassificationResponse
 
-def handle_response(response: ClassificationResponse):
-    classifier = response.inference.result.classification
+def handle_response(response: ClassificationResponse) -> None:
+    classification = response.inference.result.classification
+
+    # Document type identified for this file
+    document_type: str = classification.document_type
+    print(f"Detected type: {document_type}")
+
+    # Optional extraction response, present if extraction chaining was requested
+    extraction_response = classification.extraction_response
+
+    if extraction_response is not None:
+        # Access extracted fields from the inference result
+        fields = extraction_response.inference.result.fields
+        print(f"Extraction fields: {fields}")
 ```
 {% endtab %}
 
@@ -72,11 +84,11 @@ public void handleResponse(ClassificationResponse response) {
   var classification = response.getInference().getResult().getClassification();
   
   // Document type identified for this file
-  String documentType = crop.getDocumentType();
+  String documentType = classification.getDocumentType();
   System.out.println("Detected type: " + documentType);
 
   // Optional extraction response, present if extraction chaining was requested
-  var extractionResponse = crop.getExtractionResponse();
+  var extractionResponse = classification.getExtractionResponse();
 
   if (extractionResponse != null) {
     // Access extracted fields from the split's inference result

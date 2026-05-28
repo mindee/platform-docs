@@ -9,7 +9,7 @@ Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
 
 ```sh
-pip install -U mindee~=4.35
+pip install -U mindee~=4.36
 ```
 {% endtab %}
 

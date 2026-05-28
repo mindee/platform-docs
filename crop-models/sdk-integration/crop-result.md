@@ -47,8 +47,33 @@ You'll usually want to iterate over all crop items, since the number of items is
 ```python
 from mindee import CropResponse
 
-def handle_response(response: CropResponse):
+def handle_response(response: CropResponse) -> None:
     crops = response.inference.result.crops
+
+    for crop in crops:
+        # Object type identified for this crop
+        object_type = crop.object_type
+        print(f"Detected type: {object_type}")
+
+        # Location of the crop
+        location = crop.location
+
+        # 0-based page index
+        page = location.page
+
+        # Polygon object, which includes some useful methods
+        polygon = location.polygon
+        center = polygon.centroid
+
+        print(f"On page {page}, with center at {center}")
+
+        # Optional extraction response, present if extraction chaining was requested
+        extraction_response = crop.extraction_response
+
+        if extraction_response is not None:
+            # Access extracted fields from the crop's inference result
+            fields = extraction_response.inference.result.fields
+            print(f"Extraction fields: {fields}")
 ```
 {% endtab %}
 
