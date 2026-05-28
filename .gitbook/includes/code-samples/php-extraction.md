@@ -21,7 +21,7 @@ $modelId = "MY_MODEL_ID";
 $mindeeClient = new ClientV2($apiKey);
 
 // Set inference parameters
-$inferenceParams = new InferenceParameters(
+$modelParams = new InferenceParameters(
     // ID of the model, required.
     $modelId,
 
@@ -44,7 +44,7 @@ $inputSource = new PathInput($filePath);
 // Send for processing using polling
 $response = $mindeeClient->enqueueAndGetResult(
     $inputSource,
-    $inferenceParams
+    $modelParams
 );
 
 // Print a summary of the response

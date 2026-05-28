@@ -21,7 +21,7 @@ string modelId = "MY_MODEL_ID";
 Client mindeeClient = new Client(apiKey);
 
 // Set parameters
-var productParams = new ExtractionParameters(
+var modelParams = new ExtractionParameters(
     modelId: modelId
 
     // Options: set to `true` or `false` to override defaults
@@ -42,7 +42,7 @@ var inputSource = new LocalInputSource(filePath);
 
 // Upload the file
 var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(
-    inputSource, productParams);
+    inputSource, modelParams);
 
 // Print a summary of the response
 System.Console.WriteLine(response.Inference.ToString());

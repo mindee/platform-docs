@@ -22,7 +22,7 @@ model_id = "MY_MODEL_ID"
 mindee_client = ClientV2(api_key)
 
 # Set inference parameters
-params = InferenceParameters(
+model_params = InferenceParameters(
     # ID of the model, required.
     model_id=model_id,
 
@@ -46,7 +46,7 @@ input_source = PathInput(input_path)
 response = mindee_client.enqueue_and_get_result(
     InferenceResponse,
     input_source,
-    params,
+    model_params,
 )
 
 # Print a brief summary of the parsed data

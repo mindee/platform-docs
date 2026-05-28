@@ -26,7 +26,7 @@ public class SimpleMindeeClientV2 {
     var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    var ocrParams = OcrParameters
+    var modelParams = OcrParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
@@ -38,7 +38,7 @@ public class SimpleMindeeClientV2 {
     OcrResponse response = mindeeClient.enqueueAndGetResult(
         OcrResponse.class,
         inputSource,
-        ocrParams
+        modelParams
     );
 
     // Print a summary of the response

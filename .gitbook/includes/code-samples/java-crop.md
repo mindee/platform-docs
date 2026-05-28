@@ -26,7 +26,7 @@ public class SimpleMindeeClientV2 {
     var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    var cropParams = CropParameters
+    var modelParams = CropParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
@@ -38,7 +38,7 @@ public class SimpleMindeeClientV2 {
     CropResponse response = mindeeClient.enqueueAndGetResult(
         CropResponse.class,
         inputSource,
-        cropParams
+        modelParams
     );
 
     // Print a summary of the response

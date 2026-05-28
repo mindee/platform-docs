@@ -101,7 +101,7 @@ const pollingOptions = {
 When polling you really only need to set the `modelId` .
 
 ```php
-$inferenceParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+$modelParams = new InferenceParameters(modelId: "MY_MODEL_ID");
 ```
 
 You can also set the various polling parameters.\
@@ -483,7 +483,7 @@ console.log(response.job.alias);
 
 **Note:** You can use both methods!
 
-First, make sure you've added a webhook ID to the `productParams` object.\
+First, make sure you've added a webhook ID to the `modelParams` object.\
 Then, call `enqueueAndGetResult` and `await` the promise.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}

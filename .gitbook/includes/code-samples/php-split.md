@@ -23,7 +23,7 @@ $mindeeClient = new ClientV2($apiKey);
 
 // Set split parameters
 // Note: modelId is mandatory.
-$splitParams = new SplitParameters(
+$modelParams = new SplitParameters(
     // ID of the model, required.
     $modelId,
 );
@@ -35,7 +35,7 @@ $inputSource = new PathInput($filePath);
 $response = $mindeeClient->enqueueAndGetResult(
     SplitResponse::class,
     $inputSource,
-    $splitParams
+    $modelParams
 );
 
 // Print a summary of the response

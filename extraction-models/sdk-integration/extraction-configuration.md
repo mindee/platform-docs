@@ -55,7 +55,7 @@ inference_params = InferenceParameters(
 Only the `modelId` is required.
 
 ```typescript
-const productParams = {
+const modelParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
 
@@ -80,7 +80,7 @@ const productParams = {
 Only the `modelId` is required.
 
 ```php
-$inferenceParams = new InferenceParameters(
+$modelParams = new InferenceParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 
@@ -157,7 +157,7 @@ InferenceParameters params = InferenceParameters
 Only the `modelId` is required.
 
 ```csharp
-var inferenceParams = new InferenceParameters(
+var modelParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
 
@@ -242,7 +242,7 @@ inference_params = InferenceParameters(
 Only the `modelId` is required.
 
 ```typescript
-const productParams = {
+const modelParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
   
@@ -261,7 +261,7 @@ const productParams = {
 Only the `modelId` is required.
 
 ```php
-$inferenceParams = new InferenceParameters(
+$modelParams = new InferenceParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 
@@ -320,7 +320,7 @@ InferenceParameters params = InferenceParameters
 Only the `modelId` is required.
 
 ```csharp
-var inferenceParams = new InferenceParameters(
+var modelParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
     

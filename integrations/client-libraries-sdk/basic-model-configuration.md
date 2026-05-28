@@ -42,7 +42,7 @@ inference_params = InferenceParameters(
 
 {% tab title="Node.js" %}
 ```typescript
-const productParams = {
+const modelParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
   
@@ -57,7 +57,7 @@ const productParams = {
 
 {% tab title="PHP" %}
 ```php
-$inferenceParams = new InferenceParameters(
+$modelParams = new InferenceParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 
@@ -104,7 +104,7 @@ InferenceParameters params = InferenceParameters
 
 {% tab title=".NET" %}
 ```csharp
-var inferenceParams = new InferenceParameters(
+var modelParams = new InferenceParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
 

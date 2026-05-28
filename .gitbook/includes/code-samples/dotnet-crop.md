@@ -20,7 +20,7 @@ string modelId = "MY_MODEL_ID";
 Client mindeeClient = new Client(apiKey);
 
 // Set inference parameters
-var productParams = new CropParameters(
+var modelParams = new CropParameters(
     modelId: modelId
 );
 
@@ -29,7 +29,7 @@ var inputSource = new LocalInputSource(filePath);
 
 // Upload the file
 var response = await mindeeClient.EnqueueAndGetResultAsync<CropResponse>(
-    inputSource, productParams);
+    inputSource, modelParams);
 
 // Print a summary of the response
 System.Console.WriteLine(response.Inference.ToString());

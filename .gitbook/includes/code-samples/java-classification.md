@@ -27,7 +27,7 @@ public class SimpleMindeeClientV2 {
 
     // Set inference parameters
     // Note: modelId is mandatory.
-    var classificationParams = ClassificationParameters
+    var modelParams = ClassificationParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
@@ -39,7 +39,7 @@ public class SimpleMindeeClientV2 {
     ClassificationResponse response = mindeeClient.enqueueAndGetResult(
         ClassificationResponse.class,
         inputSource,
-        classificationParams
+        modelParams
     );
 
     // Print a summary of the response

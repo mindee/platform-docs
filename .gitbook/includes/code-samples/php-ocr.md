@@ -23,7 +23,7 @@ $mindeeClient = new ClientV2($apiKey);
 
 // Set ocr parameters
 // Note: modelId is mandatory.
-$ocrParams = new OcrParameters(
+$modelParams = new OcrParameters(
     // ID of the model, required.
     $modelId,
 );
@@ -35,7 +35,7 @@ $inputSource = new PathInput($filePath);
 $response = $mindeeClient->enqueueAndGetResult(
     OcrResponse::class,
     $inputSource,
-    $ocrParams
+    $modelParams
 );
 
 // Print a summary of the response

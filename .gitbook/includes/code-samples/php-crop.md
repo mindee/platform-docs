@@ -23,7 +23,7 @@ $mindeeClient = new ClientV2($apiKey);
 
 // Set crop parameters
 // Note: modelId is mandatory.
-$cropParams = new CropParameters(
+$modelParams = new CropParameters(
     // ID of the model, required.
     $modelId,
 );
@@ -35,7 +35,7 @@ $inputSource = new PathInput($filePath);
 $response = $mindeeClient->enqueueAndGetResult(
     CropResponse::class,
     $inputSource,
-    $cropParams
+    $modelParams
 );
 
 // Print a summary of the response

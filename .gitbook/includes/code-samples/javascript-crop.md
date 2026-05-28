@@ -21,7 +21,7 @@ const mindeeClient = new mindee.Client(
 );
 
 // Set product parameters
-const params = {
+const modelParams = {
   modelId: modelId,
 };
 
@@ -32,7 +32,7 @@ const inputSource = new mindee.PathInput({ inputPath: filePath });
 const response = await mindeeClient.enqueueAndGetResult(
   mindee.product.Crop,
   inputSource,
-  params,
+  modelParams,
 );
 
 // print a string summary

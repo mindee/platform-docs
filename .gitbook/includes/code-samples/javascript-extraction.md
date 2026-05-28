@@ -21,7 +21,7 @@ const mindeeClient = new mindee.Client(
 );
 
 // Set product parameters
-const productParams = {
+const modelParams = {
   modelId: modelId,
 
   // Options: set to `true` or `false` to override defaults
@@ -44,7 +44,7 @@ const inputSource = new mindee.PathInput({ inputPath: filePath });
 const response = await mindeeClient.enqueueAndGetResult(
   mindee.product.Extraction,
   inputSource,
-  productParams,
+  modelParams,
 );
 
 // print a string summary

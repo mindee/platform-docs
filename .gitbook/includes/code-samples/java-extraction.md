@@ -26,7 +26,7 @@ public class SimpleMindeeClientV2 {
     var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    var extractionParams = ExtractionParameters
+    var modelParams = ExtractionParameters
         // ID of the model, required.
         .builder(modelId)
 
@@ -51,7 +51,7 @@ public class SimpleMindeeClientV2 {
     ExtractionResponse response = mindeeClient.enqueueAndGetResult(
         ExtractionResponse.class,
         inputSource,
-        extractionParams
+        modelParams
     );
 
     // Print a summary of the response

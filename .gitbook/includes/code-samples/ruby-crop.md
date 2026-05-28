@@ -18,7 +18,7 @@ model_id = 'MY_MODEL_ID'
 mindee_client = Mindee::V2::Client.new(api_key: api_key)
 
 # Set inference parameters
-crop_params = {
+model_params = {
     # ID of the model, required.
     model_id: model_id,
 }
@@ -30,7 +30,7 @@ input_source = Mindee::Input::Source::PathInputSource.new(input_path)
 response = mindee_client.enqueue_and_get_result(
     Mindee::V2::Product::Crop::Crop,
     input_source,
-    crop_params
+    model_params
 )
 
 # Access the result crops

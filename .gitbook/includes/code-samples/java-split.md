@@ -26,7 +26,7 @@ public class SimpleMindeeClientV2 {
     var mindeeClient = new MindeeClient(apiKey);
 
     // Set inference parameters
-    var splitParams = SplitParameters
+    var modelParams = SplitParameters
         // ID of the model, required.
         .builder(modelId)
         .build();
@@ -38,7 +38,7 @@ public class SimpleMindeeClientV2 {
     SplitResponse response = mindeeClient.enqueueAndGetResult(
         SplitResponse.class,
         inputSource,
-        splitParams
+        modelParams
     );
 
     // Print a summary of the response
