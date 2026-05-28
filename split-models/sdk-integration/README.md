@@ -21,6 +21,14 @@ Start with the page that matches your next step:
 
 {% stepper %}
 {% step %}
+#### Create Your Model
+
+Create your Classification Model on the Mindee platform.
+
+Upload some samples to the [live-test.md](../../models/live-test.md "mention") to validate the model.
+{% endstep %}
+
+{% step %}
 #### Install and authenticate
 
 Install the client library for your language.
@@ -49,8 +57,8 @@ Use each split's document type and page range in your workflow.
 
 Have these ready:
 
-* an API key
-* the Split model's unique ID
+* your API key
+* your Split Model's unique ID
 * a multi-page sample file for testing
 * a language choice for the SDK
 

@@ -21,7 +21,15 @@ Start with the page that matches your next step:
 
 {% stepper %}
 {% step %}
-#### Install and authenticate
+#### Create Your Model
+
+Create your Classification Model on the Mindee platform.
+
+Upload some samples to the [live-test.md](../../models/live-test.md "mention") to validate the model.
+{% endstep %}
+
+{% step %}
+### Install and authenticate
 
 Install the client library for your language.
 
@@ -49,8 +57,8 @@ Use the returned document type to route the document in your workflow.
 
 Have these ready:
 
-* an API key
-* the Classification model's unique ID
+* your API key
+* your Classification Model's unique ID
 * a sample document for testing
 * a language choice for the SDK
 

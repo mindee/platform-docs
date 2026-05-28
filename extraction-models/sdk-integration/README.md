@@ -21,6 +21,14 @@ Start with the page that matches your next step:
 
 {% stepper %}
 {% step %}
+#### Create Your Model
+
+Create your Extraction Model on the Mindee platform.
+
+Upload some samples to the [live-test.md](../../models/live-test.md "mention") to validate the model.
+{% endstep %}
+
+{% step %}
 #### Install and authenticate
 
 Install the client library for your language.
@@ -50,7 +58,7 @@ Handle field types based on your Data Schema.
 Have these ready:
 
 * an API key
-* your model ID
+* your Extraction Model's unique ID
 * a sample document for testing
 * a language choice for the SDK
 
