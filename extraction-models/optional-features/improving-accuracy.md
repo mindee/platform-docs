@@ -1,7 +1,7 @@
 ---
 description: >-
-  Enhance extraction accuracy with Retrieval-Augmented Generation using your own
-  documents.
+  Enhance extraction accuracy with Retrieval-Augmented Generation (RAG) using
+  your own documents.
 icon: layer-group
 ---
 
@@ -9,7 +9,7 @@ icon: layer-group
 
 ## Overview
 
-When using an Extraction Model regularly, it can happen that the extraction is not satisfying on a given document or a particular template.
+When using an Extraction Model, sometimes the extraction accuracy is not satisfying on a given document or a particular template.
 
 If you have already followed the [data-schema-best-practices.md](../data-schema-best-practices.md "mention"), and results are still not satisfactory, all hope is not lost.
 
@@ -19,7 +19,7 @@ You have a way to durably improve the performance of the model for the next pred
 
 ## Basics of RAG Inner Workings
 
-RAG stands for Retrieval-Augmented Generation, a novel approach in artificial intelligence that combines the strengths of retrieval-based models with generative LLM text production.
+Retrieval-Augmented Generation or RAG, is an approach in artificial intelligence that combines the strengths of retrieval-based models with generative LLM text production.
 
 Essentially, RAG leverages a rich database of source documents and embeddings to augment the knowledge base from which it draws responses. This means that the system retrieves specific and context-based data snippets and then uses them to generate semantic and fine-tuned responses that are both creative and factually accurate.
 
