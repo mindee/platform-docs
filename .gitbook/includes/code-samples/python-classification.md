@@ -44,3 +44,5 @@ print(response.inference)
 classification: str = response.inference.result.classification.document_type
 ```
 {% endcode %}
+
+Also take a look at the [Classification Result](../../../classification-models/sdk-integration/classification-result.md) documentation.

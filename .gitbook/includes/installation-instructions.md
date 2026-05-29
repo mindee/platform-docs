@@ -6,7 +6,7 @@ title: Installation Instructions
 {% tab title="Python" %}
 Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.
 
-Simply install the [PyPi package](https://pypi.org/project/mindee/) using pip:
+Simply install the [PyPi package](https://pypi.org/project/mindee/) using `pip`:
 
 ```sh
 pip install -U mindee~=4.36
@@ -58,7 +58,7 @@ There are various installation methods, Maven, Gradle, etc:
 {% tab title=".NET" %}
 .NET ≥ 8.0 is recommended.
 
-Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using .NET CLI:
+Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using `dotnet add`:
 
 ```sh
 dotnet add package Mindee --version 4.3

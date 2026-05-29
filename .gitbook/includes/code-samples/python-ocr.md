@@ -44,3 +44,5 @@ print(response.inference)
 pages: list = response.inference.result.pages
 ```
 {% endcode %}
+
+Also take a look at the [OCR Result](../../../ocr-models/sdk-integration/ocr-result.md) documentation.

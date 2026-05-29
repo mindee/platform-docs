@@ -44,3 +44,5 @@ print(response.inference)
 crops: list = response.inference.result.crops
 ```
 {% endcode %}
+
+Also take a look at the [Crop Result](../../../crop-models/sdk-integration/crop-result.md) documentation.
