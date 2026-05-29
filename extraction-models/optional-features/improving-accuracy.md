@@ -86,4 +86,10 @@ All storage and retrieval of RAG data is done on Mindee's dedicated servers.
 
 No, never.
 
-We only use RAG data internally for debugging or testing, and with your explicit knowledge and consent.
+We only use RAG data internally with your explicit knowledge and prior consent. This is limited to using your documents to help resolve a ticket you opened with our support team.
+
+### What happens to my RAG database if I downgrade my plan?
+
+We won't delete any of the files you've uploaded into your RAG document database if you downgrade, however you will not be able to modify or validate them.
+
+The guidelines you have given to your RAG documents will be taken into account in your inferences with the lower plan, even if that is above the plan's features.
