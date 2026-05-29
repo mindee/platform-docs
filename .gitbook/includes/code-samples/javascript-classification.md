@@ -42,3 +42,6 @@ console.log(response.inference.toString());
 const classification = response.inference.result.classification;
 ```
 {% endcode %}
+
+Also take a look at the [Classification Result](https://docs.mindee.com/classification-models/sdk-integration/classification-result) documentation.
+

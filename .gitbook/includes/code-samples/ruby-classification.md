@@ -37,3 +37,6 @@ response = mindee_client.enqueue_and_get_result(
 puts response.inference.result.classification
 ```
 {% endcode %}
+
+Also take a look at the [Classification Result](https://docs.mindee.com/classification-models/sdk-integration/classification-result) documentation.
+

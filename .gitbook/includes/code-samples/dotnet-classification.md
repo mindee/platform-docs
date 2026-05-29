@@ -39,3 +39,5 @@ System.Console.WriteLine(response.Inference.ToString());
 var classification = response.Inference.Result.Classification;
 ```
 {% endcode %}
+
+Also take a look at the [Classification Result](https://docs.mindee.com/classification-models/sdk-integration/classification-result) documentation.

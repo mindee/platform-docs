@@ -57,4 +57,4 @@ fields: dict = response.inference.result.fields
 ```
 {% endcode %}
 
-Also take a look at the [Extraction Result](../../../extraction-models/sdk-integration/extraction-result.md) documentation.
+Also take a look at the [Extraction Result](https://docs.mindee.com/extraction-models/sdk-integration/extraction-result) documentation.

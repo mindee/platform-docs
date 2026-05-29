@@ -45,4 +45,4 @@ pages: list = response.inference.result.pages
 ```
 {% endcode %}
 
-Also take a look at the [OCR Result](../../../ocr-models/sdk-integration/ocr-result.md) documentation.
+Also take a look at the [OCR Result](https://docs.mindee.com/ocr-models/sdk-integration/ocr-result) documentation.

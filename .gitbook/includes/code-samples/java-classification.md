@@ -52,3 +52,5 @@ public class SimpleMindeeClientV2 {
 }
 ```
 {% endcode %}
+
+Also take a look at the [Classification Result](https://docs.mindee.com/classification-models/sdk-integration/classification-result) documentation.
