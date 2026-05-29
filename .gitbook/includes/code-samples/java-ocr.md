@@ -50,3 +50,5 @@ public class SimpleMindeeClientV2 {
 }
 ```
 {% endcode %}
+
+Also take a look at the [OCR Result](https://docs.mindee.com/ocr-models/sdk-integration/ocr-result) documentation.

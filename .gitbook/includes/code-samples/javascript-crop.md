@@ -42,3 +42,5 @@ console.log(response.inference.toString());
 const crops = response.inference.result.crops;
 ```
 {% endcode %}
+
+Also take a look at the [Crop Result](https://docs.mindee.com/crop-models/sdk-integration/crop-result) documentation.

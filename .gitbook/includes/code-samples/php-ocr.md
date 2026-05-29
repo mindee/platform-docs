@@ -45,3 +45,5 @@ echo strval($response->inference);
 $pages = $response->inference->result->pages;
 ```
 {% endcode %}
+
+Also take a look at the [OCR Result](https://docs.mindee.com/ocr-models/sdk-integration/ocr-result) documentation.

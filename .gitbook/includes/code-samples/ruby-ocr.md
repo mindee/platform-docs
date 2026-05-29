@@ -37,3 +37,5 @@ response = mindee_client.enqueue_and_get_result(
 puts response.inference.result.pages
 ```
 {% endcode %}
+
+Also take a look at the [OCR Result](https://docs.mindee.com/ocr-models/sdk-integration/ocr-result) documentation.

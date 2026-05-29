@@ -39,3 +39,5 @@ System.Console.WriteLine(response.Inference.ToString());
 var ocrPages = response.Inference.Result.Pages;
 ```
 {% endcode %}
+
+Also take a look at the [OCR Result](https://docs.mindee.com/ocr-models/sdk-integration/ocr-result) documentation.

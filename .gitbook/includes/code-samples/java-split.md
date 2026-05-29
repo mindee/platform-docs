@@ -50,3 +50,5 @@ public class SimpleMindeeClientV2 {
 }
 ```
 {% endcode %}
+
+Also take a look at the [Split Result](https://docs.mindee.com/split-models/sdk-integration/split-result) documentation.

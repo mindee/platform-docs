@@ -38,3 +38,5 @@ System.Console.WriteLine(response.Inference.ToString());
 var crops = response.Inference.Result.Crops;
 ```
 {% endcode %}
+
+Also take a look at the [Crop Result](https://docs.mindee.com/crop-models/sdk-integration/crop-result) documentation.

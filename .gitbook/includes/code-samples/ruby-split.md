@@ -37,3 +37,5 @@ response = mindee_client.enqueue_and_get_result(
 puts response.inference.result.splits
 ```
 {% endcode %}
+
+Also take a look at the [Split Result](https://docs.mindee.com/split-models/sdk-integration/split-result) documentation.

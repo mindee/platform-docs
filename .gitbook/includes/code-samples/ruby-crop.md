@@ -37,3 +37,5 @@ response = mindee_client.enqueue_and_get_result(
 puts response.inference.result.crops
 ```
 {% endcode %}
+
+Also take a look at the [Crop Result](https://docs.mindee.com/crop-models/sdk-integration/crop-result) documentation.

@@ -39,3 +39,5 @@ System.Console.WriteLine(response.Inference.ToString());
 var splitRanges = response.Inference.Result.Splits;
 ```
 {% endcode %}
+
+Also take a look at the [Split Result](https://docs.mindee.com/split-models/sdk-integration/split-result) documentation.
