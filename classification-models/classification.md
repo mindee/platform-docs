@@ -18,7 +18,7 @@ Some common examples:
 
 A file sent to the Classification Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
 
-{% hint style="info" %}
+{% hint style="info" icon="lightbulb" %}
 If there is a high possibility of having multiple documents within the same file, use:
 
 * [split.md](../split-models/split.md "mention") ⇒ multiple documents in the same file
@@ -27,7 +27,12 @@ If there is a high possibility of having multiple documents within the same file
 
 ## Create a Classification Model
 
-1. To create a Classification utility, click on **Models**, and then click on **Create your document AI model**.
+Classification models are always custom, there are no templates available in the Catalog.\
+This keeps Classification models flexible for different documents and workflows.
+
+Each Classification model gets its own unique model ID when you create it.
+
+1. To create a Classification model, click on **Models**, and then click on **Create your document AI model**.
 2. Scroll to the **Document Utilities** section, click on **Classify.**
 3. A pop-up will appear, allowing you to enter the classes you want. Most of the time, you'll use one possible document type per class.\
    \

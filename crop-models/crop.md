@@ -21,7 +21,12 @@ Some common examples:
 
 ## Create a Crop Model
 
-1. To create a Crop utility, click on **Models**, and then click on **Create your document AI model**.
+Crop models are always custom, there are no templates available in the Catalog.\
+This keeps Crop models flexible for different documents and workflows.
+
+Each Crop model gets its own unique model ID when you create it.
+
+1. To create a Crop model, click on **Models**, and then click on **Create your document AI model**.
 2. Scroll to the **Document Utilities** section, click on **Crop.**
 3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a document type possibly present in the pages you want to process.\
    \

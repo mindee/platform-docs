@@ -192,16 +192,21 @@ public void HandleResponse(SplitResponse response)
 
     foreach (SplitRange split in splits)
     {
+        // 0-based [startPage, endPage] range
         var pageRange = split.PageRange;
+
+        // Document type identified for this split
         string documentType = split.DocumentType;
 
         Console.WriteLine($"Detected type: {documentType}");
         Console.WriteLine($"On pages: {pageRange[0]} - {pageRange[1]}");
 
+        // Optional extraction response, present if extraction chaining was requested
         var extractionResponse = split.ExtractionResponse;
 
         if (extractionResponse != null)
         {
+            // Access extracted fields from the split's inference result
             var fields = extractionResponse.Inference.Result.Fields;
             Console.WriteLine($"Extraction fields: {fields}");
         }
