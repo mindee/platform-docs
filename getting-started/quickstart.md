@@ -17,9 +17,9 @@ You can also create an account using good old-fashioned email and password.
 
 ## Create a Model
 
-The quickest way is to use a predefined model by selecting one from the catalog.
+The quickest way is to create a model from a template in the catalog.
 
-If there are no pre-built models that suit your needs, you can:
+If there are no model templates that exactly fit your needs, you can:
 
 * [Modify a model from the catalog](defining-a-model.md#from-an-existing-model)
 * [Create your own model from scratch](defining-a-model.md#from-scratch)
@@ -46,4 +46,4 @@ You'll need some way of importing the JSON structure and manipulating it.
 
 For quick testing, we recommend to [process-the-response.md](../integrations/client-libraries-sdk/process-the-response.md "mention") using our client libraries.
 
-{% @supademo/embed demoId="cmewtri4u8939v9kqh3q6u1g7" url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" %}
+{% @supademo/embed url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" demoId="cmewtri4u8939v9kqh3q6u1g7" %}

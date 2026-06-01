@@ -9,7 +9,7 @@ icon: print-magnifying-glass
 
 ## What is a Model?
 
-A **Model** in the Mindee platform is a configurable and reusable template designed to process documents. In technical terms, a model performs an inference on files uploaded to Mindee.
+A **Model** in the Mindee platform is a configurable and reusable engine designed to process documents. In technical terms, a model is a set of parameters and complex prediction algorithms that perform an inference on files uploaded to Mindee.
 
 Various types of models are available, from simple text recognition to data extraction and classification. Models use Optical Character Recognition (OCR) combined with sophisticated data processing techniques.
 
@@ -36,7 +36,7 @@ More information is available for each model type:
 
 * [split.md](../split-models/split.md "mention") ⇒ find documents in a multi-page file
 * [crop.md](../crop-models/crop.md "mention") ⇒ find documents on a single page
-* [classification.md](../classification-models/classification.md "mention") ⇒ identify file contents&#x20;
+* [classification.md](../classification-models/classification.md "mention") ⇒ identify file contents
 * [ocr.md](../ocr-models/ocr.md "mention")⇒ structured text extraction
 
 ## Live Test
