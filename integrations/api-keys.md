@@ -7,10 +7,12 @@ icon: key
 
 ## Overview
 
-API keys are secure credentials that allow your applications to interact with Mindee’s services. Each key is associated with your organization and usage is tracked accordingly.
+API keys are secure credentials that allow your applications to interact with Mindee’s services.
+
+Each key is associated with your organization: usage and billing are tracked accordingly.
 
 {% hint style="danger" %}
-**Do not expose your API keys in any location that is open to the public.**
+**Never expose your API keys in a location that is publicly viewable!**
 
 Anyone with the key will be able to make API requests impersonating your organization.
 {% endhint %}
@@ -21,7 +23,7 @@ Each API Key grants access to all models within the organization.
 
 API Keys are **not** tokens, they:
 
-* have an unlimited lifetime and must be manually revoked
+* have an unlimited lifetime and must be manually revoked.
 * do not follow RFC 6750 / OAuth / JWT.
 
 ## Access the API Key Dashboard <a href="#h_5e7b745363" id="h_5e7b745363"></a>
@@ -80,7 +82,7 @@ Take a look at the [#initialize-the-mindee-client](client-libraries-sdk/configur
 ## Best practices for API keys
 
 1. Keeping your API keys in your environment variables is a good and safe practice.
-2. Don’t store your API key directly in your code, especially in your front-end code.
+2. Don’t store your API key directly in your code, and **never** in your front-end code.
 3. Avoid exposing your secret API keys on GitHub, on the client-side, or in any other location that is open to the public.
 4. If you have any doubt that your API Key leaked, delete it and replace it as soon as possible.
 5.  Periodically change your API keys, we recommend changing it every 3 months.
