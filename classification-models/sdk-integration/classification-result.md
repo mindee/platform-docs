@@ -132,6 +132,20 @@ using Mindee.V2.Product.Classification;
 public void HandleResponse(ClassificationResponse response)
 {
     var classification = response.Inference.Result.Classification;
+
+    // Document type identified for this file
+    string documentType = classification.DocumentType;
+    Console.WriteLine($"Detected type: {documentType}");
+
+    // Optional extraction response, present if extraction chaining was requested
+    var extractionResponse = classification.ExtractionResponse;
+
+    if (extractionResponse != null)
+    {
+        // Access extracted fields from the classification's inference result
+        var fields = extractionResponse.Inference.Result.Fields;
+        Console.WriteLine($"Extraction fields: {fields}");
+    }
 }
 ```
 {% endtab %}

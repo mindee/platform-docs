@@ -202,6 +202,35 @@ using Mindee.V2.Product.Crop;
 public void HandleResponse(CropResponse response)
 {
     var crops = response.Inference.Result.Crops;
+
+    foreach (var crop in crops)
+    {
+        // Object type identified for this crop
+        string objectType = crop.ObjectType;
+        Console.WriteLine($"Detected type: {objectType}");
+
+        // Location of the crop
+        var location = crop.Location;
+
+        // 0-based page index
+        var page = location.Page;
+
+        // Polygon object, which includes some useful methods
+        var polygon = location.Polygon;
+        var center = polygon.GetCentroid();
+
+        Console.WriteLine($"On page {page}, with center at {center}");
+
+        // Optional extraction response, present if extraction chaining was requested
+        var extractionResponse = crop.ExtractionResponse;
+
+        if (extractionResponse != null)
+        {
+            // Access extracted fields from the crop's inference result
+            var fields = extractionResponse.Inference.Result.Fields;
+            Console.WriteLine($"Extraction fields: {fields}");
+        }
+    }
 }
 ```
 {% endtab %}
