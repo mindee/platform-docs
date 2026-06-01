@@ -4,9 +4,17 @@ description: Integrating Mindee in Zapier zaps.
 
 # Zapier Zaps
 
+## Before You Start <a href="#add-mindee-to-a-make.com-scenario" id="add-mindee-to-a-make.com-scenario"></a>
+
+When integrating Mindee using Zapier you'll need a trigger that exposes a File Object.
+
+{% include "../../.gitbook/includes/no-code-inputs.md" %}
+
+Once you have a trigger working, you can connect it to the Mindee action.
+
 ## Add Mindee Data Extraction to a Zap <a href="#add-mindee-to-a-make.com-scenario" id="add-mindee-to-a-make.com-scenario"></a>
 
-You can use the Mindee App as a step in any zap.
+You can use the Mindee App as an action step in any zap.
 
 ### Setup App
 

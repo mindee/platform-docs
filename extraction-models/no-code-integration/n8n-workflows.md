@@ -83,10 +83,7 @@ In this way make sure the workflow is able to arrive at the "Result" step. The a
 
 Once you're able to get a result, change the "HTTP Request" node to something actually useful to you.
 
-Some examples:
-
-* use an IMAP trigger to process email attachments
-* use a FTP trigger to process files on a FTP server
+{% include "../../.gitbook/includes/no-code-inputs.md" %}
 
 #### Something not working as expected?
 

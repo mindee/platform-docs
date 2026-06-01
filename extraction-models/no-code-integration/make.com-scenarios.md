@@ -14,11 +14,7 @@ Community apps only work for Mindee V1.
 
 When integrating Mindee using Make you'll need a file input module.
 
-This includes, but is not limited to:
-
-* email
-* drive providers: Google Drive, OneDrive, DropBox, etc
-* remote servers: URL/HTTP, S3, FTP, etc
+{% include "../../.gitbook/includes/no-code-inputs.md" %}
 
 In the Make documentation, take a look at the section: [Working with files](https://help.make.com/working-with-files)
 
