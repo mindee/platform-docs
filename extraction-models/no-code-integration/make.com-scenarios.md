@@ -5,10 +5,22 @@ description: Integrating Mindee in make.com scenarios.
 # make.com Scenarios
 
 {% hint style="info" %}
-Only use the verified **Mindee V2** app.
+Only use the verified [**Mindee V2 app**](https://www.make.com/en/integrations/mindee).
 
 Community apps only work for Mindee V1.
 {% endhint %}
+
+## Before You Start
+
+When integrating Mindee using Make you'll need a file input module.
+
+This includes, but is not limited to:
+
+* email
+* drive providers: Google Drive, OneDrive, DropBox, etc
+* remote servers: URL/HTTP, S3, FTP, etc
+
+In the Make documentation, take a look at the section: [Working with files](https://help.make.com/working-with-files)
 
 ## Add Mindee to a Make.com Scenario
 
