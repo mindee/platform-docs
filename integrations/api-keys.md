@@ -19,7 +19,10 @@ An organization can have multiple API keys.
 
 Each API Key grants access to all models within the organization.
 
-API Keys, unlike tokens, have an unlimited lifetime and must be manually revoked.
+API Keys are **not** tokens, they:
+
+* have an unlimited lifetime and must be manually revoked
+* do not follow RFC 6750 / OAuth / JWT.
 
 ## Access the API Key Dashboard <a href="#h_5e7b745363" id="h_5e7b745363"></a>
 
@@ -61,7 +64,7 @@ Any calls to Mindee made using a deleted key will be rejected, resulting in a HT
 To delete a key on the Mindee Platform:
 
 1. Access the [API Keys Dashboard](api-keys.md#h_5e7b745363)
-2. &#x20;You will see a list of all your current API Keys.
+2. You will see a list of all your current API Keys.
 3. Next to each key is a "<i class="fa-trash-can">:trash-can:</i> **Delete**" button, click it.
 4. A confirmation dialog will appear.
 5. Click "**Delete**" in the confirmation dialog, your key is now deleted.
