@@ -42,7 +42,7 @@ $modelParams = new InferenceParameters(
 $inputSource = new PathInput($filePath);
 
 // Send for processing using polling
-$response = $mindeeClient->enqueueAndGetResult(
+$response = $mindeeClient->enqueueAndGetInference(
     $inputSource,
     $modelParams
 );

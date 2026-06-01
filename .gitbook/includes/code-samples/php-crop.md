@@ -22,7 +22,6 @@ $modelId = "MY_MODEL_ID";
 $mindeeClient = new ClientV2($apiKey);
 
 // Set crop parameters
-// Note: modelId is mandatory.
 $modelParams = new CropParameters(
     // ID of the model, required.
     $modelId,
