@@ -81,7 +81,7 @@ input_source = Base64Input(
 )
 ```
 
-To load a file handle, use `FileInput`. \
+To load a file handle, use `FileInput`.\
 It **must** be opened in binary mode, as a `BinaryIO` .
 
 ```python
@@ -351,6 +351,9 @@ var inputSource = new LocalInputSource(fileStream, filename)
 ## Source File Metadata
 
 Once a source file is loaded, various metadata can be accessed.
+
+These metadata are overall very similar to the ones returned by the API after a successful inference.\
+If you have need of these metadata before getting the full result back from the server, this is the recommended way.
 
 This can be useful for applying business rules based on the input file, for example:
 
