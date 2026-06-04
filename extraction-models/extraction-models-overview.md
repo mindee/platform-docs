@@ -106,3 +106,7 @@ When you are displaying the documents to end users, typically when they can revi
 You can enable [polygons-bounding-boxes.md](optional-features/polygons-bounding-boxes.md "mention") so that the location of the extracted fields can be shown (this is always activated in the [live-test.md](../models/live-test.md "mention")). In this way, it will be much easier for your users to find erroneous fields correct them.
 
 This is even more powerful when combined with [confidence scores](optional-features/automation-confidence-score.md), you can flag fields needing attention directly in your forms.
+
+### Combined Benefits
+
+These features work together to create a system that becomes more accurate as you use it, reducing manual corrections and improving automation success rates.

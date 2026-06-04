@@ -72,6 +72,12 @@ Click on "Data Schema" then "Optional Features" tab. There you can activate the 
 
 ## Frequently Asked Questions
 
+### How is my data protected during RAG processing?
+
+Your data remains private and isolated within your model.
+
+All documents and annotations added to your RAG database are encrypted in transit.
+
 ### Is my RAG data shared with other users or sold to 3rd parties?
 
 No, never.
