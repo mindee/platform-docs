@@ -47,14 +47,6 @@ Yes, the API supports webhook integration for asynchronous document processing.
 
 </details>
 
-<details>
-
-<summary>How do rate limits work?</summary>
-
-Check the [#rate-limits](../integrations/technical-limitations.md#rate-limits "mention") section.
-
-</details>
-
 ### Models performance
 
 <details>
