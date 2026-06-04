@@ -93,11 +93,11 @@ Overall credit consumption can be tracked on the [insights.md](insights.md "ment
 
 ### Are there limits on the number of credits that can be consumed?
 
-Regardless of your plan, there are no limits to additional credits you can consume.
+Regardless of your plan, there are no limits to credits you can consume.
 
 This avoids any situations where you would be "locked" and unable to process more documents.
 
-However, if you are consistently going over your plan's credits, consider upgrading your plan as it can actually be cheaper for you.
+However, if you are consistently going over your plan's included credits, consider upgrading your plan as it can actually be cheaper for you.
 
 ### Can I purchase additional credits?
 
