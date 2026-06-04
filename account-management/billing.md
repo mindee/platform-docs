@@ -58,7 +58,7 @@ You can set your Tax ID at any time. After clicking on "Manage Subscription", cl
 
 ## Supported Payment Methods
 
-You can use any payment method supported by Stripe for all self-serve plans.
+Any payment method supported by Stripe can be used.
 
 Among these, the most popular are credit and debit cards.
 

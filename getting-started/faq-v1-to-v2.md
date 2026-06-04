@@ -6,11 +6,11 @@ icon: comments-question-check
 
 ## 🚀 Why Mindee?
 
-At Mindee, we've been listening to our customers and the evolving needs of document automation. Over the past years, we've learned that businesses don't just want to extract data from documents—they want to **understand, query, and act** on that data with complete autonomy.
+At Mindee, we've been listening to our customers and the evolving needs of document automation. Over the past years, we've learned that businesses don't just want to extract data from documents —they want to **understand, query,** and **act** on that data with complete autonomy.
 
 * **From extraction to deeper intelligence**: Enhancing our proven AI capabilities with advanced features like RAG, enabling you to not just extract data but have conversations with your documents
-* **From developer-focused to universally accessible**: Building on V1's solid API foundation while adding intuitive self-service tools that empower both technical and non-technical users
-* **From powerful APIs to comprehensive platform**: Expanding beyond our robust V1 APIs to offer a complete ecosystem where users can build, test, and deploy document automation solutions with greater flexibility
+* **From developer-focused to universally accessible**: Building on a solid API foundation while adding intuitive self-service tools that empower both technical and non-technical users
+* **From powerful APIs to comprehensive platform**: Offering a complete ecosystem where users can build, test, and deploy document automation solutions with greater flexibility
 * **User empowerment**: Proactive tools and insights that help users solve challenges independently when they prefer
 
 ## **Technical Changes**
@@ -119,14 +119,6 @@ No. We only have one environment available, which is the one you can use for you
 
 </details>
 
-<details>
-
-<summary>How do I migrate my existing code to V2?</summary>
-
-You’ll need to create a new code integration. Use one of our official client libraries to speed up this process.
-
-</details>
-
 ## Feature Comparison & Use Cases
 
 ### Feature Analysis
@@ -187,40 +179,6 @@ When you exceed your plan limits, overage charges are automatically billed on yo
 <summary>Can I try before committing to a paid plan?</summary>
 
 We offer a 14-day & 500-page free trial (no credit card required), allowing you to test all features and functionality (Continuous Learning, API Keys, Polygons,…) before committing to a paid plan.
-
-</details>
-
-### Billing Operations
-
-<details>
-
-<summary>How does billing work?</summary>
-
-Payment is required upfront to access the platform and the features included in your plan. Only extra calls (if you have exceed the ones included in your plan) will be invoiced every 100€ or at the end of your subscription.
-
-</details>
-
-<details>
-
-<summary>When does billing start?</summary>
-
-You will be billed as soon as you complete your subscription payment online.
-
-</details>
-
-<details>
-
-<summary>What payment methods are accepted?</summary>
-
-At this time, V2 subscriptions can only be purchased using credit cards (expect for Enterprise Plan
-
-</details>
-
-<details>
-
-<summary>How do I handle tax and invoicing requirements?</summary>
-
-You can see all the details about your pending subscription by clicking on “Manage Plan” under the billing section.
 
 </details>
 
@@ -306,28 +264,6 @@ Yes, absolutely. Running both platforms in parallel is not only supported but re
 
 <details>
 
-<summary>What's the step-by-step migration process?</summary>
-
-**Quick Overview:**
-
-1. **Assessment**: Analyze your current V1 usage and identify V2 plan requirements
-2. **Setup**: Create your V2 account and configure basic settings
-3. **Testing**: Use our migration testing checklist (see below)
-4. **Integration**: Update your applications with V2 API endpoints
-5. **Validation**: Run parallel processing to compare results
-6. **Cutover**: Gradually shift traffic from V1 to V2
-7. **Optimization**: Leverage V2's new features to enhance your workflows
-
-**Documentation Includes:**
-
-* Code examples for common migration scenarios
-* Troubleshooting guides for common migration issues
-* Rollback procedures if needed
-
-</details>
-
-<details>
-
 <summary>What migration support is provided?</summary>
 
 Mindee V2 offers 1:1 support for Business and Enterprise customers, with step-by-step upgrade paths to help you transition from V1 to V2 smoothly.
@@ -339,24 +275,6 @@ Mindee V2 offers 1:1 support for Business and Enterprise customers, with step-by
 <summary>What happens if I encounter issues during migration?</summary>
 
 If you face issues, you can contact Mindee’s support team via Intercom or email. For Business and Enterprise plans, priority assistance is available to resolve migration blockers quickly.
-
-</details>
-
-### Data & Configuration Migration
-
-<details>
-
-<summary>Can I migrate my existing documents and processing configurations?</summary>
-
-No, you’ll need to manually re-upload the documents to your RAG for instance. For Enterprise users, we can offer this transition as a service.
-
-</details>
-
-<details>
-
-<summary>What about existing webhooks and callbacks?</summary>
-
-You’ll need to reconfigure webhooks in V2 as the endpoint structure and authentication method differ from V1.
 
 </details>
 

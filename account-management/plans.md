@@ -9,7 +9,7 @@ Mindee offers flexible subscription plans to suit individual developers, growing
 
 **All plans** include access to:
 
-* an unlimited number of [Extraction](../extraction-models/extraction-models-overview.md) and/or [Utility](/broken/pages/HZslpz7eNeh8QueEkI2x) models
+* an unlimited number of all types of models ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models), [Split](../split-models/split.md), [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models), etc)
 * our AI agent to help you build your custom models
 * our complete catalog of prebuilt models to get started quickly
 
