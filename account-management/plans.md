@@ -54,7 +54,7 @@ Start with the Starter Plan if you're processing fewer than 100 pages per day. F
 
 ## Feature Comparison
 
-"Number of credits included" is for all types of models combined ([Extraction](/broken/pages/ywb5XsDuWyBy07coiRb0) and [Utility](/broken/pages/jqljfGxEsmDTKtOnQDrR)).
+"Number of credits included" is for all types of models combined ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models) and [Utility](/broken/pages/jqljfGxEsmDTKtOnQDrR)).
 
 Some features are only applicable to extraction models.
 
@@ -85,19 +85,31 @@ Some features are only applicable to extraction models.
 
 ### How is credit use calculated?
 
-Each file processed by Mindee will consume credits based on the number of pages contained in the file.
+Each file processed by Mindee will consume credits based on the number of pages contained in the uploaded file. Only files successfully processed count towards your credit consumption.
 
 The exact amount of credits used per page is available on each model's [pricing.md](../models/pricing.md "mention") page.
 
 Overall credit consumption can be tracked on the [insights.md](insights.md "mention") page.
 
-### Can I add features From Another Plan (à la carte pricing)?
+### Are there limits on the number of credits that can be consumed?
+
+Regardless of your plan, there are no limits to additional credits you can consume.
+
+This avoids any situations where you would be "locked" and unable to process more documents.
+
+However, if you are consistently going over your plan's credits, consider upgrading your plan as it can actually be cheaper for you.
+
+### Can I purchase additional credits?
+
+Additional credits are provided automatically based on your usage, there is no need to purchase additional credits.
+
+### Can I add features from another plan (à la carte pricing)?
 
 You cannot add features from another plan.
 
 To benefit from a particular feature, you will need to upgrade to the plan which includes it.
 
-### Can Mindee Add a Feature I Need?
+### Can Mindee add a feature I need?
 
 {% include "../.gitbook/includes/generic-feature-request.md" %}
 

@@ -60,15 +60,15 @@ Custom payment options are available for Enterprise customers.
 
 ## Included Credits and Overages
 
-Each plan includes a monthly or a yearly quota depending on your subscription frequency. There is no service disruption if you reach the quota.
+Each plan includes monthly or yearly included credits depending on your subscription frequency. There is no service disruption if you exceed the included credits.
 
-If you exceed the included credits in your plan, these will be charged according to the Overage Rate. These extra calls will be invoiced every €100, or at the end of your subscription.
+If you exceed the included credits in your plan, these additional credits will be charged according to the Overage Rate. These extra credits will be invoiced every €100, or at the end of your subscription.
 
-| Plan     | Included Credits | Overage Rate      |
-| -------- | ---------------- | ----------------- |
-| Starter  | 6,000 per year   | €0.05 per credit  |
-| Pro      | 30,000 per year  | €0.04 per credit  |
-| Business | 120,000 per year | €0.035 per credit |
+| Plan     | Included Credits | Overage Rate                 |
+| -------- | ---------------- | ---------------------------- |
+| Starter  | 6,000 per year   | €0.05 per additional credit  |
+| Pro      | 30,000 per year  | €0.04 per additional credit  |
+| Business | 120,000 per year | €0.035 per additional credit |
 
 {% hint style="info" %}
 **Pages are calculated based on successfully processed documents.**
@@ -89,3 +89,15 @@ You will be billed as soon as you complete your subscription payment online.
 Payment is required upfront to access the platform and the features included in your plan.
 
 Enterprise customers have access to different billing methods, please reach out to us directly.
+
+## Frequently Asked Questions
+
+### How do additional credit charges appear on the invoice?
+
+Additional credit usage is itemized separately, on the invoice as "overage charges".
+
+The invoice will show:
+
+* your selected [plan](plans.md)'s base fee
+* any additional credits consumed beyond your plan's included credits
+* fee per credit
