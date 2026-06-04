@@ -1,7 +1,7 @@
 ---
 description: >-
-  Extraction models enable structured data extraction based on predefined or
-  custom fields configured for specific document types.
+  Extraction models enable structured data extraction based on fields, which can
+  be configured for any document type.
 icon: print-magnifying-glass
 ---
 
@@ -9,7 +9,7 @@ icon: print-magnifying-glass
 
 ## What is an Extraction Model?
 
-An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents using Optical Character Recognition (OCR) combined with data extraction techniques.
+An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents using Optical Character Recognition (OCR) combined with advanced data extraction techniques.
 
 Each model defines a set of fields called a [data-schema.md](data-schema.md "mention"). Fields could include "Supplier Name," "Invoice Number," or "Total Amount" for an Invoice Model, as an example. The system will then identify and extract data from uploaded files according to these field definitions.
 
@@ -78,3 +78,31 @@ Example sentences to modify your data schema with the AI Assistant:
   Hint: boolean field names should start with "is" or "has".
 * _Rename the "date" field to "invoice date"_
 * _Change the "document\_type" field to a classification field. The expected classes are "INVOICE" and "RECEIPT"_
+
+## Optimizing Model Results
+
+In order to optimize the accuracy of a given model, the first step is to follow the [data-schema-best-practices.md](data-schema-best-practices.md "mention") to fine-tune the base model configuration. If you started from a template in the catalog, it is usually necessary to adapt it to your specific documents and use case.
+
+After this step, if there are still some lingering issues or unexpected behavior, there are further refinements available.
+
+### Problems With Specific Templates
+
+When the overall accuracy is good, but there are problems on specific document templates.
+
+Consider activating [improving-accuracy.md](optional-features/improving-accuracy.md "mention"). This allows adding guidance to specific fields in specific templates, meaning you can target problem areas while leaving other templates untouched.
+
+### High Accuracy Required
+
+When you need very high precision for all the documents that you process.
+
+Consider enabling [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention"). This uses multiple models for higher accuracy **and** flags problematic fields.
+
+Flagged fields can be sent for [human review](extraction-models-overview.md#end-user-review) or the document can be rejected entirely, based on business rules defined on your side.
+
+### End User Review
+
+When you are displaying the documents to end users, typically when they can review and correct the extracted data.
+
+You can enable [polygons-bounding-boxes.md](optional-features/polygons-bounding-boxes.md "mention") so that the location of the extracted fields can be shown (this is always activated in the [live-test.md](../models/live-test.md "mention")). In this way, it will be much easier for your users to find erroneous fields correct them.
+
+This is even more powerful when combined with [confidence scores](optional-features/automation-confidence-score.md), you can flag fields needing attention directly in your forms.

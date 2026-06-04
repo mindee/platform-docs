@@ -115,6 +115,38 @@ Then, in your data processing flow, simply ignore the extra field.
 
 As a reminder, the number of fields in the Data Schema has no impact on pricing.
 
+## Best Practices for Different Regions or Languages
+
+It's important to first make the distinction between _representation_ and _content_.
+
+Representation meaning that equivalent content can be showed or displayed differently (for language, this is a translation).
+
+Content meaning that the structure of the data is different, regardless of its representation (language).
+
+In the context of a Data Schema, the optimal configuration mainly depends on whether the data you need to extract (the content) changes depending on the region or language.
+
+Typically the follow-up question is: should I use a single model or multiple models?
+
+### When to use different Models
+
+If the data changes considerably, it will be beneficial to have different models for different regions.\
+For example:
+
+* different tax lines/calculations on invoices
+* specific fields on ID documents
+* different reporting on energy bills
+
+Having different models to better fit the data to extract will generally provide more accurate results.\
+It will also allow having specific [#field-extraction-guidelines](data-schema-best-practices.md#field-extraction-guidelines "mention").
+
+### When to use a single Model
+
+On the other hand, if the data to extract does not vary significantly, even when the language changes, there is generally no need to have different models.\
+For example:
+
+* same document, different language (multilingual countries like Belgium, Canada, India, etc)
+* same data to extract, even if the document changes (only a subset of data is required)
+
 ## Frequently Asked Questions
 
 ### When should I use Data Schema guidelines vs RAG guidelines?
@@ -161,38 +193,6 @@ For example, a model for French invoices may use "TVA Intracommunautaire" as the
 
 Best is to try both using the [live-test.md](../models/live-test.md "mention") feature.
 
-### What are best practices for handling different regions or languages?
-
-It's important to first make the distinction between _representation_ and _content_.
-
-Representation meaning that equivalent content can be showed or displayed differently (for language, this is a translation).
-
-Content meaning that the structure of the data is different, regardless of its representation (language).
-
-In the context of a Data Schema, the optimal configuration mainly depends on whether the data you need to extract (the content) changes depending on the region or language.
-
-Typically the follow-up question is: should I use a single model or multiple models?
-
-#### When to use different Models
-
-If the data changes considerably, it will be beneficial to have different models for different regions.\
-For example:
-
-* different tax lines/calculations on invoices
-* specific fields on ID documents
-* different reporting on energy bills
-
-Having different models to better fit the data to extract will generally provide more accurate results.\
-It will also allow having specific [#field-extraction-guidelines](data-schema-best-practices.md#field-extraction-guidelines "mention").
-
-#### When to use a single Model
-
-On the other hand, if the data to extract does not vary significantly, even when the language changes, there is generally no need to have different models.\
-For example:
-
-* same document, different language (multilingual countries like Belgium, Canada, India, etc)
-* same data to extract, even if the document changes (only a subset of data is required)
-
 ## Next Steps
 
-Once you are satisfied with your Data Schema, you'll likely to want to use one of our [Broken link](/broken/pages/iREYUuRlIfMqqSxTfHZF "mention") to connect your model with your platform.
+Once you are satisfied with your Data Schema, you'll likely to want to use one of our [Integrations](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/integrations "mention") to connect your model with your platform.
