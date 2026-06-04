@@ -48,52 +48,6 @@ Yes, the API supports webhook integration for asynchronous document processing.
 
 </details>
 
-### Models performance
-
-<details>
-
-<summary>What new document types are supported?</summary>
-
-You can create a custom extraction model for any document type.
-
-</details>
-
-<details>
-
-<summary>Which countries/languages are supported?</summary>
-
-V2 models are optimized for global use, we support [most languages and alphabets](https://docs.mindee.com/models/data-schema#extraction-guidelines), and thus documents from most countries.
-
-</details>
-
-<details>
-
-<summary>Can I create custom extraction templates?</summary>
-
-Yes, V2 allows full control for the users with interactive model customization.
-
-</details>
-
-<details>
-
-<summary>What file formats are supported?</summary>
-
-Supported formats include PDF, PNG, JPEG, and TIFF, similar to V1. Multi-page PDFs and high-res images are fully compatible.
-
-[#accepted-files](../integrations/technical-limitations.md#accepted-files "mention")
-
-</details>
-
-<details>
-
-<summary>How do I optimize performances for my specific use case?</summary>
-
-In order to optimize the performance of a given model, the first step is to follow the [data-schema-best-practices.md](../extraction-models/data-schema-best-practices.md "mention") so that the model performances are globally better.
-
-If after this step, some unexpected behavior happen on some isolated templates, [improving-accuracy.md](../extraction-models/optional-features/improving-accuracy.md "mention") can to be used to increase performances on these given templates, with no regression on the rest of the flow.
-
-</details>
-
 ### Development & Testing
 
 <details>

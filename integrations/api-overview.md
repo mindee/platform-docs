@@ -40,7 +40,7 @@ You can ask for specific code samples from the documentation AI.
 
 Use the "Ask" button at the top of any page, or click below:
 
-<button type="button" class="button primary" data-action="ask" data-query="Write a code sample for my extraction model, ask for my model ID and  language first" data-icon="gitbook-assistant">Ask "Write a code sample for my extraction model, ask for my model ID and language first"</button>
+<button type="button" class="button primary" data-action="ask" data-query="Write a code sample for a model, but first, list available model types, ask for model type, model ID, and  language" data-icon="gitbook-assistant">Ask "Write a code sample for me."</button>
 {% endhint %}
 
 Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby**, **Java**, **.NET** (C#).
@@ -76,3 +76,18 @@ You can decide on using either the polling flow or the webhook flow.
 [polling-for-results.md](polling-for-results.md "mention") uses a GET route, and is better suited for testing and small volumes.
 
 [webhooks.md](webhooks.md "mention") sends directly to your server, and is more suited for heavy production use.
+
+## Developing and Testing
+
+A typical release life cycle could look like this:
+
+1. Start with a new model. If you are making adjustments to an existing production model, we recommend copying it and only making changes to the copy.\
+   Consider adding versioning info to the copied model's name, i.e. "Invoices v1.1" or "Receipts 2026-05-17".
+2. Adjust your code as needed and test.
+3. When deploying your code to testing or production environments, use the new model's ID.
+4. After deployment, [lock your production model](../models/model-settings.md#locking-the-data-schema) to avoid accidental changes.
+5. `GOTO 1`
+
+
+
+Note: we do not provide separate environments for development, staging, production, etc.
