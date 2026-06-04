@@ -54,7 +54,7 @@ Start with the Starter Plan if you're processing fewer than 100 pages per day. F
 
 ## Feature Comparison
 
-"Number of credits included" is for all types of models combined ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models) and [Utility](/broken/pages/jqljfGxEsmDTKtOnQDrR)).
+"Number of credits included" is for all types of models combined ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models), [Split](../split-models/split.md), [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models), etc).
 
 Some features are only applicable to extraction models.
 
@@ -102,6 +102,14 @@ However, if you are consistently going over your plan's included credits, consid
 ### Can I purchase additional credits?
 
 Additional credits are provided automatically based on your usage, there is no need to purchase credits.
+
+### Are there any differences between annual and monthly plans?
+
+Aside from the lower price, annual subscriptions provide more flexibility in credit usage.
+
+For **annual plans**, all included credits are available at any time during the subscription year. Meaning all available credits can be used as you wish throughout the year. If you use more, they are billed as additional usage.\
+​\
+For **monthly plans**, credits are available each month. If you use less, they are lost; if you use more, they are billed as additional usage.
 
 ### Can I add features from another plan (à la carte pricing)?
 
