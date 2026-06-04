@@ -1,5 +1,7 @@
 ---
-description: API reference for manually integrating OCR models.
+description: >-
+  Help for manually integrating OCR models: API reference, test client, and cURL
+  samples.
 ---
 
 # OCR Models

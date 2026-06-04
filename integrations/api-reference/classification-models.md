@@ -1,5 +1,7 @@
 ---
-description: API reference for manually integrating Classification models.
+description: >-
+  Help for manually integrating Classification models: API reference, test
+  client, and cURL samples.
 ---
 
 # Classification Models

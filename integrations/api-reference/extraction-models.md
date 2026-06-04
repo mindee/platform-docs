@@ -1,5 +1,7 @@
 ---
-description: API reference for manually integrating Extraction models.
+description: >-
+  Help for manually integrating Extraction models: API reference, test client,
+  and cURL samples.
 layout:
   width: default
   title:
@@ -15,6 +17,8 @@ layout:
   metadata:
     visible: true
   tags:
+    visible: true
+  actions:
     visible: true
 ---
 

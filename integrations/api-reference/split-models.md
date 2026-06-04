@@ -1,5 +1,7 @@
 ---
-description: API reference for manually integrating Split models.
+description: >-
+  Help for manually integrating Split models: API reference, test client, and
+  cURL samples.
 ---
 
 # Split Models

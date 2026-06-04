@@ -1,5 +1,7 @@
 ---
-description: API reference for manually integrating Crop models.
+description: >-
+  Help for manually integrating Crop models: API reference, test client, and
+  cURL samples.
 ---
 
 # Crop Models
