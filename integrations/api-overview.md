@@ -40,7 +40,7 @@ You can ask for specific code samples from the documentation AI.
 
 Use the "Ask" button at the top of any page, or click below:
 
-<button type="button" class="button primary" data-action="ask" data-query="Write a code sample for a model, but first, list available model types and a brief description (Extraction, Split, Crop, Classify, OCR). Then ask for model type, model ID, and  language" data-icon="gitbook-assistant">Ask "Write a code sample for me."</button>
+<button type="button" class="button primary" data-action="ask" data-query="List available model types and a brief description (Extraction, Split, Crop, Classify, OCR), allow to pick one. Then list available SDK languages and allow to pick one. Finally ask for model ID, and generate the code sample for polling." data-icon="gitbook-assistant">Ask "Write a code sample for me."</button>
 {% endhint %}
 
 Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby**, **Java**, **.NET** (C#).
