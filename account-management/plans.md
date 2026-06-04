@@ -101,7 +101,7 @@ However, if you are consistently going over your plan's included credits, consid
 
 ### Can I purchase additional credits?
 
-Additional credits are provided automatically based on your usage, there is no need to purchase additional credits.
+Additional credits are provided automatically based on your usage, there is no need to purchase credits.
 
 ### Can I add features from another plan (à la carte pricing)?
 
