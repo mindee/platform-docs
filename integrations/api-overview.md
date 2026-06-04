@@ -1,5 +1,5 @@
 ---
-description: General description of how to integrate the Mindee API.
+description: Overview of connecting your system to the Mindee API.
 icon: print-magnifying-glass
 ---
 
@@ -7,7 +7,11 @@ icon: print-magnifying-glass
 
 ## General Description
 
-The Mindee API is RESTful, and returns data in a JSON format.
+Mindee is ideal for handling large amounts of documents. The vast majority of our users will want to connect Mindee to their systems using our APIs.
+
+It's then possible to design any number of different use cases around document processing. These can be for purely internal processing or to provide final end users with a polished experience.
+
+The bare Mindee HTTP API is RESTful, and returns data in a JSON format.
 
 In this section we'll go over the major steps required for a successful integration, and link to the relevant sections of the documentation.
 
