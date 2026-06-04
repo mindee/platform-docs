@@ -40,7 +40,13 @@ To access your Stripe customer portal, click on the "Manage Subscription" button
 
 ### Access Invoices
 
-You can download past invoices anytime on your Stripe account.
+Your past invoices are available in the "Invoice History" section of your organization's billing page.
+
+From there you can also pay any outstanding invoices and download payment receipts.
+
+Note that only `owner` or `admin` members may access the Invoice History section, for other members it is not present on the page at all.
+
+Additionally, you can download past invoices or pay any outstanding invoices from your Stripe account.
 
 {% hint style="info" %}
 Invoices are issued automatically at the start of each billing period.
