@@ -89,7 +89,7 @@ After this step, if there are still some lingering issues or unexpected behavior
 
 When the overall accuracy is good, but there are problems on specific document templates.
 
-Consider activating [improving-accuracy.md](optional-features/improving-accuracy.md "mention"). This allows adding guidance to specific fields in specific templates, meaning you can target problem areas while leaving other templates untouched.
+For this you'll want to activate [improving-accuracy.md](optional-features/improving-accuracy.md "mention"). This allows adding guidance to specific templates, meaning you can target problem documents while leaving others unaffected.
 
 ### High Accuracy Required
 
