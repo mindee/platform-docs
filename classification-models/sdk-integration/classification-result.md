@@ -7,8 +7,6 @@ icon: brain-circuit
 
 # Classification Result
 
-{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
-
 {% include "../../.gitbook/includes/result-response-requirements.md" %}
 
 ## Accessing the Classification

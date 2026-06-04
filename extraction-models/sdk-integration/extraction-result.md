@@ -7,8 +7,6 @@ icon: brain-circuit
 
 # Extraction Result
 
-{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
-
 {% include "../../.gitbook/includes/result-response-requirements.md" %}
 
 ## Accessing Data Schema Fields

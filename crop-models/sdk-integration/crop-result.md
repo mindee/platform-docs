@@ -5,8 +5,6 @@ icon: brain-circuit
 
 # Crop Result
 
-{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
-
 {% include "../../.gitbook/includes/result-response-requirements.md" %}
 
 ## Accessing Crop Items
