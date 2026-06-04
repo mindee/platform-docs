@@ -404,6 +404,8 @@ model_params = {
 {% endtab %}
 
 {% tab title="Java" %}
+Remember to use the appropriate product/model class, examples use `ExtractionParameters`.
+
 ```java
 var modelParams = ExtractionParameters
     // ID of the model, required.
@@ -419,6 +421,8 @@ var modelParams = ExtractionParameters
 {% endtab %}
 
 {% tab title=".NET" %}
+Remember to use the appropriate product/model class, examples use `ExtractionParameters`.
+
 ```csharp
 var modelParams = new ExtractionParameters(
     // ID of the model, required.
