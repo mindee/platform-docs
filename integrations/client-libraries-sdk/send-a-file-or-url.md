@@ -153,7 +153,7 @@ polling_options = {
 {% endtab %}
 
 {% tab title="Java" %}
-When polling you really only need to set the `modelId` .&#x20;
+When polling you really only need to set the `modelId` . Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
 
 ```java
 var modelParams = ExtractionParameters
@@ -181,7 +181,7 @@ var pollingOptions = PollingOptions
 {% endtab %}
 
 {% tab title=".NET" %}
-When polling you really only need to set the `modelId` .
+When polling you really only need to set the `modelId`. Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
 
 ```csharp
 var modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
@@ -293,10 +293,10 @@ puts response.inference
 {% tab title="Java" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetInference` method:
+Use the `enqueueAndGetInference` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
 
 ```java
-InferenceResponse response = mindeeClient.enqueueAndGetResult(
+var response = mindeeClient.enqueueAndGetResult(
     // Use the appropriate product class
     ExtractionResponse.class,
     inputSource,
@@ -314,10 +314,10 @@ System.out.println(response.getInference().toString());
 {% tab title=".NET" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `EnqueueAndGetResultAsync` method:
+Use the `EnqueueAndGetResultAsync` method. Remember to use the appropriate product/model class, examples use `ExtractionResponse`.
 
 ```csharp
-var response = await mindeeClient.EnqueueAndGetResultAsync(
+var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(
     inputSource
     , modelParams
     // optional, set only if having timeout issues.
@@ -405,7 +405,7 @@ model_params = {
 
 {% tab title="Java" %}
 ```java
-var modelParams = InferenceParameters
+var modelParams = ExtractionParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
     
@@ -420,7 +420,7 @@ var modelParams = InferenceParameters
 
 {% tab title=".NET" %}
 ```csharp
-var modelParams = new InferenceParameters(
+var modelParams = new ExtractionParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
     
@@ -699,10 +699,10 @@ String jobId = response.getJob().getId();
 // from `enqueueAndGetInference` method (typically for polling)
 // String jobId = response.getInference().getJob().getId();
 
-JobResponse jobResponse = mindeeClient.getJob(jobId);
+var jobResponse = mindeeClient.getJob(jobId);
 
 // some metadata, check your IDE for all available attributes
-Job job = jobResponse.getJob();
+var job = jobResponse.getJob();
 System.out.println(job.getStatus());
 System.out.println(job.getCreatedAt());
 System.out.println(job.getCompletedAt());

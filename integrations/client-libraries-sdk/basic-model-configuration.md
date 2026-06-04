@@ -87,7 +87,7 @@ inference_params = {
 
 {% tab title="Java" %}
 ```java
-InferenceParameters params = InferenceParameters
+var modelParams = ExtractionParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
     
@@ -104,7 +104,7 @@ InferenceParameters params = InferenceParameters
 
 {% tab title=".NET" %}
 ```csharp
-var modelParams = new InferenceParameters(
+var modelParams = new ExtractionParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
 

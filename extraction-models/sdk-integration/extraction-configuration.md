@@ -218,7 +218,7 @@ To download the JSON string appropriate for your model:
 
     <figure><img src="../../.gitbook/assets/json-schema-download.png" alt="The &#x22;Download Data Schema&#x22; button" width="530"><figcaption></figcaption></figure>
 
-#### Code Sample
+### Code Sample
 
 The Data Schema can be passed as a JSON string or by instantiating the appropriate classes.
 
