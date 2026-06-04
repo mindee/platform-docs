@@ -130,7 +130,7 @@ inference_params = {
 Only the `modelId` is required.
 
 ```java
-InferenceParameters params = InferenceParameters
+var modelParams = ExtractionParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
 
@@ -157,7 +157,7 @@ InferenceParameters params = InferenceParameters
 Only the `modelId` is required.
 
 ```csharp
-var modelParams = new InferenceParameters(
+var modelParams = new ExtractionParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
 
@@ -181,21 +181,27 @@ var modelParams = new InferenceParameters(
 
 ## Dynamic Model Options
 
-These options allow changing how the model performs an inference on a per-call basis.
+These options allow changing how the model performs an inference on a **per-call basis**.
 
 These features can **only** be used via API.
 
 {% hint style="info" %}
-These advanced features are not generally meant for improving model accuracy.
+These advanced features are not meant for improving the  model's **overall** accuracy.
 
-Instead, make sure the Data Schema has been [properly optimized](../data-schema.md#performance-optimization).&#x20;
+Instead, make sure the Data Schema has been [properly optimized](../data-schema.md#performance-optimization).
 {% endhint %}
 
 ### Text Context
 
 Give additional guidelines to the model to help it better process a specific document.
 
+Useful when you have important context on the document, **and** when there isn't sufficient information on the document itself to provide that context to the model.
+
 This is a free-form text format.
+
+As an example, you could remove ambiguity for country or regional differences:
+
+"The parts supplier is in Canada, these amounts are in CAD", if there is no address on the document.
 
 ### Data Schema
 
@@ -223,16 +229,16 @@ If passed as a JSON string, it will be validated in the client before being sent
 Only the `model_id` is required.
 
 ```python
-inference_params = InferenceParameters(
+model_params = InferenceParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
-    
+
     # Text Context
     text_context="this is an invoice.",
-    
+
     # Data Schema
     data_schema="{ ... JSON DATA ... }",
-    
+
     # ... any other options ...
 )
 ```
@@ -245,13 +251,13 @@ Only the `modelId` is required.
 const modelParams = {
   // ID of the model, required.
   modelId: "MY_MODEL_ID",
-  
+
   // Text Context
   textContext: "this is an invoice.",
-    
+
   // Data Schema
   dataSchema: "{ ... JSON DATA ... }",
-  
+
   // ... any other options ...
 };
 ```
@@ -280,16 +286,16 @@ $modelParams = new InferenceParameters(
 Only the `model_id` is required.
 
 ```ruby
-inference_params = {
+model_params = {
     # ID of the model, required.
     model_id: 'MY_MODEL_ID',
-    
+
     # Text Context
     text_context: "this is an invoice.",
-    
+
     # Data Schema
     data_schema: "{ ... JSON DATA ... }",
-    
+
     # ... any other options ...
 }
 ```
@@ -299,16 +305,16 @@ inference_params = {
 Only the `modelId` is required.
 
 ```java
-InferenceParameters params = InferenceParameters
+var modelParams = ExtractionParameters
     // ID of the model, required.
     .builder("MY_MODEL_ID")
-    
+
     // Text Context
     .textContext("this is an invoice.")
-    
+
     // Data Schema
     .dataSchema("{ ... JSON DATA ... }")
-    
+
     // ... any other options ...
 
     // complete the builder
@@ -320,7 +326,7 @@ InferenceParameters params = InferenceParameters
 Only the `modelId` is required.
 
 ```csharp
-var modelParams = new InferenceParameters(
+var modelParams = new ExtractionParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID"
     
