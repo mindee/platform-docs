@@ -21,6 +21,8 @@ API routes and schemas are organized according to the type of model:
 * [classification-models.md](classification-models.md "mention")
 * [ocr-models.md](ocr-models.md "mention")
 
+For each section you can find the complete documentation of all routes, including cURL samples and a built-in testing tool.
+
 Here is a working example of the built-in test client for an Extraction Model. Other models are similar.
 
 <figure><img src="../../.gitbook/assets/api-example_post-inference.png" alt=""><figcaption></figcaption></figure>
