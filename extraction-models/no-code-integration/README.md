@@ -11,7 +11,7 @@ The Mindee API is well-suited to integrations in no-code and low-code platforms.
 
 It's a relatively simple RESTful API so most tools and platforms can be integrated using HTTP nodes.
 
-## Officially Supported Integration
+## Officially Supported Integrations
 
 We're hard at work providing official integrations for platforms that allow it.
 
@@ -25,7 +25,7 @@ Don't see support for your favorite platform? [Make a feature request!](https://
 
 ## Generic No-Code Integration
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Only use this method if your no-code platform does not have an official integration.
 {% endhint %}
 

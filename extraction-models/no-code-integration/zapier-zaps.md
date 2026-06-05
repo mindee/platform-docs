@@ -1,5 +1,5 @@
 ---
-description: Integrating Mindee in Zapier zaps.
+description: Integrating Mindee in Zapier Zaps.
 ---
 
 # Zapier Zaps
@@ -14,7 +14,7 @@ Once you have a trigger working, you can connect it to the Mindee action.
 
 ## Add Mindee Data Extraction to a Zap <a href="#add-mindee-to-a-make.com-scenario" id="add-mindee-to-a-make.com-scenario"></a>
 
-You can use the Mindee App as an action step in any zap.
+You can use the [Mindee Zapier App](https://zapier.com/apps/mindee-ocr) as an action step in any Zap.
 
 ### Setup App
 
@@ -89,4 +89,8 @@ When complete, it should look like this:
 
 Congrats, everything works!
 
-After the data is extracted, it will be usable by any Step in your Zap.
+## Next Steps
+
+Now that you have Mindee integrated, you can use the results in any Step of your Zap.
+
+{% include "../../.gitbook/includes/no-code-after-workflows.md" %}

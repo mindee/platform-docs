@@ -72,3 +72,9 @@ Click on "Save".
 
 This is done automatically by connecting an appropriate module.
 {% endhint %}
+
+## Next Steps
+
+Now that you have Mindee integrated, you can use the results in any Make action.
+
+{% include "../../.gitbook/includes/no-code-after-workflows.md" %}
