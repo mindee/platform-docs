@@ -37,7 +37,7 @@ The Mindee Support team may request the Model ID to diagnose issues and provide 
 
 {% include "../.gitbook/includes/model-storage-policy.md" %}
 
-## Copying the Model
+## Copy the Model
 
 It can be useful to copy an existing model for some types of workflows.
 
@@ -45,9 +45,11 @@ You can have a base "template" model that is not called directly, but is used to
 
 You can also us this as way for testing changes to a model. For example you can copy a model used in production, modify the copy, and test the modifications in staging. Once the modifications are tested successfully, switch production over to the new model.
 
-## Locking the Data Schema
+## Lock the Model
 
-To prevent unintended changes once your model configuration is finalized, you have the option to lock it.
+To prevent unintended changes once your model configuration is finalized, you have the option to lock the model.
+
+This will prevent all changes to the model's Data Schema and Optional Features.
 
 This is useful for ensuring that the model remains stable for production use.
 
@@ -57,7 +59,7 @@ Locking the Model is an **irreversible action**, you will **not** be able to unl
 **Note**: you can copy a locked model and modify the copy.
 {% endhint %}
 
-## Deleting the Model
+## Delete the Model
 
 You can delete a model at any time.
 
