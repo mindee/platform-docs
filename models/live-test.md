@@ -36,7 +36,7 @@ You can always go back to the Live Test page by clicking on the left-hand model 
 ## Uploading a File for Testing
 
 1. Upload a valid file (PDF or image) directly into the interface.\
-   You can click the "Upload Document" button or drag and drop into the center of the window.
+   You can click the "Upload a Document" button or drag and drop into the center of the window.
 2. Mindee runs the current version of your model on the document.
 3. The extracted fields appear on the right-hand side, alongside the image preview.
 4. Each field is:
