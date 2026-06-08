@@ -7,7 +7,7 @@ icon: rabbit-running
 
 ## Install the Client Library
 
-Install the Mindee Client Library for your language or framework of choice
+Install the Mindee SDK for your language or framework of choice
 
 {% include "../../.gitbook/includes/installation-instructions.md" %}
 

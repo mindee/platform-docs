@@ -3,7 +3,7 @@ title: sample-code-python-split
 ---
 
 Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.\
-Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.36.0** or greater.
+Requires the [Mindee Python SDK](https://pypi.org/project/mindee/) version **4.36.0** or greater.
 
 {% code lineNumbers="true" %}
 ```python

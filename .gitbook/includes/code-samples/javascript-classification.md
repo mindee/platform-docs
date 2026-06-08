@@ -3,7 +3,7 @@ title: sample-code-javascript-classification
 ---
 
 Requires Node.js ≥ 20.1. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js client library](https://www.npmjs.com/package/mindee/) version **5.0.0** or greater.
+Requires the [Mindee Node.js SDK](https://www.npmjs.com/package/mindee/) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript
@@ -44,4 +44,3 @@ const classification = response.inference.result.classification;
 {% endcode %}
 
 Also take a look at the [Classification Result](https://docs.mindee.com/classification-models/sdk-integration/classification-result) documentation.
-

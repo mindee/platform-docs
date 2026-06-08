@@ -3,7 +3,7 @@ title: sample-code-ruby-crop
 ---
 
 Requires Ruby ≥ 3.2.\
-Requires the [Mindee Ruby client library](https://rubygems.org/gems/mindee) version **5.2.1** or greater.
+Requires the [Mindee Ruby SDK](https://rubygems.org/gems/mindee) version **5.2.1** or greater.
 
 {% code lineNumbers="true" %}
 ```ruby
