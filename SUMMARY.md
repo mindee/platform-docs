@@ -62,7 +62,7 @@
 
 ## OCR Models
 
-* [OCR Model Overview](ocr-models/ocr.md)
+* [Raw OCR Model Overview](ocr-models/ocr.md)
 * [SDK Integration](ocr-models/sdk-integration/README.md)
   * [OCR Quick Start](ocr-models/sdk-integration/ocr-quick-start.md)
   * [OCR Result](ocr-models/sdk-integration/ocr-result.md)

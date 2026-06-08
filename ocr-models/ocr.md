@@ -3,13 +3,13 @@ description: Automatically extract the raw text from each page of a document.
 icon: text
 ---
 
-# OCR Model Overview
+# Raw OCR Model Overview
 
-A file sent to the OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
+A file sent to the Raw OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
 
-## Create an OCR Model
+## Create a Raw OCR Model
 
-OCR models are always custom, there are no templates available in the Catalog.
+Raw OCR models are always custom, there are no templates available in the Catalog.
 
 Each OCR model gets its own unique model ID when you create it.
 
@@ -18,7 +18,7 @@ Each OCR model gets its own unique model ID when you create it.
    This step will also generate the model's unique ID.
 3. You can now use the **Live Test** tab to process documents.<br>
 
-Your OCR utility is now available in your **Models** tab:
+Your OCR model is now available in your **Models** tab:
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
