@@ -38,12 +38,14 @@ sequenceDiagram
     client->>client: process JSON result
 ```
 
-### Remarks
+## Sending Files Using Polling
+
+When using the SDKs, the polling process is completely transparent to you.
+
+You only need to call a single method and await its return.
+
+For more details, see: [#polling-configuration](client-libraries-sdk/send-a-file-or-url.md#polling-configuration "mention")
+
+#### Stopping the Process
 
 Once a request has been sent, it is not possible to stop or cancel the processing.
-
-## Specify on File Upload
-
-This is the default behavior as described in the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
-
-Detailed instructions for your language of choice are detailed in the [#send-with-polling](client-libraries-sdk/send-a-file-or-url.md#send-with-polling "mention") section.
