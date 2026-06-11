@@ -23,6 +23,10 @@ For example, assuming 1 credit per page:
 * A JPEG file ⇒ 1 credit
 
 {% hint style="info" %}
-Currently pricing is on a 1 to 1 ratio for all models — one page consumes one credit.
+**Base** pricing is on a 1 to 1 ratio — one page consumes one credit.
+
+
+
+Depending on the model type and options activated, price per page may be lower or higher.
 {% endhint %}
 
