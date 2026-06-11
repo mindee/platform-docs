@@ -23,12 +23,12 @@ For example, assuming 1 credit per page:
 * A JPEG file ⇒ 1 credit
 
 {% hint style="info" %}
-**Base** credit usage is on a 1 to 1 ratio — one page consumes one credit.
+Ratio of 1 credit per page is for demonstrative purposes.
 
-Depending on the model type and options activated, price per page may be lower or higher.
+Depending on the model type and options activated, credits consumed per page may be lower or higher.
 
 
 
-**Check the model's Pricing Page for the exact amount.**
+**Always check the model's Credit Cost page for the exact amount of credits consumed.**
 {% endhint %}
 
