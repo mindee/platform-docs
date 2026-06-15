@@ -116,6 +116,10 @@
   * [Bank Statement](use-cases/extraction-models/bank-statement.md)
   * [European Vehicle Registration](use-cases/extraction-models/european-vehicle-registration.md)
   * [Nutrition Facts](use-cases/extraction-models/nutrition-facts.md)
+  * [Bank Account Details](use-cases/extraction-models/bank-account-details.md)
+  * [Business Card](use-cases/extraction-models/business-card.md)
+  * [Payslip](use-cases/extraction-models/payslip.md)
+  * [US Healthcare Card](use-cases/extraction-models/us-healthcare-card.md)
 
 ## Community
 
