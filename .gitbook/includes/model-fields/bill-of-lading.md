@@ -4,9 +4,11 @@ title: model-fields_bill-of-lading
 
 Documentation for all fields present in the data schema.
 
-Field _accessors_ are used as the keys for accessing the values in the returned data. On the data schema interface, this is the "Field Name".
+Field _accessors_ are used as the keys for accessing the values in the returned data.
+On the data schema interface, this is the "Field Name".
 
-Field _value types_ indicate how the value is returned by the API. On the data schema interface, this is the "Field Type".
+Field _value types_ indicate how the value is returned by the API.
+On the data schema interface, this is the "Field Type".
 
 <details>
 

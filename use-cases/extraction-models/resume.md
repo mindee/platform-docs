@@ -7,7 +7,7 @@ icon: file-user
 
 # Resume
 
-Documentation for the data schema of the Bill of Lading model.
+Documentation for the data schema of the Bill of Lading model template.
 
 ## Resume Fields
 

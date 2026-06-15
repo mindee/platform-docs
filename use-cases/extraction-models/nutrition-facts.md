@@ -7,7 +7,7 @@ icon: french-fries
 
 # Nutrition Facts
 
-Documentation for the data schema of the Nutrition Facts model.
+Documentation for the data schema of the Nutrition Facts model template.
 
 ## Nutrition Facts Fields
 

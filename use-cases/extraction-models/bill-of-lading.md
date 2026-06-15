@@ -1,13 +1,13 @@
 ---
 description: >-
   Automatically parse Bills of Lading and extract structured shipping data using
-  the pre-trained Bill of Lading model available in the Catalog.
+  the pre-trained Bill of Lading model template available in the Catalog.
 icon: ship
 ---
 
 # Bill of Lading
 
-Documentation for the data schema of the Bill of Lading model.
+Documentation for the data schema of the Bill of Lading model template.
 
 ## Bill of Lading Fields
 

@@ -7,7 +7,7 @@ icon: id-card
 
 # Driver's License
 
-Documentation for the data schema of the Driver's License model.
+Documentation for the data schema of the Driver's License model template.
 
 ## Driver's License Fields
 
