@@ -23,7 +23,7 @@ From the Billing page, you can:
 
 Or simply click here: <a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a>
 
-Only `admin` and `owner` [users](organizations.md#team-members) can access and modify billing details.
+Only "Administrator" and "Owner" [users](organizations.md#team-members) can access and modify billing details.
 
 ## Change Your Plan
 
@@ -48,7 +48,7 @@ Your past invoices are available in the "Invoice History" section of your organi
 
 From there you can also pay any outstanding invoices and download payment receipts.
 
-**Note**: only `owner` or `admin` members may access the Invoice History section, for other members it is not present on the page at all.
+**Note**: only "Administrator" and "Owner" members may access the Invoice History section, for other members it is not present on the page at all.
 
 Additionally, you can download past invoices or pay any outstanding invoices from your Stripe account.
 

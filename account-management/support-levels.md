@@ -12,7 +12,7 @@ icon: hands-holding-heart
 
 Support level by [Plan](plans.md).
 
-<table><thead><tr><th width="195">Support</th><th align="center">Starter</th><th align="center">Pro</th><th align="center">Business</th></tr></thead><tbody><tr><td><strong>Community Support</strong> <a href="https://feedback.mindee.com/">feedback.mindee.com</a></td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td><strong>Chat Support</strong></td><td align="center">❌</td><td align="center"><p>✅</p><p>Dedicated chat</p></td><td align="center"><p>✅</p><p>Dedicated chat</p></td></tr><tr><td><strong>Priority Support</strong></td><td align="center">❌</td><td align="center">❌</td><td align="center"><p>✅</p><p>Priority handling in chat</p></td></tr></tbody></table>
+<table><thead><tr><th width="264.5999755859375">Support</th><th width="151.199951171875" align="center">Starter</th><th align="center">Pro</th><th align="center">Business</th></tr></thead><tbody><tr><td><strong>Community Support</strong> <a href="https://feedback.mindee.com/">feedback.mindee.com</a></td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td><strong>Chat Support</strong></td><td align="center">❌</td><td align="center"><p>✅</p><p>Dedicated chat</p></td><td align="center"><p>✅</p><p>Dedicated chat</p></td></tr><tr><td><strong>Priority Support</strong></td><td align="center">❌</td><td align="center">❌</td><td align="center"><p>✅</p><p>Priority handling in chat</p></td></tr></tbody></table>
 
 ## Support Options <a href="#support-options" id="support-options"></a>
 
