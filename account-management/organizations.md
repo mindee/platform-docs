@@ -94,3 +94,5 @@ Deleting your organization is an **irreversible** action!
 {% endhint %}
 
 If you are a member of an organization with several members, deleting the organization will not delete member's individual accounts.
+
+Deleting an organization will not delete your account.
