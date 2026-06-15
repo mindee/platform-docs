@@ -14,3 +14,4 @@ Documentation for the data schema of the US Healthcare Card model template.
 
 ## US Healthcare Card Fields
 
+{% include "../../.gitbook/includes/model-fields/us-healthcare-card.md" %}
