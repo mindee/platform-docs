@@ -78,7 +78,7 @@ A user must be explicitly added to an organization to access it, except for the 
 
 
 {% hint style="info" %}
-Only one `owner` per organization. Ownership is set at creation and cannot be transferred.
+Only one "Owner" per organization. This owner is set at creation and cannot be transferred.
 {% endhint %}
 
 ## Danger Zone
