@@ -90,7 +90,7 @@ Only one `owner` per organization. Ownership is set at creation and cannot be tr
 You can delete your organization and all its associated data.
 
 {% hint style="danger" %}
-Deleting your organization is an **irreversible** action!
+Deleting your organization is an **irreversible** action, all data will be lost forever!
 {% endhint %}
 
 You must always belong to at least one organization.

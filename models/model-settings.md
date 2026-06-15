@@ -64,6 +64,6 @@ Locking the Model is an **irreversible action**, you will **not** be able to unl
 You can delete a model at any time.
 
 {% hint style="danger" %}
-Deleting a model is an **irreversible action**, you will **never** be able to recover a deleted model!
+Deleting a model is an **irreversible action**, all data will be lost forever!
 {% endhint %}
 
