@@ -93,6 +93,9 @@ You can delete your organization and all its associated data.
 Deleting your organization is an **irreversible** action!
 {% endhint %}
 
-If you are a member of an organization with several members, deleting the organization will not delete member's individual accounts.
+You must always belong to at least one organization.
 
-Deleting an organization will not delete your account.
+If you have a single organization in which you are the sole owner, delete your account instead: the organization will be automatically deleted.
+
+Deleting an organization will not delete user accounts, this includes your account and any other users belonging to the organization.
+

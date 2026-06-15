@@ -33,4 +33,6 @@ You can delete your account and all its associated data.
 Deleting your account is an **irreversible** action!
 {% endhint %}
 
-If you are a member of an organization with several members, deleting your account will not delete the organization.
+Deleting your account will also delete all organizations in which you are the only owner.
+
+Any non-owner users will lose access to these organizations.
