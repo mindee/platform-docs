@@ -22,3 +22,15 @@ If you connect through a 3rd party, such as Google or Github, the email address 
 ### Full Name
 
 You can change your full name as it appears in the Mindee platform to other users in your organization.
+
+## Danger Zone
+
+### Delete Account
+
+You can delete your account and all its associated data.
+
+{% hint style="danger" %}
+Deleting your account is an **irreversible** action!
+{% endhint %}
+
+If you are a member of an organization with several members, deleting your account will not delete the organization.

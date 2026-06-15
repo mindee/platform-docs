@@ -73,12 +73,24 @@ Each organization is governed by a **role system**.
 
 A user must be explicitly added to an organization to access it, except for the **creator**, who is automatically granted the `owner` role.
 
-| Role     | Permissions summary                                                                                                                           |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `member` | <p>Add and manage models<br>Run Live Tests<br>Manage API keys</p>                                                                             |
-| `admin`  | <p>All  <code>member</code> permissions<br>Manage <code>member</code> users</p><p>Update Organization settings<br>Manage Billing settings</p> |
-| `owner`  | <p>All <code>admin</code> permissions</p><p>Can add and remove <code>admin</code> users</p>                                                   |
+| Role     | Permissions summary                                                                                                                          |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `member` | <p>Add and manage models<br>Run Live Tests<br>Manage API keys</p>                                                                            |
+| `admin`  | <p>All <code>member</code> permissions<br>Manage <code>member</code> users</p><p>Update Organization settings<br>Manage Billing settings</p> |
+| `owner`  | <p>All <code>admin</code> permissions</p><p>Can add and remove <code>admin</code> users</p>                                                  |
 
 {% hint style="info" %}
 Only one `owner` per organization. Ownership is set at creation and cannot be transferred.
 {% endhint %}
+
+## Danger Zone
+
+### Delete Organization
+
+You can delete your organization and all its associated data.
+
+{% hint style="danger" %}
+Deleting your organization is an **irreversible** action!
+{% endhint %}
+
+If you are a member of an organization with several members, deleting the organization will not delete member's individual accounts.
