@@ -30,7 +30,7 @@ You can change your full name as it appears in the Mindee platform to other user
 You can delete your account and all its associated data.
 
 {% hint style="danger" %}
-Deleting your account is an **irreversible** action!
+Deleting your account is an **irreversible action**, all data will be lost forever!
 {% endhint %}
 
 Deleting your account will also delete all organizations in which you are the only owner.
