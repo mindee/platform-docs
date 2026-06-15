@@ -28,8 +28,6 @@ This keeps Split models flexible for different documents and workflows.
 
 Each Split model gets its own unique model ID when you create it.
 
-This keeps Split models flexible for different document bundles and workflows.
-
 1. To create a Split model, you need to click on **Models**, and then on **Create your document AI model**.
 2. Scroll to the **Document Utilities** section, click on **Split.**
 3. A pop-up will appear, allowing you to enter the classes you want. Each class corresponds to a document type possibly present in the documents you want to process.\
