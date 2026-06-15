@@ -1,8 +1,8 @@
 ---
 description: >-
-  Automatically parse business cards and extract structured KYC data
-  using the pre-trained Business Card model template available in the Catalog.
-icon: file-lines
+  Automatically parse business cards and extract structured KYC data using the
+  pre-trained Business Card model template available in the Catalog.
+icon: address-book
 ---
 
 # Business Card

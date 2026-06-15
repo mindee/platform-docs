@@ -1,8 +1,8 @@
 ---
 description: >-
-  Automatically parse bank account details and extract structured KYC data
-  using the pre-trained Bank Account Details model template available in the Catalog.
-icon: file-lines
+  Automatically parse bank account details and extract structured KYC data using
+  the pre-trained Bank Account Details model template available in the Catalog.
+icon: piggy-bank
 ---
 
 # Bank Account Details

@@ -19,12 +19,16 @@ Here are some examples of models you can build with Mindee:
 * [**Receipt**](receipt.md)**:** Capture totals, taxes, and line items for expense automation.
 * [**Financial Document**](financial-documents.md)**:** Handle mixed inputs such as invoices or receipts in one workflow.
 * [**Bank Statement**](bank-statement.md)**:** Extract account numbers, statement dates, and transaction data from bank statements.
+* [**Payslip**](payslip.md)**:** Extract salary, employer, pay period, and deduction data from payslips.
+* [**Bank Account Details**](bank-account-details.md)**:** Capture account-holder, IBAN, and banking details for onboarding or KYC flows.
 
 ## Identity & Verification
 
 * [**International ID Card**](international-id-card.md)**:** Capture personal details for KYC or onboarding.
 * [**Passport**](passport.md)**:** Parse official ID data from passports with high accuracy.
 * [**Driver's License**](drivers-license.md)**:** Extract identity details from driver licenses for fast verification.
+* [**Business Card**](business-card.md)**:** Extract names, job titles, email addresses, phone numbers, and company details.
+* [**US Healthcare Card**](us-healthcare-card.md)**:** Capture member, provider, and plan details from US healthcare cards.
 * [**European Vehicle Registration**](european-vehicle-registration.md)**:** Extract registration numbers, VINs, and owner details from EU vehicle registration documents.
 
 ## Travel & Logistics
