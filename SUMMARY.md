@@ -97,6 +97,7 @@
 
 * [Plans](account-management/plans.md)
 * [Support Levels](account-management/support-levels.md)
+* [Account Settings](account-management/account-settings.md)
 * [Organization & Members](account-management/organizations.md)
 * [Billing](account-management/billing.md)
 * [Insights](account-management/insights.md)
