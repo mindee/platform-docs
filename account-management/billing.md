@@ -82,11 +82,11 @@ If you exceed the included credits in your plan, these additional credits will b
 Client errors (HTTP 4xx) and processing errors will **not** count towards your page usage.
 {% endhint %}
 
-To track your page usage, you can consult the [insights.md](insights.md "mention") page.
+For details on tracking your page and credit usage, consult the section: [insights.md](insights.md "mention").
 
-Additionally, API responses contain the number of pages processed in the [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention") object.
+Additionally, API responses contain the number of pages processed. Look in the object: [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention").
 
-Finally, you can be notified when your plan is reaching its limit by setting [#usage-alerts](organizations.md#usage-alerts "mention").
+Finally, you can be notified when your plan is reaching its limit, check the section: [#usage-alerts](organizations.md#usage-alerts "mention").
 
 ## Billing Frequency
 

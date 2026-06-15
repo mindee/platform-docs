@@ -117,7 +117,7 @@ You cannot add features from another plan.
 
 To benefit from a particular feature, you will need to upgrade to the plan which includes it.
 
-### Can Mindee add a feature I need?
+### Can the Mindee team add a feature I need?
 
 {% include "../.gitbook/includes/generic-feature-request.md" %}
 
