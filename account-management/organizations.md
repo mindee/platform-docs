@@ -95,7 +95,10 @@ Deleting your organization is an **irreversible** action!
 
 You must always belong to at least one organization.
 
-If you have a single organization in which you are the sole owner, delete your account instead: the organization will be automatically deleted.
+When you have a single organization in which you are the sole owner:
+
+* To start with a "fresh" organization: first create the new organization, then delete the old one.
+* To delete all your Mindee data: delete your account instead, the organization will be automatically deleted.
 
 Deleting an organization will not delete user accounts, this includes your account and any other users belonging to the organization.
 
