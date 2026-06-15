@@ -36,7 +36,7 @@ You can set an alert to receive an email when your [plan](plans.md) has reached 
 The **Team Members** section lists all users who belong to your organization, along with their:
 
 * **Name & Email** – displayed for clarity.
-* **Role** – `owner` , `admin` or `member`
+* **Role** – `Owner` , `Admin` or `Member`
 * **Status** – shows as _Active_ for members with access.
 
 ### Add New Team Members
@@ -55,29 +55,27 @@ You can only invite members to your organization if you have the the Pro, Busine
 
 Use the "<i class="fa-trash-can">:trash-can:</i>" button to remove a member from your organization.
 
-You must have the `admin` or `owner` role to remove users.
+You must have the "Administrator" or "Owner" role to remove users.
 
-You must have the `owner` role to remove users with the `admin` role.
+You must have the "Owner" role to remove users with the "Administrator" role.
 
 ### Update a Member's Role
 
 Use the "Edit Role" button to change a member's role.
 
-You must have the `admin` or `owner` role to update users.
+You must have the "Administrator" or "Owner" role to update users.
 
-You must have the `owner` role to update users with the `admin` role.
+You must have the "Owner" role to update users with the"Administrator" role.
 
 #### Member Roles
 
 Each organization is governed by a **role system**.
 
-A user must be explicitly added to an organization to access it, except for the **creator**, who is automatically granted the `owner` role.
+A user must be explicitly added to an organization to access it, except for the **creator**, who is automatically granted the "Owner" role.
 
-| Role     | Permissions summary                                                                                                                          |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `member` | <p>Add and manage models<br>Run Live Tests<br>Manage API keys</p>                                                                            |
-| `admin`  | <p>All <code>member</code> permissions<br>Manage <code>member</code> users</p><p>Update Organization settings<br>Manage Billing settings</p> |
-| `owner`  | <p>All <code>admin</code> permissions</p><p>Can add and remove <code>admin</code> users</p>                                                  |
+<table><thead><tr><th width="152.9998779296875">Name</th><th width="132.2001953125">Tag</th><th>Permissions Summary</th></tr></thead><tbody><tr><td>Member</td><td><code>Member</code></td><td>Add and manage models<br>Run Live Tests<br>Manage API keys</td></tr><tr><td>Administrator</td><td><code>Admin</code></td><td><p>All "Member" permissions<br>Manage "Member" users</p><p>Update organization settings<br>Manage billing setting</p></td></tr><tr><td>Owner</td><td><code>Owner</code></td><td><p>All "Administrator" permissions</p><p>Can add and remove "Administrator" users</p></td></tr></tbody></table>
+
+
 
 {% hint style="info" %}
 Only one `owner` per organization. Ownership is set at creation and cannot be transferred.
