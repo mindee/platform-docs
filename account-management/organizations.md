@@ -100,5 +100,5 @@ Deleting an organization will not delete user accounts, this includes your accou
 When you have a single organization in which you are the sole owner:
 
 * To start with a "fresh" organization: first create the new organization, then delete the old one.
-* To delete all your Mindee data: delete your account instead, the organization will be automatically deleted.
+* To delete all your Mindee data: [delete your account](account-settings.md#delete-account) instead, the organization will be automatically deleted.
 
