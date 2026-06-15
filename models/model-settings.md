@@ -70,6 +70,6 @@ Deleting a model is an **irreversible action**, all data will be lost forever!
 Deleting a model also deletes:
 
 * Documents and results stored in the [Documents History](live-test.md#documents-history)
-* Documents and annotations in the [RAG database](../extraction-models/optional-features/improving-accuracy.md), if any
-* API call [Insights](../account-management/insights.md)
+* Documents and annotations in the [RAG database](../extraction-models/optional-features/improving-accuracy.md)
+* All [Insights](../account-management/insights.md), including API calls
 
