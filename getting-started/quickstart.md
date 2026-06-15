@@ -28,7 +28,7 @@ If there are no model templates that exactly fit your needs, you can:
 
 Be sure to make at least one test on a document, using the [live-test.md](../models/live-test.md "mention") feature.
 
-If it doesn't work as expected, you can modify the Data Schema, as explained in [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
+If it doesn't work as expected, you can modify the Data Schema, as explained in: [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
 
 ## Create an API Key
 
@@ -38,7 +38,7 @@ On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.m
 
 You can easily send a file or an URL using one of our officially-supported [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
-For a quick introduction and ready to use code samples, check out the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
+For a quick introduction and ready to use code samples, check: [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention").
 
 ## Process the Result
 

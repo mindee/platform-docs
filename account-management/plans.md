@@ -27,7 +27,7 @@ Mindee offers flexible subscription plans to suit individual developers, growing
 * You can **upgrade at any time**. Downgrades take effect at the end of your billing cycle.
 * Overage charges are calculated automatically based on your plan’s rate.
 
-More information in the [billing.md](billing.md "mention") section.
+More information is available in the section: [billing.md](billing.md "mention").
 
 ## Try Mindee for Free!
 
@@ -87,9 +87,9 @@ Some features are only applicable to extraction models.
 
 Each file processed by Mindee will consume credits based on the number of pages contained in the uploaded file. Only files successfully processed count towards your credit consumption.
 
-The exact amount of credits used per page is available on each model's [pricing.md](../models/pricing.md "mention") page.
+The exact amount of credits used per page is available for each model. For details, consult the section: [pricing.md](../models/pricing.md "mention").
 
-Overall credit consumption can be tracked on the [insights.md](insights.md "mention") page.
+Overall credit consumption can be tracked from a single dashboard. For details, consult the section: [insights.md](insights.md "mention").
 
 ### Are there limits on the number of credits that can be consumed?
 

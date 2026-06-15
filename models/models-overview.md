@@ -26,7 +26,7 @@ Each Model contains a dedicated set of tools:
 
 An **Extraction Model** in the Mindee platform is designed to extract structured data from documents using Optical Character Recognition (OCR) combined with data extraction techniques.
 
-More information is available in the section: [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention")
+More information is available in the section: [Extraction Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models "mention")
 
 ## Utility Models
 
@@ -47,10 +47,10 @@ You can also view your document history.
 
 This allows easily testing a model before integrating the API and going live to production.
 
-More details in the [live-test.md](live-test.md "mention") section.
+For more information, consult:  [live-test.md](live-test.md "mention").
 
 ## Changing Settings
 
 Settings control the high-level options of the model, such as storage duration and processing zone.
 
-All options are detailed in the [model-settings.md](model-settings.md "mention") section.
+For more information on available options, consult:  [model-settings.md](model-settings.md "mention").

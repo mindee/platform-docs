@@ -22,9 +22,9 @@ Properties of the source document which impact response time:
 Remove any pages that are not strictly needed for the data to be extracted, in particular, any pages with dense text. For example, remove the last two pages of invoices containing terms and conditions.
 
 We offer free tooling for removing pages from PDFs before sending them.\
-Take a look at the [#manipulate-pdf-pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages "mention") section.
+For more information, consult: [#manipulate-pdf-pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages "mention").
 
-Some general tips for improving file uploads can be found in the [#guidelines-for-uploading-files](technical-guidelines.md#guidelines-for-uploading-files "mention") section.
+Some general tips for improving file uploads can be found in the section: [#guidelines-for-uploading-files](technical-guidelines.md#guidelines-for-uploading-files "mention").
 
 ## Impact of the Data Schema
 
@@ -42,7 +42,7 @@ Remove any fields that are not required.
 
 If you find yourself adding extra fields or long-winded guidelines to handle different document templates, consider making several models instead. You can then route your documents to a more focused model, simultaneously improving response time and accuracy.
 
-Also take a look at the [data-schema-best-practices.md](../extraction-models/data-schema-best-practices.md "mention") section for more tips on optimizing your models.
+For more information, on optimizing your models, consult:  [data-schema-best-practices.md](../extraction-models/data-schema-best-practices.md "mention").
 
 ## Impact of Processing Options
 

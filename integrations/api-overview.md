@@ -73,9 +73,9 @@ Inference operations are always asynchronous, meaning there is a route to POST t
 
 You can decide on using either the polling flow or the webhook flow.
 
-[polling-for-results.md](polling-for-results.md "mention") uses a GET route, and is better suited for testing and small volumes.
+[polling-for-results.md](polling-for-results.md "mention") - uses a GET route, and is better suited for testing and small volumes.
 
-[webhooks.md](webhooks.md "mention") sends directly to your server, and is more suited for heavy production use.
+[webhooks.md](webhooks.md "mention") - sends directly to your server, and is more suited for heavy production use.
 
 ## Developing and Testing
 

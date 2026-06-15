@@ -86,7 +86,7 @@ For details on tracking your page and credit usage, consult the section: [insigh
 
 Additionally, API responses contain the number of pages processed. Look in the object: [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention").
 
-Finally, you can be notified when your plan is reaching its limit, check the section: [#usage-alerts](organizations.md#usage-alerts "mention").
+Finally, you can be notified when your plan is reaching its limit. For details, check the section: [#usage-alerts](organizations.md#usage-alerts "mention").
 
 ## Billing Frequency
 

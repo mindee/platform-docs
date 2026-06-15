@@ -77,7 +77,7 @@ When creating an API key, **make sure to copy the key and store it somewhere saf
 
 You can then to use it when making API calls.
 
-Take a look at the [#initialize-the-mindee-client](client-libraries-sdk/configure-the-client.md#initialize-the-mindee-client "mention") section for more details.
+For more information, consult: [#initialize-the-mindee-client](client-libraries-sdk/configure-the-client.md#initialize-the-mindee-client "mention").
 
 ## Best practices for API keys
 

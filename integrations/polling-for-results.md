@@ -44,7 +44,7 @@ When using the SDKs, the polling process is completely transparent to you.
 
 You only need to call a single method and await its return.
 
-For more details, see: [#polling-configuration](client-libraries-sdk/send-a-file-or-url.md#polling-configuration "mention")
+For more information, consult: [#polling-configuration](client-libraries-sdk/send-a-file-or-url.md#polling-configuration "mention")
 
 #### Stopping the Process
 
