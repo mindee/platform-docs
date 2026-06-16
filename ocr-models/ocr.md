@@ -10,11 +10,11 @@ icon: text
 When the entire text of a document needs to be extracted, along with position information for each word.
 
 {% hint style="info" %}
-**We use the term "OCR" literally, as the acronym for "Optical Character Recognition".**
+**Most users looking to "OCR a document" are probably looking for the** [**Extraction model**](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models)**.**
+
+We use the term "OCR" literally, as the acronym for "Optical Character Recognition".
 
 Meaning the exact text is returned as raw data, not parsed into structured data as fields.
-
-Most users looking to "OCR a document" are probably looking for the [Extraction model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models).
 {% endhint %}
 
 A file sent to the Raw OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
