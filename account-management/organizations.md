@@ -36,7 +36,7 @@ You can set an alert to receive an email when your [plan](plans.md) has reached 
 The **Team Members** section lists all users who belong to your organization, along with their:
 
 * **Name & Email** – displayed for clarity.
-* **Role** – `Owner` , `Admin` or `Member`
+* **Role** – "Owner", "Administrator", or "Member"
 * **Status** – shows as _Active_ for members with access.
 
 ### Add New Team Members
@@ -73,7 +73,7 @@ Each organization is governed by a **role system**.
 
 A user must be explicitly added to an organization to access it, except for the **creator**, who is automatically granted the "Owner" role.
 
-<table><thead><tr><th width="152.9998779296875">Name</th><th width="134.6002197265625">Tag</th><th>Permissions Summary</th></tr></thead><tbody><tr><td>Member</td><td><code>Member</code></td><td>Add and manage models<br>Run Live Tests<br>Manage API keys</td></tr><tr><td>Administrator</td><td><code>Admin</code></td><td><p>All "Member" permissions<br>Manage "Member" users</p><p>Update organization settings<br>Manage billing setting</p></td></tr><tr><td>Owner</td><td><code>Owner</code></td><td><p>All "Administrator" permissions</p><p>Can add and remove "Administrator" users</p></td></tr></tbody></table>
+<table><thead><tr><th width="168.9998779296875">Role Name</th><th>Permissions Summary</th></tr></thead><tbody><tr><td>Member</td><td>Add and manage models<br>Run Live Tests<br>Manage API keys</td></tr><tr><td>Administrator</td><td><p>All "Member" permissions<br>Manage "Member" users</p><p>Update organization settings<br>Manage billing setting</p></td></tr><tr><td>Owner</td><td><p>All "Administrator" permissions</p><p>Can add and remove "Administrator" users</p></td></tr></tbody></table>
 
 
 
