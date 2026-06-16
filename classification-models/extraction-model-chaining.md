@@ -15,7 +15,7 @@ Note: Classification Models always return a single class regardless of the numbe
 
 When creating your Classification Model, you'll be adding document classes in the creation window.
 
-For each document class, you can link one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Classification Model creation.
+For each document class, you can link one of your [Extraction Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models "mention") for chaining. The Extraction Model must exist prior to the Classification Model creation.
 
 Use the search field to filter available Extraction Models.
 

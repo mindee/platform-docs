@@ -14,6 +14,58 @@ To get the best possible extraction data from a model, the key is to ensure that
 
 Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention") will rely heavily on the Data Schema.
 
+## **Automated Optimization**
+
+Before modifying the fields manually, we highly recommend running the automated optimization tool first.
+
+The tool will analyze your documents and determine how well the Data Schema fits them. From there it will provide suggestions for improving the accuracy of the extractions.
+
+This is completely automatic, you just need to provide the sample documents.
+
+### Running the Analysis
+
+To start the analysis, first upload at least 5 documents using the [live-test.md](../models/live-test.md "mention").
+
+Next, go to the Data Schema page and click the "<i class="fa-message">:message:</i> AI Assistant" button:
+
+<figure><img src="../.gitbook/assets/ai-assistant-button.png" alt="AI Assistant Button" width="158"><figcaption></figcaption></figure>
+
+In the dialog box, click the "<i class="fa-wand-magic-sparkles">:wand-magic-sparkles:</i>" (magic wand) button:
+
+<figure><img src="../.gitbook/assets/ai-assistant-optimize-button.png" alt="AI Assistant Auto Optimize Button" width="408"><figcaption></figcaption></figure>
+
+
+
+Now you can sit back, grab a cup of tea, and wait for the analysis to complete.
+
+The model's Data Schema will be temporarily locked during this process. You can safely navigate away from the model page, the analysis will keep running in the background.
+
+### Applying the Analysis Results
+
+Once the analysis is complete, the chat window will fill with all of the suggested improvements.
+
+For each field, you'll see:
+
+* a checkbox
+* the current "Baseline" description and guidelines, in red
+* the proposed "Optimized" changes, in green
+
+To apply the proposed changes, check each field for which you want to apply the changes.
+
+When you have selected all the fields you wish to modify, click the "Apply Selected" button:
+
+<figure><img src="../.gitbook/assets/ai-assistant-optimize-apply-changes.png" alt="AI Assistant Optimize Apply Changes Button" width="389"><figcaption></figcaption></figure>
+
+You'll receive a confirmation message in the dialog window once the changes have been applied.
+
+### Testing the Optimized Data Schema
+
+To test and validate the changes, head on over to the Live Test, then click on the "Documents History" tab.
+
+From there, open the documents and click on the "Rerun the Document" button:
+
+<figure><img src="../.gitbook/assets/live-test-rerun-document.png" alt="Rerun the Document Button" width="335"><figcaption></figcaption></figure>
+
 ## **Best Practices for Fields**
 
 The heart of the Data Schema. The various properties of fields all have a role to play in getting the best possible accuracy.
@@ -42,7 +94,7 @@ It clearly tells the model to extract only the name of the invoice supplier.
 
 ### Field Type
 
-Try to use one of the [#field-types](data-schema.md#field-types "mention") that best matches how the field is used and how it appears on the document.
+Try to use one of the [field types](data-schema.md#field-types) that best matches how the field is used and how it appears on the document.
 
 For example, while you could use a string for `due_date`, a date field type is definitely better.
 

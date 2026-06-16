@@ -7,7 +7,7 @@ icon: link-horizontal
 
 Use Split ranges to automatically extract document data, allowing for several different extractions on a multi-page file.
 
-Note: Split Models also work on single-page files, in this case the range will always be exactly one page. If you need multiple extraction results on the same page, take a look at [Broken link](/broken/pages/dDgkS7gHL0rVCFqJERsZ "mention") instead.
+Note: Split Models also work on single-page files, in this case the range will always be exactly one page. If you need multiple extraction results on the same page, take a look at [Crop Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models "mention") instead.
 
 ## Extraction Set Up
 
@@ -15,7 +15,7 @@ Note: Split Models also work on single-page files, in this case the range will a
 
 When creating your Split model, you'll be adding document classes in the creation window.
 
-For each document class, you can set one of your [Broken link](/broken/pages/ywb5XsDuWyBy07coiRb0 "mention") for chaining. The Extraction Model must exist prior to the Split Model creation.
+For each document class, you can set one of your [Extraction Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models "mention") for chaining. The Extraction Model must exist prior to the Split Model creation.
 
 Use the search field to filter available extraction models.
 

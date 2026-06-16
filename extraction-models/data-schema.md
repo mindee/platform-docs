@@ -29,7 +29,7 @@ Each field has the following properties:
 
 * Title - human-readable
 * Name - machine-readable, used as the field's key in the API return
-* Type - the type of data to extract, more details in [#field-types](data-schema.md#field-types "mention")
+* Type - the type of data to extract, details in: [#field-types](data-schema.md#field-types "mention")
 * Description (optional) - provides extra context on how the field is used
 * Guidelines (optional) - provides instructions to better extract the field
 
@@ -65,13 +65,13 @@ Some examples for the best field types to use, given a basic invoice extraction 
 
 <table><thead><tr><th>Field Name</th><th width="203.5">Field Type</th><th>Example Return Value</th></tr></thead><tbody><tr><td><strong>Supplier Name</strong></td><td>String</td><td><code>Acme Supplies Ltd.</code></td></tr><tr><td><strong>Supplier Logo</strong></td><td>Object Detection</td><td>Polygon around the logo</td></tr><tr><td><strong>Supplier Company Registration</strong></td><td>Nested Object</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Supplier Company Registration.</em><strong>Number</strong></td><td>String</td><td><code>CRN-20250123</code></td></tr><tr><td><em>Supplier Company Registration.</em><strong>Type</strong></td><td>Classification</td><td><code>VAT NUMBER</code></td></tr><tr><td><strong>Invoice Date</strong></td><td>Date</td><td><code>2025-06-10</code></td></tr><tr><td><strong>Is Past Due</strong></td><td>Boolean</td><td><code>false</code></td></tr><tr><td><strong>Total Amount</strong></td><td>Number</td><td><code>1540.75</code></td></tr><tr><td><strong>Taxes</strong></td><td>Nested Objects Array</td><td><em>See sub-fields below</em></td></tr><tr><td><em>Taxes[0].</em><strong>Rate</strong></td><td>number</td><td><code>0.185</code></td></tr><tr><td><em>Taxes[0].</em><strong>Base</strong></td><td>number</td><td><code>1300.00</code></td></tr><tr><td><em>Taxes[0].</em><strong>Amount</strong></td><td>number</td><td><code>240.75</code></td></tr></tbody></table>
 
-## Global Guidelines
+## Overall Guidelines
 
 In addition to individual field guidelines, a global guideline can be used in your Data Schema.
 
-The global guideline text will apply to all or some fields, depending on your instructions.
+The overall guideline text will apply to all or some fields, depending on your instructions.
 
-Use global guidelines when you want to:
+Use overall guidelines when you want to:
 
 * Generalize instructions to several specific fields. For example:
   * _"Number fields related to amounts should always have 3 decimal places."_
