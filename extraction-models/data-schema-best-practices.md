@@ -62,7 +62,7 @@ You'll receive a confirmation message in the dialog window once the changes have
 
 To test and validate the changes, head on over to the Live Test, then click on the "Documents History" tab.
 
-From there, open the documents and click on the "Rerun the Document" button:
+From there, open the documents and click on the "Rerun Document" button (it's a restart icon):
 
 <figure><img src="../.gitbook/assets/live-test-rerun-document.png" alt="Rerun the Document Button" width="335"><figcaption></figcaption></figure>
 
