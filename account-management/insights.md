@@ -32,29 +32,29 @@ All Data Views will show the total usage, at the bottom of the page:
 
 ### Traffic View
 
-The number of calls and the number of pages that were successfully processed.
-
-This does not include calls that resulted in an error.
+The Traffic view shows the number of calls and the number of pages that were successfully processed.
 
 These requests count towards your plan's credit usage, the number of credits consumed is shown.
+
+This does not include calls that resulted in an error.
 
 <figure><img src="../.gitbook/assets/insights-traffic.png" alt="insights - traffic shows requests, pages, credits" width="563"><figcaption></figcaption></figure>
 
 ### Processing Time View
 
-The average time requests take to process, in seconds.
+The Processing Time view shows the average time requests take to process, in seconds.
 
-Processing time is calculated from when the request was received to when the inference was finished.
+Processing time is calculated from when the request was received to when the [inference](../getting-started/glossary.md) was finished.
 
 <figure><img src="../.gitbook/assets/insights-processing_time.png" alt="insights - processing time" width="563"><figcaption></figcaption></figure>
 
 ### Errors View
 
-The number of processing (inference) errors.
+The Errors view shows the number of processing ([inference](../getting-started/glossary.md#inference)) errors.
 
-Does not include user errors (HTTP 4xx), since these requests get rejected before any processing takes place.
+This does not include user errors (HTTP 4xx), since these requests get rejected before any processing takes place.
 
-**Errors do not count towards your plan's credit usage.**
+Errors are shown for informational purposes only, they do not count towards your plan's credit usage.
 
 <figure><img src="../.gitbook/assets/insights-errors.png" alt="insights - errors" width="563"><figcaption></figcaption></figure>
 
