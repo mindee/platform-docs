@@ -15,6 +15,8 @@ If you would like to download the OpenAPI specification directly, it is availabl
 [https://api-v2.mindee.net/openapi.json](https://api-v2.mindee.net/openapi.json)
 {% endhint %}
 
+The bare Mindee HTTP API is RESTful, and returns data in a JSON format.
+
 API routes and schemas are organized according to the type of model:
 
 * [extraction-models.md](extraction-models.md "mention")

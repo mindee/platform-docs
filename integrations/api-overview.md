@@ -11,8 +11,6 @@ Mindee is ideal for handling large amounts of documents. The vast majority of ou
 
 It's then possible to design any number of different use cases around document processing. These can be for purely internal processing or to provide final end users with a polished experience.
 
-The bare Mindee HTTP API is RESTful, and returns data in a JSON format.
-
 In this section we'll go over the major steps required for a successful integration, and link to the relevant sections of the documentation.
 
 ## Before Starting
@@ -25,11 +23,13 @@ You'll also need at least one API key, see the [api-keys.md](api-keys.md "mentio
 
 ## How to Integrate
 
-We highly recommend using one of our [client-libraries-sdk](client-libraries-sdk/ "mention").
+All file processing routes are asynchronous, no synchronous routes are provided. You can either use a polling or webhook workflow.
 
-They are the fastest and easiest way to call our APIs, and allow our support teams to better help you.
+If using our SDK integrations polling is abstracted away for you, meaning you can use a single synchronous method within the SDK to receive processing results.
 
-### Client Libraries
+These are are the fastest and easiest way to call our APIs, and allow our support teams to better help you.
+
+### Client Libraries / SDKs
 
 For a quick introduction and copy-paste ready code, look in the [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention") section.
 
