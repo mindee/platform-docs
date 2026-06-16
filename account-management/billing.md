@@ -23,7 +23,7 @@ From the Billing page, you can:
 
 Or simply click here: <a href="https://app.mindee.com/settings?tab=billing" class="button primary">Go to Billing page</a>
 
-Only "Administrator" and "Owner" [users](organizations.md#team-members) can access and modify billing details.
+Only [users](organizations.md#team-members) of type "Administrator" or "Owner" may access and modify billing details.
 
 ## Change Your Plan
 
@@ -84,7 +84,7 @@ Client errors (HTTP 4xx) and processing errors will **not** count towards your p
 
 For details on tracking your page and credit usage, consult the section: [insights.md](insights.md "mention").
 
-Additionally, API responses contain the number of pages processed. Look in the object: [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention").
+Additionally, API responses contain the number of pages processed. Look in the section: [#file-metadata](../integrations/client-libraries-sdk/process-the-response.md#file-metadata "mention").
 
 Finally, you can be notified when your plan is reaching its limit. For details, check the section: [#usage-alerts](organizations.md#usage-alerts "mention").
 
@@ -104,6 +104,6 @@ Additional credit usage is itemized separately, on the invoice as "overage charg
 
 The invoice will show:
 
-* your selected [plan](plans.md)'s base fee
+* the base cost of your selected [plan](plans.md)
 * any additional credits consumed beyond your plan's included credits
-* fee per credit
+* cost per credit
