@@ -9,9 +9,11 @@ icon: file-lines
 
 {% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
 
-## Requirements
+## Before Starting
 
-In most cases you'll be loading a source file for use in the Mindee Client, take a look at the [configure-the-client.md](configure-the-client.md "mention") section for more info.
+In most cases you'll be loading a source file for use in the Mindee Client.
+
+Initialize your client as described in the section: [configure-the-client.md](configure-the-client.md "mention").
 
 However, you don't actually need the client initialized to use these features, only the client library installed.
 

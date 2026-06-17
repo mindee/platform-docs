@@ -16,11 +16,11 @@ Inference parameters control:
 
 ### Use an Alias
 
-The optional `alias` field lets you attach your own identifier to a request as a free-form string.
+The optional `alias` argument lets you attach your own identifier to a request as a free-form string.
 
-For example, an internal document ID, reference number, or database key.
+This alias could be an internal document ID, a reference number, or a database key.
 
-It is echoed back unchanged in both the job and result responses, making it straightforward to correlate API results with your own records.
+It is echoed back unchanged in both the job and result responses, making it straightforward to match API responses with your own records.
 
 Aliases are not unique in Mindee, you can use the same alias value multiple times.
 
