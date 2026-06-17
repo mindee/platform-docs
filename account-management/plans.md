@@ -83,7 +83,9 @@ Some features are only applicable to extraction models.
 
 ## Frequently Asked Questions
 
-### How is credit use calculated?
+<details>
+
+<summary><strong>How is credit use calculated?</strong></summary>
 
 Each file processed by Mindee will consume credits based on the number of pages contained in the uploaded file. Only files successfully processed count towards your credit consumption.
 
@@ -91,7 +93,11 @@ The exact amount of credits used per page is available for each model. For detai
 
 Overall credit consumption can be tracked from a single dashboard. For details, consult the section: [insights.md](insights.md "mention").
 
-### Are there limits on the number of credits that can be consumed?
+</details>
+
+<details>
+
+<summary><strong>Are there limits on the number of credits that can be consumed?</strong></summary>
 
 Regardless of your plan, there are no limits to credits you can consume.
 
@@ -99,11 +105,19 @@ This avoids any situations where you would be "locked" and unable to process mor
 
 However, if you are consistently going over your plan's included credits, consider upgrading your plan as it can actually be cheaper for you.
 
-### Can I purchase additional credits?
+</details>
+
+<details>
+
+<summary><strong>Can I purchase additional credits?</strong></summary>
 
 Additional credits are provided automatically based on your usage, there is no need to purchase credits.
 
-### Are there any differences between annual and monthly plans?
+</details>
+
+<details>
+
+<summary><strong>Are there any differences between annual and monthly plans?</strong></summary>
 
 Aside from the lower price, annual subscriptions provide more flexibility in credit usage.
 
@@ -111,17 +125,35 @@ For **annual plans**, all included credits are available at any time during the 
 ​\
 For **monthly plans**, credits are available each month. If you use less, they are lost; if you use more, they are billed as additional usage.
 
-### Can I add features from another plan (à la carte pricing)?
+</details>
+
+<details>
+
+<summary><strong>Can I add features from another plan (à la carte pricing)?</strong></summary>
 
 You cannot add features from another plan.
 
 To benefit from a particular feature, you will need to upgrade to the plan which includes it.
 
-### Can the Mindee team add a feature I need?
+</details>
+
+<details>
+
+<summary><strong>What happens to my data if I cancel my subscription?</strong></summary>
+
+If you cancel your subscription, your data will be retained for 30 days to allow for potential reactivation or export. After this grace period, your documents and models will be automatically deleted, in accordance with our data lifecycle policy.
+
+</details>
+
+<details>
+
+<summary><strong>Can the Mindee team add a feature I need?</strong></summary>
 
 {% include "../.gitbook/includes/generic-feature-request.md" %}
 
 Enterprise customers can ask us directly for specific features they need.
+
+</details>
 
 [^1]: Build your own document parsers by describing the fields you need
 

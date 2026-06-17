@@ -6,7 +6,6 @@
 * [Key Features](getting-started/key-features.md)
 * [Quick Start](getting-started/quickstart.md)
 * [Defining a Model](getting-started/defining-a-model.md)
-* [Frequently Asked Questions](getting-started/faq-v1-to-v2.md)
 * [Glossary](getting-started/glossary.md)
 
 ## Model Basics <a href="#models" id="models"></a>

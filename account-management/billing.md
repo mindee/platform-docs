@@ -98,7 +98,9 @@ Enterprise customers have access to different billing methods, please reach out 
 
 ## Frequently Asked Questions
 
-### How do additional credit charges appear on the invoice?
+<details>
+
+<summary><strong>How do additional credit charges appear on the invoice?</strong></summary>
 
 Additional credit usage is itemized separately, on the invoice as "overage charges".
 
@@ -107,3 +109,5 @@ The invoice will show:
 * the base cost of your selected [plan](plans.md)
 * any additional credits consumed beyond your plan's included credits
 * cost per credit
+
+</details>

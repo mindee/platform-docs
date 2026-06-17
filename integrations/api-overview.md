@@ -88,6 +88,30 @@ A typical release life cycle could look like this:
 4. After deployment, [lock your production model](../models/model-settings.md#locking-the-data-schema) to avoid accidental changes.
 5. `GOTO 1`
 
+## Frequently Asked Questions
 
+<details>
 
-Note: we do not provide separate environments for development, staging, production, etc.
+<summary><strong>Can I use the same V1 API keys in the V2?</strong></summary>
+
+No, V1 and V2 do not share API key information.
+
+</details>
+
+<details>
+
+<summary><strong>Can I run V1 and V2 in parallel?</strong></summary>
+
+Yes, absolutely. Running both platforms in parallel is not only supported but recommended if you are migrating from V1 to V2.
+
+</details>
+
+<details>
+
+<summary><strong>Do you provide a testing or staging environment?</strong></summary>
+
+We do not provide separate environments for development, staging, production, etc.
+
+For information on testing your models and code before deploying to production, take a look at: [#developing-and-testing](api-overview.md#developing-and-testing "mention")
+
+</details>

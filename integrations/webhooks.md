@@ -120,7 +120,9 @@ We **highly recommend** saving all received payloads to disk or a database befor
 
 ## Frequently Asked Questions
 
-### Can I retrieve the data if there was an error with the webhook?
+<details>
+
+<summary><strong>Can I retrieve the data if there was an error with the webhook?</strong></summary>
 
 Yes, under some conditions.
 
@@ -129,7 +131,11 @@ The exact time the data are stored depends on the model's [Storage Settings](../
 
 You can make a GET request on the job ID to retrieve the data for as long as the inference is on the server. The job ID is always returned when a document is sent successfully, it's important to store this ID when using webhooks for this type of scenario.
 
-### How can I set up various environments like testing, staging, production?
+</details>
+
+<details>
+
+<summary><strong>How can I set up various environments like testing, staging, production?</strong></summary>
 
 You can create any number of webhook endpoints: create one for each environment.
 
@@ -137,8 +143,14 @@ In your code, add an environment variable like `MINDEE_V2_WEBHOOK_ID` and set it
 
 When sending a file for inference, [specify the webhook ID](client-libraries-sdk/send-a-file-or-url.md#webhook-configuration) using the environment variable.
 
-### I need to filter incoming requests, do you have a static IP?
+</details>
+
+<details>
+
+<summary><strong>I need to filter incoming requests, do you have a static IP?</strong></summary>
 
 Our outgoing webhook server (incoming for you) does have a static IP address.
 
 Enterprise customers can contact us for the IP range.
+
+</details>

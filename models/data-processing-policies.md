@@ -32,8 +32,26 @@ The following features help ensure compliance with your regional regulations and
 
 With this setup, all documents are processed in EU data centers, results are stored for a maximum of 4 hours, and deleted automatically once you first download them.
 
-## **How to change your model Data Processing Policy?**
+## **Configure the Data Processing Policy**
 
 {% include "../.gitbook/includes/feature-availability.md" %}
 
 {% @supademo/embed url="https://app.supademo.com/demo/cmevfnfze75icv9kqgqida892" demoId="cmevfnfze75icv9kqgqida892" %}
+
+## Frequently Asked Questions
+
+<details>
+
+<summary><strong>Is Mindee GDPR &#x26; SOC 2 Type II compliant?</strong></summary>
+
+Yes. Mindee V2 is fully GDPR-compliant and maintains its SOC 2 Type II certification, ensuring rigorous security controls, data protection standards, and transparency for enterprise needs.
+
+</details>
+
+<details>
+
+<summary><strong>Can I request data deletion at any time?</strong></summary>
+
+Yes. You can request full or partial data deletion at any time by contacting support, or by using the deletion features available in your model settings, depending on your plan. Mindee ensures that your data is securely and permanently removed upon request.
+
+</details>

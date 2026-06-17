@@ -40,7 +40,9 @@ Overall, the steps to using the Mindee service are:
 
 ## Frequently Asked Questions
 
-### Can I send requests in parallel?
+<details>
+
+<summary><strong>Can I send requests in parallel?</strong></summary>
 
 Yes. All clients can be used to send requests in parallel.
 
@@ -49,7 +51,11 @@ The exact implementation is left to the user:
 * For Node.js, you'll want to use asynchronous processing.
 * For all others, you'll want to use threads or processes.
 
-### Can I use the v1 and v2 APIs together?
+</details>
+
+<details>
+
+<summary><strong>Can I use the v1 and v2 APIs together?</strong></summary>
 
 Yes. Each client library has support for both v1 and v2 APIs.
 
@@ -62,13 +68,21 @@ The code to make requests and to process results is **completely different** bet
 
 We highly recommend having different files (or even modules) for handling each API version.
 
-### Can I send only a specific page of a multi-page PDF?
+</details>
+
+<details>
+
+<summary><strong>Can I send only a specific page of a multi-page PDF?</strong></summary>
 
 Yes. All libraries have support for cutting/extracting PDF pages.
 
-For more information, consult:  [#manipulate-pdf-pages](load-and-adjust-a-file.md#manipulate-pdf-pages "mention").
+For more information, consult: [#manipulate-pdf-pages](load-and-adjust-a-file.md#manipulate-pdf-pages "mention").
 
-### How to stop PDFs with too many pages from being sent?
+</details>
+
+<details>
+
+<summary><strong>How to stop PDFs with too many pages from being sent?</strong></summary>
 
 **Do not use file size**, a text PDF with 200 pages can be smaller than a single photo.
 
@@ -76,16 +90,26 @@ Much more reliable to count the actual number of pages in the PDF document.
 
 Use the built-in file metadata methods and properties to easily add business rules based on the number of pages (among other data).
 
-For more information, consult:  [#source-file-metadata](load-and-adjust-a-file.md#source-file-metadata "mention").
+For more information, consult: [#source-file-metadata](load-and-adjust-a-file.md#source-file-metadata "mention").
 
-### I'm using a Supabase edge function, should I use the API directly?
+</details>
+
+<details>
+
+<summary><strong>I'm using a Supabase edge function, should I use the API directly?</strong></summary>
 
 We recommend using the Mindee [Node.js client library](https://github.com/mindee/mindee-api-nodejs) in Supabase.
 
 You can install it in your edge function(s) using `npm`.
 
-### Which library features are officially supported?
+</details>
+
+<details>
+
+<summary><strong>Which library features are officially supported?</strong></summary>
 
 Anything documented here is officially supported and is considered stable for production use.
 
 Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
+
+</details>
