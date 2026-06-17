@@ -9,7 +9,7 @@ icon: rectangle-terminal
 
 All our APIs are asynchronous, as a result it's not very practical to use cURL or equivalent for quick testing.
 
-For this reason the Client Libraries include a Command Line Interface (CLI) to allow for quick testing and debugging of your models.
+For this reason the SDKs include a Command Line Interface (CLI) to allow for quick testing and debugging of your models.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -106,7 +106,7 @@ mvn clean verify
 {% tab title=".NET" %}
 First install the CLI package: [https://www.nuget.org/packages/Mindee.Cli](https://www.nuget.org/packages/Mindee.Cli)
 
-Note: this is a separate package from the general Mindee Client Library.
+Note: this is a separate package from the general Mindee SDK.
 
 ```bash
 # General help
