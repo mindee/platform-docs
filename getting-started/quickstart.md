@@ -26,9 +26,9 @@ If there are no model templates that exactly fit your needs, you can:
 
 ## Test the Model
 
-Be sure to make at least one test on a document, using the [live-test.md](../models/live-test.md "mention") feature.
+Be sure to make at least one test on a document, using the [Live Test feature](../models/live-test.md).
 
-If it doesn't work as expected, you can modify the Data Schema, as explained in: [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
+If it doesn't work as expected, modify the Data Schema, as explained in: [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
 
 ## Create an API Key
 
@@ -36,7 +36,7 @@ On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.m
 
 ## Send a File or URL
 
-You can easily send a file or an URL using one of our officially-supported [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
+You can easily send a file or an URL using one of our [officially-supported SDKs](../extraction-models/sdk-integration/).
 
 For a quick introduction and ready to use code samples, check: [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention").
 
@@ -44,6 +44,6 @@ For a quick introduction and ready to use code samples, check: [quick-start.md](
 
 You'll need some way of importing the JSON structure and manipulating it.
 
-For quick testing, we recommend to [process-the-response.md](../integrations/client-libraries-sdk/process-the-response.md "mention") using our client libraries.
+For quick testing, we recommend to using the [CLI feature](../integrations/client-libraries-sdk/command-line-tools-cli.md) of our client libraries.
 
 {% @supademo/embed url="https://app.supademo.com/demo/cmewtri4u8939v9kqh3q6u1g7" demoId="cmewtri4u8939v9kqh3q6u1g7" %}

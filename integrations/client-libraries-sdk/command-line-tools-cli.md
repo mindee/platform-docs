@@ -24,12 +24,12 @@ mindeeV2 --help
 mindeeV2 extraction --help
 
 # Run extraction on a file
-#   --key: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
-#   --model: Your model ID
+#   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   -m: Your model ID
 #   Positional arg: Absolute path to the file
 mindeeV2 extraction \
-  --key md_XXXXXXXXXXXX \
-  --model abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -k md_XXXXXXXXXXXX \
+  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
   /path/to/the/file.pdf
 ```
 {% endtab %}
@@ -46,18 +46,33 @@ npm install mindee
 ./node_modules/.bin/mindeeV2 extraction --help
 
 # Run extraction on a file
-#   --api-key: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
-#   --model: Your model ID
+#   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   -m: Your model ID
 #   Positional arg: Absolute path to the file
 ./node_modules/.bin/mindeeV2 extraction \
-  --api-key md_XXXXXXXXXXXX \
-  --model abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -k md_XXXXXXXXXXXX \
+  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
   /path/to/the/file.pdf
 ```
 {% endtab %}
 
 {% tab title="Ruby" %}
-Coming Soon
+```bash
+# General help
+./bin/mindee.rb --help
+
+# Help for extraction models
+./bin/mindee.rb v2 extraction --help
+
+# Run extraction on a file
+#   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   -m: Your model ID
+#   Positional arg: Absolute path to the file
+./bin/mindee.rb v2 extraction \
+  -k md_XXXXXXXXXXXX \
+  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  /path/to/the/file.pdf
+```
 {% endtab %}
 
 {% tab title="PHP" %}
@@ -65,7 +80,27 @@ Coming Soon
 {% endtab %}
 
 {% tab title="Java" %}
-Coming Soon
+Use from the cloned [Git repository](https://github.com/mindee/mindee-api-java) root.
+
+```bash
+# Compile locally
+mvn clean verify
+
+# General help
+./cli.sh --help
+
+# Help for extraction models
+./cli.sh extraction --help
+
+# Run extraction on a file
+#   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   -m: Your model ID
+#   Positional arg: Absolute path to the file
+./cli.sh extraction \
+  -k md_XXXXXXXXXXXX \
+  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  /path/to/the/file.pdf
+```
 {% endtab %}
 
 {% tab title=".NET" %}
@@ -81,24 +116,20 @@ Mindee.Cli --help
 Mindee.Cli extraction --help
 
 # Run extraction on a file
-#   --api-key: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
-#   --model-id: Your model ID
+#   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   -m: Your model ID
 #   Positional arg: Absolute path to the file
 Mindee.Cli extraction \
-  --key md_XXXXXXXXXXXX \
-  --model-id abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -k md_XXXXXXXXXXXX \
+  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
   /path/to/the/file.pdf
 ```
 {% endtab %}
 {% endtabs %}
 
-
-
 {% hint style="info" %}
 We are still working hard to make the CLI utilities more complete and useful.\
 **As a result, the interface is not yet considered stable, and may be subject to change.**
-
-
 
 If you have any ideas to improve them, [make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
 {% endhint %}

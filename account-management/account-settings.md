@@ -15,9 +15,9 @@ Or simply click here: <a href="https://app.mindee.com/settings?tab=account" clas
 
 ### Email
 
-If you connect using your email and a password, you can change your email address. You'll be sent a link to confirm the new email address.
+If you connect to Mindee using your email and a password, you can change your email address. You'll be sent a link to confirm the new email address.
 
-If you connect through a 3rd party, such as Google or Github, the email address used will be displayed. It is not possible to change it, you'll need to connect with another provider or using an email/password login.
+If you connect to Mindee through a 3rd party, such as Google or Github, the email address used will be displayed. It is not possible to change it, you'll need to connect with another provider or use an email/password login.
 
 ### Full Name
 

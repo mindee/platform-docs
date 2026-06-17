@@ -13,7 +13,7 @@ Build fully customizable extraction models with interactive data schemas and an 
 Learn more at [data-schema.md](../extraction-models/data-schema.md "mention").
 
 Live Test UI for side-by-side visual validation, JSON inspection, and RAG simulation before production.\
-Learn more at [live-test.md](../models/live-test.md "mention").
+Learn more at: [live-test.md](../models/live-test.md "mention").
 
 ## Extraction Model Catalog
 
@@ -28,7 +28,7 @@ Some popular use cases include:
 * **Banking**: Check, Bank Statement, ...
 * **Logistics**: Bill of Lading, Vehicle Registration, ...
 
-Learn more at [extraction-models](../use-cases/extraction-models/ "mention")
+Learn more at: [extraction-models](../use-cases/extraction-models/ "mention")
 
 ## Utility Models
 
@@ -48,27 +48,27 @@ Utilities are currently in beta: they are usable, with full integration support 
 ## Advanced Features
 
 Retrieval-Augmented Generation (RAG) to continuously improve accuracy using your own documents and corrections.\
-Learn more at [improving-accuracy.md](../extraction-models/optional-features/improving-accuracy.md "mention").
+Learn more at: [improving-accuracy.md](../extraction-models/optional-features/improving-accuracy.md "mention").
 
 Confidence scores per field to boost precision and drive downstream decisions. Allows automating your workflows.\
-Learn more at [automation-confidence-score.md](../extraction-models/optional-features/automation-confidence-score.md "mention").
+Learn more at: [automation-confidence-score.md](../extraction-models/optional-features/automation-confidence-score.md "mention").
 
 Polygon coordinates for every extracted field to map values to document regions.\
-Learn more at [polygons-bounding-boxes.md](../extraction-models/optional-features/polygons-bounding-boxes.md "mention").
+Learn more at: [polygons-bounding-boxes.md](../extraction-models/optional-features/polygons-bounding-boxes.md "mention").
 
 Full text content output for complete OCR alongside structured fields.\
-Learn more at [raw-text-full-ocr.md](../extraction-models/optional-features/raw-text-full-ocr.md "mention").
+Learn more at: [raw-text-full-ocr.md](../extraction-models/optional-features/raw-text-full-ocr.md "mention").
 
 Data residency controls (EU/US) for privacy and compliance (GDPR, SOC 2 Type II).\
-Learn more at [data-processing-policies.md](../models/data-processing-policies.md "mention").
+Learn more at: [data-processing-policies.md](../models/data-processing-policies.md "mention").
 
 ## Integrations
 
 Asynchronous processing with polling and webhooks; official SDKs for Python, Node.js, Ruby, PHP, Java, and .NET.\
-Learn more at [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
+Learn more at: [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
 No‑code and low‑code integrations, including an official Make.com app and generic HTTP workflows.\
-Learn more at [no-code-integration](../extraction-models/no-code-integration/ "mention").
+Learn more at: [no-code-integration](../extraction-models/no-code-integration/ "mention").
 
 ## Flexible Plans
 
@@ -76,7 +76,7 @@ Mindee pricing is plan-based with included pages, overages, and feature tiers.
 
 Pay annually to save money, or monthly.
 
-Compare all plans and their features at [plans.md](../account-management/plans.md "mention").
+Compare all plans and their features at: [plans.md](../account-management/plans.md "mention").
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
 
