@@ -102,7 +102,11 @@ No, V1 and V2 do not share API key information.
 
 <summary><strong>Can I run V1 and V2 in parallel?</strong></summary>
 
-Yes, absolutely. Running both platforms in parallel is not only supported but recommended if you are migrating from V1 to V2.
+Yes, absolutely.
+
+Running both platforms in parallel is not only supported but recommended if you are migrating from V1 to V2.
+
+All SDKs have full support for V1 and V2 running in parallel, more information here: [client-libraries-sdk](client-libraries-sdk/ "mention")
 
 </details>
 
