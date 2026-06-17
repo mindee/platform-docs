@@ -9,12 +9,12 @@ icon: text
 
 When the entire text of a document needs to be extracted, along with position information for each word.
 
-{% hint style="info" %}
-**Most users looking to "OCR a document" are probably looking for the** [**Extraction model**](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models)**.**
-
 We use the term "OCR" literally, as the acronym for "Optical Character Recognition".
 
 Meaning the exact text is returned as raw data, not parsed into structured data as fields.
+
+{% hint style="info" %}
+**Most users looking for a generic "Mindee OCR" or to "OCR a document" are likely looking for Extraction: c**onsult the [Extraction model documentation](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models).
 {% endhint %}
 
 A file sent to the Raw OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
@@ -25,10 +25,10 @@ Almost all languages are fully supported, since only the writing system is invol
 
 In other words, as long as the system can recognize the glyphs (letters in an alphabet), the text will be extracted.
 
-It's much easier and shorter to discuss what is **not** supported:
+It's much easier and shorter to list what is **not** supported:
 
-* Modern languages with uncommon writing systems such as Cherokee, Blackfoot, Inuktitut, etc.
 * Ancient languages with no equivalent modern writing system such as cuneiform, Egyptian hieroglyphs, ancient Maya, etc.
+* Modern languages with uncommon writing systems such as Blackfoot, Cherokee, Inuktitut, etc.
 
 ## Create a Raw OCR Model
 
