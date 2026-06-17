@@ -1,9 +1,9 @@
 ---
-description: Overview of polling usage.
+description: Overview of processing files using a polling flow.
 icon: repeat
 ---
 
-# Polling for Results
+# Using Polling
 
 ## Overview
 
@@ -38,7 +38,7 @@ sequenceDiagram
     client->>client: process JSON result
 ```
 
-## Sending Files Using Polling
+## Send Files Using Polling
 
 When using the SDKs, the polling process is completely transparent to you.
 

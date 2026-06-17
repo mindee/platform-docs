@@ -1,9 +1,9 @@
 ---
-description: Overview of using webhooks for receiving results.
+description: Overview of processing files using a webhook flow.
 icon: webhook
 ---
 
-# Webhook Results
+# Using Webhooks
 
 {% hint style="info" %}
 This page assumes you have experience setting up a Web server in your language of choice.
@@ -86,7 +86,7 @@ In your list of Webhook Endpoints, simply click on the trashcan icon "<i class="
 
 Any future attempts to use a deleted webhook will result in a HTTP error.
 
-## Specifying on File Upload
+## Send Files Using Webhooks
 
 When enqueuing a file or URL, simply specify the webhook endpoint ID(s) you would like to use.
 
