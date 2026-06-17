@@ -32,7 +32,7 @@ If it doesn't work as expected, modify the Data Schema, as explained in: [#modif
 
 ## Create an API Key
 
-On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.mindee.com/api-keys) and create a new key.
+On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.mindee.com/settings?tab=api-keys) and create a new key.
 
 ## Send a File or URL
 

@@ -80,7 +80,7 @@ Coming Soon
 {% endtab %}
 
 {% tab title="Java" %}
-Use from the cloned [Git repository](https://github.com/mindee/mindee-api-java) root.
+Use from the root of the [Git repository](https://github.com/mindee/mindee-api-java).
 
 ```bash
 # Compile locally
