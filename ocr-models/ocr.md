@@ -19,6 +19,17 @@ Meaning the exact text is returned as raw data, not parsed into structured data 
 
 A file sent to the Raw OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
 
+### Language Support
+
+Almost all languages are fully supported, since only the writing system is involved in detection.
+
+In other words, as long as the system can recognize the glyphs (letters in an alphabet), the text will be extracted.
+
+It's much easier and shorter to discuss what is **not** supported:
+
+* Modern languages with uncommon writing systems such as Cherokee, Blackfoot, Inuktitut, etc.
+* Ancient languages with no equivalent modern writing system such as cuneiform, Egyptian hieroglyphs, ancient Maya, etc.
+
 ## Create a Raw OCR Model
 
 Raw OCR models are always custom, there are no templates available in the Catalog.
