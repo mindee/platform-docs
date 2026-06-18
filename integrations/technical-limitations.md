@@ -13,7 +13,13 @@ Unless noted otherwise, any action that exceeds or does not comply with the limi
 
 ### PDF Files
 
-All Portable Document Format (PDF) types can be processed, either single page or multiple pages.
+All Portable Document Format (PDF) can be processed, either single page or multiple pages.
+
+These are defined using the `application/pdf` Media type.
+
+In some cases `application/binary` is used, this is incorrect as per the standard, but should also work, so long as the extension is `.pdf` and the binary contents are a valid PDF file.
+
+In rare cases, the PDF headers are corrupted or invalid. Fix these using our [PDF repair tool](client-libraries-sdk/load-and-adjust-a-file.md#fix-pdf-headers), otherwise the server may reject them.
 
 Each PDF page can be a combination of text and image elements.
 
