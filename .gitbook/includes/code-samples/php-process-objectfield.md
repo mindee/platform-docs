@@ -5,7 +5,7 @@ title: php-process-objectfield
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(ExtractionResponse$response)
+public function handleResponse(ExtractionResponse $response)
 {
     $fields = $response->inference->result->fields;
 

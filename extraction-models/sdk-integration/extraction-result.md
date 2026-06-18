@@ -62,7 +62,7 @@ Using the `$response` deserialized object from either the polling response or a 
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(ExtractionResponse$response)
+public function handleResponse(ExtractionResponse $response)
 {
     $fields = $response->inference->result->fields;
 
@@ -230,7 +230,7 @@ Using the `$response` deserialized object from either the polling response or a 
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(ExtractionResponse$response)
+public function handleResponse(ExtractionResponse $response)
 {
     $fields = $response->inference->result->fields;
 
@@ -355,7 +355,7 @@ Using the `$response` deserialized object from either the polling response or a 
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(ExtractionResponse$response)
+public function handleResponse(ExtractionResponse $response)
 {
     $fields = $response->inference->result->fields;
     
@@ -551,7 +551,7 @@ Using the `$response` deserialized object from either the polling response or a 
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
-public function handleResponse(ExtractionResponse$response)
+public function handleResponse(ExtractionResponse $response)
 {
     $fields = $response->inference->result->fields;
 
@@ -708,7 +708,7 @@ Using the `$response` deserialized object from either the polling response or a 
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
-public function handleResponse(ExtractionResponse$response)
+public function handleResponse(ExtractionResponse $response)
 {
     $fields = $response->inference->result->fields;
 
