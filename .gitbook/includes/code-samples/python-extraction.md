@@ -3,15 +3,15 @@ title: sample-code-python-extraction
 ---
 
 Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.\
-Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **4.35.1** or greater.
+Requires the [Mindee Python client library](https://pypi.org/project/mindee/) version **5.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```python
-from mindee import (
-    ClientV2,
-    InferenceParameters,
-    InferenceResponse,
-    PathInput,
+from mindee import PathInput
+from mindee.v2 import (
+  Client,
+  ExtractionParameters,
+  ExtractionResponse,
 )
 
 input_path = "/path/to/the/file.ext"
@@ -19,10 +19,10 @@ api_key = "MY_API_KEY"
 model_id = "MY_MODEL_ID"
 
 # Init a new client
-mindee_client = ClientV2(api_key)
+mindee_client = Client(api_key)
 
-# Set inference parameters
-model_params = InferenceParameters(
+# Set extraction parameters
+params = ExtractionParameters(
     # ID of the model, required.
     model_id=model_id,
 
@@ -44,9 +44,9 @@ input_source = PathInput(input_path)
 
 # Send for processing
 response = mindee_client.enqueue_and_get_result(
-    InferenceResponse,
+    ExtractionResponse,
     input_source,
-    model_params,
+    params,
 )
 
 # Print a brief summary of the parsed data

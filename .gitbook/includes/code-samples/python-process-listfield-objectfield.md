@@ -3,9 +3,9 @@ title: python-process-listfield-objectfield
 ---
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields: dict = response.inference.result.fields
 
     object_list_field = fields["my_object_list_field"]

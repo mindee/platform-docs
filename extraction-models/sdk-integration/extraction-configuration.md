@@ -30,7 +30,7 @@ For example: if the Polygon feature is enabled on the platform, and polygon is e
 Only the `model_id` is required.
 
 ```python
-inference_params = InferenceParameters(
+model_params = ExtractionParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
 
@@ -80,7 +80,7 @@ const modelParams = {
 Only the `modelId` is required.
 
 ```php
-$modelParams = new InferenceParameters(
+$modelParams = new ExtractionParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 
@@ -105,7 +105,7 @@ $modelParams = new InferenceParameters(
 Only the `model_id` is required.
 
 ```ruby
-inference_params = {
+model_params = {
     # ID of the model, required.
     model_id: 'MY_MODEL_ID',
 
@@ -229,7 +229,7 @@ If passed as a JSON string, it will be validated in the client before being sent
 Only the `model_id` is required.
 
 ```python
-model_params = InferenceParameters(
+model_params = ExtractionParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
 
@@ -267,7 +267,7 @@ const modelParams = {
 Only the `modelId` is required.
 
 ```php
-$modelParams = new InferenceParameters(
+$modelParams = new ExtractionParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 

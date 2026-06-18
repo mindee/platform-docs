@@ -3,9 +3,9 @@ title: python-process-listfield-simplefield
 ---
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields: dict = response.inference.result.fields
 
     simple_list_field = fields["my_simple_list_field"]

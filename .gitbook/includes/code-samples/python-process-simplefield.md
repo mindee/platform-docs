@@ -3,9 +3,9 @@ title: python-process-simplefield
 ---
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
   fields: dict = response.inference.result.fields
 
   # texts, dates, classifications ...
