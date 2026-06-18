@@ -310,9 +310,14 @@ It contains the following attributes:
 
 ## File Metadata
 
-You can access various metadata concerning the file sent for processing.
+You can access various metadata concerning the file sent for processing:
 
-Using the Response object from either the polling response or a webhook payload:
+* `name` name of the file as sent in the initial request.
+* `alias` alias as sent in the initial request.
+* `page_count` number of pages in the file as determined during processing
+* `mime_type` MIME / media type of the file as determined during processing.
+
+Access using the `response` object from either a polling response or a webhook payload.
 
 {% tabs %}
 {% tab title="Python" %}
