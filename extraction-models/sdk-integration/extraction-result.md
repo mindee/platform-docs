@@ -35,9 +35,9 @@ In addition, the `Simplefield` class has [#confidence](extraction-result.md#conf
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields = response.inference.result.fields
 
     my_simple_field = fields.get_simple_field("my_simple_field")
@@ -203,9 +203,9 @@ In addition, the `ObjectField` class has [#confidence](extraction-result.md#conf
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields = response.inference.result.fields
 
     object_field = fields.get_object_field("my_object_field")
@@ -328,9 +328,9 @@ In addition, the `ListField` class has a [#confidence](extraction-result.md#conf
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields = response.inference.result.fields
 
     my_list_field = fields.get_list_field("my_list_field")
@@ -508,10 +508,10 @@ The language-appropriate enum type will be available for your convenience, mappe
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 from mindee.v2.parsing.field import FieldConfidence
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields = response.inference.result.fields
 
     confidence = fields.get_simple_field("my_simple_field").confidence
@@ -653,9 +653,9 @@ Point X,Y coordinates are normalized floats from 0.0 to 1.0, relative to the pag
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     fields = response.inference.result.fields
     
     locations = fields.get_simple_field("my_simple_field").locations
