@@ -3,26 +3,25 @@ title: sample-code-php-extraction
 ---
 
 Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.\
-Requires the [Mindee PHP SDK](https://packagist.org/packages/mindee/mindee) version **2.7.1** or greater.
+Requires the [Mindee PHP SDK](https://packagist.org/packages/mindee/mindee) version **3.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```php
 <?php
 
-use Mindee\ClientV2;
+use Mindee\Input\PathInput;
+use Mindee\V2\Client;
 use Mindee\V2\Product\Split\Params\SplitParameters;
 use Mindee\V2\Product\Split\SplitResponse;
-use Mindee\Input\PathInput;
 
 $apiKey = "MY_API_KEY";
-$filePath = "/path/to/the/file.ext";
 $modelId = "MY_MODEL_ID";
+$filePath = "/path/to/the/file.ext";
 
 // Init a new client
-$mindeeClient = new ClientV2($apiKey);
+$mindeeClient = new Client($apiKey);
 
 // Set split parameters
-// Note: modelId is mandatory.
 $modelParams = new SplitParameters(
     // ID of the model, required.
     $modelId,

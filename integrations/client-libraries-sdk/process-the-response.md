@@ -136,26 +136,27 @@ Assuming you're able to get the raw HTTP request via the variable `$requestBody`
 
 ```php
 <?php
-  use Mindee\Input\LocalResponse;
-  use Mindee\Error\MindeeException;
-  use Mindee\Parsing\V2\InferenceResponse;
 
-  // Load the JSON string sent by the Mindee webhook POST callback.
-  $localResponse = new LocalResponse($requestBody);
-  
-  // Or load from a file path:
-  // $localResponse = new LocalResponse($filePath);
+use Mindee\Input\LocalResponse;
+use Mindee\Error\MindeeException;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-  // Optional: verify the HMAC signature.
-  if (!$localResponse->isValidHmacSignature($mySecretKey, 'dummy signature')){
+// Load the JSON string sent by the Mindee webhook POST callback.
+$localResponse = new LocalResponse($requestBody);
+
+// Or load from a file path:
+// $localResponse = new LocalResponse($filePath);
+
+// Optional: verify the HMAC signature.
+if (!$localResponse->isValidHmacSignature($mySecretKey, 'dummy signature')){
     throw new MindeeException("Invalid HMAC signature!");
-  }
-  
-  // Deserialize the response:
-  $response = $localResponse->deserializeResponse(InferenceResponse::class);
+}
 
-  // Print a summary of the parsed data in RST format
-  echo $response->inference;
+// Deserialize the response:
+$response = $localResponse->deserializeResponse(ExtractionResponse::class);
+
+// Print a summary of the parsed data in RST format
+echo $response->inference;
 ```
 {% endtab %}
 
@@ -183,8 +184,8 @@ if (!isValid) {
 //    new File("/path/to/file.json"));
 
 // Deserialize the response into objects
-InferenceResponse response = localResponse.deserializeResponse(
-    InferenceResponse.class
+ExtractionResponse response = localResponse.deserializeResponse(
+    ExtractionResponse.class
 );
 
 // Print a summary of the parsed data
@@ -254,9 +255,9 @@ handleResponse(response) {
 
 {% tab title="PHP" %}
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse $response)
 {
     $responseJson = $response->getRawHttp();
 }
@@ -350,9 +351,9 @@ handleResponse(response) {
 
 {% tab title="PHP" %}
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse $response)
 {
     $file = $response->inference->file;
 
@@ -381,11 +382,10 @@ end
 
 {% tab title="Java" %}
 ```java
-import com.mindee.parsing.v2.InferenceFile;
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 
-public void handleResponse(InferenceResponse response) {
-    InferenceFile file = response.inference.getFile();
+public void handleResponse(ExtractionResponse response) {
+    var file = response.inference.getFile();
 
     // various attributes are available, such as:
     String filename = file.getName();

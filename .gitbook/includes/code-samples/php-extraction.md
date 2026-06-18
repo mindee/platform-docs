@@ -3,25 +3,26 @@ title: sample-code-php-extraction
 ---
 
 Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.\
-Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **2.7.1** or greater.
+Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **3.0.0** or greater.
 
 {% code lineNumbers="true" %}
 ```php
 <?php
 
-use Mindee\ClientV2;
-use Mindee\Input\InferenceParameters;
 use Mindee\Input\PathInput;
+use Mindee\V2\Client;
+use Mindee\V2\Product\Extraction\Params\ExtractionParameters;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
 $apiKey = "MY_API_KEY";
-$filePath = "/path/to/the/file.ext";
 $modelId = "MY_MODEL_ID";
+$filePath = "/path/to/the/file.ext";
 
 // Init a new client
-$mindeeClient = new ClientV2($apiKey);
+$mindeeClient = new Client($apiKey);
 
 // Set inference parameters
-$modelParams = new InferenceParameters(
+$modelParams = new ExtractionParameters(
     // ID of the model, required.
     $modelId,
 
@@ -42,7 +43,8 @@ $modelParams = new InferenceParameters(
 $inputSource = new PathInput($filePath);
 
 // Send for processing using polling
-$response = $mindeeClient->enqueueAndGetInference(
+$response = $mindeeClient->enqueueAndGetResult(
+    ExtractionResponse::class,
     $inputSource,
     $modelParams
 );
@@ -50,7 +52,7 @@ $response = $mindeeClient->enqueueAndGetInference(
 // Print a summary of the response
 echo strval($response->inference);
 
-// Access the result fields
+// Access the extracted fields
 $fields = $response->inference->result->fields;
 ```
 {% endcode %}

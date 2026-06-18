@@ -231,7 +231,7 @@ print(response.inference)
 {% tab title="Node.js" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetResult` method:
+Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
 
 ```typescript
 const response = mindeeClient.enqueueAndGetResult(
@@ -255,10 +255,12 @@ response.then((resp) => {
 {% tab title="PHP" %}
 The `$mindeeClient` , created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetInference` method:
+Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
 
 ```php
-$response = $mindeeClient->enqueueAndGetInference(
+$response = $mindeeClient->enqueueAndGetResult(
+    // Use the appropriate product class
+    ExtractionResponse::class,
     $inputSource,
     $modelParams
 );
@@ -272,7 +274,7 @@ echo strval($response->inference);
 {% tab title="Ruby" %}
 The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueue_and_get_result` method.
+Use the `enqueue_and_get_result` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
 
 ```ruby
 response = mindee_client.enqueue_and_get_result(
@@ -293,7 +295,7 @@ puts response.inference
 {% tab title="Java" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetInference` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
 
 ```java
 var response = mindeeClient.enqueueAndGetResult(
@@ -498,7 +500,7 @@ The `$mindeeClient`, created in [#initialize-the-mindee-client](configure-the-cl
 Use the `enqueueInference` method:
 
 ```php
-$response = $mindeeClient->enqueueInference(
+$response = $mindeeClient->enqueue(
     $inputSource,
     $modelParams
 );
@@ -512,8 +514,8 @@ echo strval($response->job->alias);
 
 **Note:** You can also use both methods!
 
-First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
-Then, call `EnqueueAndGetResultAsync`.\
+First, make sure you've added a webhook ID to the `ExtractionParameters` instance.\
+Then, call `enqueueAndGetResult`.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
