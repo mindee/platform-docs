@@ -57,7 +57,7 @@ const modelParams = {
 
 {% tab title="PHP" %}
 ```php
-$modelParams = new InferenceParameters(
+$modelParams = new ExtractionParameters(
     // ID of the model, required.
     "MY_MODEL_ID",
 

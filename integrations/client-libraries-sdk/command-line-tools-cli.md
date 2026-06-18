@@ -29,7 +29,7 @@ mindeeV2 extraction --help
 #   Positional arg: Absolute path to the file
 mindeeV2 extraction \
   -k md_XXXXXXXXXXXX \
-  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf
 ```
 {% endtab %}
@@ -51,7 +51,7 @@ npm install mindee
 #   Positional arg: Absolute path to the file
 ./node_modules/.bin/mindeeV2 extraction \
   -k md_XXXXXXXXXXXX \
-  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf
 ```
 {% endtab %}
@@ -70,13 +70,28 @@ npm install mindee
 #   Positional arg: Absolute path to the file
 ./bin/mindee.rb v2 extraction \
   -k md_XXXXXXXXXXXX \
-  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf
 ```
 {% endtab %}
 
 {% tab title="PHP" %}
-Coming Soon
+```bash
+# General help
+php ./bin/cli.php --help
+
+# Help for extraction models
+php ./bin/cli.php extraction --help
+
+# Run extraction on a file
+#   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
+#   -m: Your model ID
+#   Positional arg: Absolute path to the file
+php ./bin/cli.php extraction \
+  -k md_XXXXXXXXXXXX \
+  -m xxxx-xxxx-xxxx-xxxx-xxxx \
+  /path/to/the/file.pdf
+```
 {% endtab %}
 
 {% tab title="Java" %}
@@ -98,7 +113,7 @@ mvn clean verify
 #   Positional arg: Absolute path to the file
 ./cli.sh extraction \
   -k md_XXXXXXXXXXXX \
-  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf
 ```
 {% endtab %}
@@ -121,7 +136,7 @@ Mindee.Cli extraction --help
 #   Positional arg: Absolute path to the file
 Mindee.Cli extraction \
   -k md_XXXXXXXXXXXX \
-  -m abcd1234-aa11-bb22-cc33-abcdef1234567 \
+  -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf
 ```
 {% endtab %}

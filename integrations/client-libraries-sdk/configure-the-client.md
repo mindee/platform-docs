@@ -121,9 +121,7 @@ const mindeeClient = new mindee.Client({
 First import the needed classes:
 
 ```php
-use Mindee\ClientV2;
-use Mindee\Input\InferenceParameters;
-use Mindee\Error\MindeeException;
+use Mindee\V2\Client;
 ```
 
 For the API key, you can pass it directly to the client.\
@@ -132,7 +130,7 @@ This is useful for quick testing.
 ```php
 $apiKey = "MY_API_KEY";
 
-$mindeeClient = new ClientV2($apiKey);
+$mindeeClient = new Client($apiKey);
 ```
 
 Instead of passing the key directly, you can also set the following environment variable:
@@ -143,7 +141,7 @@ This is recommended for production use.\
 In this way there is no need to pass the `$apiKey` when initializing the client.
 
 ```php
-$mindeeClient = new ClientV2($apiKey);
+$mindeeClient = new Client($apiKey);
 ```
 {% endtab %}
 
@@ -178,8 +176,7 @@ mindee_client = Mindee::ClientV2.new()
 First import the needed classes:
 
 ```java
-import com.mindee.MindeeClientV2;
-import com.mindee.InferenceParameters;
+import com.mindee.v2.MindeeClient;
 ```
 
 For the API key, you can pass it directly to the client.\
@@ -188,7 +185,7 @@ This is useful for quick testing.
 ```java
 String apiKey = "MY_API_KEY";
 
-MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+MindeeClient mindeeClient = new MindeeClient(apiKey);
 ```
 
 Instead of passing the key directly, you can also set the following environment variable:
@@ -199,7 +196,7 @@ This is recommended for production use.\
 In this way there is no need to pass the `apiKey` argument when initializing the client.
 
 ```java
-MindeeClientV2 mindeeClient = new MindeeClientV2();
+MindeeClient mindeeClient = new MindeeClient();
 ```
 {% endtab %}
 
@@ -208,7 +205,7 @@ First add the required namespaces.
 
 ```csharp
 using Mindee;
-using Mindee.Input;
+using Mindee.V2;
 ```
 
 For the API key, you can pass it directly to the client.\
@@ -217,7 +214,7 @@ This is useful for quick testing.
 ```csharp
 string apiKey = "MY_API_KEY";
 
-MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
+Client mindeeClient = new Client(apiKey);
 ```
 
 Instead of passing the key directly, you can also set the following environment variable:
@@ -228,7 +225,7 @@ This is recommended for production use.\
 In this way there is no need to pass the `apiKey` argument when initializing the client.
 
 ```csharp
-MindeeClientV2 mindeeClient = new MindeeClientV2();
+Client mindeeClient = new Client();
 ```
 {% endtab %}
 {% endtabs %}

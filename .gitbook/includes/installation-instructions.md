@@ -29,7 +29,7 @@ Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
 ```sh
-php composer.phar require "mindee/mindee:>=2.7"
+php composer.phar require "mindee/mindee:>=3.0"
 ```
 {% endtab %}
 

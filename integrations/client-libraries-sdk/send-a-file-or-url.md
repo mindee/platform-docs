@@ -101,30 +101,23 @@ const pollingOptions = {
 When polling you really only need to set the `modelId` .
 
 ```php
-$modelParams = new InferenceParameters(modelId: "MY_MODEL_ID");
+$modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
 ```
 
 You can also set the various polling parameters.\
 However, **we do not recommend** setting this option unless you are encountering timeout problems.
 
 ```php
-use Mindee\Input\PollingOptions;
+use Mindee\ClientOptions\PollingOptions;
 
-$modelParams = new InferenceParameters(
-    // ID of the model, required.
-    modelId: "MY_MODEL_ID",
-    
-    // Set only if having timeout issues.
-    pollingOptions: new PollingOptions(
-        // Initial delay before the first polling attempt.
-        initialDelaySec: 3.0,
-        // Delay between each polling attempt.
-        delaySec: 1.5,
-        // Total number of polling attempts.
-        maxRetries: 80,
-    ),
-
-    // ... any other options ...
+// Set only if having timeout issues.
+$pollingOptions = new PollingOptions(
+    // Initial delay before the first polling attempt.
+    initialDelaySec: 3.0,
+    // Delay between each polling attempt.
+    delaySec: 1.5,
+    // Total number of polling attempts.
+    maxRetries: 80,
 );
 ```
 {% endtab %}
@@ -262,7 +255,9 @@ $response = $mindeeClient->enqueueAndGetResult(
     // Use the appropriate product class
     ExtractionResponse::class,
     $inputSource,
-    $modelParams
+    $modelParams,
+    // optional, set only if having timeout issues.
+    // $pollingOptions
 );
 
 // To easily test which data were extracted,
@@ -445,7 +440,7 @@ You can specify any number of webhook endpoint IDs, each will be sent the payloa
 
 {% tabs %}
 {% tab title="Python" %}
-The `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+Using the `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueue_inference` method:
 
@@ -469,7 +464,7 @@ You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="Node.js" %}
-The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+Using the `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueue` method:
 
@@ -495,7 +490,7 @@ You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="PHP" %}
-The `$mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+Using the `$mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueueInference` method:
 
@@ -520,7 +515,7 @@ You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="Ruby" %}
-The `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+Using the `mindee_client`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueue` method:
 
@@ -546,7 +541,7 @@ You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title="Java" %}
-The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+Using the `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use the `enqueueInference` method:
 
@@ -570,7 +565,7 @@ You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
 
 {% tab title=".NET" %}
-The `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
+Using the `mindeeClient`, created in [#initialize-the-mindee-client](configure-the-client.md#initialize-the-mindee-client "mention").
 
 Use `EnqueueInferenceAsync` method:
 
