@@ -57,15 +57,17 @@ Once created, refine the new model's [data-schema.md](data-schema.md "mention") 
 
 ## Modifying Your Extraction Data Schema
 
-Once you have created a model, you'll likely want to modify its [data-schema.md](data-schema.md "mention") to better suit your needs.
+Once you have created a model, you'll likely want to modify its [Data Schema](data-schema.md) to better suit your needs.
 
-Even if the model was created from the Model Catalog, it is unique to your account and fully customizable.
+Even if the model was created from a model template in the Catalog, it is unique to your account and fully customizable.
 
 Navigate to the Data Schema page where you can adjust fields, update configurations, and customize settings according to your requirements.
 
 ### Using the AI Assistant
 
-You can use the "AI Assistant" dialog box for automated improvements.
+The Mindee AI Assistant is a powerful tool that can help you get the most of your model.
+
+It is available in a dialog box in the model's Data Schema page.
 
 Be as accurate as possible with field names, exact names and values should be in quotation marks.\
 \
@@ -81,7 +83,11 @@ Example sentences to modify your data schema with the AI Assistant:
 
 ## Optimizing Model Results
 
-In order to optimize the accuracy of a given model, the first step is to follow the [data-schema-best-practices.md](data-schema-best-practices.md "mention") to fine-tune the base model configuration. If you started from a template in the catalog, it is usually necessary to adapt it to your specific documents and use case.
+In order to optimize the accuracy of a given model, the first step is to [fine-tune the Data Schema](data-schema-best-practices.md).
+
+In particular, start by asking the Mindee AI Assistant to [automatically optimize](data-schema-best-practices.md#automated-optimization) your Data Schema.
+
+If you started from a template in the catalog, it is usually necessary to adapt it to your specific documents and use case.
 
 After this step, if there are still some lingering issues or unexpected behavior, there are further refinements available.
 
