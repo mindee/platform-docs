@@ -38,9 +38,9 @@ Using the `response` deserialized object from either the polling response or a w
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields: dict = response.inference.result.fields
+    fields = response.inference.result.fields
 
-    my_simple_field = fields["my_simple_field"]
+    my_simple_field = fields.get_simple_field("my_simple_field")
 ```
 {% endtab %}
 
@@ -206,9 +206,9 @@ Using the `response` deserialized object from either the polling response or a w
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields: dict = response.inference.result.fields
+    fields = response.inference.result.fields
 
-    object_field = fields["my_object_field"]
+    object_field = fields.get_object_field("my_object_field")
 ```
 {% endtab %}
 
@@ -331,9 +331,9 @@ Using the `response` deserialized object from either the polling response or a w
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields: dict = response.inference.result.fields
+    fields = response.inference.result.fields
 
-    my_list_field = fields["my_list_field"]
+    my_list_field = fields.get_list_field("my_list_field")
 ```
 {% endtab %}
 
@@ -509,12 +509,12 @@ Using the `response` deserialized object from either the polling response or a w
 
 ```python
 from mindee import InferenceResponse
-from mindee.parsing.v2.field import FieldConfidence
+from mindee.v2.parsing.field import FieldConfidence
 
 def handle_response(response: InferenceResponse):
-    fields: dict = response.inference.result.fields
+    fields = response.inference.result.fields
 
-    confidence = fields["my_simple_field"].confidence
+    confidence = fields.get_simple_field("my_simple_field").confidence
 
     # compare using the enum `FieldConfidence`
     is_certain = confidence == FieldConfidence.CERTAIN
@@ -656,9 +656,9 @@ Using the `response` deserialized object from either the polling response or a w
 from mindee import InferenceResponse
 
 def handle_response(response: InferenceResponse):
-    fields: dict = response.inference.result.fields
+    fields = response.inference.result.fields
     
-    locations = fields["my_simple_field"].locations
+    locations = fields.get_simple_field("my_simple_field").locations
 
     # accessing the polygon
     polygon = locations[0].polygon
