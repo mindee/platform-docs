@@ -60,7 +60,7 @@ handleResponse(response) {
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
 public function handleResponse(InferenceResponse $response)
 {
@@ -228,7 +228,7 @@ handleResponse(response) {
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
 public function handleResponse(InferenceResponse $response)
 {
@@ -353,7 +353,7 @@ handleResponse(response) {
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
 public function handleResponse(InferenceResponse $response)
 {
@@ -548,7 +548,7 @@ handleResponse(response) {
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
 public function handleResponse(InferenceResponse $response)
@@ -705,7 +705,7 @@ handleResponse(response) {
 Using the `$response` deserialized object from either the polling response or a webhook payload.
 
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
 public function handleResponse(InferenceResponse $response)

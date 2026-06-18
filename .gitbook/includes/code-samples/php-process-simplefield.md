@@ -3,7 +3,7 @@ title: php-process-simplefield
 ---
 
 ```php
-use Mindee\Parsing\V2\InferenceResponse;
+use Mindee\V2\Product\Extraction\ExtractionResponse;
 
 public function handleResponse(InferenceResponse $response)
 {
