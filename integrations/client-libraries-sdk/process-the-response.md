@@ -38,12 +38,15 @@ To verify the HMAC signature, you'll need the Signing Secret from the webhook:
 
 <figure><img src="../../.gitbook/assets/webhook-copy-secret.png" alt=""><figcaption></figcaption></figure>
 
+Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+
 {% tabs %}
 {% tab title="Python" %}
 Assuming you're able to get the raw HTTP request via the variable `request` .
 
 ```python
-from mindee import LocalResponse, InferenceResponse
+from mindee.input import LocalResponse
+from mindee.v2 import ExtractionResponse
 
 # Load the JSON string sent by the Mindee webhook POST callback.
 local_response = LocalResponse(request.body())
@@ -61,7 +64,7 @@ if not is_valid:
     raise Error("Bad HMAC signature! Is someone trying to do evil?")
 
 # Deserialize the response into objects
-response = local_response.deserialize_response(InferenceResponse)
+response = local_response.deserialize_response(ExtractionResponse)
 ```
 {% endtab %}
 
@@ -80,7 +83,7 @@ async handleMindeeResponse(data, hmacSignature) {
     throw Error("Bad HMAC signature! Is someone trying to do evil?");
   }
   const response = await localResponse.deserializeResponse(
-    mindee.InferenceResponse
+    mindee.ExtractionResponse
   );
 }
 
@@ -164,6 +167,8 @@ echo $response->inference;
 Assuming you have a Web server instance `myHttpServer` .
 
 ```java
+import com.mindee.v2.parsing.LocalResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 
 // Load the JSON string sent by the Mindee webhook POST callback.
 String jsonData = myHttpServer.getPostBodyAsString();
@@ -233,14 +238,16 @@ This is the base object of the response.
 
 It doesn't do much on its own except allow you to access the [Inference object](process-the-response.md#the-inference-object).
 
+Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+
 The response object can be used to retrieve the raw response from the server, as a JSON string:
 
 {% tabs %}
 {% tab title="Python" %}
 ```python
-from mindee import InferenceResponse
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
+def handle_response(response: ExtractionResponse):
     response_json = response.raw_http
 ```
 {% endtab %}
@@ -276,9 +283,9 @@ end
 
 {% tab title="Java" %}
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponse response) {
     String responseJSON = response.getRawResponse();
 }
 ```
@@ -323,11 +330,10 @@ Access using the `response` object from either a polling response or a webhook p
 {% tabs %}
 {% tab title="Python" %}
 ```python
-from mindee import InferenceResponse
-from mindee.parsing.v2 import InferenceFile
+from mindee.v2 import ExtractionResponse
 
-def handle_response(response: InferenceResponse):
-    inference_file: InferenceFile = response.inference.file
+def handle_response(response: ExtractionResponse):
+    inference_file = response.inference.file
 
     # various attributes are available, such as:
     filename: str = inference_file.name

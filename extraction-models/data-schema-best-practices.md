@@ -34,8 +34,6 @@ In the dialog box, click the "<i class="fa-wand-magic-sparkles">:wand-magic-spar
 
 <figure><img src="../.gitbook/assets/ai-assistant-optimize-button.png" alt="AI Assistant Auto Optimize Button" width="408"><figcaption></figcaption></figure>
 
-
-
 Now you can sit back, grab a cup of tea, and wait for the analysis to complete.
 
 The model's Data Schema will be temporarily locked during this process. You can safely navigate away from the model page, the analysis will keep running in the background.
@@ -143,7 +141,7 @@ Here is an example of too many details (don't do this):
 
 > The order number is usually next to the words "order no" on the invoice, but sometimes there is no order number, so it will be next to the words "customer invoice no". It is usually present on the first page, in a green box.
 
-What's wrong here? Well, the first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is perfectly capable of determining the location of a value field on its own.
+What's wrong here? Well, the first thing to understand is that you are not giving instructions to a human, but to a machine. Machines prefer concise instructions. On the other hand, this machine has been trained on millions of documents, and is capable of determining the location of a value field on its own.
 
 So what's left is just the instruction about the _customer invoice_ and _order number_.
 
@@ -201,7 +199,9 @@ For example:
 
 ## Frequently Asked Questions
 
-### When should I use Data Schema guidelines vs RAG guidelines?
+<details>
+
+<summary><strong>When should I use Data Schema guidelines vs RAG guidelines?</strong></summary>
 
 Both work in the same way to provide extra context for the model to better identify data and extract them.
 
@@ -211,7 +211,11 @@ If the guideline is to be applied to all documents ⇒ use the Data Schema guide
 
 If the guideline only applies to a specific template ⇒ use the RAG guideline.
 
-### Can the model correctly interpret positions like top, bottom, etc?
+</details>
+
+<details>
+
+<summary><strong>Can the model correctly interpret positions like top, bottom, etc?</strong></summary>
 
 Mindee models are multimodal, meaning they use both textual and visual information.
 
@@ -219,7 +223,11 @@ As such it is possible to write guidelines conveying positional information, for
 
 > The supplier logo will always be at the top of the page.
 
-### Can I reference a specific location or text on the page?
+</details>
+
+<details>
+
+<summary><strong>Can I reference a specific location or text on the page?</strong></summary>
 
 Each page of the document is processed as a whole, and the models have both a visual component and a textual component (multimodal models).
 
@@ -235,7 +243,11 @@ Specifying a location and text:
 
 > The correct customer name is found in the first line of the ship-to address.
 
-### Does the model work better with field information in English?
+</details>
+
+<details>
+
+<summary><strong>Does the model work better with field information in English?</strong></summary>
 
 In our own testing, major European languages such as French, Spanish, or German, are comparable to English in terms of modal accuracy.
 
@@ -244,6 +256,8 @@ In some cases, it _may_ be beneficial to define the Data Schema, such as field n
 For example, a model for French invoices may use "TVA Intracommunautaire" as the field name rather than "Intra-Community VAT", although both will work.
 
 Best is to try both using the [live-test.md](../models/live-test.md "mention") feature.
+
+</details>
 
 ## Next Steps
 

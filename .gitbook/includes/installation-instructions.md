@@ -9,7 +9,7 @@ Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using `pip`:
 
 ```sh
-pip install -U mindee~=4.36
+pip install -U mindee~=5.0
 ```
 {% endtab %}
 
@@ -19,7 +19,7 @@ Requires Node.js ≥ 20.1. Node.js ≥ 22 is recommended.
 Simply install the [NPM package](https://www.npmjs.com/package/mindee):
 
 ```sh
-npm install mindee@^5.1.1
+npm install mindee@^5.3.1
 ```
 {% endtab %}
 
@@ -39,7 +39,7 @@ Requires Ruby ≥ 3.2.
 Simply install the [gem](https://rubygems.org/gems/mindee) using:
 
 ```shell
-gem install mindee -v '~> 5.1'
+gem install mindee -v '~> 5.2'
 ```
 {% endtab %}
 
@@ -61,7 +61,7 @@ There are various installation methods, Maven, Gradle, etc:
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using `dotnet add`:
 
 ```sh
-dotnet add package Mindee --version 4.3
+dotnet add package Mindee --version 4.4
 ```
 {% endtab %}
 {% endtabs %}

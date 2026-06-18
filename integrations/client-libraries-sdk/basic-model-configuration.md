@@ -7,12 +7,26 @@ icon: wrench-simple
 
 # Basic Model Configuration
 
+{% include "../../.gitbook/includes/this-is-reference-documenta....md" %}
+
 Parameters that apply to all Mindee model types (Extraction, Split, Crop, etc).
 
 Inference parameters control:
 
 * which model to use
 * server-side processing options
+
+All model parameter classes inherit from a base class. In these samples we will be showing the general usage and parameters common to all.
+
+All examples use the Extraction model (product in the SDK), but you'll need to adjust depending on the model type you are using.
+
+The available classes are:
+
+* `ExtractionParameters`  for [Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models) models
+* `SplitParameters`  for [Split](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models) models
+* `CropParameters`  for [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models) models
+* `ClassificationParameters`  for [Classification](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/classification-models) models
+* `OCRParameters`  or `OcrParameters`  for [Raw Text OCR](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/ocr-models) models
 
 ### Use an Alias
 
@@ -27,7 +41,7 @@ Aliases are not unique in Mindee, you can use the same alias value multiple time
 {% tabs %}
 {% tab title="Python" %}
 ```python
-inference_params = InferenceParameters(
+inference_params = ExtractionParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     

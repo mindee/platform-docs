@@ -62,13 +62,13 @@ npm install mindee
 ./bin/mindee.rb --help
 
 # Help for extraction models
-./bin/mindee.rb v2 extraction --help
+./bin/mindee.rb extraction --help
 
 # Run extraction on a file
 #   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
 #   -m: Your model ID
 #   Positional arg: Absolute path to the file
-./bin/mindee.rb v2 extraction \
+./bin/mindee.rb extraction \
   -k md_XXXXXXXXXXXX \
   -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf

@@ -30,12 +30,7 @@ The client instance is thread-safe in applicable languages.
 First import the needed classes:
 
 ```python
-from mindee import (
-    ClientV2,
-    InferenceParameters,
-    InferenceResponse,
-    PathInput,  # for loading files from disk
-)
+from mindee.v2 import Client
 ```
 
 For the API key, you can pass it directly to the client.\
@@ -44,7 +39,7 @@ This is useful for quick testing.
 ```python
 api_key = "MY_API_KEY"
 
-mindee_client = ClientV2(api_key)
+mindee_client = Client(api_key)
 ```
 
 Instead of passing the key directly, you can also set the following environment variable:
@@ -55,7 +50,7 @@ This is recommended for production use.\
 In this way there is no need to pass the `api_key` when initializing the client.
 
 ```python
-mindee_client = ClientV2()
+mindee_client = Client()
 ```
 {% endtab %}
 
@@ -157,7 +152,7 @@ This is useful for quick testing.
 
 ```ruby
 api_key = 'MY_API_KEY'
-mindee_client = Mindee::ClientV2.new(api_key: api_key)
+mindee_client = Mindee::V2::Client.new(api_key: api_key)
 ```
 
 Instead of passing the key directly, you can also set the following environment variable:
@@ -168,7 +163,7 @@ This is recommended for production use.\
 In this way there is no need to pass the `api_key` when initializing the client.
 
 ```ruby
-mindee_client = Mindee::ClientV2.new()
+mindee_client = Mindee::V2::Client.new()
 ```
 {% endtab %}
 
@@ -204,7 +199,6 @@ MindeeClient mindeeClient = new MindeeClient();
 First add the required namespaces.
 
 ```csharp
-using Mindee;
 using Mindee.V2;
 ```
 

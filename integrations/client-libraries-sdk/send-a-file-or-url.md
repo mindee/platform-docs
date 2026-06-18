@@ -38,12 +38,14 @@ The client library will POST the request for you, and then automatically poll th
 
 ### Polling Configuration
 
+Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
+
 {% tabs %}
 {% tab title="Python" %}
 When polling you really only need to set the `model_id` .
 
 ```python
-model_params = InferenceParameters(model_id="MY_MODEL_ID")
+model_params = ExtractionParameters(model_id="MY_MODEL_ID")
 ```
 
 You can also set the various polling parameters.\
@@ -60,16 +62,6 @@ polling_options=PollingOptions(
     delay_sec=1.5,
     # Total number of polling attempts.
     max_retries=80,
-)
-
-inference_params = InferenceParameters(
-    # ID of the model, required.
-    model_id="MY_MODEL_ID",
-    
-    # Set only if having timeout issues.
-    # polling_options=polling_options,
-
-    # ... any other options ...
 )
 ```
 {% endtab %}
@@ -146,7 +138,7 @@ polling_options = {
 {% endtab %}
 
 {% tab title="Java" %}
-When polling you really only need to set the `modelId` . Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
+When polling you really only need to set the `modelId` .
 
 ```java
 var modelParams = ExtractionParameters
@@ -174,7 +166,7 @@ var pollingOptions = PollingOptions
 {% endtab %}
 
 {% tab title=".NET" %}
-When polling you really only need to set the `modelId`. Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
+When polling you really only need to set the `modelId`.
 
 ```csharp
 var modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
@@ -342,10 +334,12 @@ For more information on webhooks, take a look at the [webhooks.md](../webhooks.m
 
 When using a webhook, you'll need to set the model ID and the webhook ID(s) to use.
 
+Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
-model_params = InferenceParameters(
+model_params = ExtractionParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
     
@@ -373,7 +367,7 @@ const modelParams = {
 
 {% tab title="PHP" %}
 ```php
-$modelParams = new InferenceParameters(
+$modelParams = new ExtractionParameters(
     // ID of the model, required.
     modelId: "MY_MODEL_ID",
     
@@ -401,8 +395,6 @@ model_params = {
 {% endtab %}
 
 {% tab title="Java" %}
-Remember to use the appropriate product/model class, examples use `ExtractionParameters`.
-
 ```java
 var modelParams = ExtractionParameters
     // ID of the model, required.
@@ -418,8 +410,6 @@ var modelParams = ExtractionParameters
 {% endtab %}
 
 {% tab title=".NET" %}
-Remember to use the appropriate product/model class, examples use `ExtractionParameters`.
-
 ```csharp
 var modelParams = new ExtractionParameters(
     // ID of the model, required.
@@ -445,7 +435,7 @@ Using the `mindee_client`, created in [#initialize-the-mindee-client](configure-
 Use the `enqueue_inference` method:
 
 ```python
-response = mindee_client.enqueue_inference(
+response = mindee_client.enqueue(
     input_source, model_params
 )
 
@@ -546,7 +536,7 @@ Using the `mindeeClient`, created in [#initialize-the-mindee-client](configure-t
 Use the `enqueueInference` method:
 
 ```java
-JobResponse response = mindeeClient.enqueueInference(
+JobResponse response = mindeeClient.enqueue(
     inputSource, modelParams
 );
 
@@ -570,7 +560,7 @@ Using the `mindeeClient`, created in [#initialize-the-mindee-client](configure-t
 Use `EnqueueInferenceAsync` method:
 
 ```csharp
-var response = mindeeClient.EnqueueInferenceAsync(
+var response = mindeeClient.EnqueueAsync(
     inputSource, modelParams
 );
 
@@ -723,7 +713,7 @@ var jobId = response.Job.Id;
 // from `EnqueueAndGetResultAsync` method (typically for polling)
 // var jobId = response.Inference.Job.Id;
 
-var jobResponse = await mindeeClientV2.GetJobAsync(jobId);
+var jobResponse = await mindeeClient.GetJobAsync(jobId);
 
 // some metadata, check your IDE for all available attributes
 Console.WriteLine(jobResponse.Job.Status);

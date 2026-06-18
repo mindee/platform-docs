@@ -3,7 +3,7 @@ description: Automatically extract the raw text from each page of a document usi
 icon: text
 ---
 
-# Raw OCR Model Overview
+# Raw Text Model Overview
 
 ## Use Cases
 
@@ -30,7 +30,7 @@ It's much easier and shorter to list what is **not** supported:
 * Ancient languages with no equivalent modern writing system such as cuneiform, Egyptian hieroglyphs, ancient Maya, etc.
 * Modern languages with uncommon writing systems such as Blackfoot, Cherokee, Inuktitut, etc.
 
-## Create a Raw OCR Model
+## Create a Raw Text OCR Model
 
 Raw OCR models are always custom, there are no templates available in the Catalog.
 
