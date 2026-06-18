@@ -62,7 +62,7 @@ Using the `$response` deserialized object from either the polling response or a 
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
 
@@ -87,10 +87,10 @@ end
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.SimpleField;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   SimpleField simpleField = fields.getSimpleField("my_simple_field");
@@ -230,7 +230,7 @@ Using the `$response` deserialized object from either the polling response or a 
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
 
@@ -243,10 +243,10 @@ public function handleResponse(InferenceResponse $response)
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.ObjectField;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   ObjectField objectField = fields.getObjectField("my_object_field");
@@ -355,7 +355,7 @@ Using the `$response` deserialized object from either the polling response or a 
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
     
@@ -368,10 +368,10 @@ public function handleResponse(InferenceResponse $response)
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.ListField;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   ListField listField = fields.getListField("my_list_field");
@@ -551,7 +551,7 @@ Using the `$response` deserialized object from either the polling response or a 
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
 
@@ -588,10 +588,10 @@ end
 Using the `response` deserialized object from either the polling response or a webhook payload.
 
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.FieldConfidence;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   // choose the appropriate field type accessor method: Simple, Object, List
@@ -708,7 +708,7 @@ Using the `$response` deserialized object from either the polling response or a 
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 use Mindee\Parsing\V2\Field\FieldConfidence;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
 
@@ -764,11 +764,11 @@ Using the `response` deserialized object from either the polling response or a w
 ```java
 import com.mindee.geometry.Point;
 import com.mindee.geometry.Polygon;
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.FieldLocation;
 import java.util.List;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   // choose the appropriate field type accessor method: Simple, Object

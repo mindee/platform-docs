@@ -3,11 +3,11 @@ title: java-process-listfield-simplefield
 ---
 
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.SimpleField;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   ListField simpleListField = fields.getListField("my_simple_list_field");

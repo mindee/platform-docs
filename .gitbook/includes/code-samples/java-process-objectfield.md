@@ -3,12 +3,12 @@ title: java-process-objectfield
 ---
 
 ```java
-import com.mindee.parsing.v2.InferenceResponse;
+import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.ObjectField;
 import com.mindee.parsing.v2.field.SimpleField;
 
-public void handleResponse(InferenceResponse response) {
+public void handleResponse(ExtractionResponseresponse) {
   var fields = response.getInference().getResult().getFields();
 
   ObjectField objectField = fields.getObjectField("my_object_field");

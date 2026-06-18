@@ -5,7 +5,7 @@ title: php-process-simplefield
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
 

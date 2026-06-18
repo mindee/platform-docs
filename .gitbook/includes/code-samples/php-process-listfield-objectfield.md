@@ -5,7 +5,7 @@ title: php-process-listfield-objectfield
 ```php
 use Mindee\V2\Product\Extraction\ExtractionResponse;
 
-public function handleResponse(InferenceResponse $response)
+public function handleResponse(ExtractionResponse$response)
 {
     $fields = $response->inference->result->fields;
     $fieldObjectList = $fields->getObjectField('my_object_list_field');
