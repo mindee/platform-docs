@@ -2,7 +2,7 @@
 title: code-sample-java-extraction
 ---
 
-Requires Java ≥ 11. Java ≥ 17 is recommended.\
+Requires Java ≥ 11. Java ≥ 21 is recommended.\
 Requires the [Mindee Java SDK](https://central.sonatype.com/artifact/com.mindee.sdk/mindee-api-java) version **5.2.0** or greater.
 
 {% code lineNumbers="true" %}
