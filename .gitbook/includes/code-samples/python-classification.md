@@ -21,7 +21,7 @@ model_id = "MY_MODEL_ID"
 # Init a new client
 mindee_client = ClientV2(api_key)
 
-# Set parameters
+# Set Classification parameters
 model_params = ClassificationParameters(
     # ID of the model, required.
     model_id=model_id,

@@ -21,7 +21,7 @@ $filePath = "/path/to/the/file.ext";
 // Init a new client
 $mindeeClient = new Client($apiKey);
 
-// Set crop parameters
+// Set Crop parameters
 $modelParams = new CropParameters(
     // ID of the model, required.
     $modelId,

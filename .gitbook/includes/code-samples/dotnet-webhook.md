@@ -9,6 +9,7 @@ Requires the [Mindee .NET client library](https://www.nuget.org/packages/Mindee)
 ```csharp
 using Mindee;
 using Mindee.Input;
+using Mindee.V2.Product.Extraction.Params;
 
 string filePath = "/path/to/the/file.ext";
 string apiKey = "MY_API_KEY";
@@ -17,8 +18,8 @@ string modelId = "MY_MODEL_ID";
 // Construct a new client
 MindeeClientV2 mindeeClient = new MindeeClientV2(apiKey);
 
-// Set inference parameters
-var modelParams = new InferenceParameters(
+// Set Extraction parameters
+var modelParams = new ExtractionParameters(
     modelId: modelId
 
     // Add any number of webhook IDs here.

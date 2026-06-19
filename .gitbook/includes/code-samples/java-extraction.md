@@ -25,7 +25,7 @@ public class SimpleMindeeClientV2 {
     // Init a new client
     var mindeeClient = new MindeeClient(apiKey);
 
-    // Set inference parameters
+    // Set Extraction parameters
     var modelParams = ExtractionParameters
         // ID of the model, required.
         .builder(modelId)

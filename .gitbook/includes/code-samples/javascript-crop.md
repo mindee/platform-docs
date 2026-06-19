@@ -20,7 +20,7 @@ const mindeeClient = new mindee.Client(
   { apiKey: apiKey }
 );
 
-// Set product parameters
+// Set Crop parameters
 const modelParams = {
   modelId: modelId,
 };

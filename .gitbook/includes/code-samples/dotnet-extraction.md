@@ -20,7 +20,7 @@ string modelId = "MY_MODEL_ID";
 // Construct a new client
 Client mindeeClient = new Client(apiKey);
 
-// Set parameters
+// Set Extraction parameters
 var modelParams = new ExtractionParameters(
     modelId: modelId
 

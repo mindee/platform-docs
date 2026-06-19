@@ -21,7 +21,7 @@ $filePath = "/path/to/the/file.ext";
 // Init a new client
 $mindeeClient = new Client($apiKey);
 
-// Set classification parameters
+// Set Classification parameters
 $modelParams = new ClassificationParameters(
     // ID of the model, required.
     $modelId,

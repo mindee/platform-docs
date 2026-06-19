@@ -20,7 +20,7 @@ const mindeeClient = new mindee.Client(
   { apiKey: apiKey }
 );
 
-// Set product parameters
+// Set Extraction parameters
 const modelParams = {
   modelId: modelId,
 

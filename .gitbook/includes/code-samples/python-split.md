@@ -21,7 +21,7 @@ model_id = "MY_MODEL_ID"
 # Init a new client
 mindee_client = ClientV2(api_key)
 
-# Set parameters
+# Set Split parameters
 model_params = SplitParameters(
     # ID of the model, required.
     model_id=model_id,

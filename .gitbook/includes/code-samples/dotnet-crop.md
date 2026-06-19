@@ -20,7 +20,7 @@ string modelId = "MY_MODEL_ID";
 // Construct a new client
 Client mindeeClient = new Client(apiKey);
 
-// Set inference parameters
+// Set Crop parameters
 var modelParams = new CropParameters(
     modelId: modelId
 );

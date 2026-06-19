@@ -1,10 +1,10 @@
 {
-  "name": "Mindee V2 Enqueue and Get Inference Public",
+  "name": "Mindee V2 Enqueue and Get Results Public",
   "nodes": [
     {
       "parameters": {
         "method": "POST",
-        "url": "http://api-v2.mindee.net/v2/inferences/enqueue",
+        "url": "https://api-v2.mindee.net/v2/products/extraction/enqueue",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
@@ -280,7 +280,7 @@
         288
       ],
       "id": "f5b95c78-c8b7-407e-87d6-f11f6b4def58",
-      "name": "Mindee V2 GET Inference",
+      "name": "Mindee V2 GET Results",
       "alwaysOutputData": false,
       "credentials": {
         "httpCustomAuth": {

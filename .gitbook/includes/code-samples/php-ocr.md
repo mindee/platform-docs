@@ -21,7 +21,7 @@ $filePath = "/path/to/the/file.ext";
 // Init a new client
 $mindeeClient = new Client($apiKey);
 
-// Set ocr parameters
+// Set Raw OCR parameters
 $modelParams = new OcrParameters(
     // ID of the model, required.
     $modelId,

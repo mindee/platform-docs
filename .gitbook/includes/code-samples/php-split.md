@@ -21,7 +21,7 @@ $filePath = "/path/to/the/file.ext";
 // Init a new client
 $mindeeClient = new Client($apiKey);
 
-// Set split parameters
+// Set Split parameters
 $modelParams = new SplitParameters(
     // ID of the model, required.
     $modelId,

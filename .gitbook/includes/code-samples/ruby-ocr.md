@@ -17,7 +17,7 @@ model_id = 'MY_MODEL_ID'
 # Init a new client
 mindee_client = Mindee::V2::Client.new(api_key: api_key)
 
-# Set inference parameters
+# Set Raw OCR parameters
 model_params = {
     # ID of the model, required.
     model_id: model_id,

@@ -21,7 +21,7 @@ model_id = "MY_MODEL_ID"
 # Init a new client
 mindee_client = Client(api_key)
 
-# Set extraction parameters
+# Set Extraction parameters
 params = ExtractionParameters(
     # ID of the model, required.
     model_id=model_id,

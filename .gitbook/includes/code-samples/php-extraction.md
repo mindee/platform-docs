@@ -21,7 +21,7 @@ $filePath = "/path/to/the/file.ext";
 // Init a new client
 $mindeeClient = new Client($apiKey);
 
-// Set inference parameters
+// Set Extraction parameters
 $modelParams = new ExtractionParameters(
     // ID of the model, required.
     $modelId,
