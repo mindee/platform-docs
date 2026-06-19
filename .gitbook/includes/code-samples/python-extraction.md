@@ -9,9 +9,9 @@ Requires the [Mindee Python client library](https://pypi.org/project/mindee/) ve
 ```python
 from mindee import PathInput
 from mindee.v2 import (
-  Client,
-  ExtractionParameters,
-  ExtractionResponse,
+    Client,
+    ExtractionParameters,
+    ExtractionResponse,
 )
 
 input_path = "/path/to/the/file.ext"
@@ -22,7 +22,7 @@ model_id = "MY_MODEL_ID"
 mindee_client = Client(api_key)
 
 # Set Extraction parameters
-params = ExtractionParameters(
+model_params = ExtractionParameters(
     # ID of the model, required.
     model_id=model_id,
 
@@ -46,7 +46,7 @@ input_source = PathInput(input_path)
 response = mindee_client.enqueue_and_get_result(
     ExtractionResponse,
     input_source,
-    params,
+    model_params,
 )
 
 # Print a brief summary of the parsed data

@@ -7,9 +7,9 @@ Requires the [Mindee Python SDK](https://pypi.org/project/mindee/) version **4.3
 
 {% code lineNumbers="true" %}
 ```python
-from mindee import (
-    ClientV2,
-    PathInput,
+from mindee import PathInput
+from mindee.v2 import (
+    Client,
     OCRParameters,
     OCRResponse,
 )
@@ -19,7 +19,7 @@ api_key = "MY_API_KEY"
 model_id = "MY_MODEL_ID"
 
 # Init a new client
-mindee_client = ClientV2(api_key)
+mindee_client = Client(api_key)
 
 # Set Raw OCR parameters
 model_params = OCRParameters(
