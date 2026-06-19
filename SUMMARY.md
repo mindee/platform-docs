@@ -59,12 +59,12 @@
   * [Classification Quick Start](classification-models/sdk-integration/classification-quick-start.md)
   * [Classification Result](classification-models/sdk-integration/classification-result.md)
 
-## OCR Models
+## Raw Text (OCR) Models
 
-* [Raw Text Model Overview](ocr-models/ocr.md)
-* [SDK Integration](ocr-models/sdk-integration/README.md)
-  * [OCR Quick Start](ocr-models/sdk-integration/ocr-quick-start.md)
-  * [OCR Result](ocr-models/sdk-integration/ocr-result.md)
+* [Raw Text Model Overview](raw-text-ocr-models/ocr.md)
+* [SDK Integration](raw-text-ocr-models/sdk-integration/README.md)
+  * [OCR Quick Start](raw-text-ocr-models/sdk-integration/ocr-quick-start.md)
+  * [OCR Result](raw-text-ocr-models/sdk-integration/ocr-result.md)
 
 ## Integrations
 

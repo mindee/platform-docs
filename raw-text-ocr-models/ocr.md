@@ -17,7 +17,15 @@ Meaning the exact text is returned as raw data, not parsed into structured data 
 **Most users looking for a generic "Mindee OCR" or to "OCR a document" are likely looking for Extraction: c**onsult the [Extraction model documentation](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models).
 {% endhint %}
 
-A file sent to the Raw OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
+A file sent to the Raw Text OCR Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
+
+### Difference Between Raw Text _Model_ and Raw Text _Option_
+
+The [Extraction model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models) has the [Raw Text optional feature](../extraction-models/optional-features/raw-text-full-ocr.md) that can be used in similar uses cases, depending on your needs.
+
+**Raw Text option:** returns the entire text for each page as a single string.
+
+**Raw Text model:** in addition to the single string per page, also returns each word on the page. Each word has position information and text content.
 
 ### Language Support
 

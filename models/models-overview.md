@@ -37,7 +37,7 @@ More information is available for each model type:
 * [split.md](../split-models/split.md "mention") ⇒ find documents in a multi-page file
 * [crop.md](../crop-models/crop.md "mention") ⇒ find documents on a single page
 * [classification.md](../classification-models/classification.md "mention") ⇒ identify file contents
-* [ocr.md](../ocr-models/ocr.md "mention")⇒ structured text extraction
+* [ocr.md](../raw-text-ocr-models/ocr.md "mention")⇒ structured text extraction
 
 ## Live Test
 

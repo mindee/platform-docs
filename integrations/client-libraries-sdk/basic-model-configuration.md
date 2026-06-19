@@ -26,7 +26,7 @@ The available classes are:
 * `SplitParameters`  for [Split](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models) models
 * `CropParameters`  for [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models) models
 * `ClassificationParameters`  for [Classification](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/classification-models) models
-* `OCRParameters`  or `OcrParameters`  for [Raw Text OCR](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/ocr-models) models
+* `OCRParameters`  or `OcrParameters`  for [Raw Text OCR](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/raw-text-ocr-models) models
 
 ### Use an Alias
 
