@@ -18,16 +18,16 @@ For this reason the SDKs include a Command Line Interface (CLI) to allow for qui
 pip install mindee
 
 # General help
-mindeeV2 --help
+mindee --help
 
 # Help for extraction models
-mindeeV2 extraction --help
+mindee extraction --help
 
 # Run extraction on a file
 #   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
 #   -m: Your model ID
 #   Positional arg: Absolute path to the file
-mindeeV2 extraction \
+mindee extraction \
   -k md_XXXXXXXXXXXX \
   -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf
@@ -124,17 +124,20 @@ First install the CLI package: [https://www.nuget.org/packages/Mindee.Cli](https
 Note: this is a separate package from the general Mindee SDK.
 
 ```bash
+# Install the package
+dotnet tool install Mindee.Cli
+
 # General help
-Mindee.Cli --help
+dotnet mindee --help
 
 # Help for extraction models
-Mindee.Cli extraction --help
+dotnet mindee extraction --help
 
 # Run extraction on a file
 #   -k: API key, you can instead `export MINDEE_V2_API_KEY=md_XXXXXXXXXXXX`
 #   -m: Your model ID
 #   Positional arg: Absolute path to the file
-Mindee.Cli extraction \
+dotnet mindee extraction \
   -k md_XXXXXXXXXXXX \
   -m xxxx-xxxx-xxxx-xxxx-xxxx \
   /path/to/the/file.pdf

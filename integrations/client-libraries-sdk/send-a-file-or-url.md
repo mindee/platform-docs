@@ -728,3 +728,41 @@ foreach (var webhook in jobResponse.Job.Webhooks)
 ```
 {% endtab %}
 {% endtabs %}
+
+## Sending Multiple Files
+
+The Mindee API doesn't support sending multiple files at once, if you are processing large numbers of files, there are several strategies you can adopt.
+
+There are two typical use cases: handling files on disk, or handling end-user uploads.
+
+### Files on Disk
+
+When you need to process large amounts of files in a directory or multiple directories.
+
+Typically you'll simply loop through all the files in the directories, and call the API for each one.
+
+Here the usual concern is how long it will take to process all the files.
+
+If you're polling, you can either use either threading or asynchronous processes to send multiple files at the same time. Your programming language and framework will determine what works best.
+
+If you are using webhooks, your throughput will be significantly higher than when polling without needing to use threading or asynchronous programing. This is because you are not waiting on the server to send results before moving to the next file.
+
+In both case, pay close attention to  the [file upload limits](../technical-limitations.md#rate-limits) on the Mindee server. The server will respond with a HTTP 429 code in case of excessive file uploads.
+
+### End-user Uploads
+
+When you provide a service in which an end-user can upload documents directly on your platform.
+
+Since all Mindee SDKs provide multiple ways of handling files in-memory, you don't need to write anything to disk. You can if you want to, of course!
+
+Typically, you'll use either raw bytes or a stream object, depending on your language and framework. Send this directly to the Mindee SDK and process as usual. More information in the section: [#load-a-source-file](load-and-adjust-a-file.md#load-a-source-file "mention")
+
+With this kind of setup, polling is perhaps less of a performance handicap if you have multiple server processes running and few users.
+
+When you have many users uploading many files, basically when this is a core feature of your product or workflow, webhooks will give you more flexibility in how to deploy and dimension your services. For example you could have the upload process send the file directly to Mindee, and have another process or micro-service to handle processing the results.
+
+### Getting Integration Help
+
+The AI Assistant can provide you with custom code and advice.
+
+Enterprise users benefit from custom integration assistance, don't hesitate to reach out to our support team.
