@@ -743,7 +743,7 @@ Typically you'll simply loop through all the files in the directories, and call 
 
 Here the usual concern is how long it will take to process all the files.
 
-If you're polling, you can either use either threading or asynchronous processes to send multiple files at the same time. Your programming language and framework will determine what works best.
+If you're polling, you can either use threading or asynchronous processes to send multiple files at the same time. Your programming language and framework will determine what works best.
 
 If you are using webhooks, your throughput will be significantly higher than when polling without needing to use threading or asynchronous programing. This is because you are not waiting on the server to send results before moving to the next file.
 
