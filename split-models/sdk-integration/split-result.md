@@ -7,7 +7,7 @@ icon: brain-circuit
 
 {% include "../../.gitbook/includes/result-response-requirements.md" %}
 
-## Accessing Split Ranges
+## Access Split Ranges
 
 A `SplitRange` describes one logical sub-document identified within the source file.
 
@@ -215,3 +215,97 @@ public void HandleResponse(SplitResponse response)
 {% endtabs %}
 
 {% include "../../.gitbook/includes/access-chained-extraction.md" %}
+
+## Extract Split Ranges From the Input File
+
+The SDKs provide support for extracting each split range as separate PDF files.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+from mindee import SplitResponse
+
+def handle_response(response: SplitResponse, input_source) -> None:
+    splits = response.inference.result.splits
+
+    for split in splits:
+      extracted_split = split.extract_from_input_source(input_source)
+
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+<pre class="language-javascript"><code class="lang-javascript"><strong>async handleResponse(response, inputSource) {
+</strong>  const splits = response.inference.result.splits;
+
+  for (const split of splits) {
+    const extractedSplit = await split.extractFromInputSource(inputSource);
+  }
+}
+</code></pre>
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+use Mindee\V2\Product\Split\SplitResponse;
+
+public function handleResponse(SplitResponse $response, $inputSource)
+{
+    $splits = $response->inference->result->splits;
+
+    foreach ($splits as $split) {
+        $extractedSplit = $split->extractFromInputSource($inputSource)
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+def handle_response(response)
+  splits = response.inference.result.splits
+
+  splits.each do |split|
+    extracted_split = split.extract_from_input_source(input_source)
+  end
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.mindee.input.LocalInputSource;
+import com.mindee.v2.product.split.SplitResponse;
+import com.mindee.v2.product.split.SplitRange;
+
+public void handleResponse(
+  SplitResponse response,
+  LocalInputSource inputSource
+) {
+  var splits = response.getInference().getResult().getSplits();
+
+  for (SplitRange split : splits) {
+    var extractedSplit = split.extractFromInputSource(inputSource);
+  }
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+using System;
+using Mindee.Input;
+using Mindee.V2.Product.Split;
+
+public void HandleResponse(SplitResponse response, LocalInputSource inputSource)
+{
+    var splits = response.Inference.Result.Splits;
+
+    foreach (SplitRange split in splits)
+    {
+        var extractedSplit = split.ExtractFromInputSource(inputSource);
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
