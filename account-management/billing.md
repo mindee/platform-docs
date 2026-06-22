@@ -32,6 +32,8 @@ To change your plan:
 1. Find the plan under the available options
 2. Click on the "Downgrade" or "Upgrade" button at the bottom of the plan
 
+You can upgrade to a higher plan at any time. Your current plan's commercial terms, including the remaining subscription period and pricing, will be taken into account when switching to the new plan.
+
 ## Stripe Customer Portal
 
 To access your Stripe customer portal, click on the "Manage Subscription" button.
