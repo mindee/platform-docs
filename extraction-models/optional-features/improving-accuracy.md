@@ -31,13 +31,7 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 
 <figure><img src="../../.gitbook/assets/rag-process-overview.jpeg" alt="RAG process overview" width="563"><figcaption></figcaption></figure>
 
-## Activate RAG
-
-{% include "../../.gitbook/includes/feature-availability.md" %}
-
-{% include "../../.gitbook/includes/feature-need-good-data-schema.md" %}
-
-### Set Up the RAG Database
+## Set Up the RAG Database
 
 To use RAG on a given Extraction Model, you'll need to first set up the RAG database which will contain your documents and data.
 
@@ -60,6 +54,14 @@ Ideally, pick a document with the same template (another invoice from the same s
 \
 In the future, the documents respecting the same template should be augmented, which should increase a lot the performances on this given template. For other types of documents, the behavior remain the same, which means that RAG is improving the result with no regression on other documents.
 
+To see which documents are being used, in the database the columns "Matched" and "Last Matched" indicate how many times the document was used and the last time it was used, respectively.
+
+## Activate RAG
+
+{% include "../../.gitbook/includes/feature-availability.md" %}
+
+{% include "../../.gitbook/includes/feature-need-good-data-schema.md" %}
+
 ### Activate RAG on the Platform
 
 {% include "../../.gitbook/includes/default-optional-features.md" %}
@@ -72,13 +74,19 @@ Click on "Data Schema" then "Optional Features" tab. There you can activate the 
 
 ## Frequently Asked Questions
 
-### How is my data protected during RAG processing?
+<details>
+
+<summary>How is my data protected during RAG processing?</summary>
 
 Your data remains private and isolated within your model.
 
 All documents and annotations added to your RAG database are encrypted in transit.
 
-### Is my RAG data shared with other users or sold to 3rd parties?
+</details>
+
+<details>
+
+<summary>Is my RAG data shared with other users or sold to 3rd parties?</summary>
 
 No, never.
 
@@ -88,14 +96,24 @@ Mindee never sells data to 3rd parties.
 
 All storage and retrieval of RAG data is done on Mindee's dedicated servers.
 
-### Does Mindee use my RAG data for training?
+</details>
+
+<details>
+
+<summary>Does Mindee use my RAG data for training?</summary>
 
 No, never.
 
 We only use RAG data internally with your explicit knowledge and prior consent. This is limited to using your documents to help resolve a ticket you opened with our support team.
 
-### What happens to my RAG database if I downgrade my plan?
+</details>
+
+<details>
+
+<summary>What happens to my RAG database if I downgrade my plan?</summary>
 
 We won't delete any of the files you've uploaded into your RAG document database if you downgrade, however you will not be able to modify or validate them.
 
 The guidelines you have given to your RAG documents will be taken into account in your inferences with the lower plan, even if that is above the plan's features.
+
+</details>
