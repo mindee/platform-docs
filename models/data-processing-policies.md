@@ -52,6 +52,10 @@ Yes. Mindee V2 is fully GDPR-compliant and maintains its SOC 2 Type II certifica
 
 <summary><strong>Can I request data deletion at any time?</strong></summary>
 
-Yes. You can request full or partial data deletion at any time by contacting support, or by using the deletion features available in your model settings, depending on your plan. Mindee ensures that your data is securely and permanently removed upon request.
+Yes. You can request full or partial data deletion at any time by using the deletion features available in your [model settings](model-settings.md#delete-the-model), [organization settings](../account-management/organizations.md#delete-organization), or [account settings](../account-management/account-settings.md#delete-account).
+
+Mindee ensures that your data is securely and permanently removed upon request.
+
+You can also contacting our support team if you are unsure.
 
 </details>
