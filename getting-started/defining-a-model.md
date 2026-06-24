@@ -7,15 +7,17 @@ icon: rectangles-mixed
 
 # Defining a Model
 
-## From an Existing Model
+## From a Model Template
 
-Chances are, there is already a model that at least partly fits your needs.
+Chances are, there is already a model template that at least partly fits your needs.
 
-Click on Catalog to check the prebuilt models, and when clicking on one of them, you'll be able to create a copy to "My Models".
+Click on Catalog to check the model templates, and when clicking on one of them, you'll create a new model based on the template.
 
-You now have a model with a **prebuilt** data schema that you can modify, using the "Data Schema" tab as explained in more detail in: [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
+You now have your own model, you can start testing it immediately.
 
-For instance, here is a demo of how to create a model from the Invoice Pre-built model:
+If you need to make adjustments, use the "Data Schema" tab as explained in more detail in: [#modifying-your-data-schema](../models/models-overview.md#modifying-your-data-schema "mention").
+
+For instance, here is a demo of how to create a model from the Invoice model template:
 
 {% @supademo/embed url="https://app.supademo.com/demo/cmieehzyjar67b7b4lf5tgvrb" demoId="cmieehzyjar67b7b4lf5tgvrb" %}
 
