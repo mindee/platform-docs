@@ -56,6 +56,6 @@ Yes. You can request full or partial data deletion at any time by using the dele
 
 Mindee ensures that your data is securely and permanently removed upon request.
 
-You can also contacting our support team if you are unsure.
+You can also contact our support team if you are unsure.
 
 </details>
