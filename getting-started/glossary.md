@@ -103,6 +103,10 @@ A result retrieval flow where your application repeatedly checks the processing 
 
 Pronounced "mind - ee", because we are like a helpful **mind** to you!
 
+Mindee is the leading developer tool that powers document understanding for top players and unicorns like Qonto, Spendesk , or Payfit.
+
+Founded in 2018, we raised a $14M Series A led by GGV Capital in 2021, just after graduating from Y Combinator (YC).
+
 ### SDK (Software Development Kit)
 
 A set of software development tools developers can use to facilitate the creation of applications.
