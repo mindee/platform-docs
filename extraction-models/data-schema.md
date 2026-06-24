@@ -107,4 +107,4 @@ This includes, but is **not limited** to:
 
 ## Next Steps
 
-Now that you're familiar with the different components of the Data Schema, you'll want to take a look at [data-schema-best-practices.md](data-schema-best-practices.md "mention") for tips on building an accurate and well-performing Data Schema.
+Now that you're familiar with the different components of the Data Schema, you'll want to take a look at tips for [building an accurate Data Schema](data-schema-best-practices.md).
