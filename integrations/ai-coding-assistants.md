@@ -13,6 +13,8 @@ icon: brain-circuit
 
 Download these when integrating Mindee, simply download the file for your language and feed it to your local agent such as Claude Code or Copilot.
 
+[https://raw.githubusercontent.com/mindee/mindee-api-python/refs/heads/main/SKILL.md](https://raw.githubusercontent.com/mindee/mindee-api-python/refs/heads/main/SKILL.md)
+
 [https://raw.githubusercontent.com/mindee/mindee-api-php/refs/heads/main/SKILL.md](https://raw.githubusercontent.com/mindee/mindee-api-php/refs/heads/main/SKILL.md)
 
 [https://raw.githubusercontent.com/mindee/mindee-api-nodejs/refs/heads/main/SKILL.md](https://raw.githubusercontent.com/mindee/mindee-api-nodejs/refs/heads/main/SKILL.md)
