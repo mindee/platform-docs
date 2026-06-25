@@ -43,4 +43,8 @@ Simply download the file for your language and feed it to your local agent.
 
 ## MCP Servers
 
-To connect your AI agent to the Mindee documentation MCP, click the "more" arrow next to the "Ask" button toward the top of this page.
+To connect your AI agent to the Mindee documentation MCP:
+
+1. click the "more" arrow next to the "Ask" button toward the top of this page
+2. look towards the bottom of the list
+3. click on the MCP server you want to install
