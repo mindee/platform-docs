@@ -1,6 +1,6 @@
 ---
 description: >-
-  Use Mindee's official skill.md files to give your AI coding assistants
+  Use Mindee's official SKILL.md files to give your AI coding assistants
   knowledge of Mindee's features and integration steps
 hidden: true
 noRobotsIndex: true
