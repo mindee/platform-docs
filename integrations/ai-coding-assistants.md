@@ -13,10 +13,28 @@ icon: brain-circuit
 
 Download these when integrating Mindee, simply download the file for your language and feed it to your local agent such as Claude Code, Codex, or Copilot.
 
+{% tabs %}
+{% tab title="Python" %}
 {% embed url="https://raw.githubusercontent.com/mindee/mindee-api-python/refs/heads/main/SKILL.md" %}
+{% endtab %}
 
-{% embed url="https://raw.githubusercontent.com/mindee/mindee-api-php/refs/heads/main/SKILL.md" %}
-
+{% tab title="Node.js" %}
 {% embed url="https://raw.githubusercontent.com/mindee/mindee-api-nodejs/refs/heads/main/SKILL.md" %}
+{% endtab %}
 
+{% tab title="PHP" %}
+{% embed url="https://raw.githubusercontent.com/mindee/mindee-api-php/refs/heads/main/SKILL.md" %}
+{% endtab %}
+
+{% tab title="Ruby" %}
+{% embed url="https://raw.githubusercontent.com/mindee/mindee-api-ruby/refs/heads/main/SKILL.md" %}
+{% endtab %}
+
+{% tab title="Java" %}
+{% embed url="https://raw.githubusercontent.com/mindee/mindee-api-java/refs/heads/main/SKILL.md" %}
+{% endtab %}
+
+{% tab title=".NET" %}
 {% embed url="https://raw.githubusercontent.com/mindee/mindee-api-dotnet/refs/heads/main/SKILL.md" %}
+{% endtab %}
+{% endtabs %}
