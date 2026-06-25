@@ -11,7 +11,7 @@ icon: brain-circuit
 
 ## SKILL files
 
-Use these when integrating Mindee with the help of an AI agent such as Claude Code, Codex, or Copilot.
+Use these when integrating Mindee with the help of an AI agent such as Claude Code, Codex, or Copilot. You can also integrate this file into your AI-powered IDE like VS Code or the various JetBrains products.
 
 Simply download the file for your language and feed it to your local agent.
 
