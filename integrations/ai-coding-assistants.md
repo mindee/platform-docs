@@ -11,7 +11,9 @@ icon: brain-circuit
 
 ## SKILL files
 
-Download these when integrating Mindee, simply download the file for your language and feed it to your local AI agent such as Claude Code, Codex, or Copilot.
+Use these when integrating Mindee with the help of an AI agent such as Claude Code, Codex, or Copilot.
+
+Simply download the file for your language and feed it to your local agent.
 
 {% tabs %}
 {% tab title="Python" %}
