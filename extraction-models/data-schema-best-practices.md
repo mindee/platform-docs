@@ -16,11 +16,11 @@ Any additional features you activate to increase accuracy, such as [improving-ac
 
 ## **Automated Optimization**
 
-Before modifying the fields manually, we highly recommend running the automated optimization tool first.
+Before modifying the fields manually, we highly recommend running the AI-assisted optimization tool first.
 
 The tool will analyze your documents and determine how well the Data Schema fits them. From there it will provide suggestions for improving the accuracy of the extractions.
 
-This is completely automatic, you just need to provide the sample documents.
+The process is completely automated, you just need to provide some sample documents.
 
 ### Running the Analysis
 
@@ -261,4 +261,4 @@ Best is to try both using the [live-test.md](../models/live-test.md "mention") f
 
 ## Next Steps
 
-Once you are satisfied with your Data Schema, you'll likely to want to use one of our [Integrations](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/integrations "mention") to connect your model with your platform.
+Once you are satisfied with the results of your Data Schema, you'll want to [connect your platform](../integrations/api-overview.md) and start processing documents.

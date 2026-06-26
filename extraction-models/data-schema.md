@@ -7,13 +7,13 @@ icon: database
 
 An **Extraction Data Schema** defines which data should be extracted, and in what way, from documents sent to the model.
 
+The Data Schema is the foundation of your model. All other features will use and depend on the Data Schema.
+
 You can think of the Data Schema as a map to the documents you send to the model for extraction.
 
 This map includes which data to extract, how to format the data, pitfalls to avoid, etc.\
 \
 To do this, the Data Schema is composed of Fields (or data points), each field having its own configuration.
-
-In this way the Data Schema is the foundation of your model. All other features will use and depend on the Data Schema.
 
 {% hint style="info" icon="lightbulb" %}
 Use the [live-test.md](../models/live-test.md "mention") when working on your Data Schema to quickly validate changes.
@@ -41,7 +41,11 @@ The type also gives an indication on what to look for in the input file.
 
 ### Base Types
 
-<table><thead><tr><th width="191.2000732421875">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>Text</td><td>A sequence of characters representing textual data.</td></tr><tr><td>Number</td><td>Numeric data which could be a whole value (integer) or a decimal (floating point) value.</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date or <code>YYYY-MM-DD HH:mm:ss</code> for date and time.</td></tr><tr><td>Classification</td><td>A defined list of categories or types to match. Category names are strings.</td></tr><tr><td>Boolean</td><td><p>Represents two possible values: <code>true</code> or <code>false</code> </p><p>Useful for checkboxes.</p><p>Hint: boolean field names should start with "is" or "has".</p></td></tr><tr><td>Nested Object</td><td><p>A complex data type containing multiple subfields or properties.</p><p>Used to group related elements, such as the components of an address.</p><p>Subfields may contain a single value or a list of values.</p><p>Only one level of nesting: subfields may not be nested objects.</p></td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc.</td></tr><tr><td>Barcode</td><td><p>Detect the location of a 1D barcode (i.e. UPC, EAN) or a 2D barcode (i.e. QR Code, Data Matrix, 2D-DOC, PDF417).</p><p>Additionally, attempt to decode the contents of the barcode as a string value.</p></td></tr></tbody></table>
+<table><thead><tr><th width="191.2000732421875">Field Type</th><th>Description</th></tr></thead><tbody><tr><td>Text</td><td>A sequence of characters representing textual data, a string value.</td></tr><tr><td>Number</td><td>Numeric data which can be a whole value (integer) or a decimal value (floating point).</td></tr><tr><td>Date</td><td>A specific year, month, and day, formatted as a <code>YYYY-MM-DD</code> date or <code>YYYY-MM-DD HH:mm:ss</code> for date and time.</td></tr><tr><td>Classification</td><td>A defined list of categories or types to match. Category names are text strings.</td></tr><tr><td>Boolean</td><td><p>Represents two possible values: <code>true</code> or <code>false</code> </p><p>Should be used for checkboxes.</p><p>Hint: boolean field names should start with "is" or "has".</p></td></tr><tr><td>Nested Object</td><td><p>A complex data type containing multiple subfields or properties.</p><p>Used to group related elements, such as the components of an address.</p><p>Subfields may contain a single value or a list of values.</p><p>Only one level of nesting: subfields may not be nested objects.</p></td></tr><tr><td>Object Detection</td><td>Detect the location of a document feature, such as a logo, signature, photo, etc.</td></tr><tr><td>Barcode</td><td><p>Detect the location of a 1D barcode (i.e. UPC, EAN) or a 2D barcode (i.e. QR Code, Data Matrix, 2D-DOC, PDF417).</p><p>Additionally, attempt to decode the contents of the barcode as a string value.</p></td></tr></tbody></table>
+
+{% hint style="info" %}
+All fields can have an empty (null) value.
+{% endhint %}
 
 ### **Array Types**
 
