@@ -9,6 +9,12 @@ icon: brain-circuit
 
 # AI Coding Assistants
 
+{% hint style="info" %}
+Users have reported that several AI agents insist on providing v1 code for v2 users.
+
+If you are experiencing any issues with v1 and v2 mismatch, make sure to provide the appropriate SKILL file for your agent.
+{% endhint %}
+
 ## SKILL files
 
 Use these when integrating Mindee with the help of an AI agent such as Claude Code, Codex, or Copilot. You can also integrate this file into your AI-powered IDE like VS Code or the various JetBrains products.
