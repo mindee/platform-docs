@@ -12,7 +12,7 @@ icon: brain-circuit
 {% hint style="info" %}
 Users have reported that several AI agents insist on providing v1 code for v2 users.
 
-If you are experiencing any issues with v1 and v2 mismatch, make sure to provide the appropriate SKILL file for your agent.
+If you are experiencing any issues with v1 and v2 mismatch, make sure to provide the appropriate SKILL file to your agent.
 {% endhint %}
 
 ## SKILL files
