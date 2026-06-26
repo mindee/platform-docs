@@ -40,9 +40,9 @@ sequenceDiagram
 
 ## Send Files Using Polling
 
-When using the SDKs, the polling process is completely transparent to you.
+When using the SDKs, this asynchronous polling process is completely transparent to you.
 
-You only need to call a single method and await its return.
+You only need to call a single synchronous method and await its return.
 
 For more information, consult: [#polling-configuration](client-libraries-sdk/send-a-file-or-url.md#polling-configuration "mention")
 
