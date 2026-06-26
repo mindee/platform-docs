@@ -5,6 +5,14 @@ icon: user
 
 # Account Settings
 
+A Mindee account is required for logging into the platform.
+
+However, models and API keys are stored at the organization level.
+
+When you create your Mindee account, a default organization will be created. Your account will be the [owner](organizations.md#member-roles) of this organization.
+
+You can be a member of multiple organizations.
+
 ## Access Account Settings
 
 Click on "<i class="fa-gear">:gear:</i> Settings" in the main menu, then on the "Account" tab.

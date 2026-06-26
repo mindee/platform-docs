@@ -33,6 +33,10 @@ You can set an alert to receive an email when your [plan](plans.md) has reached 
 
 ## **Team Members**
 
+Each organization may have several members.
+
+Each user ([account](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/account-management)) may be a member of several organizations.
+
 The **Team Members** section lists all users who belong to your organization, along with their:
 
 * **Name & Email** – displayed for clarity.
