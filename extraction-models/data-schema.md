@@ -71,7 +71,7 @@ Some examples for the best field types to use, given a basic invoice extraction 
 
 ## Overall Guidelines
 
-In addition to individual field guidelines, a global guideline can be used in your Data Schema.
+In addition to individual field guidelines, an overall (or global) guideline can be used in your Data Schema.
 
 The overall guideline text will apply to all or some fields, depending on your instructions.
 
