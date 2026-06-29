@@ -65,9 +65,9 @@ Navigate to the Data Schema page where you can adjust fields, update configurati
 
 ### Using the AI Assistant
 
-The Mindee AI Assistant is a powerful tool that can help you get the most of your model.
+The Mindee AI Assistant is a powerful tool that can help you get the most of your model. It is the preferred method of modifying the Data Schema.
 
-It is available in a dialog box in the model's Data Schema page.
+The Assistant is available in a dialog box in the model's Data Schema page.
 
 Be as accurate as possible with field names, exact names and values should be in quotation marks.\
 \
