@@ -48,7 +48,7 @@ Requires Java ≥ 11. Java ≥ 17 is recommended.
 
 Group ID: `com.mindee.sdk`\
 Artifact ID: `mindee-api-java`\
-Version: ![](https://img.shields.io/maven-central/v/com.mindee.sdk/mindee-api-java?style=flat-square\&label=%20)
+Version: `5.2.0` or greater
 
 There are various installation methods, Maven, Gradle, etc:
 
