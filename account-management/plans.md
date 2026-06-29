@@ -64,7 +64,7 @@ Some features are only applicable to extraction models.
 | [AI Agent for custom model](#user-content-fn-1)[^1]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Community support](#user-content-fn-2)[^2]                | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Raw Text](#user-content-fn-3)[^3]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| RAG[^4]                                                    |          :x:         |     20 documents     |       Unlimited      |       Unlimited      |
+| RAG[^4]                                                    |          :x:         |     20 documents     | :white\_check\_mark: | :white\_check\_mark: |
 | [Chat support](#user-content-fn-5)[^5]                     |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | Members[^6]                                                |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Data processing localization](#user-content-fn-7)[^7]     |          :x:         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
