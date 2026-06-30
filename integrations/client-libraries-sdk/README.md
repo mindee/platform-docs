@@ -113,3 +113,27 @@ Anything documented here is officially supported and is considered stable for pr
 Anything in a library that is not documented here, is **not** officially supported and subject to change or removal.
 
 </details>
+
+<details>
+
+<summary><strong>There is a bug with the SDK, how can I get help?</strong></summary>
+
+If you are encountering a persistant issue, you should try first:
+
+1. Asking the Docs Assistant for help
+2. Asking your local agent for help by using one of our [SKILL files](../ai-coding-assistants.md#skill-files)
+
+After this, if you determine (or are told) there is a problem with the SDK itself, the best bet would be to open a bug report on the relevant SDK's GitHub repository:
+
+* [https://github.com/mindee/mindee-api-python/issues](https://github.com/mindee/mindee-api-python/issues)
+* [https://github.com/mindee/mindee-api-nodejs/issues](https://github.com/mindee/mindee-api-nodejs/issues)
+* [https://github.com/mindee/mindee-api-php/issues](https://github.com/mindee/mindee-api-php/issues)
+* [https://github.com/mindee/mindee-api-ruby/issues](https://github.com/mindee/mindee-api-ruby/issues)
+* [https://github.com/mindee/mindee-api-java/issues](https://github.com/mindee/mindee-api-java/issues)
+* [https://github.com/mindee/mindee-api-dotnet/issues](https://github.com/mindee/mindee-api-dotnet/issues)
+
+Our SDK engineers will be automatically notified of the new issue.
+
+**Note:** Pro and above plans can contact our support teams directly.
+
+</details>
