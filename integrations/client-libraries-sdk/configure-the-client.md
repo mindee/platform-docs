@@ -88,7 +88,7 @@ const mindeeClient = new mindee.Client();
 internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, and when the client is initialized `getGlobalDispatcher` is called.
 
 **This is perfectly fine for the vast majority of cases:**\
-If you set a custom Agent as the global dispatcher, Mindee will use it.
+If you set a custom Agent as your global dispatcher, Mindee will use it for all calls.
 
 In the case where you need a specific dispatcher for Mindee, you can set it as follows:
 
@@ -110,6 +110,8 @@ const mindeeClient = new mindee.Client({
   dispatcher: myDispatcher,
 });
 ```
+
+The Mindee client will then use the given dispatcher for **all calls**.
 
 This is the recommended setup when needing to pass extra parameters or configuration options, for example when using the Client behind a proxy.
 
