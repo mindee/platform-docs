@@ -90,7 +90,7 @@ internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, 
 **This is perfectly fine for the vast majority of cases:**\
 If you set a custom Agent as your global dispatcher, Mindee will use it for all calls.
 
-In the case where you need a specific dispatcher for Mindee, you can set it as follows:
+In some rare cases you may need a specific dispatcher for Mindee, different from your global dispatcher. You can set a custom dispatcher as follows:
 
 ```javascript
 import { Agent, interceptors } from "undici";
