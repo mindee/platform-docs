@@ -32,4 +32,8 @@ The data will be deleted regardless of the Storage Period setting.
 
 Once the Storage Period is passed, the data will be deleted regardless of whether this option is enabled. Once the data are deleted, any calls to the inference ID will result in a 404 error.
 
-This option is recommended for workflows where you only need the extracted data once and do not require retrieval beyond the initial API call.
+This option is recommended for workflows where:
+
+* you only need to access the data once
+* you are storing the data from each API call in your system
+* there are operational requirements that specify a Zero Data Retention policy
