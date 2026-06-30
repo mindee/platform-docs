@@ -90,7 +90,7 @@ internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, 
 **This is perfectly fine for the vast majority of cases:**\
 If you set a custom Agent as the global dispatcher, Mindee will use it.
 
-In the rare case where you need a specific dispatcher for Mindee, you can set it as follows:
+In the case where you need a specific dispatcher for Mindee, you can set it as follows:
 
 ```javascript
 import { Agent, interceptors } from "undici";
@@ -108,6 +108,17 @@ const mindeeClient = new mindee.Client({
 
   // Pass the custom dispatcher to the Mindee client
   dispatcher: myDispatcher,
+});
+```
+
+This is the recommended setup when needing to pass extra parameters or configuration options, for example when using the Client behind a proxy.
+
+When running in some serverless environments like Vercel, some errors caused by freezing/thawing of the process can be avoided using Undici's `RetryAgent` class.
+
+```javascript
+const myDispatcher = new RetryAgent(new Agent(), {
+  maxRetries: 2,
+  errorCodes: ["UND_ERR_SOCKET", "UND_ERR_CONNECT_TIMEOUT"],
 });
 ```
 {% endtab %}
