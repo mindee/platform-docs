@@ -21,7 +21,7 @@ The following features help ensure compliance with your regional regulations and
 
 * **For testing and setup:** Use a longer Storage Duration (up to 24 hours) to allow time to check and validate processed results. This is particularly useful when setting up a webhook workflow.
 * **For general production use:** Set a relatively short Storage Duration (3-5 hours).
-* **For maximum privacy:** Always enable **Delete When Fetched.** Best to also set a short Storage Duration (1 hour) in case of failed calls (i.e. network failure on GET).
+* **For privacy or Zero Data Retention:** Always enable **Delete When Fetched.** Best to also set a short Storage Duration (1 hour) in case of failed calls (i.e. network failure on GET).
 * **For compliance:** Select the Processing Zone that matches your legal and regulatory requirements.
 
 ### Example Configuration
