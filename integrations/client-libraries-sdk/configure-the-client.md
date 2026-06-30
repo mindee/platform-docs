@@ -113,7 +113,7 @@ const mindeeClient = new mindee.Client({
 
 This is the recommended setup when needing to pass extra parameters or configuration options, for example when using the Client behind a proxy.
 
-When running in some serverless environments like Vercel, some errors caused by freezing/thawing of the process can be avoided using Undici's `RetryAgent` class.
+When running in some serverless environments like Vercel, some errors caused by freezing/thawing of the process can be avoided using Undici's `RetryAgent` class:
 
 ```javascript
 const myDispatcher = new RetryAgent(new Agent(), {
