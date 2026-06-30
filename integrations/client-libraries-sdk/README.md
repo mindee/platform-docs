@@ -125,12 +125,12 @@ If you are encountering a persistant issue, you should try first:
 
 After this, if you determine (or are told) there is a problem with the SDK itself, the best bet would be to open a bug report on the relevant SDK's GitHub repository:
 
-* [https://github.com/mindee/mindee-api-python/issues](https://github.com/mindee/mindee-api-python/issues)
-* [https://github.com/mindee/mindee-api-nodejs/issues](https://github.com/mindee/mindee-api-nodejs/issues)
-* [https://github.com/mindee/mindee-api-php/issues](https://github.com/mindee/mindee-api-php/issues)
-* [https://github.com/mindee/mindee-api-ruby/issues](https://github.com/mindee/mindee-api-ruby/issues)
-* [https://github.com/mindee/mindee-api-java/issues](https://github.com/mindee/mindee-api-java/issues)
-* [https://github.com/mindee/mindee-api-dotnet/issues](https://github.com/mindee/mindee-api-dotnet/issues)
+* **Python**: [https://github.com/mindee/mindee-api-python/issues](https://github.com/mindee/mindee-api-python/issues)
+* **Node.js**: [https://github.com/mindee/mindee-api-nodejs/issues](https://github.com/mindee/mindee-api-nodejs/issues)
+* **PHP**: [https://github.com/mindee/mindee-api-php/issues](https://github.com/mindee/mindee-api-php/issues)
+* **Ruby**: [https://github.com/mindee/mindee-api-ruby/issues](https://github.com/mindee/mindee-api-ruby/issues)
+* **Java**: [https://github.com/mindee/mindee-api-java/issues](https://github.com/mindee/mindee-api-java/issues)
+* **.NET**: [https://github.com/mindee/mindee-api-dotnet/issues](https://github.com/mindee/mindee-api-dotnet/issues)
 
 Our SDK engineers will be automatically notified of the new issue.
 
