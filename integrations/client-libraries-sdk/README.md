@@ -120,7 +120,7 @@ Anything in a library that is not documented here, is **not** officially support
 
 If you are encountering a persistant issue, you should try first:
 
-1. Asking the Docs Assistant for help
+1. Asking the Docs Assistant for help: <button type="button" class="button primary" data-action="ask" data-icon="gitbook-assistant">Ask a question...</button>
 2. Asking your local agent for help by using one of our [SKILL files](../ai-coding-assistants.md#skill-files)
 
 After this, if you determine (or are told) there is a problem with the SDK itself, the best bet would be to open a bug report on the relevant SDK's GitHub repository:
