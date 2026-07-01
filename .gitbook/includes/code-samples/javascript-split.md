@@ -3,7 +3,7 @@ title: sample-code-javascript-split
 ---
 
 Requires Node.js ≥ 20.1. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js SDK](https://www.npmjs.com/package/mindee/) version **5.3.0** or greater.
+Requires the [Mindee Node.js SDK](https://www.npmjs.com/package/mindee/) version **5.5.0** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript
