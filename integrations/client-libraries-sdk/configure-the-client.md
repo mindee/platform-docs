@@ -115,14 +115,16 @@ The Mindee client will then use the given dispatcher for **all calls**.
 
 This is the recommended setup when needing to pass extra parameters or configuration options, for example when using the Client behind a proxy.
 
-When running in some serverless environments like Vercel, _sometimes_ (this depends on your exact setup) there are errors caused by freezing/thawing of the process. These can be avoided using Undici's `RetryAgent` class:
+When running in some serverless environments like Vercel, _sometimes_ (this depends on your exact setup) there are errors caused by freezing/thawing of the process. These can be avoided by:
 
-```javascript
-const myDispatcher = new RetryAgent(new Agent(), {
-  maxRetries: 3,
-  errorCodes: ["UND_ERR_SOCKET", "UND_ERR_CONNECT_TIMEOUT", "ECONNRESET"],
+<pre class="language-javascript"><code class="lang-javascript"><strong>// Avoids stale connections accumulating in the pool.
+</strong>const myDispatcher = new Agent({
+  // Drop idle sockets after 1 ms, effectively disables connection reuse
+  keepAliveTimeout: 1,
+  // Prevent the server from extending the window via a Keep-Alive header
+  keepAliveMaxTimeout: 1,
 });
-```
+</code></pre>
 {% endtab %}
 
 {% tab title="PHP" %}
