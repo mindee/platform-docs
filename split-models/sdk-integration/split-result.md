@@ -309,3 +309,8 @@ public void HandleResponse(SplitResponse response, LocalInputSource inputSource)
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+**Only the methods documented here are production-ready**.
+
+This is because we are still improving the SDKs, hang tight!
+{% endhint %}
