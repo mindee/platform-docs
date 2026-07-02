@@ -79,7 +79,7 @@ You can decide on using either the polling flow or the webhook flow.
 
 ## Developing and Testing
 
-A typical release life cycle could look like this:
+A typical development release cycle could look like this:
 
 1. Start with a new model. If you are making adjustments to an existing production model, we recommend copying it and only making changes to the copy.\
    Consider adding versioning info to the copied model's name, i.e. "Invoices v1.1" or "Receipts 2026-05-17".
@@ -117,5 +117,20 @@ All SDKs have full support for V1 and V2 running in parallel, more information h
 We do not provide separate environments for development, staging, production, etc.
 
 For information on testing your models and code before deploying to production, take a look at: [#developing-and-testing](api-overview.md#developing-and-testing "mention")
+
+</details>
+
+<details>
+
+<summary><strong>How can I export the results to CSV?</strong></summary>
+
+The Mindee API return contains lists of nested fields, it is an object-based format.\
+The CSV format has no provisions for objects, it only has rows and columns.
+
+To convert from Mindee's object format to a CSV format, you can either remove information or output to several CSV files (or sheets).
+
+Since each model is different, and each use case is different, there is no universal way to do this conversion.
+
+It's up to you to make a mapping that conforms to your needs. You can use the [SDKs](../extraction-models/sdk-integration/) for easy manipulation of objects, or set up mapping rules in your [no-code](../extraction-models/no-code-integration/) solution.
 
 </details>
