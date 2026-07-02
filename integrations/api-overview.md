@@ -9,9 +9,9 @@ icon: print-magnifying-glass
 
 Mindee is ideal for handling large amounts of documents. The vast majority of our users will want to connect Mindee to their systems using our APIs.
 
-It's then possible to design any number of different use cases around document processing. These can be for purely internal processing or to provide final end users with a polished experience.
+It's possible to design any number of different use cases around document processing. These can be for purely internal processing or to provide final end users with a polished experience.
 
-In this section we'll go over the major steps required for a successful integration, and link to the relevant sections of the documentation.
+The API is asynchronous, RESTful, and returns objects.
 
 ## Before Starting
 
