@@ -1,9 +1,9 @@
 ---
-description: Pricing plans & feature comparison
+description: Pricing plans, credits, and features comparison.
 icon: money-check-dollar-pen
 ---
 
-# Plans
+# Plans and Credits
 
 Mindee offers flexible subscription plans to suit individual developers, growing teams, and enterprise-scale organizations. Choose the plan that best fits your volume, support, and automation needs.
 
@@ -12,6 +12,7 @@ Mindee offers flexible subscription plans to suit individual developers, growing
 * an unlimited number of all types of models ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models), [Split](../split-models/split.md), [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models), etc)
 * our AI agent to help you build your custom models
 * our complete catalog of model templates to get started quickly
+* the Mindee API for your integration
 
 ## Plan Overview & Pricing
 
