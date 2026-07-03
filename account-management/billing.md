@@ -72,11 +72,10 @@ Each plan includes monthly or yearly included credits depending on your subscrip
 
 If you exceed the included credits in your plan, these additional credits will be charged according to the Overage Rate. These extra credits will be invoiced every €100, or at the end of your subscription.
 
-| Plan     | Included Credits | Overage Rate                 |
-| -------- | ---------------- | ---------------------------- |
-| Starter  | 6,000 per year   | €0.05 per additional credit  |
-| Pro      | 30,000 per year  | €0.04 per additional credit  |
-| Business | 120,000 per year | €0.035 per additional credit |
+| Plan    | Included Credits | Overage Rate                 |
+| ------- | ---------------- | ---------------------------- |
+| Starter | 6,000 per year   | €0.044 per additional credit |
+| Pro     | 6,000 per year   | €0.044 per additional credit |
 
 {% hint style="info" %}
 **Pages are calculated based on successfully processed documents.**

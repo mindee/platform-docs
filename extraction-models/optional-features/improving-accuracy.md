@@ -58,8 +58,6 @@ To see which documents are being used, in the database the columns "Matched" and
 
 ## Activate RAG
 
-{% include "../../.gitbook/includes/feature-availability.md" %}
-
 {% include "../../.gitbook/includes/feature-need-good-data-schema.md" %}
 
 ### Activate RAG on the Platform

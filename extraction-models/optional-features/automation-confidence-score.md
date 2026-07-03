@@ -42,18 +42,16 @@ This visual feedback is especially useful in UI-driven workflows, where operator
 
 The default color scheme is as follows:
 
-| Confidence Level | Label      | Color Code | Suggested Action       | Description                                                              |
-| ---------------- | ---------- | ---------- | ---------------------- | ------------------------------------------------------------------------ |
-| 🟦 Certain       | `Certain`  | Blue       | Safe for  automation   | Full confidence, human-level precision                                   |
-| 🟩 High          | `High`     | Green      | Can be auto-processed  | Model consensus is strong; prediction is likely accurate.                |
-| 🟧 Medium        | `Medium`   | Orange     | Optional review        | Some confidence, but context or format may impact correctness.           |
-| 🟥 Low           | `Low`      | Red        | Manual review required | Extraction is uncertain or likely incorrect. Model disagreement is high. |
+| Confidence Level | Label     | Color Code | Suggested Action       | Description                                                              |
+| ---------------- | --------- | ---------- | ---------------------- | ------------------------------------------------------------------------ |
+| 🟦 Certain       | `Certain` | Blue       | Safe for automation    | Full confidence, human-level precision                                   |
+| 🟩 High          | `High`    | Green      | Can be auto-processed  | Model consensus is strong; prediction is likely accurate.                |
+| 🟧 Medium        | `Medium`  | Orange     | Optional review        | Some confidence, but context or format may impact correctness.           |
+| 🟥 Low           | `Low`     | Red        | Manual review required | Extraction is uncertain or likely incorrect. Model disagreement is high. |
 
 This color-coding system allows product teams to **highlight uncertainty directly in the user interface**, enabling faster decisions, reducing cognitive load, and streamlining exception handling.
 
 ## Activate Confidence Scores
-
-{% include "../../.gitbook/includes/feature-availability.md" %}
 
 {% include "../../.gitbook/includes/feature-need-good-data-schema.md" %}
 

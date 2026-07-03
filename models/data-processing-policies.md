@@ -34,8 +34,6 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 ## **Configure the Data Processing Policy**
 
-{% include "../.gitbook/includes/feature-availability.md" %}
-
 {% @supademo/embed url="https://app.supademo.com/demo/cmevfnfze75icv9kqgqida892" demoId="cmevfnfze75icv9kqgqida892" %}
 
 ## Frequently Asked Questions

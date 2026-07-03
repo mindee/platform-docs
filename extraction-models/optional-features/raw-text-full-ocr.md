@@ -22,10 +22,6 @@ Having access to the raw text can be particularly useful when:
 
 ## Activate Raw Text
 
-{% hint style="success" icon="money-check-dollar-pen" %}
-This feature is available on all plans.
-{% endhint %}
-
 ### Activate Raw Text via API Calls
 
 {% include "../../.gitbook/includes/api-optional-features.md" %}

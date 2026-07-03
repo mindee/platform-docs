@@ -26,8 +26,6 @@ It indicates the precise polygonal area on the document where the value for each
 
 ## **Activate Polygons**
 
-{% include "../../.gitbook/includes/feature-availability.md" %}
-
 ### Activate Polygons on the Platform
 
 {% include "../../.gitbook/includes/default-optional-features.md" %}
