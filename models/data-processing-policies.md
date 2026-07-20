@@ -11,9 +11,17 @@ The following features help ensure compliance with your regional regulations and
 
 ## Processing Zone
 
+{% hint style="warning" %}
+This feature is not available on all plans.
+{% endhint %}
+
 {% include "../.gitbook/includes/model-processing-zone.md" %}
 
 ## Storage Policy
+
+{% hint style="success" %}
+This feature is available on all plans.
+{% endhint %}
 
 {% include "../.gitbook/includes/model-storage-policy.md" %}
 

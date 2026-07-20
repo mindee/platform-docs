@@ -69,7 +69,7 @@ Some features are only applicable to extraction models.
 | [Confidence score](#user-content-fn-6)[^6]               | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Boosted accuracy and precision](#user-content-fn-7)[^7] | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | Members[^8]                                              |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| [Data processing localization](#user-content-fn-9)[^9]   |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| [Data Processing Zone](#user-content-fn-9)[^9]           |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | [Support team](#user-content-fn-10)[^10]                 |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | Custom pricing                                           |          :x:         |          :x:         | :white\_check\_mark: |
 | Dedicated account manager                                |          :x:         |          :x:         | :white\_check\_mark: |
