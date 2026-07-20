@@ -10,13 +10,15 @@ We recommend taking a look at [data-schema.md](data-schema.md "mention") first.\
 This will help you understand the terms used on this page.
 {% endhint %}
 
-To get the best possible extraction data from a model, the key is to ensure that the Data Schema you're using is clear and optimized.
+Mindee models are not "trained" using manually annotated documents, instead the Data Schema is adjusted.
+
+This means that to get the best possible extraction data from a model, the key is to ensure that the Data Schema is clear and optimized.
 
 Any additional features you activate to increase accuracy, such as [improving-accuracy.md](optional-features/improving-accuracy.md "mention") or [automation-confidence-score.md](optional-features/automation-confidence-score.md "mention") will rely heavily on the Data Schema.
 
 ## **Automated Optimization**
 
-Before modifying the fields manually, we highly recommend running the AI-assisted optimization tool first.
+Before modifying the Data Schema manually, first start by running our provided AI-assisted optimization tool.
 
 The tool will analyze your documents and determine how well the Data Schema fits them. From there it will provide suggestions for improving the accuracy of the extractions.
 

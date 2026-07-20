@@ -25,7 +25,7 @@ Each Extraction Model contains these dedicated tools and features:
 
 ## Create an Extraction Model <a href="#creating-from-scratch" id="creating-from-scratch"></a>
 
-From the Mindee Platform main page, click on **"Create your document AI model".**
+From the Mindee Platform main page, click on **"Create your document AI model"**.
 
 ### Create From the Model Catalog
 
@@ -44,10 +44,16 @@ You'll likely need to add and/or modify fields to fit your needs and business ca
 ### Create a Custom Model <a href="#creating-from-scratch" id="creating-from-scratch"></a>
 
 If none of the catalog models fit your needs, you can start from scratch.\
-When creating a new Model, click on **"Custom document".**\
-This step will also generate the model's unique ID.
+When creating a new Model, click on **"Custom document"**.
 
-A dialog box will give you the opportunity to explain your need. You should explain precisely the document you want to process, and discuss the fields to be extracted. Our AI Agent will help you to quickly define an initial data schema that you'll be able to adjust later.
+Next, either:
+
+* describe as exactly as possible the document(s) the model will process
+* upload a sample file representative of documents to process
+
+Our AI Agent will help you to quickly define an initial data schema that you'll be able to adjust later.
+
+This step will also generate the model's unique ID.
 
 {% hint style="info" icon="lightbulb" %}
 **We recommend creating an initial model quickly.**
