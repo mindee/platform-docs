@@ -50,7 +50,10 @@ Next, choose how to create the custom model:
 
 * Describe as precisely as possible the document(s) the model will process.\
   Best when documents processed show variance.
-* Uploading a sample file representative of documents to process.\
+
+or
+
+* Upload a sample file representative of documents to process.\
   Best when documents processed are similar.
 
 Our AI Agent will help you to quickly define an initial data schema that you'll be able to adjust later.
