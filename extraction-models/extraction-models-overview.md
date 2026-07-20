@@ -46,10 +46,12 @@ You'll likely need to add and/or modify fields to fit your needs and business ca
 If none of the catalog models fit your needs, you can start from scratch.\
 When creating a new Model, click on **"Custom document"**.
 
-Next, either:
+Next, choose how to create the custom model:
 
-* describe as exactly as possible the document(s) the model will process
-* upload a sample file representative of documents to process
+* Describe as precisely as possible the document(s) the model will process.\
+  Best when documents processed show variance.
+* Uploading a sample file representative of documents to process.\
+  Best when documents processed are similar.
 
 Our AI Agent will help you to quickly define an initial data schema that you'll be able to adjust later.
 
