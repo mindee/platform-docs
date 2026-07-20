@@ -89,11 +89,15 @@ You may put any number of unrelated guidelines in the text, for example all of t
 For best results, separate each different guideline with a new line.
 {% endhint %}
 
-## Language
+## Document Text
+
+### Language
 
 You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.
 
 This also applies to the Data Schema's [#global-guidelines](data-schema.md#global-guidelines "mention").
+
+Mindee models can process documents in most languages.
 
 This includes, but is **not limited** to:
 
@@ -104,6 +108,10 @@ This includes, but is **not limited** to:
 * African languages: Swahili, Yoruba, Zulu, etc
 
 **Note:** while the models can understand these languages, we are not able to provide in-depth support for all languages.
+
+### Handwriting
+
+Mindee models are able to recognize (or OCR) handwritten texts. Accuracy for handwriting is on average a bit less than printed text.
 
 ## Technical Limitations
 
