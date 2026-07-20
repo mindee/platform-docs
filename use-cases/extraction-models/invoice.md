@@ -1,7 +1,7 @@
 ---
 description: >-
   Automatically parse invoices and extract structured financial data using the
-  pre-trained Invoice model available in the Catalog.
+  Invoice template available in the model Catalog.
 icon: file-invoice-dollar
 ---
 
@@ -42,7 +42,7 @@ You can use this invoice sample if you want to try and do a live test yourself:
 
 ## Document format support
 
-The Invoice model accepts PDFs and common image formats (JPG, PNG). It works reliably with scanned, photographed, and digital invoices.
+The Invoice model accepts PDFs and common image formats (JPG, PNG). It works reliably with scanned, photographed, and digital invoices. Like all Mindee catalog models, handwriting can be recognized in addition to printed text.
 
 ## Invoice Fields
 
