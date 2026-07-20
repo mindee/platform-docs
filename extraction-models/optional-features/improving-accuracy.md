@@ -35,9 +35,11 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 
 To use RAG on a given Extraction Model, you'll need to first set up the RAG database which will contain your documents and data.
 
+You only need a single document to get started.
+
 Access the database by clicking on the "Continuous Learning (RAG)" link in the model's configuration section.\
 \
-You can then enrich your RAG database by uploading documents with an unsatisfying behavior.
+You can then enrich your RAG database by uploading documents with problematic responses.
 
 You need to annotate the document, ticking the fields you want to be covered by the RAG augmentation on this template. You can also add additional guidelines using plain language.
 
