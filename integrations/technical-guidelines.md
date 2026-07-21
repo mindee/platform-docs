@@ -3,7 +3,7 @@ description: Technical guidelines for an optimal integration.
 icon: circle-info
 ---
 
-# Best Technical Practices
+# Technical Best Practices
 
 ## Guidelines For Uploading Files
 
@@ -29,18 +29,28 @@ For example, on some invoice templates the last page will be terms and condition
 We offer free tooling for removing pages from PDFs before sending them.\
 Details here: [#manipulate-pdf-pages](client-libraries-sdk/load-and-adjust-a-file.md#manipulate-pdf-pages "mention")
 
-### **Do not upscale or enhance**
+### **Do Not Upscale or Enhance**
 
 Never upscale a low-resolution image, adding extra pixels only adds to processing time without an increase in accuracy.\
 It is best to avoid very low-resolution images, if possible.
 
-### **Keep the aspect ratio**
+### **Keep the Aspect Ratio**
 
 Never change the original aspect ratio. Doing so will create distortions and degrade the performance of the OCR.
 
-### Use Text PDFs
+### Use Text PDFs When Possible
 
-Text (or native) PDFs are easier and faster to process. In addition, using a text PDF will provide better accuracy than a scanned (or image) PDF.
+Text (or native) PDFs are easier and faster to process. In addition, using a text PDF will provide better accuracy than an image PDF or image file.
+
+If providing text PDFs is not possible, the next best format would be [scanned PDFs](technical-guidelines.md#scans-are-better-than-photos).
+
+### Scans Are Better Than Photos
+
+If possible, providing scanned images may provide better results compared to photos (typically taken with a phone).
+
+**This is not to say that photos won't work well**, Mindee has many major users where photos (of receipts and ID documents notably) are the main use case.
+
+For simple documents the difference is usually negligible, if user errors like blurry or cut-off photos are excluded. However, if you are handling complex documents like bank statements or multi-page invoices, scans typically have fewer errors on average.
 
 ## Usage in Web Applications
 
