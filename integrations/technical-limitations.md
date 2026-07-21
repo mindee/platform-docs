@@ -39,7 +39,7 @@ Specifically, we accept the following image types:
 
 These limits apply to all files, regardless of source or type.
 
-<table><thead><tr><th width="378">Limit type</th><th width="192">Normal value</th><th>Trial value</th></tr></thead><tbody><tr><td>Max file size</td><td>100 MB</td><td>100 MB</td></tr><tr><td>Maximum number of pages</td><td>200 pages</td><td>10 pages</td></tr></tbody></table>
+<table><thead><tr><th width="378">Limit type</th><th width="192">Paid plan</th><th>Free Trial plan</th></tr></thead><tbody><tr><td>Max file size</td><td>100 MB</td><td>100 MB</td></tr><tr><td>Maximum number of pages</td><td>Unlimited pages</td><td>10 pages</td></tr></tbody></table>
 
 If you have access to the file locally, there are workarounds available for these limits:
 
