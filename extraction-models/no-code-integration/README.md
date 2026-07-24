@@ -31,7 +31,7 @@ Only use this method if your no-code platform does not have an official integrat
 
 You'll need to use HTTP nodes in your workflow that can POST and GET a specified URL.
 
-First, POST as form-data to the [#post-v2-inferences-enqueue](../../integrations/api-reference/#post-v2-inferences-enqueue "mention") route:
+First, POST as form-data to the [extraction/enqueue](../../integrations/api-reference/extraction-models.md#post-v2-products-extraction-enqueue) route:
 
 * The Content-Type header must be set to `multipart/form-data`
 * The `Authorization` header must have only your API key as the value
