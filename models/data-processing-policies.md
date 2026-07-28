@@ -11,9 +11,7 @@ The following features help ensure compliance with your regional regulations and
 
 ## Processing Zone
 
-{% hint style="warning" %}
-This feature is not available on all plans.
-{% endhint %}
+{% include "../.gitbook/includes/feature-not-all-plans.md" %}
 
 {% include "../.gitbook/includes/model-processing-zone.md" %}
 
@@ -42,6 +40,8 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 ## **Configure the Data Processing Policy**
 
+{% include "../.gitbook/includes/feature-not-all-plans.md" %}
+
 {% @supademo/embed url="https://app.supademo.com/demo/cmevfnfze75icv9kqgqida892" demoId="cmevfnfze75icv9kqgqida892" %}
 
 ## Frequently Asked Questions
@@ -65,3 +65,14 @@ Mindee ensures that your data is securely and permanently removed upon request.
 You can also contact our support team if you are unsure.
 
 </details>
+
+<details>
+
+<summary><strong>Can you sign a BAA for HIPAA compliance?</strong></summary>
+
+We can, however these agreements are limited to enterprise users.
+
+If you have an enterprise plan, contact your dedicated account manager for more information.
+
+</details>
+

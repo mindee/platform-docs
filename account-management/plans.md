@@ -16,11 +16,7 @@ Mindee offers flexible subscription plans to suit individual developers, growing
 
 ## Plan Overview & Pricing
 
-| Plan       | Monthly price (with annual billing) | Minimum Annual Credits | Overage rate      |
-| ---------- | ----------------------------------- | ---------------------- | ----------------- |
-| Starter    | €44 / month                         | 6,000 credits          | €0.044 per credit |
-| Pro        | €116 / month                        | 6,000 credits          | €0.044 per credit |
-| Enterprise | Custom pricing                      | 500,000+ credits       | _Custom pricing_  |
+<table><thead><tr><th width="156.1998291015625">Plan</th><th width="276.4000244140625">Monthly price (with annual billing)</th><th>Minimum Annual Credits</th></tr></thead><tbody><tr><td>Starter</td><td>€44 / month</td><td>6,000 credits</td></tr><tr><td>Pro</td><td>€116 / month</td><td>6,000 credits</td></tr><tr><td>Enterprise</td><td>Custom pricing</td><td>500,000+ credits</td></tr></tbody></table>
 
 * All plans are available in **monthly** or **annual** billing.
 * **Annual plans save 10%** compared to monthly pricing.
@@ -28,6 +24,12 @@ Mindee offers flexible subscription plans to suit individual developers, growing
 * Overage charges are calculated automatically based on your plan’s rate.
 
 More information is available in the section: [billing.md](billing.md "mention").
+
+### Credits
+
+All plans have a minimum number of credits, however you may include more credits in your subscription to take advantage of lower credit prices.
+
+Think of the plan as the features available, and the credits as the amount of documents to process.
 
 ## Try Mindee for Free!
 
@@ -60,7 +62,6 @@ Some features are only applicable to extraction models.
 
 | Feature                                                  |        Starter       |          Pro         |      Enterprise      |
 | -------------------------------------------------------- | :------------------: | :------------------: | :------------------: |
-| Number of credits included                               |     6,000 / year     |     6,000 / year     |    500,000+ / year   |
 | [AI Agent for custom model](#user-content-fn-1)[^1]      | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Community support](#user-content-fn-2)[^2]              | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Raw Text](#user-content-fn-3)[^3]                       | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
