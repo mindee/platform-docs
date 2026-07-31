@@ -51,6 +51,10 @@ All split ranges will get classified, but only those linked to an Extraction Mod
 
 It's also possible to remove pages that are never used in the Extraction. For example to remove terms and conditions from invoices, set up the classes `terms_and_conditions_page` and `invoice_page` , and only link an Extraction Model to the `invoice_page` class.
 
+### Token Usage With Chaining
+
+{% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
+
 ## Access Extraction Results
 
 When an Extraction model is linked, each Split Range with the detected class will contain an Extraction Response object, which is identical when making an Extraction request for a single document.

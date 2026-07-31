@@ -43,6 +43,10 @@ All crop items will get classified, but only those linked to an Extraction Model
 
 {% include "../.gitbook/includes/use-other-classes.md" %}
 
+### Token Usage With Chaining
+
+{% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
+
 ## Access Extraction Results
 
 When an Extraction Model is linked, each detected crop item with that class contains an Extraction Response object.
