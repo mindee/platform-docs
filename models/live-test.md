@@ -40,8 +40,10 @@ You can always go back to the Live Test page by clicking on the left-hand model 
 2. Mindee runs the current version of your model on the document.
 3. The extracted fields appear on the right-hand side, alongside the image preview.
 4. Each field is:
-   * **highlighted on the document** with color-coded overlays, showcasing the polygon features that can be enabled in the data schema option.
-   * listed in the right panel with values, field names, and optionally confidence scores if the [automation-confidence-score.md](../extraction-models/optional-features/automation-confidence-score.md "mention") feature is enabled.
+   * **shown on the document** with color-coded bounding boxes overlayed on the document. For Extraction models, this uses the [polygon feature](../extraction-models/optional-features/polygons-bounding-boxes.md).
+   * **shown in the "Extracted Fields" panel** with values, field names, and optionally confidence scores if the [automation-confidence-score.md](../extraction-models/optional-features/automation-confidence-score.md "mention") feature is enabled.
+   * also available as raw JSON in the "JSON Response" panel. Note that in Live View, the JSON response always contains the [location information](../extraction-models/sdk-integration/extraction-result.md#locations) since it is used to highlight the document.
+   * interactive — when a field is clicked on the left (document) side, the right (data) side automatically scrolls to the correct section.
 
 <figure><img src="../.gitbook/assets/live-test-demo.gif" alt="Overview animation of Mindee Live View"><figcaption><p>By clicking the polygon, you can also see its corresponding field on the right side.</p></figcaption></figure>
 
