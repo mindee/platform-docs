@@ -42,6 +42,7 @@
 * [SDK Integration](split-models/sdk-integration/README.md)
   * [Split Quick Start](split-models/sdk-integration/split-quick-start.md)
   * [Split Result](split-models/sdk-integration/split-result.md)
+* [No-Code Integration](split-models/no-code-integration.md)
 
 ## Crop Models
 
@@ -50,6 +51,7 @@
 * [SDK Integration](crop-models/sdk-integration/README.md)
   * [Crop Quick Start](crop-models/sdk-integration/crop-quick-start.md)
   * [Crop Result](crop-models/sdk-integration/crop-result.md)
+* [No-Code Integration](crop-models/no-code-integration.md)
 
 ## Classification Models
 
@@ -58,6 +60,7 @@
 * [SDK Integration](classification-models/sdk-integration/README.md)
   * [Classification Quick Start](classification-models/sdk-integration/classification-quick-start.md)
   * [Classification Result](classification-models/sdk-integration/classification-result.md)
+* [No-Code Integration](classification-models/no-code-integration.md)
 
 ## Raw Text (OCR) Models
 
@@ -65,6 +68,7 @@
 * [SDK Integration](raw-text-ocr-models/sdk-integration/README.md)
   * [OCR Quick Start](raw-text-ocr-models/sdk-integration/ocr-quick-start.md)
   * [OCR Result](raw-text-ocr-models/sdk-integration/ocr-result.md)
+* [No-Code Integration](raw-text-ocr-models/no-code-integration.md)
 
 ## Integrations
 

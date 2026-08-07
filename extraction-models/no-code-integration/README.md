@@ -1,5 +1,5 @@
 ---
-description: No-Code and Low-Code integration support.
+description: No-Code and Low-Code integration support for Extraction models.
 icon: square-share-nodes
 ---
 
@@ -13,7 +13,7 @@ It's a relatively simple RESTful API so most tools and platforms can be integrat
 
 ## Officially Supported Integrations
 
-We're hard at work providing official integrations for platforms that allow it.
+We're hard at work providing official integrations for Extraction models on platforms that allow it.
 
 Currently we have support for the following platforms:
 
