@@ -5,12 +5,16 @@ icon: money-check-dollar-pen
 
 # Plans and Credits
 
-Mindee offers flexible subscription plans to suit individual developers, growing teams, and enterprise-scale organizations. Choose the plan that best fits your volume, support, and automation needs.
+Mindee offers flexible subscription plans to suit individual developers, growing teams, and enterprise-scale organizations.
+
+Choose the plan that best fits your support and automation needs.
+
+Choose the number of credits that fit your volume.
 
 **All plans** include access to:
 
 * an unlimited number of all types of models ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models), [Split](../split-models/split.md), [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models), etc)
-* our AI agent to help you build your custom models
+* our AI agent to help you build your custom models and answer your questions
 * our complete catalog of model templates to get started quickly
 * the Mindee API for your integration
 
@@ -56,9 +60,7 @@ Start with the Starter Plan if you're processing fewer than 100 pages per day. F
 
 ## Feature Comparison
 
-"Number of credits included" is for all types of models combined ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models), [Split](../split-models/split.md), [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models), etc).
-
-Some features are only applicable to extraction models.
+Some features are only applicable to [Extraction models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models).
 
 | Feature                                                  |        Starter       |          Pro         |      Enterprise      |
 | -------------------------------------------------------- | :------------------: | :------------------: | :------------------: |
