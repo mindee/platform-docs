@@ -7,7 +7,7 @@ icon: car-side
 
 Extract data from Vehicle Registration Certificates issued in all EU countries.
 
-This includes, but is not limited to:
+Supported countries include, but are not limited to:
 
 * DEU - _Zulassungsbescheinigung Teil I_ / _II_
 * ESP - _Permiso de Circulación_
