@@ -50,8 +50,12 @@ Here is a step-by-step tutorial that shows you how to properly create a Split Ut
 
 {% @supademo/embed url="https://app.supademo.com/demo/cmls4fbup1r1611891nvrrlyw" demoId="cmls4fbup1r1611891nvrrlyw" %}
 
-## Integration
+## Technical Considerations
+
+{% include "../.gitbook/includes/utilities-classes-usage.md" %}
 
 {% include "../.gitbook/includes/utilities-class-names.md" %}
+
+## Integration
 
 Once your Split model is created and tested, integration documentation is provided in the "Documentation" page, or here: [split-quick-start.md](sdk-integration/split-quick-start.md "mention").

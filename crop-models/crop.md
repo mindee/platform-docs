@@ -49,8 +49,12 @@ Here is a step-by-step tutorial that shows you how to properly create a Crop Uti
 
 {% @supademo/embed url="https://app.supademo.com/demo/cmlrtp7mk0u531189vkn2azqr" demoId="cmlrtp7mk0u531189vkn2azqr" %}
 
-## Integration
+## Technical Considerations
+
+{% include "../.gitbook/includes/utilities-classes-usage.md" %}
 
 {% include "../.gitbook/includes/utilities-class-names.md" %}
+
+## Integration
 
 Once your Crop model is created and tested, integration documentation is provided in the "Documentation" page.

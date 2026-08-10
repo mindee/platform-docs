@@ -59,14 +59,10 @@ Here is a step-by-step tutorial that shows you how to properly create a Classify
 
 ## Technical Considerations
 
-A Classification model requires at least two classes.
-
-Class names may be in most languages and writing systems, but cannot exceed 128 characters.
-
-Having more than a few dozen classes will yield unexpected results, and is not recommended. If you need to classify based on vendor names, product codes, customer lists, etc, you should use a text field in an [Extraction model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models) instead.
-
-## Integration
+{% include "../.gitbook/includes/utilities-classes-usage.md" %}
 
 {% include "../.gitbook/includes/utilities-class-names.md" %}
+
+## Integration
 
 Once your Classification model is created and tested, integration documentation is provided in the "Documentation" page, or here: [classification-quick-start.md](sdk-integration/classification-quick-start.md "mention").
