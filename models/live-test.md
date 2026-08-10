@@ -47,6 +47,12 @@ You can always go back to the Live Test page by clicking on the left-hand model 
 
 <figure><img src="../.gitbook/assets/live-test-demo.gif" alt="Overview animation of Mindee Live View"><figcaption><p>By clicking the polygon, you can also see its corresponding field on the right side.</p></figcaption></figure>
 
+### File Limits
+
+{% include "../.gitbook/includes/live-test-file-limits-table.md" %}
+
+
+
 ## Documents History
 
 When testing your model, you'll typically use several documents, and want to use those same documents for testing any changes made to the model.

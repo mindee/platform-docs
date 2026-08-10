@@ -35,11 +35,17 @@ Specifically, we accept the following image types:
 
 <table><thead><tr><th width="140">Type</th><th width="158.5">Media Type</th><th width="135.5">Extensions</th><th>Notes</th></tr></thead><tbody><tr><td><a data-footnote-ref href="#user-content-fn-1">JPEG</a></td><td>image/jpeg</td><td>jpeg, jpg</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-2">PNG</a></td><td>image/png</td><td>png</td><td>non-animated only</td></tr><tr><td>WebP</td><td>image/webp</td><td>webp</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-3">TIFF</a></td><td>image/tiff</td><td>tiff, tif</td><td>single page or multiple pages</td></tr><tr><td><a data-footnote-ref href="#user-content-fn-4">HEIC</a></td><td>image/heic</td><td>heic</td><td></td></tr><tr><td><a data-footnote-ref href="#user-content-fn-5">HEIF</a></td><td>image/heif</td><td>heif</td><td>Single HEVC-encoded image only.</td></tr></tbody></table>
 
-### File Limits
+### Zip Files
 
-These limits apply to all files, regardless of source or type.
+As a convenience for testing, it is possible to upload Zip files to the [Live Test](../models/live-test.md).
 
-<table><thead><tr><th width="378">Limit type</th><th width="192">All Paid plans</th><th>Free Trial plan</th></tr></thead><tbody><tr><td>Max file size</td><td>100 MB</td><td>100 MB</td></tr><tr><td>Maximum number of pages</td><td>Unlimited pages</td><td>10 pages</td></tr></tbody></table>
+The API does not support sending Zip files.
+
+### API File Limits
+
+These limits apply to all files sent to the API, regardless of type.
+
+<table><thead><tr><th width="170.800048828125">Limit type</th><th width="152.7999267578125">All Paid Plans</th><th width="162.4000244140625">Free Trial</th></tr></thead><tbody><tr><td>File Size</td><td>100 MB</td><td>100 MB</td></tr><tr><td>Number of Pages</td><td>No limit</td><td>10 pages</td></tr></tbody></table>
 
 If you have access to the file locally, there are workarounds available for these limits:
 
@@ -48,9 +54,15 @@ If you have access to the file locally, there are workarounds available for thes
 
 Requires using our [client-libraries-sdk](client-libraries-sdk/ "mention").
 
-### URLs
+### Live Test File Limits
 
-When sending a file as an URL rather than as binary data.
+These limits apply to files sent to the [Live Test](../models/live-test.md).
+
+{% include "../.gitbook/includes/live-test-file-limits-table.md" %}
+
+## Accepted URLs
+
+It is possible to send an URL rather than binary data to the API.
 
 {% include "../.gitbook/includes/file-url-technical-limitation.md" %}
 
