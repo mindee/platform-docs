@@ -61,7 +61,11 @@ Locking the Model is an **irreversible action**, you will not be able to unlock 
 
 ## Delete the Model
 
-You can delete a model at any time.
+Models are always active and fully usable.
+
+There is no limit to the number of models you can have.
+
+If you no longer have use of a model, you can delete it at any time.
 
 {% hint style="danger" %}
 Deleting a model is an **irreversible action**, all data will be lost forever!

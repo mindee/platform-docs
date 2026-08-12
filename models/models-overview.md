@@ -15,12 +15,18 @@ Various types of models are available, from simple text recognition to data extr
 
 Models allow you to automate the process of turning unstructured document images into actionable, structured data. They can be tailored to different document types and business needs, ensuring that only the most relevant information is captured for your workflows.
 
-On the Models page, you can view, search, and manage all your document extraction models. Each model is represented as a card showing its name, a preview (if available), and a summary of the main fields it extracts. This makes it easy to organize, access, and deploy models for your document processing tasks.
-
 Each Model contains a dedicated set of tools:
 
 * Configuration: a model is defined by its configuration, that sets the way it should extract data from documents or analyze files. Configuration depends on the model type.
 * Settings: overall settings of the model such as processing zone, storage policy, ownership transfer, etc.
+
+## The Models Page
+
+On the Models page, you can view, search, and manage all your models.
+
+Each model is represented as a card showing its name, a preview (if available), and a summary of the main fields it extracts.
+
+All models listed on the Models page are [testable](models-overview.md#live-test) and usable via API.
 
 ## Extraction Models
 
