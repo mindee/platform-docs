@@ -11,7 +11,9 @@ icon: print-magnifying-glass
 
 A **Model** in the Mindee platform is a configurable and reusable engine designed to process documents. In technical terms, a model is a set of parameters and complex prediction algorithms that perform an inference on files uploaded to Mindee.
 
-Various types of models are available, from simple text recognition to data extraction and classification. Models use Optical Character Recognition (OCR) combined with sophisticated data processing techniques.
+Various types of models are available, from simple text recognition to data extraction and classification.
+
+All models use Optical Character Recognition (OCR) to extract textual information. Most models also incorporate visual information to better understand the structure of the document. Both approaches are combined using sophisticated data processing techniques.
 
 Models allow you to automate the process of turning unstructured document images into actionable, structured data. They can be tailored to different document types and business needs, ensuring that only the most relevant information is captured for your workflows.
 
@@ -30,7 +32,9 @@ All models listed on the Models page are [testable](models-overview.md#live-test
 
 ## Extraction Models
 
-An **Extraction Model** in the Mindee platform is designed to extract structured data from documents using Optical Character Recognition (OCR) combined with data extraction techniques.
+An **Extraction Model** in the Mindee platform is designed to extract structured data from documents.
+
+Information to extract may be purely textual, purely visual, or a combination of both.
 
 More information is available in the section: [Extraction Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models "mention")
 

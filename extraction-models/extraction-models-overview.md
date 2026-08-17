@@ -15,7 +15,9 @@ Each model defines a set of fields called a [data-schema.md](data-schema.md "men
 
 You can create extraction models for any type of document including: invoices, receipts, passports, ID cards, financial statements, etc.
 
-Models allow you to automate the process of turning unstructured document images into actionable, structured data. They can be tailored to different document types and business needs, ensuring that only relevant information is captured for your workflows.
+You can even extract data from objects having textual information: fuel dispensers, water gauges, odometers, electricity meters, etc.
+
+Models allow you to automate the process of turning unstructured documents into actionable, structured data. They can be tailored to different document types and business needs, ensuring that only relevant information is captured for your workflows.
 
 Each Extraction Model contains these dedicated tools and features:
 
