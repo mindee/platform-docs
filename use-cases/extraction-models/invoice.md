@@ -21,28 +21,33 @@ Common use cases:
 * Expense and cost tracking
 * Tax and compliance reporting
 
-## Two Ways to Start Building your Invoice Model
+## Building your Invoice Model
 
-### 1. Choose "Invoice" in the Catalog (Recommended)
+### Choose "Invoice" in the Catalog
 
-* Click on "Create your document AI model" in your dashboard, then select **"Invoice".**
-* The Invoice model template comes pre-configured with the standard [#invoice-fields](invoice.md#invoice-fields "mention").
-* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
-* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
+1. Click on "Create your document AI model" in your dashboard, then select **"Invoice".**
+2. The Invoice model template comes pre-configured with the standard [#invoice-fields](invoice.md#invoice-fields "mention").
+3. Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
 
-### 2. Build a Custom Invoice Model with the AI Agent
+### Adjust Fields with the AI Agent (Optional)
 
-* If your workflow requires extra fields (e.g. purchase order number, IBAN, payment terms), you can describe them directly to the AI Agent.
-* Optionally upload a sample invoice for context.
-* The Agent will generate a tailored schema that extends beyond the built-in Invoice parser.
+If your workflow requires extra fields (i.e. IBAN, payment terms), you can describe them directly to the AI Agent.
 
-You can use this invoice sample if you want to try and do a live test yourself:
+The Agent will guide you through adjusting the [Data Schema](../../extraction-models/data-schema.md) as required, and make the changes on your behalf.
 
-<figure><img src="../../.gitbook/assets/invoice-sample.jpg" alt="a fake invoice from Turnpike Designs" width="533"><figcaption></figcaption></figure>
+You can also adjust the model directly.
 
-## Document format support
+### Several Invoices Within a Single File
 
-The Invoice model accepts PDFs and common image formats (JPG, PNG). It works reliably with scanned, photographed, and digital invoices. Like all Mindee catalog models, handwriting can be recognized in addition to printed text.
+If you are receiving multi-page PDFs with several invoices, use a [Split model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models) and [chain](../../split-models/extraction-model-chaining.md) it to your invoice model.
+
+The file will first be split into separate documents, then each document will have its data extracted in parallel. The return will include the data from all documents, meaning the processing is done within a single API call.
+
+## Supported Document  Formats
+
+The Invoice model accepts [PDFs](../../integrations/technical-limitations.md#pdf-files) and common [image formats](../../integrations/technical-limitations.md#image-files) (JPG, PNG).
+
+It works reliably with scanned, photographed, and digital invoices. Like all Mindee catalog models, handwriting can be recognized in addition to printed text.
 
 ## Invoice Fields
 

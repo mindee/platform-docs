@@ -15,7 +15,7 @@ A file sent to the Crop Model may have any number of pages, [within limits](../i
 
 Some common examples:
 
-* Single photo of a bunch of receipts on the table
+* Single photo of several receipts
 * Front and back of an ID card, each on the same PDF page
 * Remove the background from all documents in a multi-page PDF
 
