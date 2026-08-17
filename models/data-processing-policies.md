@@ -52,7 +52,7 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 No, all documents are the property of their organization and are not used for training Mindee models.
 
-We only use your documents internally with your explicit knowledge and prior consent. Usage is limited to helping us resolve a ticket you opened with our support team.
+We only use your documents internally to help us resolve a ticket you opened with our support team. Since we don't have access to documents sent by API, we would ask you explicitly for samples during the support request investigation, if needed.
 
 </details>
 
