@@ -48,6 +48,28 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 <details>
 
+<summary><strong>Does Mindee use my documents for training?</strong></summary>
+
+No, all documents are the property of their organization and are not used for training Mindee models.
+
+We only use your documents internally with your explicit knowledge and prior consent. Usage is limited to helping us resolve a ticket you opened with our support team.
+
+</details>
+
+<details>
+
+<summary><strong>Are my documents or their data shared or sold to 3rd parties?</strong></summary>
+
+No, never.
+
+Documents and their data are only accessible to the users of the organization that the model belongs to.
+
+Mindee never sells documents or their data to 3rd parties.
+
+</details>
+
+<details>
+
 <summary><strong>Is Mindee GDPR &#x26; SOC 2 Type II compliant?</strong></summary>
 
 Yes. Mindee V2 is fully GDPR-compliant and maintains its SOC 2 Type II certification, ensuring rigorous security controls, data protection standards, and transparency for enterprise needs.

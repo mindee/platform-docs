@@ -76,7 +76,7 @@ Click on "Data Schema" then "Optional Features" tab. There you can activate the 
 
 <details>
 
-<summary>How is my data protected during RAG processing?</summary>
+<summary><strong>How is my data protected during RAG processing?</strong></summary>
 
 Your data remains private and isolated within your model.
 
@@ -86,7 +86,7 @@ All documents and annotations added to your RAG database are encrypted in transi
 
 <details>
 
-<summary>Is my RAG data shared with other users or sold to 3rd parties?</summary>
+<summary><strong>Is my RAG data shared with other users or sold to 3rd parties?</strong></summary>
 
 No, never.
 
@@ -100,9 +100,9 @@ All storage and retrieval of RAG data is done on Mindee's dedicated servers.
 
 <details>
 
-<summary>Does Mindee use my RAG data for training?</summary>
+<summary><strong>Does Mindee use my RAG data for training?</strong></summary>
 
-No, never.
+No, all documents are the property of their organization and are not used for training Mindee models.
 
 We only use RAG data internally with your explicit knowledge and prior consent. This is limited to using your documents to help resolve a ticket you opened with our support team.
 
@@ -110,7 +110,7 @@ We only use RAG data internally with your explicit knowledge and prior consent. 
 
 <details>
 
-<summary>What happens to my RAG database if I downgrade my plan?</summary>
+<summary><strong>What happens to my RAG database if I downgrade my plan?</strong></summary>
 
 We won't delete any of the files you've uploaded into your RAG document database if you downgrade, however you will not be able to modify or validate them.
 
