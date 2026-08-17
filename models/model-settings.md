@@ -49,7 +49,7 @@ You can also us this as way for testing changes to a model. For example you can 
 
 To prevent unintended changes once your model configuration is finalized, you have the option to lock the model.
 
-This will prevent all changes to the model's Data Schema and Optional Features.
+This will prevent all changes to settings that change the output of the model.
 
 This is useful for ensuring that the model remains stable for production use.
 
