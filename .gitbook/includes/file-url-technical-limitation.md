@@ -2,7 +2,7 @@
 title: file-url-technical-limitation
 ---
 
-All [#accepted-files](../../integrations/technical-limitations.md#accepted-files "mention") may be used, if they adhere to the [API file limits](../../integrations/technical-limitations.md#api-file-limits).
+All [accepted files](../../integrations/technical-limitations.md#accepted-files) may be used, if they adhere to the [API file limits](../../integrations/technical-limitations.md#api-file-limits).
 
 In addition, the source URL must adhere to the following rules:
 
@@ -11,5 +11,5 @@ In addition, the source URL must adhere to the following rules:
 * Authentication may be provided in the URL as query parameters: username+password or token.\
   For example, Amazon S3 signed URLs will work.
 * Contents must be a binary file (raw bytes, **not** base64-encoded).
-* File contents cannot be encrypted, PDFs must not be password protected.
+* File contents cannot be encrypted.
 * The Mindee server will **not** follow redirections (HTTP 3xx).

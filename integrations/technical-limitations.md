@@ -24,7 +24,9 @@ In rare cases, the PDF headers are corrupted or invalid. Fix these using our [PD
 Each PDF page can be a combination of text and image elements.
 
 {% hint style="warning" %}
-PDF files cannot be password-protected.
+**PDF files cannot be password-protected.**
+
+The server will not attempt to open a password-protected file, so this limitation includes empty or blank passwords.
 {% endhint %}
 
 ### Image Files
