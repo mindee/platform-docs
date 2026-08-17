@@ -21,7 +21,7 @@ Common use cases:
 * Expense and cost tracking
 * Tax and compliance reporting
 
-## Building your Invoice Model
+## Building Your Invoice Model
 
 ### Choose "Invoice" in the Catalog
 
@@ -39,7 +39,7 @@ You can also adjust the model directly.
 
 ### Several Invoices Within a Single File
 
-If you are receiving multi-page PDFs with several invoices, use a [Split model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models) and [chain](../../split-models/extraction-model-chaining.md) it to your invoice model.
+In some cases several invoices are in the same PDF file, for example when your users scan multiple invoices into the same file. If you are receiving multi-page PDFs with several invoices, use a [Split model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models) and [chain](../../split-models/extraction-model-chaining.md) it to your invoice model.
 
 The file will first be split into separate documents, then each document will have its data extracted in parallel. The return will include the data from all documents, meaning the processing is done within a single API call.
 

@@ -20,24 +20,27 @@ Receipts vary immensely in format, country, language, and quality. Mindee simpli
 * Capture detailed line items: Accurately extract complex, nested data like individual line items, quantities, and prices for granular expense tracking.
 * Get structured output with zero configuration: Start instantly with a pre-trained model that extracts standard fields like total amount, date, vendor name, and expense category.
 
-## Two Ways to Start Using the Receipt Model
+## Building Your Receipt Model
 
-Mindee offers two paths to start extracting data from receipts:
+### Choose "Receipt" in the Catalog
 
-### 1. Choose "Receipt" in the Catalog (Recommended)
+1. Click on "Create your document AI model" in your dashboard, then select **"Receipt".**
+2. The Receipt model template comes pre-configured with standard [#receipt-fields](receipt.md#receipt-fields "mention").
+3. Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
 
-* Click on "Create your document AI model" in your dashboard, then select **"Receipt".**
-* The Receipt model template comes pre-configured with standard [#receipt-fields](receipt.md#receipt-fields "mention").
-* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
-* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
+### Adjust Fields with the AI Agent (Optional)
 
-### **2. Customize the Model via Data Schema**
+If your workflow requires extra fields (i.e. internal identifiers, specific customer IDs), you can describe them directly to the AI Agent.
 
-You can instantly tailor the pre-trained model to your exact needs. By navigating to the Data Schema interface, you can:
+The Agent will guide you through adjusting the [Data Schema](../../extraction-models/data-schema.md) as required, and make the changes on your behalf.
 
-* Add new fields that are unique to your documents (e.g., internal identifiers, specific customer IDs).
-* Delete existing fields that are not relevant to your use case.
-* Refine the extraction by modifying field types or adding custom instructions for the AI assistant.
+You can also adjust the model directly.
+
+### Several Receipts On a Single Image
+
+In some cases several receipts are on the same image, for example when your users photograph all the receipts of the day on the hotel table. If you are receiving images with several receipts, use a [Crop model](../../crop-models/crop.md) and [chain](../../crop-models/extraction-model-chaining.md) it to your receipt model.
+
+The image will first be cropped into separate documents, then each documents will have its data extracted in parallel. The return will include the data from all documents, meaning the processing is done within a single API call.
 
 ## Receipt Fields
 
