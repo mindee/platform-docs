@@ -23,7 +23,7 @@ For example, assuming 1 credit per page:
 * A JPEG file ⇒ 1 credit
 
 {% hint style="info" %}
-Ratio of 1 credit per page is for demonstrative purposes.
+Ratio of 1 credit per page is the default value.
 
 Depending on the model type and options activated, credits consumed per page may be lower or higher.
 
