@@ -9,6 +9,8 @@ icon: coins
 
 Each file successfully processed by a model will consume credits based on the number of pages contained in the file.
 
+By default, Extraction models consume 1 credit per page.
+
 Files that are sent but not processed (i.e. job status "Failed", or HTTP 400) do not consume credits.
 
 The model's "Credit Cost" page shows the exact amount of credits consumed per page processed.
@@ -16,14 +18,14 @@ The model's "Credit Cost" page shows the exact amount of credits consumed per pa
 For files having more than one page, such as PDF or TIFF, this is every page of the file.\
 Single image files count as one page.
 
-For example, assuming 1 credit per page:
+For example, using an Extraction model with no [extra features](../extraction-models/optional-features/) activated:
 
 * Single page text PDF file ⇒ 1 credit
 * 5 page text and image PDF file ⇒ 5 credits
 * A JPEG file ⇒ 1 credit
 
 {% hint style="info" %}
-Ratio of 1 credit per page is the default value.
+Ratio of 1 credit per page is the **default** value.
 
 Depending on the model type and options activated, credits consumed per page may be lower or higher.
 
