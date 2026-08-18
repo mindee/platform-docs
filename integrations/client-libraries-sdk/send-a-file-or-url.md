@@ -36,6 +36,136 @@ Send a document using [polling](../polling-for-results.md), this is the simplest
 
 The client library will POST the request for you, and then automatically poll the API.
 
+### Polling Method Call
+
+{% include "../../.gitbook/includes/input-source-requirements.md" %}
+
+{% tabs %}
+{% tab title="Python" %}
+The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueue_and_get_result` method.
+
+```python
+response = mindee_client.enqueue_and_get_result(
+    InferenceResponse,
+    input_source,
+    model_params,
+)
+
+# To easily test which data were extracted,
+# simply print an RST representation of the inference
+print(response.inference)
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
+
+```typescript
+const response = mindeeClient.enqueueAndGetResult(
+  // Use the appropriate product class
+  mindee.product.Extraction,
+  inputSource,
+  modelParams,
+  // optional, set only if having timeout issues.
+  // pollingOptions,
+);
+
+// Handle the response Promise
+response.then((resp) => {
+  // To easily test which data were extracted,
+  // simply print an RST representation of the inference
+  console.log(resp.inference.toString());
+});
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+The `$mindeeClient` , created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+
+```php
+$response = $mindeeClient->enqueueAndGetResult(
+    // Use the appropriate product class
+    ExtractionResponse::class,
+    $inputSource,
+    $modelParams,
+    // optional, set only if having timeout issues.
+    // $pollingOptions
+);
+
+// To easily test which data were extracted,
+// simply print an RST representation of the inference
+echo strval($response->inference);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueue_and_get_result` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
+
+```ruby
+response = mindee_client.enqueue_and_get_result(
+  # Use the appropriate product class
+  Mindee::V2::Product::Extraction::Extraction,
+  input_source,
+  model_params,
+  # optional, set only if having timeout issues.
+  # polling_options,
+)
+
+# To easily test which data were extracted,
+# simply print an RST representation of the inference
+puts response.inference
+```
+{% endtab %}
+
+{% tab title="Java" %}
+The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+
+```java
+var response = mindeeClient.enqueueAndGetResult(
+    // Use the appropriate product class
+    ExtractionResponse.class,
+    inputSource,
+    modelParams
+    // optional, set only if having timeout issues.
+    // pollingOptions
+);
+
+// To easily test which data were extracted,
+// simply print an RST representation of the inference
+System.out.println(response.getInference().toString());
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
+
+Use the `EnqueueAndGetResultAsync` method. Remember to use the appropriate product/model class, examples use `ExtractionResponse`.
+
+```csharp
+var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(
+    inputSource
+    , modelParams
+    // optional, set only if having timeout issues.
+    //, pollingOptions
+);
+
+// To easily test which data were extracted,
+// simply print an RST representation of the inference
+System.Console.WriteLine(response.Inference.ToString());
+```
+{% endtab %}
+{% endtabs %}
+
 ### Polling Configuration
 
 Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
@@ -186,136 +316,6 @@ var pollingOptions = new PollingOptions(
     // Total number of polling attempts.
     maxRetries: 80
 );
-```
-{% endtab %}
-{% endtabs %}
-
-### Polling Method Call
-
-{% include "../../.gitbook/includes/input-source-requirements.md" %}
-
-{% tabs %}
-{% tab title="Python" %}
-The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueue_and_get_result` method.
-
-```python
-response = mindee_client.enqueue_and_get_result(
-    InferenceResponse,
-    input_source,
-    model_params,
-)
-
-# To easily test which data were extracted,
-# simply print an RST representation of the inference
-print(response.inference)
-```
-{% endtab %}
-
-{% tab title="Node.js" %}
-The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
-
-```typescript
-const response = mindeeClient.enqueueAndGetResult(
-  // Use the appropriate product class
-  mindee.product.Extraction,
-  inputSource,
-  modelParams,
-  // optional, set only if having timeout issues.
-  // pollingOptions,
-);
-
-// Handle the response Promise
-response.then((resp) => {
-  // To easily test which data were extracted,
-  // simply print an RST representation of the inference
-  console.log(resp.inference.toString());
-});
-```
-{% endtab %}
-
-{% tab title="PHP" %}
-The `$mindeeClient` , created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
-
-```php
-$response = $mindeeClient->enqueueAndGetResult(
-    // Use the appropriate product class
-    ExtractionResponse::class,
-    $inputSource,
-    $modelParams,
-    // optional, set only if having timeout issues.
-    // $pollingOptions
-);
-
-// To easily test which data were extracted,
-// simply print an RST representation of the inference
-echo strval($response->inference);
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueue_and_get_result` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
-
-```ruby
-response = mindee_client.enqueue_and_get_result(
-  # Use the appropriate product class
-  Mindee::V2::Product::Extraction::Extraction,
-  input_source,
-  model_params,
-  # optional, set only if having timeout issues.
-  # polling_options,
-)
-
-# To easily test which data were extracted,
-# simply print an RST representation of the inference
-puts response.inference
-```
-{% endtab %}
-
-{% tab title="Java" %}
-The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
-
-```java
-var response = mindeeClient.enqueueAndGetResult(
-    // Use the appropriate product class
-    ExtractionResponse.class,
-    inputSource,
-    modelParams
-    // optional, set only if having timeout issues.
-    // pollingOptions
-);
-
-// To easily test which data were extracted,
-// simply print an RST representation of the inference
-System.out.println(response.getInference().toString());
-```
-{% endtab %}
-
-{% tab title=".NET" %}
-The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
-
-Use the `EnqueueAndGetResultAsync` method. Remember to use the appropriate product/model class, examples use `ExtractionResponse`.
-
-```csharp
-var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(
-    inputSource
-    , modelParams
-    // optional, set only if having timeout issues.
-    //, pollingOptions
-);
-
-// To easily test which data were extracted,
-// simply print an RST representation of the inference
-System.Console.WriteLine(response.Inference.ToString());
 ```
 {% endtab %}
 {% endtabs %}
