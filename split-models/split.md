@@ -21,6 +21,12 @@ Some common examples, where a single PDF contains:
 
 A file sent to the Split Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
 
+By default, a Split model only returns the page ranges and classes of each document. Use [Extraction model chaining](extraction-model-chaining.md) if you also need to extract data from each document.
+
+Split Models also work on single-page files. When a file has a single page, the range will always be exactly one page. This means you can mix various file types in the same workflow, i.e. PDFs and images.
+
+If you need multiple extraction results for each page, take a look at [Crop Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models "mention") instead.
+
 ## Create a Split Model
 
 Split models are always custom, there are no templates available in the Catalog.\
