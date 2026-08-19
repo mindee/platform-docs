@@ -50,9 +50,11 @@ With this setup, all documents are processed in EU data centers, results are sto
 
 <summary><strong>Does Mindee use my documents for training?</strong></summary>
 
-No, all documents are the property of their organization and are not used for training Mindee models.
+No, all documents are the property of their organization and are **not used** for training Mindee models.
 
-We only use your documents internally to help us resolve a ticket you opened with our support team. Since we don't have access to documents sent by API, we would ask you explicitly for samples during the support request investigation, if needed.
+We can only use your documents internally with your explicit knowledge and prior consent. This is limited to using your documents to help resolve a ticket you opened with our support team.
+
+Files sent by API are not saved to disk.
 
 </details>
 
@@ -65,6 +67,8 @@ No, never.
 Documents and their data are only accessible to the users of the organization that the model belongs to.
 
 Mindee never sells documents or their data to 3rd parties.
+
+Files sent by API are not saved to disk.
 
 </details>
 
