@@ -118,13 +118,13 @@ public void HandleResponse(ExtractionResponse response)
 ### `value`
 
 The extracted data value.\
-Possible types: string, number (integer or floating-point), boolean.\
+Possible types: string, numeric, boolean.\
 All types can be null.
 
 On the platform, you can specify date and classification types.\
 These are returned as strings.
 
-For statically-typed languages (C#, Java), the client library will always return a nullable `double` for number values.
+For numeric values, the API always returns `number` types, meaning there is no support for explicit float or integer typing. As a result, the SDK always uses floating types for numeric values, if supported by the language. This ensures consistent typing within the SDK with no loss of information.
 
 {% tabs %}
 {% tab title="Python" %}
