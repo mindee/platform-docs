@@ -9,11 +9,13 @@ icon: print-magnifying-glass
 
 ## What is an Extraction Model?
 
-An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents using Optical Character Recognition (OCR) combined with advanced data extraction techniques.
+An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents. Extraction models process textual information using Optical Character Recognition (OCR) and process document structure using visual information (object detection).
+
+This dual approach allows extracting textual and visual elements at the same time.
 
 Each model defines a set of fields called a [data-schema.md](data-schema.md "mention"). Fields could include "Supplier Name," "Invoice Number," or "Total Amount" for an Invoice Model, as an example. The system will then identify and extract data from uploaded files according to these field definitions.
 
-You can create extraction models for any type of document including: invoices, receipts, passports, ID cards, financial statements, etc.
+Extraction models can be used for any type of document including: invoices, receipts, passports, ID cards, financial statements, [etc](../use-cases/extraction-models/).
 
 You can even extract data from objects having textual information: fuel dispensers, water gauges, odometers, electricity meters, etc.
 
