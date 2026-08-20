@@ -1,5 +1,6 @@
 ---
 description: Overview of processing files using a polling flow.
+noRobotsIndex: true
 icon: repeat
 ---
 
@@ -14,6 +15,14 @@ It's perfect for testing Mindee on a local machine, and is suitable for lightwei
 This flow can also be integrated with various 3rd party tooling such as MS Power Automate.
 
 If you're not sure on what to use, choose this flow.
+
+## Send Files Using Polling
+
+When using the SDKs, this asynchronous polling process is completely transparent to you.
+
+You only need to call a single synchronous method and await its return.
+
+For more information, consult: [#polling-configuration](client-libraries-sdk/send-a-file-or-url.md#polling-configuration "mention")
 
 ### Sequence Diagram
 
@@ -38,14 +47,6 @@ sequenceDiagram
     client->>client: process JSON result
 ```
 
-## Send Files Using Polling
-
-When using the SDKs, this asynchronous polling process is completely transparent to you.
-
-You only need to call a single synchronous method and await its return.
-
-For more information, consult: [#polling-configuration](client-libraries-sdk/send-a-file-or-url.md#polling-configuration "mention")
-
-#### Stopping the Process
+### Stopping the Process
 
 Once a request has been sent, it is not possible to stop or cancel the processing.
