@@ -22,33 +22,3 @@ Currently we have support for the following platforms:
 * **Make**: [officially supported](make.com-scenarios.md)
 
 Don't see support for your favorite platform? [Make a feature request!](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
-
-## Generic No-Code Integration
-
-{% hint style="warning" %}
-Only use this method if your no-code platform does not have an official integration.
-{% endhint %}
-
-You'll need to use HTTP nodes in your workflow that can POST and GET a specified URL.
-
-First, POST as form-data to the [extraction/enqueue](../../integrations/api-reference/extraction-models.md#post-v2-products-extraction-enqueue) route:
-
-* The Content-Type header must be set to `multipart/form-data`
-* The `Authorization` header must have only your API key as the value
-* The file or URL to process, one of: `file`, `file_base64`, or `url`
-* The Model ID, `model_id`
-
-If your no-code platform doesn't support the `form-data` Content-Type, you may post as `application/json`. In this case you must use `file_base64` or `url` only.
-
-In the response to the POST, there will be a `polling_url` attribute, save its value.
-
-Wait 3 seconds.
-
-Loop GET requests on the `polling_url` until the response contains a `result_url` .\
-**Note**: make sure to configure the node to **not** follow redirections.
-
-Alternatively, loop on the `polling_url` until it redirects to the result.
-
-**Important**: in all cases, wait at least 1 second between each poll.
-
-A GET request to the `result_url` will contain the result payload.
