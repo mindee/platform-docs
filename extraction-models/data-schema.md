@@ -101,13 +101,11 @@ Mindee models can process documents in most languages.
 
 This includes, but is **not limited** to:
 
-* European languages: English, French, Spanish, German, Italian, Portuguese, Russian, Greek, etc
+* European languages: English, French, Spanish, German, Dutch, Italian, Polish, Portuguese,  Greek, etc
 * Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
 * East Asian languages: Japanese, Mandarin, Korean, Vietnamese, etc
 * Semitic languages: Arabic, Hebrew, Amharic, etc
 * African languages: Swahili, Yoruba, Zulu, etc
-
-**Note:** while the models can understand these languages, we are not able to provide in-depth support for all languages.
 
 ### Handwriting
 
