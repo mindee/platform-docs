@@ -2,7 +2,6 @@
 description: >-
   Help for manually integrating OCR models: API reference, test client, and cURL
   samples.
-noIndex: true
 ---
 
 # OCR Models

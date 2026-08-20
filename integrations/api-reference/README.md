@@ -2,7 +2,6 @@
 description: >-
   Help for manually integrating Mindee: API reference, test client, and cURL
   samples.
-noIndex: true
 noRobotsIndex: true
 icon: turtle
 ---
