@@ -97,7 +97,7 @@ You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in mo
 
 This also applies to the Data Schema's [#global-guidelines](data-schema.md#global-guidelines "mention").
 
-Mindee models can process documents in most languages.
+Mindee models can process documents in almost any language.
 
 This includes, but is **not limited** to:
 
