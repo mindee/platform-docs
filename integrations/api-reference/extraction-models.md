@@ -2,6 +2,7 @@
 description: >-
   Help for manually integrating Extraction models: API reference, test client,
   and cURL samples.
+noIndex: true
 layout:
   width: default
   title:

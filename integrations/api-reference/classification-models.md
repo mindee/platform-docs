@@ -2,6 +2,7 @@
 description: >-
   Help for manually integrating Classification models: API reference, test
   client, and cURL samples.
+noIndex: true
 ---
 
 # Classification Models
