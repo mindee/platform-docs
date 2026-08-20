@@ -14,7 +14,9 @@ We are working on [updating the Mindee n8n node](https://github.com/n8n-io/n8n/p
 
 ## Use a Sample n8n Workflow
 
-Use our provided sample n8n workflow file and use it as base for creating your own workflow.
+Rather can creating your own nodes, we've provided a sample n8n workflow for you to use in your projects.
+
+Simply download the n8n workflow file below and use it as base for creating your own workflow.
 
 You can also import into an existing workflow, the new nodes will simply be added.
 
