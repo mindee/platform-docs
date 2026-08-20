@@ -53,13 +53,13 @@ If you're integrating using a no-code or low-code platform, take a look at the [
 
 ### Manual Integration
 
-If none of the above options fit your requirements, take a look at the [api-reference](api-reference/ "mention") section.
-
 {% hint style="warning" %}
 **We do not recommend manually integrating**, and cannot guarantee full support.
 
 Pro plans and above benefit from extended integration support.
 {% endhint %}
+
+Only if it's not possible to integrate using an SDK or no-code, take a look at the [api-reference](api-reference/ "mention") section.
 
 ## What to Send
 
