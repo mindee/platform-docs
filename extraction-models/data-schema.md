@@ -103,7 +103,7 @@ This includes, but is **not limited** to:
 
 * European languages: English, French, Spanish, German, Dutch, Italian, Polish, Portuguese,  Greek, etc
 * Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
-* East Asian languages: Japanese, Mandarin, Korean, Vietnamese, etc
+* East Asian languages: Japanese, Chinese, Korean, Vietnamese, etc
 * Semitic languages: Arabic, Hebrew, Amharic, etc
 * African languages: Swahili, Yoruba, Zulu, etc
 
