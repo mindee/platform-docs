@@ -85,12 +85,27 @@ const mindeeClient = new mindee.Client();
 
 **Advanced Usage**
 
-internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, and when the client is initialized `getGlobalDispatcher` is called.
+Internally, [undici](https://undici.nodejs.org/) is used for making HTTP calls, and when the client is initialized a new `Agent` is created.
 
-**This is perfectly fine for the vast majority of cases:**\
-If you set a custom Agent as your global dispatcher, Mindee will use it for all calls.
+**The new Agent uses default settings, which is fine for the vast majority of cases.**\
+If you want to reuse a custom Agent through your global dispatcher, you will have to specify it:
 
-In some rare cases you may need a specific dispatcher for Mindee, different from your global dispatcher. You can set a custom dispatcher as follows:
+```javascript
+import { getGlobalDispatcher } from "undici";
+
+const mindeeClient = new mindee.Client({
+  // Don't set if using an environment variable
+  apiKey: apiKey,
+
+  // Activates verbose logging - disable in production!
+  debug: true,
+
+  // Use your global dispatcher
+  dispatcher: getGlobalDispatcher(),
+});
+```
+
+In some rare cases you may need to reuse a specific dispatcher for Mindee, different from your global dispatcher. You can set a custom dispatcher as follows:
 
 ```javascript
 import { Agent, interceptors } from "undici";
