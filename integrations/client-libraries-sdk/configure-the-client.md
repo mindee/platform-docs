@@ -105,7 +105,7 @@ const mindeeClient = new mindee.Client({
 });
 ```
 
-In some rare cases you may need to reuse a specific dispatcher for Mindee, different from your global dispatcher. You can set a custom dispatcher as follows:
+In some rare cases you may need to use a specific dispatcher for Mindee, different from your global dispatcher. You can set a custom dispatcher as follows:
 
 ```javascript
 import { Agent, interceptors } from "undici";
