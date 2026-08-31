@@ -50,25 +50,40 @@ You'll likely need to add and/or modify fields to fit your needs and business ca
 If none of the catalog models fit your needs, you can start from scratch.\
 When creating a new Model, click on **"Custom document"**.
 
-Next, choose how to create the custom model:
+Next, enter the required information to create the custom model:
 
-* Describe as precisely as possible the document(s) the model will process.\
-  Best when documents processed show variance.
+* Describe as precisely as possible the document(s) the model will process.
 
-or
+and / or
 
-* Upload a sample file representative of documents to process.\
-  Best when documents processed are similar.
+* Upload up to 10 sample files representative of documents to process.
 
-Our AI Agent will help you to quickly define an initial data schema that you'll be able to adjust later.
+We highly recommend entering the document description **and** uploading at least 3 files.
 
-This step will also generate the model's unique ID.
+With this approach the AI agent will be able to propose 3 different document scopes:
+
+* **narrow**, precisely matching a specific document, i.e. "US Driver License"
+* **balanced**, allowing some variance in documents, i.e. "US Photo ID"
+* **wide**, handling varied document types, i.e. "International ID"
+
+Choose the one most representative of your use case.
+
+As a general rule:
+
+* a narrower scope performs better on matching documents, at the expense of poorer performance on outlying documents.
+* a wider scope will be able to handle many different document types at the expense of lower precision on specific data.
+
+The classic "expert versus generalist" conundrum!
+
+When you need the extra precision of a narrow scope **and** the ability to handle multiple document types, use the [chaining feature](../classification-models/extraction-model-chaining.md) of a [Classification model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/classification-models).
 
 {% hint style="info" icon="lightbulb" %}
 **We recommend creating an initial model quickly.**
 
 Once created, refine the new model's [data-schema.md](data-schema.md "mention") on the platform, using the [live-test.md](../models/live-test.md "mention") feature to fine-tune your fields and guidelines.
 {% endhint %}
+
+Creating the model will also generate the model's unique ID.
 
 ## Modifying Your Extraction Data Schema
 
@@ -122,11 +137,15 @@ Flagged fields can be sent for [human review](extraction-models-overview.md#end-
 
 ### End User Review
 
-When you are displaying the documents to end users, typically when they can review and correct the extracted data.
+Mindee provides the tooling for the creation of sophisticated document review interfaces in your applications.
 
-You can enable [polygons-bounding-boxes.md](optional-features/polygons-bounding-boxes.md "mention") so that the location of the extracted fields can be shown (this is always activated in the [live-test.md](../models/live-test.md "mention")). In this way, it will be much easier for your users to find erroneous fields correct them.
+For example, allowing your end users to review and correct the data of documents they uploaded on your platform.
 
-This is even more powerful when combined with [confidence scores](optional-features/automation-confidence-score.md), you can flag fields needing attention directly in your forms.
+Enable [polygons-bounding-boxes.md](optional-features/polygons-bounding-boxes.md "mention") so that the location of the extracted fields can be shown (this is always activated in the [live-test.md](../models/live-test.md "mention")).
+
+Combine this with [confidence scores](optional-features/automation-confidence-score.md), to indicate directly in your user interface which fields require particular attention.
+
+With both these features, it will be easy for your users to find erroneous fields and correct them.
 
 ### Combined Benefits
 
