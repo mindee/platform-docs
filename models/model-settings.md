@@ -49,9 +49,9 @@ You can also us this as way for testing changes to a model. For example you can 
 
 To prevent unintended changes once your model configuration is finalized, you have the option to lock the model.
 
-This will prevent all changes to settings that change the output of the model.
+This will prevent all changes to settings that change the output of the model. These include the model configuration (Data Schema, class definitions, chaining, ...) and some optional features (confidence score notably). Data processing options are not impacted by the lock.
 
-This is useful for ensuring that the model remains stable for production use.
+This is useful for ensuring that the responses given by the model remain stable for production use.
 
 {% hint style="warning" %}
 Locking the Model is an **irreversible action**, you will not be able to unlock it afterwards.
