@@ -137,7 +137,7 @@ Flagged fields can be sent for [human review](extraction-models-overview.md#end-
 
 ### End User Review
 
-Mindee provides the tooling for the creation of sophisticated document review interfaces in your applications.
+Mindee provides the API tooling for the creation of sophisticated document review interfaces in your applications.
 
 For example, allowing your end users to review and correct the data of documents they uploaded on your platform.
 

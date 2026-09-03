@@ -33,6 +33,8 @@ Each field has the following properties:
 * Description (optional) - provides extra context on how the field is used
 * Guidelines (optional) - provides instructions to better extract the field
 
+You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in almost any language.
+
 ## Field Types
 
 A field's type determines how it will be formatted when returned by the API.
@@ -89,27 +91,7 @@ You may put any number of unrelated guidelines in the text, for example all of t
 For best results, separate each different guideline with a new line.
 {% endhint %}
 
-## Document Text
-
-### Language
-
-You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in most languages.
-
-This also applies to the Data Schema's [#global-guidelines](data-schema.md#global-guidelines "mention").
-
-Mindee models can process documents in almost any language.
-
-This includes, but is **not limited** to:
-
-* European languages: English, French, Spanish, German, Dutch, Italian, Polish, Portuguese,  Greek, etc
-* Asian languages: Hindi, Bengali, Turkish, Urdu, Farsi, Armenian, etc
-* East Asian languages: Japanese, Chinese, Korean, Vietnamese, etc
-* Semitic languages: Arabic, Hebrew, Amharic, etc
-* African languages: Swahili, Yoruba, Zulu, etc
-
-### Handwriting
-
-Mindee models are able to recognize (or OCR) handwritten texts. Accuracy for handwriting is on average a bit less than printed text.
+You can specify the Overall Guideline in almost any language.
 
 ## Technical Limitations
 

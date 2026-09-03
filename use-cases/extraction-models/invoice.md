@@ -37,7 +37,11 @@ The Agent will guide you through adjusting the [Data Schema](../../extraction-mo
 
 You can also adjust the model directly.
 
-### Several Invoices Within a Single File
+Supported Locales
+
+Mindee models can read any printed document in any writing system.
+
+## Several Invoices Within a Single File
 
 In some cases several invoices are in the same PDF file, for example when your users scan multiple invoices into the same file. If you are receiving multi-page PDFs with several invoices, use a [Split model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models) and [chain](../../split-models/extraction-model-chaining.md) it to your invoice model.
 

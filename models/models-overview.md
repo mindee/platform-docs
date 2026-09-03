@@ -64,3 +64,27 @@ For more information, consult:  [live-test.md](live-test.md "mention").
 Settings control the high-level options of the model, such as storage duration and processing zone.
 
 For more information on available options, consult:  [model-settings.md](model-settings.md "mention").
+
+## Supported Document Texts
+
+### Language
+
+Mindee models can read any printed document in any writing system, and most handwriting.
+
+**As a rule: all your documents will work** ... unless perhaps you are sending things like photos of cuneiform tablets or scans of 12th century music notation.
+
+Fully supported languages include, but are **not limited** to:
+
+* Western Europe: English, French, Spanish, German, Dutch, Italian, Portuguese, Danish, Swedish, Finnish, ...
+* Eastern Europe: Polish, Ukrainian, Czech, Russian, Slovak, Greek, ...
+* South Asia: Hindi, Bengali, Urdu, Punjabi, Tamil, Nepali, ...
+* East Asia: Japanese, Mandarin Chinese (Simplified and Traditional), Cantonese, Korean, ...
+* Southeast Asia: Vietnamese, Thai, Indonesian, Malay, Tagalog, ...
+* Middle East: Arabic, Turkish, Farsi, Hebrew, Kurdish, ...
+* Sub-Saharan Africa: Swahili, Amharic, Yoruba, Zulu, Lingala, Afrikaans, ...
+* America: Quechua, Aymara, Guaraní, Nahuatl, ...
+* Constructed: Esperanto
+
+### Handwriting
+
+Mindee models are able to recognize (and OCR) any recent handwriting (19th century and on). Accuracy for handwriting is on average a bit less than printed text.
