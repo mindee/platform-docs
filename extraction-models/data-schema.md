@@ -33,7 +33,7 @@ Each field has the following properties:
 * Description (optional) - provides extra context on how the field is used
 * Guidelines (optional) - provides instructions to better extract the field
 
-You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ in almost any language.
+You can specify a field's _Title_, _Name_, _Description_, and _Guidelines_ [in any language](../models/models-overview.md#supported-document-texts).
 
 ## Field Types
 
@@ -91,7 +91,7 @@ You may put any number of unrelated guidelines in the text, for example all of t
 For best results, separate each different guideline with a new line.
 {% endhint %}
 
-You can specify the Overall Guideline in almost any language.
+You can specify the Overall Guidelines  [in any language](../models/models-overview.md#supported-document-texts).
 
 ## Technical Limitations
 
