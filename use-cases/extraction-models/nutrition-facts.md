@@ -1,7 +1,7 @@
 ---
 description: >-
   Automatically parse food labels and extract structured nutritional data using
-  the pre-trained Nutrition Facts model available in the Catalog.
+  the Nutrition Facts model template available in the Catalog.
 icon: french-fries
 ---
 

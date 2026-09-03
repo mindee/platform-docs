@@ -1,13 +1,17 @@
 ---
 description: >-
   Automatically parse résumés/CVs and extract structured candidate data using
-  the pre-trained Resume model available in the Catalog.
+  the Resume model template in the Catalog.
 icon: file-user
 ---
 
 # Resume
 
-Documentation for the data schema of the Bill of Lading model template.
+Documentation for the data schema of the Resume model template.
+
+## Supported Locales
+
+{% include "../../.gitbook/includes/models-language-support.md" %}
 
 ## Resume Fields
 

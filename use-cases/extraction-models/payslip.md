@@ -1,7 +1,7 @@
 ---
 description: >-
   Automatically parse payslips and extract structured salary data using the
-  pre-trained Payslip model template available in the Catalog.
+  Payslip model template available in the Catalog.
 icon: file-invoice
 ---
 

@@ -42,6 +42,10 @@ In some cases several receipts are on the same image, for example when your user
 
 The image will first be cropped into separate documents, then each documents will have its data extracted in parallel. The return will include the data from all documents, meaning the processing is done within a single API call.
 
+## Supported Locales
+
+{% include "../../.gitbook/includes/models-language-support.md" %}
+
 ## Receipt Fields
 
 {% include "../../.gitbook/includes/model-fields/receipt.md" %}

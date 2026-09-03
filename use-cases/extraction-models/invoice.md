@@ -37,9 +37,9 @@ The Agent will guide you through adjusting the [Data Schema](../../extraction-mo
 
 You can also adjust the model directly.
 
-Supported Locales
+## Supported Locales
 
-Mindee models can read any printed document in any writing system.
+{% include "../../.gitbook/includes/models-language-support.md" %}
 
 ## Several Invoices Within a Single File
 

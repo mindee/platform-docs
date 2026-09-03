@@ -54,12 +54,9 @@ You can use this financial document sample to do a live test yourself:
 
 <figure><img src="../../.gitbook/assets/invoice-sample-mindee.png" alt="a fake invoice from John Smith" width="563"><figcaption></figcaption></figure>
 
-## Supported Formats
+## Supported Locales
 
-* **PDF files:** single-page or multi-page
-* **Images:** JPG, PNG, TIFF, and more
-
-See full [list of accepted files](https://docs.mindee.com/integrations/technical-limitations#accepted-files).
+{% include "../../.gitbook/includes/models-language-support.md" %}
 
 ## Financial Document Fields
 

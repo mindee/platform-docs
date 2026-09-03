@@ -1,8 +1,8 @@
 ---
 description: >-
   Automatically parse US healthcare cards and extract structured healthcare
-  provider data using the pre-trained US Healthcare Card model template
-  available in the Catalog.
+  provider data using the US Healthcare Card model template available in the
+  Catalog.
 icon: staff-snake
 ---
 

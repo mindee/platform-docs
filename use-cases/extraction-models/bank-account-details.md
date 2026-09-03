@@ -1,7 +1,7 @@
 ---
 description: >-
   Automatically parse bank account details and extract structured KYC data using
-  the pre-trained Bank Account Details model template available in the Catalog.
+  the Bank Account Details model template available in the Catalog.
 icon: piggy-bank
 ---
 

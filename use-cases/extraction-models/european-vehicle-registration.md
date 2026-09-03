@@ -1,5 +1,7 @@
 ---
-description: Documentation for the data schema of European Vehicle Registration model.
+description: >-
+  Documentation for the data schema of European Vehicle Registration model
+  template available in the Catalog.
 icon: car-side
 ---
 
@@ -12,7 +14,10 @@ Supported document formats include, but are not limited to:
 * DEU - _Zulassungsbescheinigung Teil I_ / _II_
 * ESP - _Permiso de Circulación_
 * FRA - _Certificat d'immatriculation_ (_Carte grise_)
-* ITA - _Carta di Circolazione_ or _Documento Unico_
+* ITA - _Carta di Circolazione_ and _Documento Unico_
+* NLD - _Kentekenbewijs_ (_Kentekencard_)
+* POL - _Dowód Rejestracyjny_
+* ROU - _Certificat de Înmatriculare_
 
 ## European Vehicle Registration Fields
 
