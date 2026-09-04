@@ -15,9 +15,9 @@ In this context, an _object_ can be any element to find on a page.
 
 Most users will look for a document type (like a receipt or an ID), but it could really be anything (a photo, a logo, etc).&#x20;
 
-### `CropItem` Attributes
+## `CropItem` Attributes
 
-#### Object Type
+### Object Type
 
 The category assigned to the object. It is always filled.
 
@@ -25,20 +25,24 @@ It is returned as a string and is identical to the value entered on the Mindee p
 
 Why "Object Type" instead of "Document Type", like for Split and Classification? Because the fundamental technology is different, Crop uses Object Detection algorithms, whereas Split and Classification use variations of classification technology.
 
-#### Location
+### Location
 
 The location of the object in the document. It contains the following properties:
 
 * Polygon: Coordinates of the object.
 * Page: 0-based index of the page the coordinates were found on.
 
-#### Extraction Response
-
-Optional extraction response associated with the split. This is only filled if extraction chaining is activated for the model.
-
 ### Iterate Over Crop Items
 
 You'll usually want to iterate over all crop items, since the number of items is dependent on the document. Remember that a document can have multiple pages, and each of its pages can have multiple crop items.
+
+### Extraction Results
+
+Optional extraction response associated with the `CropItem`. This is only filled if extraction chaining is activated for the model.
+
+{% include "../../.gitbook/includes/access-chained-extraction.md" %}
+
+## Sample Code
 
 {% tabs %}
 {% tab title="Python" %}
@@ -234,4 +238,3 @@ public void HandleResponse(CropResponse response)
 {% endtab %}
 {% endtabs %}
 
-{% include "../../.gitbook/includes/access-chained-extraction.md" %}

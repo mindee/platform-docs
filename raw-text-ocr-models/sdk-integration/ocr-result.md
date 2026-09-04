@@ -11,13 +11,13 @@ icon: brain-circuit
 
 An `OCRPage` describes the text and words of a single page in the document.
 
-### `OCRPage` Attributes
+## `OCRPage` Attributes
 
-#### Content
+### Content
 
 Full text content extracted from the document page.
 
-#### Words
+### Words
 
 List of all words found on the page.
 
@@ -25,6 +25,8 @@ Each word has the following properties:
 
 * Content: Text content of the word.
 * Polygon: Coordinates of the detected word.
+
+## Sample Code
 
 {% tabs %}
 {% tab title="Python" %}

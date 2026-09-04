@@ -11,29 +11,33 @@ icon: brain-circuit
 
 A `SplitRange` describes one logical sub-document identified within the source file.
 
-### `SplitRange` Attributes
+## `SplitRange` Attributes
 
 Each `SplitRange` instance will have these properties.
 
-#### Document Type
+### Document Type
 
 The document category assigned to the sub-document. It is always filled.
 
 It is returned as a string and is identical to the value entered on the Mindee platform — case, spaces, and punctuation included.
 
-#### Page Range
+### Page Range
 
 A two-element array of **0-based** page indexes, where the first integer indicates the start page and the second integer indicates the end page. It is always filled.
 
 A page range value of `(0,2)` would mean from the **first** page to the **third** page.
 
-#### Extraction Response
+### Extraction Response
 
-Optional extraction response associated with the split. This is only filled if extraction chaining is activated for the model.
+Optional extraction response associated with the `SplitRange`. This is only filled if extraction chaining is activated for the model.
+
+{% include "../../.gitbook/includes/access-chained-extraction.md" %}
 
 ### Iterate Over Split Ranges
 
 You'll usually want to iterate over all split ranges, since the number of ranges is dependent on the document.
+
+## Sample Code
 
 {% tabs %}
 {% tab title="Python" %}
@@ -214,9 +218,7 @@ public void HandleResponse(SplitResponse response)
 {% endtab %}
 {% endtabs %}
 
-{% include "../../.gitbook/includes/access-chained-extraction.md" %}
-
-## Extract Split Ranges From the Input File
+### Extract Split Ranges From the Input File
 
 The SDKs provide support for extracting each split range as separate PDF files.
 
