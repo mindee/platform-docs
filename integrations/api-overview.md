@@ -67,22 +67,28 @@ You can send either a local file or an URL, it makes no difference for server-si
 
 However, when using our client libraries, you can [#adjust-the-source-file](client-libraries-sdk/load-and-adjust-a-file.md#adjust-the-source-file "mention") if you have it locally.
 
-## How to Receive Results
+## Retrieving Results
 
-Inference operations are always asynchronous, meaning there is a route to POST the file and another mechanism to retrieve the results.
+Processing is always asynchronous, meaning that retrieving results is separated from sending the file to the server.
 
-You can decide on using either the polling flow or the webhook flow.
+Once a request has been sent, it is not possible to stop or cancel the processing.
 
-[polling-for-results.md](polling-for-results.md "mention") - uses a GET route, and is better suited for testing and small volumes.
+You can decide on using either the polling flow or the webhook flow to retrieve results.
 
-[webhooks.md](webhooks.md "mention") - sends directly to your server, and is more suited for heavy production use.
+Polling - poll the server until results are ready. When using an SDK, the polling requests are handled for you in a single method call. Better suited for testing and small volumes.&#x20;
+
+[Webhooks](webhooks.md) - send results directly to your server. When using an SDK, response deserialization is handled for you, just pass the raw request body. Better suited for heavy production use.
 
 ## Developing and Testing
 
-A typical development release cycle could look like this:
+A typical development process will require testing before deploying to production, to ensure a given model works correctly with a specific code version.
 
-1. Start with a new model. If you are making adjustments to an existing production model, we recommend copying it and only making changes to the copy.\
-   Consider adding versioning info to the copied model's name, i.e. "Invoices v1.1" or "Receipts 2026-05-17".
+Mindee models are not versioned, rather they can be locked and/or copied as needed. This provides more flexibility in how you organize and manage your models, to better fit your development process.
+
+Your development release cycle could look like this:
+
+1. Start with a new model. If you are making adjustments to an existing production model, copy it and only make changes to the copy.\
+   Consider adding versioning info to the copied model's name, i.e. "Invoice v1.1" or "Receipt 2026-05-17".
 2. Adjust your code as needed and test.
 3. When deploying your code to testing or production environments, use the new model's ID.
 4. After deployment, [lock your production model](../models/model-settings.md#locking-the-data-schema) to avoid accidental changes.

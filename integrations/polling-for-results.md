@@ -1,5 +1,6 @@
 ---
 description: Overview of processing files using a polling flow.
+noIndex: true
 noRobotsIndex: true
 icon: repeat
 ---
@@ -46,7 +47,3 @@ sequenceDiagram
     results->>client: HTTP 200
     client->>client: process JSON result
 ```
-
-### Stopping the Process
-
-Once a request has been sent, it is not possible to stop or cancel the processing.
