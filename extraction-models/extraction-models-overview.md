@@ -9,7 +9,7 @@ icon: print-magnifying-glass
 
 ## What is an Extraction Model?
 
-An **Extraction Model** in the Mindee platform is a type of [model](../models/models-overview.md) designed to extract structured data from documents. Extraction models process textual information using Optical Character Recognition (OCR) and process document structure using visual information (object detection).
+An **Extraction Model** product in the Mindee platform is a [model](../models/models-overview.md) designed to extract structured data from documents. Extraction models process textual information using Optical Character Recognition (OCR) and process document structure using visual information (object detection).
 
 This dual approach allows extracting textual and visual elements at the same time.
 

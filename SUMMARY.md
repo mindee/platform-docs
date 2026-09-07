@@ -81,6 +81,7 @@
   * [Load an URL](integrations/client-libraries-sdk/load-an-url.md)
   * [Send a File or URL](integrations/client-libraries-sdk/send-a-file-or-url.md)
   * [Response Processing](integrations/client-libraries-sdk/process-the-response.md)
+  * [Search](integrations/client-libraries-sdk/search.md)
 * [AI Coding Assistants](integrations/ai-coding-assistants.md)
 * [Manage API Keys](integrations/api-keys.md)
 * [Technical Best Practices](integrations/technical-guidelines.md)

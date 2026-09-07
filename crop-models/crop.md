@@ -11,7 +11,7 @@ icon: crop-simple
 
 Process different documents sent on the same page (usually a photo). The result has both the location (page and coordinates) and the class for each document identified, allowing for complex workflows.
 
-A file sent to the Crop Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits). Use the page index in the results to identify on which page the document was found.
+A file sent to the Crop Model product may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits). Use the page index in the results to identify on which page the document was found.
 
 Some common examples:
 

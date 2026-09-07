@@ -25,17 +25,19 @@ Overall, the steps to using the Mindee service are:
 
 1. [configure-the-client.md](configure-the-client.md "mention")
    1. Initialize the Mindee client.
-   2. Set inference parameters, in particular the model ID to use.
+   2. Set product/model parameters, the model ID is required.\
+      Each product will have different parameters available.
 2. [load-and-adjust-a-file.md](load-and-adjust-a-file.md "mention")
    1. Load a file from various supported sources: path, bytes, etc.
-   2. _Optional_: adjust the source file before sending.
+   2. _Optional_: compress or split the source file before sending.
 3. [send-a-file-or-url.md](send-a-file-or-url.md "mention")
-   1. Send the file or an URL with the proper parameters.
+   1. Send the file or an URL with the product parameters.
 4. [process-the-response.md](process-the-response.md "mention")
-   1. Optional: load from a webhook.
-   2. Optional: access document metadata
-5. [extraction-result.md](../../extraction-models/sdk-integration/extraction-result.md "mention")
-   1. Handle the field values extracted from the document
+   1. Optional: receive the result directly
+   2. Optional: receive a webhook.
+5. Product-specific processing\
+   Each type of model has different result objects.
+   1. Handle results extracted from the file
    2. Optional: access field metadata (polygons, confidence score)
 
 ## Frequently Asked Questions
@@ -134,6 +136,8 @@ After this, if you determine (or are told) there is a problem with the SDK itsel
 
 Our SDK engineers will be automatically notified of the new issue.
 
-**Note:** Pro and above plans can contact our support teams directly.
+{% hint style="info" icon="user" %}
+Pro and above plans can contact our support teams directly.
+{% endhint %}
 
 </details>

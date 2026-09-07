@@ -16,7 +16,7 @@ Some common examples:
 * You have multiple types of files in your workflow input, with different business rules
 * You want to identify the region or language of documents
 
-A file sent to the Classification Model may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
+A file sent to the Classification Model product may have any number of pages, [within limits](../integrations/technical-limitations.md#file-limits).
 
 {% hint style="info" icon="lightbulb" %}
 If there is a high possibility of having multiple documents within the same file, use:
