@@ -45,6 +45,8 @@ You can have a base "template" model that is not called directly, but is used to
 
 You can also us this as way for testing changes to a model. For example you can copy a model used in production, modify the copy, and test the modifications in staging. Once the modifications are tested successfully, switch production over to the new model.
 
+Each copied model has its own ID, to switch models in this way simply set the new/copied model's ID in your integration.
+
 ## Lock the Model
 
 To prevent unintended changes once your model configuration is finalized, you have the option to lock the model.
