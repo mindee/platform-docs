@@ -13,7 +13,7 @@ Install the Mindee Client Library for your language or framework of choice
 
 ## Send a File and Poll
 
-Use the client library to send the file to your OCR Model and return the result.
+Use the client library to send the file to your Raw Text (OCR) Model and return the result.
 
 {% tabs %}
 {% tab title="Python" %}

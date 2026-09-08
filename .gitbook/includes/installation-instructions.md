@@ -9,7 +9,7 @@ Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.
 Simply install the [PyPi package](https://pypi.org/project/mindee/) using `pip`:
 
 ```sh
-pip install -U mindee~=5.2
+pip install -U mindee~=5.3
 ```
 {% endtab %}
 
@@ -29,7 +29,7 @@ Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.
 Simply install the [Packagist package](https://packagist.org/packages/mindee/mindee) using [composer](https://getcomposer.org/):
 
 ```sh
-php composer.phar require "mindee/mindee:>=3.0"
+php composer.phar require "mindee/mindee:>=3.1"
 ```
 {% endtab %}
 
@@ -39,7 +39,7 @@ Requires Ruby ≥ 3.2.
 Simply install the [gem](https://rubygems.org/gems/mindee) using:
 
 ```shell
-gem install mindee -v '~> 5.2'
+gem install mindee -v '~> 5.4'
 ```
 {% endtab %}
 
@@ -48,7 +48,7 @@ Requires Java ≥ 11. Java ≥ 17 is recommended.
 
 Group ID: `com.mindee.sdk`\
 Artifact ID: `mindee-api-java`\
-Version: `5.2.0` or greater
+Version: `5.5.0` or greater
 
 There are various installation methods, Maven, Gradle, etc:
 
@@ -61,7 +61,7 @@ There are various installation methods, Maven, Gradle, etc:
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using `dotnet add`:
 
 ```sh
-dotnet add package Mindee --version 4.4
+dotnet add package Mindee --version 4.8
 ```
 {% endtab %}
 {% endtabs %}
