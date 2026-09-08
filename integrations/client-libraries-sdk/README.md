@@ -15,6 +15,26 @@ All our client libraries are open-source (MIT license) and hosted on [GitHub](ht
 
 Supported languages/frameworks: **Python**, **Node.js** (JS/TS), **PHP**, **Ruby**, **Java**, **.NET** (C#).
 
+## When To Use an SDK?
+
+SDKs are recommended whenever your integration includes application code. They simplify and structure API requests in an idiomatic way,  and include tooling for common file operations. Each SDK also comes with a [CLI utility](command-line-tools-cli.md) for quick testing.
+
+SDKs work for self-hosted applications and development-platform integrations including serverless functions.
+
+#### Serverless Functions
+
+The Node.js SDK is compatible with all major platforms that offer serverless functions. [Install](./#installation-instructions) it through `npm` as normal.
+
+Having said that, depending on your platform, other SDKs are compatible:
+
+* **Supabase** Edge Functions: Node.js SDK.
+* **Vercel** Functions: Node.js, Python, Ruby SDKs.
+* **Firebase** Cloud Functions: Node.js, Python SDKs.
+* **AWS** Lambda: Node.js, Python, Java, .NET (C#), Ruby SDKs.\
+  PHP with a custom runtime.
+
+
+
 ## Installation Instructions
 
 {% include "../../.gitbook/includes/installation-instructions.md" %}
@@ -93,16 +113,6 @@ Much more reliable to count the actual number of pages in the PDF document.
 Use the built-in file metadata methods and properties to easily add business rules based on the number of pages (among other data).
 
 For more information, consult: [#source-file-metadata](load-and-adjust-a-file.md#source-file-metadata "mention").
-
-</details>
-
-<details>
-
-<summary><strong>I'm using a Supabase edge function, should I use the API directly?</strong></summary>
-
-We recommend using the Mindee [Node.js client library](https://github.com/mindee/mindee-api-nodejs) in Supabase.
-
-You can install it in your edge function(s) using `npm`.
 
 </details>
 
