@@ -16,9 +16,9 @@ Watch this short demo to see how quickly you can set up and test the French ID C
 
 ID cards differ vastly across countries in design, language, and layout. Mindee abstracts that complexity by offering:
 
-* Pre-trained models ready for different document types
-* Plug-and-play integration—no template design or training required
-* High accuracy and speed, even with variations in card format, font, or photo quality
+* Pre-configured templates: ready for different document types
+* Plug-and-play integration: no template design or training required
+* High accuracy and speed: even with variations in card format, font, or photo quality
 
 ## What can be extracted from ID cards?
 
@@ -71,13 +71,13 @@ If you want to try and do a live test, you can use this French ID example:
 #### 1. Pick the ID Card Model from the Catalog (Recommended)
 
 * In your Mindee dashboard, go to the **Document Catalog** and choose the **“International ID”** model.
-* Once selected, the platform will generate a prefilled schema with standard identity fields. You can accept that schema as is or adjust it in the **Data Schema** section to fine-tune what’s extracted.
+* Once selected, the platform will generate a prefilled schema with standard identity fields. You can accept that schema as-is or adjust it in the **Data Schema** section to fine-tune what’s extracted.
 * After the model is set up, you can immediately test it with your own documents.
 
 #### 2. Build an ID Card Model from Scratch
 
 * In the dialog with Mindee’s AI assistant, describe what the document is (e.g., “a French national ID card”) and specify the fields you want to extract (such as surname, date of birth, issuing authority).
-* The AI will propose an initial schema—review it and adjust fields or mapping in the **Data Schema** tab until it fits your requirements.
+* The AI will propose an initial schema, review it and adjust fields or mapping in the **Data Schema** tab until it fits your requirements.
 * Once finalized, your custom model is ready for live testing.
 
 ## Document format support
