@@ -73,7 +73,7 @@ Each organization is governed by a **role system**.
 
 A user must be explicitly added to an organization to access it, except for the **creator**, who is automatically granted the "Owner" role.
 
-<table><thead><tr><th width="168.9998779296875">Role Name</th><th>Permissions Summary</th></tr></thead><tbody><tr><td>Member</td><td>Add and manage models<br>Run Live Tests<br>Manage API keys</td></tr><tr><td>Administrator</td><td><p>All "Member" permissions<br>Manage "Member" users</p><p>Update organization settings</p></td></tr><tr><td>Owner</td><td><p>All "Administrator" permissions</p><p>Can add and remove "Administrator" users<br>Manage billing settings<br>Manage plan settings</p></td></tr></tbody></table>
+<table><thead><tr><th width="168.9998779296875">Role Name</th><th>Permissions Summary</th></tr></thead><tbody><tr><td>Member</td><td>Add and manage models<br>Run Live Tests<br>Manage API keys</td></tr><tr><td>Administrator</td><td><p>All "Member" permissions<br>Manage "Member" users</p><p>Manage organization settings</p></td></tr><tr><td>Owner</td><td><p>All "Administrator" permissions</p><p>Can add and remove "Administrator" users<br>Manage billing settings<br>Manage plan settings</p></td></tr></tbody></table>
 
 
 
