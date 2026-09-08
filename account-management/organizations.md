@@ -51,10 +51,6 @@ Enter their email address and select their role.
 
 They will receive an email allowing them to create an account and join your organization.
 
-{% hint style="info" icon="money-check-dollar-pen" %}
-You can only invite members to your organization if you have the the Pro, Business, or Enterprise [plans.md](plans.md "mention").
-{% endhint %}
-
 ### Remove Team Members
 
 Use the "<i class="fa-trash-can">:trash-can:</i>" button to remove a member from your organization.
