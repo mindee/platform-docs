@@ -36,7 +36,9 @@ On the left-hand menu of the Mindee Platform, click [**API Keys**](https://app.m
 
 ## Send a File or URL
 
-You can easily send a file or an URL using one of our [officially-supported SDKs](../extraction-models/sdk-integration/).
+You can easily send a file or an URL with one of our [officially-supported SDKs](../extraction-models/sdk-integration/).
+
+Use the provided [command line tools](../integrations/client-libraries-sdk/command-line-tools-cli.md) to test the API without writing a single line of code.
 
 For a quick introduction and ready to use code samples, check: [quick-start.md](../extraction-models/sdk-integration/quick-start.md "mention").
 
