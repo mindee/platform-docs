@@ -7,7 +7,9 @@ icon: link-horizontal
 
 Use Crop to automatically extract document data, meaning that several different extractions can be made for a single image.
 
-Note: Crop Models also work on multi-page files, with potentially multiple crop items for each page. However each crop item is limited to an area on a single page. If you need a single extraction result covering multiple pages, take a look at [Split Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models "mention") instead.
+Crop models work on multi-page files, with potentially multiple crop items on each page.
+
+Note:  Each crop item is limited to an area on a single page. If you need a single extraction result covering multiple pages, take a look at [Split Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/split-models "mention") instead.
 
 ## Extraction Set Up
 

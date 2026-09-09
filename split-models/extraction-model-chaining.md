@@ -31,7 +31,7 @@ You can add new classes, remove classes, and change Extraction Models.
 
 ### Selectively Extracting
 
-If a detected class has no linked Extraction Model, no extraction runs for that crop.
+If a detected class has no linked Extraction Model, no extraction runs for that split range.
 
 This allows selectively extracting some sections of the file while ignoring others.
 
