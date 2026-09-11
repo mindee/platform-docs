@@ -9,7 +9,7 @@ Use the generic `search` method in the client to find various resources belongin
 
 ## Before Starting
 
-You'll need an instance of the [Mindee V2 Client](configure-the-client.md) in order to make search requests.
+You'll need an instance of the [Mindee V2 Client](configure-the-client.md#initialize-the-mindee-client) in order to make search requests.
 
 ## Search Models
 

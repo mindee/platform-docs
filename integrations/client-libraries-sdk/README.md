@@ -128,7 +128,7 @@ Anything in a library that is not documented here, is **not** officially support
 
 <details>
 
-<summary><strong>There is a bug with the SDK, how can I get help?</strong></summary>
+<summary><strong>There is a bug with the SDK, what should I do?</strong></summary>
 
 If you are encountering a persistant issue, you should try first:
 

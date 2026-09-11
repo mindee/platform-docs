@@ -23,14 +23,14 @@ This is the best place to ask questions, exchange ideas with other users, and ac
 
 ### Chat Support
 
-Available from the **Pro plan** onward, our Chat connects you directly with our support team via a dedicated chat channel for faster and more direct assistance.
+Available from the **Pro plan** onward, connect to our human support team via a dedicated chat channel for faster and more direct assistance.
 
 ### Priority Support
 
-Included in the **Business plan**, Priority Support ensures that your requests are addressed first in the chat queue, reducing waiting times for critical issues.
+Included in the **Enterprise plan**, Priority Support ensures that your requests are addressed first in the chat queue, reducing waiting times for critical issues.
 
 ## Choosing the Right Plan <a href="#choosing-the-right-level" id="choosing-the-right-level"></a>
 
 * **Starter** ⇒ For individuals or early-stage projects where community-driven answers are sufficient.
-* **Pro** ⇒ For teams that benefit from direct access to chat-based support.
-* **Business** ⇒ For organizations where faster resolution and priority handling are required.
+* **Pro** ⇒ For teams that benefit from direct access to human support.
+* **Enterprise** ⇒ For organizations wanting in-depth assistance and priority support handling.
