@@ -3,7 +3,7 @@ title: sample-code-php-extraction
 ---
 
 Requires PHP ≥ 8.1. PHP ≥ 8.3 is recommended.\
-Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **3.0.0** or greater.
+Requires the [Mindee PHP client library](https://packagist.org/packages/mindee/mindee) version **3.2.0** or greater.
 
 {% code lineNumbers="true" %}
 ```php
