@@ -75,7 +75,7 @@ $modelSearchParams = new ModelSearchParameters(
     modelType: "extraction",
 );
 
-$response = $client->search(ModelSearchResponse::class, $modelSearchParams);
+$response = $client->search($modelSearchParams);
 
 // Print a pretty representation of the response, useful for development
 print_r($response);
@@ -144,7 +144,7 @@ var modelSearchParams = new ModelSearchParameters(
     modelType: 'extraction'
 );
 
-var response = await client.SearchAsync<ModelSearchResponse>(modelSearchParams);
+var response = await client.SearchAsync(modelSearchParams);
 
 // print a pretty representation of the response, useful for development
 Console.WriteLine(response.ToString());
