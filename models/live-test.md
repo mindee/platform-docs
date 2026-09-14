@@ -57,9 +57,11 @@ You can always go back to the Live Test page by clicking on the left-hand model 
 
 When testing your model, you'll typically use several documents, and want to use those same documents for testing any changes made to the model.
 
-For this reason you can access the Documents History, where all your tests are stored.
+For this reason you can access the Documents History, where all your file uploads and their processing are stored.
 
-When you access a document in your history after having modified the Data Schema, you'll have a "Outdated Extraction" notice, along with a button to "Rerun Document".
+Each file upload creates a new entry, regardless of any existing documents in the model's history. This allows testing different versions of the same document: scanning resolutions, camera angles, file types, etc
+
+When you access a file in your history after having modified the Data Schema, you'll have a "Outdated Extraction" notice, along with a button to "Rerun Document".
 
 <figure><img src="../.gitbook/assets/live-test-rerun-document.png" alt="Live Test - Rerun Document" width="335"><figcaption></figcaption></figure>
 
