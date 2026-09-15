@@ -6,8 +6,9 @@ title: java-process-listfield-simplefield
 import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.SimpleField;
+import java.util.List;
 
-public void handleResponse(ExtractionResponseresponse) {
+public void handleResponse(ExtractionResponse response) {
   var fields = response.getInference().getResult().getFields();
 
   ListField simpleListField = fields.getListField("my_simple_list_field");

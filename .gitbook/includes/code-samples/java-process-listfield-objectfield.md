@@ -7,8 +7,11 @@ import com.mindee.v2.product.extraction.ExtractionResponse;
 import com.mindee.parsing.v2.field.ListField;
 import com.mindee.parsing.v2.field.ObjectField;
 import com.mindee.parsing.v2.field.SimpleField;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public void handleResponse(ExtractionResponseresponse) {
+public void handleResponse(ExtractionResponse response) {
   var fields = response.getInference().getResult().getFields();
 
   ListField fieldObjectList = fields.getListField("my_object_list_field");

@@ -5,7 +5,7 @@ title: java-process-simplefield
 ```java
 import com.mindee.v2.product.extraction.ExtractionResponse;
 
-public void handleResponse(ExtractionResponseresponse) {
+public void handleResponse(ExtractionResponse response) {
   var fields = response.getInference().getResult().getFields();
 
   // texts, dates, classifications ...
