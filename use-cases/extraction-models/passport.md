@@ -26,7 +26,7 @@ Passports vary in format depending on the country, language, and issuance author
 
 * Click on "Create your document AI model" in your dashboard, then select **"Passport".**
 * The Passport model template comes pre-configured with standard [#passport-fields](passport.md#passport-fields "mention").
-* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* Once your model is created, you can immediately [test](../../models/live-test.md) with your own documents.
 * Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
 ### 2. Build a Passport Model from Scratch
