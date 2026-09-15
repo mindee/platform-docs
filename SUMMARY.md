@@ -120,7 +120,7 @@
   * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
   * [Bank Statement](use-cases/extraction-models/bank-statement.md)
   * [European Vehicle Registration](use-cases/extraction-models/european-vehicle-registration.md)
-  * [Nutrition Facts](use-cases/extraction-models/nutrition-facts.md)
+  * [Payslip](use-cases/extraction-models/nutrition-facts.md)
   * [Bank Account Details](use-cases/extraction-models/bank-account-details.md)
   * [Bank Check](use-cases/extraction-models/bank-check.md)
   * [Business Card](use-cases/extraction-models/business-card.md)

@@ -19,6 +19,13 @@ Supported document formats include, but are not limited to:
 * POL - _Dowód Rejestracyjny_
 * ROU - _Certificat de Înmatriculare_
 
+## Create Your European Vehicle Registration Model
+
+* Click on "Create your document AI model" in your dashboard, then select **"European Vehicle Registration"**.
+* The European Vehicle Registration model template comes pre-configured with [standard fields](european-vehicle-registration.md#european-vehicle-registration-fields).
+* Once your model is created, you can immediately [test](../../models/live-test.md) with your own documents.
+* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
+
 ## European Vehicle Registration Fields
 
 {% include "../../.gitbook/includes/model-fields/european-vehicle-registration.md" %}

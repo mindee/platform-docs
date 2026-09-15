@@ -21,6 +21,7 @@ Here are some examples of models you can build with Mindee:
 * [**Bank Statement**](bank-statement.md)**:** Extract account numbers, statement dates, and transaction data from bank statements.
 * [**Payslip**](payslip.md)**:** Extract salary, employer, pay period, and deduction data from payslips.
 * [**Bank Account Details**](bank-account-details.md)**:** Capture account-holder, IBAN, and banking details for onboarding or KYC flows.
+* [**Bank Check**](bank-check.md)**:** Extract account numbers, amounts, and payee details from bank checks.
 
 ## Identity & Verification
 
@@ -38,4 +39,4 @@ Here are some examples of models you can build with Mindee:
 
 ## Labels & Packaging
 
-* [**Nutrition Facts**](nutrition-facts.md)**:** Extract serving sizes, calories, and nutrient values from product labels.
+* [**Payslip**](nutrition-facts.md)**:** Extract serving sizes, calories, and nutrient values from product labels.

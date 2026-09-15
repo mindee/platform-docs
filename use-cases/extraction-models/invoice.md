@@ -21,13 +21,14 @@ Common use cases:
 * Expense and cost tracking
 * Tax and compliance reporting
 
-## Building Your Invoice Model
+## Create Your Invoice Model
 
 ### Choose "Invoice" in the Catalog
 
-1. Click on "Create your document AI model" in your dashboard, then select **"Invoice".**
-2. The Invoice model template comes pre-configured with the standard [#invoice-fields](invoice.md#invoice-fields "mention").
-3. Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* Click on "Create your document AI model" in your dashboard, then select **"Invoice"**.
+* The Invoice model template comes pre-configured with the [standard fields](invoice.md#invoice-fields).
+* Once your model is created, you can immediately [test](../../models/live-test.md) with your own documents.
+* Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
 ### Adjust Fields with the AI Agent (Optional)
 

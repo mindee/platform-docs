@@ -35,16 +35,16 @@ You can use Mindee to extract structured data from:
 * Account summaries or balance sheets
 * Custom internal financial reports
 
-## Two Ways to Get Started
+## Two Ways to Create Your Financial Document Model
 
 ### 1. Choose "Financial Document" in the Catalog (Recommended)
 
 * Click on "Create your document AI model" in your dashboard, then select **"Financial Document".**
-* The Financial Document model template comes pre-configured with standard [#financial-document-fields](financial-documents.md#financial-document-fields "mention").
-* Once your Invoice model is created, you can immediately [test](../../models/live-test.md) with your own invoices.
+* The Financial Document model template comes pre-configured with [standard fields](financial-documents.md#financial-document-fields).
+* Once your model is created, you can immediately [test](../../models/live-test.md) with your own documents.
 * Optionally, you can adjust the model's [Data Schema](../../extraction-models/data-schema.md) if you need to modify fields.
 
-### **2. Build a tailored Financial Document model with the AI Agent**
+### 2. Build a tailored Financial Document model with the AI Agent
 
 * If you need additional or non-standard fields (e.g. purchase order number, internal reference codes, bank account details), start a conversation with the Agent.
 * Describe what you want extracted and optionally upload a sample document.
