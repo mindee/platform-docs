@@ -47,6 +47,19 @@ You can also us this as way for testing changes to a model. For example you can 
 
 Each copied model has its own ID, to switch models in this way simply set the new/copied model's ID in your integration.
 
+### Model Copy Options
+
+By default, copying the model also copies:
+
+* the model's [optional features](../extraction-models/optional-features/) configuration
+* any [RAG documents](../extraction-models/optional-features/improving-accuracy.md) in the model's database
+
+If you do not wish to copy these, simply uncheck the relevant checkboxes in the "Copy Model" dialog box.
+
+### Security Considerations
+
+All model copies stay within the same organization, ensuring protection of sensitive data.
+
 ## Lock the Model
 
 To prevent unintended changes once your model configuration is finalized, you have the option to lock the model.
