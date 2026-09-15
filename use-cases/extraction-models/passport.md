@@ -20,7 +20,7 @@ Passports vary in format depending on the country, language, and issuance author
 * Upload sample documents to refine extraction
 * Get structured outputs without training models yourself
 
-## Two Ways to Start Building your Passport Model
+## Two Ways to Create Your Passport Model
 
 ### 1. Choose "Passport" in the Catalog (Recommended)
 
