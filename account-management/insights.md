@@ -40,11 +40,16 @@ This does not include calls that resulted in an error.
 
 <figure><img src="../.gitbook/assets/insights-traffic.png" alt="insights - traffic shows requests, pages, credits" width="563"><figcaption></figcaption></figure>
 
-### Processing Time View
+### Processing Time Views
 
-The Processing Time view shows the average time requests take to process, in seconds.
+The various Processing Time views show the time requests take to process, in seconds.
 
 Processing time is calculated from when the request was received to when the [inference](../getting-started/glossary.md) was finished.
+
+There are two possible views:
+
+* Average: the average time across all requests.
+* P95: the time within which 95% of all requests are processed (95th-percentile).
 
 <figure><img src="../.gitbook/assets/insights-processing_time.png" alt="insights - processing time" width="563"><figcaption></figcaption></figure>
 
