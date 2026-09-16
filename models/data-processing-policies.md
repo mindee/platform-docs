@@ -102,3 +102,15 @@ If you have an enterprise plan, contact your dedicated account manager for more 
 
 </details>
 
+<details>
+
+<summary><strong>Where can I find the Data Processing Agreement and Terms of Use?</strong></summary>
+
+These are available on our website:
+
+{% embed url="https://www.mindee.com/legals/data-processing-agreement" %}
+
+{% embed url="https://www.mindee.com/legals/terms-of-service" %}
+
+</details>
+
