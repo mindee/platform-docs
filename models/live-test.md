@@ -76,3 +76,8 @@ Deleting a document is an irreversible action!
 
 The file and its corresponding data will be permanently removed from our system.
 {% endhint %}
+
+### Document Lifetime
+
+Documents will be automatically deleted from the History after 3 months.
+
