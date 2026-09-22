@@ -2,7 +2,7 @@
 title: file-url-technical-limitation
 ---
 
-All [accepted files](../../integrations/technical-limitations.md#accepted-files) may be used, if they adhere to the [API file limits](../../integrations/technical-limitations.md#api-file-limits).
+An URL pointing to all [accepted files](../../integrations/technical-limitations.md#accepted-files) may be used, if it adheres to the [API file limits](../../integrations/technical-limitations.md#api-file-limits).
 
 In addition, the source URL must adhere to the following rules:
 

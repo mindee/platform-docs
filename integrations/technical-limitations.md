@@ -68,11 +68,13 @@ It is possible to send an URL rather than binary data to the API.
 
 {% include "../.gitbook/includes/file-url-technical-limitation.md" %}
 
+Sending an URL to the Live Test is not supported.
+
 ## Rate Limits
 
-Calls to the Mindee API are limited to ensure the stability of the platform for all users.
+Burst calls to the Mindee API are limited to ensure the stability of the platform for all users.
 
-These limits apply to an entire organization, meaning the combination of all models, origin IPs, and API keys.
+These rate limits apply to an entire organization, meaning the combination of all models, origin IPs, and API keys.
 
 The following limits are enforced:
 
@@ -80,8 +82,10 @@ The following limits are enforced:
 
 If rate limits are exceeded, the server will return a HTTP 429 error.
 
+However, there are no limits to the **total number of files** sent, so long as they adhere to the rate limits.
+
 {% hint style="success" %}
-If you have needs beyond these limits, get in touch with the [sales team](mailto:hello@mindee.com) for a custom solution.
+Enterprise users: if you have needs beyond these limits, get in touch with the [sales team](mailto:hello@mindee.com) for a custom solution.
 {% endhint %}
 
 ## Data Schema
