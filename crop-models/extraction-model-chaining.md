@@ -1,11 +1,13 @@
 ---
-description: Extract data from detected crops.
+description: Selectively extract data from detected crops.
 icon: link-horizontal
 ---
 
 # Extraction Model Chaining
 
-Use Crop to automatically extract document data, meaning that several different extractions can be made for a single image.
+Link a Crop model to one or more [Extraction Models](../extraction-models/extraction-models-overview.md), to automatically extract structured data from documents based on their detected class.
+
+Since Crop models can detect multiple document classes on the same page, several different extractions can be made on a single image file.
 
 Crop models work on multi-page files, with potentially multiple crop items on each page.
 

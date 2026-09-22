@@ -1,11 +1,11 @@
 ---
-description: Extract data from detected classes.
+description: Selectively extract data from detected classes.
 icon: link-horizontal
 ---
 
 # Extraction Model Chaining
 
-Use Classification to automatically extract the correct data from files.
+Link a Classification model to one or more [Extraction Models](../extraction-models/extraction-models-overview.md), to automatically extract structured data from documents based on their detected class.
 
 Note: Classification Models always return a single class regardless of the number of pages or if there are multiple documents on the same page.
 
@@ -15,7 +15,7 @@ Note: Classification Models always return a single class regardless of the numbe
 
 When creating your Classification Model, you'll be adding document classes in the creation window.
 
-For each document class, you can link one of your [Extraction Models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models "mention") for chaining. The Extraction Model must exist prior to the Classification Model creation.
+For each document class, you can link one of your Extraction Models for chaining. The Extraction Model must exist prior to the Classification Model creation.
 
 Use the search field to filter available Extraction Models.
 
@@ -29,15 +29,24 @@ You can add new classes, remove classes, and change Extraction Models.
 
 ### Selectively Extracting
 
-If a detected class has no linked Extraction Model, no extraction runs for that class.
+All documents will get classified, but only those linked to an Extraction Model will have extraction results.
 
 This allows selectively extracting some files while ignoring others.
 
-Let's say you receive mixed file types from your users, typically but not limited to: plane tickets, travel receipts, driver licenses, and passports.
+Let's say you receive mixed file types from your users, as an example: plane tickets, travel receipts, driver licenses, and passports.
 
-You need only passports. In your Classification configuration, add a `passport` class and an `other`  class, and only link an extraction model to the `passport` class.
+As a simple example, let's assume you need only the passports. In your Classification configuration, add a `passport` class and an `other`  class, then chain a [Passport extraction model](../use-cases/extraction-models/passport.md) on the `passport` class. Do not chain any models on the `other` class.
 
-All documents will get classified, but only those linked to an Extraction Model will have extraction results.
+Another example, if you need only IDs (so driver license and passport), you have two choices:
+
+* Create an `identification_document` class and chain it to an [International ID extraction model](../use-cases/extraction-models/international-id-card.md).\
+  This is recommended if you accept a wide variety of ID documents.
+* Create a `driving_license` and `passport` class and chain the [Driver's License](../use-cases/extraction-models/drivers-license.md) and Passport extraction models to them, respectively.\
+  This is recommended if you only accept a certain subset of ID documents.
+
+As in the earlier example, do not chain any models on the `other` class.
+
+In the above examples, the documents classified as `other` will **not** have extraction results, while those with specific classes **will** have results.
 
 {% include "../.gitbook/includes/use-other-classes.md" %}
 
