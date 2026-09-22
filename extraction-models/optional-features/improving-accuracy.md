@@ -9,11 +9,11 @@ icon: layer-group
 
 ## Overview
 
-When using an Extraction Model, sometimes the extraction accuracy is not satisfying on a given document or a particular template.
+When using an Extraction Model, sometimes the result accuracy is not satisfying on a given document or a particular template.
 
 If you have already followed the [data-schema-best-practices.md](../data-schema-best-practices.md "mention"), and results are still not satisfactory, all hope is not lost.
 
-You have a way to durably improve the performance of the model for the next predictions you'll make. The solution you need is the RAG feature.
+You can reliably improve the performance of the model for the next inferences made by using the RAG feature.
 
 {% embed url="http://app.supademo.com/demo/cmfb3c7166gdc39ozj39wogrz" %}
 
@@ -33,28 +33,34 @@ Essentially, RAG leverages a rich database of source documents and embeddings to
 
 ## Set Up the RAG Database
 
-To use RAG on a given Extraction Model, you'll need to first set up the RAG database which will contain your documents and data.
-
-You only need a single document to get started.
+To use RAG on a given Extraction Model, you'll need to first set up the RAG database which will contain your documents and annotation data. You only need a single document to get started.
 
 Access the database by clicking on the "Continuous Learning (RAG)" link in the model's configuration section.\
 \
-You can then enrich your RAG database by uploading documents with problematic responses.
+From there, click the "Add a document" button to upload files to the RAG database. Only add files that have problematic responses which could not be resolved by [improving the Data Schema](../data-schema-best-practices.md).
 
-You need to annotate the document, ticking the fields you want to be covered by the RAG augmentation on this template. You can also add additional guidelines using plain language.
+When uploading the file, you can add free-form tags to help identify or classify the document. For example you could tag based on geography, provider, problem type, etc.
+
+You need to annotate the document, selecting the fields you want to be covered by the RAG augmentation on this template. You can also add additional guidelines using plain language.
 
 {% hint style="success" %}
 Most of the time, the annotation is sufficient to make the model understand the issue.\
 We recommend using the guideline only when the annotation doesn't solve the problem.
 {% endhint %}
 
-Once this document is annotated, **be sure to validate it**, and go to the Live test tab.\
-\
-You should upload a document, and leave "Show RAG extraction" ticked.
+Once this document is annotated, **be sure to validate it.**
 
-Ideally, pick a document with the same template (another invoice from the same supplier for instance), but not exactly the one you used in the RAG database. You will see the before/after predictions and should be able to check that the extra instructions were taken into account to augment properly the prediction.\
+Once validated, the document will be active. From now on, files sent for processing that match the document will have their results augmented with the annotations in the RAG database.
+
+To test this, go to the [Live Test](../../models/live-test.md) page.
+
+Ideally, find a document with the same template (another invoice from the same supplier for instance), but **not** the exact same one added to the RAG database.\
 \
-In the future, the documents respecting the same template should be augmented, which should increase a lot the performances on this given template. For other types of documents, the behavior remain the same, which means that RAG is improving the result with no regression on other documents.
+Upload the document to the Live Test, leaving "Show RAG extraction" checked.
+
+You will see the before/after predictions, this allows validating that the RAG annotations were taken into account when processing the document.\
+\
+For documents that do not match the annotated document, the behavior remain the same, which means that RAG is improving the result with no regression on other documents.
 
 To see which documents are being used, in the database the columns "Matched" and "Last Matched" indicate how many times the document was used and the last time it was used, respectively.
 
@@ -71,6 +77,17 @@ Click on "Data Schema" then "Optional Features" tab. There you can activate the 
 ### Activate RAG via API Calls
 
 {% include "../../.gitbook/includes/api-optional-features.md" %}
+
+## Searching for RAG Documents
+
+You can filter the RAG documents displayed in the interface, based on a variety of criteria:
+
+* tags
+* filename
+* upload date
+* status
+
+This is done through the "Filters" button at the top of the document list.
 
 ## Frequently Asked Questions
 
