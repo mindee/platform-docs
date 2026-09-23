@@ -47,7 +47,7 @@ All crop items will get classified, but only those linked to an Extraction Model
 
 {% include "../.gitbook/includes/use-other-classes.md" %}
 
-### Token Usage With Chaining
+## Token Usage With Chaining
 
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
