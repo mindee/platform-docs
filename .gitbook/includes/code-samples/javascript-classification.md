@@ -3,17 +3,19 @@ title: sample-code-javascript-classification
 ---
 
 Requires Node.js ≥ 20.1. Node.js ≥ 22 is recommended.\
-Requires the [Mindee Node.js SDK](https://www.npmjs.com/package/mindee/) version **5.7.1** or greater.
+Requires the [Mindee Node.js SDK](https://www.npmjs.com/package/mindee/) version **5.10.0** or greater.
 
 {% code lineNumbers="true" %}
 ```javascript
+// ESM or TypeScript (Recommended)
 import * as mindee from "mindee";
+
 // If you're on CommonJS:
 // const mindee = require("mindee");
 
 const apiKey = "MY_API_KEY";
-const filePath = "/path/to/the/file.ext";
 const modelId = "MY_MODEL_ID";
+const filePath = "/path/to/the/file.ext";
 
 // Init a new client
 const mindeeClient = new mindee.Client(
