@@ -49,11 +49,20 @@ All split ranges will get classified, but only those linked to an Extraction Mod
 
 It's also possible to remove pages that are never used in the Extraction. For example to remove terms and conditions from invoices, set up the classes `terms_and_conditions_page` and `invoice_page` , and only link an Extraction Model to the `invoice_page` class.
 
-### Token Usage With Chaining
+## Token Usage With Chaining
 
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
-For Split models specifically, there can be multiple chained extractions on the same file. However, page ranges are non-overlapping, meaning the total number of pages processed cannot be greater than the total number of pages in the source document. Pages not processed do not consume extraction credits.
+For Split models specifically, there can be multiple chained extractions on the same file. However, page ranges are non-overlapping, meaning the total number of pages processed cannot be greater than the total number of pages in the source document.
+
+Detected page ranges not chained to an extraction model do not consume extraction credits.
+
+Some examples:
+
+* 2-page PDF file, a single 2-page document is detected and chained ⇒ 2 pages of extraction credit consumed.
+* 75-page PDF file, no documents detected ⇒ 75 pages of Split credit consumed.
+* 23-page PDF file, only a single 5-page document is detected and chained ⇒ 5 pages of extraction credit consumed.
+* 10-page PDF file, four 2-page documents are detected and chained, a single 2-page document is detected but **not** chained ⇒ 8 pages of extraction credit consumed.
 
 ## Access Extraction Results
 
