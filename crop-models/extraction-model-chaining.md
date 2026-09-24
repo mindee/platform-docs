@@ -57,6 +57,15 @@ For example, on a JPEG image where 4 receipts are detected and each receipt is c
 
 Detected crops not chained to an extraction model do not consume extraction credits.
 
+Some examples:
+
+* JPEG image file, a single document is detected and chained ⇒ 1 page of Extraction credit consumed.
+* JPEG image file, no documents detected ⇒ 1 page of Crop credit consumed.
+* PNG image file, 3 document are detected and chained ⇒ 3 page of Extraction credit consumed.
+* HEIC image file, 3 documents are detected and chained, a single document is detected but **not** chained ⇒ 3 pages of Extraction credit consumed.
+* 75-page PDF file, no documents detected ⇒ 75 pages of Crop credit consumed.
+* 23-page PDF file, 37 documents detected and chained ⇒ 37 pages of Extraction credit consumed.
+
 ## Access Extraction Results
 
 When an Extraction Model is linked, each detected crop item with that class contains an Extraction Response object.

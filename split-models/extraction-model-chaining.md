@@ -59,10 +59,11 @@ Detected page ranges not chained to an extraction model do not consume extractio
 
 Some examples:
 
-* 2-page PDF file, a single 2-page document is detected and chained ⇒ 2 pages of extraction credit consumed.
+* 2-page PDF file, a single 2-page document is detected and chained ⇒ 2 pages of Extraction credit consumed.
 * 75-page PDF file, no documents detected ⇒ 75 pages of Split credit consumed.
-* 23-page PDF file, only a single 5-page document is detected and chained ⇒ 5 pages of extraction credit consumed.
-* 10-page PDF file, four 2-page documents are detected and chained, a single 2-page document is detected but **not** chained ⇒ 8 pages of extraction credit consumed.
+* JPEG image file, a single document is detected and chained ⇒ 1 page of Extraction credit consumed.
+* 23-page PDF file, a single 5-page document is detected and chained ⇒ 5 pages of Extraction credit consumed.
+* 10-page PDF file, four 2-page documents are detected and chained, a single 2-page document is detected but **not** chained ⇒ 8 pages of Extraction credit consumed.
 
 ## Access Extraction Results
 
