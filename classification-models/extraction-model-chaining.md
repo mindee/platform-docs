@@ -39,7 +39,7 @@ This allows selectively extracting some files while ignoring others.
 
 As a sample use case, let's say you have a KYC workflow, and your users upload their files. As a result, you receive mixed file types in the pipeline: driver licenses, passports, student IDs, employee badges, social security cards, etc.
 
-As a first example, assume you need only process passports. In your Classification configuration, add a `passport` class and an `other`  class, then chain a [Passport extraction model](../use-cases/extraction-models/passport.md) on the `passport` class. Do not chain any models on the `other` class.
+As a first example, assume you only process passports. In your Classification configuration, add a `passport` class and an `other`  class, then chain a [Passport extraction model](../use-cases/extraction-models/passport.md) on the `passport` class. Do not chain any models on the `other` class.
 
 Another example, if you need only government IDs (so driver license and passport), you have two choices:
 
@@ -59,6 +59,13 @@ You can of course use **any** extraction model, including fully custom ones.
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
 For Classification models specifically, there can be only a single chained extraction per file. This means that the total number of pages processed will be always equal to the number of pages in the source document.
+
+Some examples:
+
+* JPEG image file, a document is detected and chained ⇒ 1 page of Extraction credit consumed.
+* 23-page PDF file, a document is detected and chained ⇒ 23 pages of Extraction credit consumed.
+* PNG image file, no document detected ⇒ 1 page of Classification credit consumed.
+* 75-page PDF file, a document is detected but **not** chained ⇒ 75 pages of Classification credit consumed.
 
 ## Access Extraction Results
 

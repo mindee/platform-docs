@@ -45,9 +45,34 @@ All split ranges will get classified, but only those linked to an Extraction Mod
 
 {% include "../.gitbook/includes/use-other-classes.md" %}
 
-#### Removing Unused Pages
+### Putting It All Together
+
+#### Sample Use Case: KYC
+
+As a sample use case, let's say you have a KYC workflow, and your users upload their files. Crucially, some users upload all their documents in a single multi-page PDF, while others send them in separate files.
+
+As a result, you receive basically anything and everything mixed together in the pipeline. Some users upload single files with documents such as : driver licenses, passports, student IDs, employee badges, social security cards, etc. And on top of that, some users send multiple people's identity in single multi-page PDF files.&#x20;
+
+As a first example, assume you only process passports. In your Split configuration, add a `passport` class and an `other`  class, then chain a [Passport extraction model](../use-cases/extraction-models/passport.md) on the `passport` class. Do not chain any models on the `other` class.
+
+Another example, if you need only government IDs (so driver license and passport), you have two choices:
+
+* Create an `official_government_id` class and chain it to an [International ID extraction model](../use-cases/extraction-models/international-id-card.md).\
+  This is recommended if you accept a variety of ID documents.
+* Create a `driving_license` and `passport` class and chain the [Driver's License](../use-cases/extraction-models/drivers-license.md) and [Passport](../use-cases/extraction-models/passport.md) extraction models to them, respectively.\
+  This is recommended if you only accept specific ID documents.
+
+As in the earlier example, do not chain any models on the `other` class.
+
+In the above examples, the documents classified as `other` will **not** have extraction results, while those with specific classes **will** have results.
+
+You can of course use **any** extraction model, including fully custom ones.
+
+#### Sample Use Case: Removing Unused Pages
 
 It's also possible to remove pages that are never used in the Extraction. For example to remove terms and conditions from invoices, set up the classes `terms_and_conditions_page` and `invoice_page` , and only link an Extraction Model to the `invoice_page` class.
+
+This can speed up processing, as often terms and conditions pages are slower to process than regular invoice pages. You'll also save on Extraction costs, as detailed in the [token usage section](extraction-model-chaining.md#token-usage-with-chaining).
 
 ## Token Usage With Chaining
 
