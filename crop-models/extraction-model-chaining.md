@@ -51,6 +51,10 @@ All crop items will get classified, but only those linked to an Extraction Model
 
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
+For Crop models specifically, there can be multiple chained extractions on the same file. Since each page may contain multiple documents, the total pages processed can be greater than the total number of pages in the source document.
+
+For example, on a JPEG image where 4 receipts are detected and each receipt is chained to an extraction model, processing the file will consume 4 pages worth of credits.
+
 ## Access Extraction Results
 
 When an Extraction Model is linked, each detected crop item with that class contains an Extraction Response object.

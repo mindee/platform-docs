@@ -53,6 +53,8 @@ It's also possible to remove pages that are never used in the Extraction. For ex
 
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
+For Split models specifically, there can be multiple chained extractions on the same file. However, page ranges are non-overlapping, meaning the total number of pages processed cannot be greater than the total number of pages in the source document. Pages not processed do not consume credits.
+
 ## Access Extraction Results
 
 When an Extraction model is linked, each Split Range with the detected class will contain an Extraction Response object, which is identical when making an Extraction request for a single document.

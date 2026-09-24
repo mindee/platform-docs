@@ -58,6 +58,8 @@ You can of course use **any** extraction model, including fully custom ones.
 
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
+For Classification models specifically, there can be only a single chained extraction per file. This means that the total number of pages processed will be always equal to the number of pages in the source document.
+
 ## Access Extraction Results
 
 When an Extraction Model is linked, the detected class contains an Extraction Response object.
