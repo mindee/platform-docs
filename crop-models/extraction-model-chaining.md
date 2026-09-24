@@ -55,6 +55,8 @@ For Crop models specifically, there can be multiple chained extractions on the s
 
 For example, on a JPEG image where 4 receipts are detected and each receipt is chained to an extraction model, processing the file will consume 4 pages worth of credits.
 
+Detected crops not chained to an extraction model do not consume extraction credits.
+
 ## Access Extraction Results
 
 When an Extraction Model is linked, each detected crop item with that class contains an Extraction Response object.
