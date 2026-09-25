@@ -80,15 +80,15 @@ This can speed up processing, as often terms and conditions pages are slower to 
 
 For Split models specifically, there can be multiple chained extractions on the same file. However, page ranges are non-overlapping, meaning the total number of pages processed cannot be greater than the total number of pages in the source document.
 
-Detected page ranges not chained to an extraction model do not consume extraction credits.
+Detected page ranges not chained to an extraction model consume Split credits, not extraction credits.
 
 Some examples:
 
 * 2-page PDF file, a single 2-page document is detected and chained ⇒ 2 pages of Extraction credit consumed.
 * 75-page PDF file, no documents detected ⇒ 75 pages of Split credit consumed.
 * JPEG image file, a single document is detected and chained ⇒ 1 page of Extraction credit consumed.
-* 23-page PDF file, a single 5-page document is detected and chained ⇒ 5 pages of Extraction credit consumed.
-* 10-page PDF file, four 2-page documents are detected and chained, a single 2-page document is detected but **not** chained ⇒ 8 pages of Extraction credit consumed.
+* 23-page PDF file, a single 5-page document is detected and chained ⇒ 5 pages of Extraction credit consumed, 18 pages of Split credit consumed.
+* 10-page PDF file, four 2-page documents are detected and chained, a single 2-page document is detected but **not** chained ⇒ 8 pages of Extraction credit consumed, 2 pages of Split credit consumed.
 
 ## Access Extraction Results
 
