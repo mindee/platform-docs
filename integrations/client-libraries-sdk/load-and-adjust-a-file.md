@@ -390,7 +390,7 @@ const numberOfPages = await inputSource.getPageCount();
 ```php
 $filename = $inputSource->fileName;
 $isPdf = $inputSource->isPdf();
-$numberOfPages = $inputSource->getPageCount();
+$numberOfPages = $inputSource->pageCount;
 ```
 {% endtab %}
 
@@ -451,6 +451,8 @@ input_source.fix_pdf()
 ```php
 $inputSource->fixPDF();
 ```
+
+{% include "../../.gitbook/includes/php-pdf-warning.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
@@ -513,6 +515,8 @@ Basic usage is very simple, and can be applied to both images and PDFs:
 ```php
 $inputSource->compress(quality: 85);
 ```
+
+{% include "../../.gitbook/includes/php-pdf-warning.md" %}
 
 For images, you can also set a maximum height and/or width.\
 The aspect ratio will always be preserved.
@@ -732,6 +736,8 @@ $pageOptions = new PageOptions(
     onMinPage: 10
 );
 ```
+
+{% include "../../.gitbook/includes/php-pdf-warning.md" %}
 {% endtab %}
 
 {% tab title="Ruby" %}
@@ -864,3 +870,4 @@ new PageOptions(
 ```
 {% endtab %}
 {% endtabs %}
+
