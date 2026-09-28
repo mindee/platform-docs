@@ -20,27 +20,6 @@ ID cards differ vastly across countries in design, language, and layout. Mindee 
 * Plug-and-play integration: no template design or training required
 * High accuracy and speed: even with variations in card format, font, or photo quality
 
-## What can be extracted from ID cards?
-
-Mindee’s ID card API returns structured fields found on most ID documents:
-
-| Field                  | Description                        |
-| ---------------------- | ---------------------------------- |
-| Document Type          | Type of ID (like national ID card) |
-| Document Number        | Unique Identifier on the card      |
-| Given Name(s), Surname | Personal name data                 |
-| Birth Date             | YYYY-MM-DD format                  |
-| Birth Place            | City or region of birth            |
-| Issurance Date         | Card issue date                    |
-| Expiry Date            | Expiration date                    |
-| Gender                 | M/F/other options                  |
-| Nationality            | Issuing country code               |
-| MRZ Lines              | If present, machine-readable data  |
-| Address                | (when applicable)                  |
-| Additional metada      | Depends on region/document         |
-| Signature              | Signature of the holder            |
-| ID photo               | Photo of the holder                |
-
 ## Example: French National ID Card (Carte Nationale d’Identité – France)
 
 ### Why Mindee works for French ID Cards
