@@ -44,11 +44,12 @@ The client library will POST the request for you, and then automatically poll th
 {% tab title="Python" %}
 The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueue_and_get_result` method.
+Use the `enqueue_and_get_result` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
 
 ```python
 response = mindee_client.enqueue_and_get_result(
-    InferenceResponse,
+    # Use the appropriate product class
+    ExtractionResponse,
     input_source,
     model_params,
 )
@@ -448,7 +449,7 @@ print(response.job.alias)
 
 **Note:** You can use both methods!
 
-First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
+First, make sure you've added a webhook ID to the `ExtractionParameters` instance.\
 Then, call `enqueue_and_get_result` .\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
@@ -549,7 +550,7 @@ System.out.println(response.getJob().getAlias());
 
 **Note:** You can use both methods!
 
-First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
+First, make sure you've added a webhook ID to the `ExtractionParameters` instance.\
 Then, call `enqueueAndGetInference` and handle the promise.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
@@ -573,7 +574,7 @@ System.Console.WriteLine(response.Job.Alias);
 
 **Note:** You can also use both methods!
 
-First, make sure you've added a webhook ID to the `InferenceParameters` instance.\
+First, make sure you've added a webhook ID to the `ExtractionParameters` instance.\
 Then, call `EnqueueAndGetResultAsync`.\
 You'll get the response via polling and webhooks will be sent as well.
 {% endtab %}
