@@ -5,7 +5,7 @@ icon: code
 
 # SDK Integration
 
-Use the SDKs to send documents to an Extraction model and process dynamic results.
+Use the SDKs to send documents to an Extraction model and process the results.
 
 This section helps you choose the right starting point and move through the full integration flow.
 
@@ -33,7 +33,7 @@ Upload some samples to the [live-test.md](../../models/live-test.md "mention") t
 
 Install the client library for your language.
 
-Prepare your API key and initialize the client.
+Prepare your [API key](../../integrations/api-keys.md) and initialize the client.
 {% endstep %}
 
 {% step %}

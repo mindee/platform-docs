@@ -7,6 +7,6 @@ The initial model (Split, Crop, Classification) is provided at no additional cos
 The possible credit consumption scenarios are as follows:
 
 * extraction model not chained ⇒ token usage of initial model
-* extraction models chained ⇒ token usage of each triggered extraction model, including any activated [optional features](../../extraction-models/optional-features/).
+* extraction models chained ⇒ token usage of the extraction model, including any activated [optional features](../../extraction-models/optional-features/).
 
 Token consumption is calculated per page as is standard for our models.

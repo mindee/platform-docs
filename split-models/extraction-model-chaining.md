@@ -78,9 +78,9 @@ This can speed up processing, as often terms and conditions pages are slower to 
 
 {% include "../.gitbook/includes/token-cost-chained-extraction-model.md" %}
 
-For Split models specifically, there can be multiple chained extractions on the same file. However, page ranges are non-overlapping, meaning the total number of pages processed cannot be greater than the total number of pages in the source document.
+For Split models specifically, there can be multiple chained extractions on the same file. However, split ranges are non-overlapping, meaning the total number of pages processed cannot be greater than the total number of pages in the source document.
 
-Detected page ranges not chained to an extraction model consume Split credits, not extraction credits.
+Detected split ranges not chained to an extraction model consume Split credits, not extraction credits.
 
 Some examples:
 

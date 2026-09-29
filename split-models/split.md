@@ -1,6 +1,6 @@
 ---
 description: >-
-  Automatically breaking a multi-page source file into separate documents and
+  Automatically break a multi-page source file into separate documents and
   associate a class to each one.
 icon: rectangle-vertical-history
 ---

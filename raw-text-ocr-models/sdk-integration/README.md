@@ -5,3 +5,4 @@ icon: code
 
 # SDK Integration
 
+Use the SDKs to send documents to a Raw Text model and process the results.
