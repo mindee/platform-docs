@@ -2,7 +2,7 @@
 title: sample-code-python-split
 ---
 
-Requires Python ≥ 3.9. Python ≥ 3.11 is recommended.\
+Requires Python ≥ 3.10. Python ≥ 3.12 is recommended.\
 Requires the [Mindee Python SDK](https://pypi.org/project/mindee/) version **5.3.1** or greater.
 
 {% code lineNumbers="true" %}
