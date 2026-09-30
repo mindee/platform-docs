@@ -15,3 +15,4 @@ The field _name_ must only contain:
 * lowercase Latin letters without accents (a-z)
 * numbers (0-9)
 * underscores (`_`), but neither first nor last characters can be an underscore.
+* the following names cannot be used: `value`, `fields`, `items`.
