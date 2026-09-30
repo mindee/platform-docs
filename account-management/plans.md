@@ -149,6 +149,16 @@ Enterprise customers can ask us directly for specific features they need.
 
 </details>
 
+<details>
+
+<summary><strong>Is there a commitment for monthly or yearly plans?</strong></summary>
+
+There is no commitment to purchase any additional time or credits, regardless of your plan.
+
+A monthly plan commits you to one month, a yearly plan to one year.
+
+</details>
+
 [^1]: Build your own document parsers by describing the fields you need
 
 [^2]: Access to our [Feedback](https://feedback.mindee.com/) page
