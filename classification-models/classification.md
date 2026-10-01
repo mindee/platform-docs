@@ -21,8 +21,10 @@ A file sent to the Classification Model product may have any number of pages, [w
 {% hint style="info" icon="lightbulb" %}
 If there is a high possibility of having multiple documents within the same file, use:
 
-* [split.md](../split-models/split.md "mention") ⇒ multiple documents in the same file
-* [crop.md](../crop-models/crop.md "mention") ⇒ multiple documents on the same page
+* [Split Model](../split-models/split.md) ⇒ multiple documents over several pages in the same file.\
+  Example use case: several invoices in a single PDF file.
+* [Crop Model](../crop-models/crop.md) ⇒ multiple documents on the same page.\
+  Example use case: several receipts in a single image file.
 {% endhint %}
 
 ## Create a Classification Model
@@ -62,6 +64,8 @@ Here is a step-by-step tutorial that shows you how to properly create a Classify
 {% include "../.gitbook/includes/utilities-classes-usage.md" %}
 
 {% include "../.gitbook/includes/utilities-class-names.md" %}
+
+
 
 ## Integration
 

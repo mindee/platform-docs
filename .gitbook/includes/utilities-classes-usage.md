@@ -7,3 +7,5 @@ Models requires at least two classes defined.
 Class names may be in most languages and writing systems, but cannot exceed 128 characters.
 
 Having more than a few dozen classes will yield unexpected results, and is not recommended. If you need classes based on vendor/customer names, product codes, phone numbers, etc, you should use a text field in an [Extraction model](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models) instead.
+
+Class _names_ have more weight than class _guidelines._ It's important for class names to be distinct and specific. Use guidelines only for fine-tuning.
