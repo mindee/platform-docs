@@ -44,10 +44,10 @@ A **Utility Model** in the Mindee platform is designed to perform document analy
 
 More information is available for each model type:
 
-* [split.md](../split-models/split.md "mention") ⇒ find documents in a multi-page file
-* [crop.md](../crop-models/crop.md "mention") ⇒ find documents on a single page
-* [classification.md](../classification-models/classification.md "mention") ⇒ identify file contents
-* [ocr.md](../raw-text-ocr-models/ocr.md "mention")⇒ structured text extraction
+* [Split Models](../split-models/split.md) ⇒ identify several document types in a multi-page file
+* [Crop Models](../crop-models/crop.md) ⇒ identify several document types on a single page or image
+* [Classification Models](../classification-models/classification.md) ⇒ identify a single document type in a file
+* [Raw Text Models](../raw-text-ocr-models/ocr.md) ⇒ structured text extraction
 
 ## Live Test
 
