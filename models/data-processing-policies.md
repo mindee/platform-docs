@@ -114,3 +114,11 @@ These are available on our website:
 
 </details>
 
+<details>
+
+<summary><strong>Is Mindee available on-premises?</strong></summary>
+
+We do no have specific plans to allow on-premises installation of our platform and services at this time.
+
+</details>
+

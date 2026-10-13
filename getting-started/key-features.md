@@ -30,7 +30,7 @@ Some popular use cases include:
 
 Learn more at: [extraction-models](../use-cases/extraction-models/ "mention")
 
-## Utility Models
+## Custom Utility Models
 
 In addition to extraction models, Mindee also provides utility models that can be used either separately or in conjunction with Extraction Models.
 
@@ -40,10 +40,6 @@ These utilities allow for more complex workflows and greater flexibility.
 * **Crop**: Detect document boundaries on each page, matching each document to a category.
 * **Classification**: Automatically assign images and scanned documents to the right category.
 * **OCR**: Extract raw text and word boundaries from any document with high precision.
-
-{% hint style="info" %}
-Utilities are currently in beta: they are usable, with full integration support coming soon.
-{% endhint %}
 
 ## Advanced Features
 
@@ -64,7 +60,7 @@ Learn more at: [data-processing-policies.md](../models/data-processing-policies.
 
 ## Integrations
 
-Asynchronous processing with polling and webhooks; official SDKs for Python, Node.js, Ruby, PHP, Java, and .NET.\
+Asynchronous processing with polling and webhooks; official [SDK](glossary.md#sdk-software-development-kit)s for Python, Node.js, Ruby, PHP, Java, and .NET.\
 Learn more at: [client-libraries-sdk](../integrations/client-libraries-sdk/ "mention").
 
 No‑code and low‑code integrations, including an official Make.com app and generic HTTP workflows.\

@@ -83,8 +83,12 @@ Fully supported languages include, but are **not limited** to:
 * Middle East: Arabic, Turkish, Farsi, Hebrew, Kurdish, ...
 * Sub-Saharan Africa: Swahili, Amharic, Yoruba, Zulu, Lingala, Afrikaans, ...
 * America: Guaraní, Quechua, Nahuatl, Aymara, Cree, Greenlandic, ...
-* Constructed: Esperanto
+* Constructed: Esperanto, ...
 
 ### Handwriting
 
 Mindee models are able to recognize (and OCR) any recent handwriting (19th century and on). Accuracy for handwriting is on average a bit less than printed text.
+
+### Direction
+
+Left-to-Right, Right-to-Left, and mixed direction documents are all supported.
