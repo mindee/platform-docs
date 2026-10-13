@@ -36,6 +36,150 @@ Send a document using [polling](../polling-for-results.md), this is the simplest
 
 The client library will POST the request for you, and then automatically poll the API.
 
+### Polling Configuration
+
+Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
+
+{% tabs %}
+{% tab title="Python" %}
+When polling you really only need to set the `model_id` .
+
+```python
+model_params = ExtractionParameters(model_id="MY_MODEL_ID")
+```
+
+You can also adjust the various polling parameters, set these options if you are encountering timeout problems.
+
+```python
+from mindee import PollingOptions
+
+polling_options=PollingOptions(
+    # Initial delay before the first polling attempt.
+    initial_delay_sec=3,
+    # Delay between each polling attempt.
+    delay_sec=1.5,
+    # Total number of polling attempts.
+    max_retries=80,
+)
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+When polling you really only need to set the `modelId` .
+
+```typescript
+const modelParams = {modelId: "MY_MODEL_ID"};
+```
+
+You can also adjust the various polling parameters, set these options if you are encountering timeout problems. You must then pass the configuration to the polling method call.
+
+```typescript
+const pollingOptions = {
+  // Initial delay before the first polling attempt.
+  initialDelaySec: 3.0,
+  // Delay between each polling attempt.
+  delaySec: 1.5,
+  // Total number of polling attempts.
+  maxRetries: 80,
+}
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+When polling you really only need to set the `modelId` .
+
+```php
+$modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
+```
+
+You can also adjust the various polling parameters, set these options if you are encountering timeout problems. You must then pass the configuration to the polling method call.
+
+```php
+use Mindee\ClientOptions\PollingOptions;
+
+$pollingOptions = new PollingOptions(
+    // Initial delay before the first polling attempt.
+    initialDelaySec: 3.0,
+    // Delay between each polling attempt.
+    delaySec: 1.5,
+    // Total number of polling attempts.
+    maxRetries: 80,
+);
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+When polling you really only need to set the `model_id` .
+
+```ruby
+model_params = { model_id: "MY_MODEL_ID" }
+```
+
+You can also adjust the various polling parameters, set these options if you are encountering timeout problems. You must then pass the configuration to the polling method call.
+
+```ruby
+polling_options = {
+  # Initial delay before the first polling attempt.
+  initial_delay_sec: 3,
+  # Delay between each polling attempt.
+  delay_sec: 1.5,
+  # Total number of polling attempts.
+  max_retries: 80,
+}
+```
+{% endtab %}
+
+{% tab title="Java" %}
+When polling you really only need to set the `modelId` .
+
+```java
+var modelParams = ExtractionParameters
+        .builder("MY_MODEL_ID")
+        .build();
+```
+
+You can also adjust the various polling parameters, set these options if you are encountering timeout problems. You must then pass the configuration to the polling method call.
+
+```java
+import com.mindee.v2.clientoptions.PollingOptions;
+
+var pollingOptions = PollingOptions
+    .builder()
+    // Initial delay before the first polling attempt.
+    .initialDelaySec(3.0)
+    // Delay between each polling attempt.
+    .intervalSec(1.5)
+    // Total number of polling attempts.
+    .maxRetries(80)
+    // complete the polling builder
+    .build();
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+When polling you really only need to set the `modelId`.
+
+```csharp
+var modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
+```
+
+You can also adjust the various polling parameters, set these options if you are encountering timeout problems. You must then pass the configuration to the polling method call.
+
+```csharp
+using Mindee.V2.ClientOptions;
+
+var pollingOptions = new PollingOptions(
+    // Initial delay before the first polling attempt.
+    initialDelaySec: 3.5,
+    // Delay between each polling attempt.
+    intervalSec: 1.5,
+    // Total number of polling attempts.
+    maxRetries: 80
+);
+```
+{% endtab %}
+{% endtabs %}
+
 ### Polling Method Call
 
 {% include "../../.gitbook/includes/input-source-requirements.md" %}
@@ -71,7 +215,7 @@ const response = mindeeClient.enqueueAndGetResult(
   mindee.product.Extraction,
   inputSource,
   modelParams,
-  // optional, set only if having timeout issues.
+  // optional, set if having timeout issues
   // pollingOptions,
 );
 
@@ -95,7 +239,7 @@ $response = $mindeeClient->enqueueAndGetResult(
     ExtractionResponse::class,
     $inputSource,
     $modelParams,
-    // optional, set only if having timeout issues.
+    // optional, set if having timeout issues
     // $pollingOptions
 );
 
@@ -137,7 +281,7 @@ var response = mindeeClient.enqueueAndGetResult(
     ExtractionResponse.class,
     inputSource,
     modelParams
-    // optional, set only if having timeout issues.
+    // optional, set if having timeout issues
     // pollingOptions
 );
 
@@ -156,167 +300,13 @@ Use the `EnqueueAndGetResultAsync` method. Remember to use the appropriate produ
 var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(
     inputSource
     , modelParams
-    // optional, set only if having timeout issues.
+    // optional, set if having timeout issues
     //, pollingOptions
 );
 
 // To easily test which data were extracted,
 // simply print an RST representation of the inference
 System.Console.WriteLine(response.Inference.ToString());
-```
-{% endtab %}
-{% endtabs %}
-
-### Polling Configuration
-
-Remember to use the appropriate Product/Model class, examples use `ExtractionParameters`.
-
-{% tabs %}
-{% tab title="Python" %}
-When polling you really only need to set the `model_id` .
-
-```python
-model_params = ExtractionParameters(model_id="MY_MODEL_ID")
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```python
-from mindee import PollingOptions
-
-# Use only if having timeout issues.
-polling_options=PollingOptions(
-    # Initial delay before the first polling attempt.
-    initial_delay_sec=3,
-    # Delay between each polling attempt.
-    delay_sec=1.5,
-    # Total number of polling attempts.
-    max_retries=80,
-)
-```
-{% endtab %}
-
-{% tab title="Node.js" %}
-When polling you really only need to set the `modelId` .
-
-```typescript
-const modelParams = {modelId: "MY_MODEL_ID"};
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```typescript
-// Optional, set only if having timeout issues.
-const pollingOptions = {
-  // Initial delay before the first polling attempt.
-  initialDelaySec: 3.0,
-  // Delay between each polling attempt.
-  delaySec: 1.5,
-  // Total number of polling attempts.
-  maxRetries: 80,
-}
-```
-{% endtab %}
-
-{% tab title="PHP" %}
-When polling you really only need to set the `modelId` .
-
-```php
-$modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```php
-use Mindee\ClientOptions\PollingOptions;
-
-// Set only if having timeout issues.
-$pollingOptions = new PollingOptions(
-    // Initial delay before the first polling attempt.
-    initialDelaySec: 3.0,
-    // Delay between each polling attempt.
-    delaySec: 1.5,
-    // Total number of polling attempts.
-    maxRetries: 80,
-);
-```
-{% endtab %}
-
-{% tab title="Ruby" %}
-When polling you really only need to set the `model_id` .
-
-```ruby
-model_params = { model_id: "MY_MODEL_ID" }
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```ruby
-# Set only if having timeout issues.
-polling_options = {
-  # Initial delay before the first polling attempt.
-  initial_delay_sec: 3,
-  # Delay between each polling attempt.
-  delay_sec: 1.5,
-  # Total number of polling attempts.
-  max_retries: 80,
-}
-```
-{% endtab %}
-
-{% tab title="Java" %}
-When polling you really only need to set the `modelId` .
-
-```java
-var modelParams = ExtractionParameters
-        .builder("MY_MODEL_ID")
-        .build();
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```java
-import com.mindee.v2.clientoptions.PollingOptions;
-
-var pollingOptions = PollingOptions
-    .builder()
-    // Initial delay before the first polling attempt.
-    .initialDelaySec(3.0)
-    // Delay between each polling attempt.
-    .intervalSec(1.5)
-    // Total number of polling attempts.
-    .maxRetries(80)
-    // complete the polling builder
-    .build();
-```
-{% endtab %}
-
-{% tab title=".NET" %}
-When polling you really only need to set the `modelId`.
-
-```csharp
-var modelParams = new ExtractionParameters(modelId: "MY_MODEL_ID");
-```
-
-You can also set the various polling parameters.\
-However, **we do not recommend** setting this option unless you are encountering timeout problems.
-
-```csharp
-using Mindee.V2.ClientOptions;
-
-var pollingOptions = new PollingOptions(
-    // Initial delay before the first polling attempt.
-    initialDelaySec: 3.5,
-    // Delay between each polling attempt.
-    intervalSec: 1.5,
-    // Total number of polling attempts.
-    maxRetries: 80
-);
 ```
 {% endtab %}
 {% endtabs %}
