@@ -54,9 +54,16 @@ From there you can also pay any outstanding invoices and download payment receip
 
 Additionally, you can download past invoices or pay any outstanding invoices from your Stripe account.
 
-### Set Your Tax ID
+### Set Billing Information
 
-You can set your Tax ID at any time. After clicking on "Manage Subscription", click on "Update Information", and finally edit the "Tax ID" field.
+You can set your billing information at any time:
+
+* name
+* billing address
+* billing email, which receives invoices
+* Tax ID
+
+After clicking on "Manage Subscription", click on "Update Information", and finally edit the fields you want to change.
 
 ## Supported Payment Methods
 
