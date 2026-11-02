@@ -51,8 +51,6 @@ You can always go back to the Live Test page by clicking on the left-hand model 
 
 {% include "../.gitbook/includes/live-test-file-limits-table.md" %}
 
-
-
 ## Documents History
 
 When testing your model, you'll typically use several documents, and want to use those same documents for testing any changes made to the model.
@@ -79,5 +77,20 @@ The file and its corresponding data will be permanently removed from our system.
 
 ### Document Lifetime
 
-Documents will be automatically deleted from the History after 3 months.
+Documents and their results will be automatically deleted from the History after 3 months.
 
+## Advanced Mode
+
+Normally, the Live Test uses the model's default [options](../extraction-models/optional-features/) and always enables polygons.
+
+When you need finer control of the options, in particular for testing, switch to the advanced mode. All the options available to API calls can be set. This includes the various [Dynamic Model Options](../extraction-models/sdk-integration/extraction-configuration.md#dynamic-model-options), which can **only** configured on a per-call basis.
+
+To activate, simply click the "Advanced Mode" toggle in the main Live Test page. You'll then have access to all the settings:
+
+<figure><img src="../.gitbook/assets/live-test-advanced-mode.png" alt="Live Test - Advanced Mode" width="500"><figcaption></figcaption></figure>
+
+Processing does not start automatically upon document upload, you'll need to click on the "Start Inference" button.
+
+The Document history will show which documents were processed in advanced mode.
+
+Advanced Mode settings are reset on each processing run.
