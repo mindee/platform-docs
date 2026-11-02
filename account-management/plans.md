@@ -20,7 +20,9 @@ Choose the number of credits that fit your volume.
 
 ## Plan Overview & Pricing
 
-<table><thead><tr><th width="156.1998291015625">Plan</th><th width="276.4000244140625">Monthly price (with annual billing)</th><th>Minimum Annual Credits</th></tr></thead><tbody><tr><td>Starter</td><td>€44 / month</td><td>6,000 credits</td></tr><tr><td>Pro</td><td>€116 / month</td><td>6,000 credits</td></tr><tr><td>Enterprise</td><td>Custom pricing</td><td>500,000+ credits</td></tr></tbody></table>
+Prices may vary depending on your currency, reference prices below are shown in Euros.
+
+<table><thead><tr><th width="156.1998291015625">Plan</th><th width="276.4000244140625">Monthly price (with annual billing)</th><th>Annual Credits</th></tr></thead><tbody><tr><td>Starter</td><td>€44 per month</td><td>6k to 500k credits</td></tr><tr><td>Pro</td><td>€116 per month</td><td>6k to 500k credits</td></tr><tr><td>Enterprise</td><td>Custom pricing</td><td>500k credits and over</td></tr></tbody></table>
 
 * All plans are available in **monthly** or **annual** billing.
 * **Annual plans save 10%** compared to monthly pricing.
