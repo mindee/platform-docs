@@ -69,6 +69,8 @@ Choose your plan based on the features you need. The Starter plan is ideal for s
 
 Choose your credits based on how many documents you are actually processing. Purchasing credits based on your average monthly usage provides cost predictability, and will be cheaper than consistently being billed for additional usage.
 
+To help visualize this, use the handy plan calculator available in the "Settings" ⇒ "Billing" section of the platform. You can select the different plan and credit options to determine what works best for you.
+
 ## Try Mindee for Free!
 
 Our no-obligation free plan allows you to try Mindee in real-world conditions, no strings attached.
@@ -77,7 +79,7 @@ Features:
 
 * 200 credits to be used within 14 days
 * Limited to 10 pages per document
-* Access to all model types
+* Unlimited number of any model type
 * [Raw Text](../extraction-models/optional-features/raw-text-full-ocr.md) available
 * [Polygons](../extraction-models/optional-features/polygons-bounding-boxes.md) available
 * [Confidence score](../extraction-models/optional-features/automation-confidence-score.md) available
