@@ -183,7 +183,7 @@ Choosing the Starter plan will remove any non-owner members from your organizati
 
 [^1]: Add members to your organization and assign them roles.
 
-[^2]: Use Mindee using our SDKs, no-code platforms, or manual integration.
+[^2]: [Integrate](../integrations/api-overview.md) Mindee using our SDKs, no-code platforms, or manually.
 
 [^3]: Build your own models or choose predefined templates from our catalog.
 
