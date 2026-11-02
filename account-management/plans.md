@@ -37,10 +37,10 @@ Some features are only applicable to [Extraction models](https://app.gitbook.com
 | [Zero-retention controls](#user-content-fn-11)[^11]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Data Processing Zone](#user-content-fn-12)[^12]           |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | [Support team](#user-content-fn-13)[^13]                   |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| Custom pricing                                             |          :x:         |          :x:         | :white\_check\_mark: |
 | [Dedicated account manager](#user-content-fn-14)[^14]      |          :x:         |          :x:         | :white\_check\_mark: |
-| [Custom on-boarding](#user-content-fn-15)[^15]             |          :x:         |          :x:         | :white\_check\_mark: |
-| [SLA-backed support](#user-content-fn-16)[^16]             |          :x:         |          :x:         | :white\_check\_mark: |
+| [Custom pricing](#user-content-fn-15)[^15]                 |          :x:         |          :x:         | :white\_check\_mark: |
+| [Custom on-boarding](#user-content-fn-16)[^16]             |          :x:         |          :x:         | :white\_check\_mark: |
+| [SLA-backed support](#user-content-fn-17)[^17]             |          :x:         |          :x:         | :white\_check\_mark: |
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
 
@@ -211,6 +211,8 @@ Choosing the Starter plan will remove any non-owner members from your organizati
 
 [^14]: Your account manager is always available.
 
-[^15]: We accompany your technical and product teams based on your requirements.
+[^15]: Discuss pricing with your account manager before committing.
 
-[^16]: Service Level Agreement used for highest priority support.
+[^16]: We accompany your technical and product teams based on your requirements.
+
+[^17]: Service Level Agreement used for highest priority support.
