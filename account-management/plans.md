@@ -31,13 +31,13 @@ More information is available in the section: [billing.md](billing.md "mention")
 
 ### Credits
 
-All plans have a minimum number of credits, however you may include more credits in your subscription to take advantage of lower credit prices.
+All plans have a minimum number of credits, however you may include more credits in your subscription to take advantage of lower prices.
 
 Think of the plan as the features available, and the credits as the amount of documents to process.
 
 ## Try Mindee for Free!
 
-You can try Mindee free for 14 days, this includes 200 pages. You can use the platform and make API calls.
+You can try Mindee free for 14 days, this includes 200 credits. You can use the platform and make API calls.
 
 Simply sign up to get started.
 
@@ -50,13 +50,11 @@ During the trial period, we can activate certain features for you to test specif
 Don't hesitate to reach out to us!
 {% endhint %}
 
-## Select the Right Plan <a href="#h_bbb10a2ad9" id="h_bbb10a2ad9"></a>
+## Select the Right Plan and Credits <a href="#h_bbb10a2ad9" id="h_bbb10a2ad9"></a>
 
-When choosing between plans, it's essential to align your selection with your processing volume. Startups with minimal daily usage can start small, while enterprises with consistent heavy usage should consider higher-tier plans for scalability and technical support.
+Choose your plan based on the features you need. The Starter plan is ideal for solo projects or for when a single person will be handling document processing within the organization. The Pro plan is perfect for collaborative work within an organization, or when strict data processing rules are required.
 
-For example, the Starter Plan is ideal for businesses with limited API requirements, while teams handling higher daily volumes might benefit from the Business Plan.
-
-Start with the Starter Plan if you're processing fewer than 100 pages per day. For higher API demands, such as 300 pages daily, the Business Plan can provide value and cost predictability.
+Choose your credits based on how many documents you are actually processing. Purchasing credits based on your average monthly usage provides cost predictability, and will be cheaper than consistently being billed for additional usage.
 
 ## Feature Comparison
 
@@ -72,7 +70,7 @@ Some features are only applicable to [Extraction models](https://app.gitbook.com
 | [Confidence score](#user-content-fn-6)[^6]               | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Boosted accuracy and precision](#user-content-fn-7)[^7] | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | [Zero-retention controls](#user-content-fn-8)[^8]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Members[^9]                                              | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Members[^9]                                              |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | [Data Processing Zone](#user-content-fn-10)[^10]         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | [Support team](#user-content-fn-11)[^11]                 |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
 | Custom pricing                                           |          :x:         |          :x:         | :white\_check\_mark: |
@@ -81,7 +79,7 @@ Some features are only applicable to [Extraction models](https://app.gitbook.com
 
 ## Plan Details
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>It's free!</li><li>200 credits or 14 days</li><li>10 pages per document</li><li>Access to all model types</li><li>Access to <a href="../extraction-models/optional-features/">Optional Features</a></li><li>API integration</li><li>AI Assistant for models</li><li>Docs Assistant</li><li>Members: multi-user management</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>Access to all model types</li><li>Unlimited models</li><li>Community support</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li><li>API integration</li><li>AI Assistant for models</li><li>Docs Assistant</li><li>Members: multi-user management</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>Access to human support team</li><li>data processing localization</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Pro</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium on-boarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li>It's free!</li><li>200 credits or 14 days</li><li>10 pages per document</li><li>Access to all model types</li><li>Access to <a href="../extraction-models/optional-features/">Optional Features</a></li><li>API integration</li><li>AI Assistant for models</li><li>Docs Assistant</li><li>Members: multi-user management</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>Access to all model types</li><li>Unlimited models</li><li>Community support</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li><li>API integration</li><li>AI Assistant for models</li><li>Docs Assistant</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>Members: multi-user management</li><li>Access to human support team</li><li>data processing localization</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Pro</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium on-boarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
 
@@ -156,6 +154,16 @@ Enterprise customers can ask us directly for specific features they need.
 There is no commitment to purchase any additional time or credits, regardless of your plan.
 
 A monthly plan commits you to one month, a yearly plan to one year.
+
+</details>
+
+<details>
+
+<summary><strong>What happens to additional users when going from a Trial to Starter plan?</strong></summary>
+
+If you've added members during your trial period, you'll need to choose a Pro plan to keep any additional members.
+
+Choosing the Starter plan will remove any non-owner members from your organization during the transition process.
 
 </details>
 

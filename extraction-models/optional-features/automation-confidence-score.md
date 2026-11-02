@@ -5,7 +5,7 @@ description: >-
 icon: bolt-auto
 ---
 
-# Confidence Score and Accuracy Boost
+# Confidence Score & Accuracy Boost
 
 ## Overview
 
@@ -85,27 +85,43 @@ This creates a virtuous cycle where every uncertain case contributes to future a
 
 ## Frequently Asked Questions
 
-### How is the confidence score computed?
+<details>
+
+<summary><strong>How is the confidence score computed?</strong></summary>
 
 The confidence score in Automation is a consensus-based reliability measure, not a simple probability. It is computed by analyzing the level of agreement between multiple models, each trained independently or with complementary strategies, on the same document field.
 
-When these models produce matching or highly similar predictions, the confidence is high. When they disagree significantly, the confidence drops. On top of that, a dedicated arbitration and correction model acts as a referee: it takes all predictions, compares their structural and semantic coherence, and assigns a final confidence level (`low`, `medium`, `high`, or soon `certain`).
+When these models produce matching or highly similar predictions, the confidence is high. When they disagree significantly, the confidence drops. On top of that, a dedicated arbitration and correction model acts as a referee: it takes all predictions, compares their structural and semantic coherence, and assigns a final confidence level (`low`, `medium`, `high`, or `certain`).
 
-### Does Automation introduce additional latency?
+</details>
+
+<details>
+
+<summary><strong>Does Automation introduce additional latency?</strong></summary>
 
 Yes, Automation introduces some additional latency, but in most cases, it remains minimal. This is because the ensemble of models used for prediction is executed in parallel, which allows us to keep response times close to those of a single-model pipeline.
 
 However, depending on the number and complexity of models involved, or the document type, the latency can occasionally be a few times longer than a standard call. The tradeoff is intentional: slightly longer processing time in exchange for higher accuracy and richer metadata, including the confidence score.
 
-### What should I do with low confidence extractions?
+</details>
+
+<details>
+
+<summary><strong>What should I do with low confidence extractions?</strong></summary>
 
 We recommend routing `Medium` and lower confidence extractions to a human validation layer, or using fallback logic (e.g., default values, user input).
 
 Lower confidence extractions are ideal candidates for feedback-driven improvement via our continuous learning loop using the RAG feature.
 
-### Does Automation work with any type of documents or fields?
+</details>
+
+<details>
+
+<summary><strong>Does Automation work with any type of documents or fields?</strong></summary>
 
 Automation is fully compatible with all document types and extracted fields supported by Mindee.\
 Every extracted field, whether it's a piece of text, a number, a date, an amount, or any other data type, benefits from the same ensemble evaluation and confidence scoring logic. This consistent approach ensures a uniform and predictable developer experience, regardless of the document format or use case.
 
 Moreover, nested objects and arrays of objects (e.g., `line_items` in invoices or tables in receipts) also receive individual confidence scores per field, enabling fine-grained control over complex data structures.
+
+</details>

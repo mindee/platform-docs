@@ -23,7 +23,7 @@
 * [Data Schema Best Practices](extraction-models/data-schema-best-practices.md)
 * [Optional Features](extraction-models/optional-features/README.md)
   * [Continuous Learning (RAG)](extraction-models/optional-features/improving-accuracy.md)
-  * [Confidence Score and Accuracy Boost](extraction-models/optional-features/automation-confidence-score.md)
+  * [Confidence Score & Accuracy Boost](extraction-models/optional-features/automation-confidence-score.md)
   * [Polygons (Bounding Boxes)](extraction-models/optional-features/polygons-bounding-boxes.md)
   * [Raw Text (Full OCR)](extraction-models/optional-features/raw-text-full-ocr.md)
 * [SDK Integration](extraction-models/sdk-integration/README.md)
