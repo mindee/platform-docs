@@ -161,7 +161,7 @@ A monthly plan commits you to one month, a yearly plan to one year.
 
 <summary><strong>What happens to additional users when going from a Trial to Starter plan?</strong></summary>
 
-If you've added members during your trial period, you'll need to choose a Pro plan to keep any additional members.
+If you've added members during your trial period, you'll need to choose a Pro plan to keep these additional members.
 
 Choosing the Starter plan will remove any non-owner members from your organization during the transition process.
 
