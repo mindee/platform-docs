@@ -16,13 +16,39 @@ Choose the number of credits that fit your volume.
 * an unlimited number of all types of models ([Extraction](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models), [Split](../split-models/split.md), [Crop](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/crop-models), etc)
 * our AI agent to help you build your custom models and answer your questions
 * our complete catalog of model templates to get started quickly
-* the Mindee API for your integration
+* the Mindee SDKs for your integration (or integrate manually)
+
+## Feature Comparison
+
+Some features are only applicable to [Extraction models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models).
+
+| Feature                                                    |        Starter       |          Pro         |      Enterprise      |
+| ---------------------------------------------------------- | :------------------: | :------------------: | :------------------: |
+| Members[^1]                                                |      1 full seat     |    Unlimited seats   |    Unlimited seats   |
+| [All Integrations](#user-content-fn-2)[^2]                 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [All Models](#user-content-fn-3)[^3]                       | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [AI Agent](#user-content-fn-4)[^4]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Community support](#user-content-fn-5)[^5]                | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Raw Text](#user-content-fn-6)[^6]                         | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| RAG[^7]                                                    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Polygons[^8]                                               | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Confidence score](#user-content-fn-9)[^9]                 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Boosted accuracy and precision](#user-content-fn-10)[^10] | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Zero-retention controls](#user-content-fn-11)[^11]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| [Data Processing Zone](#user-content-fn-12)[^12]           |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| [Support team](#user-content-fn-13)[^13]                   |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
+| Custom pricing                                             |          :x:         |          :x:         | :white\_check\_mark: |
+| [Dedicated account manager](#user-content-fn-14)[^14]      |          :x:         |          :x:         | :white\_check\_mark: |
+| [Custom on-boarding](#user-content-fn-15)[^15]             |          :x:         |          :x:         | :white\_check\_mark: |
+| [SLA-backed support](#user-content-fn-16)[^16]             |          :x:         |          :x:         | :white\_check\_mark: |
+
+{% include "../.gitbook/includes/sign-up-button.md" %}
 
 ## Plan Overview & Pricing
 
 Prices may vary depending on your currency, reference prices below are shown in Euros.
 
-<table><thead><tr><th width="156.1998291015625">Plan</th><th width="276.4000244140625">Monthly price (with annual billing)</th><th>Annual Credits</th></tr></thead><tbody><tr><td>Starter</td><td>€44 per month</td><td>6k to 500k credits</td></tr><tr><td>Pro</td><td>€116 per month</td><td>6k to 500k credits</td></tr><tr><td>Enterprise</td><td>Custom pricing</td><td>500k credits and over</td></tr></tbody></table>
+<table><thead><tr><th width="156.1998291015625">Plan</th><th width="276.4000244140625">Monthly price (with annual billing)</th><th>Annual Credits</th></tr></thead><tbody><tr><td>Starter</td><td>€44 per month with 6k credits</td><td>6k to 500k credits</td></tr><tr><td>Pro</td><td>€116 per month with 6k credits</td><td>6k to 500k credits</td></tr><tr><td>Enterprise</td><td>Custom pricing</td><td>500k credits and over</td></tr></tbody></table>
 
 * All plans are available in **monthly** or **annual** billing.
 * **Annual plans save 10%** compared to monthly pricing.
@@ -33,24 +59,9 @@ More information is available in the section: [billing.md](billing.md "mention")
 
 ### Credits
 
-All plans have a minimum number of credits, however you may include more credits in your subscription to take advantage of lower prices.
+All plans have a minimum number of credits, however you may include more credits in your subscription to take advantage of lower per-credit pricing.
 
 Think of the plan as the features available, and the credits as the amount of documents to process.
-
-## Try Mindee for Free!
-
-You can try Mindee free for 14 days, this includes 200 credits. You can use the platform and make API calls.
-
-Simply sign up to get started.
-
-{% include "../.gitbook/includes/sign-up-button.md" %}
-
-Once the trial period ends, you’ll need to choose a subscription plan to continue using the service.
-
-{% hint style="success" %}
-During the trial period, we can activate certain features for you to test specific use cases.\
-Don't hesitate to reach out to us!
-{% endhint %}
 
 ## Select the Right Plan and Credits <a href="#h_bbb10a2ad9" id="h_bbb10a2ad9"></a>
 
@@ -58,32 +69,31 @@ Choose your plan based on the features you need. The Starter plan is ideal for s
 
 Choose your credits based on how many documents you are actually processing. Purchasing credits based on your average monthly usage provides cost predictability, and will be cheaper than consistently being billed for additional usage.
 
-## Feature Comparison
+## Try Mindee for Free!
 
-Some features are only applicable to [Extraction models](https://app.gitbook.com/s/u5bStlX8nv4b9z4GXB2S/extraction-models).
+Our no-obligation free plan allows you to try Mindee in real-world conditions, no strings attached.
 
-| Feature                                                  |        Starter       |          Pro         |      Enterprise      |
-| -------------------------------------------------------- | :------------------: | :------------------: | :------------------: |
-| [AI Agent for custom model](#user-content-fn-1)[^1]      | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Community support](#user-content-fn-2)[^2]              | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Raw Text](#user-content-fn-3)[^3]                       | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| RAG[^4]                                                  | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Polygons[^5]                                             | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Confidence score](#user-content-fn-6)[^6]               | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Boosted accuracy and precision](#user-content-fn-7)[^7] | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| [Zero-retention controls](#user-content-fn-8)[^8]        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Members[^9]                                              |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| [Data Processing Zone](#user-content-fn-10)[^10]         |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| [Support team](#user-content-fn-11)[^11]                 |          :x:         | :white\_check\_mark: | :white\_check\_mark: |
-| Custom pricing                                           |          :x:         |          :x:         | :white\_check\_mark: |
-| Dedicated account manager                                |          :x:         |          :x:         | :white\_check\_mark: |
-| Premium technical support                                |          :x:         |          :x:         | :white\_check\_mark: |
+Features:
 
-## Plan Details
-
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Free Trial</strong></td><td><ul><li><strong>It's free!</strong></li><li>200 credits within 14 days</li><li>10 pages per document</li><li>Access to all model types</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li><li>API integration</li><li>AI Assistant for models</li><li>Docs Assistant</li><li>Members: multi-user management</li></ul></td><td><a href="../.gitbook/assets/free-trial-mindee.png">free-trial-mindee.png</a></td></tr><tr><td><strong>Starter</strong></td><td><ul><li>Access to all model types</li><li>Unlimited models</li><li>Community support</li><li><a href="../extraction-models/optional-features/raw-text-full-ocr.md">Raw Text</a> available</li><li><a href="../extraction-models/optional-features/polygons-bounding-boxes.md">Polygons</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Confidence score</a> available</li><li><a href="../extraction-models/optional-features/automation-confidence-score.md">Boosted accuracy</a> and precision available</li><li>API integration</li><li>AI Assistant for models</li><li>Docs Assistant</li></ul></td><td><a href="../.gitbook/assets/starter-plan-mindee.png">starter-plan-mindee.png</a></td></tr><tr><td><mark style="color:yellow;"><strong>Pro</strong></mark></td><td><ul><li>Everything in Starter</li><li>Members: multi-user management</li><li>Access to human support team</li><li>data processing localization</li></ul></td><td><a href="../.gitbook/assets/pro-plan-mindee.png">pro-plan-mindee.png</a></td></tr><tr><td><mark style="color:red;"><strong>Enterprise</strong></mark></td><td><ul><li>Everything in Pro</li><li>Tailored usage and pricing</li><li>SLA-backed support</li><li>Dedicated account manager</li><li>Premium on-boarding and technical support</li></ul></td><td><a href="../.gitbook/assets/enterprise-plan-mindee.png">enterprise-plan-mindee.png</a></td></tr></tbody></table>
+* 200 credits to be used within 14 days
+* Limited to 10 pages per document
+* Access to all model types
+* [Raw Text](../extraction-models/optional-features/raw-text-full-ocr.md) available
+* [Polygons](../extraction-models/optional-features/polygons-bounding-boxes.md) available
+* [Confidence score](../extraction-models/optional-features/automation-confidence-score.md) available
+* [Boosted accuracy](../extraction-models/optional-features/automation-confidence-score.md) and precision available
+* All integrations
+* AI Assistant
+* Members: multi-user management
 
 {% include "../.gitbook/includes/sign-up-button.md" %}
+
+Once the trial period ends, you’ll need to choose a subscription plan only if you want to continue using the service.
+
+{% hint style="success" %}
+During the trial period, we can activate certain features for you to test specific use cases.\
+Don't hesitate to reach out to us!
+{% endhint %}
 
 ## Frequently Asked Questions
 
@@ -169,26 +179,36 @@ Choosing the Starter plan will remove any non-owner members from your organizati
 
 </details>
 
-[^1]: Build your own document parsers by describing the fields you need
+[^1]: Add members to your organization and assign them roles.
 
-[^2]: Access to our [Feedback](https://feedback.mindee.com/) page
+[^2]: Use Mindee using our SDKs, no-code platforms, or manual integration.
 
-[^3]: Extract the [full text content](../extraction-models/optional-features/raw-text-full-ocr.md) of your documents.
+[^3]: Build your own models or choose predefined templates from our catalog.
 
-[^4]: Enhance your AI models with custom document knowledge bases.
+[^4]: Our powerful AI agent will help you with any task.
+
+[^5]: Access to our [Feedback](https://feedback.mindee.com/) page
+
+[^6]: Extract the [full text content](../extraction-models/optional-features/raw-text-full-ocr.md) of your documents.
+
+[^7]: Enhance your AI models with custom document knowledge bases.
 
     Learn more on our [RAG documentation](https://docs.mindee.com/models/improving-accuracy)
 
-[^5]: Use advanced [polygon](../extraction-models/optional-features/polygons-bounding-boxes.md) extraction to capture data from complex layouts.
+[^8]: Use advanced [polygon](../extraction-models/optional-features/polygons-bounding-boxes.md) detection to capture the location of extracted data.
 
-[^6]: Leverage [confidence scores](../extraction-models/optional-features/automation-confidence-score.md) to selectively automate document processing. Also boosts accuracy.
+[^9]: Leverage [confidence scores](../extraction-models/optional-features/automation-confidence-score.md) to selectively automate document processing. Also boosts accuracy.
 
-[^7]: Uses multiple models to [boost accuracy](../extraction-models/optional-features/automation-confidence-score.md). Also adds confidence scores.
+[^10]: Uses multiple models to [boost accuracy](../extraction-models/optional-features/automation-confidence-score.md). Also adds confidence scores.
 
-[^8]: Storage policies to enable zero retention.
+[^11]: Storage policies to enable zero retention.
 
-[^9]: Add members to your organization
+[^12]: Choose the region where your data is processed: Europe, United States, or Global
 
-[^10]: Choose the region where your data is processed: Europe, United States, or Global
+[^13]: Get help from our support team via chat or email.
 
-[^11]: Get help from our support team via chat and priority support for Enterprise
+[^14]: Your account manager is always available.
+
+[^15]: We accompany your technical and product teams based on your requirements.
+
+[^16]: Service Level Agreement used for highest priority support.
