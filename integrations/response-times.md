@@ -33,6 +33,8 @@ Properties of the Data Schema which impact response time:
 * number of fields
 * complexity of guidelines
 * lists of nested objects
+* Activating "Items can span pages" on lists.\
+  Each page processed will need extra context, increasing the data to process.
 
 In particular, lists of nested objects with many corresponding matches in the source document. For example: a multi-page invoice with many products purchased, and each product having multiple fields returned in the response.
 

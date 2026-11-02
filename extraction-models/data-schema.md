@@ -59,11 +59,11 @@ The return type will be an array of the base type, for example a list of text va
 
 It is possible to have a list of nested objects, but not a list of lists.
 
-{% hint style="info" icon="lightbulb" %}
-In some cases, there can be duplicate items, for example when the same value appears on several pages.
+#### Array Options
 
-Enable "Filter out duplicates from the list of items" to fix this.
-{% endhint %}
+**Remove duplicates**: In some cases, there can be duplicate items, for example when the same value appears on several pages. Activate "Filter out duplicates from the list of items" to fix this.
+
+**Multipage Items**: For some document types, list items can span 2 pages. For example, a long description in an invoice can start at the bottom of one page and end at the top of the next one. Activating "Items can span pages" will help with this. However, enabling this options will increase processing time, only activate it when a significant portion of documents exhibit this behavior.
 
 ## **Field Examples**
 
