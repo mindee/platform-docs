@@ -140,3 +140,19 @@ Since each model is different, and each use case is different, there is no unive
 It's up to you to make a mapping that conforms to your needs. You can use the [SDKs](../extraction-models/sdk-integration/) for easy manipulation of objects, or set up mapping rules in your [no-code](../extraction-models/no-code-integration/) solution.
 
 </details>
+
+<details>
+
+<summary><strong>How can I detect duplicate documents?</strong></summary>
+
+Detecting duplicates involves first storing a unique identifier of the document, and then comparing on new files processed. The identifier can be file-based or document-based.&#x20;
+
+A typical file-based identifier will be a hash of the file's bytes, such as SHA-1 or MD5.
+
+For a document-based identifier, a field value can be used, such as an invoice number or passport ID. If no single value is unique to the document, then a set of fields should be used. For a receipt, it could be the store name, total, date, and time. The value(s) should be hashed to improve processing time.
+
+We strongly recommend using a document-based identifier, as this will detect duplicate photos or scans of the same document.
+
+In all cases, you'll need to store the identifier locally and compare to each file being processed.
+
+</details>

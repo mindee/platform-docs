@@ -46,9 +46,11 @@ If providing text PDFs is not possible, the next best format would be [scanned P
 
 ### Scans Are Better Than Photos
 
-If possible, providing scanned images may provide better results compared to photos (typically taken with a phone).
+If possible, providing scanned images may provide better results compared to photos typically taken with a phone.
 
-**This is not to say that photos won't work well**, Mindee has many major users where photos (of receipts and ID documents notably) are the main use case.
+**This is&#x20;**_**not**_**&#x20;to say that photos won't work well.**
+
+Mindee has many major users where photos are the main use case, receipts and ID documents notably.
 
 For simple documents the difference is usually negligible, if user errors like blurry or cut-off photos are excluded. However, if you are handling complex documents like bank statements or multi-page invoices, scans typically have fewer errors on average.
 
