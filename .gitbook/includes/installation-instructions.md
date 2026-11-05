@@ -61,7 +61,7 @@ There are various installation methods, Maven, Gradle, etc:
 Simply install the [NuGet package](https://www.nuget.org/packages/Mindee) using `dotnet add`:
 
 ```sh
-dotnet add package Mindee --version 4.8
+dotnet add package Mindee --version 4.9
 ```
 {% endtab %}
 {% endtabs %}
