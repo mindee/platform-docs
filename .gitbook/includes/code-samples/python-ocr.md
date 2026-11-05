@@ -3,7 +3,7 @@ title: sample-code-python-ocr
 ---
 
 Requires Python ≥ 3.10. Python ≥ 3.12 is recommended.\
-Requires the [Mindee Python SDK](https://pypi.org/project/mindee/) version **5.3.1** or greater.
+Requires the [Mindee Python SDK](https://pypi.org/project/mindee/) version **5.4.0** or greater.
 
 {% code lineNumbers="true" %}
 ```python

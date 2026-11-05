@@ -3,7 +3,7 @@ title: sample-code-ruby-classification
 ---
 
 Requires Ruby ≥ 3.2.\
-Requires the [Mindee Ruby SDK](https://rubygems.org/gems/mindee) version **5.4.0** or greater.
+Requires the [Mindee Ruby SDK](https://rubygems.org/gems/mindee) version **5.6.0** or greater.
 
 {% code lineNumbers="true" %}
 ```ruby
