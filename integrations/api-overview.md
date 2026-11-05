@@ -149,7 +149,7 @@ Detecting duplicates involves first generating and storing a unique identifier, 
 
 A typical file-based identifier will be a hash of the file's bytes, using SHA-256. This allows detection before sending the file to Mindee.
 
-For a document-based identifier, a field value can be used, such as an invoice number or passport ID. If no single value is unique to the document, then a set of fields should be used. For a receipt, it could be the merchant, total amount, and date-time. In all cases, the value(s) should be hashed to improve processing time.
+For a document-based identifier, a field value can be used, such as an invoice number or passport ID. If no single value is unique to the document, then a set of fields should be used. For a receipt, it could be the merchant, total amount, and date-time. In all cases, the value(s) should be hashed using SHA-256 to improve processing time.
 
 We recommend always using a document-based identifier, as this will detect duplicate photos or scans of the same document, which will be missed by the file-based approach.
 
