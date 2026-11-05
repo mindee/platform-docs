@@ -149,7 +149,7 @@ Detecting duplicates involves first generating and storing a unique identifier, 
 
 Before sending a file to Mindee, compute a SHA-256 hash of the file’s raw bytes. This avoids unnecessary Mindee API calls and processing costs, but misses new versions of the same document where byte data differs.
 
-Once Mindee extracts the document fields, generate an identifier based on business data. A single field can be used, such as an invoice number or a passport ID. If no single field is unique, then concatenate multiple fields into a single string. For a receipt, it could be `supplier_name`, `total_amount`, `date`, and `time`. Hash using SHA-256 to avoid storing sensitive information in clear text.
+Once Mindee extracts the document fields, generate an identifier based on business data. A single field can be used, such as an invoice number or a passport ID. If no single field is unique, then concatenate multiple fields into a single string. For a receipt, the fields could be `supplier_name`, `total_amount`, `date`, and `time`. Hash using SHA-256 to avoid storing sensitive information in clear text.
 
 Combine both approaches: file-based checks save API credits upfront, while document-based checks prevent duplicates from re-scans and new photos.
 
