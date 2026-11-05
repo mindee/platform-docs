@@ -145,16 +145,12 @@ It's up to you to make a mapping that conforms to your needs. You can use the [S
 
 <summary><strong>How can I detect duplicate documents?</strong></summary>
 
-Detecting duplicates involves first generating and storing a unique identifier, and then comparing it to new files in your processing queue. The identifier can be file-based or document-based.&#x20;
+Detecting duplicates involves first generating and storing a unique identifier, then comparing incoming documents against past records in your database. We recommend a two-tiered approach combining file-based and document-based identifiers.
 
-A typical file-based identifier will be a hash of the file's bytes, using SHA-256. This allows detection before sending the file to Mindee.
+Before sending a file to Mindee, compute a SHA-256 hash of the file’s raw bytes. This avoids unnecessary Mindee API calls and processing costs, but misses new versions of the same document where byte data differs.
 
-For a document-based identifier, a field value can be used, such as an invoice number or passport ID. If no single value is unique to the document, then a set of fields should be used. For a receipt, it could be the merchant, total amount, and date-time. In all cases, the value(s) should be hashed using SHA-256 to improve processing time.
+Once Mindee extracts the document fields, generate an identifier based on business data. A single field can be used, such as an invoice number or a passport ID. If no single field is unique, then concatenate multiple fields into a single string. For a receipt, it could be `supplier_name`, `total_amount`, `date`, and `time`. Hash using SHA-256 to avoid storing sensitive information in clear text.
 
-We recommend always using a document-based identifier, as this will detect duplicate photos or scans of the same document, which will be missed by the file-based approach.
-
-Using both allows for quick detection (file-based) and comprehensive detection (document-based).
-
-In all cases, you'll need to store the identifier locally and compare to each file being processed.
+Combine both approaches: file-based checks save API credits upfront, while document-based checks prevent duplicates from re-scans and new photos.
 
 </details>
