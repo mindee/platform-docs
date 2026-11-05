@@ -184,11 +184,13 @@ var pollingOptions = new PollingOptions(
 
 {% include "../../.gitbook/includes/input-source-requirements.md" %}
 
+Remember to use the appropriate Product/Model class, examples use the Extraction product.
+
 {% tabs %}
 {% tab title="Python" %}
 The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueue_and_get_result` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+Use the `enqueue_and_get_result` method.&#x20;
 
 ```python
 response = mindee_client.enqueue_and_get_result(
@@ -207,7 +209,7 @@ print(response.inference)
 {% tab title="Node.js" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
+Use the `enqueueAndGetResult` method.
 
 ```typescript
 const response = mindeeClient.enqueueAndGetResult(
@@ -231,7 +233,7 @@ response.then((resp) => {
 {% tab title="PHP" %}
 The `$mindeeClient` , created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+Use the `enqueueAndGetResult` method.
 
 ```php
 $response = $mindeeClient->enqueueAndGetResult(
@@ -252,7 +254,7 @@ echo strval($response->inference);
 {% tab title="Ruby" %}
 The `mindee_client`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueue_and_get_result` method. Remember to use the appropriate Product/Model class, examples use `Extraction`.
+Use the `enqueue_and_get_result` method.
 
 ```ruby
 response = mindee_client.enqueue_and_get_result(
@@ -273,7 +275,7 @@ puts response.inference
 {% tab title="Java" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `enqueueAndGetResult` method. Remember to use the appropriate Product/Model class, examples use `ExtractionResponse`.
+Use the `enqueueAndGetResult` method.
 
 ```java
 var response = mindeeClient.enqueueAndGetResult(
@@ -294,7 +296,7 @@ System.out.println(response.getInference().toString());
 {% tab title=".NET" %}
 The `mindeeClient`, created in [configure-the-client.md](configure-the-client.md "mention").
 
-Use the `EnqueueAndGetResultAsync` method. Remember to use the appropriate product/model class, examples use `ExtractionResponse`.
+Use the `EnqueueAndGetResultAsync` method.
 
 ```csharp
 var response = await mindeeClient.EnqueueAndGetResultAsync<ExtractionResponse>(

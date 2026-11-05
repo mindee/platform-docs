@@ -41,14 +41,14 @@ Aliases are not unique in Mindee, you can use the same alias value multiple time
 {% tabs %}
 {% tab title="Python" %}
 ```python
-inference_params = ExtractionParameters(
+model_params = ExtractionParameters(
     # ID of the model, required.
     model_id="MY_MODEL_ID",
-    
+
     # Use an alias to link the file to your own DB.
     # If set, it will be included in the job and result responses.
     alias="internal-doc-id-123",
-    
+
     # ... any other options ...
 )
 ```
@@ -86,14 +86,14 @@ $modelParams = new ExtractionParameters(
 
 {% tab title="Ruby" %}
 ```ruby
-inference_params = {
+model_params = {
     # ID of the model, required.
     model_id: 'MY_MODEL_ID',
-    
+
     # Use an alias to link the file to your own DB.
     # If set, it will be included in the job and result responses.
     file_alias: 'internal-doc-id-123',
-    
+
     # ... any other options ...
 }
 ```
