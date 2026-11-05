@@ -145,13 +145,15 @@ It's up to you to make a mapping that conforms to your needs. You can use the [S
 
 <summary><strong>How can I detect duplicate documents?</strong></summary>
 
-Detecting duplicates involves first storing a unique identifier of the document, and then comparing on new files processed. The identifier can be file-based or document-based.&#x20;
+Detecting duplicates involves first generating and storing a unique identifier, and then comparing it to new files in your processing queue. The identifier can be file-based or document-based.&#x20;
 
-A typical file-based identifier will be a hash of the file's bytes, such as SHA-1 or MD5.
+A typical file-based identifier will be a hash of the file's bytes, using SHA-256. This allows detection before sending the file to Mindee.
 
-For a document-based identifier, a field value can be used, such as an invoice number or passport ID. If no single value is unique to the document, then a set of fields should be used. For a receipt, it could be the store name, total, date, and time. The value(s) should be hashed to improve processing time.
+For a document-based identifier, a field value can be used, such as an invoice number or passport ID. If no single value is unique to the document, then a set of fields should be used. For a receipt, it could be the merchant, total amount, and date-time. In all cases, the value(s) should be hashed to improve processing time.
 
-We strongly recommend using a document-based identifier, as this will detect duplicate photos or scans of the same document.
+We recommend always using a document-based identifier, as this will detect duplicate photos or scans of the same document, which will be missed by the file-based approach.
+
+Using both allows for quick detection (file-based) and comprehensive detection (document-based).
 
 In all cases, you'll need to store the identifier locally and compare to each file being processed.
 
