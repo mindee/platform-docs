@@ -90,12 +90,12 @@ foreach ($response->models as $model) {
 ```ruby
 require 'mindee'
 
-search_params = {
+search_params = Mindee::V2::Search::Models::ModelSearchParameters.new(
     # Filter models by partial name match, case-insensitive.
     name: 'invoice',
     # Filter by an exact model type.
     model_type: 'extraction',
-}
+)
 
 response = client.search(search_params)
 
@@ -241,12 +241,12 @@ foreach ($response->ragDocuments as $ragDoc) {
 ```ruby
 require 'mindee'
 
-search_params = {
+search_params = Mindee::V2::Search::RAGDocuments::RAGDocumentSearchParameters.new(
   # The exact Model UUID the document is linked to.
   model_id: 'my-model-uuid',
   # Filter documents by partial filename match, case-insensitive.
   filename: 'invoice_32GB-RAM_450k-USD.pdf',
-}
+)
 
 response = client.search(search_params)
 
