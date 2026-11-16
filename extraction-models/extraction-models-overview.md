@@ -15,7 +15,7 @@ This dual approach allows extracting textual and visual elements at the same tim
 
 Each model defines a set of fields called a [data-schema.md](data-schema.md "mention"). Fields could include "Supplier Name," "Invoice Number," or "Total Amount" for an Invoice Model, as an example. The system will then identify and extract data from uploaded files according to these field definitions.
 
-Extraction models can be used for any type of document including: invoices, receipts, passports, ID cards, financial statements, [etc](../use-cases/extraction-models/).
+Extraction models can be used for any type of document including: invoices, receipts, passports, ID cards, financial statements, [etc](/broken/pages/gk3KjV1u2JJzJjmVNjqI).
 
 You can even extract data from objects having textual information: fuel dispensers, water gauges, odometers, electricity meters, etc.
 

@@ -39,13 +39,13 @@ This allows selectively extracting some files while ignoring others.
 
 As a sample use case, let's say you have a KYC workflow, and your users upload their files. As a result, you receive mixed file types in the pipeline: driver licenses, passports, student IDs, employee badges, social security cards, etc.
 
-As a first example, assume you only process passports. In your Classification configuration, add a `passport` class and an `other`  class, then chain a [Passport extraction model](../use-cases/extraction-models/passport.md) on the `passport` class. Do not chain any models on the `other` class.
+As a first example, assume you only process passports. In your Classification configuration, add a `passport` class and an `other`  class, then chain a [Passport extraction model](/broken/pages/ANb1Rg3H6nIm5QSZoUB3) on the `passport` class. Do not chain any models on the `other` class.
 
 Another example, if you need only government IDs (so driver license and passport), you have two choices:
 
-* Create an `official_government_id` class and chain it to an [International ID extraction model](../use-cases/extraction-models/international-id-card.md).\
+* Create an `official_government_id` class and chain it to an [International ID extraction model](/broken/pages/Gsazza7BFnf7QojdjE43).\
   This is recommended if you accept a variety of ID documents.
-* Create a `driving_license` and `passport` class and chain the [Driver's License](../use-cases/extraction-models/drivers-license.md) and [Passport](../use-cases/extraction-models/passport.md) extraction models to them, respectively.\
+* Create a `driving_license` and `passport` class and chain the [Driver's License](/broken/pages/jlVcOKX61cJtJAHqO0oc) and [Passport](/broken/pages/ANb1Rg3H6nIm5QSZoUB3) extraction models to them, respectively.\
   This is recommended if you only accept specific ID documents.
 
 As in the earlier example, do not chain any models on the `other` class.

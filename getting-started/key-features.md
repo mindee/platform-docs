@@ -28,7 +28,7 @@ Some popular use cases include:
 * **Banking**: Check, Bank Statement, ...
 * **Logistics**: Bill of Lading, Vehicle Registration, ...
 
-Learn more at: [extraction-models](../use-cases/extraction-models/ "mention")
+Learn more at: [Broken link](/broken/pages/gk3KjV1u2JJzJjmVNjqI "mention")
 
 ## Custom Utility Models
 

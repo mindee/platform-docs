@@ -3,10 +3,11 @@
 ## Getting Started
 
 * [Mindee Documentation](README.md)
+* [Glossary](getting-started/glossary.md)
 * [Key Features](getting-started/key-features.md)
 * [Quick Start](getting-started/quickstart.md)
 * [Defining a Model](getting-started/defining-a-model.md)
-* [Glossary](getting-started/glossary.md)
+* [Main Use Cases](https://www.mindee.com/business-processes)
 
 ## Model Basics <a href="#models" id="models"></a>
 
@@ -106,31 +107,9 @@
 * [Billing](account-management/billing.md)
 * [Insights](account-management/insights.md)
 
-## Use Cases
+## MORE
 
-* [Extraction Use Cases](use-cases/extraction-models/README.md)
-  * [Invoice](use-cases/extraction-models/invoice.md)
-  * [Receipt](use-cases/extraction-models/receipt.md)
-  * [Financial Document](use-cases/extraction-models/financial-documents.md)
-  * [International ID Card](use-cases/extraction-models/international-id-card.md)
-  * [Passport](use-cases/extraction-models/passport.md)
-  * [Driver's License](use-cases/extraction-models/drivers-license.md)
-  * [Boarding Pass](use-cases/extraction-models/boarding-pass.md)
-  * [Resume](use-cases/extraction-models/resume.md)
-  * [Bill of Lading](use-cases/extraction-models/bill-of-lading.md)
-  * [Bank Statement](use-cases/extraction-models/bank-statement.md)
-  * [European Vehicle Registration](use-cases/extraction-models/european-vehicle-registration.md)
-  * [Payslip](use-cases/extraction-models/nutrition-facts.md)
-  * [Bank Account Details](use-cases/extraction-models/bank-account-details.md)
-  * [Bank Check](use-cases/extraction-models/bank-check.md)
-  * [Business Card](use-cases/extraction-models/business-card.md)
-  * [Payslip](use-cases/extraction-models/payslip.md)
-  * [US Healthcare Card](use-cases/extraction-models/us-healthcare-card.md)
-
-## Community
-
+* [Tutorials](https://www.mindee.com/tutorials)
+* [Main Document Types](https://www.mindee.com/products)
 * [Request a Feature](https://feedback.mindee.com/?b=682f69c9e2404756e7e68d1c)
-
-***
-
 * [Report a Bug](https://feedback.mindee.com/?b=685c08afd7a1d2e47b124cbb)
