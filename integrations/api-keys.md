@@ -9,7 +9,7 @@ icon: key
 
 API keys are secure credentials that allow your applications to interact with Mindee’s services.
 
-Each key is associated with your organization: usage and billing are tracked accordingly.
+Each key is associated to an organization: usage and billing are tracked accordingly.
 
 {% hint style="danger" %}
 **Never expose your API keys in a location that is publicly viewable!**
@@ -20,6 +20,8 @@ Anyone with the key will be able to make API requests impersonating your organiz
 An organization can have multiple API keys.
 
 Each API Key grants access to all models within the organization.
+
+Not all [members](../account-management/organizations.md#member-roles) of the organization have access to API key management.
 
 API Keys are **not** tokens, they:
 
@@ -37,16 +39,16 @@ Or, click this button:\
 
 ## API Key Creation
 
-Before using the API, you'll need to create an API key.
+Creating an API key is required to access the Mindee API.
 
 To create an API Key on the Mindee Platform:
 
 1. Access the [API Keys Dashboard](api-keys.md#h_5e7b745363)
 2. Click on the "**+ Create API Key**" button
-3. Give a name to your key.\
-   You'll typically want to name by environment, i.e. `dev`, `staging`, `prod`, \&c
-4. Click "**Create API Key**", your key is now created.
-5. Your new key will be displayed, click **Copy**, and store your key somewhere safe.\
+3. Give a name to the key.\
+   Keys could be named by environment, i.e. `dev`, `staging`, `prod`, \&c
+4. Click "**Create API Key**", the key is now created.
+5. The new key will be displayed, click **Copy**, and store the key somewhere safe.\
    ![Copy the API key](../.gitbook/assets/api-key-copy.png)
 
 {% hint style="warning" %}
@@ -57,7 +59,7 @@ Your key is now ready for use.
 
 ## API Key Revocation/Deletion
 
-You can revoke a key at any time by deleting it.
+A key can be revoked at any time by deleting it.
 
 Once a key is deleted, it can never be recovered.
 
@@ -66,10 +68,10 @@ Any calls to Mindee made using a deleted key will be rejected, resulting in a HT
 To delete a key on the Mindee Platform:
 
 1. Access the [API Keys Dashboard](api-keys.md#h_5e7b745363)
-2. You will see a list of all your current API Keys.
+2. A list of all current API Keys is shown.
 3. Next to each key is a "<i class="fa-trash-can">:trash-can:</i> **Delete**" button, click it.
 4. A confirmation dialog will appear.
-5. Click "**Delete**" in the confirmation dialog, your key is now deleted.
+5. Click "**Delete**" in the confirmation dialog, that key is now deleted.
 
 ## Using an API Key
 
@@ -81,11 +83,11 @@ For more information, consult: [#initialize-the-mindee-client](client-libraries-
 
 ## Best practices for API keys
 
-1. Keeping your API keys in your environment variables is a good and safe practice.
-2. Don’t store your API key directly in your code, and **never** in your front-end code.
-3. Avoid exposing your secret API keys on GitHub, on the client-side, or in any other location that is open to the public.
-4. If you have any doubt that your API Key leaked, delete it and replace it as soon as possible.
-5.  Periodically change your API keys, we recommend changing it every 3 months.
+1. Keeping API keys in environment variables is a good and safe practice.
+2. Don’t store API keys directly in code, and **never** in front-end code.
+3. Avoid exposing API keys on GitHub, on the client-side, or in any other location that is open to the public.
+4. If there is any doubt that an API Key has leaked, delete it and replace it as soon as possible.
+5.  Periodically change API keys, we recommend changing them every 3 months.
 
     To do so:
 
