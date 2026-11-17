@@ -37,3 +37,9 @@ This option is recommended for workflows where:
 * you only need to access the data once
 * you are storing the data from each API call in your system
 * there are operational requirements that specify a Zero Data Retention policy
+
+### Allow Mindee to Keep Documents
+
+In some cases, it may be necessary for our support teams to access your documents to better help you. When this option is checked, files processed by API will be saved to disk. This is similar to the history functionality of the Live Test.
+
+This option is **off** by default.

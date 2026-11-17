@@ -28,7 +28,7 @@ This feature is available on all plans.
 * **For testing and setup:** Use a longer Storage Duration (up to 24 hours) to allow time to check and validate processed results. This is particularly useful when setting up a webhook workflow.
 * **For general production use:** Set a relatively short Storage Duration (3-5 hours).
 * **For privacy or Zero Data Retention:** Always enable **Delete When Fetched.** Best to also set a short Storage Duration (1 hour) in case of failed calls (i.e. network failure on GET).
-* **For compliance:** Select the Processing Zone that matches your legal and regulatory requirements.
+* **For compliance:** Select the Processing Zone that matches your legal and regulatory requirements. Do not allow Mindee to store documents sent by API, and delete all files sent to the Live Test.
 
 ### Example Configuration
 
@@ -68,7 +68,7 @@ Documents and their data are only accessible to the users of the organization th
 
 Mindee never sells documents or their data to 3rd parties.
 
-Files sent by API are not saved to disk.
+Files sent by API are not saved to disk without explicit consent.
 
 </details>
 
