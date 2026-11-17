@@ -83,7 +83,9 @@ Documents and their results will be automatically deleted from the History after
 
 Normally, the Live Test uses the model's default [options](../extraction-models/optional-features/) and always enables polygons.
 
-When you need finer control of the options, in particular for testing, switch to the advanced mode. All the options available to API calls can be set. This includes the various [Dynamic Model Options](../extraction-models/sdk-integration/extraction-configuration.md#dynamic-model-options), which can **only** configured on a per-call basis.
+When you need finer control of the options, in particular for testing, switch to the advanced mode. All the options available to API calls can be set. This makes the Advanced Mode particularly useful if you are having different results on the same file with the Live Test and in API calls.
+
+This includes the various [Dynamic Model Options](../extraction-models/sdk-integration/extraction-configuration.md#dynamic-model-options), which can **only** configured on a per-call basis.
 
 To activate, simply click the "Advanced Mode" toggle in the main Live Test page. You'll then have access to all the settings:
 
