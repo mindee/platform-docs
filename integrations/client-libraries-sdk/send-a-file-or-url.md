@@ -198,6 +198,8 @@ response = mindee_client.enqueue_and_get_result(
     ExtractionResponse,
     input_source,
     model_params,
+    # optional, set if having timeout issues
+    # polling_options,
 )
 
 # To easily test which data were extracted,
