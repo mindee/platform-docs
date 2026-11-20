@@ -236,6 +236,42 @@ public class Main {
 
 {% tab title=".NET" %}
 ```cs
+using System;
+using System.Text.Json;
+using Mindee.ClientOptions;
+using Mindee.Input;
+using Mindee.V2;
+using Mindee.V2.Product.Extraction.RagDocuments;
+using Mindee.V2.Product.Extraction.RagDocuments.Params;
+
+// Load the input source
+var inputSource = new LocalInputSource("/path/to/the/file.ext");
+
+var postParameters = new RagDocumentUploadParameters(
+    modelId: "my-extraction-model-id"
+);
+
+// Initialize the Mindee V2 client
+Client client = new Client("my-api-key");
+
+// Send the upload request
+var postResponse = await client.UploadAndGetRagDocumentPollAsync<ExtractionRagAnnotationResponse>(
+    inputSource,
+    postParameters
+    // , pollingOptions: new PollingOptions( ... )
+);
+
+// Save the document ID
+string documentId = postResponse.Id;
+
+// The initial annotation
+RagAnnotation annotation = postResponse.Annotation;
+
+// Serialize to save the annotation, if needed
+// string jsonString = JsonSerializer.Serialize(annotation);
+
+// The initial status, should be "Draft"
+string documentStatus = postResponse.Status;
 ```
 {% endtab %}
 {% endtabs %}
@@ -397,7 +433,32 @@ public class Main {
 
 {% tab title=".NET" %}
 ```cs
+using System;
+using System.Text.Json;
+using Mindee.ClientOptions;
 using Mindee.V2;
+using Mindee.V2.Product.Extraction.RagDocuments;
+
+// RAG document ID as returned by the upload request
+string documentId = "my-document-id";
+
+// Initialize the Mindee V2 client
+Client client = new Client("my-api-key");
+
+// Send the fetch request
+var getResponse = await client.GetReadyRagDocumentPollAsync<ExtractionRagAnnotationResponse>(
+    documentId
+    // , pollingOptions: new PollingOptions( ... )
+);
+
+// The annotation
+RagAnnotation annotation = getResponse.Annotation;
+
+// Serialize to save the annotation, if needed
+// string jsonString = JsonSerializer.Serialize(annotation);
+
+// The status, can be "Draft" or "Active"
+string documentStatus = getResponse.Status;
 ```
 {% endtab %}
 {% endtabs %}
@@ -629,6 +690,40 @@ public class Main {
 
 {% tab title=".NET" %}
 ```cs
+using System;
+using Mindee.ClientOptions;
+using Mindee.V2;
+using Mindee.V2.Product.Extraction.RagDocuments;
+using Mindee.V2.Product.Extraction.RagDocuments.Params;
+
+// RAG document ID as returned by the upload request
+string documentId = "my-document-id";
+
+// Use the annotation returned by the fetch or upload request
+RagAnnotation annotation = getResponse.Annotation;
+
+// Modify the annotation
+// Access the field using .SimpleField, .ObjectField, or .ListField
+var supplierNameField = annotation.Fields["supplier_name"].SimpleField;
+supplierNameField.Selected = true;
+supplierNameField.Guidelines = "I am the walrus!";
+supplierNameField.Value = "Odobenus rosmarus";
+
+var patchParameters = new RagDocumentAnnotationParameters(
+    documentId: documentId,
+    status: "Active", // optional
+    annotation: annotation // optional
+);
+
+// Initialize the Mindee V2 client
+Client client = new Client("my-api-key");
+
+// Send the update
+var patchAnnotationResponse = 
+    await client.UpdateAndGetRagAnnotationPollAsync<ExtractionRagAnnotationResponse>(
+        patchParameters
+        // , pollingOptions: new PollingOptions( ... )
+    );
 ```
 {% endtab %}
 {% endtabs %}
@@ -716,14 +811,19 @@ public class Main {
 
 {% tab title=".NET" %}
 ```cs
+using System;
 using Mindee.V2;
 
 // RAG document ID as returned by the upload request
-var documentId = "my-document-id";
+string documentId = "my-document-id";
+
+// Initialize the Mindee V2 client
+Client client = new Client("my-api-key");
 
 // Send the delete request
-Client mindeeClient = new Client(apiKey);
-bool deleteSuccess = await mindeeClient.DeleteExtractionRagDocumentAsync(documentId);
+bool deleteSuccess = await client.DeleteExtractionRagDocumentAsync(documentId);
+
+Console.WriteLine($"Deleted: {deleteSuccess}");
 ```
 {% endtab %}
 {% endtabs %}
