@@ -17,13 +17,13 @@ The server side APIs are semi-asynchronous: a given route will respond immediate
 
 In the SDKs, there are two versions of each operation. The main version will poll on the document until the change has been propagated in the system. The [polling options](send-a-file-or-url.md#polling-configuration) are fully configurable, using the same options as the other SDK polling methods.
 
-In the alternate version, the polling and consistency logic is left to the user.
+In the alternate version, the polling and consistency logic is left to the user. These methods can be easily found when using the Mindee `Client` class in an IDE.
 
 We highly recommend using the polling versions unless there is a specific use case that requires otherwise.
 
 An API key and a [Mindee client instance](configure-the-client.md) is required for all operations.
 
-## Adding New Documents
+## Upload a New Document
 
 Upload a file and associate it to a model.
 
@@ -52,7 +52,7 @@ post_parameters = RagDocumentUploadParameters(
     model_id="my-extraction-model-id"
 )
 
-# Send the file
+# Send the upload request
 client = Client()
 post_response = client.upload_and_get_rag_document(
     input_source=input_source,
@@ -67,7 +67,7 @@ document_id = post_response.id
 # The initial annotation
 annotation: RagAnnotation = post_response.annotation
 
-# Serialize the annotation to save it
+# Serialize to save the annotation, if needed
 # annotation.to_dict()
 
 # The initial status, should be "Draft"
@@ -96,9 +96,76 @@ document_status = post_response.status
 {% endtab %}
 {% endtabs %}
 
-## Updating Documents
+## Fetch Annotation and Status
+
+Get the latest version of the annotation from the server.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+from mindee.v2 import Client
+from mindee.v2.product.extraction.rag_documents import (
+    ExtractionRagAnnotationResponse,
+    RagAnnotation,
+)
+
+# RAG document ID as returned by the upload request
+document_id = "my-document-id"
+
+# Send the fetch request
+client = Client()
+get_response = v2_client.get_ready_rag_document(
+    ExtractionRagAnnotationResponse,
+    document_id,
+)
+
+# The annotation
+annotation: RagAnnotation = get_response.annotation
+
+# Serialize to save the annotation, if needed
+# annotation.to_dict()
+
+# The status, can be "Draft" or "Active"
+document_status = get_response.status
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```typescript
+import * as mindee from "mindee";
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+use Mindee\V2\Client;
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require 'mindee'
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.mindee.v2.MindeeClient;
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```cs
+using Mindee.V2;
+```
+{% endtab %}
+{% endtabs %}
+
+## Update Annotation and Status
 
 Update the annotation data and status of a given document.
+
+It is recommended to fetch the latest data from the server before changing the annotation. As a reminder, annotations can be changed on the platform independently of API requests.
 
 Annotation data and document status can be set in separate calls or jointly in the same call.
 
@@ -119,14 +186,8 @@ from mindee.v2.product.extraction.rag_documents import (
 # RAG document ID as returned by the upload request
 document_id = "my-document-id"
 
-# The annotation can be loaded from various sources
-with open("path/to/annotation.json", encoding="utf-8") as fh:
-    annotation = RagAnnotation(fh) # load from IO
-    # annotation = RagAnnotation(fh.read()) # load from str
-    # annotation = RagAnnotation(json.load(fh)) # load from dict
-
-# Or use the annotation returned by the upload request
-# annotation: RagAnnotation = post_response.annotation
+# Use the annotation returned by the fetch or upload request
+annotation: RagAnnotation = get_response.annotation
 
 # Modify the annotation
 annotation.fields["supplier_name"].selected = True
@@ -185,7 +246,7 @@ patch_annotation_response = client.update_and_get_rag_annotations(
 {% endtab %}
 {% endtabs %}
 
-## Deleting Documents
+## Delete a Document
 
 Deleting a document removes the file and its annotation data. Neither can be recovered once deleted.
 
@@ -197,7 +258,7 @@ from mindee.v2 import Client
 # RAG document ID as returned by the upload request
 document_id = "my-document-id"
 
-# Send the deletion request
+# Send the delete request
 client = Client()
 delete_success = client.delete_extraction_rag_document(document_id)
 ```
@@ -210,7 +271,7 @@ import * as mindee from "mindee";
 // RAG document ID as returned by the upload request
 const documentId = "my-document-id";
 
-// Send the deletion request
+// Send the delete request
 client = new mindee.Client();
 deleteSuccess = await client.deleteRagDocument(
   mindee.product.Extraction,
@@ -226,7 +287,7 @@ use Mindee\V2\Client;
 // RAG document ID as returned by the upload request
 $documentId = "my-document-id";
 
-// Send the deletion request
+// Send the delete request
 $client = new Client();
 $deleteSuccess = $client->deleteExtractionRagDocument($documentId);
 ```
@@ -239,7 +300,7 @@ require 'mindee'
 # RAG document ID as returned by the upload request
 document_id = "my-document-id"
 
-# Send the deletion request
+# Send the delete request
 client = Mindee::V2::Client.new
 delete_success = client.delete_rag_document(
   Mindee::V2::Product::Extraction::Extraction,
@@ -255,7 +316,7 @@ import com.mindee.v2.MindeeClient;
 // RAG document ID as returned by the upload request
 documentId = "my-document-id";
 
-// Send the deletion request
+// Send the delete request
 client = new MindeeClient();
 boolean deleteSuccess = client.deleteExtractionRagDocument(documentId);
 ```
@@ -268,7 +329,7 @@ using Mindee.V2;
 // RAG document ID as returned by the upload request
 var documentId = "my-document-id";
 
-// Send the deletion request
+// Send the delete request
 Client mindeeClient = new Client(apiKey);
 bool deleteSuccess = await mindeeClient.DeleteExtractionRagDocumentAsync(documentId);
 ```
