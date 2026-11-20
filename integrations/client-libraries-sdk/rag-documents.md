@@ -189,6 +189,48 @@ document_status = post_response.status
 
 {% tab title="Java" %}
 ```java
+import com.mindee.input.LocalInputSource;
+import com.mindee.v2.MindeeClient;
+import com.mindee.v2.clientoptions.PollingOptions;
+import com.mindee.v2.product.extraction.ragdocuments.params.RagDocumentUploadParameters;
+import java.io.IOException;
+
+public class Main {
+
+  public static void main(String[] args) {
+    try {
+      // Load the input source
+      LocalInputSource inputSource = new LocalInputSource(
+          "/path/to/the/file.ext"
+      );
+
+      var postParameters = RagDocumentUploadParameters
+          .builder("my-extraction-model-id")
+          .build();
+
+      // Send the upload request
+      MindeeClient client = new MindeeClient();
+      var postResponse = client.uploadAndGetRagDocument(
+        inputSource,
+        postParameters,
+        // optional polling options
+        // PollingOptions.builder() ...
+      );
+      
+      // Save the document ID
+      String documentId = postResponse.getId();
+
+      // The initial annotation
+      var annotation = postResponse.getAnnotation();
+
+      // The initial status, should be "Draft"
+      String documentStatus = postResponse.getStatus();
+
+    } catch (IOException | InterruptedException err) {
+      err.printStackTrace();
+    }
+  }
+}
 ```
 {% endtab %}
 
@@ -321,6 +363,35 @@ document_status = get_response.status
 {% tab title="Java" %}
 ```java
 import com.mindee.v2.MindeeClient;
+import com.mindee.v2.clientoptions.PollingOptions;
+
+public class Main {
+
+  public static void main(String[] args) {
+    try {
+      // RAG document ID as returned by the upload request
+      String documentId = "my-document-id";
+
+      // Send the fetch request
+      MindeeClient client = new MindeeClient();
+      var getResponse = client.getReadyRagDocument(
+          ExtractionRagAnnotationResponse.class,
+          documentId
+          // optional polling options
+          // PollingOptions.builder() ...
+      );
+
+      // The annotation
+      var annotation = getResponse.getAnnotation();
+
+      // The status, can be "Draft" or "Active"
+      String documentStatus = getResponse.getStatus();
+
+    } catch (InterruptedException err) {
+      err.printStackTrace();
+    }
+  }
+}
 ```
 {% endtab %}
 
@@ -509,6 +580,50 @@ patch_annotation_response = client.update_and_get_rag_annotation(
 
 {% tab title="Java" %}
 ```java
+import com.mindee.v2.MindeeClient;
+import com.mindee.v2.clientoptions.PollingOptions;
+import com.mindee.v2.product.extraction.ragdocuments.AnnotatedSimpleField;
+import com.mindee.v2.product.extraction.ragdocuments.RagAnnotation;
+import com.mindee.v2.product.extraction.ragdocuments.params.RagDocumentAnnotationParameters;
+
+public class Main {
+
+  public static void main(String[] args) {
+    try {
+      // RAG document ID as returned by the upload request
+      String documentId = "my-document-id";
+
+      // Use the annotation returned by the fetch or upload request
+      RagAnnotation annotation = getResponse.getAnnotation();
+
+      // Modify the annotation
+      AnnotatedSimpleField supplierNameField = annotation
+          .getFields()
+          // Fields are typed; use the appropriate getter method:
+          // getSimpleField(), getObjectField(), or getListField()
+          .getSimpleField("supplier_name");
+      supplierNameField.setSelected(true);
+      supplierNameField.setGuidelines("I am the walrus!");
+
+      var patchParameters = RagDocumentAnnotationParameters
+          .builder(documentId)
+          .annotation(annotation) // optional
+          .status("Active")       // optional
+          .build();
+
+      // Send the update
+      MindeeClient client = new MindeeClient();
+      var patchAnnotationResponse = client.updateAndGetRagAnnotation(
+          patchParameters
+          // optional polling options
+          // PollingOptions.builder() ...
+      );
+
+    } catch (InterruptedException err) {
+      err.printStackTrace();
+    }
+  }
+}
 ```
 {% endtab %}
 
@@ -585,12 +700,17 @@ delete_success = client.delete_rag_document(
 ```java
 import com.mindee.v2.MindeeClient;
 
-// RAG document ID as returned by the upload request
-documentId = "my-document-id";
+public class Main {
 
-// Send the delete request
-client = new MindeeClient();
-boolean deleteSuccess = client.deleteExtractionRagDocument(documentId);
+  public static void main(String[] args) {
+    // RAG document ID as returned by the upload request
+    String documentId = "my-document-id";
+
+    // Send the delete request
+    MindeeClient client = new MindeeClient();
+    boolean deleteSuccess = client.deleteExtractionRagDocument(documentId);
+  }
+}
 ```
 {% endtab %}
 
