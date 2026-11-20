@@ -208,6 +208,17 @@ patch_annotation_response = client.update_and_get_rag_annotations(
     # polling_options=PollingOptions( ... ),
 )
 ```
+
+For advanced users, it's also possible to load an annotation from other sources.
+
+Be aware this can lead to inconsistencies if the annotation is modified on the platform.
+
+```python
+with open("path/to/annotation.json", encoding="utf-8") as fh:
+    annotation = RagAnnotation(fh) # load from IO
+    # annotation = RagAnnotation(fh.read()) # load from str
+    # annotation = RagAnnotation(json.load(fh)) # load from dict
+```
 {% endtab %}
 
 {% tab title="Node.js" %}
