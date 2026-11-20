@@ -278,11 +278,11 @@ Update the annotation data and status of a given document.
 
 It is recommended to fetch the latest data from the server before changing the annotation. As a reminder, annotations can be changed on the platform independently of API requests.
 
-Annotation data and document status can be set in separate calls or jointly in the same call.
-
 All annotation data must be updated in a single call, either the entire set of fields is sent, or none is sent. In practice, this simply means getting the latest version of the annotation and making in-place modifications before sending.
 
-In this example, we are using the document ID as returned when uploading the document. For the annotation fields, we are using the "Invoice" catalog template.
+For the RAG system to start using the document, it must be set to `Active`. This can be set jointly with an annotation update or updated separately. This allows reviewing the data before activating, for example.
+
+In this example, we are using the document ID as returned when fetching the document, see the relevant section. For the annotation fields, we are using the "Invoice" catalog template.
 
 {% tabs %}
 {% tab title="Python" %}
