@@ -83,6 +83,7 @@
   * [Send a File or URL](integrations/client-libraries-sdk/send-a-file-or-url.md)
   * [Response Processing](integrations/client-libraries-sdk/process-the-response.md)
   * [Search](integrations/client-libraries-sdk/search.md)
+  * [RAG Documents](integrations/client-libraries-sdk/rag-documents.md)
 * [AI Coding Assistants](integrations/ai-coding-assistants.md)
 * [Manage API Keys](integrations/api-keys.md)
 * [Technical Best Practices](integrations/technical-guidelines.md)
