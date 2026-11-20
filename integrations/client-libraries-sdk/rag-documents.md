@@ -76,23 +76,59 @@ document_status = post_response.status
 {% endtab %}
 
 {% tab title="Node.js" %}
-
+```typescript
+```
 {% endtab %}
 
 {% tab title="PHP" %}
-
+```php
+```
 {% endtab %}
 
 {% tab title="Ruby" %}
+```ruby
+require 'mindee'
+require 'mindee/v2/product'
 
+# Load the input source
+input_source = Mindee::PathInputSource.new('/path/to/the/file.ext')
+
+post_parameters = {
+  model_id: 'my-extraction-model-id'
+}
+
+# Send the upload request
+client = Mindee::V2::Client.new
+post_response = client.upload_and_get_rag_document(
+  Mindee::V2::Product::Extraction::Extraction,
+  input_source,
+  post_parameters
+  # optional polling options:
+  # { ... }
+)
+
+# Save the document ID
+document_id = post_response.id
+
+# The initial annotation
+annotation = post_response.annotation
+
+# Serialize to save the annotation, if needed
+# annotation.to_h
+
+# The initial status, should be "Draft"
+document_status = post_response.status
+```
 {% endtab %}
 
 {% tab title="Java" %}
-
+```java
+```
 {% endtab %}
 
 {% tab title=".NET" %}
-
+```cs
+```
 {% endtab %}
 {% endtabs %}
 
@@ -103,7 +139,7 @@ Get the latest version of the annotation from the server.
 {% tabs %}
 {% tab title="Python" %}
 ```python
-from mindee.v2 import Client
+from mindee import PollingOptions
 from mindee.v2.product.extraction.rag_documents import (
     ExtractionRagAnnotationResponse,
     RagAnnotation,
@@ -117,6 +153,8 @@ client = Client()
 get_response = v2_client.get_ready_rag_document(
     ExtractionRagAnnotationResponse,
     document_id,
+    # optional polling options
+    # polling_options=PollingOptions( ... ),
 )
 
 # The annotation
@@ -145,6 +183,26 @@ use Mindee\V2\Client;
 {% tab title="Ruby" %}
 ```ruby
 require 'mindee'
+require 'mindee/v2/product'
+
+# RAG document ID as returned by the upload request
+document_id = 'my-document-id'
+
+# Send the fetch request
+client = Mindee::V2::Client.new
+get_response = client.get_ready_rag_document(
+  Mindee::V2::Product::Extraction::Extraction,
+  document_id
+)
+
+# The annotation
+annotation = get_response.annotation
+
+# Serialize to save the annotation, if needed
+# annotation.to_h
+
+# The status, can be "Draft" or "Active"
+document_status = get_response.status
 ```
 {% endtab %}
 
@@ -190,6 +248,7 @@ document_id = "my-document-id"
 annotation: RagAnnotation = get_response.annotation
 
 # Modify the annotation
+# Note: You can access fields directly via `[]` or via `get_simple_field`
 annotation.fields["supplier_name"].selected = True
 annotation.fields["supplier_name"].guidelines = "I am the walrus!"
 annotation.fields["supplier_name"].value = "Odobenus rosmarus"
@@ -222,36 +281,57 @@ with open("path/to/annotation.json", encoding="utf-8") as fh:
 {% endtab %}
 
 {% tab title="Node.js" %}
-
-
 ```typescript
 ```
 {% endtab %}
 
 {% tab title="PHP" %}
-
-
 ```php
 ```
 {% endtab %}
 
 {% tab title="Ruby" %}
-
-
 ```ruby
+# frozen_string_literal: true
+
+require 'mindee'
+require 'mindee/v2/product'
+
+# RAG document ID as returned by the upload request
+document_id = 'my-document-id'
+
+# Use the annotation returned by the fetch or upload request
+annotation = get_response.annotation
+
+# Modify the annotation
+# Note: You can access fields directly via `[]` or via `get_simple_field`
+annotation.fields['supplier_name'].selected = true
+annotation.fields['supplier_name'].guidelines = 'I am the walrus!'
+annotation.fields['supplier_name'].value = 'Odobenus rosmarus'
+
+patch_parameters = {
+  document_id: document_id,
+  annotation: annotation, # optional
+  status: 'Active' # optional
+}
+
+# Send the update
+client = Mindee::V2::Client.new
+patch_annotation_response = client.update_and_get_rag_annotation(
+  Mindee::V2::Product::Extraction::Extraction,
+  patch_parameters
+  # optional polling options:
+  # { ... }
+)
 ```
 {% endtab %}
 
 {% tab title="Java" %}
-
-
 ```java
 ```
 {% endtab %}
 
 {% tab title=".NET" %}
-
-
 ```cs
 ```
 {% endtab %}
