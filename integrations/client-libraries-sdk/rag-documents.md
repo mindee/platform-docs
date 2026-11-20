@@ -77,6 +77,38 @@ document_status = post_response.status
 
 {% tab title="Node.js" %}
 ```typescript
+import * as mindee from "mindee";
+
+// Load the input source
+const inputSource = new mindee.PathInput(
+  { inputPath: "/path/to/the/file.ext" }
+);
+
+const postParameters = {
+  modelId: "my-extraction-model-id",
+};
+
+// Send the upload request
+const client = new mindee.Client();
+const postResponse = await client.uploadAndGetRagDocumentPoll(
+  mindee.product.Extraction,
+  inputSource,
+  postParameters
+  // optional polling options
+  // { ... }
+);
+
+// Save the document ID
+const documentId = postResponse.id;
+
+// The initial annotation
+const annotation = postResponse.annotation;
+
+// Serialize to save the annotation, if needed
+// JSON.stringify(annotation);
+
+// The initial status, should be "Draft"
+const documentStatus = postResponse.status;
 ```
 {% endtab %}
 
@@ -171,6 +203,27 @@ document_status = get_response.status
 {% tab title="Node.js" %}
 ```typescript
 import * as mindee from "mindee";
+
+// RAG document ID as returned by the upload request
+const documentId = "my-document-id";
+
+// Send the fetch request
+const client = new mindee.Client();
+const getResponse = await client.getReadyRagDocumentPoll(
+  mindee.product.Extraction,
+  documentId
+  // optional polling options
+  // { ... }
+);
+
+// The annotation
+const annotation = getResponse.annotation;
+
+// Serialize to save the annotation, if needed
+// JSON.stringify(annotation);
+
+// The status, can be "Draft" or "Active"
+const documentStatus = getResponse.status;
 ```
 {% endtab %}
 
@@ -248,10 +301,12 @@ document_id = "my-document-id"
 annotation: RagAnnotation = get_response.annotation
 
 # Modify the annotation
-# Note: You can access fields directly via `[]` or via `get_simple_field`
-annotation.fields["supplier_name"].selected = True
-annotation.fields["supplier_name"].guidelines = "I am the walrus!"
-annotation.fields["supplier_name"].value = "Odobenus rosmarus"
+# Fields are typed to avoid errors, use the appropriate getter:
+# .get_simple_field, .get_object_field, or .get_list_field
+supplier_name_field = annotation.fields.get_simple_field("supplier_name")
+supplier_name_field.selected = True
+supplier_name_field.guidelines = "I am the walrus!"
+supplier_name_field.value = "Odobenus rosmarus"
 
 patch_parameters = RagDocumentAnnotationParameters(
     document_id=document_id,
@@ -282,6 +337,38 @@ with open("path/to/annotation.json", encoding="utf-8") as fh:
 
 {% tab title="Node.js" %}
 ```typescript
+import * as mindee from "mindee";
+
+const mindee = require("mindee");
+
+// RAG document ID as returned by the upload request
+const documentId = "my-document-id";
+
+// Use the annotation returned by the fetch or upload request
+const annotation = getResponse.annotation;
+
+// Modify the annotation
+// Fields are typed to avoid errors, use the appropriate getter:
+// .getSimpleField, .getObjectField, or .getListField
+const supplierNameField = annotation.fields.getSimpleField("supplier_name");
+supplierNameField.selected = true;
+supplierNameField.guidelines = "I am the walrus!";
+supplierNameField.value = "Odobenus rosmarus";
+
+const patchParameters = {
+  documentId: documentId,
+  annotation: annotation, // optional
+  status: "Active",       // optional
+};
+
+// Send the update
+const client = new mindee.Client();
+const patchAnnotationResponse = await client.updateAndGetRagAnnotationPoll(
+  mindee.product.Extraction,
+  patchParameters
+  // optional polling options
+  // { ... }
+);
 ```
 {% endtab %}
 
@@ -304,10 +391,12 @@ document_id = 'my-document-id'
 annotation = get_response.annotation
 
 # Modify the annotation
-# Note: You can access fields directly via `[]` or via `get_simple_field`
-annotation.fields['supplier_name'].selected = true
-annotation.fields['supplier_name'].guidelines = 'I am the walrus!'
-annotation.fields['supplier_name'].value = 'Odobenus rosmarus'
+# Fields are typed to avoid errors, use the appropriate getter:
+# .get_simple_field, .get_object_field, or .get_list_field
+supplier_name_field = annotation.fields.get_simple_field('supplier_name')
+supplier_name_field.selected = true
+supplier_name_field.guidelines = 'I am the walrus!'
+supplier_name_field.value = 'Odobenus rosmarus'
 
 patch_parameters = {
   document_id: document_id,
