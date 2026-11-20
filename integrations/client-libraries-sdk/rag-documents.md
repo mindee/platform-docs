@@ -114,6 +114,40 @@ const documentStatus = postResponse.status;
 
 {% tab title="PHP" %}
 ```php
+<?php
+
+use Mindee\ClientOptions\PollingOptions;
+use Mindee\Input\PathInput;
+use Mindee\V2\Client;
+use Mindee\V2\Product\Extraction\RagDocuments\Params\RagDocumentUploadParameters;
+
+// Load the input source
+$inputSource = new PathInput("/path/to/the/file.ext");
+
+$postParameters = new RagDocumentUploadParameters(
+    modelId: "my-extraction-model-id"
+);
+
+// Send the upload request
+$client = new Client();
+$postResponse = $client->uploadAndGetRagDocumentPoll(
+    $inputSource,
+    $postParameters
+    // optional polling options
+    // pollingOptions: new PollingOptions( ... )
+);
+
+// Save the document ID
+$documentId = $postResponse->id;
+
+// The initial annotation
+$annotation = $postResponse->annotation;
+
+// Serialize to save the annotation, if needed
+// $annotation->toArray();
+
+// The initial status, should be "Draft"
+$documentStatus = $postResponse->status;
 ```
 {% endtab %}
 
@@ -229,7 +263,32 @@ const documentStatus = getResponse.status;
 
 {% tab title="PHP" %}
 ```php
+<?php
+
+use Mindee\ClientOptions\PollingOptions;
 use Mindee\V2\Client;
+use Mindee\V2\Product\Extraction\RagDocuments\ExtractionRagAnnotationResponse;
+
+// RAG document ID as returned by the upload request
+$documentId = "my-document-id";
+
+// Send the fetch request
+$client = new Client();
+$getResponse = $client->getReadyRagDocumentPoll(
+    ExtractionRagAnnotationResponse::class,
+    $documentId
+    // optional polling options
+    // pollingOptions: new PollingOptions( ... )
+);
+
+// The annotation
+$annotation = $getResponse->annotation;
+
+// Serialize to save the annotation, if needed
+// $annotation?->toArray();
+
+// The status, can be "Draft" or "Active"
+$documentStatus = $getResponse->status;
 ```
 {% endtab %}
 
@@ -374,6 +433,39 @@ const patchAnnotationResponse = await client.updateAndGetRagAnnotationPoll(
 
 {% tab title="PHP" %}
 ```php
+<?php
+
+use Mindee\ClientOptions\PollingOptions;
+use Mindee\V2\Client;
+use Mindee\V2\Product\Extraction\RagDocuments\Params\RagDocumentAnnotationParameters;
+
+// RAG document ID as returned by the upload request
+$documentId = "my-document-id";
+
+// Use the annotation returned by the fetch or upload request
+$annotation = $getResponse->annotation;
+
+// Modify the annotation
+// Fields are typed to avoid errors, use the appropriate getter:
+// ->getSimpleField(), ->getObjectField(), or ->getListField()
+$supplierNameField = $annotation->fields->getSimpleField("supplier_name");
+$supplierNameField->selected = true;
+$supplierNameField->guidelines = "I am the walrus!";
+$supplierNameField->value = "Odobenus rosmarus";
+
+$patchParameters = new RagDocumentAnnotationParameters(
+    documentId: $documentId,
+    status: "Active", // optional
+    annotation: $annotation // optional
+);
+
+// Send the update
+$client = new Client();
+$patchAnnotationResponse = $client->updateAndGetRagAnnotationPoll(
+    $patchParameters
+    // optional polling options
+    // pollingOptions: new PollingOptions( ... )
+);
 ```
 {% endtab %}
 
