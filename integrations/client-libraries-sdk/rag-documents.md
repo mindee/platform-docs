@@ -102,7 +102,7 @@ Update the annotation data and status of a given document.
 
 Annotation data and document status can be set in separate calls or jointly in the same call.
 
-Annotation data must be updated as a single field, either the entire set of fields is sent, or none is sent.
+All annotation data must be updated in a single call, either the entire set of fields is sent, or none is sent. In practice, this simply means getting the latest version of the annotation and making in-place modifications before sending.
 
 In this example, we are using the document ID as returned when uploading the document. For the annotation fields, we are using the "Invoice" catalog template.
 
