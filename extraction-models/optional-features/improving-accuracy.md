@@ -124,13 +124,3 @@ No, all documents are the property of their organization and are not used for tr
 We only use RAG data internally with your explicit knowledge and prior consent. This is limited to using your documents to help resolve a ticket you opened with our support team.
 
 </details>
-
-<details>
-
-<summary><strong>What happens to my RAG database if I downgrade my plan?</strong></summary>
-
-We won't delete any of the files you've uploaded into your RAG document database if you downgrade, however you will not be able to modify or validate them.
-
-The guidelines you have given to your RAG documents will be taken into account in your inferences with the lower plan, even if that is above the plan's features.
-
-</details>
