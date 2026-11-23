@@ -4,9 +4,9 @@ description: >-
   client, and cURL samples.
 ---
 
-# Classification Models
+# Classification
 
-{% include "../../.gitbook/includes/manual-integration-warning.md" %}
+{% include "../../../.gitbook/includes/manual-integration-warning.md" %}
 
 {% openapi-operation spec="mindee-api" path="/v2/products/classification/enqueue" method="post" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)

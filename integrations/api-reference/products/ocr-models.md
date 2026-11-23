@@ -1,0 +1,25 @@
+---
+description: >-
+  Help for manually integrating OCR models: API reference, test client, and cURL
+  samples.
+---
+
+# Raw Text (OCR)
+
+{% include "../../../.gitbook/includes/manual-integration-warning.md" %}
+
+{% openapi-operation spec="mindee-api" path="/v2/products/ocr/enqueue" method="post" %}
+[OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="mindee-api" path="/v2/jobs/{job_id}" method="get" %}
+[OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="mindee-api" path="/v2/products/ocr/results/{inference_id}" method="get" %}
+[OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
+{% endopenapi-operation %}
+
+{% openapi-webhook spec="mindee-api" name="ocr-utility-processed" method="post" %}
+[OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
+{% endopenapi-webhook %}

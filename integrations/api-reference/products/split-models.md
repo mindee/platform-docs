@@ -1,14 +1,14 @@
 ---
 description: >-
-  Help for manually integrating OCR models: API reference, test client, and cURL
-  samples.
+  Help for manually integrating Split models: API reference, test client, and
+  cURL samples.
 ---
 
-# OCR Models
+# Split
 
-{% include "../../.gitbook/includes/manual-integration-warning.md" %}
+{% include "../../../.gitbook/includes/manual-integration-warning.md" %}
 
-{% openapi-operation spec="mindee-api" path="/v2/products/ocr/enqueue" method="post" %}
+{% openapi-operation spec="mindee-api" path="/v2/products/split/enqueue" method="post" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
 
@@ -16,10 +16,10 @@ description: >-
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="mindee-api" path="/v2/products/ocr/results/{inference_id}" method="get" %}
+{% openapi-operation spec="mindee-api" path="/v2/products/split/results/{inference_id}" method="get" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-operation %}
 
-{% openapi-webhook spec="mindee-api" name="ocr-utility-processed" method="post" %}
+{% openapi-webhook spec="mindee-api" name="split-utility-processed" method="post" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)
 {% endopenapi-webhook %}

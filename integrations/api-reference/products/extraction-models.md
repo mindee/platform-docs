@@ -24,9 +24,9 @@ layout:
     visible: true
 ---
 
-# Extraction Models
+# Extraction
 
-{% include "../../.gitbook/includes/manual-integration-warning.md" %}
+{% include "../../../.gitbook/includes/manual-integration-warning.md" %}
 
 {% openapi-operation spec="mindee-api" path="/v2/products/extraction/enqueue" method="post" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)

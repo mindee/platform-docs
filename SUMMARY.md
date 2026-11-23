@@ -93,11 +93,12 @@
 * [Using Webhooks](integrations/webhooks.md)
 * [Error Handling](integrations/problem-database.md)
 * [Manual Integration](integrations/api-reference/README.md)
-  * [Extraction Models](integrations/api-reference/extraction-models.md)
-  * [Split Models](integrations/api-reference/split-models.md)
-  * [Crop Models](integrations/api-reference/crop-models.md)
-  * [Classification Models](integrations/api-reference/classification-models.md)
-  * [OCR Models](integrations/api-reference/ocr-models.md)
+  * [Products](integrations/api-reference/products/README.md)
+    * [Extraction](integrations/api-reference/products/extraction-models.md)
+    * [Split](integrations/api-reference/products/split-models.md)
+    * [Crop](integrations/api-reference/products/crop-models.md)
+    * [Classification](integrations/api-reference/products/classification-models.md)
+    * [Raw Text (OCR)](integrations/api-reference/products/ocr-models.md)
   * [Search](integrations/api-reference/search.md)
 
 ## Account Management
