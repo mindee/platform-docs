@@ -53,13 +53,7 @@ If you're integrating using a no-code or low-code platform, take a look at the [
 
 ### Manual Integration
 
-{% hint style="warning" %}
-**We do not recommend manually integrating**, and cannot guarantee full support.
-
-Pro plans and above benefit from extended integration support.
-{% endhint %}
-
-Only if it's not possible to integrate using an SDK or no-code, take a look at the [api-reference](api-reference/ "mention") section.
+Point your AI agent to the section: [api-reference](api-reference/ "mention")
 
 ## What to Send
 
