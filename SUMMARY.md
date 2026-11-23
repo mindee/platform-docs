@@ -98,6 +98,7 @@
   * [Crop Models](integrations/api-reference/crop-models.md)
   * [Classification Models](integrations/api-reference/classification-models.md)
   * [OCR Models](integrations/api-reference/ocr-models.md)
+  * [Search](integrations/api-reference/search.md)
 
 ## Account Management
 
