@@ -2,6 +2,7 @@
 description: >-
   Help for manually integrating OCR models: API reference, test client, and cURL
   samples.
+icon: text
 ---
 
 # Raw Text (OCR)

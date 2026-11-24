@@ -2,6 +2,7 @@
 description: >-
   Help for manually integrating Extraction models: API reference, test client,
   and cURL samples.
+icon: file-export
 layout:
   width: default
   title:
@@ -26,7 +27,7 @@ layout:
 
 # Extraction
 
-{% include "../../../.gitbook/includes/manual-integration-warning.md" %}
+{% include "../../../../.gitbook/includes/manual-integration-warning.md" %}
 
 {% openapi-operation spec="mindee-api" path="/v2/products/extraction/enqueue" method="post" %}
 [OpenAPI mindee-api](https://api-v2.mindee.net/openapi.json)

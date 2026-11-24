@@ -9,7 +9,7 @@ icon: transmission
 
 API routes and schemas are organized according to the type of product:
 
-* [extraction-models.md](extraction-models.md "mention")
+* [extraction-models](extraction-models/ "mention")
 * [split-models.md](split-models.md "mention")
 * [crop-models.md](crop-models.md "mention")
 * [classification-models.md](classification-models.md "mention")
