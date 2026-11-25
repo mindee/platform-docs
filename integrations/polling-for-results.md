@@ -1,7 +1,5 @@
 ---
 description: Overview of processing files using a polling flow.
-noIndex: true
-noRobotsIndex: true
 icon: repeat
 ---
 
@@ -47,3 +45,12 @@ sequenceDiagram
     results->>client: HTTP 200
     client->>client: process JSON result
 ```
+
+{% hint style="warning" %}
+Always wait:
+
+* 2-3 seconds before entering the polling loop
+* 1 second in between each loop iteration
+
+Failure to do so may result in raising a 429 HTTP error.
+{% endhint %}
