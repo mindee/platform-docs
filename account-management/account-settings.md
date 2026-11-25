@@ -31,7 +31,7 @@ If you connect to Mindee through a 3rd party, such as Google or Github, the emai
 
 You can change your full name as it appears in the Mindee platform to other users in your organization.
 
-## Two-Factor Authentication
+## Two-Factor Authentication (2FA)
 
 2FA can be added by any user on their account. The organization Owner may also require all users in the organization to use 2FA.
 
