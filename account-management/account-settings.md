@@ -31,6 +31,20 @@ If you connect to Mindee through a 3rd party, such as Google or Github, the emai
 
 You can change your full name as it appears in the Mindee platform to other users in your organization.
 
+## Two-Factor Authentication
+
+2FA can be added by any user on their account. The organization Owner may also require all users in the organization to use 2FA.
+
+Add and remove your authentication devices in this section. A device is simply any physical device or application that supports HOTP or TOTP. For example you can use [FreeOTP](https://freeotp.github.io/).
+
+Recovery codes can be downloaded at any time.
+
+{% hint style="info" %}
+**Make sure to always download and save the recovery codes!**
+
+If you lose access to the device you can use the recovery codes to log in and set up a new device. Otherwise you'll be locked out of your account.
+{% endhint %}
+
 ## Danger Zone
 
 ### Delete Account
