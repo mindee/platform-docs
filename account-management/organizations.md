@@ -43,6 +43,12 @@ The **Team Members** section lists all users who belong to your organization, al
 * **Role** – "Owner", "Administrator", or "Member"
 * **Status** – shows as _Active_ for members with access.
 
+### Organization Security
+
+Two-factor authentication (2FA) can be set as required for all members of the organization.
+
+If 2FA is not required at the organization level, it can still be optionally enabled by users.
+
 ### Add New Team Members
 
 Use the "Invite Member" button to add a new user.
